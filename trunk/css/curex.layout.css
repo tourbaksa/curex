@@ -23,7 +23,7 @@ div.gnbWrap ul#gnb li li a:hover{color:#22b8c7;}
 div.gnbWrap ul#gnb div.depth2 div {border:1px solid #c3c3c3;border-top:0; overflow:hidden;position:absolute;left:0;top:40px;z-index:200;background:url(/img/common/icon1.gif) #fff no-repeat center top;}
 div.gnbWrap ul#gnb ul ul{ background:url(/img/common/gnb_bar.gif) #fff no-repeat center bottom; margin-bottom:2px;padding-bottom:9px;overflow:hidden;}
 div.gnbWrap ul#gnb li li li {background:url(/img/common/blet1.gif) no-repeat 0 center; width:90px; margin-left:15px; padding-left:15px;}
-div.gnbWrap ul#gnb li li li a{height:28px; line-height:28px;text-align:left; }
+div.gnbWrap ul#gnb li li li a{height:28px; line-height:28px;text-align:left;font-size:13px;}
 div.gnbWrap ul#gnb li li li:first-child{background:url(/img/common/blet1.gif) no-repeat 0 center; width:90px; margin-top:7px;}
 div.gnbWrap span.globalIcon{float:left;}
 
@@ -150,6 +150,7 @@ div.personBtn .lgGyR1{padding:7px 10px;}
 #checkList ul.list {float:right;}
 #checkList ul.list li {float:left; height:40px; line-height:40px; text-align:center; border-left:1px solid #00919f;}
 #checkList ul.list li a{color:#fff; font-size:14px; border-left:1px solid #4ec6d2; display:block; padding:0 15px;} 
+#checkList ul.list li a:hover{text-decoration:none !important;}
 #checkList ul.list li a.on{color:#fff; border-left:1px solid #33b4cl; display:block;background-color:#00a1b1;} 
 #checkList ul.list li.quB {text-align:right;}
 #checkList ul.list li.quB a{border-left:0;padding:0;}
