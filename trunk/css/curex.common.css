@@ -1,0 +1,39 @@
+@charset "utf-8";
+
+@font-face {
+	font-family: NanumGothic;
+	src: url(../font/NanumGothic.eot);
+	src: local("NanumGothic"), url(../font/NanumGothic.ttf) format("truetype"),url(../font/NanumGothic.woff);
+	font-style: normal;
+	font-weight: normal;
+}
+
+
+html, body {margin:0;padding:0;color:#666666;font-family:NanumGothic,"나눔고딕",dotum,arial;font-size:12px;background:#fff;}
+div, span, p, applet, object, iframe, h1, h2, h3, h4, h5, h6, blockquote, pre, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strike, sub, sup, tt, var, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {margin:0;padding:0;border:0;}
+ol, ul {list-style: none;}
+blockquote, q {quotes: none;}
+blockquote:before, blockquote:after, q:before, q:after {content: ''; content: none;}
+hr,legend, caption {display:none;}
+img {border:none; vertical-align:top;}
+input {margin:0;font-family: NanumGothic,sans-serif; vertical-align:top;}
+hr {display:none;}
+address {font-style:normal;}
+em{font-style:normal;}
+table {margin:0;padding:0;word-break:break-all;border-collapse:collapse; }
+td {font-size:12px;}
+caption {position:absolute; visibility:hidden; width:0; height:0; overflow:hidden; font-size:0;}
+fieldset {border:0;padding:0; margin:0;}
+legend {position:absolute; visibility:hidden; width:0; height:0; overflow:hidden; font-size:0;}
+
+
+input[type="text"] {vertical-align:middle;font-family: NanumGothic,sans-serif; border-left:1px solid #c2c5cc; border-top:1px solid #c1c6cc; border-bottom:1px solid #e0e3ea; border-right:1px solid #e0e3ea; padding:0 5px; height:22px; line-height:22px;}
+input[type="checkbox"], input[type="radio"]
+{width:13px;height:13px;vertical-align:middle;margin:0;padding:0;}
+select {font-family:NanumGothic,"나눔고딕";vertical-align:middle;font-size:12px; line-height:20px; padding:3px 0;; border-left:1px solid #c2c5cc; border-top:1px solid #c1c6cc; border-bottom:1px solid #e0e3ea; border-right:1px solid #e0e3ea;}
+textarea {color:#464646; border:1px solid #b9c6d4; padding:5px; vertical-align:top; font-size:12px; line-height:16px;font-family: NanumGothic,sans-serif;}
+button {overflow: hidden; margin: 0; padding: 0; border: 0 none; font-family:NanumGothic,"나눔고딕",Dotum,"돋움",Gulim,"굴림",Verdana,sans-serif;  cursor: pointer;}
+button span{display: block; overflow: hidden; position: absolute; top: 0; left: 0; width: 0; height: 0; border: 0; background: none !important; font-size: 0; line-height: 0;}
+/* fireFox button */
+button::-moz-focus-inner{padding:0; margin:0;}
+a{color:#707070; text-decoration:none;}
