@@ -65,7 +65,7 @@ div.Tsearch span.Name.man{}
 div.Tsearch span a{text-decoration:none; color:#707070; font-weight:bold;display:block; letter-spacing:-1px; background:url(/img/common/ico_nameArrow.gif) no-repeat 100% 50%;}
 
 /* 검색결과 회원리스트 출력 */
-div.personInfoArea{position:absolute; top:90px;overflow:hidden; background:#f7f7f7; z-index:222; border:1px solid #22b8c7; border-top:0; width:795px; display:block !important;}
+div.personInfoArea{position:absolute; top:90px;overflow:hidden; background:#f7f7f7; z-index:222; border:1px solid #22b8c7; border-top:0; width:795px; }
 
 /* 기계약 하나만 보여질때 */
 div.personOne{width:428px;padding-bottom:36px;}
