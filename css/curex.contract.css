@@ -1,0 +1,39 @@
+@charset "utf-8";
+
+div.contartWrap h3{font-size:16px; color:#363636; font-weight:normal; line-height:16px; margin:20px 0 10px 0;}
+div.contartWrap h5{font-size:14px; color:#707070; font-weight:normal; margin:20px 0 10px 0;}
+div.contartHeader{margin:20px 0 0 0; overflow:hidden;}
+div.contartHeader div.ctList{border:1px solid #dedede; background-color:#f7f7f7; padding:5px; width:188px; float:left;}
+div.contartHeader div.ctList ul{padding:8px 0px 8px 20px; background-color:#fff; height:195px; overflow-y:scroll; overflow-x:hidden;}
+div.contartHeader div.ctList ul li{background:url(../img/common/blt_garyflower.gif) no-repeat 0 50%; padding-left:11px; height:35px; line-height:35px; border-top:1px solid #dedede; width:124px;}
+div.contartHeader div.ctList ul li a{font-size:14px;}
+div.contartHeader div.ctList ul li strong{color:#ff0000;}
+div.contartHeader div.ctList ul li:first-child{border-top:0;}
+div.contartHeader div.ctSearchZone{padding: 0 20px 20px 20px; float:left; width:804px; border:1px solid #dedede; margin-left:20px;}
+div.contartHeader div.ctsearchStg{width:762px; min-height:38px; padding:7px 13px 9px 9px; background-color:#f4f4f4; border-radius:3px; -moz-border-radius:3px; -webkit-border-radius:3px; -ms-border-radius:3px; border:1px solid #dedede;}
+div.contartHeader div.btnWrap{margin:10px 0 0 0; text-align:center;}
+div.simpleSch{position:relative; line-height:38px;}
+div.searchTerm{background-color:#f4f4f4; border-radius:3px; -moz-border-radius:3px; -webkit-border-radius:3px; -ms-border-radius:3px; border:1px solid #dedede; padding:7px 0 6px 7px;}
+div.simpleSch a.btn{position:absolute; right:0; top:7px;}
+ul.SchList{overflow:hidden;}
+ul.SchList > li{float:left; padding:0 5px; border-left:1px solid #dedede; min-height:180px; width:145px;}
+ul.SchList > li.last{width:156px; padding-right:0;}
+ul.SchList > li:first-child{border-left:0; padding-left:0;}
+ul.SchList > li > strong{display:block; background-color:#a2c1c4; color:#fff; text-align:center;  height:25px; line-height:25px; margin:0 0 10px 0;}
+ul.SchList > li li{line-height:13px; margin-bottom:8px;}
+ul.SchList > li li input{margin-right:5px;}
+ul.SchList > li li label{letter-spacing:-1px;}
+
+
+
+div.ctInfoWrap{}
+div.ctInfoWrap .table1 th{text-align:left; padding-left:11px;}
+div.ctInfoWrap .table1 td{padding-left:11px;}
+ul.ctTab{overflow:hidden; background:url(../img/sub/bg_ctTab.gif) repeat-x 0 100%; height:32px;}
+ul.ctTab li{float:left; position:relative;  z-index:1;}
+ul.ctTab li a{display:block; padding:0 15px; color:#b2b2b2; height:30px; line-height:30px; border:1px solid #d8d8d8;  border-bottom:0; border-left:0; border-top-left-radius:2px; border-top-right-radius:2px;
+-webkit-border-top-left-radius:2px; -moz-border-top-left-radius:2px; -ms-border-top-left-radius:2px; -webkit-border-top-right-radius:2px; -moz-border-top-right-radius:2px; -ms-border-top-right-radius:2px;
+}
+ul.ctTab li:first-child a{border-left:1px solid #d8d8d8;}
+ul.ctTab li.active{ position:relative;z-index:2;}
+ul.ctTab li.active a{border-bottom:0; height:32px; line-height:32px; color:#707070; border-color:#898989; border-left:1px solid #898989; background-color:#fff;}
