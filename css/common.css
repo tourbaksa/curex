@@ -1184,13 +1184,13 @@ table +.btnWrap{margin-top:10px;}
 
 .smBeR{line-height:15px; color:#fff; border-radius:2px; -moz-border-radius:2px; -webkit-border-radius:2px; -ms-border-radius:2px; padding:2px 5px 3px; background-color: #0084ff;}/* 블루 라운드 */
 
-.lgBen{line-height:15px; color:#fff; padding:7px 15px 7px; background-color: #0084ff}
-.lgBeR{line-height:15px; color:#fff; border-radius:2px; -moz-border-radius:2px; -webkit-border-radius:2px; -ms-border-radius:2px; padding:7px 15px 7px; background-color: #0084ff}
-.lgGyR{line-height:15px; color:#fff; border-radius:2px; -moz-border-radius:2px; -webkit-border-radius:2px; -ms-border-radius:2px; padding:7px 15px 7px; background-color: #818181}
-.lgLgR{line-height:15px; color:#fff; border-radius:2px; -moz-border-radius:2px; -webkit-border-radius:2px; -ms-border-radius:2px; padding:7px 15px 7px; background-color: #22B8C7}
-
-.lgBeR1{line-height:15px; color:#fff; border-radius:2px; -moz-border-radius:2px; -webkit-border-radius:2px; -ms-border-radius:2px; padding:7px 12px 7px; background-color: #0084ff;}/* 블루좌우패딩12 */
-.lgGyR1{line-height:15px; color:#fff; border-radius:2px; -moz-border-radius:2px; -webkit-border-radius:2px; -ms-border-radius:2px; padding:7px 12px 7px; background-color: #818181;} /* 회색좌우패딩12 */
+.lgBen{line-height:15px; height:29px; color:#fff; padding:7px 15px 7px; background-color: #0084ff}
+.lgBeR{line-height:15px; height:29px; color:#fff; border-radius:2px; -moz-border-radius:2px; -webkit-border-radius:2px; -ms-border-radius:2px; padding:7px 15px 7px; background-color: #0084ff;}
+.lgGyR{line-height:15px; height:29px; color:#fff; border-radius:2px; -moz-border-radius:2px; -webkit-border-radius:2px; -ms-border-radius:2px; padding:7px 15px 7px; background-color: #818181;}
+.lgLgR{line-height:15px; height:29px; color:#fff; border-radius:2px; -moz-border-radius:2px; -webkit-border-radius:2px; -ms-border-radius:2px; padding:7px 15px 7px; background-color: #22B8C7;}
+.lgGnR{line-height:15px; height:29px; color:#fff; border-radius:2px; -moz-border-radius:2px; -webkit-border-radius:2px; -ms-border-radius:2px; padding:7px 15px 7px; background-color: #50A6CA;}
+.lgBeR1{line-height:15px; height:29px; color:#fff; border-radius:2px; -moz-border-radius:2px; -webkit-border-radius:2px; -ms-border-radius:2px; padding:7px 12px 7px; background-color: #0084ff;}/* 블루좌우패딩12 */
+.lgGyR1{line-height:15px; height:29px; color:#fff; border-radius:2px; -moz-border-radius:2px; -webkit-border-radius:2px; -ms-border-radius:2px; padding:7px 12px 7px; background-color: #818181;} /* 회색좌우패딩12 */
 
 .mdLgRb{line-height:15px; color:#fff; border-radius:2px; -moz-border-radius:2px; -webkit-border-radius:2px; -ms-border-radius:2px; padding:2px 9px 3px; background-color: #22B8C7;border:1px solid #38a6b2;} /* 초록라운드보더 */
 .mdDyR{line-height:15px; color:#fff; border-radius:2px; -moz-border-radius:2px; -webkit-border-radius:2px; -ms-border-radius:2px; padding:3px 5px 4px; background-color: #a8c600;} /* 다크노랑 */
