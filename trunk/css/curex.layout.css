@@ -65,11 +65,11 @@ div.Tsearch span.Name.man{}
 div.Tsearch span a{text-decoration:none; color:#707070; font-weight:bold;display:block; letter-spacing:-1px; background:url(/img/common/ico_nameArrow.gif) no-repeat 100% 50%;}
 
 /* 검색결과 회원리스트 출력 */
-div.personInfoArea{position:absolute; top:90px;overflow:hidden; background:#f7f7f7; z-index:222; border:1px solid #22b8c7; border-top:0; width:795px; }
+div.personInfoArea{position:absolute; top:90px;overflow:hidden; background:#f7f7f7; z-index:222; border:1px solid #22b8c7; border-top:0; width:795px; display:block !important;}
 
 /* 기계약 하나만 보여질때 */
 div.personOne{width:428px;padding-bottom:36px;}
-div.PersonCont{float:left; width:327px; padding:20px 20px 45px 20px; background:#fff;}
+div.PersonCont{float:left; width:367px; padding:20px 20px 45px 20px; background:#fff;}
 ul.personList li{border-bottom:1px solid #e8e9e9; line-height:37px; height:37px; position:relative; overflow:hidden;}
 ul.personList li a{display:block;}
 ul.personList li span{display:inline-block;} 
@@ -84,7 +84,7 @@ ul.personList li.hover{background-color:#e4edf2;}
 ul.personList li.hover span.sut{color:#2c8ecb; background-image:url(../images/common/bg_sutBar_hover.gif);}
 ul.personList li.hover span.name{color:#000000;}
 
-div.personDetail{background-color:#f7f7f7; padding:47px 30px 0 30px; float:left; width:368px; position:relative;}
+div.personDetail{background-color:#f7f7f7; padding:47px 30px 0 30px; float:left; width:426px; position:relative;}
 dl.pernalInfo{margin:0 0 18px 0;}
 dl.pernalInfo dt{color:#3199d6; font-size:14px; font-weight:bold; padding:0 0 5px 0;}
 dl.pernalInfo dt strong{font-size:18px; color:#333;}
@@ -118,7 +118,7 @@ button.userInfoclose{background:url(/img/common/btn_userInfoclose.gif) no-repeat
 
 /* 기계약버튼 */
 div.personBtn{text-align:left; margin-top:10px;}
-div.personBtn a{margin-left:0px;}
+div.personBtn a{margin-left:4px;}
 div.personBtn a:first-child{margin-left:0;}
 div.personBtn .lgBeR1{padding:7px 10px;}
 div.personBtn .lgGyR1{padding:7px 10px;}
