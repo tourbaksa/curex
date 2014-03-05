@@ -165,6 +165,91 @@ div.compLayer dd{width:242px; background:#fff; padding:14px; border:1px solid #d
 div.compLayer a.spClose{position:absolute; right:10px; top:9px;}
 
 
+/*==========================
+  일정표
+============================*/
+div.sDuleHeader{overflow:hidden;}
+div.sDuleHeader ul.sInrTab{float:left;}
+div.sDuleHeader div.carUtil{float:right;}
+
+div.checkingBox{height:29px; overflow:hidden; margin:9px 0 10px 0; clear:both;}
+div.checkingBox dl{float:left; padding:3px 0 0 0;}
+div.checkingBox dt{margin:0 10px 0 19px;}
+div.checkingBox dl dt:first-child{margin-left:0;}
+div.checkingBox dt,div.checkingBox dd{float:left;}
+div.checkingBox dd{height:29px; height:29px; padding:3px 0 0 0;}
+div.checkingBox dd input{margin:0 5px 0 10px;}
+div.checkingBox dd input:first-child{margin-left:0;}
+div.checkingBox dd input,div.checkingBox dd label{vertical-align:middle;}
+div.checkingBox a.lgBen{float:right;}
+
+div.calendar{position:relative;}
+div.calendar div.yearSel{background:url(/img/sub/bg_sDuleHeader.gif) repeat-x 0 0; height:36px; border:1px solid #26a1d9; border-bottom:2px solid #1b7eb2; text-align:center; line-height:36px;}
+div.calendar div.yearSel button.ybefore{background:url(/img/sub/btn_mkYbefore.gif) no-repeat 0 0; width:20px; height:20px; vertical-align:top; margin:7px 0 0 0;}
+div.calendar div.yearSel span.current{ display:inline-block; width:183px;height:35px; width:183px; position:relative; text-align:left;}
+div.calendar div.yearSel span.current a.close{background:url(/img/sub/icon_ySelArwclose.gif) no-repeat 105px 50%; display:inline-block; padding-right:9px; width:121px; font-weight:bold; color:#fff; font-size:20px;  margin-left:20px;}
+div.calendar div.yearSel span.current a.carendar span.today{vertical-align:top; position:absolute; top:6px;  display:inline-block; right:0px;}
+div.calendar div.yearSel button.ynext{background:url(/img/sub/btn_mkYnext.gif) no-repeat 0 0; width:20px; height:20px; height:20px; vertical-align:top;margin:7px 0 0 25px;}
+
+/* 월선택 레이어 */
+div.monthSelLayer{position:absolute; left:50%; top:31px; margin-left:-105px; height:147px; width:192px;  padding:10px 0 0 0; border-bottom:1px solid #d1d1d1;}
+div.monthSelLayer div.monHdr{width:192px;height:36px; border:1px solid #64ade5; border-bottom:1px solid #e5e6e8; background-color:#f7f7f7; text-align:center; padding:7px 0 0 0; position:relative;}
+div.monthSelLayer div.monHdr a.current{color:#363636; font-size:16px; font-weight:bold;display:inline-block; vertical-align:middle; width:128px; background:url(/img/sub/bg_monthCurrent.png) no-repeat 0 0; height:39px; position:absolute; left:32px; top:-10px; padding:18px 0 0 0;}
+div.monthSelLayer button.mbefore{background:url(/img/sub/btn_mkMbefore.gif) no-repeat 0 0; width:22px; height:22px; position:absolute; left:10px; top:8px;}
+div.monthSelLayer button.mnext{background:url(/img/sub/btn_mkMnext.gif) no-repeat 0 0; width:22px; height:22px; position:absolute; right:10px; top:8px}
+div.monthSelLayer div.monthSet{width:192px; border:1px solid #64ade5; border-top:0; overflow:hidden; height:100px; padding:12px 0 0 5px; background-color:#fff;}
+div.monthSelLayer div.monthSet button{background:#fff; border:1px solid #cccccc; border-radius:2px; -moz-border-radius:2px; -webkit-border-radius:2px; -ms-border-radius:2px; color:#707070; height:24px; width:40px; float:left; margin:0 0 3px 4px;}
+/* 월선택시  */
+div.monthSelLayer div.monthSet button.on{background-color:#0084ff; color:#fff; border:0;}
+
+div.calendarCnt{margin:10px 0 0 0; overflow:hidden; margin:0 0 20px 0;}
+div.calendarCnt table{ float:left; width:769px;}
+div.calendarCnt table th,
+div.calendarCnt table td{border:1px solid #e5e6e8;}
+div.calendarCnt table thead th{background:#f9f9f9;}
+div.calendarCnt table tbody td.sun{color:#e8404f;}
+div.calendarCnt table tbody td.sat{color:#00a2ff;}
+div.calendarCnt table tbody td {vertical-align:top; padding:0;}
+div.calendarCnt table tbody td > div{padding:9px 5px 5px 9px;width:100%;  height:78px;}
+div.calendarCnt table td a.work{display:block; padding-left:20px; height:15px; line-height:15px; font-size:11px; word-spacing:-2px;}
+div.calendarCnt table td a.work:first-child{margin-top:4px;}
+div.calendarCnt table td a.wkicon_s1{background:url(/img/sub/wkico_sm1.gif) no-repeat 0 0;}
+div.calendarCnt table td a.wkicon_s2{background:url(/img/sub/wkico_sm2.gif) no-repeat 0 0;}
+div.calendarCnt table td a.wkicon_s3{background:url(/img/sub/wkico_sm3.gif) no-repeat 0 0;}
+
+div.worksetWrap{width:245px; float:right; border-bottom:1px solid #dedede;}
+div.worksetWrap h3{height:35px;background-color:#80dbe4; border:1px solid #75cbd4; border-bottom:2px solid #3dabb6; margin:0 !important;}
+div.worksetWrap h3 span{display:inline-block; background:url(/img/sub/icon_wkCalendar.gif) no-repeat 8px 7px; padding-left:36px; font-size:13px; color:#fff; line-height:32px;}
+
+/* 일정관리탭 */
+ul.sDuleTab{border-top:1px solid #cacaca; background:#f7f7f8 url(/img/sub/bg_sDuleTab.gif) repeat-x 0 100%; overflow:hidden; border-right:1px solid #dedede;}
+ul.sDuleTab li{float:left; width:80px; border:1px solid #e6e6e7; border-left:1px solid #dedede; border-right:0; border-bottom:0;}
+ul.sDuleTab li a{display:block; text-align:center; height:31px; border-top:2px solid #ffffff; line-height:25px;}
+ul.sDuleTab li.on a{ border-top:1px solid #f4f4f4; border-right:1px solid #f4f4f4; border-left:1px solid #fcfcfd; background:#fff;}
+
+div.workcnt {border-left:1px solid #dedede; border-right:1px solid #dedede; overflow-y:scroll; overflow-x:hidden; height:358px;}
+/* 일정 정렬*/
+div.workcnt span.workSort{display:block; border-bottom:1px solid #e5e6e8; height:30px; line-height:30px; padding:0 0 0 8px;}
+div.workcnt span.workSort label{margin:0 10px 0 3px;}
+
+div.workcnt > ul > li {border-top:1px solid #dedede;}
+div.workcnt > ul > li:first-child{border-top:0;}
+div.workcnt div.worktit span{float:left;}
+div.workcnt div.worktit span + span{margin-left:10px; line-height:14px; letter-spacing:-1px;}
+div.workcnt div.worktit{overflow:hidden; height:42px; padding:5px 8px 5px 10px; border-bottom:1px dashed #e5e6e8; width:100%;}
+div.workcnt div.worktit > span:first-child{float:left; width:26px; height:26px; line-height:0; font-size:0; overflow:hidden; text-indent:-9999px; margin-left:0;}
+div.workcnt div.worktit span.wkicon1{background:url(/img/sub/wkico_lg1.gif) no-repeat 0 0;}
+div.workcnt div.worktit span.wkicon2{background:url(/img/sub/wkico_lg2.gif) no-repeat 0 0;}
+div.workcnt div.worktit span.wkicon3{background:url(/img/sub/wkico_lg3.gif) no-repeat 0 0;}
+div.workcnt div.worktit button{margin-left:22px; float:right;}
+div.workcnt ul.worklist{clear:both; padding:0 0 9px 11px;}
+div.workcnt ul.worklist li{background:url(/img/sub/blt_wkArrow.gif) no-repeat 0 50%; padding-left:9px; line-height:17px;}
+
+div.calenderWrap .table1 thead tr.tRow th,
+div.calenderWrap .table1 tbody th{background:none;}
+div.calenderWrap .table1 th,
+div.calenderWrap .table1 td{text-align:center;}
+
 
 
 
