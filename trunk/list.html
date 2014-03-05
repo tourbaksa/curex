@@ -2,11 +2,14 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <title>CuREX</title>
+
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="editplus" />
 <meta name="author" content="" />
 <meta name="keywords" content="" />
 <meta name="description" content="" />
+<script src="/thirdParty/jquery/jquery-1.10.2.min.js"></script>
+<script src="/thirdParty/jquery/jquery-ui-1.10.3.min.js"></script>
 <style type="text/css">
 * {font-size:12px;}
 h1 {font-size:20px;}
@@ -23,15 +26,19 @@ tr:hover td{background:#c0eaff;}
 tr:hover td.dep1sec{background:#2a679a;}
 .borbot{border-bottom:2px solid #b1d89d;}
 .red {color:red;}
-.dep1sec {color:#fff;background:#2a679a; font-weight:bold}
+.dep1sec,
+.dep2sec,
+.dep3sec,
+.dep4sec,
+.dep5sec {color:#fff;background:#2a679a; font-weight:bold}
 ul li {float:right;margin:0 0 10px 10px;list-style:none;}
 ul li.name {margin-right:20px;}
 .vt{vertical-align:top;}
 
 tr.suc td{background:#e1f5ff;}
 
-
 </style>
+
 </head>
 
 <body>
@@ -128,7 +135,7 @@ tr.suc td{background:#e1f5ff;}
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
-			<td><a target="_blank" href="button.html">button.html</a></td>
+			<td><a target="_blank" href="button_tab.html">button.html</a></td>
 			<td></td>
 			<td></td>
 			<td align="center">●</td>
@@ -168,7 +175,7 @@ tr.suc td{background:#e1f5ff;}
 		<tr>
 			<td colspan="17" class="dep1sec">고객정보 </td>
 		</tr>
-		<tr>
+		<tr class="de1">
 		  <td height="32" align="center">1</td>
 		  <td>고객정보</td>
 		  <td>고객등록</td>
@@ -187,7 +194,7 @@ tr.suc td{background:#e1f5ff;}
 		  <td align="center"></td>
 		  <td align="center">&nbsp;</td>
 	  </tr>
-		<tr>
+		<tr class="de1">
 		  <td height="32" align="center"></td>
 		  <td></td>
 		  <td></td>
@@ -206,7 +213,7 @@ tr.suc td{background:#e1f5ff;}
 		  <td align="center"></td>
 		  <td align="center">&nbsp;</td>
 	  </tr>
-		<tr>
+		<tr class="de1">
 		  <td height="32" align="center">&nbsp;</td>
 		  <td></td>
 		  <td></td>
@@ -227,7 +234,7 @@ tr.suc td{background:#e1f5ff;}
 		  <td align="center">&nbsp;</td>
 		  <td align="center">&nbsp;</td>
 	  </tr>
-		<tr>
+		<tr class="de1">
 		  <td height="32" align="center">&nbsp;</td>
 		  <td>&nbsp;</td>
 		  <td class="vt">고객통합뷰</td>
@@ -246,7 +253,7 @@ tr.suc td{background:#e1f5ff;}
 		  <td align="center">&nbsp;</td>
 		  <td align="center"></td>
 	  </tr>
-		<tr>
+		<tr class="de1">
 		  <td height="32" align="center">&nbsp;</td>
 		  <td>&nbsp;</td>
 		  <td>&nbsp;</td>
@@ -265,7 +272,7 @@ tr.suc td{background:#e1f5ff;}
 		  <td align="center">&nbsp;</td>
 		  <td align="center"></td>
 	  </tr>
-		<tr>
+		<tr class="de1">
 		  <td height="32" align="center">&nbsp;</td>
 		  <td>&nbsp;</td>
 		  <td>&nbsp;</td>
@@ -284,7 +291,7 @@ tr.suc td{background:#e1f5ff;}
 		  <td align="center">&nbsp;</td>
 		  <td align="center">&nbsp;</td>
 	  </tr>
-		<tr>
+		<tr class="de1">
 		  <td height="32" align="center">&nbsp;</td>
 		  <td></td>
 		  <td></td>
@@ -303,7 +310,7 @@ tr.suc td{background:#e1f5ff;}
 		  <td align="center">&nbsp;</td>
 		  <td align="center">&nbsp;</td>
 	  </tr>
-		<tr>
+		<tr class="de1">
 		  <td height="32" align="center">&nbsp;</td>
 		  <td>&nbsp;</td>
 		  <td>&nbsp;</td>
@@ -322,7 +329,7 @@ tr.suc td{background:#e1f5ff;}
 		  <td align="center">&nbsp;</td>
 		  <td align="center">&nbsp;</td>
 	  </tr>
-		<tr>
+		<tr class="de1">
 		  <td height="32" align="center">&nbsp;</td>
 		  <td></td>
 		  <td></td>
@@ -341,7 +348,7 @@ tr.suc td{background:#e1f5ff;}
 		  <td align="center">&nbsp;</td>
 		  <td align="center">&nbsp;</td>
 	  </tr>
-	 <tr>
+	 <tr class="de1">
 		  <td height="32" align="center">&nbsp;</td>
 		  <td>&nbsp;</td>
 		  <td>고객정보관리</td>
@@ -360,7 +367,7 @@ tr.suc td{background:#e1f5ff;}
 		  <td align="center">&nbsp;</td>
 		  <td align="center">&nbsp;</td>
 	  </tr>
-	  <tr>
+	  <tr class="de1">
 		  <td height="32" align="center">&nbsp;</td>
 		  <td>&nbsp;</td>
 		  <td></td>
@@ -381,10 +388,10 @@ tr.suc td{background:#e1f5ff;}
 	  </tr>
 
 		<tr>
-			<td colspan="17" class="dep1sec">LIPS </td>
+			<td colspan="17" class="dep2sec">LIPS </td>
 		</tr>
 
-		<tr>
+		<tr class="de2">
 		  <td height="32" align="center"></td>
 			<td>LIPS</td>
 		  <td>니즈분석</td>
@@ -403,7 +410,7 @@ tr.suc td{background:#e1f5ff;}
 		  <td align="center">&nbsp;</td>
 		  <td align="center">&nbsp;</td>
 	  </tr>
-		<tr>
+		<tr class="de2">
 		  <td height="32" align="center">&nbsp;</td>
 		  <td>&nbsp;</td>
 		  <td>&nbsp;</td>
@@ -422,7 +429,7 @@ tr.suc td{background:#e1f5ff;}
 		  <td align="center">&nbsp;</td>
 		  <td align="center">&nbsp;</td>
 	  </tr>
-		<tr>
+		<tr class="de2">
 		  <td height="32" align="center">&nbsp;</td>
 		  <td>&nbsp;</td>
 		  <td>&nbsp;</td>
@@ -441,7 +448,7 @@ tr.suc td{background:#e1f5ff;}
 		  <td align="center">&nbsp;</td>
 		  <td align="center">&nbsp;</td>
 	  </tr>
-		<tr>
+		<tr class="de2">
 		  <td height="32" align="center">&nbsp;</td>
 		  <td>&nbsp;</td>
 		  <td>&nbsp;</td>
@@ -460,7 +467,7 @@ tr.suc td{background:#e1f5ff;}
 		  <td align="center">&nbsp;</td>
 		  <td align="center">&nbsp;</td>
 	  </tr>
-		<tr>
+		<tr class="de2">
 		  <td height="32" align="center">&nbsp;</td>
 		  <td>&nbsp;</td>
 		  <td>&nbsp;</td>
@@ -479,7 +486,7 @@ tr.suc td{background:#e1f5ff;}
 		  <td align="center">&nbsp;</td>
 		  <td align="center">&nbsp;</td>
 	  </tr>
-		<tr>
+		<tr class="de2">
 		  <td height="32" align="center">&nbsp;</td>
 		  <td>&nbsp;</td>
 			<td></td>
@@ -498,7 +505,7 @@ tr.suc td{background:#e1f5ff;}
 		  <td align="center">&nbsp;</td>
 		  <td align="center">&nbsp;</td>
 	  </tr>
-		<tr>
+		<tr class="de2">
 		  <td height="32" align="center">&nbsp;</td>
 		  <td>&nbsp;</td>
 			<td></td><td></td>
@@ -516,7 +523,7 @@ tr.suc td{background:#e1f5ff;}
 		  <td align="center">&nbsp;</td>
 		  <td align="center">&nbsp;</td>
 	  </tr>
-		<tr>
+		<tr class="de2">
 		  <td height="32" align="center">&nbsp;</td>
 		  <td>&nbsp;</td><td></td>
 		  <td>노후보장시뮬레이션</td>
@@ -534,7 +541,7 @@ tr.suc td{background:#e1f5ff;}
 		  <td align="center">&nbsp;</td>
 		  <td align="center">&nbsp;</td>
 	  </tr>
-		<tr>
+		<tr class="de2">
 		  <td height="32" align="center">&nbsp;</td>
 		  <td>&nbsp;</td>
 		  <td>&nbsp;</td><td></td>
@@ -552,7 +559,7 @@ tr.suc td{background:#e1f5ff;}
 		  <td align="center">&nbsp;</td>
 		  <td align="center">&nbsp;</td>
 	  </tr>
-	  <tr>
+	  <tr class="de2">
 		  <td height="32" align="center">&nbsp;</td>
 		  <td>&nbsp;</td>
 		  <td>&nbsp;</td><td></td>
@@ -570,7 +577,7 @@ tr.suc td{background:#e1f5ff;}
 		  <td align="center">&nbsp;</td>
 		  <td align="center">&nbsp;</td>
 	  </tr>
-	  <tr>
+	  <tr class="de2">
 		  <td height="32" align="center">&nbsp;</td>
 		  <td>&nbsp;</td>
 		  <td>&nbsp;</td><td></td>
@@ -588,7 +595,7 @@ tr.suc td{background:#e1f5ff;}
 		  <td align="center">&nbsp;</td>
 		  <td align="center">&nbsp;</td>
 	  </tr>
-		<tr>
+		<tr class="de2">
 		  <td height="32" align="center">&nbsp;</td>
 		  <td>&nbsp;</td><td></td>
 		  <td>Sales Material</td>
@@ -606,7 +613,7 @@ tr.suc td{background:#e1f5ff;}
 		  <td align="center">&nbsp;</td>
 		  <td align="center">&nbsp;</td>
 	  </tr>
-		<tr>
+		<tr class="de2">
 		  <td height="32" align="center">&nbsp;</td>
 		  <td>&nbsp;</td><td></td>
 		  <td></td>
@@ -624,7 +631,7 @@ tr.suc td{background:#e1f5ff;}
 		  <td align="center">&nbsp;</td>
 		  <td align="center">&nbsp;</td>
 	  </tr>
-		<tr>
+		<tr class="de2">
 		  <td height="32" align="center">&nbsp;</td>
 		  <td>&nbsp;</td><td></td>
 		  <td></td>
@@ -642,7 +649,7 @@ tr.suc td{background:#e1f5ff;}
 		  <td align="center">&nbsp;</td>
 		  <td align="center">&nbsp;</td>
 	  </tr>
-		<tr>
+		<tr class="de2">
 		  <td height="32" align="center">&nbsp;</td>
 		  <td>&nbsp;</td><td></td>
 		  <td>수입지출분석</td>
@@ -660,7 +667,7 @@ tr.suc td{background:#e1f5ff;}
 		  <td align="center">&nbsp;</td>
 		  <td align="center">&nbsp;</td>
 	  </tr>
-	  <tr>
+	  <tr class="de2">
 		  <td height="32" align="center">&nbsp;</td>
 		  <td>&nbsp;</td><td></td>
 		  <td>&nbsp;</td>
@@ -678,7 +685,7 @@ tr.suc td{background:#e1f5ff;}
 		  <td align="center">&nbsp;</td>
 		  <td align="center">&nbsp;</td>
 	  </tr>
-		<tr>
+		<tr class="de2">
 		  <td height="32" align="center">&nbsp;</td>
 		  <td>&nbsp;</td>
 		  <td>&nbsp;</td>
@@ -697,7 +704,7 @@ tr.suc td{background:#e1f5ff;}
 		  <td align="center">&nbsp;</td>
 		  <td align="center">&nbsp;</td>
 	  </tr>
-		<tr>
+		<tr class="de2">
 		  <td height="32" align="center">&nbsp;</td>
 		  <td>&nbsp;</td>
 		  <td>&nbsp;</td>
@@ -716,7 +723,7 @@ tr.suc td{background:#e1f5ff;}
 		  <td align="center">&nbsp;</td>
 		  <td align="center">&nbsp;</td>
 	  </tr>
-		<tr>
+		<tr class="de2">
 		  <td height="32" align="center">&nbsp;</td>
 		  <td>&nbsp;</td>
 		  <td>&nbsp;</td>
@@ -735,7 +742,7 @@ tr.suc td{background:#e1f5ff;}
 		  <td align="center">&nbsp;</td>
 		  <td align="center">&nbsp;</td>
 	  </tr>
-		<tr>
+		<tr class="de2">
 		  <td height="32" align="center">&nbsp;</td>
 		  <td>&nbsp;</td>
 		  <td>&nbsp;</td>
@@ -754,7 +761,7 @@ tr.suc td{background:#e1f5ff;}
 		  <td align="center">&nbsp;</td>
 		  <td align="center">&nbsp;</td>
 	  </tr>
-		<tr>
+		<tr class="de2">
 		  <td height="32" align="center">&nbsp;</td>
 		  <td>&nbsp;</td>
 		  <td>&nbsp;</td>
@@ -773,7 +780,7 @@ tr.suc td{background:#e1f5ff;}
 		  <td align="center">&nbsp;</td>
 		  <td align="center">&nbsp;</td>
 	  </tr>
-		<tr>
+		<tr class="de2">
 		  <td height="32" align="center">&nbsp;</td>
 		  <td>&nbsp;</td>
 		  <td>&nbsp;</td>
@@ -792,7 +799,7 @@ tr.suc td{background:#e1f5ff;}
 		  <td align="center">&nbsp;</td>
 		  <td align="center">&nbsp;</td>
 	  </tr>
-		<tr>
+		<tr class="de2">
 		  <td height="32" align="center">&nbsp;</td>
 		  <td>&nbsp;</td>
 		  <td>&nbsp;</td>
@@ -811,7 +818,7 @@ tr.suc td{background:#e1f5ff;}
 		  <td align="center">&nbsp;</td>
 		  <td align="center">&nbsp;</td>
 	  </tr>
-		<tr>
+		<tr class="de2">
 		  <td height="32" align="center">&nbsp;</td>
 		  <td>&nbsp;</td>
 		  <td>&nbsp;</td>
@@ -830,7 +837,7 @@ tr.suc td{background:#e1f5ff;}
 		  <td align="center">&nbsp;</td>
 		  <td align="center">&nbsp;</td>
 	  </tr>
-		<tr>
+		<tr class="de2">
 		  <td height="32" align="center">&nbsp;</td>
 		  <td>&nbsp;</td>
 		  <td>&nbsp;</td>
@@ -849,7 +856,7 @@ tr.suc td{background:#e1f5ff;}
 		  <td align="center">&nbsp;</td>
 		  <td align="center">&nbsp;</td>
 	  </tr>
-		<tr>
+		<tr class="de2">
 		  <td height="32" align="center">&nbsp;</td>
 		  <td>&nbsp;</td>
 		  <td>&nbsp;</td>
@@ -869,7 +876,7 @@ tr.suc td{background:#e1f5ff;}
 		  <td align="center">&nbsp;</td>
 	  </tr>
 		
-		<tr>
+		<tr class="de2">
 		  <td height="32" align="center">&nbsp;</td>
 		  <td>&nbsp;</td>
 		  <td>&nbsp;</td>
@@ -888,7 +895,7 @@ tr.suc td{background:#e1f5ff;}
 		  <td align="center">&nbsp;</td>
 		  <td align="center">&nbsp;</td>
 	  </tr>
-		<tr>
+		<tr class="de2">
 		  <td height="32" align="center">&nbsp;</td>
 		  <td>&nbsp;</td>
 		  <td>&nbsp;</td>
@@ -908,7 +915,7 @@ tr.suc td{background:#e1f5ff;}
 		  <td align="center">&nbsp;</td>
 	  </tr>
 		
-		<tr>
+		<tr class="de2">
 		  <td height="32" align="center">&nbsp;</td>
 		  <td>&nbsp;</td>
 		  <td>&nbsp;</td>
@@ -927,7 +934,7 @@ tr.suc td{background:#e1f5ff;}
 		  <td align="center">&nbsp;</td>
 		  <td align="center">&nbsp;</td>
 	  </tr>
-		<tr>
+		<tr class="de2">
 		  <td height="32" align="center">&nbsp;</td>
 		  <td>&nbsp;</td>
 		  <td>&nbsp;</td>
@@ -946,7 +953,7 @@ tr.suc td{background:#e1f5ff;}
 		  <td align="center">&nbsp;</td>
 		  <td align="center">&nbsp;</td>
 	  </tr>
-		<tr>
+		<tr class="de2">
 		  <td height="32" align="center">&nbsp;</td>
 		  <td>&nbsp;</td>
 		  <td>&nbsp;</td>
@@ -965,7 +972,7 @@ tr.suc td{background:#e1f5ff;}
 		  <td align="center">&nbsp;</td>
 		  <td align="center">&nbsp;</td>
 	  </tr>
-		<tr>
+		<tr class="de2">
 		  <td height="32" align="center">&nbsp;</td>
 		  <td></td>
 		  <td>계획수립</td>
@@ -984,7 +991,7 @@ tr.suc td{background:#e1f5ff;}
 		  <td align="center">&nbsp;</td>
 		  <td align="center"></td>
 	  </tr>
-		<tr>
+		<tr class="de2">
 		  <td height="32" align="center">&nbsp;</td>
 		  <td>&nbsp;</td>
 		  <td>&nbsp;</td>
@@ -1003,7 +1010,7 @@ tr.suc td{background:#e1f5ff;}
 		  <td align="center">&nbsp;</td>
 		  <td align="center">&nbsp;</td>
 	  </tr>
-		<tr>
+		<tr class="de2">
 		  <td height="32" align="center">&nbsp;</td>
 		  <td>&nbsp;</td>
 		  <td>&nbsp;</td>
@@ -1023,7 +1030,7 @@ tr.suc td{background:#e1f5ff;}
 		  <td align="center">&nbsp;</td>
 	  </tr>
 		
-		<tr>
+		<tr class="de2">
 		  <td height="32" align="center">&nbsp;</td>
 		  <td></td>
 		  <td></td>
@@ -1042,7 +1049,7 @@ tr.suc td{background:#e1f5ff;}
 		  <td align="center">&nbsp;</td>
 		  <td align="center">&nbsp;</td>
 	  </tr>
-		<tr>
+		<tr class="de2">
 		  <td height="32" align="center">&nbsp;</td>
 		  <td>&nbsp;</td>
 		  <td></td>
@@ -1061,7 +1068,7 @@ tr.suc td{background:#e1f5ff;}
 		  <td align="center">&nbsp;</td>
 		  <td align="center">&nbsp;</td>
 	  </tr>
-		<tr>
+		<tr class="de2">
 		  <td height="32" align="center">&nbsp;</td>
 		  <td>&nbsp;</td>
 		  <td></td>
@@ -1080,7 +1087,7 @@ tr.suc td{background:#e1f5ff;}
 		  <td align="center">&nbsp;</td>
 		  <td align="center">&nbsp;</td>
 	  </tr>
-		<tr>
+		<tr class="de2">
 		  <td height="32" align="center">&nbsp;</td>
 		  <td></td>
 		  <td></td>
@@ -1099,7 +1106,7 @@ tr.suc td{background:#e1f5ff;}
 		  <td align="center">&nbsp;</td>
 		  <td align="center">&nbsp;</td>
 	  </tr>
-		<tr>
+		<tr class="de2">
 		  <td height="32" align="center">&nbsp;</td>
 		  <td></td>
 		  <td></td>
@@ -1118,7 +1125,7 @@ tr.suc td{background:#e1f5ff;}
 		  <td align="center">&nbsp;</td>
 		  <td align="center">&nbsp;</td>
 	  </tr>
-		<tr>
+		<tr class="de2">
 		  <td height="32" align="center">&nbsp;</td>
 		  <td>&nbsp;</td>
 		  <td>&nbsp;</td>
@@ -1137,7 +1144,7 @@ tr.suc td{background:#e1f5ff;}
 		  <td align="center">&nbsp;</td>
 		  <td align="center">&nbsp;</td>
 	  </tr>
-	  <tr>
+	  <tr class="de2">
 		  <td height="32" align="center">&nbsp;</td>
 		  <td>&nbsp;</td>
 		  <td>&nbsp;</td>
@@ -1156,7 +1163,7 @@ tr.suc td{background:#e1f5ff;}
 		  <td align="center">&nbsp;</td>
 		  <td align="center">&nbsp;</td>
 	  </tr>
-		<tr>
+		<tr class="de2">
 		  <td height="32" align="center">&nbsp;</td>
 		  <td>&nbsp;</td>
 		  <td>&nbsp;</td>
@@ -1175,7 +1182,7 @@ tr.suc td{background:#e1f5ff;}
 		  <td align="center">&nbsp;</td>
 		  <td align="center">&nbsp;</td>
 	  </tr>
-		<tr>
+		<tr class="de2">
 		  <td height="32" align="center">&nbsp;</td>
 		  <td>&nbsp;</td>
 		  <td>&nbsp;</td>
@@ -1194,7 +1201,7 @@ tr.suc td{background:#e1f5ff;}
 		  <td align="center">&nbsp;</td>
 		  <td align="center">&nbsp;</td>
 	  </tr>
-		<tr>
+		<tr class="de2">
 		  <td height="32" align="center">&nbsp;</td>
 		  <td>&nbsp;</td>
 		  <td>&nbsp;</td>
@@ -1213,7 +1220,7 @@ tr.suc td{background:#e1f5ff;}
 		  <td align="center">&nbsp;</td>
 		  <td align="center">&nbsp;</td>
 	  </tr>
-		<tr>
+		<tr class="de2">
 		  <td height="32" align="center">&nbsp;</td>
 		  <td>&nbsp;</td>
 		  <td>&nbsp;</td>
@@ -1232,7 +1239,7 @@ tr.suc td{background:#e1f5ff;}
 		  <td align="center">&nbsp;</td>
 		  <td align="center">&nbsp;</td>
 	  </tr>
-	  <tr>
+	  <tr class="de2">
 		  <td height="32" align="center">&nbsp;</td>
 		  <td>&nbsp;</td>
 		  <td>&nbsp;</td>
@@ -1251,7 +1258,7 @@ tr.suc td{background:#e1f5ff;}
 		  <td align="center">&nbsp;</td>
 		  <td align="center">&nbsp;</td>
 	  </tr>
-	  <tr>
+	  <tr class="de2">
 		  <td height="32" align="center">&nbsp;</td>
 		  <td>&nbsp;</td>
 		  <td>&nbsp;</td>
@@ -1270,7 +1277,7 @@ tr.suc td{background:#e1f5ff;}
 		  <td align="center">&nbsp;</td>
 		  <td align="center">&nbsp;</td>
 	  </tr>
-	   <tr>
+	   <tr class="de2">
 		  <td height="32" align="center">&nbsp;</td>
 		  <td>&nbsp;</td>
 		  <td>&nbsp;</td>
@@ -1289,7 +1296,7 @@ tr.suc td{background:#e1f5ff;}
 		  <td align="center">&nbsp;</td>
 		  <td align="center">&nbsp;</td>
 	  </tr>
-	   <tr>
+	   <tr class="de2">
 		  <td height="32" align="center">&nbsp;</td>
 		  <td>&nbsp;</td>
 		  <td>&nbsp;</td>
@@ -1308,7 +1315,7 @@ tr.suc td{background:#e1f5ff;}
 		  <td align="center">&nbsp;</td>
 		  <td align="center">&nbsp;</td>
 	  </tr>
-	   <tr>
+	   <tr class="de2">
 		  <td height="32" align="center">&nbsp;</td>
 		  <td>&nbsp;</td>
 		  <td>&nbsp;</td>
@@ -1327,7 +1334,7 @@ tr.suc td{background:#e1f5ff;}
 		  <td align="center">&nbsp;</td>
 		  <td align="center">&nbsp;</td>
 	  </tr>
-	   <tr>
+	   <tr class="de2">
 		  <td height="32" align="center">&nbsp;</td>
 		  <td>&nbsp;</td>
 		  <td>&nbsp;</td>
@@ -1346,7 +1353,7 @@ tr.suc td{background:#e1f5ff;}
 		  <td align="center">&nbsp;</td>
 		  <td align="center">&nbsp;</td>
 	  </tr>
-	   <tr>
+	   <tr class="de2">
 		  <td height="32" align="center">&nbsp;</td>
 		  <td>&nbsp;</td>
 		  <td>&nbsp;</td>
@@ -1365,7 +1372,7 @@ tr.suc td{background:#e1f5ff;}
 		  <td align="center">&nbsp;</td>
 		  <td align="center">&nbsp;</td>
 	  </tr>
-	   <tr>
+	   <tr class="de2">
 		  <td height="32" align="center">&nbsp;</td>
 		  <td>&nbsp;</td>
 		  <td>&nbsp;</td>
@@ -1384,7 +1391,7 @@ tr.suc td{background:#e1f5ff;}
 		  <td align="center">&nbsp;</td>
 		  <td align="center">&nbsp;</td>
 	  </tr>
-	   <tr>
+	   <tr class="de2">
 		  <td height="32" align="center">&nbsp;</td>
 			<td></td>
 			<td></td>
@@ -1403,7 +1410,7 @@ tr.suc td{background:#e1f5ff;}
 		  <td align="center">&nbsp;</td>
 		  <td align="center">&nbsp;</td>
 	  </tr>
-	  <tr>
+	  <tr class="de2">
 		  <td height="32" align="center">&nbsp;</td>
 			<td></td>
 			<td></td>
@@ -1422,7 +1429,7 @@ tr.suc td{background:#e1f5ff;}
 		  <td align="center">&nbsp;</td>
 		  <td align="center">&nbsp;</td>
 	  </tr>
-	  <tr>
+	  <tr class="de2">
 		  <td height="32" align="center">&nbsp;</td>
 		  <td>&nbsp;</td>
 		  <td>&nbsp;</td>
@@ -1441,7 +1448,7 @@ tr.suc td{background:#e1f5ff;}
 		  <td align="center">&nbsp;</td>
 		  <td align="center">&nbsp;</td>
 	  </tr>
-	  <tr>
+	  <tr class="de2">
 		  <td height="32" align="center">&nbsp;</td>
 		  <td>&nbsp;</td>
 		  <td>&nbsp;</td>
@@ -1460,7 +1467,7 @@ tr.suc td{background:#e1f5ff;}
 		  <td align="center">&nbsp;</td>
 		  <td align="center">&nbsp;</td>
 	  </tr>
-	  <tr>
+	  <tr class="de2">
 		  <td height="32" align="center">&nbsp;</td>
 		  <td>&nbsp;</td>
 		  <td>&nbsp;</td>
@@ -1479,7 +1486,7 @@ tr.suc td{background:#e1f5ff;}
 		  <td align="center">&nbsp;</td>
 		  <td align="center">&nbsp;</td>
 	  </tr>
-	   <tr>
+	   <tr class="de2">
 		  <td height="32" align="center">&nbsp;</td>
 		  <td></td>
 		  <td></td>
@@ -1498,7 +1505,7 @@ tr.suc td{background:#e1f5ff;}
 		  <td align="center">&nbsp;</td>
 		  <td align="center">&nbsp;</td>
 	  </tr>
-	   <tr>
+	   <tr class="de2">
 		  <td height="32" align="center">&nbsp;</td>
 		  <td>&nbsp;</td>
 		  <td>&nbsp;</td>
@@ -1517,7 +1524,7 @@ tr.suc td{background:#e1f5ff;}
 		  <td align="center">&nbsp;</td>
 		  <td align="center">&nbsp;</td>
 	  </tr>
-	   <tr>
+	   <tr class="de2">
 		  <td height="32" align="center">&nbsp;</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
@@ -1536,7 +1543,7 @@ tr.suc td{background:#e1f5ff;}
 		  <td align="center">&nbsp;</td>
 		  <td align="center">&nbsp;</td>
 	  </tr>
-	   <tr>
+	   <tr class="de2">
 		  <td height="32" align="center">&nbsp;</td>
 		  <td>&nbsp;</td>
 		  <td>&nbsp;</td>
@@ -1560,9 +1567,9 @@ tr.suc td{background:#e1f5ff;}
 	/********************************2depth 계약관리
 -->
 		<tr>
-			<td colspan="17" class="dep1sec">계약관리 (  )</td>
+			<td colspan="17" class="dep3sec">계약관리 (  )</td>
 		</tr>
-		<tr>
+		<tr class="de3">
 		  <td height="32" align="center">&nbsp;</td>
 		  <td>계약관리</td>
 		  <td>계약검색</td>
@@ -1581,7 +1588,7 @@ tr.suc td{background:#e1f5ff;}
 		  <td align="center">&nbsp;</td>
 		  <td align="center">&nbsp;</td>
 	  </tr>
-		<tr>
+		<tr class="de3">
 		  <td height="32" align="center">&nbsp;</td>
 		  <td>&nbsp;</td>
 		  <td>계약리스트</td>
@@ -1600,7 +1607,7 @@ tr.suc td{background:#e1f5ff;}
 		  <td align="center">&nbsp;</td>
 		  <td align="center">&nbsp;</td>
 	  </tr>
-		<tr>
+		<tr class="de3">
 		  <td height="32" align="center">&nbsp;</td>
 		  <td>&nbsp;</td>
 		  <td>계약리뷰</td>
@@ -1619,7 +1626,7 @@ tr.suc td{background:#e1f5ff;}
 		  <td align="center">&nbsp;</td>
 		  <td align="center">&nbsp;</td>
 	  </tr>
-		<tr>
+		<tr class="de3">
 		  <td height="32" align="center">&nbsp;</td>
 		  <td>&nbsp;</td>
 		  <td>감사고객관리</td>
@@ -1638,7 +1645,7 @@ tr.suc td{background:#e1f5ff;}
 		  <td align="center">&nbsp;</td>
 		  <td align="center">&nbsp;</td>
 	  </tr>
-		<tr>
+		<tr class="de3">
 		  <td height="32" align="center">&nbsp;</td>
 		  <td>&nbsp;</td>
 		  <td>청약</td>
@@ -1657,7 +1664,7 @@ tr.suc td{background:#e1f5ff;}
 		  <td align="center">&nbsp;</td>
 		  <td align="center">&nbsp;</td>
 	  </tr>
-		<tr>
+		<tr class="de3">
 		  <td height="32" align="center">&nbsp;</td>
 		  <td>&nbsp;</td>
 		  <td>&nbsp;</td>
@@ -1676,7 +1683,7 @@ tr.suc td{background:#e1f5ff;}
 		  <td align="center">&nbsp;</td>
 		  <td align="center">&nbsp;</td>
 	  </tr>
-	  <tr>
+	  <tr class="de3">
 		  <td height="32" align="center">&nbsp;</td>
 		  <td>&nbsp;</td>
 		  <td>&nbsp;</td>
@@ -1695,7 +1702,7 @@ tr.suc td{background:#e1f5ff;}
 		  <td align="center">&nbsp;</td>
 		  <td align="center">&nbsp;</td>
 	  </tr>
-		<tr>
+		<tr class="de3">
 		  <td height="32" align="center">&nbsp;</td>
 		  <td>&nbsp;</td>
 		  <td>보험금지급진행사항</td>
@@ -1714,7 +1721,7 @@ tr.suc td{background:#e1f5ff;}
 		  <td align="center">&nbsp;</td>
 		  <td align="center">&nbsp;</td>
 	  </tr>
-		<tr>
+		<tr class="de3">
 		  <td height="32" align="center">&nbsp;</td>
 		  <td>&nbsp;</td>
 		  <td>&nbsp;</td>
@@ -1735,9 +1742,9 @@ tr.suc td{background:#e1f5ff;}
 	  </tr>
 
 	  <tr>
-			<td colspan="17" class="dep1sec">스마트CRM</td>
+			<td colspan="17" class="dep4sec">스마트CRM</td>
 		</tr>
-		<tr class="suc">
+		<tr class="suc de4">
 		  <td height="32" align="center">&nbsp;</td>
 		  <td>스마트CRM</td>
 		  <td>스마트서비스</td>
@@ -1756,7 +1763,7 @@ tr.suc td{background:#e1f5ff;}
 		  <td align="center">&nbsp;</td>
 		  <td align="center">완료</td>
 	  </tr>
-	  <tr class="suc">
+	  <tr class="suc de4">
 		  <td height="32" align="center">&nbsp;</td>
 		  <td></td>
 		  <td></td>
@@ -1775,7 +1782,7 @@ tr.suc td{background:#e1f5ff;}
 		  <td align="center">&nbsp;</td>
 		  <td align="center">완료</td>
 	  </tr>
-	  <tr class="suc">
+	  <tr class="suc de4">
 		  <td height="32" align="center">&nbsp;</td>
 		  <td></td>
 		  <td></td>
@@ -1794,7 +1801,7 @@ tr.suc td{background:#e1f5ff;}
 		  <td align="center">&nbsp;</td>
 		  <td align="center">완료</td>
 	  </tr>
-		<tr class="suc">
+		<tr class="suc de4">
 		  <td height="32" align="center">&nbsp;</td>
 		  <td>&nbsp;</td>
 		  <td>일정표</td>
@@ -1813,7 +1820,7 @@ tr.suc td{background:#e1f5ff;}
 		  <td align="center">&nbsp;</td>
 		  <td align="center">완료(03.05기준 기획서 변경 수정예정)</td>
 	  </tr>
-	  <tr class="suc">
+	  <tr class="suc de4">
 		  <td height="32" align="center">&nbsp;</td>
 		  <td>&nbsp;</td>
 		  <td></td>
@@ -1832,7 +1839,7 @@ tr.suc td{background:#e1f5ff;}
 		  <td align="center">&nbsp;</td>
 		  <td align="center">완료(03.05기준 기획서 변경 수정예정)</td>
 	  </tr>
-	  <tr>
+	  <tr class="de4">
 		  <td height="32" align="center">&nbsp;</td>
 		  <td>&nbsp;</td>
 		  <td></td>
@@ -1851,7 +1858,7 @@ tr.suc td{background:#e1f5ff;}
 		  <td align="center">&nbsp;</td>
 		  <td align="center">&nbsp;</td>
 	  </tr>
-		<tr>
+		<tr class="de4">
 		  <td height="32" align="center">&nbsp;</td>
 		  <td>&nbsp;</td>
 		  <td>CS스테이션</td>
@@ -1870,7 +1877,7 @@ tr.suc td{background:#e1f5ff;}
 		  <td align="center">&nbsp;</td>
 		  <td align="center">&nbsp;</td>
 	  </tr>
-	  <tr>
+	  <tr class="de4">
 		  <td height="32" align="center">&nbsp;</td>
 		  <td>&nbsp;</td>
 		  <td></td>
@@ -1889,7 +1896,7 @@ tr.suc td{background:#e1f5ff;}
 		  <td align="center">&nbsp;</td>
 		  <td align="center">&nbsp;</td>
 	  </tr>
-	   <tr>
+	   <tr class="de4">
 		  <td height="32" align="center">&nbsp;</td>
 		  <td>&nbsp;</td>
 		  <td></td>
@@ -1908,7 +1915,7 @@ tr.suc td{background:#e1f5ff;}
 		  <td align="center">&nbsp;</td>
 		  <td align="center">&nbsp;</td>
 	  </tr>
-	   <tr>
+	   <tr class="de4">
 		  <td height="32" align="center">&nbsp;</td>
 		  <td>&nbsp;</td>
 		  <td></td>
@@ -1927,7 +1934,7 @@ tr.suc td{background:#e1f5ff;}
 		  <td align="center">&nbsp;</td>
 		  <td align="center">&nbsp;</td>
 	  </tr>
-	   <tr>
+	   <tr class="de4">
 		  <td height="32" align="center">&nbsp;</td>
 		  <td>&nbsp;</td>
 		  <td></td>
@@ -1946,7 +1953,7 @@ tr.suc td{background:#e1f5ff;}
 		  <td align="center">&nbsp;</td>
 		  <td align="center">&nbsp;</td>
 	  </tr>
-	   <tr>
+	   <tr class="de4">
 		  <td height="32" align="center">&nbsp;</td>
 		  <td>&nbsp;</td>
 		  <td></td>
@@ -1965,7 +1972,7 @@ tr.suc td{background:#e1f5ff;}
 		  <td align="center">&nbsp;</td>
 		  <td align="center">&nbsp;</td>
 	  </tr>
-	   <tr>
+	   <tr class="de4">
 		  <td height="32" align="center">&nbsp;</td>
 		  <td>&nbsp;</td>
 		  <td></td>
@@ -1984,7 +1991,7 @@ tr.suc td{background:#e1f5ff;}
 		  <td align="center">&nbsp;</td>
 		  <td align="center">&nbsp;</td>
 	  </tr>
-		<tr class="suc">
+		<tr class="suc de4">
 		  <td height="32" align="center">&nbsp;</td>
 		  <td>&nbsp;</td>
 		  <td>접촉이력</td>
@@ -2003,7 +2010,7 @@ tr.suc td{background:#e1f5ff;}
 		  <td align="center">&nbsp;</td>
 		  <td align="center">완료</td>
 	  </tr>
-	  <tr>
+	  <tr class="de4">
 		  <td height="32" align="center">&nbsp;</td>
 		  <td>&nbsp;</td>
 		  <td>&nbsp;</td>
@@ -2023,7 +2030,7 @@ tr.suc td{background:#e1f5ff;}
 		  <td align="center">&nbsp;</td>
 	  </tr>
 
-	  <tr>
+	  <tr class="de4">
 		  <td height="32" align="center">&nbsp;</td>
 		  <td>&nbsp;</td>
 		  <td>&nbsp;</td>
@@ -2043,7 +2050,7 @@ tr.suc td{background:#e1f5ff;}
 		  <td align="center">&nbsp;</td>
 	  </tr>
 
-	  <tr>
+	  <tr class="de4">
 		  <td height="32" align="center">&nbsp;</td>
 		  <td>&nbsp;</td>
 		  <td>&nbsp;</td>
@@ -2062,7 +2069,7 @@ tr.suc td{background:#e1f5ff;}
 		  <td align="center">&nbsp;</td>
 		  <td align="center">&nbsp;</td>
 	  </tr>
-	  <tr>
+	  <tr class="de4">
 		  <td height="32" align="center">&nbsp;</td>
 		  <td>&nbsp;</td>
 		  <td></td>
@@ -2081,7 +2088,7 @@ tr.suc td{background:#e1f5ff;}
 		  <td align="center">&nbsp;</td>
 		  <td align="center">&nbsp;</td>
 	  </tr>
-	  <tr>
+	  <tr class="de4">
 		  <td height="32" align="center">&nbsp;</td>
 		  <td>&nbsp;</td>
 		  <td></td>
@@ -2106,10 +2113,10 @@ tr.suc td{background:#e1f5ff;}
 	/********************************3depth mypop
 -->
 		<tr>
-			<td colspan="17" class="dep1sec">mypop ( mypage )</td>
+			<td colspan="17" class="dep5sec">mypop ( mypage )</td>
 		</tr>
 
-		<tr>
+		<tr class="de5">
 		  <td height="32" align="center">&nbsp;</td>
 		  <td>공통</td>
 		  <td>고객검색</td>
@@ -2128,7 +2135,7 @@ tr.suc td{background:#e1f5ff;}
 		  <td align="center">&nbsp;</td>
 		  <td align="center">&nbsp;</td>
 	  </tr>
-	  <tr>
+	  <tr class="de5">
 		  <td height="32" align="center">&nbsp;</td>
 		  <td></td>
 		  <td>태그</td>
@@ -2147,7 +2154,7 @@ tr.suc td{background:#e1f5ff;}
 		  <td align="center">&nbsp;</td>
 		  <td align="center">&nbsp;</td>
 	  </tr>
-	   <tr>
+	   <tr class="de5">
 		  <td height="32" align="center">&nbsp;</td>
 		  <td></td>
 		  <td></td>
@@ -2167,7 +2174,7 @@ tr.suc td{background:#e1f5ff;}
 		  <td align="center">&nbsp;</td>
 	  </tr>
 
-	  <tr>
+	  <tr class="de5">
 		  <td height="32" align="center">&nbsp;</td>
 		  <td>유틸리티</td>
 		  <td>공지사항</td>
@@ -2186,7 +2193,7 @@ tr.suc td{background:#e1f5ff;}
 		  <td align="center">&nbsp;</td>
 		  <td align="center">&nbsp;</td>
 	  </tr>
-	  <tr>
+	  <tr class="de5">
 		  <td height="32" align="center">&nbsp;</td>
 		  <td></td>
 		  <td>서비스메뉴얼, 도움말</td>
@@ -2205,7 +2212,7 @@ tr.suc td{background:#e1f5ff;}
 		  <td align="center">&nbsp;</td>
 		  <td align="center">&nbsp;</td>
 	  </tr>
-	  <tr>
+	  <tr class="de5">
 		  <td height="32" align="center">&nbsp;</td>
 		  <td></td>
 		  <td>사이트맵</td>
@@ -2224,7 +2231,7 @@ tr.suc td{background:#e1f5ff;}
 		  <td align="center">&nbsp;</td>
 		  <td align="center">&nbsp;</td>
 	  </tr>
-	   <tr>
+	   <tr class="de5">
 		  <td height="32" align="center">&nbsp;</td>
 		  <td></td>
 		  <td>금융계산기</td>
@@ -2244,7 +2251,7 @@ tr.suc td{background:#e1f5ff;}
 		  <td align="center">&nbsp;</td>
 	  </tr>
 
-	  <tr>
+	  <tr class="de5">
 		  <td height="32" align="center">&nbsp;</td>
 		  <td>관리</td>
 		  <td>제어판</td>
@@ -2263,7 +2270,7 @@ tr.suc td{background:#e1f5ff;}
 		  <td align="center">&nbsp;</td>
 		  <td align="center">&nbsp;</td>
 	  </tr>
-	  <tr>
+	  <tr class="de5">
 		  <td height="32" align="center">&nbsp;</td>
 		  <td></td>
 		  <td></td>
@@ -2282,7 +2289,7 @@ tr.suc td{background:#e1f5ff;}
 		  <td align="center">&nbsp;</td>
 		  <td align="center">&nbsp;</td>
 	  </tr>
-	   <tr>
+	   <tr class="de5">
 		  <td height="32" align="center">&nbsp;</td>
 		  <td></td>
 		  <td></td>
@@ -2301,7 +2308,7 @@ tr.suc td{background:#e1f5ff;}
 		  <td align="center">&nbsp;</td>
 		  <td align="center">&nbsp;</td>
 	  </tr>
-	   <tr>
+	   <tr class="de5">
 		  <td height="32" align="center">&nbsp;</td>
 		  <td></td>
 		  <td></td>
@@ -2320,7 +2327,7 @@ tr.suc td{background:#e1f5ff;}
 		  <td align="center">&nbsp;</td>
 		  <td align="center">&nbsp;</td>
 	  </tr>
-	   <tr>
+	   <tr class="de5">
 		  <td height="32" align="center">&nbsp;</td>
 		  <td></td>
 		  <td></td>
@@ -2339,7 +2346,7 @@ tr.suc td{background:#e1f5ff;}
 		  <td align="center">&nbsp;</td>
 		  <td align="center">&nbsp;</td>
 	  </tr>
-	   <tr>
+	   <tr class="de5">
 		  <td height="32" align="center">&nbsp;</td>
 		  <td></td>
 		  <td></td>
@@ -2358,7 +2365,7 @@ tr.suc td{background:#e1f5ff;}
 		  <td align="center">&nbsp;</td>
 		  <td align="center">&nbsp;</td>
 	  </tr>
-	   <tr>
+	   <tr class="de5">
 		  <td height="32" align="center">&nbsp;</td>
 		  <td></td>
 		  <td></td>
@@ -2377,7 +2384,7 @@ tr.suc td{background:#e1f5ff;}
 		  <td align="center">&nbsp;</td>
 		  <td align="center">&nbsp;</td>
 	  </tr>
-	   <tr>
+	   <tr class="de5">
 		  <td height="32" align="center">&nbsp;</td>
 		  <td></td>
 		  <td></td>
@@ -2400,5 +2407,22 @@ tr.suc td{background:#e1f5ff;}
 
 	</tbody>
 </table>
+<script type="text/javascript">
+//<![CDATA[
+(function($){
+	var td = $("td[class*='dep']")
+	var tr = $("tr[class*='de']")
+	tr.find("td").hide();
+	td.each(function(index){
+		$(this).click(function(){
+			if($(this).hasClass("dep"+ (index+1) +"sec")){
+				$("tr.de"+(index+1)).find("td").toggle();
+			}
+		});
+	});
+})(jQuery);
+	
+//]]>-->
+</script>
 </body>
 </html>

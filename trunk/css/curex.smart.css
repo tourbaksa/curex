@@ -71,7 +71,7 @@ ul.smartTab li.active:first-child a span{background-image:url(/img/sub/bg_smartp
 	border-right:1px solid #ccc;
 }
 
-div.smartCont{border-left:1px solid #e5e6e8; border-right:1px solid #e5e6e8; width:1024px;}
+div.smartCont{border-left:1px solid #e5e6e8; border-right:1px solid #e5e6e8; width:1024px; position:relative;}
 div.settingWrap{padding:0 0 0 8px; overflow-y:scroll; overflow-x:hidden; width:1022px; height:315px;}
 div.SettingZone{overflow:hidden;}
 /* 스마트검색 테이블 */
