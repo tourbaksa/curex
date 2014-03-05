@@ -1119,12 +1119,6 @@ div.paging a.next{margin-left:20px;}
 div.paging a.prev + strong,
 div.paging a.prev + a{margin-left:0;}
 
-/* popup */
-#popWrap{position:relative;}
-#popWrap h1{background-color:#22b8c7;height:50px; line-height:50px; color:#fff; font-size:20px;padding-left:20px;}
-#popWrap .popContents{padding:20px 20px 35px;}
-#popWrap .close{position:absolute;right:18px;top:17px;}
-
 .btn.smWtRb span.setIcon1{background:url(/img/common/blet5.gif) no-repeat 5px 50%; margin:0 5px 0 1px; display:inline-block; width:15px; text-indent:-99999px; font-size:0;  line-height:15px; height:15px;}
 .btn.smWtRb span.setIcon2{background:url(/img/common/blet6.gif) no-repeat 5px 50%; margin:0 5px 0 1px; display:inline-block; width:12px; text-indent:-99999px; font-size:0;  line-height:15px; height:15px;}
 .btn.smWtRb span.setIcon3{background:url(/img/common/blt_plus.gif) no-repeat 5px 50%; margin:0 5px 0 1px; display:inline-block; width:15px; text-indent:-99999px; font-size:0;  line-height:15px; height:15px;}
@@ -1200,6 +1194,8 @@ a.carendar *{vertical-align:middle;}
 a.carendar span.cdr{background:url(/img/common/bg_calendar.png) no-repeat 0 0; color:#707070; text-align:center; font-size:11px; padding:10px 0 0 0; display:inline-block; width:21px; line-height:15px; height:24px;}
 div.carlendar{margin:9px 0 1px 0;}
 div.carlendar span.today{position:relative; top:2px;}
+div.cellCrnr{margin:9px 0 1px 0;}
+div.cellCrnr span.today{position:relative; top:2px;}
 
 /* label과 폼요소가 함께 쓰일때 */
 div.fLset span.towLine{display:block; padding:4px 0 0 0; margin:4px 0 0 0;} /* 두줄일경우 */
@@ -1210,20 +1206,20 @@ div.fLset span.towLine{display:block; padding:4px 0 0 0; margin:4px 0 0 0;} /* �
 .fRset input{margin:0 0 0 10px;}
  span.today{line-height:15px; color:#fff; border-radius:2px; -moz-border-radius:2px; -webkit-border-radius:2px; -ms-border-radius:2px; padding:3px 5px 4px; background-color: #0084ff;font-size:11px;}
 
-/* 테이블내 펼침아이콘 */
-/* 텍스트와함께 */
-.btn.smWtRb span.txtArrow{background:url(/img/common/blt_arrowB.png) no-repeat 0 50%; margin:0 1px 0 5px; display:inline-block; width:9px; text-indent:-99999px; font-size:0;  line-height:15px; height:15px;}/* 텍스트 + up */
-.btn.smWtRb span.txtArrow.up{background:url(/img/common/blt_arrowR.png) no-repeat 0 50%;}
-.btn.smWtRb span.ImgArrow{background:url(/img/common/blt_arrowB.png) no-repeat 0 50%; margin:0 1px 0 0px; display:inline-block; width:9px; text-indent:-99999px; font-size:0;  line-height:15px; height:15px;}/* up만 */
-.btn.smWtRb span.ImgArrow.up{background:url(/img/common/blt_arrowR.png) no-repeat 0 50%;}
 
-/* 테이블 정렬 */
-button.btnAlign{background:url(/img/common/blt_alignArrow.gif) no-repeat 0 0; width:9px; height:12px; vertical-align:middle; margin-left:6px; position:relative; top:-2px;}
-
-
-
-
-
+/* bg + 텍스트가 있는 아이콘 */
+/* 펼침아이콘 */
+.btn.smWtRb span.txtArrow{background:url(../img/common/blt_arrowB.png) no-repeat 0 50%; margin:0 1px 0 5px; display:inline-block; width:9px; text-indent:-99999px; font-size:0;  line-height:15px; height:15px;}/* 텍스트 + up */
+.btn.smWtRb span.txtArrow.up{background:url(../img/common/blt_arrowR.png) no-repeat 0 50%;}
+.btn.smWtRb span.ImgArrow{background:url(../img/common/blt_arrowB.png) no-repeat 0 50%; margin:0 1px 0 0px; display:inline-block; width:9px; text-indent:-99999px; font-size:0;  line-height:15px; height:15px;}/* up만 */
+.btn.smWtRb span.ImgArrow.up{background:url(../img/common/blt_arrowR.png) no-repeat 0 50%;}
+/* 동기화아이콘 */
+.btn.smGnR span.sync{background:url(/img/sub/icon_Sync.gif) no-repeat 0 0; width:12px; height:12px; margin:0 6px 0 0;}
+/* 테이블 정렬아이콘 */
+button.btnAlign{background:url(../img/common/blt_alignArrow.gif) no-repeat 0 0; width:9px; height:12px; vertical-align:middle; margin-left:6px; position:relative; top:-2px;}
+/* 완료, 미완료아이콘 */
+.smWtRb span.comp{background:url(/img/sub/icon_comp.gif) no-repeat 0 50% !important; width:11px; height:11px; display:inline-block; position:relative; top:2px; margin-right:6px;}
+.smWtRb span.Incomp{background:url(/img/sub/icon_Incomp.gif) no-repeat 0 50% !important; width:11px; height:11px; display:inline-block; position:relative; top:2px; margin-right:6px;}
 /* ListPoint */
 ul .point, ol .point{margin-left:-10px; color:#e8404f;}
 
