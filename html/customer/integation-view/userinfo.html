@@ -788,10 +788,39 @@
 
 			<div class="juContact mt20">
 				<div class="btnWrap">
-					<a class="btn smGnR" href="#none">가족등록</a>
+					<a class="btn smGnR" href="#none">관계등록</a>
 				</div>
-				<table class="table2">
-					<caption>가족등록</caption>
+				<table class="listTable">
+					<caption>관계등록</caption>
+					<thead>
+						<tr>
+							<th>관계</th>
+							<th>이름</th>
+							<th>주민등록번호</th>
+							<th>생년월일</th>
+							<th>성별</th>
+							<th>연령(보험)</th>
+							<th>동거여부</th>
+							<th>삭제</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>친구</td>
+							<td>김승헌</td>
+							<td>831026-1******</td>
+							<td>1983.10.10(양)</td>
+							<td>남</td>
+							<td>30</td>
+							<td>Y</td>
+							<td><input type="button" value="삭제" class="btn smWtRb"></td>
+						</tr>
+					</tbody>
+				</table>
+
+				<!-- 상단 삭제시 삭제행 없어짐 -->
+				<table class="listTable">
+					<caption>관계등록</caption>
 					<thead>
 						<tr>
 							<th>관계</th>
@@ -803,9 +832,8 @@
 							<th>동거여부</th>
 						</tr>
 					</thead>
-					<tbody>
 						<tr>
-							<td colspan="7" class="tac">관계등록 버튼을 클릭하여 등록해 주세요.</td>
+							<td colspan="7" class="tac h30">관계등록 버튼을 클릭하여 등록해 주세요.</td>
 						</tr>
 					</tbody>
 				</table>
@@ -993,7 +1021,13 @@
 
 			<div class="juContact">
 				<h3>사용자정의필드</h3>
-				<form id="" method="post" action="/">
+				
+				<!-- 처음 보여지는 화면 -->
+				<div class="box1 tac">
+					사용자 정의 필드를 사용하시려면 <button class="searchMore mt_4" type="button"><span class="hide-text">검색더보기</span></button> 버튼을 클릭하신 후 사용하고자 하는 필드를 선택하세요
+				</div>
+
+				<form method="post" action="/">
 					<fieldset>
 						<legend>사용자정의필드</legend>
 						<table class="table1">
@@ -1025,42 +1059,12 @@
 						</table>
 					</fieldset>
 				</form>
+				
 				<div class="more btnWrap">
 					<button class="mt_4 searchMore" type="button"><span class="hide-text">검색더보기</span></button>
 					<a href="#none" class="btn smGnR">필드관리</a>
 				</div>
 			</div>
-
-			<h3>개인정보활용동의</h3>
-			<table class="table1">
-				<caption>개인정보활용동의</caption>
-				<colgroup>
-					<col width="16%" />
-					<col width="26%" />
-					<col width="16%" />
-					<col width="26%" />
-					<col width="16%" />
-				</colgroup>
-				<tbody>
-					<tr>
-						<th rowspan="3">신용정보활용</th>
-						<th>수집/이용</th>
-						<td class="tac">미동의</td>
-						<th>고유식별</th>
-						<td class="tac">미동의</td>
-					</tr>
-					<tr>
-						<th class="bderL">제공</th>
-						<td class="tac">미동의</td>
-						<th>상품소개</th>
-						<td class="tac">동의</td>
-					</tr>
-					<tr>
-						<th class="bderL">Do-not-call</th>
-						<td class="tac" colspan="3">수신허용/거부</td>
-					</tr>
-				</tbody>
-			</table>
 
 		</div>
 		<!-- //공통 컨텐츠 -->
