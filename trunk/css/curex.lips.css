@@ -4,20 +4,15 @@
 div.lipsWrap {width:1024px;}
 
 /* 계획수립 */
-.juContact {position:relative;}
-.juContact .more{position:absolute;right:0;top:0;margin:0;}
-.juContact .more li{float:left;}
-.juContact .more li label{padding-right:10px;}
-
 .previous {border:1px solid #dedede;margin:20px 0;}
 .previous .preTit{position:relative; height:38px;}
 .previous .preTit h4{line-height:38px;height:38px;padding-left:15px; font-weight:normal;}
 .previous .preTit .btnWrap{padding:9px 9px 0 0;}
-.previous .preTit .btnWrap .arClick{height:20px;width:20px;background:url(../img/common/ble_arrowB.png) no-repeat 0 0;}
+.previous .preTit .btnWrap .arClick{height:20px;width:20px;background:url(/img/common/ble_arrowB.png) no-repeat 0 0;}
 
 .arrUp, .arrDown{position:relative;}
-.arrUp span.img{background:url(../img/common/blt_arrowR.png) no-repeat;}
-.arrDown span.img{background:url(../img/common/blt_arrowB.png) no-repeat;}
+.arrUp span.img{background:url(/img/common/blt_arrowR.png) no-repeat;}
+.arrDown span.img{background:url(/img/common/blt_arrowB.png) no-repeat;}
 .arrUp span.img, .arrDown span.img {position:absolute;width:9px;height:5px;left:9px;top:6px;}
 .arrUp a, .arrDown a{width:15px; height:15px;}
 
@@ -29,7 +24,7 @@ div.lipsWrap {width:1024px;}
 #conteiner #contents tr.view td{padding:0;}
 #conteiner #contents tr.view .conTable{border-left:0;padding:9px 9px 14px;width:731px;background-color:#f6f6f6;}
 #conteiner #contents tr.view .conTable table {width:713px;}
-#conteiner #contents tr.view .conTable table th{background-color:#ddedef;background-image:url(../img/common/bg_th2.gif); background-repeat:repeat;border-top:1px solid #dedede;}
+#conteiner #contents tr.view .conTable table th{background-color:#ddedef;background-image:url(/img/common/bg_th2.gif); background-repeat:repeat;border-top:1px solid #dedede;}
 #conteiner #contents tr.view .conTable table th:first-child{border-top:0;}
 #conteiner #contents tr.view .conTable table td {border-top:1px solid #dedede;padding:3px 3px 2px;background-color:#fff; }
 #conteiner #contents tr.view .conTable table td:first-child{border-top:0;}
