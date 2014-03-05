@@ -74,6 +74,10 @@ ul.smartTab li.active:first-child a span{background-image:url(/img/sub/bg_smartp
 div.smartCont{border-left:1px solid #e5e6e8; border-right:1px solid #e5e6e8; width:1024px; position:relative;}
 div.settingWrap{padding:0 0 0 8px; overflow-y:scroll; overflow-x:hidden; width:1022px; height:315px;}
 div.SettingZone{overflow:hidden;}
+
+/* 조건선택 */
+div.cdnSel{position:absolute; right:9px; top:7px;}
+
 /* 스마트검색 테이블 */
 table.smarTable{border:1px solid #dedede; }
 table.smarTable.cols{float:left; width:688px; margin-right:10px;}
