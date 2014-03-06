@@ -143,7 +143,8 @@ div.personBtn .lgGyR1{padding:7px 10px;}
 #conteiner #contents h3{color:#363636; font-size:16px; margin-top:20px; margin-bottom:10px; letter-spacing:-1px; font-weight:bold;}
 
 /* 체크리스트 */
-#checkList{background-color:#22b8c7; width:1024px; height:40px; margin:20px auto 0;position:fixed;left:50%;bottom:0;margin-left:-512px;z-index:2222;}
+#checkList{background-color:#22b8c7; width:1024px; height:40px; margin:20px auto 0;position:relative;left:50%;bottom:0;margin-left:-512px;z-index:2222;}
+#checkList.fixed{position:fixed;}
 #checkList .listMenu{width:1022px;height:200px;border:1px solid #dedede;background:#fff;position:absolute;left:0;bottom:40px;}
 #checkList h2{float:left;}
 #checkList h2 a{display:block;width:150px;height:40px;line-height:40px;font-size:14px;font-weight:bold;color:#bdf1ff;background:url(/img/common/blet4.gif) #1d5d6f no-repeat 30px center;text-align:right;padding-right:25px;letter-spacing:-1px;}
