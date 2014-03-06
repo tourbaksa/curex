@@ -52,7 +52,7 @@ a{color:#707070; text-decoration:none;}
 table .widthFull{display:block;}
 table .widthFull input{width:100%; color:#707070;}
 table .selectFull {display:block;}
-table .selectFull select{width:100% ;}
+table .selectFull select{width:100%;}
 table .textareaFull {display:block;}
 table .textareaFull textarea{width:100%;}
 
@@ -133,7 +133,7 @@ table.listTable tbody td{border:1px solid #dedede; height:25px; padding:7px 0 5p
 .table3 tbody tr.bg{background:#fafafa;}
 .table3 tfoot td{background:#dde3ef;border-left:1px solid #fff;padding-left:10px;}
 .table3 tfoot tr:first-child td:first-child{border-left:0;}
-.table3 tfoot td.price{padding:9px 14px 9px 0; font-size:14px;}
+.table3 tfoot td.price{padding:7px 14px 7px 0; font-size:14px;}
 .table3 + p{margin-top:8px;}
 .table3 .bderB{border-bottom:1px solid #fff;}
 .tfootType1 span label{margin-right:10px;}
@@ -169,10 +169,25 @@ table.listTable tbody td{border:1px solid #dedede; height:25px; padding:7px 0 5p
 .table7 tbody td.textL{padding-left:10px;}
 .table7 tbody tr.bg{background:#fafafa;}
 
+.table8 th{
+	border-left:1px solid #dedede; 
+	background-color: #f3f4f5;
+	background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPgo8bGluZWFyR3JhZGllbnQgaWQ9Imc0MjgiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjAlIiB5Mj0iMTAwJSI+CjxzdG9wIHN0b3AtY29sb3I9IiNGQUZBRkEiIG9mZnNldD0iMCIvPjxzdG9wIHN0b3AtY29sb3I9IiNGMkYyRjIiIG9mZnNldD0iMSIvPgo8L2xpbmVhckdyYWRpZW50Pgo8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2c0MjgpIiAvPgo8L3N2Zz4=);
+}
+.table8 th:first-child{border-left:0;}
+.table8 td{border:1px solid #dedede;}
+.table8 td.textL{padding-left:10px;}
+
 /* box checkbox형 */
-.box1{border:1px solid #dedede; padding:17px 0 17px 20px; margin-bottom:20px;}
+.box1{border:1px solid #dedede; padding:17px 0 17px 20px; margin-bottom:10px;}
 .box1 input[type="checkbox"]{margin-left:14px;}
 .box1 input[type="checkbox"].first{margin-left:0;}
+
+.textBox{border:1px solid #dedede; padding:11px 10px 11px 10px; margin-bottom:10px; line-height:1.5;}
+.textBox .btnL{left:20px;line-height:22px;}
+.textBox strong{color:#079eb1;}
+.textBox .textL{text-align:left;}
+
 
 /* tab */
 .tab01{border-bottom:2px solid #22b8c7;}
@@ -377,6 +392,9 @@ ul .point, ol .point{margin-left:-10px; color:#e8404f;}
 /* float */
 .floatL{float:left;}
 .floatR{float:right;}
+
+/* 마진 */
+.mt_4{margin-top:-4px !important;}
 
 
 

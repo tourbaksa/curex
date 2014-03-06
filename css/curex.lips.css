@@ -4,7 +4,7 @@
 div.lipsWrap {width:1024px;}
 
 /* 계획수립 */
-.previous {border:1px solid #dedede;margin:20px 0;}
+.previous {border:1px solid #dedede;margin:10px 0;}
 .previous .preTit{position:relative; height:38px;}
 .previous .preTit h4{line-height:38px;height:38px;padding-left:15px; font-weight:normal;}
 .previous .preTit .btnWrap{padding:9px 9px 0 0;}
