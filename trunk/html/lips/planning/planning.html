@@ -12,6 +12,7 @@
 <script src="/thirdParty/jquery/jquery-1.10.2.min.js"></script>
 <script src="/thirdParty/jquery/jquery-ui-1.10.3.min.js"></script>
 <script src="/thirdParty/tab.js"></script>
+<script src="/js/curexui.js"></script>
 </head>
 <body>
 
@@ -565,6 +566,7 @@
 				</ul>
 				<ul class="tab-panel">
 					<li>
+					<div class="add">
 						<h3 class="hide-element">가입설계</h3>
 						<div class="left">
 							<h3 class="mt0">기본정보</h3>
@@ -747,7 +749,7 @@
 								<h3 class="tab1"><a class="on" href="#tabDiv01"><span>설계이력</span></a></h3>
 								<div id="tabDiv01">
 									<ul>
-										<li><a href="#none">종신 플러스 변액보험</a><span><a href="#none">2014-02-12</a></span></li>
+										<li><a href="#none">11111 보험</a><span><a href="#none">2014-02-12</a></span></li>
 										<li><a href="#none">종신 플러스 변액보험</a><span><a href="#none">2014-02-12</a></span></li>
 										<li><a href="#none">종신 플러스 변액보험</a><span><a href="#none">2014-02-12</a></span></li>
 										<li><a href="#none">종신 플러스 변액보험</a><span><a href="#none">2014-02-12</a></span></li>
@@ -758,7 +760,7 @@
 								<h3 class="tab2"><a href="#tabDiv02"><span>MyPlan</span></a></h3>
 								<div id="tabDiv02" style="display:none">
 									<ul>
-										<li><a href="#none">종신 플러스 변액보험</a><span><a href="#none">2014-02-12</a></span></li>
+										<li><a href="#none">222222보험</a><span><a href="#none">2014-02-12</a></span></li>
 										<li><a href="#none">종신 플러스 변액보험</a><span><a href="#none">2014-02-12</a></span></li>
 										<li><a href="#none">종신 플러스 변액보험</a><span><a href="#none">2014-02-12</a></span></li>
 										<li><a href="#none">종신 플러스 변액보험</a><span><a href="#none">2014-02-12</a></span></li>
@@ -968,7 +970,7 @@
 													<span class="widthFull"><input type="text" /></span>
 												</td>
 												<td class="textR"><span class="pR2">20,000</span></td>
-												<td><a href="#none"><img src="/img/common/icon4.gif" alt="삭제" /></a></td>
+												<td><a href="#none" class="cellDel"><img src="/img/common/icon4.gif" alt="삭제" /></a></td>
 											</tr>
 											<tr class="bg">
 												<td><img src="/img/common/blet3.gif" alt="" /></td>
@@ -999,7 +1001,7 @@
 													<span class="widthFull"><input type="text" /></span>
 												</td>
 												<td class="textR"><span class="pR2">20,000</span></td>
-												<td><a href="#none"><img src="/img/common/icon4.gif" alt="삭제" /></a></td>
+												<td><a href="#none" class="cellDel"><img src="/img/common/icon4.gif" alt="삭제" /></a></td>
 											</tr>
 											<tr>
 												<td><img src="/img/common/blet3.gif" alt="" /></td>
@@ -1030,8 +1032,8 @@
 													<span class="widthFull"><input type="text" /></span>
 												</td>
 												<td class="textR"><span class="pR2">20,000</span></td>
-												<td><a href="#none"><img src="/img/common/icon4.gif" alt="삭제" /></a></td>
-											</tr>
+												<td><a href="#none" class="cellDel"><img src="/img/common/icon4.gif" alt="삭제" /></a></td>
+											</tr> 
 											<tr class="bg">
 												<td><img src="/img/common/blet3.gif" alt="" /></td>
 												<td><a class="btn mdDyR" href="#none">우량</a></td>
@@ -1061,7 +1063,7 @@
 													<span class="widthFull"><input type="text" /></span>
 												</td>
 												<td class="textR"><span class="pR2">20,000</span></td>
-												<td><a href="#none"><img src="/img/common/icon4.gif" alt="삭제" /></a></td>
+												<td><a href="#none" class="cellDel"><img src="/img/common/icon4.gif" alt="삭제" /></a></td>
 											</tr>
 											<tr>
 												<td><img src="/img/common/blet3.gif" alt="" /></td>
@@ -1092,7 +1094,7 @@
 													<span class="widthFull"><input type="text" /></span>
 												</td>
 												<td class="textR"><span class="pR2">20,000</span></td>
-												<td><a href="#none"><img src="/img/common/icon4.gif" alt="삭제" /></a></td>
+												<td><a href="#none" class="cellDel"><img src="/img/common/icon4.gif" alt="삭제" /></a></td>
 											</tr>
 											<tr class="bg">
 												<td><img src="/img/common/blet3.gif" alt="" /></td>
@@ -1123,7 +1125,7 @@
 													<span class="widthFull"><input type="text" /></span>
 												</td>
 												<td class="textR"><span class="pR2">20,000</span></td>
-												<td><a href="#none"><img src="/img/common/icon4.gif" alt="삭제" /></a></td>
+												<td><a href="#none" class="cellDel"><img src="/img/common/icon4.gif" alt="삭제" /></a></td>
 											</tr>
 										</tbody>
 									</table>
@@ -1210,733 +1212,737 @@
 							</table>
 							
 						</div>
+						</div>
 					</li>
 					<li>
-						<h3 class="hide-element">청약정보</h3>
-						<div class="left">
-							<div class="juContact">
-								<h3 class="mt0">적합성정보</h3>
-								<table class="table7">
-									<caption>적합성정보</caption>
-									<colgroup>
-										<col width="33%" />
-										<col width="17%" />
-										<col width="17%" />
-										<col width="33%" />
-									</colgroup>
-									<tbody>
-										<tr>
-											<th colspan="2">진단일</th>
-											<th colspan="2">만기일</th>
-										</tr>
-										<tr>
-											<td colspan="2">2014-02-24</td>
-											<td colspan="2">2014-02-24</td>
-										</tr>
-										<tr>
-											<th>상품성향</th>
-											<th colspan="2">투자성향</th>
-											<th>접수여부</th>
-										</tr>
-										<tr>
-											<td>보장형</td>
-											<td colspan="2">중립형</td>
-											<td>Y</td>
-										</tr>
-										<tr>
-											<th colspan="2">성향불일치확인</th>
-											<th colspan="2">고위험변액보험 확인</th>
-										</tr>
-										<tr>
-											<td colspan="2" class="textL">신청일 : 2014-02-24<br />접수여부 : Y</td>											
-											<td colspan="2" class="textL">신청일 : 2014-02-24<br /> 접수여부 : Y</td>
-										</tr>
-									</tbody>
-								</table>
-								<a class="btn mdGnRw more" href="#none">정보수정</a>
+						<div class="add">
+							<h3 class="hide-element">청약정보</h3>
+							<div class="left">
+								<div class="juContact">
+									<h3 class="mt0">적합성정보</h3>
+									<table class="table7">
+										<caption>적합성정보</caption>
+										<colgroup>
+											<col width="33%" />
+											<col width="17%" />
+											<col width="17%" />
+											<col width="33%" />
+										</colgroup>
+										<tbody>
+											<tr>
+												<th colspan="2">진단일</th>
+												<th colspan="2">만기일</th>
+											</tr>
+											<tr>
+												<td colspan="2">2014-02-24</td>
+												<td colspan="2">2014-02-24</td>
+											</tr>
+											<tr>
+												<th>상품성향</th>
+												<th colspan="2">투자성향</th>
+												<th>접수여부</th>
+											</tr>
+											<tr>
+												<td>보장형</td>
+												<td colspan="2">중립형</td>
+												<td>Y</td>
+											</tr>
+											<tr>
+												<th colspan="2">성향불일치확인</th>
+												<th colspan="2">고위험변액보험 확인</th>
+											</tr>
+											<tr>
+												<td colspan="2" class="textL">신청일 : 2014-02-24<br />접수여부 : Y</td>											
+												<td colspan="2" class="textL">신청일 : 2014-02-24<br /> 접수여부 : Y</td>
+											</tr>
+										</tbody>
+									</table>
+									<a class="btn mdGnRw more" href="#none">정보수정</a>
+								</div>
+						
+								<h3>공동청약 Life Planner <input type="checkbox" id="lifeP" /></h3><!-- 체크박스 체크시 하단 lifePlanner이 보여짐 -->
+								<div class="lifePlanner">
+									<table class="table1">
+										<caption>공동청약 Life Planner</caption>
+										<colgroup>
+											<col width="33%" />
+											<col width="67%" />
+										</colgroup>
+										<tbody>
+											<tr>
+												<th>대표LP</th>
+												<td class="textC">김숙자</td>
+											</tr>
+											<tr>
+												<th>공동LP 2순위</th>
+												<td class="textC">
+													<a href="#none">이공동(SM123)<img src="/img/sub/btn_smDel.gif" class="vM pl5" alt="삭제" /></a>
+												</td>
+											</tr>
+											<tr>
+												<th>공동LP 3순위</th>
+												<td class="textC">
+													<a class="btn smGyRb" href="#none">검색</a>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+									<ul class="footNote">
+										<li><span>*</span>SM은 대표LP가 될 수 없습니다. 공동청약에 대한 계획수립은 LP가 진행해주시기 바랍니다.</li>
+										<li><span>*</span>자기계약은 공동청약으로 진행 불가합니다.</li>
+										<li><span>*</span>공동청약 배분율은 공동청약확인서상에 기제해 주시기 바랍니다.</li>
+									</ul>
+								</div>
 							</div>
-
-							<h3>공동청약 Life Planner <input type="checkbox" id="lifeP" /></h3><!-- 체크박스 체크시 하단 lifePlanner이 보여짐 -->
-							<div class="lifePlanner">
+						
+							<div class="right">
+								<div class="juContact">
+									<h3 class="mt0">특별계정</h3>
+									<form method="post" action="/">
+										<fieldset>
+											<legend>특별계정</legend>
+											<table class="table3">
+												<caption>특별계정</caption>
+												<colgroup>
+													<col width="5%" />
+													<col width="38%" />
+													<col width="38%" />
+													<col width="*" />
+												</colgroup>
+												<thead>
+													<tr>
+														<th></th>
+														<th>펀드유형</th>
+														<th>비율</th>
+														<th>비율함</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>1</td>
+														<td>
+															<span class="selectFull">
+																<select>
+																	<option>안전혼합형</option>
+																	<option></option>
+																</select>
+															</span>
+														</td>
+														<td>
+															<input type="text" class="textR" style="width:241px" />
+															<span>%</span>
+														</td>
+														<td>100%</td>
+													</tr>
+													<tr>
+														<td>2</td>
+														<td>
+															<span class="selectFull">
+																<select>
+																	<option>안전혼합형</option>
+																	<option></option>
+																</select>
+															</span>
+														</td>
+														<td>
+															<input type="text" class="textR" style="width:241px" />
+															<span>%</span>
+														</td>
+														<td>100%</td>
+													</tr>
+													<tr>
+														<td>3</td>
+														<td>
+															<span class="selectFull">
+																<select>
+																	<option>안전혼합형</option>
+																	<option></option>
+																</select>
+															</span>
+														</td>
+														<td>
+															<input type="text" class="textR" style="width:241px" />
+															<span>%</span>
+														</td>
+														<td>100%</td>
+													</tr>
+												</tbody>
+											</table>
+											<ul class="footNote">
+												<li><span>*</span>기존에 적합성진단을 실시한 고객 또는 전자청약을 통해 적합성진단을 실시한 경우, 위의 적합성진단 결과에 따라 변액보험 계획수립을 진행합니다.</li>
+											</ul>
+										</fieldset>
+									</form>	
+								</div>
+								
+								<h3>계약자/피보험자</h3>
 								<table class="table1">
-									<caption>공동청약 Life Planner</caption>
+									<caption>보험수익자</caption>
 									<colgroup>
-										<col width="33%" />
-										<col width="67%" />
+										<col width="20%" />
+										<col width="*" />
 									</colgroup>
 									<tbody>
 										<tr>
-											<th>대표LP</th>
-											<td class="textC">김숙자</td>
+											<th>계약자</th>
+											<td>
+												<div class="btnWrap">
+													<span class="floatL">김푸르(800201-1234567)</span>
+													<!-- 정보입력 클릭시 아래 view가 show되면서 <span class="txtArrow"> up클래스 추가 -->
+													<a href="#none" class="btn smWtRb">정보입력<span class="txtArrow ">더보기</span></a>
+												</div>
+											</td>
 										</tr>
+										<!-- view -->
+										<tr class="view">
+											<td colspan="2">
+												<div class="conTable">
+													<form method="post" action="/">
+														<fieldset>
+															<legend>계약자/피보함자</legend>
+															<table>
+																<caption>계약자/피보함자</caption>
+																<colgroup>
+																	<col width="19%" />
+																	<col width="43%" />
+																	<col width="16%" />
+																	<col width="*" />
+																</colgroup>
+																<tbody>
+																	<tr>
+																		<th>개인/법인여부</th>
+																		<td>
+																			<span class="fLset">
+																				<input type="radio" id="ra1" name="ra" />
+																				<label for="ra1">개인</label>
+																				<input type="radio" id="ra2" name="ra" />
+																				<label for="ra2">법인</label>
+																				<input type="checkbox" id="dlch1" />
+																				<label for="dlch1">외국인</label>
+																			</span>
+																		</td>
+																		<th>고객유형</th>
+																		<td>
+																			<select style="width:88px">
+																				<option></option>
+																				<option></option>
+																			</select>
+																		</td>
+																	</tr>
+																	<tr>
+																		<th>우편물 수령지</th>
+																		<td>
+																			<span class="fLset">
+																				<input type="radio" id="po1" name="po" />
+																				<label for="po1">자택</label>
+																				<input type="radio" id="po2" name="po" />
+																				<label for="po2">회사</label>
+																			</span>
+																		</td>
+																		<th>주소/연락처 선택</th>
+																		<td>
+																			<span class="fLset">
+																				<input type="radio" id="tel1" name="tel" />
+																				<label for="tel1">RAD</label>
+																				<input type="radio" id="tel2" name="tel" />
+																				<label for="tel2">CuREx</label>
+																			</span>
+																		</td>
+																	</tr>
+																	<tr>
+																		<th>고객명</th>
+																		<td><input type="text" style="width:78px" />
+																		</td>
+																		<th>주민번호</th>
+																		<td>
+																			<input type="text" style="width:58px" />
+																			<input type="text" style="width:58px" />
+																		</td>
+																	</tr>
+																	<tr>
+																		<th>가족관계</th>
+																		<td>
+																			<select style="width:88px">
+																				<option></option>
+																				<option></option>
+																			</select>
+																		</td>
+																		<th>휴대전화</th>
+																		<td>
+																			<span class="widthFull"><input type="text" id="" /></span>
+																		</td>
+																	</tr>
+																	<tr>
+																		<th>자택주소</th>
+																		<td>
+																			<input type="text" style="width:78px" />
+																			<input type="text" style="width:98px" />
+																			<input type="text" style="width:78px" />
+																		</td>
+																		<th>자택전화</th>
+																		<td>
+																			<span class="widthFull"><input type="text" id="" /></span>
+																		</td>
+																	</tr>
+																	<tr>
+																		<th>회사주소</th>
+																		<td>
+																			<input type="text" style="width:78px" />
+																			<input type="text" style="width:98px" />
+																			<input type="text" style="width:78px" />
+																		</td>
+																		<th>직장전화</th>
+																		<td>
+																			<span class="widthFull"><input type="text" id="" /></span>
+																		</td>
+																	</tr>
+																	<tr>
+																		<th>E-mail</th>
+																		<td colspan="3">
+																			<input type="text" style="width:128px" />
+																			<select style="width:88px">
+																				<option></option>
+																				<option></option>
+																			</select>
+																			<input type="text"style="width:78px" />
+																		</td>
+																	</tr>
+																</tbody>
+															</table>
+															<div class="btnWrap">
+																<input type="button" value="인적정보저장" class="btn smGnR">
+															</div>
+														</fieldset>
+													</form>
+												</div>
+											</td>
+										</tr>
+										<!-- //view -->
 										<tr>
-											<th>공동LP 2순위</th>
-											<td class="textC">
-												<a href="#none">이공동(SM123)<img src="/img/sub/btn_smDel.gif" class="vM pl5" alt="삭제" /></a>
+											<th>피보험자</th>
+											<td>
+												<div class="btnWrap">
+													<span class="floatL">김푸르(800201-1234567 / 본인 /33세)</span>
+													<!-- 정보입력 클릭시 아래 view가 show되면서 <span class="txtArrow"> up클래스 추가 -->
+													<a href="#none" class="btn smWtRb">정보입력<span class="txtArrow">더보기</span></a>
+												</div>
 											</td>
 										</tr>
 										<tr>
-											<th>공동LP 3순위</th>
-											<td class="textC">
-												<a class="btn smGyRb" href="#none">검색</a>
+											<th>종피보험자</th>
+											<td>
+												<div class="btnWrap">
+													<span class="floatL">
+														<select>
+															<option>이현영</option>
+															<option></option>
+														</select>
+														(800203-1234567 / 배우자 / 30세)
+													</span>
+													<!-- 정보입력 클릭시 아래 view가 show되면서 <span class="txtArrow"> up클래스 추가 -->
+													<a href="#none" class="btn smWtRb">정보입력<span class="txtArrow">더보기</span></a>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<th>특약피보험자</th>
+											<td>
+												<div class="btnWrap">
+													<span class="floatL">
+														<select>
+															<option>김준석</option>
+															<option></option>
+														</select>
+														(100203-1234567 / 자녀 / 3세)
+													</span>
+													<!-- 정보입력 클릭시 아래 view가 show되면서 <span class="txtArrow"> up클래스 추가 -->
+													<a href="#none" class="btn smWtRb">정보입력<span class="txtArrow">더보기</span></a>
+												</div>
+												
 											</td>
 										</tr>
 									</tbody>
 								</table>
-								<ul class="footNote">
-									<li><span>*</span>SM은 대표LP가 될 수 없습니다. 공동청약에 대한 계획수립은 LP가 진행해주시기 바랍니다.</li>
-									<li><span>*</span>자기계약은 공동청약으로 진행 불가합니다.</li>
-									<li><span>*</span>공동청약 배분율은 공동청약확인서상에 기제해 주시기 바랍니다.</li>
-								</ul>
-							</div>
-						</div>
-
-						<div class="right">
-							<div class="juContact">
-								<h3 class="mt0">특별계정</h3>
-								<form method="post" action="/">
-									<fieldset>
-										<legend>특별계정</legend>
-										<table class="table3">
-											<caption>특별계정</caption>
-											<colgroup>
-												<col width="5%" />
-												<col width="38%" />
-												<col width="38%" />
-												<col width="*" />
-											</colgroup>
-											<thead>
-												<tr>
-													<th></th>
-													<th>펀드유형</th>
-													<th>비율</th>
-													<th>비율함</th>
-												</tr>
-											</thead>
-											<tbody>
-												<tr>
-													<td>1</td>
-													<td>
-														<span class="selectFull">
-															<select>
-																<option>안전혼합형</option>
-																<option></option>
-															</select>
-														</span>
-													</td>
-													<td>
-														<input type="text" class="textR" style="width:241px" />
-														<span>%</span>
-													</td>
-													<td>100%</td>
-												</tr>
-												<tr>
-													<td>2</td>
-													<td>
-														<span class="selectFull">
-															<select>
-																<option>안전혼합형</option>
-																<option></option>
-															</select>
-														</span>
-													</td>
-													<td>
-														<input type="text" class="textR" style="width:241px" />
-														<span>%</span>
-													</td>
-													<td>100%</td>
-												</tr>
-												<tr>
-													<td>3</td>
-													<td>
-														<span class="selectFull">
-															<select>
-																<option>안전혼합형</option>
-																<option></option>
-															</select>
-														</span>
-													</td>
-													<td>
-														<input type="text" class="textR" style="width:241px" />
-														<span>%</span>
-													</td>
-													<td>100%</td>
-												</tr>
-											</tbody>
-										</table>
-										<ul class="footNote">
-											<li><span>*</span>기존에 적합성진단을 실시한 고객 또는 전자청약을 통해 적합성진단을 실시한 경우, 위의 적합성진단 결과에 따라 변액보험 계획수립을 진행합니다.</li>
-										</ul>
-									</fieldset>
-								</form>	
-							</div>
-							
-							<h3>계약자/피보험자</h3>
-							<table class="table1">
-								<caption>보험수익자</caption>
-								<colgroup>
-									<col width="20%" />
-									<col width="*" />
-								</colgroup>
-								<tbody>
-									<tr>
-										<th>계약자</th>
-										<td>
-											<div class="btnWrap">
-												<span class="floatL">김푸르(800201-1234567)</span>
-												<!-- 정보입력 클릭시 아래 view가 show되면서 <span class="txtArrow"> up클래스 추가 -->
-												<a href="#none" class="btn smWtRb">정보입력<span class="txtArrow up">더보기</span></a>
-											</div>
-										</td>
-									</tr>
-									<!-- view -->
-									<tr class="view">
-										<td colspan="2">
-											<div class="conTable">
-												<form method="post" action="/">
-													<fieldset>
-														<legend>계약자/피보함자</legend>
-														<table>
-															<caption>계약자/피보함자</caption>
-															<colgroup>
-																<col width="19%" />
-																<col width="43%" />
-																<col width="16%" />
-																<col width="*" />
-															</colgroup>
-															<tbody>
-																<tr>
-																	<th>개인/법인여부</th>
-																	<td>
-																		<span class="fLset">
-																			<input type="radio" id="ra1" name="ra" />
-																			<label for="ra1">개인</label>
-																			<input type="radio" id="ra2" name="ra" />
-																			<label for="ra2">법인</label>
-																			<input type="checkbox" id="dlch1" />
-																			<label for="dlch1">외국인</label>
-																		</span>
-																	</td>
-																	<th>고객유형</th>
-																	<td>
-																		<select style="width:88px">
-																			<option></option>
-																			<option></option>
-																		</select>
-																	</td>
-																</tr>
-																<tr>
-																	<th>우편물 수령지</th>
-																	<td>
-																		<span class="fLset">
-																			<input type="radio" id="po1" name="po" />
-																			<label for="po1">자택</label>
-																			<input type="radio" id="po2" name="po" />
-																			<label for="po2">회사</label>
-																		</span>
-																	</td>
-																	<th>주소/연락처 선택</th>
-																	<td>
-																		<span class="fLset">
-																			<input type="radio" id="tel1" name="tel" />
-																			<label for="tel1">RAD</label>
-																			<input type="radio" id="tel2" name="tel" />
-																			<label for="tel2">CuREx</label>
-																		</span>
-																	</td>
-																</tr>
-																<tr>
-																	<th>고객명</th>
-																	<td><input type="text" style="width:78px" />
-																	</td>
-																	<th>주민번호</th>
-																	<td>
-																		<input type="text" style="width:58px" />
-																		<input type="text" style="width:58px" />
-																	</td>
-																</tr>
-																<tr>
-																	<th>가족관계</th>
-																	<td>
-																		<select style="width:88px">
-																			<option></option>
-																			<option></option>
-																		</select>
-																	</td>
-																	<th>휴대전화</th>
-																	<td>
-																		<span class="widthFull"><input type="text" id="" /></span>
-																	</td>
-																</tr>
-																<tr>
-																	<th>자택주소</th>
-																	<td>
-																		<input type="text" style="width:78px" />
-																		<input type="text" style="width:98px" />
-																		<input type="text" style="width:78px" />
-																	</td>
-																	<th>자택전화</th>
-																	<td>
-																		<span class="widthFull"><input type="text" id="" /></span>
-																	</td>
-																</tr>
-																<tr>
-																	<th>회사주소</th>
-																	<td>
-																		<input type="text" style="width:78px" />
-																		<input type="text" style="width:98px" />
-																		<input type="text" style="width:78px" />
-																	</td>
-																	<th>직장전화</th>
-																	<td>
-																		<span class="widthFull"><input type="text" id="" /></span>
-																	</td>
-																</tr>
-																<tr>
-																	<th>E-mail</th>
-																	<td colspan="3">
-																		<input type="text" style="width:128px" />
-																		<select style="width:88px">
-																			<option></option>
-																			<option></option>
-																		</select>
-																		<input type="text"style="width:78px" />
-																	</td>
-																</tr>
-															</tbody>
-														</table>
-														<div class="btnWrap">
-															<input type="button" value="인적정보저장" class="btn smGnR">
-														</div>
-													</fieldset>
-												</form>
-											</div>
-										</td>
-									</tr>
-									<!-- //view -->
-									<tr>
-										<th>피보험자</th>
-										<td>
-											<div class="btnWrap">
-												<span class="floatL">김푸르(800201-1234567 / 본인 /33세)</span>
-												<!-- 정보입력 클릭시 아래 view가 show되면서 <span class="txtArrow"> up클래스 추가 -->
-												<a href="#none" class="btn smWtRb">정보입력<span class="txtArrow">더보기</span></a>
-											</div>
-										</td>
-									</tr>
-									<tr>
-										<th>종피보험자</th>
-										<td>
-											<div class="btnWrap">
-												<span class="floatL">
-													<select>
-														<option>이현영</option>
-														<option></option>
-													</select>
-													(800203-1234567 / 배우자 / 30세)
-												</span>
-												<!-- 정보입력 클릭시 아래 view가 show되면서 <span class="txtArrow"> up클래스 추가 -->
-												<a href="#none" class="btn smWtRb">정보입력<span class="txtArrow">더보기</span></a>
-											</div>
-										</td>
-									</tr>
-									<tr>
-										<th>특약피보험자</th>
-										<td>
-											<div class="btnWrap">
-												<span class="floatL">
-													<select>
-														<option>김준석</option>
-														<option></option>
-													</select>
-													(100203-1234567 / 자녀 / 3세)
-												</span>
-												<!-- 정보입력 클릭시 아래 view가 show되면서 <span class="txtArrow"> up클래스 추가 -->
-												<a href="#none" class="btn smWtRb">정보입력<span class="txtArrow">더보기</span></a>
-											</div>
-											
-										</td>
-									</tr>
-								</tbody>
-							</table>
-
-							<h3>보험수익자</h3>
-							<table class="table1">
-								<caption>보험수익자</caption>
-								<colgroup>
-									<col width="20%" />
-									<col width="*" />
-									<col width="9%" />
-									<col width="10%" />
-									<col width="9%" />
-									<col width="10%" />
-									<col width="10%" />
-									<col width="9%" />
-								</colgroup>
-								<tbody>
-									<tr>
-										<th>만기생존시</th>
-										<td colspan="8">
-											<div class="btnWrap">
-												<span class="floatL">
+						
+								<h3>보험수익자</h3>
+								<table class="table1">
+									<caption>보험수익자</caption>
+									<colgroup>
+										<col width="20%" />
+										<col width="*" />
+										<col width="9%" />
+										<col width="10%" />
+										<col width="9%" />
+										<col width="10%" />
+										<col width="10%" />
+										<col width="9%" />
+									</colgroup>
+									<tbody>
+										<tr>
+											<th>만기생존시</th>
+											<td colspan="8">
+												<div class="btnWrap">
+													<span class="floatL">
+														<select>
+															<option>출력안함</option>
+															<option></option>
+														</select>
+													</span>
+													<!-- 정보입력 클릭시 아래 view가 show되면서 <span class="txtArrow"> up클래스 추가 -->
+													<a href="#none" class="btn smWtRb">정보입력<span class="txtArrow">더보기</span></a>
+												</div>
+											</td>
+										</tr>
+										<!-- view -->
+										<tr class="view">
+											<td colspan="9">
+												<div class="conTable">
+													<form method="post" action="/">
+														<fieldset>
+															<legend>보험수익자</legend>
+															<table>
+																<caption>보험수익자</caption>
+																<colgroup>
+																	<col width="19%" />
+																	<col width="43%" />
+																	<col width="16%" />
+																	<col width="*" />
+																</colgroup>
+																<tbody>
+																	<tr>
+																		<th>우편물 수령지</th>
+																		<td>
+																			<span class="fLset">
+																				<input type="radio" id="post1" name="post" />
+																				<label for="post1">자택</label>
+																				<input type="radio" id="post2" name="post" />
+																				<label for="post2">회사</label>
+																			</span>
+																		</td>
+																		<th>주소/연락처 선택</th>
+																		<td>
+																			<span class="fLset">
+																				<input type="radio" id="tels1" name="tels" />
+																				<label for="tels1">RAD</label>
+																				<input type="radio" id="tels2" name="tels" />
+																				<label for="tels2">CuREx</label>
+																			</span>
+																		</td>
+																	</tr>
+																	<tr>
+																		<th>고객명</th>
+																		<td><input type="text" style="width:78px" />
+																		</td>
+																		<th>주민번호</th>
+																		<td>
+																			<input type="text" style="width:58px" />
+																			<input type="text" style="width:58px" />
+																		</td>
+																	</tr>
+																	<tr>
+																		<th>가족관계</th>
+																		<td>
+																			<select style="width:88px">
+																				<option></option>
+																				<option></option>
+																			</select>
+																		</td>
+																		<th>휴대전화</th>
+																		<td>
+																			<span class="widthFull"><input type="text" id="" /></span>
+																		</td>
+																	</tr>
+																	<tr>
+																		<th>자택주소</th>
+																		<td>
+																			<input type="text" style="width:78px" />
+																			<input type="text" style="width:98px" />
+																			<input type="text" style="width:78px" />
+																		</td>
+																		<th>자택전화</th>
+																		<td>
+																			<span class="widthFull"><input type="text" id="" /></span>
+																		</td>
+																	</tr>
+																	<tr>
+																		<th>회사주소</th>
+																		<td>
+																			<input type="text" style="width:78px" />
+																			<input type="text" style="width:98px" />
+																			<input type="text" style="width:78px" />
+																		</td>
+																		<th>직장전화</th>
+																		<td>
+																			<span class="widthFull"><input type="text" id="" /></span>
+																		</td>
+																	</tr>
+																	<tr>
+																		<th>E-mail</th>
+																		<td colspan="3">
+																			<input type="text" style="width:128px" />
+																			<select style="width:88px">
+																				<option></option>
+																				<option></option>
+																			</select>
+																			<input type="text"style="width:78px" />
+																		</td>
+																	</tr>
+																</tbody>
+															</table>
+															<div class="btnWrap">
+																<input type="button" value="인적정보저장" class="btn smGnR">
+															</div>
+														</fieldset>
+													</form>
+												</div>
+											</td>
+										</tr>
+										<!-- //view -->
+										<tr>
+											<th>입원상해시</th>
+											<td>
+												<span class="widthFull">
 													<select>
 														<option>출력안함</option>
 														<option></option>
 													</select>
 												</span>
+											</td>
+											<th>지급비율</th>
+											<td>
+												<select>
+													<option>100</option>
+													<option></option>
+												</select>
+												%
+											</td>
+											<th>분할비율</th>
+											<td>
+												<select>
+													<option>100</option>
+													<option></option>
+												</select>
+												%
+											</td>
+											<th>종료나이</th>
+											<td>
+												<select>
+													<option>100세</option>
+													<option></option>
+												</select>
+											</td>
+											<td class="tar">
 												<!-- 정보입력 클릭시 아래 view가 show되면서 <span class="txtArrow"> up클래스 추가 -->
 												<a href="#none" class="btn smWtRb">정보입력<span class="txtArrow">더보기</span></a>
-											</div>
-										</td>
-									</tr>
-									<!-- view -->
-									<tr class="view">
-										<td colspan="9">
-											<div class="conTable">
-												<form method="post" action="/">
-													<fieldset>
-														<legend>보험수익자</legend>
-														<table>
-															<caption>보험수익자</caption>
-															<colgroup>
-																<col width="19%" />
-																<col width="43%" />
-																<col width="16%" />
-																<col width="*" />
-															</colgroup>
-															<tbody>
-																<tr>
-																	<th>우편물 수령지</th>
-																	<td>
-																		<span class="fLset">
-																			<input type="radio" id="post1" name="post" />
-																			<label for="post1">자택</label>
-																			<input type="radio" id="post2" name="post" />
-																			<label for="post2">회사</label>
-																		</span>
-																	</td>
-																	<th>주소/연락처 선택</th>
-																	<td>
-																		<span class="fLset">
-																			<input type="radio" id="tels1" name="tels" />
-																			<label for="tels1">RAD</label>
-																			<input type="radio" id="tels2" name="tels" />
-																			<label for="tels2">CuREx</label>
-																		</span>
-																	</td>
-																</tr>
-																<tr>
-																	<th>고객명</th>
-																	<td><input type="text" style="width:78px" />
-																	</td>
-																	<th>주민번호</th>
-																	<td>
-																		<input type="text" style="width:58px" />
-																		<input type="text" style="width:58px" />
-																	</td>
-																</tr>
-																<tr>
-																	<th>가족관계</th>
-																	<td>
-																		<select style="width:88px">
-																			<option></option>
-																			<option></option>
-																		</select>
-																	</td>
-																	<th>휴대전화</th>
-																	<td>
-																		<span class="widthFull"><input type="text" id="" /></span>
-																	</td>
-																</tr>
-																<tr>
-																	<th>자택주소</th>
-																	<td>
-																		<input type="text" style="width:78px" />
-																		<input type="text" style="width:98px" />
-																		<input type="text" style="width:78px" />
-																	</td>
-																	<th>자택전화</th>
-																	<td>
-																		<span class="widthFull"><input type="text" id="" /></span>
-																	</td>
-																</tr>
-																<tr>
-																	<th>회사주소</th>
-																	<td>
-																		<input type="text" style="width:78px" />
-																		<input type="text" style="width:98px" />
-																		<input type="text" style="width:78px" />
-																	</td>
-																	<th>직장전화</th>
-																	<td>
-																		<span class="widthFull"><input type="text" id="" /></span>
-																	</td>
-																</tr>
-																<tr>
-																	<th>E-mail</th>
-																	<td colspan="3">
-																		<input type="text" style="width:128px" />
-																		<select style="width:88px">
-																			<option></option>
-																			<option></option>
-																		</select>
-																		<input type="text"style="width:78px" />
-																	</td>
-																</tr>
-															</tbody>
-														</table>
-														<div class="btnWrap">
-															<input type="button" value="인적정보저장" class="btn smGnR">
-														</div>
-													</fieldset>
-												</form>
-											</div>
-										</td>
-									</tr>
-									<!-- //view -->
-									<tr>
-										<th>입원상해시</th>
-										<td>
-											<span class="widthFull">
+											</td>
+										</tr>
+										<tr>
+											<th>입원상해시</th>
+											<td>
+												<span class="widthFull">
+													<select>
+														<option>출력안함</option>
+														<option></option>
+													</select>
+												</span>
+											</td>
+											<th>지급비율</th>
+											<td>
+												<select>
+													<option>100</option>
+													<option></option>
+												</select>
+												%
+											</td>
+											<th>분할비율</th>
+											<td>
+												<select>
+													<option>100</option>
+													<option></option>
+												</select>
+												%
+											</td>
+											<th>종료나이</th>
+											<td>
+												<select>
+													<option>100세</option>
+													<option></option>
+												</select>
+											</td>
+											<td class="tar">
+												<!-- 정보입력 클릭시 아래 view가 show되면서 <span class="txtArrow"> up클래스 추가 -->
+												<a href="#none" class="btn smWtRb">정보입력<span class="txtArrow">더보기</span></a>
+											</td>
+										</tr>
+										<tr>
+											<th>사망 시1</th>
+											<td>
+												<span class="widthFull">
+													<select>
+														<option>출력안함</option>
+														<option></option>
+													</select>
+												</span>
+											</td>
+											<th>지급비율</th>
+											<td>
+												<select>
+													<option>100</option>
+													<option></option>
+												</select>
+												%
+											</td>
+											<th>분할비율</th>
+											<td>
+												<select>
+													<option>100</option>
+													<option></option>
+												</select>
+												%
+											</td>
+											<th>종료나이</th>
+											<td>
+												<select>
+													<option>100세</option>
+													<option></option>
+												</select>
+											</td>
+											<td class="tar">
+												<!-- 정보입력 클릭시 아래 view가 show되면서 <span class="txtArrow"> up클래스 추가 -->
+												<a href="#none" class="btn smWtRb">정보입력<span class="txtArrow">더보기</span></a>
+											</td>
+										</tr>
+										<tr>
+											<th>사망 시2</th>
+											<td>
+												<span class="widthFull">
+													<select>
+														<option>출력안함</option>
+														<option></option>
+													</select>
+												</span>
+											</td>
+											<th>지급비율</th>
+											<td>
+												<select>
+													<option>100</option>
+													<option></option>
+												</select>
+												%
+											</td>
+											<th>분할비율</th>
+											<td>
+												<select>
+													<option>100</option>
+													<option></option>
+												</select>
+												%
+											</td>
+											<th>종료나이</th>
+											<td>
+												<select>
+													<option>100세</option>
+													<option></option>
+												</select>
+											</td>
+											<td class="tar">
+												<!-- 정보입력 클릭시 아래 view가 show되면서 <span class="txtArrow"> up클래스 추가 -->
+												<a href="#none" class="btn smWtRb">정보입력<span class="txtArrow">더보기</span></a>
+											</td>
+										</tr>
+										<tr>
+											<th>사망 시3</th>
+											<td>
+												<span class="widthFull">
+													<select>
+														<option>출력안함</option>
+														<option></option>
+													</select>
+												</span>
+											</td>
+											<th>지급비율</th>
+											<td>
+												<select>
+													<option>100</option>
+													<option></option>
+												</select>
+												%
+											</td>
+											<th>분할비율</th>
+											<td>
+												<select>
+													<option>100</option>
+													<option></option>
+												</select>
+												%
+											</td>
+											<th>종료나이</th>
+											<td>
+												<select>
+													<option>100세</option>
+													<option></option>
+												</select>
+											</td>
+											<td class="tar">
+												<!-- 정보입력 클릭시 아래 view가 show되면서 <span class="txtArrow"> up클래스 추가 -->
+												<a href="#none" class="btn smWtRb">정보입력<span class="txtArrow">더보기</span></a>
+											</td>
+										</tr>
+										<tr>
+											<th>사망 시4</th>
+											<td>
+												<span class="widthFull">
+													<select>
+														<option>출력안함</option>
+														<option></option>
+													</select>
+												</span>
+											</td>
+											<th>지급비율</th>
+											<td>
+												<select>
+													<option>100</option>
+													<option></option>
+												</select>
+												%
+											</td>
+											<th>분할비율</th>
+											<td>
+												<select>
+													<option>100</option>
+													<option></option>
+												</select>
+												%
+											</td>
+											<th>종료나이</th>
+											<td>
+												<select>
+													<option>100세</option>
+													<option></option>
+												</select>
+											</td>
+											<td class="tar">
+												<!-- 정보입력 클릭시 아래 view가 show되면서 <span class="txtArrow"> up클래스 추가 -->
+												<a href="#none" class="btn smWtRb">정보입력<span class="txtArrow">더보기</span></a>
+											</td>
+										</tr>
+										<tr>
+											<th>지정청구 대리인</th>
+											<td colspan="7">
 												<select>
 													<option>출력안함</option>
 													<option></option>
 												</select>
-											</span>
-										</td>
-										<th>지급비율</th>
-										<td>
-											<select>
-												<option>100</option>
-												<option></option>
-											</select>
-											%
-										</td>
-										<th>분할비율</th>
-										<td>
-											<select>
-												<option>100</option>
-												<option></option>
-											</select>
-											%
-										</td>
-										<th>종료나이</th>
-										<td>
-											<select>
-												<option>100세</option>
-												<option></option>
-											</select>
-										</td>
-										<td>
-										<!-- 정보입력 클릭시 아래 view가 show되면서 <span class="txtArrow"> up클래스 추가 -->
-										<a href="#none" class="btn smWtRb">정보입력<span class="txtArrow">더보기</span></a>
-									</tr>
-									<tr>
-										<th>입원상해시</th>
-										<td>
-											<span class="widthFull">
-												<select>
-													<option>출력안함</option>
-													<option></option>
-												</select>
-											</span>
-										</td>
-										<th>지급비율</th>
-										<td>
-											<select>
-												<option>100</option>
-												<option></option>
-											</select>
-											%
-										</td>
-										<th>분할비율</th>
-										<td>
-											<select>
-												<option>100</option>
-												<option></option>
-											</select>
-											%
-										</td>
-										<th>종료나이</th>
-										<td>
-											<select>
-												<option>100세</option>
-												<option></option>
-											</select>
-										</td>
-										<td>
-											<!-- 정보입력 클릭시 아래 view가 show되면서 <span class="txtArrow"> up클래스 추가 -->
-											<a href="#none" class="btn smWtRb">정보입력<span class="txtArrow">더보기</span></a>
-										</td>
-									</tr>
-									<tr>
-										<th>사망 시1</th>
-										<td>
-											<span class="widthFull">
-												<select>
-													<option>출력안함</option>
-													<option></option>
-												</select>
-											</span>
-										</td>
-										<th>지급비율</th>
-										<td>
-											<select>
-												<option>100</option>
-												<option></option>
-											</select>
-											%
-										</td>
-										<th>분할비율</th>
-										<td>
-											<select>
-												<option>100</option>
-												<option></option>
-											</select>
-											%
-										</td>
-										<th>종료나이</th>
-										<td>
-											<select>
-												<option>100세</option>
-												<option></option>
-											</select>
-										</td>
-										<td>
-											<!-- 정보입력 클릭시 아래 view가 show되면서 <span class="txtArrow"> up클래스 추가 -->
-											<a href="#none" class="btn smWtRb">정보입력<span class="txtArrow">더보기</span></a>
-										</td>
-									</tr>
-									<tr>
-										<th>사망 시2</th>
-										<td>
-											<span class="widthFull">
-												<select>
-													<option>출력안함</option>
-													<option></option>
-												</select>
-											</span>
-										</td>
-										<th>지급비율</th>
-										<td>
-											<select>
-												<option>100</option>
-												<option></option>
-											</select>
-											%
-										</td>
-										<th>분할비율</th>
-										<td>
-											<select>
-												<option>100</option>
-												<option></option>
-											</select>
-											%
-										</td>
-										<th>종료나이</th>
-										<td>
-											<select>
-												<option>100세</option>
-												<option></option>
-											</select>
-										</td>
-										<td>
-											<!-- 정보입력 클릭시 아래 view가 show되면서 <span class="txtArrow"> up클래스 추가 -->
-											<a href="#none" class="btn smWtRb">정보입력<span class="txtArrow">더보기</span></a>
-										</td>
-									</tr>
-									<tr>
-										<th>사망 시3</th>
-										<td>
-											<span class="widthFull">
-												<select>
-													<option>출력안함</option>
-													<option></option>
-												</select>
-											</span>
-										</td>
-										<th>지급비율</th>
-										<td>
-											<select>
-												<option>100</option>
-												<option></option>
-											</select>
-											%
-										</td>
-										<th>분할비율</th>
-										<td>
-											<select>
-												<option>100</option>
-												<option></option>
-											</select>
-											%
-										</td>
-										<th>종료나이</th>
-										<td>
-											<select>
-												<option>100세</option>
-												<option></option>
-											</select>
-										</td>
-										<td>
-											<!-- 정보입력 클릭시 아래 view가 show되면서 <span class="txtArrow"> up클래스 추가 -->
-											<a href="#none" class="btn smWtRb">정보입력<span class="txtArrow">더보기</span></a>
-										</td>
-									</tr>
-									<tr>
-										<th>사망 시4</th>
-										<td>
-											<span class="widthFull">
-												<select>
-													<option>출력안함</option>
-													<option></option>
-												</select>
-											</span>
-										</td>
-										<th>지급비율</th>
-										<td>
-											<select>
-												<option>100</option>
-												<option></option>
-											</select>
-											%
-										</td>
-										<th>분할비율</th>
-										<td>
-											<select>
-												<option>100</option>
-												<option></option>
-											</select>
-											%
-										</td>
-										<th>종료나이</th>
-										<td>
-											<select>
-												<option>100세</option>
-												<option></option>
-											</select>
-										</td>
-										<td>
-											<!-- 정보입력 클릭시 아래 view가 show되면서 <span class="txtArrow"> up클래스 추가 -->
-											<a href="#none" class="btn smWtRb">정보입력<span class="txtArrow">더보기</span></a>
-										</td>
-									</tr>
-									<tr>
-										<th>지정청구 대리인</th>
-										<td colspan="7">
-											<select>
-												<option>출력안함</option>
-												<option></option>
-											</select>
-										</td>
-										<td>
-											<!-- 정보입력 클릭시 아래 view가 show되면서 <span class="txtArrow"> up클래스 추가 -->
-											<a href="#none" class="btn smWtRb">정보입력<span class="txtArrow">더보기</span></a>
-										</td>
-									</tr>
-								</tbody>
-							</table>
-							
+											</td>
+											<td class="tar">
+												<!-- 정보입력 클릭시 아래 view가 show되면서 <span class="txtArrow"> up클래스 추가 -->
+												<a href="#none" class="btn smWtRb">정보입력<span class="txtArrow">더보기</span></a>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+								
+							</div>
 						</div>
 					</li>
 					<li>
@@ -1955,6 +1961,8 @@
 		<!-- //공통 컨텐츠 -->
 		<script type="text/javascript">
 			//<![CDATA[
+			var pobj = $('.add');
+			curexFront.data.init(pobj);  // tab 데이터가 삭제되기전에 obj에 담아놓음.
 			var myTab = ci.tab.init($('.PersonCont')); // 고객정보탭
 			var myTab1 = ci.tab.init($('.tabOutline')); // 
 			var myTab2 = ci.tab.init($('.lipsWrap')); // 

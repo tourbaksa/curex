@@ -16,11 +16,12 @@ div.lipsWrap {width:1024px;}
 .arrUp span.img, .arrDown span.img {position:absolute;width:9px;height:5px;left:9px;top:6px;}
 .arrUp a, .arrDown a{width:15px; height:15px;}
 
-.previous .preSearch{display:block;}
+.previous .preSearch{display:block; border:3px solid #22b8c7;}
 
 .preClick{border:3px solid #22b8c7;}
 
 /* table - table */
+#conteiner #contents tr.view > td{display:none;}
 #conteiner #contents tr.view td{padding:0;}
 #conteiner #contents tr.view .conTable{border-left:0;padding:9px 9px 14px;width:731px;background-color:#f6f6f6;}
 #conteiner #contents tr.view .conTable table {width:713px;}
