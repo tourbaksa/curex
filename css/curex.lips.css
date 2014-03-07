@@ -20,6 +20,8 @@ div.lipsWrap {width:1024px;}
 
 .preClick{border:3px solid #22b8c7;}
 
+a.cellDel{display:block;}
+
 /* table - table */
 #conteiner #contents tr.view > td{display:none;}
 #conteiner #contents tr.view td{padding:0;}

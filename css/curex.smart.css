@@ -95,24 +95,14 @@ table.smarTable .groupTit{
 	
 }
 /* 초기화 및 조건저장 */
-div.searchDetail{border:1px solid #cdd6d8; background:#f1f3f4; overflow:hidden;background:url(/img/sub/bg_searchDetail_c.gif) repeat-y 0 0; }
-div.searchDetail div.tagWrap{background:url(/img/sub/bg_searchDetail.gif) repeat-x 0 0; width:641px; overflow:hidden; float:left;}
-div.searchDetail div.tagCnt{width:488px; border-right:1px solid #e0e3ea; border-left:1px solid #c1c6cc; border-top:1px solid #c1c6cc; padding:9px 0 0 8px; background:#fff; float:left; min-height:48px; margin:12px 0 8px 9px; font-size:0;}
+div.searchDetail{border:1px solid #cdd6d8; background:#f1f3f4; overflow:hidden;background:#f1f3f4 url(/img/sub/bg_searchDetail.gif) repeat-x 0 0;}
+div.searchDetail div.tagCnt{width:877px; border-right:1px solid #e0e3ea; border-left:1px solid #c1c6cc; border-top:1px solid #c1c6cc; padding:9px 0 0 8px; background:#fff; float:left; min-height:57px; margin:12px 0 8px 9px; font-size:0;}
 div.searchDetail div.tagCnt span{margin-right:19px; display:inline-block; padding:1px 0 2px 0; font-size:12px;}
 div.searchDetail div.tagCnt button.smDel{background:url(/img/sub/btn_smDel.gif) no-repeat 0 0; width:11px; height:11px; vertical-align:middle; margin:0 0 0 5px; position:relative; top:-1px;}
-div.searchDetail div.searchSave{float:left; background:#f1f3f4 url(../images/sub/bg_searchDetail_r.gif) repeat-y 100% 0; margin:11px 0 8px 10px;}
+div.searchDetail div.searchSave{float:right; background:#f1f3f4 url(/img/sub/bg_searchDetail_c.gif) repeat-y 100% 0; margin:2px 0 0 10px; width:125px; height:81px; padding:11px 0 8px 0;}
 div.searchDetail div.searchSave span{display:block; padding:0 0 5px 0;}
 div.searchDetail div.searchSave span a:first-child{margin-right:3px;}
 div.searchDetail div.searchSave .lgBeR{width:106px; padding:8px 15px;}
-div.searchDetail div.msaveSearch {width:381px; border-top:1px solid #f8f9f9; border-left:1px solid #f8f9f9; float:left; padding:11px 0 8px 14px;
- 	background-color: #f0f2f3;
-	background-image: -webkit-gradient(linear, left top, left bottom, from(#f0f2f3), to(#e0e4e9));
-	background-image: -webkit-linear-gradient(top, #f0f2f3, #e0e4e9);
-	background-image: -moz-linear-gradient(top, #f0f2f3, #e0e4e9);
-	background-image: -ms-linear-gradient(top, #f0f2f3, #e0e4e9);
-	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#f0f2f3', endColorstr='#e0e4e9');
-	position:relative;
-}
 div.fLset span.towLine .smWtRb {margin:-3px 0 1px 0;} /* 폼요소와 버튼 */
 div.searchDetail div.msaveSearch dt{color:#3769a8; font-weight:bold; font-size:13px; padding:0 0 8px 0;}
 div.searchDetail div.msaveSearch dd{background:url(/img/sub/blt_grayArrow.gif) no-repeat 4px 8px; padding:0 0 0 13px; line-height:21px;}
@@ -137,15 +127,18 @@ div.spVisual span.salStd{display:inline-block; position:absolute; left:50%; top:
 span.myFavor{background:url(/img/sub/bg_Favor.gif) no-repeat 0 50%; padding-left:24px; height:17px; line-height:17px; display:inline-block; color:#000;}
 
 /* 스마트픽 배너존 */
-div.spbnrZone{width:242px; height:185px; float:left; position:relative; margin-left:10px;}
+div.spbnrZone{width:242px; height:185px; float:left; position:relative; margin-left:10px; overflow:hidden;}
 div.bnrList{position:absolute; left:0; top:0;}
+div.bnrList img{float:left;}
 
 /* 컨트롤버튼 */
 span.bntCtrl{position:absolute; right:15px; top:15px; z-index:1;}
 span.bntCtrl button{float:left; background:url(/img/sub/btn_slide_off.gif) no-repeat 0 0; width:13px; height:12px; margin-left:5px;}
 span.bntCtrl button:first-child{margin-left:0;}
-span.bntCtrl button.on{background-image:url(../images/sub/btn_slide_on.gif);}
+span.bntCtrl button.on{background-image:url(/img/sub/btn_slide_on.gif);}
 
+/* 라운드마스크 */
+span.slideMask{background:url(/img/sub/bg_slideMask.png) 0 0; width:242px; height:185px; position:absolute; left:0; }
 
 div.spBox{position:relative; float:left; background:url(/img/sub/bg_spBox.gif) no-repeat 100% 0; padding:9px 0 9px 14px; width:240px; border-radius:3px; -webkit-border-radius:3px; -moz-border-radius:3px; -ms-border-radius:3px; border:1px solid #dedede; height:89px; margin:0 0 9px 9px;}
 div.spBox span.badge{display:block; height:16px;}
