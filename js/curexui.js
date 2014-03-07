@@ -107,11 +107,11 @@ curexFront = {
 			, $bnrWrap = $("div.spbnrZone", scope)
 			, $btn = $bnrWrap.find("span.bntCtrl button")
 			, $bnrCont = $bnrWrap.find("div.bnrList")
-			, $bnrItem = $bnrCont.find("img");
+			, $bnrItem = $bnrCont.find("img")
 			, $bnrLeng = $bnrItem.length
 			, $bnrW = $bnrItem.outerWidth()
-			, $flag
-			, $idx =0
+			, $flag = 0
+			, $idx
 			, $timer = null
 			, isAnimating = 'no';
 
@@ -120,14 +120,14 @@ curexFront = {
 
 			$bnrItem.each(function(i){
 				$(this).css({
-					position:"absolute".
+					position:"absolute",
 						left:"0",
 						top:"0",
 						display:i==0 ? "block" : "none"
 				});
 			});
 
-			$btn.each(function(idx){
+			$btn.each(function(){
 				$(this).off().on({
 					click:function(){
 						var $idx = $(this).index();
@@ -144,34 +144,42 @@ curexFront = {
 				active.addClass("on")
 			}
 
+			function next(){
+				move(($flag+1) % $bnrLeng);
+			}
+
 			function move($idx){
+				console.log($idx)
+				if($idx == $flag) return;
 				if(isAnimating == 'no'){
 					isAnimating = 'yes'
 					window.clearTimeout($timer); 
-
-				}
-						$bnrCont.animate({
-							"margin-left" : -$bnrW
-						},"slow", function(){
-							$bnrCont.find("img:first").appendTo($bnrCont);
-							$bnrCont.css("margin-left", 0);
-							if ($timer) { start(); }
-							isAnimating = 'no'
-						});
-				
-					$bnrCont.eq($idx).show().css({"margin-left",0}).animate({
-						left:
+					$bnrItem.eq($flag).show().css({"left": 0}).animate({
+						"left" : $bnrW
+					},"slow", function(){
+						$(this).hide();
+						if ($timer) { start(); }
+						isAnimating = 'no'
 					});
 
+					$bnrItem.eq($idx).show().css({
+						"left": $bnrW
+					}).animate({
+						"left" : 0
+					},"slow", function(){
+						isAnimating = 'no'
+					});
 
+				}
 
-
+				$flag = $idx;
 			}
 			
 
 			function start(){
 				console.log("start")
-				$timer = window.setTimeout(move, 2000)
+				stop();
+				$timer = window.setTimeout(next, 2000)
 			}
 			
 			function stop(){
