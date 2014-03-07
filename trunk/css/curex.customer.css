@@ -1,0 +1,8 @@
+@charset "utf-8";
+
+div.customerWrap{width:1024px;}
+
+.cusHistory:after{content:"";display:block;clear:both;}
+.cusHistory .cusLeft{float:left;width:501px;}
+.cusHistory .cusRight{float:right;width:503px;}
+.cusHistory .cusRight td.columnList{height:164px; }
