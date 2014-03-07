@@ -16,70 +16,92 @@ curexFront = {
 	init:function(scope){
 		this.op = scope;
 	},
+
 	event:function(){
 		var scope = this.op
 			, $previousBtn = $("div.previous .ImgArrow", scope).parent() //기계약합산 잔여한도 조회버튼
 			, $InfoWriteBtn =$("table a.InfoWbtn", scope) //테이블정보입력 버튼
 			, $Delbtn = $("a.cellDel", scope) || $("a.cellDel")  //테이블 셀삭제버튼
-			, $cinsrtbtn = $("a.cellInsert", scope) || $("a.cellInsert"); //주계약/특약 특약피버험자 추가버튼
+			, $cinsrtbtn = $("a.cellInsert", scope) || $("a.cellInsert")//주계약/특약 특약피버험자 추가버튼
+			, $bePointBtn = $("a.bePoint", scope) || $("a.bePoint") //산출기준 팝업
+			, $spClose = $("a.spClose", scope) || $("a.spClose"); //산출기준 팝업 닫기
 		
-		/* 기계약 합산잔여한도 */
-		$previousBtn.off().on({
-			click : function(){
-				var $ele = $(this).find("span") 
-					, $visibleObj = $("div.preSearch");
-
-				if(!$visibleObj.length){return false;}
-				if(!$ele.hasClass("up")){ $ele.addClass("up"); $visibleObj.slideDown(200);}
-				else{$ele.removeClass("up"); $visibleObj.slideUp(100);}
-				return false;
-			}
-		});
-
-		/* 테이블 정보입력 */
-		$InfoWriteBtn.each(function(){
-			$(this).off().on({
+			/* 기계약 합산잔여한도 */
+			$previousBtn.off().on({
 				click : function(){
-					var $objTable = $(this).closest("table")
-						, $btnIdx = $objTable.find(".btn span.txtArrow").parent().index($(this)) //내가 클릭한버튼이 현재 테이블에서 몇붠쮀?
-						, $objTd = $objTable.find("tr.view").eq($btnIdx).children()
-						, $ele = $(this).find("span");
+					var $ele = $(this).find("span") 
+						, $visibleObj = $("div.preSearch");
 
-					if (!$objTd.find("div.conTable").length){return false;} //테이블안에 입력테이블이 없으면 아무동작하지않음
-					if(!$ele.hasClass("up")){
-						$ele.addClass("up"); $objTd.slideDown(300);
-					}else{$ele.removeClass("up");$objTd.slideUp(0);}
+					if(!$visibleObj.length){return false;}
+					if(!$ele.hasClass("up")){ $ele.addClass("up"); $visibleObj.slideDown(200);}
+					else{$ele.removeClass("up"); $visibleObj.slideUp(100);}
 					return false;
 				}
 			});
-		});
 
-		/* 테이블 셀삭제 버튼 */
-		$Delbtn.each(function(){
-			$(this).off().on({
+			/* 테이블 정보입력 */
+			$InfoWriteBtn.each(function(){
+				$(this).off().on({
+					click : function(){
+						var $objTable = $(this).closest("table")
+							, $btnIdx = $objTable.find(".btn span.txtArrow").parent().index($(this)) //내가 클릭한버튼이 현재 테이블에서 몇붠쮀?
+							, $objTd = $objTable.find("tr.view").eq($btnIdx).children()
+							, $ele = $(this).find("span");
+
+						if (!$objTd.find("div.conTable").length){return false;} //테이블안에 입력테이블이 없으면 아무동작하지않음
+						if(!$ele.hasClass("up")){
+							$ele.addClass("up"); $objTd.slideDown(300);
+						}else{$ele.removeClass("up");$objTd.slideUp(0);}
+						return false;
+					}
+				});
+			});
+
+			/* 테이블 셀삭제 버튼 */
+			$Delbtn.each(function(){
+				$(this).off().on({
+					click:function(){
+						$(this).closest("tr").remove();
+						return false;
+					}
+				});
+			});
+
+			/* 주계약&특약 추가버튼 */
+			$cinsrtbtn.each(function(){
+				$(this).off().on({
+					click:function(){
+						var $riderCont = $("div.riderPlus",scope) ||$("div.riderPlus")
+							, old = $riderCont.find(".clone").length
+							, newc = old + 1
+							, cloned = $riderCont.find("tr").eq(0).clone().addClass("clone");
+
+						if($riderCont.is(":hidden")){$riderCont.css({"display":"block"});}
+						if(!$riderCont.find("tr").hasClass("clone")){$riderCont.find("tr").remove();}
+						$riderCont.find("table tbody").append(cloned);
+						return false;
+					}
+				});
+			});
+
+			/* 산출기준레이어팝업 */
+			$spClose.off().on({
 				click:function(){
-					$(this).closest("tr").remove();
-					return false;
+					var popObj = $(this).closest("div.spBox").find("div.compLayer");
+					popObj.css({"display" : "none"})
 				}
 			});
-		});
 
-		/* 주계약&특약 추가버튼 */
-		$cinsrtbtn.each(function(){
-			$(this).off().on({
-				click:function(){
-					var $riderCont = $("div.riderPlus",scope) ||$("div.riderPlus")
-						, old = $riderCont.find(".clone").length
-						, newc = old + 1
-						, cloned = $riderCont.find("tr").eq(0).clone().addClass("clone");
-
-					if($riderCont.is(":hidden")){$riderCont.css({"display":"block"});}
-					if(!$riderCont.find("tr").hasClass("clone")){$riderCont.find("tr").remove();}
-					$riderCont.find("table tbody").append(cloned);
-					return false;
-				}
+			/* 산출기준레이어팝업닫기 */
+			$bePointBtn.each(function(){
+				$(this).off().on({
+					click:function(){
+						var popObj = $(this).closest("div.spBox").find("div.compLayer");
+						popObj.css({"display" : "block"})
+					}
+				});
 			});
-		});
+
 	},
 
 
@@ -138,10 +160,7 @@ curexFront = {
 				});
 			});
 
-			function next(){
-				move(($flag+1) % $bnrLeng);
-			}
-
+			function next(){move(($flag+1) % $bnrLeng);}
 			function move($idx){
 				if($idx == $flag) return;
 				if(isAnimating == 'no'){
@@ -168,10 +187,8 @@ curexFront = {
 					$btn.eq($flag).removeClass("on");
 					$btn.eq($idx).addClass("on");
 				}
-
 				$flag = $idx;
 			}
-			
 
 			function start(){
 				stop();
@@ -184,7 +201,6 @@ curexFront = {
 			}
 			start();
 	},
-
 
 	checkList:function(){
 		var $obj = $("#checkList")
