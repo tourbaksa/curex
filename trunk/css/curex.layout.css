@@ -65,10 +65,10 @@ div.Tsearch span.Name.man{}
 div.Tsearch span a{text-decoration:none; color:#707070; font-weight:bold;display:block; letter-spacing:-1px; background:url(/img/common/ico_nameArrow.gif) no-repeat 100% 50%;}
 
 /* 검색결과 회원리스트 출력 */
-div.personInfoArea{position:absolute; top:90px;overflow:hidden; background:#f7f7f7; z-index:222; border:1px solid #22b8c7; border-top:0; width:795px; }
+div.personInfoArea{position:absolute; top:90px;overflow:hidden; background:#f7f7f7; z-index:222; border:1px solid #22b8c7; border-top:0; width:795px;}
 
 /* 기계약 하나만 보여질때 */
-div.personOne{width:428px;padding-bottom:36px;}
+div.personOne{width:426px;padding-bottom:36px;}
 div.PersonCont{float:left; width:367px; padding:20px 20px 45px 20px; background:#fff;}
 ul.personList li{border-bottom:1px solid #e8e9e9; line-height:37px; height:37px; position:relative; overflow:hidden;}
 ul.personList li a{display:block;}
@@ -124,8 +124,8 @@ div.personBtn .lgBeR1{padding:7px 10px;}
 div.personBtn .lgGyR1{padding:7px 10px;}
 
 /* 컨텐츠 */
-#conteiner{width:1024px; margin:20px auto 0;}
-#conteiner div.hgroup{position:relative;margin-bottom:20px; height:23px; line-height:23px;}
+#conteiner{width:1024px; margin:10px auto 0;}
+#conteiner div.hgroup{position:relative;margin-bottom:10px; height:23px; line-height:23px;}
 #conteiner div.hgroup h2{font-size:24px;color:#363636; float:left; padding-right:12px; font-weight:bold;}
 
 #conteiner div.pageTit{overflow:hidden; float:left;}
@@ -133,14 +133,14 @@ div.personBtn .lgGyR1{padding:7px 10px;}
 #conteiner div.pageTit span{float:left; background:url(/img/common/icon5.gif) no-repeat 0 50%; margin:0 0 0 9px; padding:0 0 0 29px;}
 #conteiner div.pageTit input {border:1px solid #fff; line-height:19px;}
 #conteiner div.pageTit input:focus {border:1px solid #dedede;}
-
+ 
 #conteiner .location{position:absolute;right:0;top:0;}
 #conteiner .location li {float:left; font-size:11px;}
 #conteiner .location li a {text-decoration:none; color:#707070; line-height:23px; height:23px;}
-#conteiner #contents ul.tab01{margin:0 0 20px 0; overflow:hidden;}
+#conteiner #contents ul.tab01{margin:0 0 8px 0; overflow:hidden;}
 #conteiner #contents .left{float:left; width:270px;}
 #conteiner #contents .right{float:right; width:733px}
-#conteiner #contents h3{color:#363636; font-size:16px; margin-top:20px; margin-bottom:10px; letter-spacing:-1px; font-weight:bold;}
+#conteiner #contents h3{color:#363636; font-size:16px; margin:8px 0; letter-spacing:-1px; font-weight:bold;}
 
 /* 체크리스트 */
 #checkList{background-color:#22b8c7; width:1024px; height:40px; margin:20px auto 0;position:relative;left:50%;bottom:0;margin-left:-512px;z-index:2222;}
