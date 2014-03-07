@@ -73,6 +73,7 @@ table td.tal{padding-left:9px !important;}
 table td.tar{padding-right:4px !important;}
 table tfoot th, table tfoot td{padding:6px 3px 5px;}
 table td.under a{text-decoration:underline;}
+.codeNum a{text-decoration:underline; color:#079eb1;}/* 링크색,언더라인 */
 
 /* table 우측포지션 */
 div.juContact {position:relative;}
@@ -112,6 +113,9 @@ table.listTable tbody td{border:1px solid #dedede; height:25px; padding:7px 0 5p
 .table1 td.baseImg div ul li{margin-top:4px;}
 .table1 td.baseImg div ul li:first-child{margin-top:0;}
 
+.table1 td.baseImg1{padding:10px 0 0 15px;}
+.table1 td.baseImg1 div ul{padding-top:50px;}
+
 /* table thead th형 */
 .table2 th{border-left:1px solid #dedede;
 	background-color: #f3f4f5;
@@ -129,7 +133,7 @@ table.listTable tbody td{border:1px solid #dedede; height:25px; padding:7px 0 5p
 	background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPgo8bGluZWFyR3JhZGllbnQgaWQ9Imc0MjgiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjAlIiB5Mj0iMTAwJSI+CjxzdG9wIHN0b3AtY29sb3I9IiNGQUZBRkEiIG9mZnNldD0iMCIvPjxzdG9wIHN0b3AtY29sb3I9IiNGMkYyRjIiIG9mZnNldD0iMSIvPgo8L2xpbmVhckdyYWRpZW50Pgo8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2c0MjgpIiAvPgo8L3N2Zz4=);
 }
 .table3 th:first-child{border-left:0;}
-.table3 tbody td{border:1px solid #dedede; height:25px;}
+.table3 tbody td{border:1px solid #dedede; height:30px;}
 .table3 tbody tr.bg{background:#fafafa;}
 .table3 tfoot td{background:#dde3ef;border-left:1px solid #fff;padding-left:10px;}
 .table3 tfoot tr:first-child td:first-child{border-left:0;}
@@ -137,6 +141,7 @@ table.listTable tbody td{border:1px solid #dedede; height:25px; padding:7px 0 5p
 .table3 + p{margin-top:8px;}
 .table3 .bderB{border-bottom:1px solid #fff;}
 .tfootType1 span label{margin-right:10px;}
+.table3.h31 tbody td{height:31px;}
 
 /* table DataTable형 */
 .table4 th{
@@ -212,6 +217,18 @@ table.listTable tbody td{border:1px solid #dedede; height:25px; padding:7px 0 5p
 .tab01 li a{height:29px; line-height:29px;text-decoration:none; color:#707070; display:block; padding:0 15px;border-radius:2px 2px 0 0; -moz-border-radius:2px; -webkit-border-radius:2px; -ms-border-radius:2px;background-color:#e0e0e0;}
 .tab01 li:first-child{margin-left:0;}
 .tab01 li.active a{background:#22b8c7;color:#fff;}
+
+ul.btnTab{overflow:hidden;margin-bottom:8px;}
+ul.btnTab li{float:left;margin-left;}
+ul.btnTab li a{display:block;height:27px;line-height:27px;text-decoration:none;color:#8e8e8e;background:#f2f2f2;border:1px solid #cacaca;width:100px;text-align:center;border-left:0;}
+ul.btnTab li:first-child a{border-left:1px solid #cacaca;border-right:0;}
+ul.btnTab li.active a{
+	background-color: #f3f4f5;
+	background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPgo8bGluZWFyR3JhZGllbnQgaWQ9Imc0MjgiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjAlIiB5Mj0iMTAwJSI+CjxzdG9wIHN0b3AtY29sb3I9IiNGQUZBRkEiIG9mZnNldD0iMCIvPjxzdG9wIHN0b3AtY29sb3I9IiNGMkYyRjIiIG9mZnNldD0iMSIvPgo8L2xpbmVhckdyYWRpZW50Pgo8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2c0MjgpIiAvPgo8L3N2Zz4=);
+	color:#666;
+	border:1px solid #a8a8a8;
+
+}
 
 /* tab02 */
 #conteiner #contents .tab02{overflow:hidden;border:1px solid #dedede;height:205px;position:relative;}
