@@ -12,6 +12,7 @@
 <script src="/thirdParty/jquery/jquery-1.10.2.min.js"></script>
 <script src="/thirdParty/jquery/jquery-ui-1.10.3.min.js"></script>
 <script src="/thirdParty/tab.js"></script>
+<script src="/js/curexui.js"></script>
 </head>
 <body>
 
@@ -555,907 +556,899 @@
 			<div class="smartWrap ci-tab">
 				
 				<ul class="smartTab tab-selector">
-					<li><a href="#none"><span>스마트픽</span></a></li>
-					<li class="active"><a href="#none"><span>스마트검색</span></a></li>
+					<li class="active"><a href="#none"><span>스마트픽</span></a></li>
+					<li><a href="#none"><span>스마트검색</span></a></li>
 				</ul>
 				<ul class="tab-panel">
 					<li>
-						<h3 class="hide-element">스마트픽</h3>
-						<div class="smartPicWrap">
-							<div class="spVisual">
-								<div class="graph">
-									<div class="graphCont">
-										<img src="../../img/sub/img_graph.gif" alt="" />
-										<span class="salStd">50</span>
+						<div class="add">
+							<h3 class="hide-element">스마트픽</h3>
+							<div class="smartPicWrap">
+								<div class="spVisual">
+									<div class="graph">
+										<div class="graphCont">
+											<img src="../../img/sub/img_graph.gif" alt="" />
+											<span class="salStd">50</span>
+										</div>
+										<span class="myFavor">내그룹</span>
 									</div>
-									<span class="myFavor">내그룹</span>
-								</div>
-								<div class="spbnrZone">
-									<span class="bntCtrl">
-										<button type="button" class="on"><span>1번배너</span></button>
-										<button type="button"><span>2번배너</span></button>
-										<button type="button"><span>3번배너</span></button>
-									</span>
-									<div class="bnrList">
-										<img src="../../img/sub/img_bnrList01.gif" alt="18세이하자녀" />
-										<img src="../../img/sub/img_bnrList01.gif" alt="18세이하자녀" />
-										<img src="../../img/sub/img_bnrList01.gif" alt="18세이하자녀" />
+									<div class="spbnrZone">
+										<span class="bntCtrl">
+											<button type="button" class="on"><span>1번배너</span></button>
+											<button type="button"><span>2번배너</span></button>
+											<button type="button"><span>3번배너</span></button>
+										</span>
+										<div class="bnrList">
+											<img src="../../img/sub/img_bnrList01.gif" alt="18세이하자녀" />
+											<img src="../../img/sub/img_bnrList02.gif" alt="18세이하자녀" />
+											<img src="../../img/sub/img_bnrList03.gif" alt="18세이하자녀" />
+										</div>
+										<span class="slideMask"></span>
 									</div>
 								</div>
-							</div>
-							<div class="spBox">
-								<span class="badge"><img src="../../img/sub/ico_tagGnl.gif" alt="General" /></span>
-								<p class="spCmt">명칭이 두 줄 까지 입력 되도록 합니다.</p>
-								<a class="bePoint" href="#none">산출기준 <strong>11</strong></a>
-								<!-- 산출기준 클릭시 호출되는 공통 레이어-->
-								<div class="compLayer" style="display:block">
-									<dl class="compCont">
-										<dt>산출기준</dt>
-										<dd>
-											Pll Propensity to purchase Model에 의해 산출된 고객 <br />
-											상세한 검색조건 등 해당 그룹에 대하 관리자에서 설명 입력한 내용이 출력되는 영역입니다.
-											산출기준 길이에 따라 세로높이 달라집니다.
-										</dd>
-									</dl>
-									<a href="#" class="spClose"><img src="../../img/sub/btn_spLayerClose.gif" alt="닫기" /></a>
+								<div class="spBox">
+									<span class="badge"><img src="../../img/sub/ico_tagGnl.gif" alt="General" /></span>
+									<p class="spCmt">명칭이 두 줄 까지 입력 되도록 합니다.</p>
+									<a class="bePoint" href="#none">산출기준 <strong>11</strong></a>
+									<!-- 산출기준 클릭시 호출되는 공통 레이어-->
+									<div class="compLayer" style="display:block">
+										<dl class="compCont">
+											<dt>산출기준</dt>
+											<dd>
+												Pll Propensity to purchase Model에 의해 산출된 고객 <br />
+												상세한 검색조건 등 해당 그룹에 대하 관리자에서 설명 입력한 내용이 출력되는 영역입니다.
+												산출기준 길이에 따라 세로높이 달라집니다.
+											</dd>
+										</dl>
+										<a href="#" class="spClose"><img src="../../img/sub/btn_spLayerClose.gif" alt="닫기" /></a>
+									</div>
+									<!--  -->
 								</div>
-								<!--  -->
-							</div>
-							<div class="spBox">
-								<span class="badge"><img  src="../../img/sub/ico_tagForc.gif" alt="In-force" /></span>
-								<p class="spCmt">명칭이 두 줄 까지 입력 되도록 합니다.</p>
-								<a class="bePoint">산출기준<strong>111</strong></a>
-								<!-- 산출기준 클릭시 호출되는 공통 레이어-->
-								<div class="compLayer" style="display:none">
-									<dl class="compCont">
-										<dt>산출기준</dt>
-										<dd>
-											Pll Propensity to purchase Model에 의해 산출된 고객 <br />
-											상세한 검색조건 등 해당 그룹에 대하 관리자에서 설명 입력한 내용이 출력되는 영역입니다.
-											산출기준 길이에 따라 세로높이 달라집니다.
-										</dd>
-									</dl>
-									<a href="#" class="spClose"><img src="../../img/sub/btn_spLayerClose.gif" alt="닫기" /></a>
+								<div class="spBox">
+									<span class="badge"><img  src="../../img/sub/ico_tagForc.gif" alt="In-force" /></span>
+									<p class="spCmt">명칭이 두 줄 까지 입력 되도록 합니다.</p>
+									<a class="bePoint">산출기준<strong>111</strong></a>
+									<!-- 산출기준 클릭시 호출되는 공통 레이어-->
+									<div class="compLayer" style="display:none">
+										<dl class="compCont">
+											<dt>산출기준</dt>
+											<dd>
+												Pll Propensity to purchase Model에 의해 산출된 고객 <br />
+												상세한 검색조건 등 해당 그룹에 대하 관리자에서 설명 입력한 내용이 출력되는 영역입니다.
+												산출기준 길이에 따라 세로높이 달라집니다.
+											</dd>
+										</dl>
+										<a href="#" class="spClose"><img src="../../img/sub/btn_spLayerClose.gif" alt="닫기" /></a>
+									</div>
+									<!--  -->
 								</div>
-								<!--  -->
-							</div>
-							<div class="spBox ">
-								<span class="badge"><img src="../../img/sub/ico_tagTit.gif" alt="title" /></span>
-								<p class="spCmt">명칭이 두 줄 까지 입력 되도록 합니다.</p>
-								<a class="bePoint" href="#none">산출기준<strong>121</strong></a>
-								<!-- 산출기준 클릭시 호출되는 공통 레이어-->
-								<div class="compLayer" style="display:none">
-									<dl class="compCont">
-										<dt>산출기준</dt>
-										<dd>
-											Pll Propensity to purchase Model에 의해 산출된 고객 <br />
-											상세한 검색조건 등 해당 그룹에 대하 관리자에서 설명 입력한 내용이 출력되는 영역입니다.
-											산출기준 길이에 따라 세로높이 달라집니다.
-										</dd>
-									</dl>
-									<a href="#" class="spClose"><img src="../../img/sub/btn_spLayerClose.gif" alt="닫기" /></a>
+								<div class="spBox ">
+									<span class="badge"><img src="../../img/sub/ico_tagTit.gif" alt="title" /></span>
+									<p class="spCmt">명칭이 두 줄 까지 입력 되도록 합니다.</p>
+									<a class="bePoint" href="#none">산출기준<strong>121</strong></a>
+									<!-- 산출기준 클릭시 호출되는 공통 레이어-->
+									<div class="compLayer" style="display:none">
+										<dl class="compCont">
+											<dt>산출기준</dt>
+											<dd>
+												Pll Propensity to purchase Model에 의해 산출된 고객 <br />
+												상세한 검색조건 등 해당 그룹에 대하 관리자에서 설명 입력한 내용이 출력되는 영역입니다.
+												산출기준 길이에 따라 세로높이 달라집니다.
+											</dd>
+										</dl>
+										<a href="#" class="spClose"><img src="../../img/sub/btn_spLayerClose.gif" alt="닫기" /></a>
+									</div>
+									<!--  -->
 								</div>
-								<!--  -->
-							</div>
-							<div class="spBox">
-								<span class="badge"><img src="../../img/sub/ico_tagPdt.gif" alt="product" /></span>
-								<p class="spCmt">명칭이 두 줄 까지 입력 되도록 합니다.</p>
-								<a class="bePoint" href="#none">산출기준<strong>121</strong></a>
-								<!-- 산출기준 클릭시 호출되는 공통 레이어-->
-								<div class="compLayer" style="display:none">
-									<dl class="compCont">
-										<dt>산출기준</dt>
-										<dd>
-											Pll Propensity to purchase Model에 의해 산출된 고객 <br />
-											상세한 검색조건 등 해당 그룹에 대하 관리자에서 설명 입력한 내용이 출력되는 영역입니다.
-											산출기준 길이에 따라 세로높이 달라집니다.
-										</dd>
-									</dl>
-									<a href="#" class="spClose"><img src="../../img/sub/btn_spLayerClose.gif" alt="닫기" /></a>
+								<div class="spBox">
+									<span class="badge"><img src="../../img/sub/ico_tagPdt.gif" alt="product" /></span>
+									<p class="spCmt">명칭이 두 줄 까지 입력 되도록 합니다.</p>
+									<a class="bePoint" href="#none">산출기준<strong>121</strong></a>
+									<!-- 산출기준 클릭시 호출되는 공통 레이어-->
+									<div class="compLayer" style="display:none">
+										<dl class="compCont">
+											<dt>산출기준</dt>
+											<dd>
+												Pll Propensity to purchase Model에 의해 산출된 고객 <br />
+												상세한 검색조건 등 해당 그룹에 대하 관리자에서 설명 입력한 내용이 출력되는 영역입니다.
+												산출기준 길이에 따라 세로높이 달라집니다.
+											</dd>
+										</dl>
+										<a href="#" class="spClose"><img src="../../img/sub/btn_spLayerClose.gif" alt="닫기" /></a>
+									</div>
+									<!--  -->
 								</div>
-								<!--  -->
-							</div>
-							<div class="spBox clearB">
-								<span class="badge"><img src="../../img/sub/ico_tagPdt.gif" alt="product" /></span>
-								<p class="spCmt">명칭이 두 줄 까지 입력 되도록 합니다.</p>
-								<a class="bePoint" href="#none">산출기준<strong>121</strong></a>
-								<!-- 산출기준 클릭시 호출되는 공통 레이어-->
-								<div class="compLayer" style="display:none">
-									<dl class="compCont">
-										<dt>산출기준</dt>
-										<dd>
-											Pll Propensity to purchase Model에 의해 산출된 고객 <br />
-											상세한 검색조건 등 해당 그룹에 대하 관리자에서 설명 입력한 내용이 출력되는 영역입니다.
-											산출기준 길이에 따라 세로높이 달라집니다.
-										</dd>
-									</dl>
-									<a href="#" class="spClose"><img src="../../img/sub/btn_spLayerClose.gif" alt="닫기" /></a>
+								<div class="spBox clearB">
+									<span class="badge"><img src="../../img/sub/ico_tagPdt.gif" alt="product" /></span>
+									<p class="spCmt">명칭이 두 줄 까지 입력 되도록 합니다.</p>
+									<a class="bePoint" href="#none">산출기준<strong>121</strong></a>
+									<!-- 산출기준 클릭시 호출되는 공통 레이어-->
+									<div class="compLayer" style="display:none">
+										<dl class="compCont">
+											<dt>산출기준</dt>
+											<dd>
+												Pll Propensity to purchase Model에 의해 산출된 고객 <br />
+												상세한 검색조건 등 해당 그룹에 대하 관리자에서 설명 입력한 내용이 출력되는 영역입니다.
+												산출기준 길이에 따라 세로높이 달라집니다.
+											</dd>
+										</dl>
+										<a href="#" class="spClose"><img src="../../img/sub/btn_spLayerClose.gif" alt="닫기" /></a>
+									</div>
+									<!--  -->
 								</div>
-								<!--  -->
-							</div>
-							<div class="spBox">
-								<span class="badge"><img src="../../img/sub/ico_tagPdt.gif" alt="product" /></span>
-								<p class="spCmt">명칭이 두 줄 까지 입력 되도록 합니다.</p>
-								<a class="bePoint" href="#none">산출기준<strong>121</strong></a>
-								<!-- 산출기준 클릭시 호출되는 공통 레이어-->
-								<div class="compLayer" style="display:none">
-									<dl class="compCont">
-										<dt>산출기준</dt>
-										<dd>
-											Pll Propensity to purchase Model에 의해 산출된 고객 <br />
-											상세한 검색조건 등 해당 그룹에 대하 관리자에서 설명 입력한 내용이 출력되는 영역입니다.
-											산출기준 길이에 따라 세로높이 달라집니다.
-										</dd>
-									</dl>
-									<a href="#" class="spClose"><img src="../../img/sub/btn_spLayerClose.gif" alt="닫기" /></a>
+								<div class="spBox">
+									<span class="badge"><img src="../../img/sub/ico_tagPdt.gif" alt="product" /></span>
+									<p class="spCmt">명칭이 두 줄 까지 입력 되도록 합니다.</p>
+									<a class="bePoint" href="#none">산출기준<strong>121</strong></a>
+									<!-- 산출기준 클릭시 호출되는 공통 레이어-->
+									<div class="compLayer" style="display:none">
+										<dl class="compCont">
+											<dt>산출기준</dt>
+											<dd>
+												Pll Propensity to purchase Model에 의해 산출된 고객 <br />
+												상세한 검색조건 등 해당 그룹에 대하 관리자에서 설명 입력한 내용이 출력되는 영역입니다.
+												산출기준 길이에 따라 세로높이 달라집니다.
+											</dd>
+										</dl>
+										<a href="#" class="spClose"><img src="../../img/sub/btn_spLayerClose.gif" alt="닫기" /></a>
+									</div>
+									<!--  -->
 								</div>
-								<!--  -->
-							</div>
-							<div class="spBox">
-								<span class="badge"><img src="../../img/sub/ico_tagPdt.gif" alt="product" /></span>
-								<p class="spCmt">명칭이 두 줄 까지 입력 되도록 합니다.</p>
-								<a class="bePoint" href="#none">산출기준<strong>121</strong></a>
-								<!-- 산출기준 클릭시 호출되는 공통 레이어-->
-								<div class="compLayer" style="display:none">
-									<dl class="compCont">
-										<dt>산출기준</dt>
-										<dd>
-											Pll Propensity to purchase Model에 의해 산출된 고객 <br />
-											상세한 검색조건 등 해당 그룹에 대하 관리자에서 설명 입력한 내용이 출력되는 영역입니다.
-											산출기준 길이에 따라 세로높이 달라집니다.
-										</dd>
-									</dl>
-									<a href="#" class="spClose"><img src="../../img/sub/btn_spLayerClose.gif" alt="닫기" /></a>
+								<div class="spBox">
+									<span class="badge"><img src="../../img/sub/ico_tagPdt.gif" alt="product" /></span>
+									<p class="spCmt">명칭이 두 줄 까지 입력 되도록 합니다.</p>
+									<a class="bePoint" href="#none">산출기준<strong>121</strong></a>
+									<!-- 산출기준 클릭시 호출되는 공통 레이어-->
+									<div class="compLayer" style="display:none">
+										<dl class="compCont">
+											<dt>산출기준</dt>
+											<dd>
+												Pll Propensity to purchase Model에 의해 산출된 고객 <br />
+												상세한 검색조건 등 해당 그룹에 대하 관리자에서 설명 입력한 내용이 출력되는 영역입니다.
+												산출기준 길이에 따라 세로높이 달라집니다.
+											</dd>
+										</dl>
+										<a href="#" class="spClose"><img src="../../img/sub/btn_spLayerClose.gif" alt="닫기" /></a>
+									</div>
+									<!--  -->
 								</div>
-								<!--  -->
-							</div>
-							<div class="spBox">
-								<span class="badge"><img src="../../img/sub/ico_tagPdt.gif" alt="product" /></span>
-								<p class="spCmt">명칭이 두 줄 까지 입력 되도록 합니다.</p>
-								<a class="bePoint" href="#none">산출기준<strong>121</strong></a>
-								<!-- 산출기준 클릭시 호출되는 공통 레이어-->
-								<div class="compLayer" style="display:none">
-									<dl class="compCont">
-										<dt>산출기준</dt>
-										<dd>
-											Pll Propensity to purchase Model에 의해 산출된 고객 <br />
-											상세한 검색조건 등 해당 그룹에 대하 관리자에서 설명 입력한 내용이 출력되는 영역입니다.
-											산출기준 길이에 따라 세로높이 달라집니다.
-										</dd>
-									</dl>
-									<a href="#" class="spClose"><img src="../../img/sub/btn_spLayerClose.gif" alt="닫기" /></a>
+								<div class="spBox">
+									<span class="badge"><img src="../../img/sub/ico_tagPdt.gif" alt="product" /></span>
+									<p class="spCmt">명칭이 두 줄 까지 입력 되도록 합니다.</p>
+									<a class="bePoint" href="#none">산출기준<strong>121</strong></a>
+									<!-- 산출기준 클릭시 호출되는 공통 레이어-->
+									<div class="compLayer" style="display:none">
+										<dl class="compCont">
+											<dt>산출기준</dt>
+											<dd>
+												Pll Propensity to purchase Model에 의해 산출된 고객 <br />
+												상세한 검색조건 등 해당 그룹에 대하 관리자에서 설명 입력한 내용이 출력되는 영역입니다.
+												산출기준 길이에 따라 세로높이 달라집니다.
+											</dd>
+										</dl>
+										<a href="#" class="spClose"><img src="../../img/sub/btn_spLayerClose.gif" alt="닫기" /></a>
+									</div>
+									<!--  -->
 								</div>
-								<!--  -->
-							</div>
-							<div class="spBox">
-								<span class="badge"><img src="../../img/sub/ico_tagPdt.gif" alt="product" /></span>
-								<p class="spCmt">명칭이 두 줄 까지 입력 되도록 합니다.</p>
-								<a class="bePoint" href="#none">산출기준<strong>121</strong></a>
-								<!-- 산출기준 클릭시 호출되는 공통 레이어-->
-								<div class="compLayer" style="display:none">
-									<dl class="compCont">
-										<dt>산출기준</dt>
-										<dd>
-											Pll Propensity to purchase Model에 의해 산출된 고객 <br />
-											상세한 검색조건 등 해당 그룹에 대하 관리자에서 설명 입력한 내용이 출력되는 영역입니다.
-											산출기준 길이에 따라 세로높이 달라집니다.
-										</dd>
-									</dl>
-									<a href="#" class="spClose"><img src="../../img/sub/btn_spLayerClose.gif" alt="닫기" /></a>
+								<div class="spBox">
+									<span class="badge"><img src="../../img/sub/ico_tagPdt.gif" alt="product" /></span>
+									<p class="spCmt">명칭이 두 줄 까지 입력 되도록 합니다.</p>
+									<a class="bePoint" href="#none">산출기준<strong>121</strong></a>
+									<!-- 산출기준 클릭시 호출되는 공통 레이어-->
+									<div class="compLayer" style="display:none">
+										<dl class="compCont">
+											<dt>산출기준</dt>
+											<dd>
+												Pll Propensity to purchase Model에 의해 산출된 고객 <br />
+												상세한 검색조건 등 해당 그룹에 대하 관리자에서 설명 입력한 내용이 출력되는 영역입니다.
+												산출기준 길이에 따라 세로높이 달라집니다.
+											</dd>
+										</dl>
+										<a href="#" class="spClose"><img src="../../img/sub/btn_spLayerClose.gif" alt="닫기" /></a>
+									</div>
+									<!--  -->
 								</div>
-								<!--  -->
-							</div>
-							<div class="spBox">
-								<span class="badge"><img src="../../img/sub/ico_tagPdt.gif" alt="product" /></span>
-								<p class="spCmt">명칭이 두 줄 까지 입력 되도록 합니다.</p>
-								<a class="bePoint" href="#none">산출기준<strong>121</strong></a>
-								<!-- 산출기준 클릭시 호출되는 공통 레이어-->
-								<div class="compLayer" style="display:none">
-									<dl class="compCont">
-										<dt>산출기준</dt>
-										<dd>
-											Pll Propensity to purchase Model에 의해 산출된 고객 <br />
-											상세한 검색조건 등 해당 그룹에 대하 관리자에서 설명 입력한 내용이 출력되는 영역입니다.
-											산출기준 길이에 따라 세로높이 달라집니다.
-										</dd>
-									</dl>
-									<a href="#" class="spClose"><img src="../../img/sub/btn_spLayerClose.gif" alt="닫기" /></a>
+								<div class="spBox">
+									<span class="badge"><img src="../../img/sub/ico_tagPdt.gif" alt="product" /></span>
+									<p class="spCmt">명칭이 두 줄 까지 입력 되도록 합니다.</p>
+									<a class="bePoint" href="#none">산출기준<strong>121</strong></a>
+									<!-- 산출기준 클릭시 호출되는 공통 레이어-->
+									<div class="compLayer" style="display:none">
+										<dl class="compCont">
+											<dt>산출기준</dt>
+											<dd>
+												Pll Propensity to purchase Model에 의해 산출된 고객 <br />
+												상세한 검색조건 등 해당 그룹에 대하 관리자에서 설명 입력한 내용이 출력되는 영역입니다.
+												산출기준 길이에 따라 세로높이 달라집니다.
+											</dd>
+										</dl>
+										<a href="#" class="spClose"><img src="../../img/sub/btn_spLayerClose.gif" alt="닫기" /></a>
+									</div>
+									<!--  -->
 								</div>
-								<!--  -->
-							</div>
-							<div class="spBox">
-								<span class="badge"><img src="../../img/sub/ico_tagPdt.gif" alt="product" /></span>
-								<p class="spCmt">명칭이 두 줄 까지 입력 되도록 합니다.</p>
-								<a class="bePoint" href="#none">산출기준<strong>121</strong></a>
-								<!-- 산출기준 클릭시 호출되는 공통 레이어-->
-								<div class="compLayer" style="display:none">
-									<dl class="compCont">
-										<dt>산출기준</dt>
-										<dd>
-											Pll Propensity to purchase Model에 의해 산출된 고객 <br />
-											상세한 검색조건 등 해당 그룹에 대하 관리자에서 설명 입력한 내용이 출력되는 영역입니다.
-											산출기준 길이에 따라 세로높이 달라집니다.
-										</dd>
-									</dl>
-									<a href="#" class="spClose"><img src="../../img/sub/btn_spLayerClose.gif" alt="닫기" /></a>
+								<div class="spBox">
+									<span class="badge"><img src="../../img/sub/ico_tagPdt.gif" alt="product" /></span>
+									<p class="spCmt">명칭이 두 줄 까지 입력 되도록 합니다.</p>
+									<a class="bePoint" href="#none">산출기준<strong>121</strong></a>
+									<!-- 산출기준 클릭시 호출되는 공통 레이어-->
+									<div class="compLayer" style="display:none">
+										<dl class="compCont">
+											<dt>산출기준</dt>
+											<dd>
+												Pll Propensity to purchase Model에 의해 산출된 고객 <br />
+												상세한 검색조건 등 해당 그룹에 대하 관리자에서 설명 입력한 내용이 출력되는 영역입니다.
+												산출기준 길이에 따라 세로높이 달라집니다.
+											</dd>
+										</dl>
+										<a href="#" class="spClose"><img src="../../img/sub/btn_spLayerClose.gif" alt="닫기" /></a>
+									</div>
+									<!--  -->
 								</div>
-								<!--  -->
-							</div>
-							<div class="spBox">
-								<span class="badge"><img src="../../img/sub/ico_tagPdt.gif" alt="product" /></span>
-								<p class="spCmt">명칭이 두 줄 까지 입력 되도록 합니다.</p>
-								<a class="bePoint" href="#none">산출기준<strong>121</strong></a>
-								<!-- 산출기준 클릭시 호출되는 공통 레이어-->
-								<div class="compLayer" style="display:none">
-									<dl class="compCont">
-										<dt>산출기준</dt>
-										<dd>
-											Pll Propensity to purchase Model에 의해 산출된 고객 <br />
-											상세한 검색조건 등 해당 그룹에 대하 관리자에서 설명 입력한 내용이 출력되는 영역입니다.
-											산출기준 길이에 따라 세로높이 달라집니다.
-										</dd>
-									</dl>
-									<a href="#" class="spClose"><img src="../../img/sub/btn_spLayerClose.gif" alt="닫기" /></a>
+								<div class="spBox">
+									<span class="badge"><img src="../../img/sub/ico_tagPdt.gif" alt="product" /></span>
+									<p class="spCmt">명칭이 두 줄 까지 입력 되도록 합니다.</p>
+									<a class="bePoint" href="#none">산출기준<strong>121</strong></a>
+									<!-- 산출기준 클릭시 호출되는 공통 레이어-->
+									<div class="compLayer" style="display:none">
+										<dl class="compCont">
+											<dt>산출기준</dt>
+											<dd>
+												Pll Propensity to purchase Model에 의해 산출된 고객 <br />
+												상세한 검색조건 등 해당 그룹에 대하 관리자에서 설명 입력한 내용이 출력되는 영역입니다.
+												산출기준 길이에 따라 세로높이 달라집니다.
+											</dd>
+										</dl>
+										<a href="#" class="spClose"><img src="../../img/sub/btn_spLayerClose.gif" alt="닫기" /></a>
+									</div>
+									<!--  -->
 								</div>
-								<!--  -->
-							</div>
-							<div class="spBox">
-								<span class="badge"><img src="../../img/sub/ico_tagPdt.gif" alt="product" /></span>
-								<p class="spCmt">명칭이 두 줄 까지 입력 되도록 합니다.</p>
-								<a class="bePoint" href="#none">산출기준<strong>121</strong></a>
-								<!-- 산출기준 클릭시 호출되는 공통 레이어-->
-								<div class="compLayer" style="display:none">
-									<dl class="compCont">
-										<dt>산출기준</dt>
-										<dd>
-											Pll Propensity to purchase Model에 의해 산출된 고객 <br />
-											상세한 검색조건 등 해당 그룹에 대하 관리자에서 설명 입력한 내용이 출력되는 영역입니다.
-											산출기준 길이에 따라 세로높이 달라집니다.
-										</dd>
-									</dl>
-									<a href="#" class="spClose"><img src="../../img/sub/btn_spLayerClose.gif" alt="닫기" /></a>
+								<div class="spBox">
+									<span class="badge"><img src="../../img/sub/ico_tagPdt.gif" alt="product" /></span>
+									<p class="spCmt">명칭이 두 줄 까지 입력 되도록 합니다.</p>
+									<a class="bePoint" href="#none">산출기준<strong>121</strong></a>
+									<!-- 산출기준 클릭시 호출되는 공통 레이어-->
+									<div class="compLayer" style="display:none">
+										<dl class="compCont">
+											<dt>산출기준</dt>
+											<dd>
+												Pll Propensity to purchase Model에 의해 산출된 고객 <br />
+												상세한 검색조건 등 해당 그룹에 대하 관리자에서 설명 입력한 내용이 출력되는 영역입니다.
+												산출기준 길이에 따라 세로높이 달라집니다.
+											</dd>
+										</dl>
+										<a href="#" class="spClose"><img src="../../img/sub/btn_spLayerClose.gif" alt="닫기" /></a>
+									</div>
+									<!--  -->
 								</div>
-								<!--  -->
 							</div>
+							<!-- 검색결과 -->
+							<span class="ResultSum">총 100건</span>
+							<table summary="고객구분별 스마트검색 결과 입니다." class="listTable" width="100%">
+								<caption>스마트검색결과리스트</caption>
+								<colgroup>
+									<col width="3%" />
+									<col width="6%" />
+									<col width="10%" />
+									<col width="15%" />
+									<col width="15%" />
+									<col width="*" />
+									<col width="11%" />
+									<col width="8%" />
+								</colgroup>
+								<thead>
+								<tr>
+									<th scope="col">선택</th>
+									<th scope="col">구분</th>
+									<th scope="col">이름</th>
+									<th scope="col">주민번호</th>
+									<th scope="col">휴대전화</th>
+									<th scope="col">주소</th>
+									<th scope="col">해당상 가입여부</th>
+									<th scope="col">정보제공동의</th>
+								</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td><input type="checkbox" title="현재행선택" /></td>
+										<td>본인</td>
+										<td>이상화</td>
+										<td class="tal">840502-1******</td>
+										<td>010-1234-56789</td>
+										<td class="tal">서울시 강남구..</td>
+										<td>YES</td>
+										<td>본인</td>
+									</tr>
+									<tr>
+										<td><input type="checkbox" title="현재행선택" /></td>
+										<td>본인</td>
+										<td>이상화</td>
+										<td class="tal">840502-1******</td>
+										
+										<td>010-1234-56789</td>
+										<td class="tal">서울시 강남구..</td>
+										<td>YES</td>
+										<td>감사</td>
+									</tr>
+									<tr>
+										<td><input type="checkbox" title="현재행선택" /></td>
+										<td>본인</td>
+										<td>이상화</td>
+										<td class="tal">840502-1******</td>
+										
+										<td>010-1234-56789</td>
+										<td class="tal"><span class="phone"></span> 서울시 강남구..</td>
+										<td>YES</td>
+										<td>감사</td>
+									</tr>
+									<tr>
+										<td><input type="checkbox" title="현재행선택" /></td>
+										<td>본인</td>
+										<td>이상화</td>
+										<td class="tal">840502-1******</td>
+										
+										<td>010-1234-56789</td>
+										<td class="tal">서울시 강남구..</td>
+										<td>YES</td>
+										<td>감사</td>
+									</tr>
+									<tr>
+										<td><input type="checkbox" title="현재행선택" /></td>
+										<td>본인</td>
+										<td>이상화</td>
+										<td class="tal">840502-1******</td>
+										
+										<td>010-1234-56789</td>
+										<td class="tal">서울시 강남구..</td>
+										<td>YES</td>
+										<td>감사</td>
+									</tr>
+									<tr>
+										<td><input type="checkbox" title="현재행선택" /></td>
+										<td>본인</td>
+										<td>이상화</td>
+										<td class="tal">840502-1******</td>
+										
+										<td>010-1234-56789</td>
+										<td class="tal">서울시 강남구..</td>
+										<td>YES</td>
+										<td>감사</td>
+									</tr>
+									<tr>
+										<td><input type="checkbox" title="현재행선택" /></td>
+										<td>본인</td>
+										<td>이상화</td>
+										<td class="tal">840502-1******</td>
+										
+										<td>010-1234-56789</td>
+										<td class="tal">서울시 강남구..</td>
+										<td>YES</td>
+										<td>감사</td>
+									</tr>
+									<tr>
+										<td><input type="checkbox" title="현재행선택" /></td>
+										<td>본인</td>
+										<td>이상화</td>
+										<td class="tal">840502-1******</td>
+										
+										<td>010-1234-56789</td>
+										<td class="tal">서울시 강남구..</td>
+										<td>YES</td>
+										<td>감사</td>
+									</tr>
+									<tr>
+										<td><input type="checkbox" title="현재행선택" /></td>
+										<td>본인</td>
+										<td>이상화</td>
+										<td class="tal">840502-1******</td>
+										
+										<td>010-1234-56789</td>
+										<td class="tal">서울시 강남구..</td>
+										<td>YES</td>
+										<td>감사</td>
+									</tr>
+									<tr>
+										<td><input type="checkbox" title="현재행선택" /></td>
+										<td>본인</td>
+										<td>이상화</td>
+										<td class="tal">840502-1******</td>
+										
+										<td>010-1234-56789</td>
+										<td class="tal">서울시 강남구..</td>
+										<td>YES</td>
+										<td>감사</td>
+									</tr>
+									<tr>
+										<td><input type="checkbox" title="현재행선택" /></td>
+										<td>본인</td>
+										<td>이상화</td>
+										<td class="tal">840502-1******</td>
+										
+										<td>010-1234-56789</td>
+										<td class="tal">서울시 강남구..</td>
+										<td>YES</td>
+										<td>감사</td>
+									</tr>
+									<tr>
+										<td><input type="checkbox" title="현재행선택" /></td>
+										<td>본인</td>
+										<td>이상화</td>
+										<td class="tal">840502-1******</td>
+										
+										<td>010-1234-56789</td>
+										<td class="tal">서울시 강남구..</td>
+										<td>YES</td>
+										<td>감사</td>
+									</tr>
+									<tr>
+										<td><input type="checkbox" title="현재행선택" /></td>
+										<td>본인</td>
+										<td>이상화</td>
+										<td class="tal">840502-1******</td>
+										
+										<td>010-1234-56789</td>
+										<td class="tal">서울시 강남구..</td>
+										<td>YES</td>
+										<td>감사</td>
+									</tr>
+									<tr>
+										<td><input type="checkbox" title="현재행선택" /></td>
+										<td>본인</td>
+										<td>이상화</td>
+										<td class="tal">840502-1******</td>
+										
+										<td>010-1234-56789</td>
+										<td class="tal">서울시 강남구..</td>
+										<td>YES</td>
+										<td>감사</td>
+									</tr>
+									<tr>
+										<td><input type="checkbox" title="현재행선택" /></td>
+										<td>본인</td>
+										<td>이상화</td>
+										<td class="tal">840502-1******</td>
+										
+										<td>010-1234-56789</td>
+										<td class="tal">서울시 강남구..</td>
+										<td>YES</td>
+										<td>감사</td>
+									</tr>
+								</tbody>
+							</table>
 						</div>
-						<!-- 검색결과 -->
-						<span class="ResultSum">총 100건</span>
-						<table summary="고객구분별 스마트검색 결과 입니다." class="listTable" width="100%">
-							<caption>스마트검색결과리스트</caption>
-							<colgroup>
-								<col width="3%" />
-								<col width="6%" />
-								<col width="10%" />
-								<col width="15%" />
-								<col width="15%" />
-								<col width="*" />
-								<col width="11%" />
-								<col width="8%" />
-							</colgroup>
-							<thead>
-							<tr>
-								<th scope="col">선택</th>
-								<th scope="col">구분</th>
-								<th scope="col">이름</th>
-								<th scope="col">주민번호</th>
-								<th scope="col">휴대전화</th>
-								<th scope="col">주소</th>
-								<th scope="col">해당상 가입여부</th>
-								<th scope="col">정보제공동의</th>
-							</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td><input type="checkbox" title="현재행선택" /></td>
-									<td>본인</td>
-									<td>이상화</td>
-									<td class="tal">840502-1******</td>
-									<td>010-1234-56789</td>
-									<td class="tal">서울시 강남구..</td>
-									<td>YES</td>
-									<td>본인</td>
-								</tr>
-								<tr>
-									<td><input type="checkbox" title="현재행선택" /></td>
-									<td>본인</td>
-									<td>이상화</td>
-									<td class="tal">840502-1******</td>
-									
-									<td>010-1234-56789</td>
-									<td class="tal">서울시 강남구..</td>
-									<td>YES</td>
-									<td>감사</td>
-								</tr>
-								<tr>
-									<td><input type="checkbox" title="현재행선택" /></td>
-									<td>본인</td>
-									<td>이상화</td>
-									<td class="tal">840502-1******</td>
-									
-									<td>010-1234-56789</td>
-									<td class="tal"><span class="phone"></span> 서울시 강남구..</td>
-									<td>YES</td>
-									<td>감사</td>
-								</tr>
-								<tr>
-									<td><input type="checkbox" title="현재행선택" /></td>
-									<td>본인</td>
-									<td>이상화</td>
-									<td class="tal">840502-1******</td>
-									
-									<td>010-1234-56789</td>
-									<td class="tal">서울시 강남구..</td>
-									<td>YES</td>
-									<td>감사</td>
-								</tr>
-								<tr>
-									<td><input type="checkbox" title="현재행선택" /></td>
-									<td>본인</td>
-									<td>이상화</td>
-									<td class="tal">840502-1******</td>
-									
-									<td>010-1234-56789</td>
-									<td class="tal">서울시 강남구..</td>
-									<td>YES</td>
-									<td>감사</td>
-								</tr>
-								<tr>
-									<td><input type="checkbox" title="현재행선택" /></td>
-									<td>본인</td>
-									<td>이상화</td>
-									<td class="tal">840502-1******</td>
-									
-									<td>010-1234-56789</td>
-									<td class="tal">서울시 강남구..</td>
-									<td>YES</td>
-									<td>감사</td>
-								</tr>
-								<tr>
-									<td><input type="checkbox" title="현재행선택" /></td>
-									<td>본인</td>
-									<td>이상화</td>
-									<td class="tal">840502-1******</td>
-									
-									<td>010-1234-56789</td>
-									<td class="tal">서울시 강남구..</td>
-									<td>YES</td>
-									<td>감사</td>
-								</tr>
-								<tr>
-									<td><input type="checkbox" title="현재행선택" /></td>
-									<td>본인</td>
-									<td>이상화</td>
-									<td class="tal">840502-1******</td>
-									
-									<td>010-1234-56789</td>
-									<td class="tal">서울시 강남구..</td>
-									<td>YES</td>
-									<td>감사</td>
-								</tr>
-								<tr>
-									<td><input type="checkbox" title="현재행선택" /></td>
-									<td>본인</td>
-									<td>이상화</td>
-									<td class="tal">840502-1******</td>
-									
-									<td>010-1234-56789</td>
-									<td class="tal">서울시 강남구..</td>
-									<td>YES</td>
-									<td>감사</td>
-								</tr>
-								<tr>
-									<td><input type="checkbox" title="현재행선택" /></td>
-									<td>본인</td>
-									<td>이상화</td>
-									<td class="tal">840502-1******</td>
-									
-									<td>010-1234-56789</td>
-									<td class="tal">서울시 강남구..</td>
-									<td>YES</td>
-									<td>감사</td>
-								</tr>
-								<tr>
-									<td><input type="checkbox" title="현재행선택" /></td>
-									<td>본인</td>
-									<td>이상화</td>
-									<td class="tal">840502-1******</td>
-									
-									<td>010-1234-56789</td>
-									<td class="tal">서울시 강남구..</td>
-									<td>YES</td>
-									<td>감사</td>
-								</tr>
-								<tr>
-									<td><input type="checkbox" title="현재행선택" /></td>
-									<td>본인</td>
-									<td>이상화</td>
-									<td class="tal">840502-1******</td>
-									
-									<td>010-1234-56789</td>
-									<td class="tal">서울시 강남구..</td>
-									<td>YES</td>
-									<td>감사</td>
-								</tr>
-								<tr>
-									<td><input type="checkbox" title="현재행선택" /></td>
-									<td>본인</td>
-									<td>이상화</td>
-									<td class="tal">840502-1******</td>
-									
-									<td>010-1234-56789</td>
-									<td class="tal">서울시 강남구..</td>
-									<td>YES</td>
-									<td>감사</td>
-								</tr>
-								<tr>
-									<td><input type="checkbox" title="현재행선택" /></td>
-									<td>본인</td>
-									<td>이상화</td>
-									<td class="tal">840502-1******</td>
-									
-									<td>010-1234-56789</td>
-									<td class="tal">서울시 강남구..</td>
-									<td>YES</td>
-									<td>감사</td>
-								</tr>
-								<tr>
-									<td><input type="checkbox" title="현재행선택" /></td>
-									<td>본인</td>
-									<td>이상화</td>
-									<td class="tal">840502-1******</td>
-									
-									<td>010-1234-56789</td>
-									<td class="tal">서울시 강남구..</td>
-									<td>YES</td>
-									<td>감사</td>
-								</tr>
-							</tbody>
-						</table>
 					</li>
 					<li>
-						<h3 class="hide-element">스마트검색</h3>
-						<div class="smartCont">
-							<!-- 고객구분선택 탭 -->
-							<ul class="sInrTab">
-								<li><a href="#"><span>전체</span></a></li>
-								<li class="on"><a href="#"><span>계약</span></a></li>
-								<li class="last"><a href="#"><span>가망</span></a></li>
-							</ul>
+						<div class="add">
+							<h3 class="hide-element">스마트검색</h3>
+							<div class="smartCont">
+								<!-- 고객구분선택 탭 -->
+								<ul class="sInrTab">
+									<li><a href="#"><span>전체</span></a></li>
+									<li class="on"><a href="#"><span>계약</span></a></li>
+									<li class="last"><a href="#"><span>가망</span></a></li>
+								</ul>
 
-							<div class="cdnSel">
-								<select title="조건선택">
-									<option selected="selected">저장된 조건을 선택하세요</option>
-									<option></option>
-								</select>
-								<a href="#none" class="btn smGyRb">조회</a>
-								<a href="#none" class="btn smGyRb">조건삭제</a>
-							</div>
+								<div class="cdnSel">
+									<select title="조건선택">
+										<option selected="selected">저장된 조건을 선택하세요</option>
+										<option></option>
+									</select>
+									<a href="#none" class="btn smGyRb">조회</a>
+									<a href="#none" class="btn smGyRb">조건삭제</a>
+								</div>
 
-							<!-- 세부검색체크 -->
-							<div class="settingWrap">
-								<div class="SettingZone">
-									<table class="smarTable cols" summary="인적정보,계약정보,이벤트등 스마트검색에 필요한 정보를 제공합니다.">
-										<caption>스마트검색</caption>
-										<colgroup>
-											<col width="10%" />
-											<col width="15%" />
-											<col width="30%" />
-											<col width="15%" />
-											<col width="*" />
-										</colgroup>
-										<tbody>
-											<tr>
-												<th class="groupTit" rowspan="5"><span>인적정보</span></th>
-												<th class="tit">정보활용동의</th>
-												<td>
-													<span class="fLset">
-														<input type="radio" id="all" /><label for="all">전체</label>
-														<input type="radio" id="Y" /><label for="Y">Y</label>
-														<input type="radio" id="N" /><label for="N">N</label>
-													</span>
-												</td>
-												<th class="tit">Value고객</th>
-												<td>
-													<input type="checkbox" id="valPs" title="value고객" />
-												</td>
-											</tr>
-											<tr>
-												<th class="tit">고객명</th>
-												<td>
-													<input type="text" style="width:152px;" title="고객명입력" />
-												</td>
-												<th class="tit">성별</th>
-												<td>
-													<span class="fLset">
-														<input type="radio" id="all2" /><label for="all2">전체</label>
-														<input type="radio" id="wm" /><label for="wm">여성</label>
-														<input type="radio" id="mam" /><label for="mam">남성</label>
-													</span>
-												</td>
-											</tr>
-											<tr>
-												<th class="tit">연령</th>
-												<td colspan="3">
-													<span class="fLset">
-														<input type="checkbox" id="all3" /><label for="all3">전체</label>
-														<input type="checkbox" id="od10" /><label for="od10">10대</label>
-														<input type="checkbox" id="od20" /><label for="od20">20대</label>
-														<input type="checkbox" id="od30" /><label for="od30">30대</label>
-														<input type="checkbox" id="od40" /><label for="od40">40대</label>
-														<input type="checkbox" id="od50" /><label for="od50">50대</label>
-														<input type="checkbox" id="od60" /><label for="od60">60대 이상</label>
-													</span>
-												</td>
-											</tr>
-											<tr>
-												<th class="tit">지역</th>
-												<td colspan="3">
-													<div class="fLset">
-															<input type="checkbox" id="mp1" /><label for="mp1">서울</label>
-															<input type="checkbox" id="mp2" /><label for="mp2">경기</label>
-															<input type="checkbox" id="mp3" /><label for="mp3">인천</label>
-															<input type="checkbox" id="mp4" /><label for="mp4">대전</label>
-															<input type="checkbox" id="mp5" /><label for="mp5">세종</label>
-															<input type="checkbox" id="mp6" /><label for="mp6">충남</label>
-															<input type="checkbox" id="mp7" /><label for="mp7">충북</label>
-															<input type="checkbox" id="mp8" /><label for="mp8">강원</label>
-															<input type="checkbox" id="mp9" /><label for="mp8">광주</label>
-														<span class="towLine">
-															<input type="checkbox" id="mp10" /><label for="mp10">전남</label>
-															<input type="checkbox" id="mp11" /><label for="mp11">전북</label>
-															<input type="checkbox" id="mp12" /><label for="mp12">대구</label>
-															<input type="checkbox" id="mp13" /><label for="mp13">경북</label>
-															<input type="checkbox" id="mp14" /><label for="mp14">부산</label>
-															<input type="checkbox" id="mp15" /><label for="mp15">울산</label>
-															<input type="checkbox" id="mp16" /><label for="mp16">경남</label>
-															<input type="checkbox" id="mp17" /><label for="mp17">제주</label>
-															<a href="#" class="btn smWtRb ">상세주소검색</a>
+								<!-- 세부검색체크 -->
+								<div class="settingWrap">
+									<div class="SettingZone">
+										<table class="smarTable cols" summary="인적정보,계약정보,이벤트등 스마트검색에 필요한 정보를 제공합니다.">
+											<caption>스마트검색</caption>
+											<colgroup>
+												<col width="10%" />
+												<col width="15%" />
+												<col width="30%" />
+												<col width="15%" />
+												<col width="*" />
+											</colgroup>
+											<tbody>
+												<tr>
+													<th class="groupTit" rowspan="5"><span>인적정보</span></th>
+													<th class="tit">정보활용동의</th>
+													<td>
+														<span class="fLset">
+															<input type="radio" id="all" /><label for="all">전체</label>
+															<input type="radio" id="Y" /><label for="Y">Y</label>
+															<input type="radio" id="N" /><label for="N">N</label>
 														</span>
-													</div>
-												</td>
-											</tr>
-											<tr>
-												<th class="tit">월소득구간</th>
-												<td colspan="3">
-													<select title="월소득구간 선택">
-														<option>150만원미만</option>
-													</select>
-												</td>
-											</tr>
-											<tr>
-												<th class="groupTit" rowspan="3"><span>계약정보</span></th>
-												<th class="tit">본인/감사</th>
-												<td colspan="3">
-													<span class="fLset">
-														<input type="radio" id="all4" /><label for="all4">전체</label>
-														<input type="radio" id="cntrt1" /><label for="cntrt1">본인</label>
-														<input type="radio" id="cntrt2" /><label for="cntrt2">감사</label>
-													</span>
-												</td>
-											</tr>
-											<tr>
-												<th class="tit">월(환산)보험료</th>
-												<td colspan="3">
-													<input type="text" value="0" title="보험료입력" style="width:132px;" /> 원 ~
-													<input type="text" value="100,000" title="보험료입력" style="width:132px;" /> 원
-												</td>
-											</tr>
-											<tr>
-												<th class="tit">계약</th>
-												<td colspan="3">
-													<span class="fLset">
-														<input type="checkbox" id="cntr1" /><label for="cntr1">종신전환가능</label>
-														<input type="checkbox" id="cntr2" /><label for="cntr2">만기예정</label>
-														<input type="checkbox" id="cntr3" /><label for="cntr3">보험금 지급이력</label>
-													</span>
-												</td>
-											</tr>
-											<tr>
-												<th class="groupTit" rowspan="2"><span>이벤트</span></th>
-												<th class="tit">기념일</th>
-												<td colspan="3">
-													<span class="fLset">
-														<input type="checkbox" id="ann1" /><label for="ann1">청약기념일</label>
-														<input type="checkbox" id="ann2" /><label for="ann2">생일</label>
-														<input type="checkbox" id="ann3" /><label for="ann3">결혼기념일</label>
-														<input type="checkbox" id="ann4" /><label for="ann4">전체</label>
-													</span>
-													<div class="cellCrnr">
-														<input type="text" readonly="readonly" style="width:83px" />
-														<a class="carendar" href="#"><span class="cdr">23</span></a>
-														~
-														<input type="text" readonly="readonly" style="width:83px" />
-														<a class="carendar" href="#"><span class="cdr">23</span></a>
-														<span class="today">Today</span>
-														<span class="today">Week</span>
-													</div>
-												</td>
-											</tr>
-											<tr>
-												<th class="tit">최근미방문기간</th>
-												<td colspan="3">
-													<span class="fLset">
-														<input type="radio" id="vst1" /><label for="vst1">6개월</label>
-														<input type="radio" id="vst2" /><label for="vst2">1년</label>
-														<input type="radio" id="vst3" /><label for="vst3">3년</label>
-														<input type="radio" id="vst4" /><label for="vst4">3년초과</label>
-													</span>
-												</td>
-											</tr>
-										</tbody>
-									</table>
-									<table class="smarTable rows" summary="고객이등록한 고객분류정보를 제공합니다.">
-										<caption>고객분류(태그)</caption>
-										<colgroup>
-											<col width="10%" />
-											<col width="*" />
-										</colgroup>
-										<thead>
-											<tr>
-												<th scope="col" colspan="2" class="groupTit">고객분류(태그)</th>
-											</tr>
-										</thead>
-										<tbody>
-											<tr>
-												<td><input type="checkbox" title="행선택" /></td>
-												<td>LP소식지</td>
-											</tr>
-											<tr>
-												<td><input type="checkbox" title="행선택" /></td>
-												<td>LP가 등록한 태그명</td>
-											</tr>
-											<tr>
-												<td><input type="checkbox" title="행선택" /></td>
-												<td>LP가 등록한 태그명이 길어지면<br /> 두 줄까지 표시됩니다.</td>
-											</tr>
-											<tr>
-												<td><input type="checkbox" title="행선택" /></td>
-												<td>LP소식지</td>
-											</tr>
-											<tr>
-												<td><input type="checkbox" title="행선택" /></td>
-												<td>LP가 등록한 태그명</td>
-											</tr>
-											<tr>
-												<td><input type="checkbox" title="행선택" /></td>
-												<td>LP소식지</td>
-											</tr>
-											<tr>
-												<td><input type="checkbox" title="행선택" /></td>
-												<td>LP소식지</td>
-											</tr>
-										</tbody>
-									</table>
+													</td>
+													<th class="tit">Value고객</th>
+													<td>
+														<input type="checkbox" id="valPs" title="value고객" />
+													</td>
+												</tr>
+												<tr>
+													<th class="tit">고객명</th>
+													<td>
+														<input type="text" style="width:152px;" title="고객명입력" />
+													</td>
+													<th class="tit">성별</th>
+													<td>
+														<span class="fLset">
+															<input type="radio" id="all2" /><label for="all2">전체</label>
+															<input type="radio" id="wm" /><label for="wm">여성</label>
+															<input type="radio" id="mam" /><label for="mam">남성</label>
+														</span>
+													</td>
+												</tr>
+												<tr>
+													<th class="tit">연령</th>
+													<td colspan="3">
+														<span class="fLset">
+															<input type="checkbox" id="all3" /><label for="all3">전체</label>
+															<input type="checkbox" id="od10" /><label for="od10">10대</label>
+															<input type="checkbox" id="od20" /><label for="od20">20대</label>
+															<input type="checkbox" id="od30" /><label for="od30">30대</label>
+															<input type="checkbox" id="od40" /><label for="od40">40대</label>
+															<input type="checkbox" id="od50" /><label for="od50">50대</label>
+															<input type="checkbox" id="od60" /><label for="od60">60대 이상</label>
+														</span>
+													</td>
+												</tr>
+												<tr>
+													<th class="tit">지역</th>
+													<td colspan="3">
+														<div class="fLset">
+																<input type="checkbox" id="mp1" /><label for="mp1">서울</label>
+																<input type="checkbox" id="mp2" /><label for="mp2">경기</label>
+																<input type="checkbox" id="mp3" /><label for="mp3">인천</label>
+																<input type="checkbox" id="mp4" /><label for="mp4">대전</label>
+																<input type="checkbox" id="mp5" /><label for="mp5">세종</label>
+																<input type="checkbox" id="mp6" /><label for="mp6">충남</label>
+																<input type="checkbox" id="mp7" /><label for="mp7">충북</label>
+																<input type="checkbox" id="mp8" /><label for="mp8">강원</label>
+																<input type="checkbox" id="mp9" /><label for="mp8">광주</label>
+															<span class="towLine">
+																<input type="checkbox" id="mp10" /><label for="mp10">전남</label>
+																<input type="checkbox" id="mp11" /><label for="mp11">전북</label>
+																<input type="checkbox" id="mp12" /><label for="mp12">대구</label>
+																<input type="checkbox" id="mp13" /><label for="mp13">경북</label>
+																<input type="checkbox" id="mp14" /><label for="mp14">부산</label>
+																<input type="checkbox" id="mp15" /><label for="mp15">울산</label>
+																<input type="checkbox" id="mp16" /><label for="mp16">경남</label>
+																<input type="checkbox" id="mp17" /><label for="mp17">제주</label>
+																<a href="#" class="btn smWtRb ">상세주소검색</a>
+															</span>
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<th class="tit">월소득구간</th>
+													<td colspan="3">
+														<select title="월소득구간 선택">
+															<option>150만원미만</option>
+														</select>
+													</td>
+												</tr>
+												<tr>
+													<th class="groupTit" rowspan="3"><span>계약정보</span></th>
+													<th class="tit">본인/감사</th>
+													<td colspan="3">
+														<span class="fLset">
+															<input type="radio" id="all4" /><label for="all4">전체</label>
+															<input type="radio" id="cntrt1" /><label for="cntrt1">본인</label>
+															<input type="radio" id="cntrt2" /><label for="cntrt2">감사</label>
+														</span>
+													</td>
+												</tr>
+												<tr>
+													<th class="tit">월(환산)보험료</th>
+													<td colspan="3">
+														<input type="text" value="0" title="보험료입력" style="width:132px;" /> 원 ~
+														<input type="text" value="100,000" title="보험료입력" style="width:132px;" /> 원
+													</td>
+												</tr>
+												<tr>
+													<th class="tit">계약</th>
+													<td colspan="3">
+														<span class="fLset">
+															<input type="checkbox" id="cntr1" /><label for="cntr1">종신전환가능</label>
+															<input type="checkbox" id="cntr2" /><label for="cntr2">만기예정</label>
+															<input type="checkbox" id="cntr3" /><label for="cntr3">보험금 지급이력</label>
+														</span>
+													</td>
+												</tr>
+												<tr>
+													<th class="groupTit" rowspan="2"><span>이벤트</span></th>
+													<th class="tit">기념일</th>
+													<td colspan="3">
+														<span class="fLset">
+															<input type="checkbox" id="ann1" /><label for="ann1">청약기념일</label>
+															<input type="checkbox" id="ann2" /><label for="ann2">생일</label>
+															<input type="checkbox" id="ann3" /><label for="ann3">결혼기념일</label>
+															<input type="checkbox" id="ann4" /><label for="ann4">전체</label>
+														</span>
+														<div class="cellCrnr">
+															<input type="text" readonly="readonly" style="width:83px" />
+															<a class="carendar" href="#"><span class="cdr">23</span></a>
+															~
+															<input type="text" readonly="readonly" style="width:83px" />
+															<a class="carendar" href="#"><span class="cdr">23</span></a>
+															<span class="today">Today</span>
+															<span class="today">Week</span>
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<th class="tit">최근미방문기간</th>
+													<td colspan="3">
+														<span class="fLset">
+															<input type="radio" id="vst1" /><label for="vst1">6개월</label>
+															<input type="radio" id="vst2" /><label for="vst2">1년</label>
+															<input type="radio" id="vst3" /><label for="vst3">3년</label>
+															<input type="radio" id="vst4" /><label for="vst4">3년초과</label>
+														</span>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+										<table class="smarTable rows" summary="고객이등록한 고객분류정보를 제공합니다.">
+											<caption>고객분류(태그)</caption>
+											<colgroup>
+												<col width="10%" />
+												<col width="*" />
+											</colgroup>
+											<thead>
+												<tr>
+													<th scope="col" colspan="2" class="groupTit">고객분류(태그)</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td><input type="checkbox" title="행선택" /></td>
+													<td>LP소식지</td>
+												</tr>
+												<tr>
+													<td><input type="checkbox" title="행선택" /></td>
+													<td>LP가 등록한 태그명</td>
+												</tr>
+												<tr>
+													<td><input type="checkbox" title="행선택" /></td>
+													<td>LP가 등록한 태그명이 길어지면<br /> 두 줄까지 표시됩니다.</td>
+												</tr>
+												<tr>
+													<td><input type="checkbox" title="행선택" /></td>
+													<td>LP소식지</td>
+												</tr>
+												<tr>
+													<td><input type="checkbox" title="행선택" /></td>
+													<td>LP가 등록한 태그명</td>
+												</tr>
+												<tr>
+													<td><input type="checkbox" title="행선택" /></td>
+													<td>LP소식지</td>
+												</tr>
+												<tr>
+													<td><input type="checkbox" title="행선택" /></td>
+													<td>LP소식지</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
 								</div>
 							</div>
+							<!-- 검색어저장 -->
+							<div class="searchDetail">
+									<div class="tagCnt">
+										<span>30대<button type="button" class="smDel"><span>삭제</span></button> </span>
+										<span>여<button type="button" class="smDel"><span>삭제</span></button></span>
+										<span>LP소식지<button type="button" class="smDel"><span>삭제</span></button></span>
+										<span>만기<button type="button" class="smDel"><span>삭제</span></button></span>
+										<span>계약<button type="button" class="smDel"><span>삭제</span></button></span>
+										<span>생일<button type="button" class="smDel"><span>삭제</span></button></span>
+										<span>축하<button type="button" class="smDel"><span>삭제</span></button></span>
+										<span>사랑해요<button type="button" class="smDel"><span>삭제</span></button></span>
+									</div>
+									<div class="searchSave">
+										<span><a href="#" class="btn smWtRb">초기화</a><a href="#" class="btn smWtRb">조건저장</a></span>
+										<input class="btn lgBeR" type="submit" value="검색" />
+									</div>
+							</div>
+					
+							<!-- 검색결과 -->
+							<span class="ResultSum">총 100건</span>
+							<table summary="고객구분별 스마트검색 결과 입니다." class="listTable" width="100%">
+								<caption>스마트검색결과리스트</caption>
+								<colgroup>
+									<col width="3%" />
+									<col width="6%" />
+									<col width="8%" />
+									<col width="15%" />
+									<col width="6%" />
+									<col width="13%" />
+									<col width="*" />
+									<col width="11%" />
+									<col width="8%" />
+								</colgroup>
+								<thead>
+								<tr>
+									<th scope="col">선택</th>
+									<th scope="col">고객구분</th>
+									<th scope="col">이름</th>
+									<th scope="col">주민번호</th>
+									<th scope="col">연령</th>
+									<th scope="col">휴대전화</th>
+									<th scope="col">주소</th>
+									<th scope="col">정보활용 동의여부</th>
+									<th scope="col">본인/감사</th>
+								</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td><input type="checkbox" title="현재행선택" /></td>
+										<td>계약</td>
+										<td>이상화</td>
+										<td class="tal">840502-1******</td>
+										<td>23</td>
+										<td>010-1234-56789</td>
+										<td class="tal">서울시 강남구..</td>
+										<td>YES</td>
+										<td>본인</td>
+									</tr>
+									<tr>
+										<td><input type="checkbox" title="현재행선택" /></td>
+										<td>계약</td>
+										<td>이상화</td>
+										<td class="tal">840502-1******</td>
+										<td>23</td>
+										<td>010-1234-56789</td>
+										<td class="tal">서울시 강남구..</td>
+										<td>YES</td>
+										<td>감사</td>
+									</tr>
+									<tr>
+										<td><input type="checkbox" title="현재행선택" /></td>
+										<td>계약</td>
+										<td>이상화</td>
+										<td class="tal">840502-1******</td>
+										<td>23</td>
+										<td>010-1234-56789</td>
+										<td class="tal"><span class="phone"></span> 서울시 강남구..</td>
+										<td>YES</td>
+										<td>감사</td>
+									</tr>
+									<tr>
+										<td><input type="checkbox" title="현재행선택" /></td>
+										<td>계약</td>
+										<td>이상화</td>
+										<td class="tal">840502-1******</td>
+										<td>23</td>
+										<td>010-1234-56789</td>
+										<td class="tal">서울시 강남구..</td>
+										<td>YES</td>
+										<td>감사</td>
+									</tr>
+									<tr>
+										<td><input type="checkbox" title="현재행선택" /></td>
+										<td>계약</td>
+										<td>이상화</td>
+										<td class="tal">840502-1******</td>
+										<td>23</td>
+										<td>010-1234-56789</td>
+										<td class="tal">서울시 강남구..</td>
+										<td>YES</td>
+										<td>감사</td>
+									</tr>
+									<tr>
+										<td><input type="checkbox" title="현재행선택" /></td>
+										<td>계약</td>
+										<td>이상화</td>
+										<td class="tal">840502-1******</td>
+										<td>23</td>
+										<td>010-1234-56789</td>
+										<td class="tal">서울시 강남구..</td>
+										<td>YES</td>
+										<td>감사</td>
+									</tr>
+									<tr>
+										<td><input type="checkbox" title="현재행선택" /></td>
+										<td>계약</td>
+										<td>이상화</td>
+										<td class="tal">840502-1******</td>
+										<td>23</td>
+										<td>010-1234-56789</td>
+										<td class="tal">서울시 강남구..</td>
+										<td>YES</td>
+										<td>감사</td>
+									</tr>
+									<tr>
+										<td><input type="checkbox" title="현재행선택" /></td>
+										<td>계약</td>
+										<td>이상화</td>
+										<td class="tal">840502-1******</td>
+										<td>23</td>
+										<td>010-1234-56789</td>
+										<td class="tal">서울시 강남구..</td>
+										<td>YES</td>
+										<td>감사</td>
+									</tr>
+									<tr>
+										<td><input type="checkbox" title="현재행선택" /></td>
+										<td>계약</td>
+										<td>이상화</td>
+										<td class="tal">840502-1******</td>
+										<td>23</td>
+										<td>010-1234-56789</td>
+										<td class="tal">서울시 강남구..</td>
+										<td>YES</td>
+										<td>감사</td>
+									</tr>
+									<tr>
+										<td><input type="checkbox" title="현재행선택" /></td>
+										<td>계약</td>
+										<td>이상화</td>
+										<td class="tal">840502-1******</td>
+										<td>23</td>
+										<td>010-1234-56789</td>
+										<td class="tal">서울시 강남구..</td>
+										<td>YES</td>
+										<td>감사</td>
+									</tr>
+									<tr>
+										<td><input type="checkbox" title="현재행선택" /></td>
+										<td>계약</td>
+										<td>이상화</td>
+										<td class="tal">840502-1******</td>
+										<td>23</td>
+										<td>010-1234-56789</td>
+										<td class="tal">서울시 강남구..</td>
+										<td>YES</td>
+										<td>감사</td>
+									</tr>
+									<tr>
+										<td><input type="checkbox" title="현재행선택" /></td>
+										<td>계약</td>
+										<td>이상화</td>
+										<td class="tal">840502-1******</td>
+										<td>23</td>
+										<td>010-1234-56789</td>
+										<td class="tal">서울시 강남구..</td>
+										<td>YES</td>
+										<td>감사</td>
+									</tr>
+									<tr>
+										<td><input type="checkbox" title="현재행선택" /></td>
+										<td>계약</td>
+										<td>이상화</td>
+										<td class="tal">840502-1******</td>
+										<td>23</td>
+										<td>010-1234-56789</td>
+										<td class="tal">서울시 강남구..</td>
+										<td>YES</td>
+										<td>감사</td>
+									</tr>
+									<tr>
+										<td><input type="checkbox" title="현재행선택" /></td>
+										<td>계약</td>
+										<td>이상화</td>
+										<td class="tal">840502-1******</td>
+										<td>23</td>
+										<td>010-1234-56789</td>
+										<td class="tal">서울시 강남구..</td>
+										<td>YES</td>
+										<td>감사</td>
+									</tr>
+									<tr>
+										<td><input type="checkbox" title="현재행선택" /></td>
+										<td>계약</td>
+										<td>이상화</td>
+										<td class="tal">840502-1******</td>
+										<td>23</td>
+										<td>010-1234-56789</td>
+										<td class="tal">서울시 강남구..</td>
+										<td>YES</td>
+										<td>감사</td>
+									</tr>
+								</tbody>
+							</table>
 						</div>
-						<!-- 검색어저장 -->
-						<div class="searchDetail">
-							<div class="tagWrap">
-								<div class="tagCnt">
-									<span>30대<button type="button" class="smDel"><span>삭제</span></button> </span>
-									<span>여<button type="button" class="smDel"><span>삭제</span></button></span>
-									<span>LP소식지<button type="button" class="smDel"><span>삭제</span></button></span>
-									<span>만기<button type="button" class="smDel"><span>삭제</span></button></span>
-									<span>계약<button type="button" class="smDel"><span>삭제</span></button></span>
-									<span>생일<button type="button" class="smDel"><span>삭제</span></button></span>
-									<span>축하<button type="button" class="smDel"><span>삭제</span></button></span>
-									<span>사랑해요<button type="button" class="smDel"><span>삭제</span></button></span>
-								</div>
-								<div class="searchSave">
-									<span><a href="#" class="btn smWtRb">초기화</a><a href="#" class="btn smWtRb">조건저장</a></span>
-									<input class="btn lgBeR" type="submit" value="검색" />
-								</div>
-							</div>
-							<div class="msaveSearch" style="height:81px;"><!-- 더보기를 누르면 height:auto가 되면서 검색조건들이 보입니다. -->
-								<a href="#" class="btn smWtRb"><span class="ImgArrow">더보기</span></a>
-								<dl>
-									<dt>내가 저정한 검색조건 5</dt>
-									<dd>20140213-저장한조건명(5) <button type="button" class="smDel"><span>삭제</span></button></dd>
-									<dd>20140210-저장한 조건명이 길면…(10) <button type="button" class="smDel"><span>삭제</span></button></dd>
-									<dd>20140213-저장한조건명(5) <button type="button" class="smDel"><span>삭제</span></button></dd>
-									<dd>20140213-저장한조건명(5) <button type="button" class="smDel"><span>삭제</span></button></dd>
-									<dd>20140213-저장한조건명(5) <button type="button" class="smDel"><span>삭제</span></button></dd>
-								</dl>
-							</div>
-						</div>
-				
-						<!-- 검색결과 -->
-						<span class="ResultSum">총 100건</span>
-						<table summary="고객구분별 스마트검색 결과 입니다." class="listTable" width="100%">
-							<caption>스마트검색결과리스트</caption>
-							<colgroup>
-								<col width="3%" />
-								<col width="6%" />
-								<col width="8%" />
-								<col width="15%" />
-								<col width="6%" />
-								<col width="13%" />
-								<col width="*" />
-								<col width="11%" />
-								<col width="8%" />
-							</colgroup>
-							<thead>
-							<tr>
-								<th scope="col">선택</th>
-								<th scope="col">고객구분</th>
-								<th scope="col">이름</th>
-								<th scope="col">주민번호</th>
-								<th scope="col">연령</th>
-								<th scope="col">휴대전화</th>
-								<th scope="col">주소</th>
-								<th scope="col">정보활용 동의여부</th>
-								<th scope="col">본인/감사</th>
-							</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td><input type="checkbox" title="현재행선택" /></td>
-									<td>계약</td>
-									<td>이상화</td>
-									<td class="tal">840502-1******</td>
-									<td>23</td>
-									<td>010-1234-56789</td>
-									<td class="tal">서울시 강남구..</td>
-									<td>YES</td>
-									<td>본인</td>
-								</tr>
-								<tr>
-									<td><input type="checkbox" title="현재행선택" /></td>
-									<td>계약</td>
-									<td>이상화</td>
-									<td class="tal">840502-1******</td>
-									<td>23</td>
-									<td>010-1234-56789</td>
-									<td class="tal">서울시 강남구..</td>
-									<td>YES</td>
-									<td>감사</td>
-								</tr>
-								<tr>
-									<td><input type="checkbox" title="현재행선택" /></td>
-									<td>계약</td>
-									<td>이상화</td>
-									<td class="tal">840502-1******</td>
-									<td>23</td>
-									<td>010-1234-56789</td>
-									<td class="tal"><span class="phone"></span> 서울시 강남구..</td>
-									<td>YES</td>
-									<td>감사</td>
-								</tr>
-								<tr>
-									<td><input type="checkbox" title="현재행선택" /></td>
-									<td>계약</td>
-									<td>이상화</td>
-									<td class="tal">840502-1******</td>
-									<td>23</td>
-									<td>010-1234-56789</td>
-									<td class="tal">서울시 강남구..</td>
-									<td>YES</td>
-									<td>감사</td>
-								</tr>
-								<tr>
-									<td><input type="checkbox" title="현재행선택" /></td>
-									<td>계약</td>
-									<td>이상화</td>
-									<td class="tal">840502-1******</td>
-									<td>23</td>
-									<td>010-1234-56789</td>
-									<td class="tal">서울시 강남구..</td>
-									<td>YES</td>
-									<td>감사</td>
-								</tr>
-								<tr>
-									<td><input type="checkbox" title="현재행선택" /></td>
-									<td>계약</td>
-									<td>이상화</td>
-									<td class="tal">840502-1******</td>
-									<td>23</td>
-									<td>010-1234-56789</td>
-									<td class="tal">서울시 강남구..</td>
-									<td>YES</td>
-									<td>감사</td>
-								</tr>
-								<tr>
-									<td><input type="checkbox" title="현재행선택" /></td>
-									<td>계약</td>
-									<td>이상화</td>
-									<td class="tal">840502-1******</td>
-									<td>23</td>
-									<td>010-1234-56789</td>
-									<td class="tal">서울시 강남구..</td>
-									<td>YES</td>
-									<td>감사</td>
-								</tr>
-								<tr>
-									<td><input type="checkbox" title="현재행선택" /></td>
-									<td>계약</td>
-									<td>이상화</td>
-									<td class="tal">840502-1******</td>
-									<td>23</td>
-									<td>010-1234-56789</td>
-									<td class="tal">서울시 강남구..</td>
-									<td>YES</td>
-									<td>감사</td>
-								</tr>
-								<tr>
-									<td><input type="checkbox" title="현재행선택" /></td>
-									<td>계약</td>
-									<td>이상화</td>
-									<td class="tal">840502-1******</td>
-									<td>23</td>
-									<td>010-1234-56789</td>
-									<td class="tal">서울시 강남구..</td>
-									<td>YES</td>
-									<td>감사</td>
-								</tr>
-								<tr>
-									<td><input type="checkbox" title="현재행선택" /></td>
-									<td>계약</td>
-									<td>이상화</td>
-									<td class="tal">840502-1******</td>
-									<td>23</td>
-									<td>010-1234-56789</td>
-									<td class="tal">서울시 강남구..</td>
-									<td>YES</td>
-									<td>감사</td>
-								</tr>
-								<tr>
-									<td><input type="checkbox" title="현재행선택" /></td>
-									<td>계약</td>
-									<td>이상화</td>
-									<td class="tal">840502-1******</td>
-									<td>23</td>
-									<td>010-1234-56789</td>
-									<td class="tal">서울시 강남구..</td>
-									<td>YES</td>
-									<td>감사</td>
-								</tr>
-								<tr>
-									<td><input type="checkbox" title="현재행선택" /></td>
-									<td>계약</td>
-									<td>이상화</td>
-									<td class="tal">840502-1******</td>
-									<td>23</td>
-									<td>010-1234-56789</td>
-									<td class="tal">서울시 강남구..</td>
-									<td>YES</td>
-									<td>감사</td>
-								</tr>
-								<tr>
-									<td><input type="checkbox" title="현재행선택" /></td>
-									<td>계약</td>
-									<td>이상화</td>
-									<td class="tal">840502-1******</td>
-									<td>23</td>
-									<td>010-1234-56789</td>
-									<td class="tal">서울시 강남구..</td>
-									<td>YES</td>
-									<td>감사</td>
-								</tr>
-								<tr>
-									<td><input type="checkbox" title="현재행선택" /></td>
-									<td>계약</td>
-									<td>이상화</td>
-									<td class="tal">840502-1******</td>
-									<td>23</td>
-									<td>010-1234-56789</td>
-									<td class="tal">서울시 강남구..</td>
-									<td>YES</td>
-									<td>감사</td>
-								</tr>
-								<tr>
-									<td><input type="checkbox" title="현재행선택" /></td>
-									<td>계약</td>
-									<td>이상화</td>
-									<td class="tal">840502-1******</td>
-									<td>23</td>
-									<td>010-1234-56789</td>
-									<td class="tal">서울시 강남구..</td>
-									<td>YES</td>
-									<td>감사</td>
-								</tr>
-							</tbody>
-						</table>
 					</li>
 				</ul>
 			</div>
@@ -1465,6 +1458,8 @@
 		<!-- //공통 컨텐츠 -->
 		<script type="text/javascript">
 			//<![CDATA[
+			var pobj = $('.add');
+			curexFront.init(pobj);  // tab 데이터가 삭제되기전에 obj에 담아놓음.
 			var myTab = ci.tab.init($('.PersonCont')); // 고객정보탭
 			var myTab1 = ci.tab.init($('.tabOutline')); // 
 			var myTab2 = ci.tab.init($('.smartWrap')); // 
@@ -1486,8 +1481,8 @@
 	</div>
 	<!-- //CHECKLIST -->
 
-	<!-- CHECKLIST -->
-	<div id="checkList" style="display:none"> <!-- 스마트검색 -->
+<!--  스마트검색에서 보이는 체크리스트
+	<div id="checkList" style="display:none"> 
 		<ul class="list">
 			<li><a href="#none" class="on">호칭저장</a></li>
 			<li><a href="#none" class="on long">고객분류(태그)저장</a></li>
@@ -1500,8 +1495,7 @@
 			<li><a href="#none">DM</a></li>
 		</ul>
 	</div>
-	<!-- //CHECKLIST -->
-
+ -->
 </div> 
 
 <!-- FOOTER -->

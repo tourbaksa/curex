@@ -3,72 +3,87 @@
 */
 
 $(document).ready(function(){
-	if($("#checkList").length){curexFront.checkList();}
-	if($("div.tab02").length){curexFront.data.dataTab();}
-	curexFront.data.celldel();
-	curexFront.data.toggle();
+	if($("div#checkList").length){curexFront.checkList();}
+	if($("div.tab02").length){curexFront.tab();}
+	curexFront.rolling();
+	curexFront.event();
 });
 
 var curexFront ={};
 
-curexFront.checkList = function(){
-	var $obj = $("#checkList")
-		, detached = false
-		, footerHeight = $("#footer").height()
-
-	$(window).scroll( checkOffset );
-	$(window).load( checkOffset ); //로드될때 스크롤길이 췌퀫!
-	$(window).resize( checkOffset ).resize(); //리사이즈될때 스크롤길이 췌퀫!
-	
-	function checkOffset(){
-		var scrollBottom = $(document).height() - $(window).height() - $(window).scrollTop();
-		if(scrollBottom >= footerHeight){
-			if(!detached){detached = true; $obj.addClass("fixed");}
-		}else{
-			if(detached){detached = false; $obj.removeClass("fixed");}
-		}
-	}
-}
-
-/* case1 - TAB컨텐츠아래에 버튼과 TAB이 있을때 */
-curexFront.data = {
+curexFront = {
 
 	init:function(scope){
 		this.op = scope;
 	},
+	event:function(){
+		var scope = this.op
+			, $previousBtn = $("div.previous .ImgArrow", scope).parent() //기계약합산 잔여한도 조회버튼
+			, $InfoWriteBtn =$("table a.InfoWbtn", scope) //테이블정보입력 버튼
+			, $Delbtn = $("a.cellDel", scope) || $("a.cellDel")  //테이블 셀삭제버튼
+			, $cinsrtbtn = $("a.cellInsert", scope) || $("a.cellInsert"); //주계약/특약 특약피버험자 추가버튼
+		
+		/* 기계약 합산잔여한도 */
+		$previousBtn.off().on({
+			click : function(){
+				var $ele = $(this).find("span") 
+					, $visibleObj = $("div.preSearch");
 
-	toggle:function(){
-		var scope = this.op;
-		$(".btn", scope).off().on({
-			click:function(){
-				var $this = $(this)
-					, $span = $(this).find("span");
-			console.log($this)
-				planSum($span);
-				InfoWrite($this, $span);
+				if(!$visibleObj.length){return false;}
+				if(!$ele.hasClass("up")){ $ele.addClass("up"); $visibleObj.slideDown(200);}
+				else{$ele.removeClass("up"); $visibleObj.slideUp(100);}
 				return false;
 			}
 		});
-		/* 가입설계 - 기계약합산*/
-		var planSum = function($ele){
-			var $visibleObj = $("div.preSearch");
-			if(!$visibleObj.length){return false;}
-			if(!$ele.hasClass("up")){ $ele.addClass("up"); $visibleObj.slideDown(200);}
-			else{$ele.removeClass("up"); $visibleObj.slideUp(100);}
-		}
-		/* 청약정보 정보입력 */
-		var InfoWrite = function($this, $ele){
-			var $objTable = $this.closest("table")
-				, $btnIdx = $objTable.find(".btn span.txtArrow").parent().index($this) //내가 클릭한버튼이 현재 테이블에서 몇붠쮀?
-				, $objTd = $objTable.find("tr.view").eq($btnIdx).children();
 
-			if(!$objTable.length){return false;}
-			if(!$ele.hasClass("up")){ $ele.addClass("up"); $objTd.slideDown(300);}
-			else{$ele.removeClass("up");$objTd.slideUp(0);}
-		}
+		/* 테이블 정보입력 */
+		$InfoWriteBtn.each(function(){
+			$(this).off().on({
+				click : function(){
+					var $objTable = $(this).closest("table")
+						, $btnIdx = $objTable.find(".btn span.txtArrow").parent().index($(this)) //내가 클릭한버튼이 현재 테이블에서 몇붠쮀?
+						, $objTd = $objTable.find("tr.view").eq($btnIdx).children()
+						, $ele = $(this).find("span");
+
+					if (!$objTd.find("div.conTable").length){return false;} //테이블안에 입력테이블이 없으면 아무동작하지않음
+					if(!$ele.hasClass("up")){
+						$ele.addClass("up"); $objTd.slideDown(300);
+					}else{$ele.removeClass("up");$objTd.slideUp(0);}
+					return false;
+				}
+			});
+		});
+
+		/* 테이블 셀삭제 버튼 */
+		$Delbtn.each(function(){
+			$(this).off().on({
+				click:function(){
+					$(this).closest("tr").remove();
+					return false;
+				}
+			});
+		});
+
+		/* 주계약&특약 추가버튼 */
+		$cinsrtbtn.each(function(){
+			$(this).off().on({
+				click:function(){
+					var $riderCont = $("div.riderPlus",scope) ||$("div.riderPlus")
+						, old = $riderCont.find(".clone").length
+						, newc = old + 1
+						, cloned = $riderCont.find("tr").eq(0).clone().addClass("clone");
+
+					if($riderCont.is(":hidden")){$riderCont.css({"display":"block"});}
+					if(!$riderCont.find("tr").hasClass("clone")){$riderCont.find("tr").remove();}
+					$riderCont.find("table tbody").append(cloned);
+					return false;
+				}
+			});
+		});
 	},
 
-	dataTab:function(){
+
+	tab:function(){
 		var scope = this.op
 			 , $tabObj = $("div.tab02", scope)
 			 , $tabBtn = $tabObj.find("h3 a")
@@ -87,20 +102,105 @@ curexFront.data = {
 			});
 	},
 
-	celldel:function(){
-		var scope = this.op 
-		, $Delbtn = $("a.cellDel", scope);
-		$Delbtn.each(function(){
-			$(this).off().on({
-				click:function(){
-					$(this).closest("tr").remove();
-					return false;
-				}
-			});
-		});
-	
-	}
+	rolling:function(){
+		var scope = this.op
+			, $bnrWrap = $("div.spbnrZone", scope)
+			, $btn = $bnrWrap.find("span.bntCtrl button")
+			, $bnrCont = $bnrWrap.find("div.bnrList")
+			, $bnrItem = $bnrCont.find("img");
+			, $bnrLeng = $bnrItem.length
+			, $bnrW = $bnrItem.outerWidth()
+			, $flag
+			, $idx =0
+			, $timer = null
+			, isAnimating = 'no';
 
+			//$bnrCont.wrap("<div class='slideWrap'></div>")
+			$bnrCont.width($bnrW * $bnrLeng);
+
+			$bnrItem.each(function(i){
+				$(this).css({
+					position:"absolute".
+						left:"0",
+						top:"0",
+						display:i==0 ? "block" : "none"
+				});
+			});
+
+			$btn.each(function(idx){
+				$(this).off().on({
+					click:function(){
+						var $idx = $(this).index();
+						showNum($(this));
+						move($idx);
+						$flag = $idx;
+						return false;
+					}
+				});
+			});
+
+			function showNum(active){
+				$btn.removeClass("on")
+				active.addClass("on")
+			}
+
+			function move($idx){
+				if(isAnimating == 'no'){
+					isAnimating = 'yes'
+					window.clearTimeout($timer); 
+
+				}
+						$bnrCont.animate({
+							"margin-left" : -$bnrW
+						},"slow", function(){
+							$bnrCont.find("img:first").appendTo($bnrCont);
+							$bnrCont.css("margin-left", 0);
+							if ($timer) { start(); }
+							isAnimating = 'no'
+						});
+				
+					$bnrCont.eq($idx).show().css({"margin-left",0}).animate({
+						left:
+					});
+
+
+
+
+			}
+			
+
+			function start(){
+				console.log("start")
+				$timer = window.setTimeout(move, 2000)
+			}
+			
+			function stop(){
+				window.clearTimeout($timer);
+				$timer = null;
+			}
+			start();
+	},
+
+
+	checkList:function(){
+		var $obj = $("#checkList")
+			, detached = false
+			, footerHeight = $("#footer").height()
+
+		$(window).scroll( checkOffset );
+		$(window).load( checkOffset ); //로드될때 스크롤길이 췌퀫!
+		$(window).resize( checkOffset ).resize(); //리사이즈될때 스크롤길이 췌퀫!
+		
+		function checkOffset(){
+			var scrollBottom = $(document).height() - $(window).height() - $(window).scrollTop();
+			if(scrollBottom >= footerHeight){
+				if(!detached){detached = true; $obj.addClass("fixed");}
+			}else{
+				if(detached){detached = false; $obj.removeClass("fixed");}
+			}
+		}
+	}
+	
 
 }
 
