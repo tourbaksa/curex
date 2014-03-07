@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> CuREx </title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
+<link rel="stylesheet" href="/css/common.css" type="text/css" />
+<link rel="stylesheet" href="/css/curex.common.css" type="text/css" />
+<link rel="stylesheet" href="/css/curex.layout.css" type="text/css" />
+<link rel="stylesheet" href="/css/curex.popup.css" type="text/css" />
+<script src="/ci/agent.js"></script>
+<script src="/thirdParty/jquery/jquery-1.10.2.min.js"></script>
+<script src="/thirdParty/jquery/jquery-ui-1.10.3.min.js"></script>
+<script src="/thirdParty/tab.js"></script>
+</head>
+<body>
+
+<div id="popWrap" style="width:396px;">
+	<h1>mLPS 인증</h1>
+	<div class="popContents">
+		
+		<div class="popTit">
+			<h2>인증요청정보</h2>
+		</div>
+
+		<table class="table1">
+			<caption>인증요청정보</caption>
+			<colgroup>
+				<col width="35%" />
+				<col width="*" />
+			</colgroup>
+			<tbody>
+				<tr>
+					<th>이름</th>
+					<td>
+						<span class="widthFull"><input type="text" style="" /></span>
+					</td>
+				</tr>
+				<tr>
+					<th>주민번호</th>
+					<td>
+						<input type="text" style="width:102px;" value="831026" />
+						-
+						<input type="text" style="width:102px;" value="1******" />
+					</td>
+				</tr>
+				<tr>
+					<th>전화번호</th>
+					<td>
+						<select>
+							<option>010</option>
+							<option></option>
+						</select>
+						-
+						<select>
+							<option>2525</option>
+							<option></option>
+						</select>
+						-
+						<select>
+							<option>****</option>
+							<option></option>
+						</select>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	
+		<div class="popBox">
+				<form action="/" method="post">
+					<fieldset>
+						<legend>제도성특약종류</legend>
+						<span class="fLset1">
+							<input type="checkbox" id="ch1" class="first">
+							<label for="ch1">수집</label>
+							<input type="checkbox" id="ch2">
+							<label for="ch2">민감</label>
+							<input type="checkbox" id="ch3">
+							<label for="ch3">고유식별</label>
+							<input type="checkbox" id="ch4">
+							<label for="ch4">제공</label>
+						</span>
+					</fieldset>
+				</form>
+			</div>
+
+			<div class="btnWrap">
+				<a href="#none" class="btn lgLgR">인증번호 발송</a>
+				<a href="#none" class="btn lgGyR">취소</a>
+			</div>
+
+			<div class="btnWrap tac mt20">
+				<input type="text" style="width:179px;" /><br />
+				<a href="#none" class="btn lgLgR mt10">고객동의완료</a>
+			</div>
+
+
+		
+		
+	</div>
+	<a href="#none" class="close"><img src="/img/common/btn_close.gif" alt="닫기" /></a>
+</div>
+
+
+</body>
+</html>
+
