@@ -131,7 +131,6 @@ curexFront = {
 				$(this).off().on({
 					click:function(){
 						var $idx = $(this).index();
-						showNum($(this));
 						move($idx);
 						$flag = $idx;
 						return false;
@@ -139,23 +138,17 @@ curexFront = {
 				});
 			});
 
-			function showNum(active){
-				$btn.removeClass("on")
-				active.addClass("on")
-			}
-
 			function next(){
 				move(($flag+1) % $bnrLeng);
 			}
 
 			function move($idx){
-				console.log($idx)
 				if($idx == $flag) return;
 				if(isAnimating == 'no'){
 					isAnimating = 'yes'
 					window.clearTimeout($timer); 
 					$bnrItem.eq($flag).show().css({"left": 0}).animate({
-						"left" : $bnrW
+						"left" : -$bnrW
 					},"slow", function(){
 						$(this).hide();
 						if ($timer) { start(); }
@@ -169,7 +162,11 @@ curexFront = {
 					},"slow", function(){
 						isAnimating = 'no'
 					});
+				}
 
+				if ($btn) {
+					$btn.eq($flag).removeClass("on");
+					$btn.eq($idx).addClass("on");
 				}
 
 				$flag = $idx;
@@ -177,7 +174,6 @@ curexFront = {
 			
 
 			function start(){
-				console.log("start")
 				stop();
 				$timer = window.setTimeout(next, 2000)
 			}
