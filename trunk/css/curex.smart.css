@@ -148,7 +148,7 @@ a.bePoint{background:url(/img/sub/bg_bePoint.gif) no-repeat 1px 50%; padding-lef
 a.bePoint strong{position:absolute; right:0; top:13px; width:60px; text-align:center; display:block; height:40px; color:#fff; font-size:22px; line-height:18px; height:18px; font-weight:bold;}
 
 /* 산출기준레이어 */
-div.compLayer{position:absolute; z-index:22; background:#fff; background:url(/img/sub/bg_layerArrow.gif) no-repeat 18px 0; left:-2px; top:83px; height:171px; padding:5px 0 0 0;}
+div.compLayer{position:absolute; z-index:22; background:#fff; background:url(/img/sub/bg_layerArrow.gif) no-repeat 18px 0; left:-2px; top:83px; height:171px; padding:5px 0 0 0; display:none;}
 div.compLayer dl {width:242px;}
 div.compLayer dt{background:#585a5c; color:#fff; font-weight:bold; height:33px; line-height:33px; padding-left:15px;
 	width:242px;
