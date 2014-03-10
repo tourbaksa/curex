@@ -128,7 +128,7 @@ curexFront = {
 
 	rolling:function(){
 		var scope = this.op
-			, $bnrWrap = $("div.spbnrZone", scope)
+			, $bnrWrap = $("div.spbnrZone", scope) || $("div.spbnrZone")
 			, $btn = $bnrWrap.find("span.bntCtrl button")
 			, $bnrCont = $bnrWrap.find("div.bnrList")
 			, $bnrItem = $bnrCont.find("img")
