@@ -89,6 +89,7 @@ curexFront = {
 				click:function(){
 					var popObj = $(this).closest("div.spBox").find("div.compLayer");
 					popObj.css({"display" : "none"})
+					return false;
 				}
 			});
 
@@ -98,6 +99,7 @@ curexFront = {
 					click:function(){
 						var popObj = $(this).closest("div.spBox").find("div.compLayer");
 						popObj.css({"display" : "block"})
+						return false;
 					}
 				});
 			});
