@@ -210,6 +210,16 @@ table.listTable tbody td{border:1px solid #dedede; height:25px; padding:7px 0 5p
 .textBox strong{color:#079eb1;}
 .textBox .textL{text-align:left;}
 
+.fileBox{border:1px solid #dedede; padding:17px 0 17px 20px; margin-bottom:10px;}
+.fileBox:after{content:"";display:block;clear:both;}
+.fileBox dl.file{float:left;width:420px;}
+dl.file dt{float:left;line-height:24px;padding-right:25px;}
+dl.file dd {float:left;width:320px;position:relative;}
+dd input[type="text"]{}
+dd span input[type="file"]{position:absolute;left:3px;top:0;}
+
+.fileBox table {float:right;width:551px;}
+
 
 /* tab */
 .tab01{border-bottom:2px solid #22b8c7;}
