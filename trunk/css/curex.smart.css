@@ -248,5 +248,12 @@ div.calenderWrap .table1 th,
 div.calenderWrap .table1 td{text-align:center;}
 
 
-
-
+/*==========================
+  EMAIL센터
+============================*/
+div.ReceiverZone{padding:6px 0 0 0;}
+div.ReceiverZone .btnWrap span{position:absolute; left:0; top:0;}
+div.ReceiverZone div.scrolling{ overflow-y:scroll; overflow-x:hidden; margin-top:5px;}
+div.scrolling table th{background:#ddedef; background-image:none;}
+div.scrolling table th,
+div.scrolling table td{border-right:0;}

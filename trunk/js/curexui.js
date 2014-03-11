@@ -133,11 +133,12 @@ curexFront = {
 			, $bnrCont = $bnrWrap.find("div.bnrList")
 			, $bnrItem = $bnrCont.find("img")
 			, $bnrLeng = $bnrItem.length
-			, $bnrW = $bnrItem.outerWidth()
+			, $bnrW = 242
 			, $flag = 0
 			, $idx
 			, $timer = null
 			, isAnimating = 'no';
+
 
 			//$bnrCont.wrap("<div class='slideWrap'></div>")
 			$bnrCont.width($bnrW * $bnrLeng);

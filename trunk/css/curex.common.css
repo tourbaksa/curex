@@ -291,6 +291,16 @@ ul.tab04 a{
 .tab05 li.active a span{background:url(/img/common/bg_tab05_l_on.gif) no-repeat 0 0;height:32px; padding:0 15px; display:block; text-align:center; cursor:pointer; margin-left:-1px;}
 .tab05 li.active:first-child a span{margin-left:0;}
 
+/* 스마트스테이션에서 쓰이는 tab */
+ul.ctTab{overflow:hidden; background:url(/img/sub/bg_ctTab.gif) repeat-x 0 100%; height:32px;}
+ul.ctTab li{float:left; position:relative;  z-index:1;}
+ul.ctTab li a{display:block; padding:0 15px; color:#b2b2b2; height:30px; line-height:30px; border:1px solid #d8d8d8;  border-bottom:0; border-left:0; border-top-left-radius:2px; border-top-right-radius:2px;
+-webkit-border-top-left-radius:2px; -moz-border-top-left-radius:2px; -ms-border-top-left-radius:2px; -webkit-border-top-right-radius:2px; -moz-border-top-right-radius:2px; -ms-border-top-right-radius:2px;
+}
+ul.ctTab li:first-child a{border-left:1px solid #d8d8d8;}
+ul.ctTab li.active{ position:relative;z-index:2;}
+ul.ctTab li.active a{border-bottom:0; height:32px; line-height:32px; color:#707070; border-color:#898989; border-left:1px solid #898989; background-color:#fff;}
+
 /* paging */
 div.paging{padding:12px 0 0 0; text-align:center; font-size:0;}
 div.paging a{
