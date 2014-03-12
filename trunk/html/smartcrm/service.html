@@ -1043,10 +1043,12 @@
 											<caption>스마트검색</caption>
 											<colgroup>
 												<col width="10%" />
-												<col width="15%" />
-												<col width="30%" />
-												<col width="15%" />
 												<col width="*" />
+												<col width="25%" />
+												<col width="15%" />
+												<col width="10%" />
+												<col width="15%" />
+												<col width="10%" />
 											</colgroup>
 											<tbody>
 												<tr>
@@ -1060,8 +1062,12 @@
 														</span>
 													</td>
 													<th class="tit">Value고객</th>
-													<td>
-														<input type="checkbox" id="valPs" title="value고객" />
+													<td class="tac">
+														<input type="checkbox" title="value고객" />
+													</td>
+													<th class="tit">가족대표</th>
+													<td class="tac">
+														<input type="checkbox" title="가족대표" />
 													</td>
 												</tr>
 												<tr>
@@ -1069,8 +1075,8 @@
 													<td>
 														<input type="text" style="width:152px;" title="고객명입력" />
 													</td>
-													<th class="tit">성별</th>
-													<td>
+													<th class="tit" >성별</th>
+													<td colspan="3">
 														<span class="fLset">
 															<input type="radio" id="all2" /><label for="all2">전체</label>
 															<input type="radio" id="wm" /><label for="wm">여성</label>
@@ -1080,7 +1086,7 @@
 												</tr>
 												<tr>
 													<th class="tit">연령</th>
-													<td colspan="3">
+													<td colspan="5">
 														<span class="fLset">
 															<input type="checkbox" id="all3" /><label for="all3">전체</label>
 															<input type="checkbox" id="od10" /><label for="od10">10대</label>
@@ -1094,7 +1100,13 @@
 												</tr>
 												<tr>
 													<th class="tit">지역</th>
-													<td colspan="3">
+													<td colspan="5">
+														<span class="fLset addStandard">
+															<em>주소지기준</em>
+															<input type="radio" id="adst1" /><label for="adst1">방문지</label>
+															<input type="radio" id="adst2" /><label for="adst2">RAD</label>
+															<input type="radio" id="adst3" /><label for="adst3">CuREX</label>
+														</span>
 														<div class="fLset">
 																<input type="checkbox" id="mp1" /><label for="mp1">서울</label>
 																<input type="checkbox" id="mp2" /><label for="mp2">경기</label>
@@ -1121,7 +1133,7 @@
 												</tr>
 												<tr>
 													<th class="tit">월소득구간</th>
-													<td colspan="3">
+													<td colspan="5">
 														<select title="월소득구간 선택">
 															<option>150만원미만</option>
 														</select>
@@ -1130,7 +1142,7 @@
 												<tr>
 													<th class="groupTit" rowspan="3"><span>계약정보</span></th>
 													<th class="tit">본인/감사</th>
-													<td colspan="3">
+													<td colspan="5">
 														<span class="fLset">
 															<input type="radio" id="all4_1" /><label for="all4_1">전체</label>
 															<input type="radio" id="cntrt1_1" /><label for="cntrt1_1">본인</label>
@@ -1140,7 +1152,7 @@
 												</tr>
 												<tr>
 													<th class="tit">계약상태</th>
-													<td colspan="3">
+													<td colspan="5">
 														<span class="fLset">
 															<input type="radio" id="all4_2" /><label for="all4_2">전체</label>
 															<input type="radio" id="cntrt2_1" /><label for="cntrt2_1">실효</label>
@@ -1150,25 +1162,16 @@
 												</tr>
 												<tr>
 													<th class="tit">월(환산)보험료</th>
-													<td colspan="3">
+													<td colspan="5">
 														<input type="text" value="0" title="보험료입력" style="width:132px;" /> 원 ~
 														<input type="text" value="100,000" title="보험료입력" style="width:132px;" /> 원
 													</td>
 												</tr>
-												<tr>
-													<th class="tit">계약</th>
-													<td colspan="3">
-														<span class="fLset">
-															<input type="checkbox" id="cntr1" /><label for="cntr1">종신전환가능</label>
-															<input type="checkbox" id="cntr2" /><label for="cntr2">만기예정</label>
-															<input type="checkbox" id="cntr3" /><label for="cntr3">보험금 지급이력</label>
-														</span>
-													</td>
-												</tr>
+
 												<tr>
 													<th class="groupTit" rowspan="2"><span>이벤트</span></th>
 													<th class="tit">기념일</th>
-													<td colspan="3">
+													<td colspan="5">
 														<span class="fLset">
 															<input type="checkbox" id="ann1" /><label for="ann1">청약기념일</label>
 															<input type="checkbox" id="ann2" /><label for="ann2">생일</label>
@@ -1181,14 +1184,14 @@
 															~
 															<input type="text" readonly="readonly" style="width:83px" />
 															<a class="carendar" href="#"><span class="cdr">23</span></a>
-															<span class="today">Today</span>
-															<span class="today">Week</span>
+															<span class="today">오늘</span>
+															<span class="today">일주일</span>
 														</div>
 													</td>
 												</tr>
 												<tr>
 													<th class="tit">최근미방문기간</th>
-													<td colspan="3">
+													<td colspan="5">
 														<span class="fLset">
 															<input type="radio" id="vst1" /><label for="vst1">6개월</label>
 															<input type="radio" id="vst2" /><label for="vst2">1년</label>
@@ -1230,6 +1233,14 @@
 												<tr>
 													<td><input type="checkbox" title="행선택" /></td>
 													<td>LP가 등록한 태그명</td>
+												</tr>
+												<tr>
+													<td><input type="checkbox" title="행선택" /></td>
+													<td>LP소식지</td>
+												</tr>
+												<tr>
+													<td><input type="checkbox" title="행선택" /></td>
+													<td>LP소식지</td>
 												</tr>
 												<tr>
 													<td><input type="checkbox" title="행선택" /></td>

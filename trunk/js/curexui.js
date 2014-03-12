@@ -244,8 +244,8 @@ curexFront = {
 				if(detached){detached = false; $obj.removeClass("fixed");}
 			}
 		}
-	}
-	
+	},
+
 
 }
 
