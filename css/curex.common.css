@@ -107,10 +107,11 @@ table.listTable tbody td{border:1px solid #dedede; height:25px; padding:7px 0 5p
 .table1 td{border-left:1px solid #dedede; border-bottom:1px solid #dedede;}
 .table1 td.txtIn{padding-left:10px;}
 .table1 td p{line-height:15px;margin-top:2px;}
-.table1 td.baseImg{padding:25px 0 0 28px; background-color:#f4f4f4;vertical-align:top;}
+.table1 td.baseImg{padding:10px 0 0 15px; background-color:#f4f4f4;vertical-align:top;}
 .table1 td.baseImg div span{float:left;overflow:hidden;margin-right:9px;}
 .table1 td.baseImg div span img{width:65px;height:72px;}
-.table1 td.baseImg div ul{float:left;padding-top:24px;}
+.table1 td.baseImg div ul.ver1{float:left;padding-top:50px;}
+.table1 td.baseImg div ul.ver2{float:left;padding-top:24px;}
 .table1 td.baseImg div ul li{margin-top:4px;}
 .table1 td.baseImg div ul li:first-child{margin-top:0;}
 
@@ -123,6 +124,7 @@ table.listTable tbody td{border:1px solid #dedede; height:25px; padding:7px 0 5p
 	background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPgo8bGluZWFyR3JhZGllbnQgaWQ9Imc0MjgiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjAlIiB5Mj0iMTAwJSI+CjxzdG9wIHN0b3AtY29sb3I9IiNGQUZBRkEiIG9mZnNldD0iMCIvPjxzdG9wIHN0b3AtY29sb3I9IiNGMkYyRjIiIG9mZnNldD0iMSIvPgo8L2xpbmVhckdyYWRpZW50Pgo8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2c0MjgpIiAvPgo8L3N2Zz4=);
 }
 .table2 th:first-child{border-left:none;}
+.table2 th.suddenText{background:#fff;text-align:left;padding-left:10px;}
 .table2 td{border-left:1px solid #dedede; }
 
 /* table thead th, tfoot형 - From요소용 - */
