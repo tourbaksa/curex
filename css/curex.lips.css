@@ -33,3 +33,80 @@ a.cellDel{display:block;}
 #conteiner #contents tr.view .conTable table td:first-child{border-top:0;}
 
 .riderPlus table{border-top:0;}
+
+ul.lipsTab{overflow:hidden;}
+ul.lipsTab li{width:170px; float:left;}
+ul.lipsTab li:first-child{width:174px;}
+ul.lipsTab li a{display:block; text-align:center; height:38px; line-height:36px; background:#f3f2ee; border:1px solid #e5e6e8; font-size:14px;}
+ul.lipsTab li a span{background:url(/img/sub/bg_smartse_off.png) no-repeat 0 50%; display:inline-block; padding-left:19px;}
+ul.lipsTab li:first-child a span{background-image:url(/img/sub/bg_smartp_off.png);}
+ul.lipsTab li.active{color:#3669aa; height:38px;}
+ul.lipsTab li.active a{
+	color:#3669aa;
+	border-bottom:0;
+	border-top:3px solid #64ade5;
+	border-left:1px solid #e5e6e8; border-right:1px solid #e5e6e8;
+	line-height:35px;
+	height:38px;
+	background-color: #ffffff;
+	background-image: -webkit-gradient(linear, left bottom, left top, from(#ffffff), to(#eeeeee));
+	background-image: -webkit-linear-gradient(bottom, #ffffff, #eeeeee);
+	background-image: -moz-linear-gradient(bottom, #ffffff, #eeeeee);
+	background-image: -ms-linear-gradient(bottom, #ffffff, #eeeeee);
+	background-image: linear-gradient(bottom, #ffffff, #eeeeee);
+	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#eeeeee', endColorstr='#ffffff');
+}
+ul.lipsTab li.active a span{background-image:url(/img/sub/bg_smartse_on.png);}
+ul.lipsTab li:first-child a{border-left:1px solid ##e5e6e8; border-right:0;}
+ul.lipsTab li:first-child a span{border-left:1px solid ##e5e6e8; border-right:0;}
+ul.lipsTab li.active:first-child a span{background-image:url(/img/sub/bg_smartp_on.png);}
+
+/* 사망보장분석 */
+.nizWrap{border:1px solid #dedede;}
+.nizWrap .nizTit{
+	background-color: #f3f4f5;height:30px;line-height:30px;padding:0 5px 0 10px;
+	background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPgo8bGluZWFyR3JhZGllbnQgaWQ9Imc0MjgiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjAlIiB5Mj0iMTAwJSI+CjxzdG9wIHN0b3AtY29sb3I9IiNGQUZBRkEiIG9mZnNldD0iMCIvPjxzdG9wIHN0b3AtY29sb3I9IiNGMkYyRjIiIG9mZnNldD0iMSIvPgo8L2xpbmVhckdyYWRpZW50Pgo8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2c0MjgpIiAvPgo8L3N2Zz4=);
+}
+.nizWrap .nizTit{position:relative;border-top:1px solid #dedede; border-bottom:1px solid #dedede;}
+.nizWrap .nizTit a.btn{position:absolute;right:5px;top:3px;}
+.nizWrap .h5Tit{height:30px;background-color:#d0ebee;padding:6px 0 0 10px; position:relative;border-top:1px solid #dedede;}
+.nizWrap .h5Tit .more{position:absolute;right:5px;top:4px;}
+
+#conteiner #contents .graphWrap .title{font-size:20px; text-align:center; margin:17px 0 13px;}
+#conteiner #contents .graphWrap .title p.tit{background-color:#fff;margin:0 7px;position:relative;padding-bottom:15px;}
+#conteiner #contents .graphWrap .title p.bg{background-color:#01509f;height:22px;width:100%;margin-top:-15px;}
+
+
+#conteiner #contents .graphWrap .tit strong{color:#e8404f;}
+#conteiner #contents .graphWrap h3{font-size:14px;font-weight:bold;border-bottom:1px solid #dedede;padding-bottom:8px;}
+.graphWrap .graph{text-align:center;margin:20px 0 15px;}
+.graphWrap .graphTable:after{content:"";display:block;clear:both;}
+.graphWrap .graphTable .cir{width:310px; text-align:center;float:left;}
+.graphTable table{width:424px;border:1px solid #dedede;text-align:center;float:right;}
+.graphTable table tbody th{border-top:1px solid #fff;color:#fff;}
+.graphTable table tbody th:first-child{border-top:0;}
+.graphTable table tbody th.bgGreen{background-color:#3faf5d;}
+.graphTable table tbody th.bgAqua{background-color:#00ade2;}
+.graphTable table tbody th.bgNavy{background-color:#0c2156;}
+.graphTable table tbody th.bgBlue{background-color:#01509f;}
+.graphTable table tbody th.bgLgreen{background-color:#22b8c7;}
+.graphTable table tbody td{border-left:1px solid #dedede;border-top:1px solid #dedede;padding:9px 5px 7px;}
+.graphTable table tfoot td{background-color:#dde3ef;color:#00a2ff;text-align:right;padding:12px 15px 11px 0; font-size:14px;}
+.graphWrap .refer{padding-top:8px; margin-top:20px;border-top:1px solid #dedede;}
+
+/* 상세레이어팝업 */
+.detailView{position:absolute;left:270px;top:-10px;z-index:10;background:#fff;border:5px solid #dedede;width:755px;}
+.detailView h4{background-color:#00acde;color:#fff;font-size:14px;height:30px;line-height:30px;margin-bottom:15px; padding-left:15px;}
+.detailView .gap{padding:0 15px 10px;}
+.detailView div.detailC h5{font-size:14px; margin:8px 0;}
+.detailView div.detailC .hGroup5{position:relative;}
+.detailView div.detailC .hGroup5 p{position:absolute;right:0;top:0;}
+.detailView div.detailC .tableAd:after{content:"";display:block;clear:both;}
+.detailView div.detailC .tableAd table.table2{width:520px;float:left;}
+.detailView div.detailC .tableAd .adBox{width:184px;float:right;border:1px solid #dedede; text-align:center;color:#00a2ff;width:184px;height:63px;padding-top:15px;}
+
+
+/* colorBox */
+.sbxRed{width:8px;height:8px;background-color:#e8404f;display:inline-block;line-height:20px;vertical-align:middle;}
+.sbxGray{width:8px;height:8px;background-color:#959595;display:inline-block;line-height:20px;vertical-align:middle;}
+.sbxOrange{width:8px;height:8px;background-color:#ff9000;display:inline-block;line-height:20px;vertical-align:middle;}
