@@ -7,6 +7,7 @@ $(document).ready(function(){
 	if($("div.tab02").length){curexFront.tab();}
 	curexFront.rolling();
 	curexFront.event();
+	if($("div.timeSchedule").length){curexFront.carlendar();}
 });
 
 var curexFront ={};
@@ -87,6 +88,7 @@ curexFront = {
 
 		/* 산출기준레이어팝업 */
 		function standard(){
+			if(!$("div.smartPicWrap").length){return false;}
 			var flag ,
 				  stObj = $("div.smartPicWrap"),
 				  stObj_hw = stObj.height()/2,
@@ -245,7 +247,82 @@ curexFront = {
 			}
 		}
 	},
+	carlendar:function(){
+		var scope = this.op
+			, $obj = $(".timeSchedule", scope) || $(".timeSchedule")
+			, $objx = $obj.offset().left
+			, $objy = $obj.offset().top
+			, $objw = $obj.outerWidth()/2
+			, $objh = $obj.outerHeight()/2
+			, $btn1 = $obj.find("a.wkicon1") //기념일
+			, $btn2 = $obj.find("a.wkicon2") //활동관리
+			, $btn3 = $obj.find("a.wkicon3") //개인일정
+			, $popwrap = $("div.layerPopWrap2")
+			, $popbtn = $("a.btnClosePopup") //팝업닫기
+			, $tobdyList = $("#layerPop1")
+			, $tobdyMore = $("button.schedule_more") //일정표리스트
+			, $dateBtn = $("span.current a.close")
+			, $miniYear = $("div.mini_calender.year") //연간 미니캘린더
+			, $minimonth = $("div.mini_calender.month") //주간미니캘린더
 
+			$btn1.off().on({click: function(){opcenter($(this)); return false;}}); //기념일
+			$btn2.off().on({click: function(){opcenter($(this)); return false;}}); //활동관리
+			$btn3.off().on({click: function(){opcenter($(this)); return false;}}); //개인일정
+			var opcenter = function(e){
+					var idName = e.attr("href")
+						 , popObjw = $objw - $(idName).width()/2
+						 , popObjh = $objh - $(idName).height()/2
+
+					hide();
+					$(idName).css({
+						"display" : "block",
+						"left" : popObjw,
+						"top" : popObjh
+					})
+				}
+
+
+				$tobdyMore.on({ //today일정
+					click:function(e){
+						var posx =$objw -$tobdyList.width()/2
+							, posy =$objh -$tobdyList.height()/2
+	/*					var $tdw = $(this).closest("td")
+							, posx = $tdw.offset().left - $objx-1
+							, posy = $tdw.offset().top - $objy-1;*/
+							hide();
+						$("#layerPop1").css({
+							"display": "block",
+							"left" : posx,
+							"top" : posy
+						});
+					}
+				});
+
+				$dateBtn.off().on({
+					click:function(){
+						hide();
+						if ($("div.yearSel").hasClass("month")){
+							$("div.mini_calender").css({"display" : "none"})
+							$miniYear.css({"display": "block"})
+						}else {
+							$("div.mini_calender").css({"display" : "none"})
+							$minimonth.css({"display": "block"})
+						}
+						return false;
+					}
+				});
+
+				var hide = function(){
+					$popwrap.hide();
+					$miniYear.hide();
+					$minimonth.hide();
+				}
+
+
+				$popbtn.off().on({click: function(){$popwrap.hide(); return false;}}); //팝업닫기
+		
+
+	}
 
 }
 

@@ -25,11 +25,12 @@ div.layerPopWrap div.layerPopHdr h3{padding-left:8px; color:#363636; height:35px
 div.layerPopCnt{padding:10px 9px 9px 9px; border-bottom:1px solid #64ade5;}
 div.layerPopWrap a.btnClosePopup{position:absolute; right:9px; top:7px;}
 
-/* Layer popup type2 - 일정표페이지 */
-div.layerPopWrap2{position:relative; border:1px solid #64ade5; border-bottom:1px solid #d6d6d6;}
+/* Layer popup type2 - 일정표전용 팝업 */
+div.layerPopWrap2{position:absolute; border:1px solid #64ade5; border-bottom:1px solid #d6d6d6; background:#fff; left:0; top:0; display:none;}
 div.layerPopWrap2 div.layerPopHdr{height:36px; background:#f7f7f7; border-bottom:1px solid #e5e6e8; padding-left:9px; line-height:35px; color:#000;}
 div.layerPopWrap2 h3{margin:0 !important;}
 div.layerPopWrap2 div.layerPopCnt{padding:10px 9px 9px 9px; border-bottom:1px solid #64ade5;}
+div.layerPopWrap2 div.layerPopCnt .table1{border:1px solid #dedede;}
 div.layerPopWrap2 a.btnClosePopup{position:absolute; right:9px; top:7px;}
 
 /* 팝업공통 */
@@ -51,7 +52,7 @@ span.carAtvSearch{line-height:22px; display:block;}
 span.carAtvSearch a{float:right;}
 
 /* 일정표 스케줄리스트 더보기 */
-ul.smWorkList li{padding-left:16px;}
+ul.smWorkList li{padding-left:16px; line-height:17px;}
 ul.smWorkList li.wkicon1{background:url(/img/sub/wkicon1.gif) no-repeat 0 0;}
 ul.smWorkList li.wkicon2{background:url(/img/sub/wkicon2.gif) no-repeat 0 0;}
 ul.smWorkList li.wkicon3{background:url(/img/sub/wkicon3.gif) no-repeat 0 0;}

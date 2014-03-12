@@ -201,7 +201,7 @@ div.calendar div.yearSel button.ynext{background:url(/img/sub/btn_mkYnext.gif) n
 
 
 /* 달력 레이어 공통*/
-div.mini_calender{ position:absolute; left:50%; top:25px; border-bottom:1px solid #d1d1d1; z-index:1; padding:10px 0 0 0;}
+div.mini_calender{ position:absolute; left:50%; top:25px; border-bottom:1px solid #d1d1d1; z-index:1; padding:10px 0 0 0; display:none;}
 div.mini_calender div.monHdr{height:36px; border:1px solid #64ade5; border-bottom:1px solid #e5e6e8; background-color:#f7f7f7; text-align:center; padding:7px 0 0 0; position:relative;}
 div.mini_calender div.monHdr a.current{color:#363636; font-size:16px; font-weight:bold;display:inline-block; vertical-align:middle; width:128px; background:url(/img/sub/bg_monthCurrent.png) no-repeat 0 0; height:39px; margin-top:-17px; padding:18px 0 0 0;}
 div.mini_calender button.mbefore{background:url(/img/sub/btn_mkMbefore.gif) no-repeat 0 0; width:22px; height:22px; position:absolute; left:10px; top:8px;}
@@ -241,8 +241,10 @@ table.schedule tbody td div.schedule_list{width:85px; float:left;}
 table.schedule tbody td div.schedule_list a{letter-spacing:-1px;}
 table.schedule tbody td button.schedule_more{background-color:#319be7; width:21px; height:21px; position:absolute; right:-1px; bottom:-1px; color:#fff; font-size:11px;}
 
-div.calendarCnt td a{display:block; padding-left:16px; height:13px; line-height:13px; font-size:11px; word-spacing:-2px; margin-top:2px;}
-div.calendarCnt td a:first-child{margin-top:0;}
+div.calendarCnt td a.wkicon1,
+div.calendarCnt td a.wkicon2,
+div.calendarCnt td a.wkicon3{display:block; padding-left:16px; height:13px; line-height:13px; font-size:11px; word-spacing:-2px; margin-top:2px;}
+div.calendarCnt td a.wkicon1{margin-top:0;}
 div.calendarCnt td a.wkicon1{background:url(/img/sub/wkicon1.gif) no-repeat 0 0;}
 div.calendarCnt td a.wkicon2{background:url(/img/sub/wkicon2.gif) no-repeat 0 0;}
 div.calendarCnt td a.wkicon3{background:url(/img/sub/wkicon3.gif) no-repeat 0 0;}
@@ -285,12 +287,13 @@ div.worksetWrap div.btnWrap{border:1px solid #c6c6ce; border-top:1px solid #d4d4
 /*==========================
   일정표 - 주간&일간
 ============================*/
-div.timeSchedule{width:770px; float:left;}
+div.timeSchedule{width:770px; float:left; position:relative;}
 div.timeSchedule table{border:0;}
 div.timeSchedule table th,
 div.timeSchedule table td{border:1px solid #e5e6e8;}
 div.timeSchedule table thead th{background-color:#f9f9f9;}
-div.timeSchedule table td{height:18px; padding:0 0 0 5px;}
+div.timeSchedule.week table td,
+div.timeSchedule.day table td{height:18px; padding:0 0 0 5px;}
 div.timeSchedule table tr.specialDay th,
 div.timeSchedule table tr.specialDay td{background-color:#fcf9eb;}
 div.timeSchedule table th.sun{color:#e8404f;}
