@@ -130,4 +130,7 @@ table.popListTable th:first-child{border-left:0;}
 table.popListTable tbody td{border-left:1px solid #dedede; border-top:1px solid #dedede; height:25px;}
 .bderLN{border-left:0 !important;}
 
-
+/*==========================
+  스마트crm - 미리보기
+============================*/
+div.previewCont{min-height:490px;}
