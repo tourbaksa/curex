@@ -15,6 +15,22 @@
 .popTit .more{position:absolute;right:0;top:0;font-weight:bold;}
 .popTit h2{font-size:14px; font-weight:bold; color:#363636;}
 
+/*==========================
+   레이어팝업 레이아웃 type
+============================*/
+/* Layer popup type1 */
+div.layerPopWrap{position:relative; border:1px solid #64ade5; border-bottom:1px solid #d6d6d6;}
+div.layerPopWrap div.layerPopHdr{background:#f7f7f7; border-bottom:1px solid #e5e6e8;}
+div.layerPopWrap div.layerPopHdr h3{padding-left:8px; color:#363636; height:35px; line-height:35px; margin:0 !important;}
+div.layerPopCnt{padding:10px 9px 9px 9px; border-bottom:1px solid #64ade5;}
+div.layerPopWrap a.btnClosePopup{position:absolute; right:9px; top:7px;}
+
+/* Layer popup type2 - 일정표페이지 */
+div.layerPopWrap2{position:relative; border:1px solid #64ade5; border-bottom:1px solid #d6d6d6;}
+div.layerPopWrap2 div.layerPopHdr{height:36px; background:#f7f7f7; border-bottom:1px solid #e5e6e8; padding-left:9px; line-height:35px; color:#000;}
+div.layerPopWrap2 h3{margin:0 !important;}
+div.layerPopWrap2 div.layerPopCnt{padding:10px 9px 9px 9px; border-bottom:1px solid #64ade5;}
+div.layerPopWrap2 a.btnClosePopup{position:absolute; right:9px; top:7px;}
 
 /* 팝업공통 */
 .bderL{border-left:1px solid #dedede !important;}
@@ -22,18 +38,24 @@
 .popBox span.fLset1 input{margin-left:40px;}
 .popBox span.fLset1 input:first-child{margin-left:0;}
 
+/*==========================
+  smartCrm - 일정표
+============================*/
+/* 활동관리 & 개인일정 radio*/
 
-/* Layer popup */
-div.layerPopWrap{position:relative; border:1px solid #64ade5; border-bottom:1px solid #d6d6d6;}
-div.layerPopWrap div.layerPopHdr{background:#f7f7f7; border-bottom:1px solid #e5e6e8;}
-div.layerPopWrap div.layerPopHdr h3{padding-left:8px; color:#363636; height:35px; line-height:35px; margin:0 !important;}
-div.layerPopCnt{padding:10px 9px 9px 9px; border-bottom:1px solid #64ade5;}
-div.layerPopWrap a.btnClosePopup{position:absolute; right:9px; top:7px;}
-
-
-/* 활동관리 */
 span.carAtvSel{line-height:35px; display:inline-block; padding-left:9px;}
 span.carAtvSel label{color:#363636; margin:0 20px 0 4px; font-weight:bold;}
+
+/* 활동관리 & 개인일정 고객명 검색 */
+span.carAtvSearch{line-height:22px; display:block;}
+span.carAtvSearch a{float:right;}
+
+/* 일정표 스케줄리스트 더보기 */
+ul.smWorkList li{padding-left:16px;}
+ul.smWorkList li.wkicon1{background:url(/img/sub/wkicon1.gif) no-repeat 0 0;}
+ul.smWorkList li.wkicon2{background:url(/img/sub/wkicon2.gif) no-repeat 0 0;}
+ul.smWorkList li.wkicon3{background:url(/img/sub/wkicon3.gif) no-repeat 0 0;}
+
 
 /* 검색 */
 dl.searchZone{overflow:hidden; border:1px solid #dedede;}
@@ -107,4 +129,5 @@ table.popListTable th{
 table.popListTable th:first-child{border-left:0;}
 table.popListTable tbody td{border-left:1px solid #dedede; border-top:1px solid #dedede; height:25px;}
 .bderLN{border-left:0 !important;}
+
 

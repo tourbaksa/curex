@@ -40,11 +40,11 @@ ul.smartTab li.active:first-child a span{background-image:url(/img/sub/bg_smartp
 
 /* 스마트서비스 2tab */
 .sInrTab{ overflow:hidden; padding:8px 0 8px 8px; }
-.sInrTab li{float:left; width:40px;}
+.sInrTab li{float:left;}
 .sInrTab li a{color:#777777; display:block; border:1px solid #cccccc; border-left:0; border-right:0; text-align:center;}
-.sInrTab li a span{display:block; height:22px; line-height:22px;}
+.sInrTab li a span{display:block; line-height:22px; padding:0 9px 0 9px;}
 .sInrTab li.on a{display:block;background:#589df3; text-align:center; color:#fff; border:1px solid #3672c6;}
-.sInrTab li.on a span{display:block; border-top:1px solid #4b8dde; border-right:1px solid #4b8dde; height:22px; line-height:22px;}
+.sInrTab li.on a span{display:block; border-top:1px solid #4b8dde; border-right:1px solid #4b8dde; line-height:21px;}
 
 .sInrTab li:first-child a{
 	border-top-left-radius:2px;
@@ -163,60 +163,90 @@ div.compLayer a.spClose{position:absolute; right:10px; top:9px;}
 
 
 /*==========================
-  일정표
+  일정표 - 월간
 ============================*/
 div.sDuleHeader{overflow:hidden;}
-div.sDuleHeader ul.sInrTab{float:left;}
+div.sDuleHeader ul.sInrTab{float:left; padding:0;}
 div.sDuleHeader div.carUtil{float:right;}
 
-div.checkingBox{height:29px; overflow:hidden; margin:9px 0 10px 0; clear:both;}
-div.checkingBox dl{float:left; padding:3px 0 0 0;}
-div.checkingBox dt{margin:0 10px 0 19px;}
+ul.iconList{overflow:hidden; float:left; margin-left:10px;}
+ul.iconList li{float:left; height:24px;padding:5px 10px 0 0;}
+ul.iconList li img{margin:-2px 5px 0 0; vertical-align:middle;}
+
+div.checkingBox{height:33px; overflow:hidden; margin:9px 0 10px 0; clear:both; border:1px solid #dedede; border-left:0;}
+div.checkingBox dl{float:left;}
+div.checkingBox dt{margin:0 0 0 19px; background-color:#fafafa; width:41px; text-align:center; border-left:1px solid #dedede;}
 div.checkingBox dl dt:first-child{margin-left:0;}
-div.checkingBox dt,div.checkingBox dd{float:left;}
-div.checkingBox dd{height:29px; height:29px; padding:3px 0 0 0;}
+div.checkingBox dt,div.checkingBox dd{float:left; line-height:31px; height:31px;}
+div.checkingBox dd{height:31px; padding:0 0 0 10px; border-left:1px solid #dedede;}
 div.checkingBox dd input{margin:0 5px 0 10px;}
 div.checkingBox dd input:first-child{margin-left:0;}
 div.checkingBox dd input,div.checkingBox dd label{vertical-align:middle;}
-div.checkingBox a.lgBen{float:right;}
+div.checkingBox a.smGyRb{float:right; margin:5px 5px 0 0;}
 
 div.calendar{position:relative;}
-div.calendar div.yearSel{background:url(/img/sub/bg_sDuleHeader.gif) repeat-x 0 0; height:36px; border:1px solid #26a1d9; border-bottom:2px solid #1b7eb2; text-align:center; line-height:36px;}
-div.calendar div.yearSel button.ybefore{background:url(/img/sub/btn_mkYbefore.gif) no-repeat 0 0; width:20px; height:20px; vertical-align:top; margin:7px 0 0 0;}
-div.calendar div.yearSel span.current{ display:inline-block; width:183px;height:35px; width:183px; position:relative; text-align:left;}
-div.calendar div.yearSel span.current a.close{background:url(/img/sub/icon_ySelArwclose.gif) no-repeat 105px 50%; display:inline-block; padding-right:9px; width:121px; font-weight:bold; color:#fff; font-size:20px;  margin-left:20px;}
-div.calendar div.yearSel span.current a.carendar span.today{vertical-align:top; position:absolute; top:6px;  display:inline-block; right:0px;}
-div.calendar div.yearSel button.ynext{background:url(/img/sub/btn_mkYnext.gif) no-repeat 0 0; width:20px; height:20px; height:20px; vertical-align:top;margin:7px 0 0 25px;}
+div.calendar div.yearSel{background:url(/img/sub/bg_sDuleHeader.gif) repeat-x 0 0; height:30px; border:1px solid #26a1d9; border-bottom:2px solid #1b7eb2; text-align:center; line-height:36px;}
+div.calendar div.yearSel > span{display:inline-block; min-width:223px; height:30px; line-height:30px; text-align:left; position:relative; font-size:0; vertical-align:top;}
+div.calendar div.yearSel button,
+div.calendar div.yearSel span.current{vertical-align:top;}
+div.calendar div.yearSel button.ybefore{background:url(/img/sub/btn_mkYbefore.gif) no-repeat 0 0; width:20px; height:20px; margin:4px 0 0 0;}
+div.calendar div.yearSel span.current{ display:inline-block; min-width:162px; position:relative; text-align:left; height:27px; line-height:27px;}
+div.calendar div.yearSel span.current > a:first-child{background:url(/img/sub/icon_ySelArwclose.gif) no-repeat 100% 50%; display:inline-block; font-size:18px; min-width:113px; font-weight:bold; color:#fff; padding:0 21px 0 23px; margin-right:9px;}
+div.calendar div.yearSel span.current a.close{background-image:url(/img/sub/icon_ySelArwclose.gif);}
+div.calendar div.yearSel span.current a.carendar span.today{vertical-align:top; display:inline-block; width:36px; font-family:Myriad Pro; font-size:11px; background-color:#318eb9; margin:3px 25px 0 0;}
+div.calendar div.yearSel button.ynext{background:url(/img/sub/btn_mkYnext.gif) no-repeat 0 0; width:20px; height:20px; height:20px; margin:4px 0 0 0;}
+
+
+/* 달력 레이어 공통*/
+div.mini_calender{ position:absolute; left:50%; top:25px; border-bottom:1px solid #d1d1d1; z-index:1; padding:10px 0 0 0;}
+div.mini_calender div.monHdr{height:36px; border:1px solid #64ade5; border-bottom:1px solid #e5e6e8; background-color:#f7f7f7; text-align:center; padding:7px 0 0 0; position:relative;}
+div.mini_calender div.monHdr a.current{color:#363636; font-size:16px; font-weight:bold;display:inline-block; vertical-align:middle; width:128px; background:url(/img/sub/bg_monthCurrent.png) no-repeat 0 0; height:39px; margin-top:-17px; padding:18px 0 0 0;}
+div.mini_calender button.mbefore{background:url(/img/sub/btn_mkMbefore.gif) no-repeat 0 0; width:22px; height:22px; position:absolute; left:10px; top:8px;}
+div.mini_calender button.mnext{background:url(/img/sub/btn_mkMnext.gif) no-repeat 0 0; width:22px; height:22px; position:absolute; right:10px; top:8px}
 
 /* 월선택 레이어 */
-div.monthSelLayer{position:absolute; left:50%; top:31px; margin-left:-105px; height:147px; width:192px;  padding:10px 0 0 0; border-bottom:1px solid #d1d1d1;}
-div.monthSelLayer div.monHdr{width:192px;height:36px; border:1px solid #64ade5; border-bottom:1px solid #e5e6e8; background-color:#f7f7f7; text-align:center; padding:7px 0 0 0; position:relative;}
-div.monthSelLayer div.monHdr a.current{color:#363636; font-size:16px; font-weight:bold;display:inline-block; vertical-align:middle; width:128px; background:url(/img/sub/bg_monthCurrent.png) no-repeat 0 0; height:39px; position:absolute; left:32px; top:-10px; padding:18px 0 0 0;}
-div.monthSelLayer button.mbefore{background:url(/img/sub/btn_mkMbefore.gif) no-repeat 0 0; width:22px; height:22px; position:absolute; left:10px; top:8px;}
-div.monthSelLayer button.mnext{background:url(/img/sub/btn_mkMnext.gif) no-repeat 0 0; width:22px; height:22px; position:absolute; right:10px; top:8px}
-div.monthSelLayer div.monthSet{width:192px; border:1px solid #64ade5; border-top:0; overflow:hidden; height:100px; padding:12px 0 0 5px; background-color:#fff;}
-div.monthSelLayer div.monthSet button{background:#fff; border:1px solid #cccccc; border-radius:2px; -moz-border-radius:2px; -webkit-border-radius:2px; -ms-border-radius:2px; color:#707070; height:24px; width:40px; float:left; margin:0 0 3px 4px;}
+div.mini_calender.year{display:none; margin-left:-105px; height:147px; width:192px;}
+div.mini_calender.year div.monthSet{width:192px; border:1px solid #64ade5; border-top:0; overflow:hidden; height:100px; padding:12px 0 0 5px; background-color:#fff;}
+div.mini_calender.year div.monthSet button{background:#fff; border:1px solid #cccccc; border-radius:2px; -moz-border-radius:2px; -webkit-border-radius:2px; -ms-border-radius:2px; color:#707070; height:24px; width:40px; float:left; margin:0 0 3px 4px;}
+
+/* 일선택 레이어 */
+div.mini_calender.month{margin-left:-140px; width:278px;}
+div.mini_calender.month div.dataTable{ background-color:#fff; border:1px solid #64ade5; border-top:0; padding:0 7px 6px 7px;}
+div.mini_calender.month table{border:0;}
+div.mini_calender.month table th,
+div.mini_calender.month table td{border:0;}
+div.mini_calender.month table th.sun{color:#e8404f;}
+div.mini_calender.month table th.sat{color:#00a2ff;}
+div.mini_calender.month table td a{width:34px; display:block; height:16px; line-height:16px; text-align:center;}
+div.mini_calender.month table td a.prevMon{color:#b2b2b2;}
+
+
+
 /* 월선택시  */
 div.monthSelLayer div.monthSet button.on{background-color:#0084ff; color:#fff; border:0;}
+div.calendarCnt{margin:5px 0 20px 0; overflow:hidden;}
+table.schedule{ float:left; width:769px;}
+table.schedule th,
+table.schedule td{border:1px solid #e5e6e8;}
+table.schedule thead th{background:#f9f9f9; height:21px; padding:0;}
+table.schedule tbody td.sun{color:#e8404f;}
+table.schedule tbody td.sat{color:#00a2ff;}
+table.schedule tbody td {vertical-align:top; padding:0; position:relative;}
+table.schedule tbody td > div{ padding:7px 5px 5px 9px;width:100%;  height:87px; position:relative;}
+table.schedule tbody td > div strong{float:right; margin-top:-2px; font-weight:normal;}
+table.schedule tbody td div.schedule_list{width:85px; float:left;}
+table.schedule tbody td div.schedule_list a{letter-spacing:-1px;}
+table.schedule tbody td button.schedule_more{background-color:#319be7; width:21px; height:21px; position:absolute; right:-1px; bottom:-1px; color:#fff; font-size:11px;}
 
-div.calendarCnt{margin:10px 0 0 0; overflow:hidden; margin:0 0 20px 0;}
-div.calendarCnt table{ float:left; width:769px;}
-div.calendarCnt table th,
-div.calendarCnt table td{border:1px solid #e5e6e8;}
-div.calendarCnt table thead th{background:#f9f9f9;}
-div.calendarCnt table tbody td.sun{color:#e8404f;}
-div.calendarCnt table tbody td.sat{color:#00a2ff;}
-div.calendarCnt table tbody td {vertical-align:top; padding:0;}
-div.calendarCnt table tbody td > div{padding:9px 5px 5px 9px;width:100%;  height:78px;}
-div.calendarCnt table td a.work{display:block; padding-left:20px; height:15px; line-height:15px; font-size:11px; word-spacing:-2px;}
-div.calendarCnt table td a.work:first-child{margin-top:4px;}
-div.calendarCnt table td a.wkicon_s1{background:url(/img/sub/wkico_sm1.gif) no-repeat 0 0;}
-div.calendarCnt table td a.wkicon_s2{background:url(/img/sub/wkico_sm2.gif) no-repeat 0 0;}
-div.calendarCnt table td a.wkicon_s3{background:url(/img/sub/wkico_sm3.gif) no-repeat 0 0;}
+div.calendarCnt td a{display:block; padding-left:16px; height:13px; line-height:13px; font-size:11px; word-spacing:-2px; margin-top:2px;}
+div.calendarCnt td a:first-child{margin-top:0;}
+div.calendarCnt td a.wkicon1{background:url(/img/sub/wkicon1.gif) no-repeat 0 0;}
+div.calendarCnt td a.wkicon2{background:url(/img/sub/wkicon2.gif) no-repeat 0 0;}
+div.calendarCnt td a.wkicon3{background:url(/img/sub/wkicon3.gif) no-repeat 0 0;}
 
-div.worksetWrap{width:245px; float:right; border-bottom:1px solid #dedede;}
-div.worksetWrap h3{height:35px;background-color:#80dbe4; border:1px solid #75cbd4; border-bottom:2px solid #3dabb6; margin:0 !important;}
-div.worksetWrap h3 span{display:inline-block; background:url(/img/sub/icon_wkCalendar.gif) no-repeat 8px 7px; padding-left:36px; font-size:13px; color:#fff; line-height:32px;}
+div.worksetWrap{width:245px; float:right;}
+div.worksetWrap h3{height:30px; background-color:#80dbe4; border:1px solid #75cbd4; border-bottom:2px solid #3dabb6; margin:0 !important;}
+div.worksetWrap h3 span{display:inline-block; background:url(/img/sub/icon_wkCalendar.gif) no-repeat 8px 4px; padding-left:36px; font-size:13px; color:#fff; line-height:27px;}
 
 /* 일정관리탭 */
 ul.sDuleTab{border-top:1px solid #cacaca; background:#f7f7f8 url(/img/sub/bg_sDuleTab.gif) repeat-x 0 100%; overflow:hidden; border-right:1px solid #dedede;}
@@ -224,28 +254,59 @@ ul.sDuleTab li{float:left; width:80px; border:1px solid #e6e6e7; border-left:1px
 ul.sDuleTab li a{display:block; text-align:center; height:31px; border-top:2px solid #ffffff; line-height:25px;}
 ul.sDuleTab li.on a{ border-top:1px solid #f4f4f4; border-right:1px solid #f4f4f4; border-left:1px solid #fcfcfd; background:#fff;}
 
-div.workcnt {border-left:1px solid #dedede; border-right:1px solid #dedede; overflow-y:scroll; overflow-x:hidden; height:358px;}
-/* 일정 정렬*/
-div.workcnt span.workSort{display:block; border-bottom:1px solid #e5e6e8; height:30px; line-height:30px; padding:0 0 0 8px;}
-div.workcnt span.workSort label{margin:0 10px 0 3px;}
+div.workcnt {border-left:1px solid #dedede; border-right:1px solid #dedede; overflow-y:scroll; overflow-x:hidden; height:397px;}
+div.workcnt ul.worklist{}
+div.workcnt ul.worklist li{}
+div.workcnt ul.worklist li > strong{height:19px; border-top:1px solid #fff; display:block; line-height:19px; text-align:center; font-weight:normal;
+	background-color: #fafafa;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#fafafa), to(#f3f3f3));
+	background-image: -webkit-linear-gradient(top, #fafafa, #f3f3f3);
+	background-image: -moz-linear-gradient(top, #fafafa, #f3f3f3);
+	background-image: -ms-linear-gradient(top, #fafafa, #f3f3f3);
+	background-image: linear-gradient(top, #fafafa, #f3f3f3);
+	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#fafafa', endColorstr='#f3f3f3');
 
-div.workcnt > ul > li {border-top:1px solid #dedede;}
-div.workcnt > ul > li:first-child{border-top:0;}
-div.workcnt div.worktit span{float:left;}
-div.workcnt div.worktit span + span{margin-left:10px; line-height:14px; letter-spacing:-1px;}
-div.workcnt div.worktit{overflow:hidden; height:42px; padding:5px 8px 5px 10px; border-bottom:1px dashed #e5e6e8; width:100%;}
-div.workcnt div.worktit > span:first-child{float:left; width:26px; height:26px; line-height:0; font-size:0; overflow:hidden; text-indent:-9999px; margin-left:0;}
-div.workcnt div.worktit span.wkicon1{background:url(/img/sub/wkico_lg1.gif) no-repeat 0 0;}
-div.workcnt div.worktit span.wkicon2{background:url(/img/sub/wkico_lg2.gif) no-repeat 0 0;}
-div.workcnt div.worktit span.wkicon3{background:url(/img/sub/wkico_lg3.gif) no-repeat 0 0;}
-div.workcnt div.worktit button{margin-left:22px; float:right;}
-div.workcnt ul.worklist{clear:both; padding:0 0 9px 11px;}
-div.workcnt ul.worklist li{background:url(/img/sub/blt_wkArrow.gif) no-repeat 0 50%; padding-left:9px; line-height:17px;}
+}
+div.workcnt ul.worklist li table{border:0;}
+div.workcnt ul.worklist li table thead tr th{height:23px; padding:0;
+	background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPgo8bGluZWFyR3JhZGllbnQgaWQ9Imc1NzkiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjAlIiB5Mj0iMTAwJSI+CjxzdG9wIHN0b3AtY29sb3I9IiNGQUY5RjkiIG9mZnNldD0iMCIvPjxzdG9wIHN0b3AtY29sb3I9IiNGMkYzRjIiIG9mZnNldD0iMSIvPgo8L2xpbmVhckdyYWRpZW50Pgo8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2c1NzkpIiAvPgo8L3N2Zz4=);
+}
+div.workcnt ul.worklist li table tbody tr td{padding:0; text-align:center; height:23px;}
+div.workcnt ul.worklist li table thead tr th,
+div.workcnt ul.worklist li table tbody tr td{border:1px solid #e6e6e7; border-right:0;}
+div.workcnt ul.worklist li table thead > tr > th:first-child,
+div.workcnt ul.worklist li table tbody > tr > td:first-child{border-left:0;}
+div.worksetWrap div.btnWrap{border:1px solid #c6c6ce; border-top:1px solid #d4d4d4; height:35px; padding:5px 0 0 0; text-align:center;}
 
-div.calenderWrap .table1 thead tr.tRow th,
-div.calenderWrap .table1 tbody th{background:none;}
-div.calenderWrap .table1 th,
-div.calenderWrap .table1 td{text-align:center;}
+
+/*==========================
+  일정표 - 주간&일간
+============================*/
+div.timeSchedule{width:770px; float:left;}
+div.timeSchedule table{border:0;}
+div.timeSchedule table th,
+div.timeSchedule table td{border:1px solid #e5e6e8;}
+div.timeSchedule table thead th{background-color:#f9f9f9;}
+div.timeSchedule table td{height:18px; padding:0 0 0 5px;}
+div.timeSchedule table tr.specialDay th,
+div.timeSchedule table tr.specialDay td{background-color:#fcf9eb;}
+div.timeSchedule table th.sun{color:#e8404f;}
+div.timeSchedule table th.sat{color:#00a2ff;}
+
+
+div.timeSchedule.week{ overflow-y:scroll; overflow-x:hidden; height:462px; border-bottom:1px solid #e5e6e8; border-left:1px solid #e5e6e8;}
+div.timeSchedule.week table{margin-bottom:20px;}
+div.timeSchedule.week th,
+div.timeSchedule.week td{border:1px solid #e5e6e8; border-right:0;}
+div.timeSchedule.week table thead > tr > th:first-child,
+div.timeSchedule.week table tbody > tr > th:first-child{border-left:0;}
+
+div.timeSchedule.day{}
+
+div.statisTable .table1 thead tr.tRow th,
+div.statisTable .table1 tbody th{background:none;}
+div.statisTable .table1 th,
+div.statisTable .table1 td{text-align:center;}
 
 
 /*==========================

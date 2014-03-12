@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title> 월간 일정표 </title>
+<title> 주간 일정표 </title>
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
 <link rel="stylesheet" href="/css/common.css" type="text/css" />
@@ -555,7 +555,6 @@
 		<div id="contents" class="clear-fix">
 			<div class="calenderWrap">
 				<div class="sDuleHeader">
-					<!-- 탭 -->
 					<ul class="sInrTab">
 						<li><a href="#"><span>월간</span></a></li>
 						<li class="on"><a href="#"><span>주간</span></a></li>
@@ -602,7 +601,7 @@
 					<div class="yearSel">
 						<span>
 							<button class="ybefore"><span>이전 달 보기</span></button>
-							<span class="current"><a class="close" href="#none">2013.02</a> <a class="carendar" href="#"><span class="today">Today</span></a></span>
+							<span class="current"><a class="close" href="#none">2014.02.10(월) - 2014.02.16(일)</a> <a class="carendar" href="#"><span class="today">Today</span></a></span>
 							<button href="#none" class="ynext"><span>다음 달 보기</span></button>
 						</span>
 					</div>
@@ -631,7 +630,7 @@
 					<div class="mini_calender month">
 						<div class="monHdr">
 							<button class="mbefore"><span>이전 달 보기</span></button>
-							<a class="current" href="#none">2013.02 </a>
+							<a class="current" href="#none">August.2014 </a>
 							<button class="mnext"><span>다음 달 보기</span></button>
 						</div>
 						<div class="dataTable">
@@ -710,82 +709,137 @@
 							</table>
 						</div>
 					</div>
+
+
 					<div class="calendarCnt">
-						<table summary="월, 화 , 수, 목, 금, 토, 일" class="schedule">
-							<caption>달력</caption>
-							<thead>
+						<div class="timeSchedule day">
+							<table summary="시간별 일간일정정보를 제공합니다." width="100%">
+								<caption>일간일정</caption>
+								<colgroup>
+									<col width="10%" />
+									<col width="40%" />
+									<col width="10%" />
+									<col width="*" />
+								</colgroup>
+								<thead>
 								<tr>
-									<th class="sun">일</th>
-									<th>월</th>
-									<th>화</th>
-									<th>수</th>
-									<th>목</th>
-									<th>금</th>
-									<th class="sat">토</th>
+									<th scope="col">시간</th>
+									<th scope="col" class="sun" colspan="3">일(02.16)</th> <!-- 일요일 class="sun", 토요일 class="sat" -->
 								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<!-- 셀에 날짜나 일정같은 데이터가 있으면 항상 div로 감싸줍니다. (height fix용)-->
-									<td class="sun"></td>
-									<td></td>
-									<td>
-										<div>
-											<strong>1</strong>
-											<div class="schedule_list">
-												<a href="#none" class="wkicon1">[생일]신*롬</a>
-												<a href="#none" class="wkicon2">[활동명]김*헌</a>
-												<a href="#none" class="wkicon3">[LP개인일 ...]</a>
-												<a href="#none" class="wkicon1">[활동명]김*헌</a>
-												<a href="#none" class="wkicon2">[생일]신*롬</a>
-											</div>
-											<button type="button" class="schedule_more"><strong>+20</strong></button>
-										</div>
-									</td>
-									<td><div><strong>2</strong></td>
-									<td><div><strong>3</strong></div></td>
-									<td><div><strong>4</strong></div></td>
-									<td class="sat"><div><strong>5</strong></div></td>
-								</tr>
-								<tr>
-									<td class="sun"><div><strong>6</strong></div></td>
-									<td><div><strong>7</strong></div></td>
-									<td><div><strong>8</strong></div></td>
-									<td><div><strong>9</strong></div></td>
-									<td><div><strong>10</strong></div></td>
-									<td><div><strong>11</strong></div></td>
-									<td class="sat"><div><strong>12</strong></div></td>
-								</tr>
-								<tr>
-									<td class="sun"><div><strong>13</strong></div></td>
-									<td><div><strong>14</strong></div></td>
-									<td><div><strong>15</strong></div></td>
-									<td><div><strong>16</strong></div></td>
-									<td><div><strong>17</strong></div></td>
-									<td><div><strong>18</strong></div></td>
-									<td class="sat"><div><strong>19</strong></div></td>
-								</tr>
-								<tr>
-									<td class="sun"><div><strong>20</strong></div></td>
-									<td><div><strong>21</strong></div></td>
-									<td><div><strong>22</strong></div></td>
-									<td><div><strong>23</strong></div></td>
-									<td><div><strong>24</strong></div></td>
-									<td><div><strong>25</strong></div></td>
-									<td class="sat"><div><strong>26</strong></div></td>
-								</tr>
-								<tr>
-									<td class="sun"><div><strong>27</strong></div></td>
-									<td><div><strong>28</strong></div></td>
-									<td><div><strong>29</strong></div></td>
-									<td><div><strong>30</strong></div></td>
-									<td><div><strong>31</strong></td>
-									<td></td>
-									<td class="sat"></td>
-								</tr>
-							</tbody>
-						</table>
-						
+								</thead>
+								<tbody>
+									<tr class="specialDay">
+										<th scope="row">기념일</th>
+										<td colspan="3"></td>
+									</tr>
+									<tr class="specialDay">
+										<th scope="row">종일일정</th>
+										<td colspan="3"></td>
+									</tr>
+									<tr>
+										<th rowspan="2">06:00</th>
+										<td></td>
+										<th rowspan="2">16:00</th>
+										<td></td>
+									</tr>
+									<tr>
+										<td></td>
+										<td></td>
+									</tr>
+									<tr>
+										<th rowspan="2">07:00</th>
+										<td></td>
+										<th rowspan="2">17:00</th>
+										<td></td>
+									</tr>
+									<tr>
+										<td></td>
+										<td></td>
+									</tr>
+									<tr>
+										<th rowspan="2">08:00</th>
+										<td></td>
+										<th rowspan="2">18:00</th>
+										<td></td>
+									</tr>
+									<tr>
+										<td></td>
+										<td></td>
+									</tr>
+									<tr>
+										<th rowspan="2">09:00</th>
+										<td></td>
+										<th rowspan="2">19:00</th>
+										<td></td>
+									</tr>
+									<tr>
+										<td></td>
+										<td></td>
+									</tr>
+									<tr>
+										<th rowspan="2">10:00</th>
+										<td></td>
+										<th rowspan="2">20:00</th>
+										<td></td>
+									</tr>
+									<tr>
+										<td></td>
+										<td></td>
+									</tr>
+									<tr>
+										<th rowspan="2">11:00</th>
+										<td></td>
+										<th rowspan="2">21:00</th>
+										<td></td>
+									</tr>
+									<tr>
+										<td></td>
+										<td></td>
+									</tr>
+									<tr>
+										<th rowspan="2">12:00</th>
+										<td></td>
+										<th rowspan="2">22:00</th>
+										<td></td>
+									</tr>
+									<tr>
+										<td></td>
+										<td></td>
+									</tr>
+									<tr>
+										<th rowspan="2">13:00</th>
+										<td></td>
+										<th rowspan="2">24:00</th>
+										<td></td>
+									</tr>
+									<tr>
+										<td></td>
+										<td></td>
+									</tr>
+									<tr>
+										<th rowspan="2">14:00</th>
+										<td></td>
+										<th rowspan="2">24:00</th>
+										<td></td>
+									</tr>
+									<tr>
+										<td></td>
+										<td></td>
+									</tr>
+									<tr>
+										<th rowspan="2">15:00</th>
+										<td></td>
+										<th rowspan="2"></th>
+										<td></td>
+									</tr>
+									<tr>
+										<td></td>
+										<td></td>
+									</tr>
+
+								</tbody>
+							</table>
+						</div>
 						<div class="worksetWrap">
 							<h3><span>활동계획</span></h3>
 							<div class="workcnt">
@@ -1271,7 +1325,6 @@
 						</tbody>
 					</table>
 				</div>
-
 			</div>
 		</div>
 		<!-- //공통 컨텐츠 -->

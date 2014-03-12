@@ -84,25 +84,47 @@ curexFront = {
 				});
 			});
 
-			/* 산출기준레이어팝업 */
+
+		/* 산출기준레이어팝업 */
+		function standard(){
+			var flag ,
+				  stObj = $("div.smartPicWrap"),
+				  stObj_hw = stObj.height()/2,
+				  stObj_y = stObj.position().top
+
 			$spClose.off().on({
 				click:function(){
-					var popObj = $(this).closest("div.spBox").find("div.compLayer");
+					var popObj = $("div.spBox").find("div.compLayer");
 					popObj.css({"display" : "none"})
 					return false;
 				}
 			});
 
-			/* 산출기준레이어팝업닫기 */
-			$bePointBtn.each(function(){
+			$bePointBtn.each(function(idx){
 				$(this).off().on({
-					click:function(){
-						var popObj = $(this).closest("div.spBox").find("div.compLayer");
-						popObj.css({"display" : "block"})
+					click:function(e){
+						var spBox = $(this).closest("div.spBox"),
+							  popObjLayer = spBox.find("div.compLayer"),
+							  spBoxy = spBox.position().top,
+							  posy= spBoxy- stObj_y;
+
+						if (posy > stObj_hw){
+							stObj.animate({
+								scrollTop : spBoxy
+							},"fast");
+						}
+
+						$("div.spBox").eq(flag).find("div.compLayer").css({"display" : "none"});
+						popObjLayer.css({"display" : "block"})
+
+						flag = idx;
 						return false;
 					}
 				});
 			});
+		}
+		standard();
+
 
 	},
 

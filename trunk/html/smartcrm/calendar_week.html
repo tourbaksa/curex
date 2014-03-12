@@ -555,49 +555,57 @@
 		<div id="contents" class="clear-fix">
 			<div class="calenderWrap">
 				<div class="sDuleHeader">
-					<!-- 탭 -->
 					<ul class="sInrTab">
 						<li><a href="#"><span>월간</span></a></li>
 						<li class="on"><a href="#"><span>주간</span></a></li>
 						<li class="last"><a href="#"><span>일간</span></a></li>
 					</ul>
-
+					<ul class="iconList">
+						<li><img src="/img/sub/wkicon1.gif" alt="" />개인일정</li>
+						<li><img src="/img/sub/wkicon2.gif" alt="" />활동관리</li>
+						<li><img src="/img/sub/wkicon3.gif" alt="" />기념일관리</li>
+					</ul>
 					<div class="carUtil">
-						<a href="#" class="btn smGnR">인쇄</a>
+						<a href="#" class="btn smGnR">일정등록</a>
+						<a href="#" class="btn smGnR">화면인쇄</a>
+						<a href="#" class="btn smGnR">활동예정/결과표 인쇄</a>
 						<a href="#" class="btn smGnR">계정연동</a>
-						<a href="#" class="btn smGnR"><span class="sync">&nbsp;</span>동기화설정</a>
 					</div>
-					<div class="checkingBox">
-						<dl>
-							<dt><img src="/img/sub/wkico_Nm1.gif" alt="고객선택" /></dt>
-							<dd>
-								<input type="checkbox" id="prsn1" /><label for="prsn1">전체고객</label>
-								<input type="checkbox" id="prsn2" /><label for="prsn2">계약고객</label>
-								<input type="checkbox" id="prsn3" /><label for="prsn3">가망고객</label>
-							</dd>
-							<dt><img src="/img/sub/wkico_Nm2.gif" alt="일정" /></dt>
-							<dd>
-								<input type="checkbox" id="sdle1" /><label for="sdle1">전체</label>
-								<input type="checkbox" id="sdle2" /><label for="sdle2">활동관리</label>
-								<input type="checkbox" id="sdle3" /><label for="sdle3">개인일정</label>
-							</dd>
-							<dt><img src="/img/sub/wkico_Nm3.gif" alt="기념일" /></dt>
-							<dd>
-								<input type="checkbox" id="anvy1" /><label for="anvy1">전체</label>
-								<input type="checkbox" id="anvy2" /><label for="anvy2">활동관리</label>
-								<input type="checkbox" id="anvy3" /><label for="anvy3">개인일정</label>
-							</dd>
-						</dl>
-						<a class="btn lgBen" href="#none">적용</a>
-					</div>
+				</div>
+				<div class="checkingBox">
+					<dl>
+						<dt>고객</dt>
+						<dd>
+							<input type="checkbox" id="prsn1" /><label for="prsn1">전체고객</label>
+							<input type="checkbox" id="prsn2" /><label for="prsn2">계약고객</label>
+							<input type="checkbox" id="prsn3" /><label for="prsn3">가망고객</label>
+						</dd>
+						<dt>일정</dt>
+						<dd>
+							<input type="checkbox" id="sdle1" /><label for="sdle1">전체</label>
+							<input type="checkbox" id="sdle2" /><label for="sdle2">활동관리</label>
+							<input type="checkbox" id="sdle3" /><label for="sdle3">개인일정</label>
+						</dd>
+						<dt>기념일</dt>
+						<dd>
+							<input type="checkbox" id="anvy1" /><label for="anvy1">전체</label>
+							<input type="checkbox" id="anvy2" /><label for="anvy2">생일</label>
+							<input type="checkbox" id="anvy3" /><label for="anvy3">결혼기념일</label>
+							<input type="checkbox" id="anvy4" /><label for="anvy4">청약기념일</label>
+							<input type="checkbox" id="anvy5" /><label for="anvy5">가족기념일</label>
+						</dd>
+					</dl>
+					<a class="btn smGyRb" href="#none">적용</a>
 				</div>
 				<div class="calendar">
 					<div class="yearSel">
-						<button class="ybefore"><span>이전 달 보기</span></button>
-						<span class="current"><a class="close" href="#none">2013.02</a> <a class="carendar" href="#"><span class="today">Today</span></a></span>
-						<button href="#none" class="ynext"><span>다음 달 보기</span></button>
+						<span>
+							<button class="ybefore"><span>이전 달 보기</span></button>
+							<span class="current"><a class="close" href="#none">2014.02.10(월) - 2014.02.16(일)</a> <a class="carendar" href="#"><span class="today">Today</span></a></span>
+							<button href="#none" class="ynext"><span>다음 달 보기</span></button>
+						</span>
 					</div>
-					<div class="monthSelLayer">
+					<div class="mini_calender year">
 						<div class="monHdr">
 							<button class="mbefore"><span>이전 달 보기</span></button>
 							<a class="current" href="#none">2013.02 </a>
@@ -618,8 +626,93 @@
 							<button type="button"><em>12월</em></button>
 						</div>
 					</div>
+
+					<div class="mini_calender month">
+						<div class="monHdr">
+							<button class="mbefore"><span>이전 달 보기</span></button>
+							<a class="current" href="#none">August.2014 </a>
+							<button class="mnext"><span>다음 달 보기</span></button>
+						</div>
+						<div class="dataTable">
+							<table summary="월별 날짜 정보를 제공합니다." width="100%">
+								<caption>미니캘린더</caption>
+								<colgroup>
+									<col width="27" span="7">
+								</colgroup>
+								<thead>
+								<tr>
+									<th scope="col" class="sun">SUN</th>
+									<th scope="col">MON</th>
+									<th scope="col">TUE</th>
+									<th scope="col">WED</th>
+									<th scope="col">THU</th>
+									<th scope="col">FRI</th>
+									<th scope="col" class="sat">SAT</th>
+								</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td><a href="#" class="prevMon">26</a></td>
+										<td><a href="#" class="prevMon">27</a></td>
+										<td><a href="#" class="prevMon">28</a></td>
+										<td><a href="#" class="prevMon">29</a></td>
+										<td><a href="#" class="prevMon">30</a></td>
+										<td><a href="#" class="prevMon">31</a></td>
+										<td><a href="#">1</a></td>
+									</tr>
+									<tr>
+										<td><a href="#">2</a></td>
+										<td><a href="#">3</a></td>
+										<td><a href="#">4</a></td>
+										<td><a href="#">5</a></td>
+										<td><a href="#">6</a></td>
+										<td><a href="#">7</a></td>
+										<td><a href="#">8</a></td>
+									</tr>
+									<tr>
+										<td><a href="#">9</a></td>
+										<td><a href="#">10</a></td>
+										<td><a href="#">11</a></td>
+										<td><a href="#">12</a></td>
+										<td><a href="#">13</a></td>
+										<td><a href="#">14</a></td>
+										<td><a href="#">15</a></td>
+									</tr>
+									<tr>
+										<td><a href="#">16</a></td>
+										<td><a href="#">17</a></td>
+										<td><a href="#">18</a></td>
+										<td><a href="#">19</a></td>
+										<td><a href="#">20</a></td>
+										<td><a href="#">21</a></td>
+										<td><a href="#">22</a></td>
+									</tr>
+									<tr>
+										<td><a href="#">23</a></td>
+										<td><a href="#">24</a></td>
+										<td><a href="#">25</a></td>
+										<td><a href="#">26</a></td>
+										<td><a href="#">27</a></td>
+										<td><a href="#">28</a></td>
+										<td><a href="#">29</a></td>
+									</tr>
+									<tr>
+										<td><a href="#">30</a></td>
+										<td><a href="#">31</a></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+
+
 					<div class="calendarCnt">
-						<div class="weekScd">
+						<div class="timeSchedule week">
 							<table summary="시간, 날짜별 주간일정정보를 제공합니다." width="100%">
 								<caption>주간일정</caption>
 								<colgroup>
@@ -630,13 +723,13 @@
 								<thead>
 								<tr>
 									<th scope="col">시간</th>
-									<th scope="col">일(02.16)</th>
+									<th scope="col" class="sun">일(02.16)</th>
 									<th scope="col">월(02.10)</th>
 									<th scope="col">화(02.11)</th>
 									<th scope="col">수(02.12)</th>
 									<th scope="col">목(02.13)</th>
 									<th scope="col">금(02.14)</th>
-									<th scope="col">토(02.15)</th>
+									<th scope="col" class="sat">토(02.15)</th>
 								</tr>
 								</thead>
 								<tbody>
@@ -658,6 +751,7 @@
 										<td></td>
 										<td></td>
 										<td></td>
+										<td></td>
 									</tr>
 									<tr>
 										<th scope="row" rowspan="2">06:00</th>
@@ -671,7 +765,7 @@
 									</tr>
 									<tr>
 										<td></td>
-										<td><a href="#none" class="work wkicon_s3">[활동명] 신*롬</a></td>
+										<td><a href="#none" class="wkicon3">[활동명] 신*롬</a></td>
 										<td></td>
 										<td></td>
 										<td></td>
@@ -1024,64 +1118,205 @@
 							</table>
 						</div>
 						<div class="worksetWrap">
-							<h3><span>일정관리</span></h3>
-							<ul class="sDuleTab">
-								<li class="on"><a href="#">전체</a></li>
-								<li><a href="#">활동관리</a></li>
-								<li><a href="#">개인일정</a></li>
-							</ul>
+							<h3><span>활동계획</span></h3>
 							<div class="workcnt">
-								<span class="workSort">
-									<input type="radio" id="smnt1" /><label for="smnt1">전체</label>
-									<input type="radio" id="smnt2" /><label for="smnt2">완료</label>
-									<input type="radio" id="smnt3" /><label for="smnt3">미완료</label>
-								</span>
-								<ul>
+								<ul class="worklist">
 									<li>
-										<div class="worktit">
-											<span class="wkicon1">개인일정</span>
-											<span>2014.02.24 09:00 - <br /> 2014.02.25 10:00</span>
-											<button type="button" class="btn smWtRb"><span class="comp">&nbsp;</span>완료</button>
-										</div>
-										<ul class="worklist">
-											<li>이름 : 신*롬</li>
-											<li>생년월일 : 83.10.26</li>
-											<li>계획유형 : 정기적안부</li>
-											<li>제목 : 일정 제목이 노출됩니다.</li>
-										</ul>
+										<strong>02-23</strong>
+										<table summary="고객명, 계획유형,상태등 활동계획정보제공" width="100%">
+											<caption>활동계획</caption>
+											<colgroup>
+												<col width="12%" />
+												<col width="20%" />
+												<col width="*" />
+												<col width="20%" />
+											</colgroup>
+											<thead>
+											<tr>
+												<th scope="col">선택</th>
+												<th scope="col">고객명</th>
+												<th scope="col">계획유형</th>
+												<th scope="col">상태</th>
+											</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td><input type="checkbox" title="현재행선택" /></td>
+													<td>김*헌</td>
+													<td>정기적안부</td>
+													<td>완료</td>
+												</tr>
+												<tr>
+													<td><input type="checkbox" title="현재행선택" /></td>
+													<td>신*롬</td>
+													<td>증권전달</td>
+													<td>미완료</td>
+												</tr>
+												<tr>
+													<td><input type="checkbox" title="현재행선택" /></td>
+													<td>박*경</td>
+													<td>증권전달</td>
+													<td>완료</td>
+												</tr>
+											</tbody>
+										</table>
 									</li>
 									<li>
-										<div class="worktit">
-											<span class="wkicon2">일정</span>
-											<span>2014.02.24 09:00 - <br /> 2014.02.25 10:00</span>
-											<button type="button" class="btn smWtRb"><span class="Incomp">&nbsp;</span>완료</button>
-										</div>
-										<ul class="worklist">
-											<li>이름 : 신*롬</li>
-											<li>생년월일 : 83.10.26</li>
-											<li>계획유형 : 정기적안부</li>
-											<li>제목 : 일정 제목이 노출됩니다.</li>
-										</ul>
+										<strong>02-22</strong>
+										<table summary="고객명, 계획유형,상태등 활동계획정보제공" width="100%">
+											<caption>활동계획</caption>
+											<colgroup>
+												<col width="12%" />
+												<col width="20%" />
+												<col width="*" />
+												<col width="20%" />
+											</colgroup>
+											<thead>
+											<tr>
+												<th scope="col">선택</th>
+												<th scope="col">고객명</th>
+												<th scope="col">계획유형</th>
+												<th scope="col">상태</th>
+											</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td><input type="checkbox" title="현재행선택" /></td>
+													<td>김*헌</td>
+													<td>정기적안부</td>
+													<td>완료</td>
+												</tr>
+												<tr>
+													<td><input type="checkbox" title="현재행선택" /></td>
+													<td>신*롬</td>
+													<td>증권전달</td>
+													<td>미완료</td>
+												</tr>
+												<tr>
+													<td><input type="checkbox" title="현재행선택" /></td>
+													<td>박*경</td>
+													<td>증권전달</td>
+													<td>완료</td>
+												</tr>
+											</tbody>
+										</table>
 									</li>
 									<li>
-										<div class="worktit">
-											<span class="wkicon3">기념일</span>
-											<span>2014.02.24 09:00 - <br /> 2014.02.25 10:00</span>
-											<button type="button" class="btn smWtRb"><span class="comp">&nbsp;</span>완료</button>
-										</div>
-										<ul class="worklist">
-											<li>이름 : 신*롬</li>
-											<li>생년월일 : 83.10.26</li>
-											<li>계획유형 : 정기적안부</li>
-											<li>제목 : 일정 제목이 노출됩니다.</li>
-										</ul>
+										<strong>02-21</strong>
+										<table summary="고객명, 계획유형,상태등 활동계획정보제공" width="100%">
+											<caption>활동계획</caption>
+											<colgroup>
+												<col width="12%" />
+												<col width="20%" />
+												<col width="*" />
+												<col width="20%" />
+											</colgroup>
+											<thead>
+											<tr>
+												<th scope="col">선택</th>
+												<th scope="col">고객명</th>
+												<th scope="col">계획유형</th>
+												<th scope="col">상태</th>
+											</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td><input type="checkbox" title="현재행선택" /></td>
+													<td>김*헌</td>
+													<td>정기적안부</td>
+													<td>완료</td>
+												</tr>
+												<tr>
+													<td><input type="checkbox" title="현재행선택" /></td>
+													<td>신*롬</td>
+													<td>증권전달</td>
+													<td>미완료</td>
+												</tr>
+												<tr>
+													<td><input type="checkbox" title="현재행선택" /></td>
+													<td>박*경</td>
+													<td>증권전달</td>
+													<td>완료</td>
+												</tr>
+											</tbody>
+										</table>
+									</li>
+									<li>
+										<strong>02-20</strong>
+										<table summary="고객명, 계획유형,상태등 활동계획정보제공" width="100%">
+											<caption>활동계획</caption>
+											<colgroup>
+												<col width="12%" />
+												<col width="20%" />
+												<col width="*" />
+												<col width="20%" />
+											</colgroup>
+											<thead>
+											<tr>
+												<th scope="col">선택</th>
+												<th scope="col">고객명</th>
+												<th scope="col">계획유형</th>
+												<th scope="col">상태</th>
+											</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td><input type="checkbox" title="현재행선택" /></td>
+													<td>김*헌</td>
+													<td>정기적안부</td>
+													<td>완료</td>
+												</tr>
+												<tr>
+													<td><input type="checkbox" title="현재행선택" /></td>
+													<td>신*롬</td>
+													<td>증권전달</td>
+													<td>미완료</td>
+												</tr>
+												<tr>
+													<td><input type="checkbox" title="현재행선택" /></td>
+													<td>박*경</td>
+													<td>증권전달</td>
+													<td>완료</td>
+												</tr>
+											</tbody>
+										</table>
 									</li>
 								</ul>
 							</div>
+							<div class="btnWrap">
+								<a href="#" class="btn smGyRb">완료</a>
+								<a href="#" class="btn smWtRb">미완료</a>
+								<a href="#" class="btn smWtRb">삭제</a>
+							</div>
+							
 						</div>
 					</div>
+					<!-- Layer 팝업||| workList 더보기를 클릭하면 나오는 페이지 -->
+					<div class="layerPopWrap2" style="width:220px;">
+						<div class="layerPopHdr">
+							03-01
+						</div>
+						<div class="layerPopCnt">
+							<ul class="smWorkList">
+								<li class="wkicon1">[생일]신*롬</li>
+								<li class="wkicon1">[활동명]김*헌</li>
+								<li class="wkicon2">[LP 개인일정제목]개인일정내용</li>
+								<li class="wkicon3">[활동명]김*헌</li>
+								<li class="wkicon1">[LP 개인일정제목]개인일정내용</li>
+								<li class="wkicon2">[생일]신*롬</li>
+								<li class="wkicon3">[활동명]김*헌</li>
+								<li class="wkicon1">[LP 개인일정제목]개인일정내용</li>
+								<li class="wkicon2">[활동명]김*헌</li>
+								<li class="wkicon3">[LP 개인일정제목]개인일정내용</li>
+							</ul>
+						</div>
+						<a href="#none" class="btnClosePopup"><img src="/img/sub/btn_close_popup.gif" alt="팝업창 닫기"/></a>
+					</div>
+					<!--// 캘린더 Layer 팝업 -->
+
+
 					<!-- Layer 팝업||| 기념일 -->
-					<div class="layerPopWrap" style="width:510px;">
+					<div class="layerPopWrap2" style="width:510px;">
 						<div class="layerPopHdr">
 							<h3>기념일</h3>
 						</div>
@@ -1115,9 +1350,9 @@
 								</tbody>
 							</table>
 							<div class="btnWrap">
-								<a class="btn lgGnR" href="#none">SMS 발송</a>
-								<a class="btn lgGnR" href="#none">E-mail 발송</a>
-								<a class="btn lgGnR" href="#none">LP소식지 발송</a>
+								<a class="btn lgLgR" href="#none">SMS 발송</a>
+								<a class="btn lgLgR" href="#none">E-mail 발송</a>
+								<a class="btn lgLgR" href="#none">LP소식지 발송</a>
 							</div>
 						</div>
 						<a href="#none" class="btnClosePopup"><img src="/img/sub/btn_close_popup.gif" alt="팝업창 닫기"/></a>
@@ -1125,7 +1360,7 @@
 					<!--// 캘린더 Layer 팝업 -->
 
 					<!-- Layer 팝업||| 활동관리 -->
-					<div class="layerPopWrap" style="width:600px;">
+					<div class="layerPopWrap2" style="width:600px;">
 						<div class="layerPopHdr">
 							<span class="carAtvSel">
 								<input type="radio" checked="checked" id="atv1" />
@@ -1138,21 +1373,29 @@
 							<table summary="고객명, 생년월일등 계획유형및 내용에대한 정보를 제공합니다." width="100%" class="table1">
 								<caption>활동관리</caption>
 								<colgroup>
+									<col width="10%" />
+									<col width="20%" />
+									<col width="10%" />
+									<col width="10%" />
+									<col width="13%" />
 									<col width="15%" />
-									<col width="35%" />
-									<col width="15%" />
+									<col width="13%" />
 									<col width="*" />
 								</colgroup>
 								<tbody>
 									<tr>
 										<th>고객명</th>
-										<td>신*롬</td>
+										<td><span class="carAtvSearch">신*롬 <a href="#" class="btn smGyRb">검색</a></span></td>
+										<th>미등록</th>
+										<td class="tac"><input type="checkbox" title="미등록선택" /></td>
 										<th>생년월일</th>
 										<td>83.10.26</td>
+										<th>상태</th>
+										<td>계약</td>
 									</tr>
 									<tr>
 										<th>일시</th>
-										<td colspan="3">
+										<td colspan="7">
 											<div class="cellCrnr">
 												<input type="text" readonly="readonly" style="width:85px" value="2001-10-11" />
 												<a class="carendar" href="#"><span class="cdr">23</span></a>
@@ -1174,7 +1417,7 @@
 									</tr>
 									<tr>
 										<th>계획유형</th>
-										<td colspan="3">
+										<td colspan="7">
 											<div class="fLset">
 													<input type="checkbox" id="pln1" /><label for="pln1">AP</label>
 													<input type="checkbox" id="pln2" /><label for="pln2">FF</label>
@@ -1194,19 +1437,18 @@
 									</tr>
 									<tr>
 										<th>제목</th>
-										<td colspan="3"><span class="widthFull"><input type="text" title="제목입력" /></span></td>
+										<td colspan="7"><span class="widthFull"><input type="text" title="제목입력" /></span></td>
 									</tr>
 									<tr>
 										<th>내용</th>
-										<td colspan="3"><span class="textareaFull"><textarea title="내용입력" rows="3" cols="5"></textarea></span></td>
+										<td colspan="7"><span class="textareaFull"><textarea title="내용입력" rows="3" cols="5"></textarea></span></td>
 									</tr>
 								</tbody>
 							</table>
 							<div class="btnWrap">
 								<span class="btnL"><input type="checkbox" id="succ" /><label for="succ">완료</label></span>
-								<a class="btn lgGnR" href="#none">고객 재검색</a>
-								<a class="btn lgGnR" href="#none">저장</a>
-								<a class="btn lgGnR" href="#none">삭제</a>
+								<a class="btn lgLgR" href="#none">저장</a>
+								<a class="btn lgLgR" href="#none">삭제</a>
 							</div>
 						</div>
 						<a href="#none" class="btnClosePopup"><img src="/img/sub/btn_close_popup.gif" alt="팝업창 닫기"/></a>
@@ -1214,7 +1456,7 @@
 					<!--// 캘린더 Layer 팝업 -->
 
 					<!-- Layer 팝업||| 활동관리 > 고객재검색 -->
-					<div class="layerPopWrap" style="width:430px;">
+					<div class="layerPopWrap2" style="width:430px;">
 						<div class="layerPopHdr">
 							<span class="carAtvSel">
 								<input type="radio" checked="checked" id="atv1" />
@@ -1273,7 +1515,7 @@
 								</tbody>
 							</table>
 							<div class="btnWrap">
-								<a class="btn lgGnR" href="#none">선택</a>
+								<a class="btn lgLgR" href="#none">선택</a>
 							</div>
 						</div>
 						<a href="#none" class="btnClosePopup"><img src="/img/sub/btn_close_popup.gif" alt="팝업창 닫기"/></a>
@@ -1281,87 +1523,85 @@
 					<!--// 캘린더 Layer 팝업 -->
 
 				</div>
-			<table summary="유효방문, 방문등 계획및 결과에 대한 정보를 제공합니다." width="100%" class="table1">
-					<caption>방문일정</caption>
-					<colgroup>
-						<col width="%" />
-						<col width="%" />
-						<col width="%" />
-						<col width="%" />
-						<col width="%" />
-						<col width="%" />
-						<col width="%" />
-						<col width="%" />
-						<col width="%" />
-						<col width="%" />
-						<col width="%" />
-						<col width="*" />
-					</colgroup>
-					<thead>
-					<tr>
-						<th scope="col">&nbsp;</th>
-						<th scope="col" colspan="8">유효방문</th>
-						<th scope="col" colspan="6">방문</th>
-					</tr>
-					<tr class="tRow">
-						<th scope="col">유형</th>
-						<th scope="col">AP</th>
-						<th scope="col">FF</th>
-						<th scope="col">P</th>
-						<th scope="col">C</th>
-						<th scope="col">N</th>
-						<th scope="col">진단</th>
-						<th scope="col">증권전달</th>
-						<th scope="col">TOTAL</th>
-						<th scope="col">계약리뷰</th>
-						<th scope="col">안부</th>
-						<th scope="col">보전</th>
-						<th scope="col">보험금</th>
-						<th scope="col">기타기념일</th>
-						<th scope="col">TOTAL</th>
-					</tr>
-					</thead>
-					<tbody>
+				<div class="statisTable">
+					<table summary="유효방문, 방문등 계획및 결과에 대한 정보를 제공합니다." width="100%" class="table1">
+						<caption>방문일정</caption>
+						<colgroup>
+							<col width="%" />
+							<col width="%" />
+							<col width="%" />
+							<col width="%" />
+							<col width="%" />
+							<col width="%" />
+							<col width="%" />
+							<col width="%" />
+							<col width="%" />
+							<col width="%" />
+							<col width="%" />
+							<col width="*" />
+						</colgroup>
+						<thead>
 						<tr>
-							<th>계획</th>
-							<td>1</td>
-							<td>1</td>
-							<td>1</td>
-							<td>1</td>
-							<td>1</td>
-							<td>1</td>
-							<td>1</td>
-							<td>7</td>
-							<td>1</td>
-							<td>1</td>
-							<td>1</td>
-							<td>1</td>
-							<td>1</td>
-							<td>5</td>
+							<th scope="col">&nbsp;</th>
+							<th scope="col" colspan="8">유효방문</th>
+							<th scope="col" colspan="6">방문</th>
 						</tr>
-						<tr>
-							<th>결과</th>
-							<td>1</td>
-							<td>1</td>
-							<td>1</td>
-							<td>1</td>
-							<td>1</td>
-							<td>1</td>
-							<td>1</td>
-							<td>7</td>
-							<td>1</td>
-							<td>1</td>
-							<td>1</td>
-							<td>1</td>
-							<td>1</td>
-							<td>5</td>
+						<tr class="tRow">
+							<th scope="col">유형</th>
+							<th scope="col">AP</th>
+							<th scope="col">FF</th>
+							<th scope="col">P</th>
+							<th scope="col">C</th>
+							<th scope="col">N</th>
+							<th scope="col">진단</th>
+							<th scope="col">증권전달</th>
+							<th scope="col">TOTAL</th>
+							<th scope="col">계약리뷰</th>
+							<th scope="col">안부</th>
+							<th scope="col">보전</th>
+							<th scope="col">보험금</th>
+							<th scope="col">기타기념일</th>
+							<th scope="col">TOTAL</th>
 						</tr>
-					</tbody>
-				</table>
-				
-				
-				
-
+						</thead>
+						<tbody>
+							<tr>
+								<th>계획</th>
+								<td>1</td>
+								<td>1</td>
+								<td>1</td>
+								<td>1</td>
+								<td>1</td>
+								<td>1</td>
+								<td>1</td>
+								<td>7</td>
+								<td>1</td>
+								<td>1</td>
+								<td>1</td>
+								<td>1</td>
+								<td>1</td>
+								<td>5</td>
+							</tr>
+							<tr>
+								<th>결과</th>
+								<td>1</td>
+								<td>1</td>
+								<td>1</td>
+								<td>1</td>
+								<td>1</td>
+								<td>1</td>
+								<td>1</td>
+								<td>7</td>
+								<td>1</td>
+								<td>1</td>
+								<td>1</td>
+								<td>1</td>
+								<td>1</td>
+								<td>5</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
 			</div>
 		</div>
 		<!-- //공통 컨텐츠 -->
