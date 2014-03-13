@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> CuREx </title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
+<link rel="stylesheet" href="/css/common.css" type="text/css" />
+<link rel="stylesheet" href="/css/curex.common.css" type="text/css" />
+<link rel="stylesheet" href="/css/curex.layout.css" type="text/css" />
+<link rel="stylesheet" href="/css/curex.smart.css" type="text/css" />
+<script src="/ci/agent.js"></script>
+<script src="/thirdParty/jquery/jquery-1.10.2.min.js"></script>
+<script src="/thirdParty/jquery/jquery-ui-1.10.3.min.js"></script>
+<script src="/thirdParty/tab.js"></script>
+</head>
+<body>
+
+<div id="wrap">
+	<!-- HEADER -->
+	<div id="header">
+		<img src="/img/common/img_header.jpg" alt="" />
+	</div>
+
+	<!-- //HEADER -->
+		
+	<div id="conteiner">
+		<div class="mailWrap ci-tab" style="width:900px;">
+			<div class="mailHrd">
+				<ul class="tab01 clearfix tab-selector">
+					<li class="active"><a href="#none">e-Card 보내기</a></li>
+					<li><a href="#none">e-Letter 보내기</a></li>
+					<li><a href="#none">e-Post 보내기</a></li>
+				</ul>
+				<span>
+					<a href="#none" class="btn smWtRb">발송내역보기</a>
+					<a href="#none" class="btn smWtRb">임시저장함</a>
+				</span>
+			</div>
+			<ul class="tab-panel">
+				<li>
+						<table class="table1 mailTable" summary="e-card발송을 위한 수신자선택및 예약발송 항목정보를 제공합니다." width="100%">
+							<caption>e-card발송</caption>
+							<colgroup>
+								<col width="20%" />
+								<col width="*" />
+							</colgroup>
+							<tbody>
+								<tr>
+									<th rowspan="2">수신자선택</th>
+									<td>
+										<div class="email">
+											<label for="name">이름</label>
+											<input type="text" style="width:90px" id="name">
+											<label for="mailID">이메일</label>
+											<input type="text" style="width:90px" id="mailID">
+											<input type="text" style="width:90px" title="메일주소입력">
+											@
+											<select style="width:102px" title="메일주소선택">
+												<option>선택</option>
+												<option></option>
+											</select>
+											<a href="#" class="btn smWtRb">추가</a>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<div class="ReceiverZone">
+											<div class="btnWrap">
+												<span>총 00명</span>
+												<a href="#" class="btn smGnR">선택삭제</a>
+											</div>
+											<table summary="수신자 이름 및 이메일선택" width="100%">
+												<caption></caption>
+												<colgroup>
+													<col width="30%" />
+													<col width="50%" />
+													<col width="*" />
+												</colgroup>
+												<thead>
+												<tr>
+													<th scope="col">이름</th>
+													<th scope="col">이메일</th>
+													<th scope="col">선택</th>
+												</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>김승헌 고객님</td>
+														<td>kheunstory@pulipin.com</td>
+														<td class="tac"><input type="checkbox" title="현재행선택" /></td>
+													</tr>
+													<tr>
+														<td>김승헌 고객님</td>
+														<td>kheunstory@pulipin.com</td>
+														<td class="tac"><input type="checkbox" title="현재행선택" /></td>
+													</tr>
+													<tr>
+														<td>김승헌 고객님</td>
+														<td>kheunstory@pulipin.com</td>
+														<td class="tac"><input type="checkbox" title="현재행선택" /></td>
+													</tr>
+													<tr>
+														<td>김승헌 고객님</td>
+														<td>kheunstory@pulipin.com</td>
+														<td class="tac"><input type="checkbox" title="현재행선택" /></td>
+													</tr>
+												</tbody>
+											</table>
+												
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th>예약발송</th>
+									<td>
+										<input type="checkbox" />
+										<select style="width:90px;">
+											<option>2014</option>
+											<option></option>
+										</select>
+										<select style="width:90px;">
+											<option>2월</option>
+											<option></option>
+										</select>
+										<select style="width:90px;">
+											<option>25일</option>
+											<option></option>
+										</select>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+
+						<h3>카드선택</h3>
+						<ul class="ctTab">
+							<li><a href="#">BEST</a></li>
+							<li><a href="#">BABY</a></li>
+							<li><a href="#">생일</a></li>
+							<li><a href="#">느낌</a></li>
+							<li><a href="#">계절</a></li>
+							<li><a href="#">ENJOY</a></li>
+							<li><a href="#">영문</a></li>
+							<li><a href="#">특별한날</a></li>
+						</ul>
+
+						<div class="cardTemp">
+							<div class="TempCon1">
+								<h3>BEST</h3>
+								<ul>
+									<li><span><img src="/img/sub/img_emailTemp1.gif" alt="" /></span> <label for="tam1_1">[계절] 봄</label><input type="radio" id="tam1_1" /></li>
+									<li><span><img src="/img/sub/img_emailTemp2.gif" alt="" /></span> <label for="tam1_2">[baby] 토끼</label><input type="radio" id="tam1_2" /></li>
+									<li><span><img src="/img/sub/img_emailTemp3.gif" alt="" /></span> <label for="tam1_3">[생일] 사랑해</label><input type="radio" id="tam1_3" /></li>
+									<li><span><img src="/img/sub/img_emailTemp4.gif" alt="" /></span> <label for="tam1_4">[생일] 축하해</label><input type="radio" id="tam1_4" /></li>
+									<li><span><img src="/img/sub/img_emailTemp5.gif" alt="" /></span> <label for="tam1_5">[특별한날] 축하해</label><input type="radio" id="tam1_5" /></li>
+									<li><span><img src="/img/sub/img_emailTemp6.gif" alt="" /></span> <label for="tam1_6">[특별한날] 축하해</label><input type="radio" id="tam1_6" /></li>
+									<li><span><img src="/img/sub/img_emailTemp7.gif" alt="" /></span> <label for="tam1_7">[계절] 겨울</label><input type="radio" id="tam1_7" /></li>
+									<li><span><img src="/img/sub/img_emailTemp8.gif" alt="" /></span> <label for="tam1_8">[계절] 우산</label><input type="radio" id="tam1_8" /></li>
+									<li><span><img src="/img/sub/img_emailTemp9.gif" alt="" /></span> <label for="tam1_9">[생일] 사랑해</label><input type="radio" id="tam1_9" /></li>
+									<li><span><img src="/img/sub/img_emailTemp10.gif" alt="" /></span> <label for="tam1_10">[특별한날] 축하해</label><input type="radio" id="tam1_10" /></li>
+									<li><span><img src="/img/sub/img_emailTemp11.gif" alt="" /></span> <label for="tam1_11 ">[특별한날] 축하해</label><input type="radio" id="tam1_11" /></li>
+									<li><span><img src="/img/sub/img_emailTemp12.gif" alt="" /></span> <label for="tam1_12">[특별한날] 축하해</label><input type="radio" id="tam1_12" /></li>
+								</ul>
+								<div class="paging">
+									<a href="#" class="prev"><img src="../../img/common/arrow_prev.gif" alt="이전으로" /></a>
+									<strong>1</strong>
+									<a href="#">2</a>
+									<a href="#">3</a>
+									<a href="#">4</a>
+									<a href="#">5</a>
+									<a href="#" class="next"><img src="../../img/common/arrow_next.gif" alt="다음으로" /></a>
+								</div>
+
+								<table summary="제목, 내용, 파일첨부등 이메일전송을 위한 내용입력정보를 제공합니다." width="100%">
+									<caption>내용입력</caption>
+									<colgroup>
+										<col width="20%" />
+										<col width="*" />
+									</colgroup>
+									<tbody>
+										<tr>
+											<th>제목</th>
+											<td><span class="widthFull"><input type="text" title="제목입력" /></span></td>
+										</tr>
+										<tr>
+											<th>내용 <span>특수문자 중 특수문자 중 (%,“,&,=,>,/,’)를 입력하시면 발송이 되지 않습니다</span></th>
+											<td><span class="textareaFull"><textarea id="" name="" rows="" cols="" title="내용입력"></textarea>
+											</span></td>
+										</tr>
+										<tr>
+											<th>파일첨부</th>
+											<td><span class="widthFull"><input type="file" title="파일첨부" /></span></td>
+										</tr>
+									</tbody>
+								</table>
+
+							</div>
+							<div class="TempCon2">
+								
+							</div>
+							<div class="TempCon3">
+								
+							</div>
+							<div class="TempCon4">
+								
+							</div>
+							<div class="TempCon5">
+								
+							</div>
+							<div class="TempCon6">
+								
+							</div>
+							<div class="TempCon7">
+								
+							</div>
+							<div class="TempCon8">
+						</div>
+
+					</div>
+				</li>
+				<li>
+					<div class="add">
+
+					</div>
+				</li>
+			</ul>
+		</div>
+
+	</div>
+	<!-- CHECKLIST -->
+	<div id="checkList">
+		<ul class="list">
+			<li><a href="#none" class="on">Email</a></li>
+			<li><a href="#none">미리보기</a></li>
+			<li><a href="#none">임시저장</a></li>
+			<li><a href="#none">발송</a></li>
+		</ul>
+	</div>
+	<!-- //CHECKLIST -->
+
+<!--  스마트검색에서 보이는 체크리스트
+	<div id="checkList" style="display:none"> 
+		<ul class="list">
+			<li><a href="#none" class="on">호칭저장</a></li>
+			<li><a href="#none" class="on long">고객분류(태그)저장</a></li>
+			<li><a href="#none">방문패키지출력</a></li>
+			<li><a href="#none">기념일예약</a></li>
+			<li><a href="#none">전화</a></li>
+			<li><a href="#none">SMS</a></li>
+			<li><a href="#none">E-Mail</a></li>
+			<li><a href="#none">LP 소식지</a></li>
+			<li><a href="#none">DM</a></li>
+		</ul>
+	</div>
+ -->
+</div> 
+
+
+<script src="/js/curexui.js"></script>
+<script type="text/javascript" src="/js/dialog.js"></script>
+<script type="text/javascript" src="/js/popup.js"></script>
+<script type="text/javascript">
+	//<![CDATA[
+	var myTab = ci.tab.init($('.PersonCont')); // 고객정보탭
+	var myTab1 = ci.tab.init($('.tabOutline')); // 
+	var myTab2 = ci.tab.init($('.tab01')); // 
+	//]]>
+</script>
+<!-- FOOTER -->
+<div id="footer">
+	<div class="fter">
+		<img src="/img/common/img_footer.jpg" alt="" />
+	</div>
+</div>
+<!--//FOOTER -->
+
+</body>
+</html>
