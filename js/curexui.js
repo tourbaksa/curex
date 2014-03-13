@@ -13,19 +13,14 @@ $(document).ready(function(){
 var curexFront ={};
 
 curexFront = {
-
-	init:function(scope){
-		this.op = scope;
-	},
-
 	event:function(){
 		var scope = this.op
-			, $previousBtn = $("div.previous .ImgArrow", scope).parent() //기계약합산 잔여한도 조회버튼
-			, $InfoWriteBtn =$("table a.InfoWbtn", scope) //테이블정보입력 버튼
-			, $Delbtn = $("a.cellDel", scope) || $("a.cellDel")  //테이블 셀삭제버튼
-			, $cinsrtbtn = $("a.cellInsert", scope) || $("a.cellInsert")//주계약/특약 특약피버험자 추가버튼
-			, $bePointBtn = $("a.bePoint", scope) || $("a.bePoint") //산출기준 팝업
-			, $spClose = $("a.spClose", scope) || $("a.spClose"); //산출기준 팝업 닫기
+			, $previousBtn = $("div.previous .ImgArrow").parent() //기계약합산 잔여한도 조회버튼
+			, $InfoWriteBtn =$("table a.InfoWbtn") //테이블정보입력 버튼
+			, $Delbtn = $("a.cellDel")  //테이블 셀삭제버튼
+			, $cinsrtbtn = $("a.cellInsert")//주계약/특약 특약피버험자 추가버튼
+			, $bePointBtn = $("a.bePoint") //산출기준 팝업
+			, $spClose = $("a.spClose"); //산출기준 팝업 닫기
 		
 			/* 기계약 합산잔여한도 */
 			$previousBtn.off().on({
@@ -72,7 +67,7 @@ curexFront = {
 			$cinsrtbtn.each(function(){
 				$(this).off().on({
 					click:function(){
-						var $riderCont = $("div.riderPlus",scope) ||$("div.riderPlus")
+						var $riderCont = $("div.riderPlus")
 							, old = $riderCont.find(".clone").length
 							, newc = old + 1
 							, cloned = $riderCont.find("tr").eq(0).clone().addClass("clone");
@@ -133,7 +128,7 @@ curexFront = {
 
 	tab:function(){
 		var scope = this.op
-			 , $tabObj = $("div.tab02", scope)
+			 , $tabObj = $("div.tab02")
 			 , $tabBtn = $tabObj.find("h3 a")
 			 , $tabCnt = $tabObj.find("div[id*='tabDiv']")
 			$tabBtn.each(function(){
@@ -152,7 +147,7 @@ curexFront = {
 
 	rolling:function(){
 		var scope = this.op
-			, $bnrWrap = $("div.spbnrZone", scope) || $("div.spbnrZone")
+			, $bnrWrap = $("div.spbnrZone")
 			, $btn = $bnrWrap.find("span.bntCtrl button")
 			, $bnrCont = $bnrWrap.find("div.bnrList")
 			, $bnrItem = $bnrCont.find("img")
@@ -249,7 +244,7 @@ curexFront = {
 	},
 	carlendar:function(){
 		var scope = this.op
-			, $obj = $(".timeSchedule", scope) || $(".timeSchedule")
+			, $obj = $(".timeSchedule")
 			, $objx = $obj.offset().left
 			, $objy = $obj.offset().top
 			, $objw = $obj.outerWidth()/2
