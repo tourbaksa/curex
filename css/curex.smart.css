@@ -321,6 +321,11 @@ div.statisTable .table1 td{text-align:center;}
 div.ReceiverZone{padding:6px 0 0 0;}
 div.ReceiverZone .btnWrap span{position:absolute; left:0; top:0;}
 div.ReceiverZone div.scrolling{ overflow-y:scroll; overflow-x:hidden; margin-top:5px;}
-div.scrolling table th{background:#ddedef; background-image:none;}
-div.scrolling table th,
-div.scrolling table td{border-right:0;}
+table.mailTabl table th{background:#ddedef !important; background-image:none !important;}
+table.mailTabl table th,
+table.mailTabl table td{border-right:0; height:30px; padding:2px 0 3px 0; text-align:center;}
+
+div.mailHrd{position:relative; margin:0 0 20px 0;}
+div.mailHrd ul.tab01{overflow:hidden;}
+div.mailHrd span{position:absolute; right:0; top:3px;}
+
