@@ -96,6 +96,10 @@ table.listTable th{
 table.listTable th:first-child{border-left:0;}
 table.listTable tbody td{border:1px solid #dedede; height:25px; padding:7px 0 5px;}
 
+/* table border none */
+table.bderTN{border-top:0 !important;}
+
+
 /* table tbody th td형 */
 .table1 th{
 	border-left:1px solid #dedede; 
@@ -227,13 +231,20 @@ table.listTable tbody td{border:1px solid #dedede; height:25px; padding:7px 0 5p
 .table11 thead tr:first-child th:first-child{border-left:0;}
 .table11 tbody td{border:1px solid #dedede; height:30px; text-align:right;}
 
+/* scrollTable 우측에 바로가기 버튼 */
+.scrollTable {position:relative;}
+.scrollTable .more{position:absolute;right:4px;top:5px;}
+.scrollTable .scC{height:185px;overflow:auto;overflow-x:hidden;}
 
-
+.arrMore{border:1px solid #dedede;border-top:0;text-align:center;height:30px;line-height:26px;}
+.arrMore a.the{background:url(/img/common/bg_btnArrow1.gif) no-repeat right center;padding-right:14px;}
 
 /* box checkbox형 */
 .box1{border:1px solid #dedede; padding:17px 0 17px 20px; margin-bottom:10px;}
 .box1 input[type="checkbox"]{margin-left:14px;}
 .box1 input[type="checkbox"].first{margin-left:0;}
+
+.box2{border:1px solid #dedede; padding:10px;}
 
 .textBox{border:1px solid #dedede; padding:11px 10px 11px 10px; margin-bottom:10px; line-height:1.5;}
 .textBox .btnL{left:20px;line-height:22px;}
@@ -249,7 +260,6 @@ dd input[type="text"]{}
 dd span input[type="file"]{position:absolute;left:3px;top:0;}
 
 .fileBox table {float:right;width:551px;}
-
 
 /* tab */
 .tab01{border-bottom:2px solid #22b8c7;}
