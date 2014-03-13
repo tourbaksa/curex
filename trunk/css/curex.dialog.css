@@ -821,6 +821,7 @@ body .ui-tooltip {
 	display: none;
 }
 
+.ci-dialog-content h3{color:#363636; font-size:16px; margin:8px 0; letter-spacing:-1px; font-weight:bold;}
 
 .ui-dialog-buttonpane {text-align:center; padding:0;  margin-top:15px; }
 

@@ -121,11 +121,7 @@ curexFront = {
 			});
 		}
 		standard();
-
-
 	},
-
-
 	tab:function(){
 		var scope = this.op
 			 , $tabObj = $("div.tab02")
@@ -144,7 +140,6 @@ curexFront = {
 				});
 			});
 	},
-
 	rolling:function(){
 		var scope = this.op
 			, $bnrWrap = $("div.spbnrZone")
@@ -157,8 +152,6 @@ curexFront = {
 			, $idx
 			, $timer = null
 			, isAnimating = 'no';
-
-
 			//$bnrCont.wrap("<div class='slideWrap'></div>")
 			$bnrCont.width($bnrW * $bnrLeng);
 
@@ -170,7 +163,6 @@ curexFront = {
 						display:i==0 ? "block" : "none"
 				});
 			});
-
 			$btn.each(function(){
 				$(this).off().on({
 					click:function(){
@@ -181,7 +173,6 @@ curexFront = {
 					}
 				});
 			});
-
 			function next(){move(($flag+1) % $bnrLeng);}
 			function move($idx){
 				if($idx == $flag) return;
@@ -195,7 +186,6 @@ curexFront = {
 						if ($timer) { start(); }
 						isAnimating = 'no'
 					});
-
 					$bnrItem.eq($idx).show().css({
 						"left": $bnrW
 					}).animate({
@@ -204,26 +194,22 @@ curexFront = {
 						isAnimating = 'no'
 					});
 				}
-
 				if ($btn) {
 					$btn.eq($flag).removeClass("on");
 					$btn.eq($idx).addClass("on");
 				}
 				$flag = $idx;
 			}
-
 			function start(){
 				stop();
 				$timer = window.setTimeout(next, 2000)
 			}
-			
 			function stop(){
 				window.clearTimeout($timer);
 				$timer = null;
 			}
 			start();
 	},
-
 	checkList:function(){
 		var $obj = $("#checkList")
 			, detached = false
@@ -267,7 +253,6 @@ curexFront = {
 					var idName = e.attr("href")
 						 , popObjw = $objw - $(idName).width()/2
 						 , popObjh = $objh - $(idName).height()/2
-
 					hide();
 					$(idName).css({
 						"display" : "block",
@@ -275,8 +260,6 @@ curexFront = {
 						"top" : popObjh
 					})
 				}
-
-
 				$tobdyMore.on({ //today일정
 					click:function(e){
 						var posx =$objw -$tobdyList.width()/2
@@ -292,7 +275,6 @@ curexFront = {
 						});
 					}
 				});
-
 				$dateBtn.off().on({
 					click:function(){
 						hide();
@@ -306,18 +288,13 @@ curexFront = {
 						return false;
 					}
 				});
-
 				var hide = function(){
 					$popwrap.hide();
 					$miniYear.hide();
 					$minimonth.hide();
 				}
-
-
 				$popbtn.off().on({click: function(){$popwrap.hide(); return false;}}); //팝업닫기
-		
-
-	}
+	},
 
 }
 
