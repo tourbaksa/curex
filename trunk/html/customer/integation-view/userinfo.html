@@ -8,10 +8,12 @@
 <link rel="stylesheet" href="/css/curex.common.css" type="text/css" />
 <link rel="stylesheet" href="/css/curex.layout.css" type="text/css" />
 <link rel="stylesheet" href="/css/curex.customer.css" type="text/css" />
+<link rel="stylesheet" href="/css/curex.dialog.css" type="text/css" />
 <script src="/ci/agent.js"></script>
 <script src="/thirdParty/jquery/jquery-1.10.2.min.js"></script>
 <script src="/thirdParty/jquery/jquery-ui-1.10.3.min.js"></script>
 <script src="/thirdParty/tab.js"></script>
+<script src="/js/dialog.js"></script>
 <script src="/js/curexui.js"></script>
 </head>
 <body>
@@ -546,8 +548,8 @@
 			<h2>고객통합뷰</h2>
 			<ul class="location">
 				<li><a href="#none">홈&nbsp;</a>&gt;</li>
-				<li><a href="#none">&nbsp;LiPS&nbsp;</a>&gt;</li>
-				<li><a href="#none">&nbsp;계획수립&nbsp;</a></li>
+				<li><a href="#none">&nbsp;고객관리&nbsp;</a>&gt;</li>
+				<li><a href="#none">&nbsp;고객통합뷰&nbsp;</a></li>
 			 </ul>	
 		</div>
 		 
@@ -556,6 +558,7 @@
 			<div class="customerWrap ci-tab">
 			<ul class="tab01 clearfix tab-selector">
 				<li class="active"><a href="#none">인적정보</a></li>
+				<li><a href="#none">계약내역</a></li>
 				<li><a href="#none">접촉이력</a></li>
 				<li><a href="#none">고객위치</a></li>
 				<li><a href="#none">이전LP이력</a></li>
@@ -571,14 +574,14 @@
 									<legend>Life Planning Service 신청서 정보</legend>
 								</fieldset>
 								<div class="tar">
-									<span class=""><strong>최초등록일 : </strong>2014-03-12<strong class="pl10">최종변경일 : </strong>2014-03-12</span>
-									<a class="btn smGnR" href="#none">mLPS인증</a>
+									<span><strong>최초등록일 : </strong>2014-03-12<strong class="pl10">최종변경일 : </strong>2014-03-12</span>
+									<a class="btn smGnR ml10" href="#none">mLPS인증</a>
 								</div>
 								<table class="table2 mt8">
 									<caption>신청서 정보</caption>
 									<colgroup>
-										<col width="10%">
-										<col width="10%">
+										<col width="11%">
+										<col width="11%">
 										<col width="23%">
 										<col width="10%">
 										<col width="*">
@@ -603,7 +606,7 @@
 												</span>
 											</td>
 											<td>
-												<input type="text" style="width:70px" />
+												<input type="text" style="width:80px" />
 												<a href="#none"><img alt="달력" src="/img/common/icon3.gif"></a>
 											</td>
 											<td>
@@ -802,9 +805,76 @@
 								</fieldset>
 							</form>
 						</div>
+
+						<!-- 레디언스정보보기 -->
+						<div class="juContact">
+							<h3>기본정보 (레디언스 정보 보기)</h3>
+							<form method="post" action="/">
+								<fieldset>
+									<legend>기본정보 (레디언스 정보 보기)</legend>
+									<table class="table1">
+										<caption>기본정보 (레디언스 정보 보기)</caption>
+										<colgroup>
+											<col width="11%" />
+											<col width="*" />
+											<col width="8%" />
+											<col width="10%" />
+											<col width="8%" />
+											<col width="11%" />
+										</colgroup>
+										<tbody>
+											<tr>
+												<th>자택주소</th>
+												<td>
+													<input type="text" style="width:75px">
+													<input type="button" class="btn smGyRb" value="검색">
+													<input type="text" style="width:240px">
+													<input type="text" style="width:150px">
+												</td>
+												<th>휴대전화</th>
+												<td>
+													<span class="widthFull"><input type="text" style="" /></span>
+												</td>
+												<th>자택전화</th>
+												<td><span class="widthFull"><input type="text" /></span></td>
+											</tr>
+											<tr>
+												<th>회사주소</th>
+												<td>
+													<input type="text" style="width:75px">
+													<input type="button" class="btn smGyRb" value="검색">
+													<input type="text" style="width:240px">
+													<input type="text" style="width:150px">
+												</td>
+												<th>회사전화</th>
+												<td><span class="widthFull"><input type="text" /></span></td>
+												<th>방문지</th>
+												<td><span class="widthFull"><input type="text" /></span></td>
+											</tr>
+											<tr>
+												<th>E-mail</th>
+												<td colspan="5">
+													<input type="text" style="width:95px" />
+													@
+													<select style="width:102px">
+														<option>선택</option>
+														<option></option>
+													</select>
+													<input type="text" disabled="disabled" style="width:69px" />
+												</td>
+											</tr>
+										</tbody>
+									</table>
+									
+
+								</fieldset>
+							</form>
+						</div>
+						<!-- //레디언스정보보기 -->
 						
 						<div class="juContact mt20">
 							<h3>가족정보</h3>
+							<!-- 삭제시 행 없어짐 -->
 							<table class="listTable" style="display:none">
 								<caption>관계등록</caption>
 								<thead>
@@ -832,8 +902,8 @@
 									</tr>
 								</tbody>
 							</table>
+							<!-- //삭제시 행 없어짐 -->
 						
-							<!-- 상단 삭제시 삭제행 없어짐 -->
 							<table class="listTable">
 								<caption>관계등록</caption>
 								<thead>
@@ -860,66 +930,58 @@
 							<form method="post" action="/">
 								<fieldset>
 									<legend>적합성정보</legend>
-									<table class="table1">
+									<table class="table3">
 										<caption>적합성정보</caption>
 										<colgroup>
-											<col width="12%" />
-											<col width="3%" />
-											<col width="5%" />
-											<col width="7%" />
-											<col width="5%" />
-											<col width="8%" />
-											<col width="8%" />
-											<col width="3%" />
-											<col width="2%" />
 											<col width="9%" />
-											<col width="3%" />
-											<col width="11%" />
-											<col width="*" />
 											<col width="8%" />
-											<col width="3%" />
+											<col width="9%" />
+											<col width="8%" />
+											<col width="10%" />
+											<col width="10%" />
+											<col width="12%" />
+											<col width="*" />
 										</colgroup>
 										<tbody>
 											<tr>
 												<th>진단일자</th>
-												<td colspan="2">2014.03.05</td>
-												<th colspan="2">만기일자</th>
 												<td>2014.03.05</td>
-												<th colspan="3">상품성향</th>
-												<td colspan="2"></td>
-												<th>투자성향</th>
-												<td></td>
-												<th>스캔여부</th>
-												<td class="tac">Y</td>
+												<th>만기일자</th>
+												<td>2014.03.05</td>
+												<th rowspan="2">접수여부</th>
+												<td rowspan="2">Y</td>
+												<th>상품성향 불일치 확인</th>
+												<td>
+													<span class="bder1"><input type="checkbox" /></span>
+													<span class="bder2">
+														<label for="day1" class="mr10">신청일</label>
+														<input type="text" id="day1" style="width:100px;" />
+														<a href="#none"><img src="/img/common/icon3.gif" alt="달력" /></a>
+													</span>
+													<span class="bder3">접수여부 Y</span>
+												</td>
 											</tr>
 											<tr>
-												<th>상품성향 불일치 확인</th>
-												<td class="tac">
-													<input type="checkbox" id="" />
-												</td>
-												<th colspan="2">신청일</th>
-												<td colspan="2">
-													<input type="text" style="width:99px" />
-													<a href="#none"><img src="/img/common/icon3.gif" alt="달력"></a>
-												</td>
-												<th>스캔여부</th>
-												<td class="tac">Y</td>
-												<th colspan="2">고위험변액보험 확인</th>
-												<td class="tac">
-													<input type="checkbox" />
-												</td>
-												<th>신청일</th>
+												<th>상품성향</th>
 												<td>
-													<input type="text" style="width:99px" />
-													<a href="#none"><img src="/img/common/icon3.gif" alt="달력"></a>
 												</td>
-												<th>스캔여부</th>
-												<td class="tac">Y</td>
+												<th>투자성향</th>
+												<td></td>
+												<th>고위험변액보험 확인</th>
+												<td>
+													<span class="bder1"><input type="checkbox" /></span>
+													<span class="bder2">
+														<label for="day2" class="mr10">신청일</label>
+														<input type="text" id="day2" style="width:100px" />
+														<a href="#none"><img src="/img/common/icon3.gif" alt="달력" /></a>
+													</span>
+													<span class="bder3">접수여부 Y</span>
+												</td>
 											</tr>
 										</tbody>
 									</table>
-									<ol class="footNote">
-										<li class="red"><span>＊</span>[적합성진단실시] 버튼을 클릭하여 설문결과를 저장할 경우, 입력한 적합성진단결과로 업데이트가 되며 기존성향으로 사용불가하오니 고객이 실시한 적합성 결과를 정확히 입력하십시오.</li>
+									<ol class="footNote red">
+										<li><span>＊</span>[적합성진단실시] 버튼을 클릭하여 설문결과를 저장할 경우, 입력한 적합성진단결과로 업데이트가 되며 기존성향으로 사용불가하오니 고객이 실시한 적합성 결과를 정확히 입력하십시오.</li>
 									</ol>
 								</fieldset>
 							</form>
@@ -937,19 +999,19 @@
 									<caption>기타</caption>
 									<colgroup>
 										<col width="12%" />
-										<col width="10%" />
+										<col width="*" />
 										<col width="12%" />
 										<col width="7%" />
 										<col width="12%" />
 										<col width="12%" />
-										<col width="8%" />
+										<col width="10%" />
 										<col width="2%" />
 										<col width="4%" />
 										<col width="4%" />
 										<col width="2%" />
 										<col width="6%" />
+										<col width="2%" />
 										<col width="6%" />
-										<col width="*" />
 									</colgroup>
 									<tbody>
 										<tr>
@@ -964,15 +1026,15 @@
 											</td>
 											<th>분류</th>
 											<td colspan="2">
-												<input type="text" style="width:155px" />
+												<input type="text" style="width:180px" />
 												<input type="button" value="검색" class="btn smGyRb">
 											</td>
 											<th colspan="2">가족대표</th>
-											<td colspan="2" class="tac">
+											<td class="tac" colspan="2">
 												<input type="checkbox"  />
 											</td>
 											<th>우수고객</th>
-											<td class="tac" colspan="2">
+											<td colspan="2" class="tac">
 												<input type="checkbox"  />
 											</td>
 										</tr>
@@ -993,7 +1055,7 @@
 											</td>
 											<th>호칭</th>
 											<td colspan="2">
-												<input type="text" style="width:115px;" />
+												<input type="text" style="width:137px;" />
 												<select style="width:76px">
 													<option></option>
 													<option></option>
@@ -1001,33 +1063,34 @@
 											</td>
 											<th colspan="3">취미</th>
 											<td colspan="4">
-												<span class="selectFull">
-													<select>
-														<option>선택</option>
-														<option></option>
-													</select>
-												</span>
+												<select style="width:150px">
+													<option>선택</option>
+													<option></option>
+												</select>
 											</td>
 										</tr>
 										<tr>
 											<th>소개자 및 관계</th>
 											<td colspan="5">
-												<input type="text" style="width:364px;" />
-												<input type="button" value="검색" class="btn smGyRb">
-												<select style="width:114px;">
+												<input type="text" style="width:350px;" />
+												<a href="#none" class="btn smGyRb">검색</a>
+												<select style="width:100px;">
 													<option>직장동료</option>
 													<option></option>
 												</select>
 											</td>
 											<th colspan="2">소개일</th>
-											<td colspan="4">
-												<input type="text" style="width:165px;" />
+											<td colspan="5">
+												<input type="text" style="" />
 												<a href="#none"><img src="/img/common/icon3.gif" alt="달력" /></a>
 											</td>
-											<td class="tac under"><a href="#none" class="btn smWtRb">삭제</a></td>
+											<td class="tac">
+												<a href="#none" class="btn smWtRb">삭제</a>
+											</td>
 										</tr>
 									</tbody>
 								</table>
+
 							</fieldset>
 						</form>
 						
@@ -1070,7 +1133,8 @@
 								<a href="#none" class="btn smGnR">필드관리</a>
 							</div>
 						</div>
-						
+
+						<h3>개인정보활용동의</h3>
 						<table class="table1">
 							<caption>개인정보활용동의</caption>
 							<colgroup>
@@ -1101,8 +1165,211 @@
 							</tbody>
 						</table>
 					</div>
-					
 				</li>
+				
+				<li> 
+					<h3 class="hide-element">계약내역</h3>
+					<div class="breakDown">
+						<table class="table3">
+							<caption>계약내역</caption>
+							<colgroup>
+								<col width="8%" />
+								<col width="8%" />
+								<col width="8%" />
+								<col width="8%" />
+								<col width="*" />
+								<col width="11%" />
+								<col width="10%" />
+								<col width="8%" />
+								<col width="5%" />
+								<col width="5%" />
+								<col width="5%" />
+							</colgroup>
+							<thead>
+								<tr>
+									<th>증권번호</th>
+									<th>계약자</th>
+									<th>피보험자</th>
+									<th>계약일자</th>
+									<th>상태</th>
+									<th>보험종류</th>
+									<th>임시보장금</th>
+									<th>보험료</th>
+									<th>납입주기</th>
+									<th>모집LP</th>
+									<th>수금LP</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>34567890</td>
+									<td>김#헌</td>
+									<td>2014-03-13</td>
+									<td>12(정상)</td>
+									<td>종신보험</td>
+									<td>10,000,000</td>
+									<td>186,810</td>
+									<td>월납</td>
+									<td>김#헌</td>
+									<td>김#헌</td>
+								</tr>
+								<tr>
+									<td>34567890</td>
+									<td>김#헌</td>
+									<td>2014-03-13</td>
+									<td>12(정상)</td>
+									<td>종신보험</td>
+									<td>10,000,000</td>
+									<td>186,810</td>
+									<td>월납</td>
+									<td>김#헌</td>
+									<td>김#헌</td>
+								</tr>
+								<tr>
+									<td>34567890</td>
+									<td>김#헌</td>
+									<td>2014-03-13</td>
+									<td>12(정상)</td>
+									<td>종신보험</td>
+									<td>10,000,000</td>
+									<td>186,810</td>
+									<td>월납</td>
+									<td>김#헌</td>
+									<td>김#헌</td>
+								</tr>
+								<tr>
+									<td>34567890</td>
+									<td>김#헌</td>
+									<td>2014-03-13</td>
+									<td>12(정상)</td>
+									<td>종신보험</td>
+									<td>10,000,000</td>
+									<td>186,810</td>
+									<td>월납</td>
+									<td>김#헌</td>
+									<td>김#헌</td>
+								</tr>
+								<tr>
+									<td>34567890</td>
+									<td>김#헌</td>
+									<td>2014-03-13</td>
+									<td>12(정상)</td>
+									<td>종신보험</td>
+									<td>10,000,000</td>
+									<td>186,810</td>
+									<td>월납</td>
+									<td>김#헌</td>
+									<td>김#헌</td>
+								</tr>
+								<tr>
+									<td>34567890</td>
+									<td>김#헌</td>
+									<td>2014-03-13</td>
+									<td>12(정상)</td>
+									<td>종신보험</td>
+									<td>10,000,000</td>
+									<td>186,810</td>
+									<td>월납</td>
+									<td>김#헌</td>
+									<td>김#헌</td>
+								</tr>
+								<tr>
+									<td>34567890</td>
+									<td>김#헌</td>
+									<td>2014-03-13</td>
+									<td>12(정상)</td>
+									<td>종신보험</td>
+									<td>10,000,000</td>
+									<td>186,810</td>
+									<td>월납</td>
+									<td>김#헌</td>
+									<td>김#헌</td>
+								</tr>
+								<tr>
+									<td>34567890</td>
+									<td>김#헌</td>
+									<td>2014-03-13</td>
+									<td>12(정상)</td>
+									<td>종신보험</td>
+									<td>10,000,000</td>
+									<td>186,810</td>
+									<td>월납</td>
+									<td>김#헌</td>
+									<td>김#헌</td>
+								</tr>
+								<tr>
+									<td>34567890</td>
+									<td>김#헌</td>
+									<td>2014-03-13</td>
+									<td>12(정상)</td>
+									<td>종신보험</td>
+									<td>10,000,000</td>
+									<td>186,810</td>
+									<td>월납</td>
+									<td>김#헌</td>
+									<td>김#헌</td>
+								</tr>
+								<tr>
+									<td>34567890</td>
+									<td>김#헌</td>
+									<td>2014-03-13</td>
+									<td>12(정상)</td>
+									<td>종신보험</td>
+									<td>10,000,000</td>
+									<td>186,810</td>
+									<td>월납</td>
+									<td>김#헌</td>
+									<td>김#헌</td>
+								</tr>
+							</tbody>
+						</table>
+	
+						<h3>요약정보</h3>
+						<table class="table10">
+							<caption></caption>
+							<thead>
+								<tr>
+									<th>s</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<th></th>
+									<td></td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+								</tr>
+							</tbody>
+						</table>
+
+						<table summary="" width="100%">
+							<caption></caption>
+							<thead>
+								<tr>
+									<th scope="col">s</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<th></th>
+									<td></td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+								</tr>
+							</tbody>
+						</table>
+
+						<ul class="footNate">
+							<li><span>*</span></li>
+						</ul>
+
+					</div>
+				</li>
+
 				<li>
 					<h3 class="hide-element">접촉이력</h3>
 					<div class="cusHistory">
