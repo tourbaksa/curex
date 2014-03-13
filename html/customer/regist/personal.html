@@ -1,0 +1,1064 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> CuREx </title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
+<link rel="stylesheet" href="/css/common.css" type="text/css" />
+<link rel="stylesheet" href="/css/curex.common.css" type="text/css" />
+<link rel="stylesheet" href="/css/curex.layout.css" type="text/css" />
+<link rel="stylesheet" href="/css/curex.customer.css" type="text/css" />
+<script src="/ci/agent.js"></script>
+<script src="/thirdParty/jquery/jquery-1.10.2.min.js"></script>
+<script src="/thirdParty/jquery/jquery-ui-1.10.3.min.js"></script>
+<script src="/thirdParty/tab.js"></script>
+<script src="/js/curexui.js"></script>
+</head>
+<body>
+
+<div id="wrap">
+	<!-- HEADER -->
+	<div id="header">
+		<h1><img src="/img/common/logo.gif" alt="CurEX Prudential" /></h1>
+		<a href="#none" class="total"><img src="/img/sub/gnb_total.gif" alt="전체메뉴" /></a>
+
+		<!-- 전체메뉴 클릭시 block -->
+		<div class="allmenu" style="display:none;">
+
+			<!-- 알림창 -->
+			<div class="anceWindow">
+				<h2>푸르덴셜 SFA 알림 메세지 4개가 있습니다.</h2>
+				<ol class="list">
+					<li>1. 김푸르님의 신규 계약 리스트</li>
+					<li>2. 푸르덴셜 SFA공통알림</li>
+					<li>3. 푸르덴셜 SFA관리자 사이트가...</li>
+				</ol>
+			</div>
+
+			<div class="siteMenu">
+				<ul>
+					<li><a href="#">고객관리</a>
+						<ul>
+							<li><a href="#">고객등록</a>
+								<ul>
+									<li><a href="#">개인</a></li>
+									<li><a href="#">법인</a></li>
+								</ul>
+							</li>
+							<li><a href="#">고객통합뷰</a></li>
+							<li><a href="#">고객정보관리</a></li>
+						</ul>
+					</li>
+					<li><a href="#">LiPS</a>
+						<ul>
+							<li><a href="#">니즈분석</a>
+								<ul>
+									<li><a href="#">니즈분석메인</a></li>
+									<li><a href="#">수입/지출</a></li>
+									<li><a href="#">LC분석</a></li>
+									<li><a href="#">Sales Material</a></li>
+									<li><a href="#">사망보장</a></li>
+									<li><a href="#">노후보장</a></li>
+									<li><a href="#">목적자금</a></li>
+									<li><a href="#">상세입력</a></li>
+									<li><a href="#">증권분석</a></li>
+									<li><a href="#">보고서출력</a></li>
+								</ul>
+							</li>
+							<li><a href="#">계획수립</a>
+								<ul>
+									<li><a href="#">개인설계</a></li>
+									<li><a href="#">법인설계</a></li>
+									<li><a href="#">복합설계</a></li>
+								</ul>
+							</li>
+							<li><a href="#">니즈환기자료</a></li>
+							<li><a href="#">금융계산기</a></li>
+						</ul>
+					</li>
+					<li><a href="#">계약</a>
+						<ul>
+							<li><a href="#">계약검색</a></li>
+							<li><a href="#">계약리스트</a></li>
+							<li><a href="#">계약리뷰</a></li>
+							<li><a href="#">감사고객</a></li>
+							<li><a href="#">청약</a></li>
+						</ul>
+					</li>
+					<li class="last"><a href="#">스마트CRM</a>
+						<ul>
+							<li><a href="#">스마트서비스</a></li>
+							<li><a href="#">일정표</a></li>
+							<li><a href="#">CS스테이션</a></li>
+							<li><a href="#">접촉이력</a></li>
+							<li><a href="#">LP활동관리</a></li>
+						</ul>
+					</li>
+				</ul>
+				
+			</div>
+
+			<a href="#" class="allMenuClose"><img src="/img/common/btn_MenuClose.gif" alt="전체메뉴닫기" /></a>
+		</div>
+		<div class="gnbWrap">
+			<ul id="gnb">
+				<li><a href="#none">고객관리</a>
+					<div class="depth2" style="display:none">
+						<ul>
+							<li><a href="#none"></a>
+								<div>
+									<ul>
+										<li><a href="#none"></a></li>
+									</ul>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</li>
+				<!-- 클래스 on 일경우 1뎁스 변경됨 -->
+				<li><a href="#none" class="on">LiPS</a>
+					<div class="depth2" >
+						<ul>
+							<li><a href="#none">니즈분석</a>
+								<div style="display:none;">
+									<ul>
+										<li><a href="#none">니즈분석메인</a></li>
+										<li><a href="#none">수입/지출</a></li>
+										<li><a href="#none">LC분석</a></li>
+										<li><a href="#none">사망</a></li>
+										<li><a href="#none">노후</a></li>
+										<li><a href="#none">목적</a></li>
+										<li><a href="#none">생애설계</a></li>
+										<li><a href="#none">보장분석</a></li>
+										<li><a href="#none">보고서출력</a></li>
+									</ul>	
+								</div>
+							</li>
+							<li><a href="#none">계획수립</a>
+								<div style="display:none">
+									<ul>
+										<li><a href="#none">개인설계</a></li>
+										<li><a href="#none">단체설계</a></li>
+										<li><a href="#none">복합설계</a></li>
+									</ul>
+								</div>
+							</li>
+							<li><a href="#none">니즈환기자료</a>
+								<div style="display:none">
+									<ul>
+										<li><a href="#none"></a></li>
+										<li><a href="#none"></a></li>
+										<li><a href="#none"></a></li>
+										<li><a href="#none"></a></li>
+										<li><a href="#none"></a></li>
+										<li><a href="#none"></a></li>
+										<li><a href="#none"></a></li>
+									</ul>
+								</div>
+							</li>
+							<li><a href="#none">금융계산기</a>
+								<div style="display:none">
+									<ul>
+										<li><a href="#none"></a></li>
+										<li><a href="#none"></a></li>
+										<li><a href="#none"></a></li>
+										<li><a href="#none"></a></li>
+										<li><a href="#none"></a></li>
+										<li><a href="#none"></a></li>
+									</ul>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</li>
+				<li><a href="#none">계약</a>
+					<div class="depth2" style="display:none">
+						<ul>
+							<li><a href="#none"></a>
+								<div>
+									<ul>
+										<li><a href="#none"></a></li>
+									</ul>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</li>
+				<li><a href="#none">스마트CRM</a>
+					<div class="depth2" style="display:none">
+						<ul>
+							<li><a href="#none"></a>
+								<div>
+									<ul>
+										<li><a href="#none"></a></li>
+									</ul>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</li>         
+			</ul>			
+			<span class="globalIcon">
+				<a href="#none"><img src="/img/sub/gnb_icon.gif" alt="" /></a>
+			</span>
+		</div>
+		<div class="Tsearch">
+			<form id="" method="post" action="/">
+				<fieldset>
+					<legend>고객검색</legend>
+					<input type="text" id="" value="이름/증권번호" style="width:97px" />
+					<input type="image" src="/img/common/btn_search.gif" alt="검색" />
+					<button type="button" class="searchMore"><span class="hide-text">검색더보기</span></button>
+					<span class="Name woman">
+						<!--
+							class="women" //여성 
+							class="man" // 남성
+						-->
+						<a href="#none" >선우재경</a>
+					</span>
+				</fieldset>
+			</form>
+		</div>
+		<!-- pesonArea -->
+		<div class="personInfoArea" style="display:none"><!-- 기계약하나만 보여질때 personOne 클래스 추가  -->
+
+			<div class="PersonCont ci-tab">
+				<ul class="tab04 tab-selector">
+					<li class="active"><a href="#"class="new">최근고객목록</a></li>
+					<li ><a href="#" class="old">보유고객그룹</a></li>
+				</ul>
+				<!-- TAB 폐널 : START -->
+				<ul class="tab-panel">
+					<li>
+						<h3 class="hide-element">최근고객목록</h3>
+						<ul class="personList">
+							<li class="hover">
+								<a href="#"><span class="sut">기계약</span><span class="name">김푸르</span> <span class="Rnum">800 / 남 / 34</span></a>
+								<button type="button" class="btn_delst1"><span>삭제</span></button>
+							</li>
+							<li>
+								<a href="#"><span class="sut">우&nbsp;&nbsp;수</span><span class="name">김푸르</span> <span class="Rnum">800 / 남 / 34</span></a>
+								<button type="button" class="btn_delst1"><span>삭제</span></button>
+							</li>
+							<li>
+								<a href="#"><span class="sut">기계약</span><span class="name">김푸르</span> <span class="Rnum">800 / 남 / 34</span></a>
+								<button type="button" class="btn_delst1"><span>삭제</span></button>
+							</li>
+							<li>
+								<a href="#"><span class="sut">기계약</span><span class="name">김푸르</span> <span class="Rnum">800 / 남 / 34</span></a>
+								<button type="button" class="btn_delst1"><span>삭제</span></button>
+							</li>
+							<li>
+								<a href="#"><span class="sut">기계약</span><span class="name">김푸르</span> <span class="Rnum">800 / 남 / 34</span></a>
+								<button type="button" class="btn_delst1"><span>삭제</span></button>
+							</li>
+							<li>
+								<a href="#"><span class="sut">기계약</span><span class="name">김푸르</span> <span class="Rnum">800 / 남 / 34</span></a>
+								<button type="button" class="btn_delst1"><span>삭제</span></button>
+							</li>
+							<li>
+								<a href="#"><span class="sut">기계약</span><span class="name">김푸르</span> <span class="Rnum">800 / 남 / 34</span></a>
+								<button type="button" class="btn_delst1"><span>삭제</span></button>
+							</li>
+							<li>
+								<a href="#"><span class="sut">기계약</span><span class="name">김푸르</span> <span class="Rnum">800 / 남 / 34</span></a>
+								<button type="button" class="btn_delst1"><span>삭제</span></button>
+							</li>
+							<li>
+								<a href="#"><span class="sut">기계약</span><span class="name">김푸르</span> <span class="Rnum">800 / 남 / 34</span></a>
+								<button type="button" class="btn_delst1"><span>삭제</span></button>
+							</li>
+							<li>
+								<a href="#"><span class="sut">기계약</span><span class="name">김푸르</span> <span class="Rnum">800 / 남 / 34</span></a>
+								<button type="button" class="btn_delst1"><span>삭제</span></button>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<h3 class="hide-element">최근고객목록</h3>
+						<ul class="personList">
+							<li>
+								<a href="#"><span class="sut">기계약</span><span class="name">김푸르</span> <span class="Rnum">800 / 남 / 34</span></a>
+								<button type="button" class="btn_delst1"><span>삭제</span></button>
+							</li>
+							<li>
+								<a href="#"><span class="sut">기계약</span><span class="name">김푸르</span> <span class="Rnum">800 / 남 / 34</span></a>
+								<button type="button" class="btn_delst1"><span>삭제</span></button>
+							</li>
+							<li>
+								<a href="#"><span class="sut">기계약</span><span class="name">김푸르</span> <span class="Rnum">800 / 남 / 34</span></a>
+								<button type="button" class="btn_delst1"><span>삭제</span></button>
+							</li>
+							<li>
+								<a href="#"><span class="sut">기계약</span><span class="name">김푸르</span> <span class="Rnum">800 / 남 / 34</span></a>
+								<button type="button" class="btn_delst1"><span>삭제</span></button>
+							</li>
+							<li>
+								<a href="#"><span class="sut">기계약</span><span class="name">김푸르</span> <span class="Rnum">800 / 남 / 34</span></a>
+								<button type="button" class="btn_delst1"><span>삭제</span></button>
+							</li>
+							<li>
+								<a href="#"><span class="sut">기계약</span><span class="name">김푸르</span> <span class="Rnum">800 / 남 / 34</span></a>
+								<button type="button" class="btn_delst1"><span>삭제</span></button>
+							</li>
+							<li>
+								<a href="#"><span class="sut">기계약</span><span class="name">김푸르</span> <span class="Rnum">800 / 남 / 34</span></a>
+								<button type="button" class="btn_delst1"><span>삭제</span></button>
+							</li>
+							<li>
+								<a href="#"><span class="sut">기계약</span><span class="name">김푸르</span> <span class="Rnum">800 / 남 / 34</span></a>
+								<button type="button" class="btn_delst1"><span>삭제</span></button>
+							</li>
+							<li>
+								<a href="#"><span class="sut">기계약</span><span class="name">김푸르</span> <span class="Rnum">800 / 남 / 34</span></a>
+								<button type="button" class="btn_delst1"><span>삭제</span></button>
+							</li>
+							<li>
+								<a href="#"><span class="sut">기계약</span><span class="name">김푸르</span> <span class="Rnum">800 / 남 / 34</span></a>
+								<button type="button" class="btn_delst1"><span>삭제</span></button>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<!-- TAB 폐널 : END -->
+
+				<div class="paging">
+				   <a href="#" class="prev"><img src="/img/common/arrow_prev.gif" alt="이전으로" /></a>
+				   <strong>1</strong>
+				   <a href="#">2</a>
+				   <a href="#">3</a>
+				   <a href="#">4</a>
+				   <a href="#">5</a>
+				   <a href="#" class="next"><img src="/img/common/arrow_next.gif" alt="다음으로" /></a>
+				</div>
+			</div>
+			
+			<div class="personDetail">
+				<dl class="pernalInfo">
+					<dt><strong>김푸르</strong> (34세, 남. 1980. 02. 01 양)</dt>
+					<dd class="sutIcon">기계약</dd>
+					<dd class="listDot"><strong>연락처</strong>010-1234-1234</dd>
+				</dl>
+
+				<div class="tabOutline ci-tab">
+					<ul class="tab05 tab-selector">
+						<li class="first active"><a href="#"><span>고객정보</span></a></li>
+						<li><a href="#"><span>계약정보</span></a></li>
+						<li class="last"><a href="#"><span>접촉이력</span></a></li>
+					</ul>
+					<ul class="tab-panel">
+						<li>
+							<!-- 고객정보 -->
+							<h3 class="hide-element">고객정보</h3>
+							<table summary="고객정보를 제공합니다." width="100%" class="InfoTable">
+								<caption>고객정보</caption>
+								<colgroup>
+									<col width="35%" />
+									<col width="*" />
+								</colgroup>
+								<tbody>
+									<tr>
+										<th scope="row">마케팅활용동의</th>
+										<td>O</td>
+									</tr>
+									<tr>
+										<th scope="row">직업</th>
+										<td>
+											<ul class="listbar">
+												<li>0102S (사무직)</li>
+											</ul>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row">변액적합성진단결과</th>
+										<td>
+											<ul class="listbar">
+												<li>보장형,안정형,성향불일치○,고위험X</li>
+											</ul>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row">가족관계</th>
+										<td>
+											<ul class="listbar">
+												<li>이현영(배우자, 30세)</li>
+												<li>김소원(자녀, 3세)</li>
+											</ul>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row">소속</th>
+										<td>
+											<ul class="listbar">
+												<li>㈜위모</li>
+											</ul>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row">기념일 <br />최근 2개월 이내)</th>
+										<td>
+											<ul class="listbar">
+												<li>배우자생일(1980.11.20)</li>
+												<li>결혼기념일(2013.12.02)</li>
+											</ul>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							<!-- //고객정보 -->
+						</li>
+						<li>
+						<!-- 계약정보 -->
+							<h3 class="hide-element">계약정보</h3>
+							<table summary="계약정보를 제공합니다." width="100%" class="InfoTable">
+								<caption>계약정보</caption>
+								<colgroup>
+									<col width="35%" />
+									<col width="*" />
+								</colgroup>
+								<tbody>
+									<tr>
+										<th scope="row">마케팅활용동의</th>
+										<td>O</td>
+									</tr>
+									<tr>
+										<th scope="row">직업</th>
+										<td>
+											<ul>
+												<li>0102S (사무직)</li>
+											</ul>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row">변액적합성진단결과</th>
+										<td>보장형,안정형,성향불일치○,고위험X</td>
+									</tr>
+									<tr>
+										<th scope="row">가족관계</th>
+										<td>
+											<ul>
+												<li>이현영(배우자, 30세)</li>
+												<li>김소원(자녀, 3세)</li>
+											</ul>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row">소속</th>
+										<td>
+											<ul>
+												<li>㈜위모</li>
+											</ul>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row">기념일 <br />최근 2개월 이내)</th>
+										<td>
+											<ul>
+												<li>배우자생일(1980.11.20)</li>
+												<li>결혼기념일(2013.12.02)</li>
+											</ul>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							<!-- 계약정보 -->
+						</li>
+						<li>
+							<h3 class="hide-element">접촉이력</h3>
+							<table summary="접촉이력정보를 제공합니다." width="100%" class="InfoTable">
+								<caption>접촉이력</caption>
+								<colgroup>
+									<col width="35%" />
+									<col width="*" />
+								</colgroup>
+								<tbody>
+									<tr>
+										<th scope="row">마케팅활용동의</th>
+										<td>O</td>
+									</tr>
+									<tr>
+										<th scope="row">직업</th>
+										<td>
+											<ul>
+												<li>0102S (사무직)</li>
+											</ul>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row">변액적합성진단결과</th>
+										<td>보장형,안정형,성향불일치○,고위험X</td>
+									</tr>
+									<tr>
+										<th scope="row">가족관계</th>
+										<td>
+											<ul>
+												<li>이현영(배우자, 30세)</li>
+												<li>김소원(자녀, 3세)</li>
+											</ul>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row">소속</th>
+										<td>
+											<ul>
+												<li>㈜위모</li>
+											</ul>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row">기념일 <br />최근 2개월 이내)</th>
+										<td>
+											<ul>
+												<li>배우자생일(1980.11.20)</li>
+												<li>결혼기념일(2013.12.02)</li>
+											</ul>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</li>
+					</ul>
+				</div>
+				<div class="btnWrap personBtn">
+					<a href="#" class="btn lgBeR1">메일발송</a>
+					<a href="#" class="btn lgBeR1">문자전송</a>
+					<a href="#" class="btn lgGyR1">고객정보</a>
+					<a href="#" class="btn lgGyR1">가입설계</a>
+					<a href="#" class="btn lgGyR1">니즈분석</a>
+				</div>
+				<dl class="pNnotice">
+					<dt>알림사항</dt>
+					<dd>
+						<ul>
+							<li class="listcc">LPS 신청서 만료 <span class="gray">( 2013.12.05 )</span></li>
+						</ul>
+					</dd>
+				</dl>
+				<button type="button" class="userInfoclose"><span>닫기</span></button>
+			</div>
+		</div>
+		<!-- //pesonArea -->
+	</div>
+	<!-- //HEADER -->
+		
+	<div id="conteiner">
+		<div class="hgroup">
+			<h2>개인</h2>
+			<ul class="location">
+				<li><a href="#none">홈&nbsp;</a>&gt;</li>
+				<li><a href="#none">&nbsp;LiPS&nbsp;</a>&gt;</li>
+				<li><a href="#none">&nbsp;계획수립&nbsp;</a></li>
+			 </ul>	
+		</div>
+		 
+		<!-- 공통 컨텐츠 -->
+		<div id="contents" class="customer clear-fix">
+			
+			<div class="juContact">
+				<h3 class="mt0">Life Planning Service 신청서 정보</h3>
+				<form action="/" method="post">
+					<fieldset>
+						<legend>Life Planning Service 신청서 정보</legend>
+					</fieldset>
+					<table class="table2">
+						<caption>신청서 정보</caption>
+						<colgroup>
+							<col width="25%">
+							<col width="*">
+							<col width="33%">
+							<col width="24%">
+						</colgroup>
+						<thead>
+							<tr>
+								<th><span class="red">*</span>LPs신청서번호</th>
+								<th><span class="red">*</span>LPs신청일자</th>
+								<th><span class="red">*</span>동의항목</th>
+								<th>접수여부</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>
+									<span class="widthFull">
+										<input type="text" id="" />
+									</span>
+								</td>
+								<td>
+									<input type="text" style="width:120px" />
+									<a href="#none"><img alt="달력" src="/img/common/icon3.gif"></a>
+								</td>
+								<td>
+									<span class="fLset">
+										<input type="checkbox" id="cht1" />
+										<label for="cht1">수집</label>
+										<input type="checkbox" id="cht2" />
+										<label for="cht2">민감</label>
+										<input type="checkbox" id="cht3" />
+										<label for="cht3">고유식별</label>
+										<input type="checkbox" id="cht4" />
+										<label for="cht4">제공</label>
+									</span>
+								</td>
+								<td class="textC">Y (2014-02-19)</td>
+							</tr>
+						</tbody>
+					</table>
+				</form>
+				<span class="more"><a class="btn smGnR" href="#none">mLPS인증</a></span>
+			</div>
+	
+			<ul class="footNote red">
+				<li><span>＊</span>LPS 신청번호 및 동의항목을 체크 후 고객정보를 입력해 주시기 바랍니다.</li>
+				<li><span>＊</span>고객이 고유식별정보에 동의하지 않았을 경우 주민등록번호 뒷자리는 입력불가 합니다.</li>
+			</ul>
+
+			<h3>기본정보</h3>
+			<form method="post" action="/">
+				<fieldset>
+					<legend>기본정보테이블</legend>
+					<table class="table1">
+						<caption>기본정보</caption>
+						<colgroup>
+							<col width="11%" />
+							<col width="14%" />
+							<col width="11%" />
+							<col width="11%" />
+							<col width="11%" />
+							<col width="*" />
+							<col width="14%" />
+						</colgroup>
+						<tbody>
+							<tr>
+								<th><span class="red">*</span>이름</th>
+								<td>
+									<span class="widthFull"><input type="text" value="김푸르" /></span>
+								</td>
+								<th>주민등록번호</th>
+								<td><span class="widthFull"><input type="text" value="800201-1111111" /></span></td>
+								<th>생년월일</th>
+								<td>
+									<select>
+										<option>양력</option>
+										<option>음력</option>
+									</select>
+									<input type="text" value="2014-03-04" style="width:95px;" />
+									<a href="#none"><img alt="달력" src="/img/common/icon3.gif"></a>
+								</td>
+								<td rowspan="3" class="baseImg baseImg1">
+									<div>
+										<span><img src="/img/common/bass_img.gif" alt="초기이미지" /></span>
+										<ul>
+											<li><a class="btn smGyRb" href="#none">등록</a></li>
+										</ul>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<th>연령(보험)</th>
+								<td>세-(-세)</td>
+								<th>성별</th>
+								<td>남</td>
+								<th></th>
+								<td></td>
+							</tr>
+							<tr>
+								<th>직업코드</th>
+								<td colspan="2">
+									<input type="text" value="00000" style="width:95px" />
+									<input type="button" value="검색" class="btn smGyRb">
+									<input type="text" value="" style="width:95px" disabled="disabled" />
+								</td>
+								<th>운전코드</th>
+								<td colspan="2">
+									<input type="text" value="00000" style="width:95px" />
+									<input type="button" value="검색" class="btn smGyRb">
+									<input type="text" value="" style="width:95px" disabled="disabled" />
+								</td>
+							</tr>
+						</tbody>
+					</table> 
+
+					<table class="table1 mt20">
+						<caption>기본정보</caption>
+						<colgroup>
+							<col width="11%" />
+							<col width="12%" />
+							<col width="9%" />
+							<col width="9%" />
+							<col width="7%" />
+							<col width="6%" />
+							<col width="8%" />
+							<col width="9%" />
+							<col width="8%" />
+							<col width="*" />
+						</colgroup>
+						<tbody>
+							<tr>
+								<th>자택주소</th>
+								<td colspan="5">
+									<input type="text" style="width:75px" />
+									<input type="button" value="검색" class="btn smGyRb">
+									<input type="text" style="width:182px" />
+									<input type="text" style="width:78px" />
+									<input type="button" value="삭제" class="btn smWtRb">
+								</td>
+								<th>휴대전화</th>
+								<td>
+									<span class="widthFull"><input type="text" id="" /></span>
+								</td>
+								<th>자택전화</th>
+								<td>
+									<input type="text" style="width:113px" />
+								</td>
+							</tr>
+							<tr>
+								<th>회사주소</th>
+								<td colspan="5">
+									<input type="text" style="width:75px" />
+									<input type="button" value="검색" class="btn smGyRb">
+									<input type="text" style="width:182px" />
+									<input type="text" style="width:78px" />
+									<input type="button" value="삭제" class="btn smWtRb">
+								</td>
+								<th>회사전화</th>
+								<td>
+									<span class="widthFull"><input type="text" id="" /></span>
+								</td>
+								<th>직장명(법인)</th>
+								<td>
+									<select style="width:87px">
+										<option></option>
+										<option></option>
+									</select>
+									<input type="text" style="width:110px" />
+								</td>
+							</tr>
+							<tr>
+								<th>DM발송지</th>
+								<td>
+									<span class="selectFull">
+										<select>
+											<option></option>
+											<option></option>
+										</select>
+									</span>
+								</td>
+								<th>부서</th>
+								<td>
+									<span class="widthFull"><input type="text" id="" /></span>
+								</td>
+								<th>직위</th>
+								<td>
+									<span class="widthFull"><input type="text" id="" /></span>
+								</td>
+								<th>E-Mail</th>
+								<td colspan="3">
+									<input type="text" style="width:95px" />
+									@
+									<select style="width:102px">
+										<option>선택</option>
+										<option></option>
+									</select>
+									<input type="text" disabled="disabled" style="width:69px" />
+									
+								</td>
+							</tr>
+							<tr>
+								<th>기타주소</th>
+								<td colspan="5">
+									<span class="widthFull"><input type="text" id="" /></span>
+								</td>
+								<th>SMS</th>
+								<td colspan="3">
+									<input type="text" style="width:341px;" />
+									<input type="button" value="새창" class="btn smWtRb">
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</fieldset>
+			</form>
+
+			<div class="juContact mt20">
+				<div class="btnWrap">
+					<a class="btn smGnR" href="#none">가족등록</a>
+				</div>
+				<table class="listTable">
+					<caption>관계등록</caption>
+					<thead>
+						<tr>
+							<th>관계</th>
+							<th>이름</th>
+							<th>주민등록번호</th>
+							<th>생년월일</th>
+							<th>성별</th>
+							<th>연령(보험)</th>
+							<th>동거여부</th>
+							<th>삭제</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>친구</td>
+							<td>김승헌</td>
+							<td>831026-1******</td>
+							<td>1983.10.10(양)</td>
+							<td>남</td>
+							<td>30</td>
+							<td>Y</td>
+							<td><input type="button" value="삭제" class="btn smWtRb"></td>
+						</tr>
+					</tbody>
+				</table>
+
+				<!-- 상단 삭제시 삭제행 없어짐 -->
+				<table class="listTable">
+					<caption>관계등록</caption>
+					<thead>
+						<tr>
+							<th>관계</th>
+							<th>이름</th>
+							<th>주민등록번호</th>
+							<th>생년월일</th>
+							<th>성별</th>
+							<th>연령(보험)</th>
+							<th>동거여부</th>
+						</tr>
+					</thead>
+						<tr>
+							<td colspan="7" class="tac h30">관계등록 버튼을 클릭하여 등록해 주세요.</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+			<div class="juContact">
+				<h3>적합성정보</h3>
+				<form action="/" method="post">
+					<fieldset>
+						<legend>적합성정보</legend>
+						<table class="table1">
+							<caption>적합성정보</caption>
+							<colgroup>
+								<col width="12%">
+								<col width="3%">
+								<col width="5%">
+								<col width="7%">
+								<col width="5%">
+								<col width="8%">
+								<col width="8%">
+								<col width="3%">
+								<col width="2%">
+								<col width="9%">
+								<col width="3%">
+								<col width="11%">
+								<col width="*">
+								<col width="8%">
+								<col width="3%">
+							</colgroup>
+							<tbody>
+								<tr>
+									<th>진단일자</th>
+									<td colspan="2">2014.03.05</td>
+									<th colspan="2">만기일자</th>
+									<td>2014.03.05</td>
+									<th colspan="3">상품성향</th>
+									<td colspan="2"></td>
+									<th>투자성향</th>
+									<td></td>
+									<th>스캔여부</th>
+									<td class="tac">Y</td>
+								</tr>
+								<tr>
+									<th>상품성향 불일치 확인</th>
+									<td class="tac">
+										<input type="checkbox" id="">
+									</td>
+									<th colspan="2">신청일</th>
+									<td colspan="2">
+										<input type="text" style="width:99px">
+										<a href="#none"><img alt="달력" src="/img/common/icon3.gif"></a>
+									</td>
+									<th>스캔여부</th>
+									<td class="tac">Y</td>
+									<th colspan="2">고위험변액보험 확인</th>
+									<td class="tac">
+										<input type="checkbox">
+									</td>
+									<th>신청일</th>
+									<td>
+										<input type="text" style="width:99px">
+										<a href="#none"><img alt="달력" src="/img/common/icon3.gif"></a>
+									</td>
+									<th>스캔여부</th>
+									<td class="tac">Y</td>
+								</tr>
+							</tbody>
+						</table>
+						<ol class="footNote">
+							<li class="red"><span>＊</span>[적합성진단실시] 버튼을 클릭하여 설문결과를 저장할 경우, 입력한 적합성진단결과로 업데이트가 되며 기존성향으로 사용불가하오니 고객이 실시한 적합성 결과를 정확히 입력하십시오.</li>
+						</ol>
+					</fieldset>
+				</form>
+				<div class="more btnWrap">
+					<a class="btn smGnR" href="#none">변경이력</a>
+					<a class="btn smGnR" href="#none">적합성진단실시</a>
+				</div>
+			</div>
+
+			<h3>기타</h3>
+			<form method="post" action="/">
+				<fieldset>
+					<legend>기타</legend>
+					<table class="table1">
+						<caption>기타</caption>
+						<colgroup>
+							<col width="12%" />
+							<col width="10%" />
+							<col width="12%" />
+							<col width="7%" />
+							<col width="12%" />
+							<col width="*" />
+							<col width="6%" />
+							<col width="3%" />
+							<col width="4%" />
+							<col width="6%" />
+							<col width="6%" />
+						</colgroup>
+						<tbody>
+							<tr>
+								<th>결혼여부</th>
+								<td colspan="3">
+									<select style="width:143px">
+										<option>선택</option>
+										<option></option>
+									</select>
+									<input type="text" style="width:99px" />
+									<a href="#none"><img src="/img/common/icon3.gif" alt="달력" /></a>
+								</td>
+								<th>분류</th>
+								<td>
+									<input type="text" style="width:180px" />
+									<input type="button" value="검색" class="btn smGyRb">
+								</td>
+								<th>가족대표</th>
+								<td class="tac" colspan="2">
+									<input type="checkbox"  />
+								</td>
+								<th>가족대표</th>
+								<td class="tac">
+									<input type="checkbox"  />
+								</td>
+							</tr>
+							<tr>
+								<th>학교</th>
+								<td>
+									<select style="width:88px">
+										<option>선택</option>
+										<option></option>
+									</select>
+								</td>
+								<th>학년</th>
+								<td>
+									<select style="width:62px">
+										<option>선택</option>
+										<option></option>
+									</select>
+								</td>
+								<th>호칭</th>
+								<td>
+									<input type="text" style="width:137px;" />
+									<select style="width:76px">
+										<option></option>
+										<option></option>
+									</select>
+								</td>
+								<th colspan="2">취미</th>
+								<td colspan="3">
+									<select style="width:150px">
+										<option>선택</option>
+										<option></option>
+									</select>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+
+				</fieldset>
+			</form>
+
+			<div class="juContact">
+				<h3>사용자정의필드</h3>
+				
+				<!-- 처음 보여지는 화면 -->
+				<div class="box1 tac">
+					사용자 정의 필드를 사용하시려면 <button class="searchMore mt_4" type="button"><span class="hide-text">검색더보기</span></button> 버튼을 클릭하신 후 사용하고자 하는 필드를 선택하세요
+				</div>
+
+				<form method="post" action="/">
+					<fieldset>
+						<legend>사용자정의필드</legend>
+						<table class="table1">
+							<caption></caption>
+							<colgroup>
+								<col width="12%" />
+								<col width="*" />
+								<col width="4%" />
+							</colgroup>
+							<tbody>
+								<tr>
+									<th>입력 값</th>
+									<td>
+										<span class="widthFull"><input type="text" style="" /></span>
+									</td>
+									<td><input type="button" value="삭제" class="btn smWtRb"></td>
+								</tr>
+								<tr>
+									<th>입력 값2</th>
+									<td>
+										<select style="width:452px;">
+											<option>선택</option>
+											<option></option>
+										</select>
+									</td>
+									<td><input type="button" value="삭제" class="btn smWtRb"></td>
+								</tr>
+							</tbody>
+						</table>
+					</fieldset>
+				</form>
+				
+				<div class="more btnWrap">
+					<button class="mt_4 searchMore" type="button"><span class="hide-text">검색더보기</span></button>
+					<a href="#none" class="btn smGnR">필드관리</a>
+				</div>
+			</div>
+
+			
+		</div>
+		<!-- //공통 컨텐츠 -->
+
+	</div>
+	
+	<!-- CHECKLIST -->
+	<div id="checkList">
+		<ul class="list">
+			<li><a href="#none" class="on">저장</a></li>
+		</ul>
+	</div>
+	<!-- //CHECKLIST -->
+
+
+</div>
+
+<!-- FOOTER -->
+<div id="footer">
+	<div class="fter clear-fix">
+		<h2><img src="/img/common/footer_logo.gif" alt="Prudential COPYLIGHT PRUDENTIAL LIFE INSURANCE COMPANY OF KOREA LTD. ALLRIGHTS RESERVED." /></h2>
+		<span><img src="/img/common/footer_tel.gif" alt="HELPDESK : 031-8006-2800" /></span>	
+	</div>
+</div>
+<!--//FOOTER -->
+
+</body>
+</html>
