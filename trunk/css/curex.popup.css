@@ -19,10 +19,8 @@
    레이어팝업 레이아웃 type
 ============================*/
 /* Layer popup type1 */
-div.layerPopWrap{position:relative; border:1px solid #64ade5; border-bottom:1px solid #d6d6d6;}
-div.layerPopWrap div.layerPopHdr{background:#f7f7f7; border-bottom:1px solid #e5e6e8;}
-div.layerPopWrap div.layerPopHdr h3{padding-left:8px; color:#363636; height:35px; line-height:35px; margin:0 !important;}
-div.layerPopCnt{padding:10px 9px 9px 9px; border-bottom:1px solid #64ade5;}
+div.layerPopWrap{position:relative;}
+div.layerPopCnt{padding:0 20px;}
 div.layerPopWrap a.btnClosePopup{position:absolute; right:9px; top:7px;}
 
 /* Layer popup type2 - 일정표전용 팝업 */
@@ -135,3 +133,40 @@ table.popListTable tbody td{border-left:1px solid #dedede; border-top:1px solid 
   스마트crm - 미리보기
 ============================*/
 div.previewCont{min-height:490px;}
+
+
+/*==========================
+  EMAIL센터 - 팝업
+============================*/
+div.csstation{position:relative; min-height:100px;}
+div.csstation ul.tab01{overflow:hidden; margin:0 0 20px 0; width:100%;}
+div.ReceiverZone{padding:6px 0 0 0;}
+div.ReceiverZone .btnWrap span{position:absolute; left:0; top:0;}
+div.ReceiverZone div.scrolling{ overflow-y:scroll; overflow-x:hidden; margin-top:5px;}
+table.mailTable table th{background:#ddedef !important; background-image:none !important;}
+table.mailTable table th,
+table.mailTable table td{border-right:0; height:30px; padding:2px 0 3px 0; text-align:center;}
+
+span.mailBtn{position:absolute; right:0; top:105px;}
+
+div.templateList{overflow:hidden; margin:20px 0 0 0; border-bottom:1px solid #e8e9e9;}
+div.templateList ul{margin-left:-15px; overflow:hidden;}
+div.templateList li{float:left; margin-left:15px;}
+div.templateList li span.img{display:block; border:1px solid #dedede; width:160px; height:120px; }
+div.templateList li span.tmName{display:block; height:41px; padding:10px 0 0 0; text-align:center;}
+div.templateList li span.tmName span{margin-left:4px;}
+
+div.templateList.skin li span.img{border:0; width:160px; height:220px;}
+
+/* Emailtable */
+table.SendTable{margin:20px 0 0 0;}
+table.SendTable th span {display:block; color:#e8404f;}
+
+/* emailWrap */
+div.emailWrap h4{font-size:16px; color:#363636; line-height:15px; height:15px; margin:20px 0; font-weight:bold;}
+
+/* LP소식지 */
+div.LpContent{}
+div.LpContent ul.ctTab{margin:10px 0 0 0;}
+div.LpContent table{margin:10px 0;}
+div.LpEditor{border:1px solid #dedede; border-top:0; min-height:255px;}

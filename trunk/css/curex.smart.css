@@ -314,31 +314,3 @@ div.statisTable .table1 tbody th{background:none;}
 div.statisTable .table1 th,
 div.statisTable .table1 td{text-align:center;}
 
-
-/*==========================
-  EMAIL센터
-============================*/
-div.mailWrap{position:relative; min-height:100px;}
-div.mailWrap h3{margin-top:20px;}
-div.mailWrap ul.tab01 {overflow:hidden; margin:0 0 20px 0; width:100%;}
-div.ReceiverZone{padding:6px 0 0 0;}
-div.ReceiverZone .btnWrap span{position:absolute; left:0; top:0;}
-div.ReceiverZone div.scrolling{ overflow-y:scroll; overflow-x:hidden; margin-top:5px;}
-table.mailTable table th{background:#ddedef !important; background-image:none !important;}
-table.mailTable table th,
-table.mailTable table td{border-right:0; height:30px; padding:2px 0 3px 0; text-align:center;}
-
-span.mailBtn{position:absolute; right:0; top:3px;}
-
-
-
-div.templateList{overflow:hidden; margin:20px 0 0 0; border-bottom:1px solid #e8e9e9;}
-div.templateList ul{margin-left:-15px; overflow:hidden;}
-div.templateList li{float:left; margin-left:15px;}
-div.templateList li span.img{display:block; border:1px solid #dedede; width:160px; height:120px; }
-div.templateList li span.tmName{display:block; height:41px; padding:10px 0 0 0; text-align:center;}
-div.templateList li span.tmName label{margin-left:4px;}
-
-/* 이메일보내기 */
-table.SendTable{margin:20px 0 0 0;}
-table.SendTable th span {display:block; color:#e8404f;}

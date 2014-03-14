@@ -9,6 +9,7 @@
 	font-weight: normal;
 }
 
+html,body{color:#707070; font-size:12px; font-family:NanumGothic,"나눔고딕";}
 caption,
 legend {
 	position:absolute; visibility:hidden; width:0; height:0; overflow:hidden; font-size:0;
@@ -37,11 +38,12 @@ legend {
 .pR2{padding-right:2px;}
 
 /* Form & button */
+input{color:#707070;}
 input[type="text"] {border-left:1px solid #c2c5cc; border-top:1px solid #c1c6cc; border-bottom:1px solid #e0e3ea; border-right:1px solid #e0e3ea; padding:3px 5px 0; height:24px;font-size:12px; vertical-align:middle;}
 input[type="checkbox"]{width:13px;height:13px;margin:0;padding:0;vertical-align:middle;}
 input[type="radio"]{width:13px;height:13px;vertical-align:middle;margin-top:-1px;_margin-top:0;}
-select {font-family:NanumGothic,"나눔고딕";vertical-align:middle;font-size:12px; line-height:20px; padding:3px 0;; border-left:1px solid #c2c5cc; border-top:1px solid #c1c6cc; border-bottom:1px solid #e0e3ea; border-right:1px solid #e0e3ea;}
-textarea {color:#464646; border:1px solid #b9c6d4; padding:5px; vertical-align:top; font-size:12px; line-height:16px;font-family: NanumGothic,sans-serif;}
+select {font-family:NanumGothic,"나눔고딕";vertical-align:middle;font-size:12px; line-height:20px; padding:3px 0;; border-left:1px solid #c2c5cc; border-top:1px solid #c1c6cc; border-bottom:1px solid #e0e3ea; border-right:1px solid #e0e3ea;color:#707070;}
+textarea {color:#464646; border:1px solid #b9c6d4; padding:5px; vertical-align:top; font-size:12px; line-height:16px;font-family: NanumGothic,sans-serif; color:#707070;}
 button {overflow: hidden; margin: 0; padding: 0; border: 0 none; font-family:NanumGothic,"나눔고딕",Dotum,"돋움",Gulim,"굴림",Verdana,sans-serif;  cursor: pointer;}
 button span{display: block; overflow: hidden; position: absolute; top: 0; left: 0; width: 0; height: 0; border: 0; background: none !important; font-size: 0; line-height: 0;}
 /* fireFox button */
@@ -75,6 +77,7 @@ table td.tar{padding-right:4px !important;}
 table tfoot th, table tfoot td{padding:6px 3px 5px;}
 table td.under a{text-decoration:underline;}
 .codeNum a{text-decoration:underline; color:#079eb1;}/* 링크색,언더라인 */
+table td.subject{padding:0 0 0 9px; text-align:left;}
 
 /* table 우측포지션 */
 div.juContact {position:relative;}
@@ -338,6 +341,15 @@ ul.tab04 a{
 .tab05 li.active a span{background:url(/img/common/bg_tab05_l_on.gif) no-repeat 0 0;height:32px; padding:0 15px; display:block; text-align:center; cursor:pointer; margin-left:-1px;}
 .tab05 li.active:first-child a span{margin-left:0;}
 
+
+/* 네비처럼쓰이는 tab */
+ul.navTab{overflow:hidden; width:100%; height:43px; border:1px solid #d8d8d8; border-bottom:0; margin:0 0 59px 0; background:url(/img/sub/bg_navTab.gif) repeat-x 0 100%;}
+ul.navTab li{float:left; height:42px; width:33.3%;}
+ul.navTab li a span{line-height:41px; height:40px; display:block; text-align:center; border-left:1px solid #d8d8d8;} 
+ul.navTab li:first-child a span{border-left:0;}
+ul.navTab li.active a span{border-bottom:3px solid #22b8c7; line-height:41px;}
+
+
 /* 스마트스테이션에서 쓰이는 tab */
 ul.ctTab{overflow:hidden; background:url(/img/sub/bg_ctTab.gif) repeat-x 0 100%; height:32px;}
 ul.ctTab li{float:left; position:relative;  z-index:1;}
@@ -348,6 +360,21 @@ ul.ctTab li:first-child a{border-left:1px solid #d8d8d8;}
 ul.ctTab li.active{ position:relative;z-index:2;}
 ul.ctTab li.active a{border-bottom:0; height:32px; line-height:32px; color:#707070; border-color:#898989; border-left:1px solid #898989; background-color:#fff;}
 
+/* 라운드탭*/
+ul.rndTab{overflow:hidden; background:url(/img/sub/bg_rndTab.gif) repeat-x 0 100%; height:25px;}
+ul.rndTab li{float:left; position:relative;  z-index:1; margin-right:2px;}
+ul.rndTab li a{border:1px solid #fff; display:block; color:#838383; border:1px solid #dedede; height:24px; border-bottom:0; border-top-left-radius:4px; border-top-right-radius:4px;
+-webkit-border-top-left-radius:4px; -moz-border-top-left-radius:4px; -ms-border-top-left-radius:4px; -webkit-border-top-right-radius:4px; -moz-border-top-right-radius:4px; -ms-border-top-right-radius:4px;
+background-color:#f6f6f6; 
+}
+ul.rndTab li a span{ height:22px; line-height:22px; border:1px solid #fff; display:block; padding:0 20px; border-bottom:0; border-top-left-radius:4px; border-top-right-radius:4px;
+-webkit-border-top-left-radius:4px; -moz-border-top-left-radius:4px; -ms-border-top-left-radius:4px; -webkit-border-top-right-radius:4px; -moz-border-top-right-radius:4px; -ms-border-top-right-radius:4px;}
+ul.rndTab li:first-child a{border-left:1px solid #dedede;}
+ul.rndTab li.active{ position:relative;z-index:2;}
+ul.rndTab li.active a{border-bottom:0; height:25px; line-height:25px; color:#363636; border-color:#dedede; border-left:1px solid #dedede; background-color:#fff;}
+
+
+
 /* paging */
 div.paging{padding:12px 0 0 0; text-align:center; font-size:0;}
 div.paging a{
@@ -357,7 +384,7 @@ div.paging a{
    -ms-border-radius:1px;
    border:1px solid #e4e5e6;
    color:#909598;
-   width:18px; height:20px;
+   width:20px; height:20px;
    text-align:center;
    vertical-align:top;
    line-height:18px;
@@ -374,7 +401,7 @@ div.paging strong{display:inline-block;
    color:#606466;
    text-align:center;
    line-height:18px;
-   width:18px; height:20px;
+   width:20px; height:20px;
    font-size:12px;
    font-weight:normal;
    }
@@ -437,6 +464,10 @@ table +.btnWrap{margin-top:10px;}
 	background-image: linear-gradient(top, #ffffff, #f1f1f1);
 	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#ffffff', endColorstr='#f1f1f1');
 } /* 작은 라운드화이트라운드보더 */
+
+.smbeRb{line-height:15px; color:#fff; border:1px solid #4a83cc; border-radius:2px; -moz-border-radius:2px; -webkit-border-radius:2px; -ms-border-radius:2px; padding:2px 5px 3px;
+	background-color: #589df3;} /* 작은 라운드화이트라운드보더 */
+
 .smLgR{line-height:15px; height:22px; color:#fff; border-radius:2px; -moz-border-radius:2px; -webkit-border-radius:2px; -ms-border-radius:2px; padding:2px 5px 3px; background-color: #22b8c7;} /* 밝은초록 라운드 */
 .smLgn{line-height:15px; height:22px; color:#fff; padding:2px 10px 3px; background-color: #22b8c7;} /* 밝은초록 직각 */
 .smGnn{line-height:15px; height:22px; color:#fff; padding:2px 10px 3px; background-color: #50a6ca;} /* 초록 직각 */
@@ -499,6 +530,7 @@ ul .point, ol .point{margin-left:-10px; color:#e8404f;}
 
 /* 마진 */
 .mt_4{margin-top:-4px !important;}
+
 
 
 
