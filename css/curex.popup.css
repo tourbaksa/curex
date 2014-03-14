@@ -1,10 +1,10 @@
 @charset "utf-8";
 
 /* popup */
-#popWrap{position:relative;font-family:NanumGothic,"나눔고딕",dotum,arial;font-size:12px;}
-#popWrap h1{background-color:#22b8c7;height:50px; line-height:50px; color:#fff; font-size:20px;font-weight:bold;padding-left:20px;}
-#popWrap .popContents{padding:20px 20px 35px;}
-#popWrap .close{position:absolute;right:18px;top:17px;}
+#popWrap{position:relative;}
+#popWrap h1{display: block; overflow:hidden; position:absolute; top: 0; left: 0;width: 0;height: 0;border:0;background: none !important; font-size: 0; line-height: 0;}
+#popWrap .popContents{padding:0 20px;}
+
 
 .popTit{position:relative;margin-bottom:5px;}
 .popTit p.tit{font-size:14px;color:#363636;}
@@ -18,10 +18,6 @@
 /*==========================
    레이어팝업 레이아웃 type
 ============================*/
-/* Layer popup type1 */
-div.layerPopWrap{position:relative;}
-div.layerPopCnt{padding:0 20px;}
-div.layerPopWrap a.btnClosePopup{position:absolute; right:9px; top:7px;}
 
 /* Layer popup type2 - 일정표전용 팝업 */
 div.layerPopWrap2{position:absolute; border:1px solid #64ade5; border-bottom:1px solid #d6d6d6; background:#fff; left:0; top:0; display:none;}

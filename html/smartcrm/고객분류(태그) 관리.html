@@ -6,19 +6,20 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
 <link rel="stylesheet" href="/css/common.css" type="text/css" />
 <link rel="stylesheet" href="/css/curex.common.css" type="text/css" />
-<link rel="stylesheet" href="/css/curex.layout.css" type="text/css" />
 <link rel="stylesheet" href="/css/curex.popup.css" type="text/css" />
+<link rel="stylesheet" href="/css/curex.dialog.css" type="text/css" />
 <script src="/ci/agent.js"></script>
 <script src="/thirdParty/jquery/jquery-1.10.2.min.js"></script>
 <script src="/thirdParty/jquery/jquery-ui-1.10.3.min.js"></script>
 <script src="/thirdParty/tab.js"></script>
+<script src="/js/curex.ui.js"></script>
+<script type="text/javascript" src="/js/dialog.js"></script>
 </head>
 <body>
 
-<div id="popWrap" style="width:400px;">
-	<h1>고객분류(태그) 관리</h1>
-	<div class="popContents">
-
+<div class="layerPopWrap">
+	<h1 class="hide-element">CS스테이션</h1>
+	<div class="layerPopCnt" style="width:900px;">
 		<form method="post" action="/">
 			<fieldset>
 				<legend>고객분류(태그) 관리</legend>
@@ -145,11 +146,8 @@
 		<div class="btnWrap mt20">
 			<input type="submit" value="저장" class="btn lgLgR">
 		</div>
-
 	</div>
-	<a href="#none" class="close"><img src="/img/common/btn_close.gif" alt="닫기" /></a>
 </div>
-
 
 </body>
 </html>
