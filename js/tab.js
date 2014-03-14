@@ -498,7 +498,7 @@
 	 *
 	 */
 	self.init = function (tab, option) {
-
+		console.log(tab)
 		var tabObject = $({});
 
 		if (option === undefined) {

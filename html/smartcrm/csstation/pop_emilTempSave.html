@@ -19,7 +19,7 @@
 <div class="layerPopWrap">
 	<h1 class="hide-element">CS스테이션</h1>
 	<div class="layerPopCnt" style="width:900px;">
-		<div class="csstation clear-fix ci-tab" style="width:900px;">
+		<div class="csstation clear-fix ci-tab">
 			<ul class="navTab tab-selector">
 				<li><a href="#"><span>SMS 센터</span></a></li>
 				<li class="active"><a href="#"><span>EMAIL 센터</span></a></li>
@@ -41,195 +41,111 @@
 							<li><a href="#emilCont3">e-Post 보내기</a></li>
 						</ul>
 						<span class="mailBtn">
-							<a href="#none" class="btn smbeRb">발송내역보기</a> <!-- 버튼을 누르면 활성화 되면서 smbeRb로 클래스바뀜  -->
-							<a href="#none" class="btn smWtRb">임시저장함</a>
+							<a href="#none" class="btn smWtRb">발송내역보기</a> 
+							<a href="#none" class="btn smbeRb">임시저장함</a><!-- 버튼을 누르면 활성화 되면서 smbeRb로 클래스바뀜  -->
 						</span>
-						<div class="emailSendList">
-							<table summary="구분,검색기간" width="100%" class="table2">
-								<caption>발송기간검색</caption>
-								<colgroup>
-									<col width="10%" />
-									<col width="*" />
-								</colgroup>
-								<tbody>
-									<tr>
-										<th scope="row">구분</th>
-										<td class="tal">
-											<select title="구분선택" style="width:90px;">
-												<option>전체</option>
-											</select>
-										</td>
-									</tr>
-									<tr>
-										<th scope="row">검색기간</th>
-										<td class="tal">
-											<select title="년선택" style="width:80px;">
-												<option>2014</option>
-											</select>
-											<select title="월선택" style="width:80px;">
-												<option>2월</option>
-											</select>
-											<select title="일선택" style="width:80px;">
-												<option>25월</option>
-											</select>
-											~
-											<select title="년선택" style="width:80px;">
-												<option>2014</option>
-											</select>
-											<select title="월선택" style="width:80px;">
-												<option>2월</option>
-											</select>
-											<select title="일선택" style="width:80px;">
-												<option>25월</option>
-											</select>
-											<a href="#" class="btn smGyRb">1주일</a>
-											<a href="#" class="btn smGyRb">1개월</a>
-											<a href="#" class="btn smGyRb">3개월</a>
-											<a href="#" class="btn smGyRb">6개월</a>
-											<a href="#" class="btn smGyRb">1년</a>
-										</td>
-									</tr>
-								</tbody>
-							</table>
-							<div class="btnWrap">
+						<div class="emailSaveList">
+
+							<div class="btnWrap tal">
+								<select title="구분선택">
+									<option>전체</option>
+									<option></option>
+								</select>
+								<select title="검색영역선택">
+									<option>제목+내영</option>
+									<option></option>
+								</select>
+								<input type="text" style="width:140px;" />
 								<input type="submit" class="btn lgBeR" value="저장" />
 							</div>
-							<table summary="번호, 발송일, 제목, 발송매체, 매체분류, 발송요청수, 발송성공수, OPEN건수,매일수신통계등의 발송리스트정보제공" width="100%" class="table3">
-								<caption>발송리스트</caption>
+							<table summary="번호,제목,구분,등록일,삭제등 임시저장리스트정보제공" width="100%" class="table3">
+								<caption>임시저장리스트</caption>
 								<colgroup>
-									<col width="5%" />
 									<col width="10%" />
 									<col width="*" />
-									<col width="7%" />
-									<col width="7%" />
-									<col width="8%" />
-									<col width="8%" />
-									<col width="8%" />
-									<col width="9%" />
+									<col width="10%" />
+									<col width="11%" />
+									<col width="10%" />
 								</colgroup>
 								<thead>
 								<tr>
 									<th scope="col">번호</th>
-									<th scope="col">발송일</th>
 									<th scope="col">제목</th>
-									<th scope="col">발송매체</th>
-									<th scope="col">매체분류</th>
-									<th scope="col">발송요청수</th>
-									<th scope="col">발송성공수</th>
-									<th scope="col">OPEN건수</th>
-									<th scope="col">메일수신통계</th>
+									<th scope="col">구분</th>
+									<th scope="col">등록일</th>
+									<th scope="col">삭제</th>
 								</tr>
 								</thead>
 								<tbody>
 									<tr>
 										<td>10</td>
-										<td></td>
-										<td class="subject"></td>
-										<td></td>
-										<td></td>
-										<td></td>
-										<td></td>
-										<td></td>
-										<td></td>
+										<td class="subject">안녕하세요? 신새롬입니다.</td>
+										<td>e-Card</td>
+										<td>2014.2.23</td>
+										<td><a href="#" class="cellDel"><img src="/img/common/icon4.gif" alt="삭제" /></a></td>
 									</tr>
 									<tr>
 										<td>9</td>
-										<td>2014.2.23</td>
 										<td class="subject">안녕하세요? 신새롬입니다.</td>
 										<td>e-Card</td>
-										<td>e-Card</td>
-										<td>1000</td>
-										<td>1000</td>
-										<td>1000</td>
-										<td>1000</td>
+										<td>2014.2.23</td>
+										<td><a href="#" class="cellDel"><img src="/img/common/icon4.gif" alt="삭제" /></a></td>
 									</tr>
 									<tr>
 										<td>8</td>
-										<td>2014.1.2</td>
-										<td class="subject"></td>
-										<td>e-Letter</td>
-										<td></td>
-										<td></td>
-										<td></td>
-										<td></td>
-										<td></td>
+										<td class="subject">안녕하세요? 신새롬입니다.</td>
+										<td>e-Card</td>
+										<td>2014.2.23</td>
+										<td><a href="#" class="cellDel"><img src="/img/common/icon4.gif" alt="삭제" /></a></td>
 									</tr>
 									<tr>
 										<td>7</td>
-										<td>2014.1.2</td>
-										<td class="subject"></td>
-										<td>e-Post</td>
-										<td></td>
-										<td></td>
-										<td></td>
-										<td></td>
-										<td></td>
+										<td class="subject">안녕하세요? 신새롬입니다.</td>
+										<td>e-Card</td>
+										<td>2014.2.23</td>
+										<td><a href="#" class="cellDel"><img src="/img/common/icon4.gif" alt="삭제" /></a></td>
 									</tr>
 									<tr>
 										<td>6</td>
-										<td></td>
-										<td class="subject"></td>
-										<td></td>
-										<td></td>
-										<td></td>
-										<td></td>
-										<td></td>
-										<td></td>
+										<td class="subject">안녕하세요? 신새롬입니다.</td>
+										<td>e-Card</td>
+										<td>2014.2.23</td>
+										<td><a href="#" class="cellDel"><img src="/img/common/icon4.gif" alt="삭제" /></a></td>
 									</tr>
 									<tr>
 										<td>5</td>
-										<td></td>
-										<td class="subject"></td>
-										<td></td>
-										<td></td>
-										<td></td>
-										<td></td>
-										<td></td>
-										<td></td>
+										<td class="subject">안녕하세요? 신새롬입니다.</td>
+										<td>e-Card</td>
+										<td>2014.2.23</td>
+										<td><a href="#" class="cellDel"><img src="/img/common/icon4.gif" alt="삭제" /></a></td>
 									</tr>
 									<tr>
 										<td>4</td>
-										<td></td>
-										<td class="subject"></td>
-										<td></td>
-										<td></td>
-										<td></td>
-										<td></td>
-										<td></td>
-										<td></td>
+										<td class="subject">안녕하세요? 신새롬입니다.</td>
+										<td>e-Card</td>
+										<td>2014.2.23</td>
+										<td><a href="#" class="cellDel"><img src="/img/common/icon4.gif" alt="삭제" /></a></td>
 									</tr>
 									<tr>
 										<td>3</td>
-										<td></td>
-										<td class="subject"></td>
-										<td></td>
-										<td></td>
-										<td></td>
-										<td></td>
-										<td></td>
-										<td></td>
+										<td class="subject">안녕하세요? 신새롬입니다.</td>
+										<td>e-Card</td>
+										<td>2014.2.23</td>
+										<td><a href="#" class="cellDel"><img src="/img/common/icon4.gif" alt="삭제" /></a></td>
 									</tr>
 									<tr>
 										<td>2</td>
-										<td></td>
-										<td class="subject"></td>
-										<td></td>
-										<td></td>
-										<td></td>
-										<td></td>
-										<td></td>
-										<td></td>
+										<td class="subject">안녕하세요? 신새롬입니다.</td>
+										<td>e-Card</td>
+										<td>2014.2.23</td>
+										<td><a href="#" class="cellDel"><img src="/img/common/icon4.gif" alt="삭제" /></a></td>
 									</tr>
 									<tr>
 										<td>1</td>
-										<td></td>
-										<td class="subject"></td>
-										<td></td>
-										<td></td>
-										<td></td>
-										<td></td>
-										<td></td>
-										<td></td>
+										<td class="subject">안녕하세요? 신새롬입니다.</td>
+										<td>e-Card</td>
+										<td>2014.2.23</td>
+										<td><a href="#" class="cellDel"><img src="/img/common/icon4.gif" alt="삭제" /></a></td>
 									</tr>
 								</tbody>
 							</table>
