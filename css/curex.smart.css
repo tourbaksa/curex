@@ -145,10 +145,11 @@ span.slideMask{background:url(/img/sub/bg_slideMask.png) 0 0; width:242px; heigh
 
 div.spBox{position:relative; float:left; background:url(/img/sub/bg_spBox.gif) no-repeat 100% 0; padding:9px 0 9px 14px; width:240px; border-radius:3px; -webkit-border-radius:3px; -moz-border-radius:3px; -ms-border-radius:3px; border:1px solid #dedede; height:89px; margin:0 0 9px 9px;}
 div.spBox span.badge{display:block; height:16px;}
-div.spBox p.spCmt{line-height:15px; padding:4px 105px 8px 0;}
+div.spBox a.spCmt{line-height:15px; margin:4px 105px 8px 0; display:block; overflow:hidden;}
 div.spBox.clearB{clear:both;}
-a.bePoint{background:url(/img/sub/bg_bePoint.gif) no-repeat 1px 50%; padding-left:13px; line-height:11px; font-size:11px;}
-a.bePoint strong{position:absolute; right:0; top:13px; width:60px; text-align:center; display:block; height:40px; color:#fff; font-size:22px; line-height:18px; height:18px; font-weight:bold;}
+a.calcStandard{background:url(/img/sub/bg_bePoint.gif) no-repeat 1px 50%; padding-left:13px; line-height:11px; font-size:11px;}
+span.calcPoint{position:absolute; right:0; top:13px; width:60px; text-align:center; display:block; height:40px; color:#fff; font-size:22px; line-height:18px; height:18px; font-weight:bold;}
+
 
 /* 산출기준레이어 */
 div.compLayer{position:absolute; z-index:22; background:#fff; background:url(/img/sub/bg_layerArrow.gif) no-repeat 18px 0; left:-2px; top:83px; height:171px; padding:5px 0 0 0; display:none;}
