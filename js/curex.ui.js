@@ -3,16 +3,16 @@
 */
 
 $(document).ready(function(){
-	if($("div#checkList").length){curex.Front.checkList();}
-	if($("div.tab02").length){curex.Front.tab();}
-	curex.Front.rolling();
-	curex.Front.event();
-	if($("div.timeSchedule").length){curex.Front.carlendar();}
+	if($("div#checkList").length){curex.checkList();}
+	if($("div.tab02").length){curex.tab();}
+	curex.rolling();
+	curex.event();
+	if($("div.timeSchedule").length){curex.carlendar();}
 });
 
 var curex ={};
 
-curex.Front = {
+curex = {
 	init:function(scope){
 		this.op = scope;
 	},

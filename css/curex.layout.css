@@ -141,6 +141,7 @@ div.personBtn .lgGyR1{padding:7px 10px;}
 #conteiner .location{position:absolute;right:0;top:0;}
 #conteiner .location li {float:left; font-size:11px;}
 #conteiner .location li a {text-decoration:none; color:#707070; line-height:23px; height:23px;}
+#conteiner #contents width{1024px;}
 #conteiner #contents ul.tab01{margin:0 0 8px 0; overflow:hidden;}
 #conteiner #contents .left{float:left; width:270px;position:relative;}
 #conteiner #contents .right{float:right; width:733px}

@@ -12,8 +12,9 @@
 <script src="/thirdParty/jquery/jquery-1.10.2.min.js"></script>
 <script src="/thirdParty/jquery/jquery-ui-1.10.3.min.js"></script>
 <script src="/thirdParty/tab.js"></script>
-<script src="/js/curex.ui.js"></script>
 <script type="text/javascript" src="/js/dialog.js"></script>
+<script type="text/javascript" src="/js/popup.js"></script>
+<script src="/js/curex.ui.js"></script>
 </head>
 <body>
 <div id="popWrap">
@@ -606,7 +607,7 @@
 
 	})(jQuery);
 	var pobj = $('.add');
-	curex.Front.init(pobj);  // tab 데이터가 삭제되기전에 obj에 담아놓음.
+	curex.init(pobj);  // tab 데이터가 삭제되기전에 obj에 담아놓음.
 	var myTab2 = ci.tab.init($('.csstation')); // 
 	//]]>
 </script>
