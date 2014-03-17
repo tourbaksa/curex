@@ -6,157 +6,145 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
 <link rel="stylesheet" href="/css/common.css" type="text/css" />
 <link rel="stylesheet" href="/css/curex.common.css" type="text/css" />
-<link rel="stylesheet" href="/css/curex.layout.css" type="text/css" />
 <link rel="stylesheet" href="/css/curex.popup.css" type="text/css" />
+<link rel="stylesheet" href="/css/curex.dialog.css" type="text/css" />
 <script src="/ci/agent.js"></script>
 <script src="/thirdParty/jquery/jquery-1.10.2.min.js"></script>
 <script src="/thirdParty/jquery/jquery-ui-1.10.3.min.js"></script>
 <script src="/thirdParty/tab.js"></script>
+<script src="/js/curex.ui.js"></script>
+<script type="text/javascript" src="/js/dialog.js"></script>
 </head>
 <body>
 
-<div class="popWrap" style="width:500px;">
-	<h1 class="hide-element">분류선택</h1>
+<div id="popWrap" style="width:400px">
+	<h1>고객분류(태그) 관리</h1>
+
 	<div class="popContents">
-		
-		<div class="popTit">
-			<p>등록된 분류필드를 수정, 삭제하시려면 해당필드의 체크박스를 선택해 주세요.</p>
-		</div>
-		<table class="table1">
-			<caption>분류필드</caption>
-			<colgroup>
-				<col width="20%" />
-				<col width="%" />
-			</colgroup>
-			<tbody>
-				<tr>
-					<th>분류필드</th>
-					<td>
-						<input type="text" style="width:245px" />
-						<a href="#none" class="btn smWtRb">추가</a>
-						<a href="#none" class="btn smWtRb">수정</a>
-						<a href="#none" class="btn smWtRb">삭제</a>
-					</td>
-				</tr>
-			</tbody>
-		</table>
-		<ul class="red mt8">
-			<li>* 추가, 수정, 삭제하신 분류 항목은 저장 버튼을 눌러야만 변경사항이 반영 됩니다.</li>
-		</ul>
+		<form method="post" action="/">
+			<fieldset>
+				<legend>고객분류(태그) 관리</legend>
+				
+				<div class="btnWrap">
+					<a href="#none" class="btn smGnR"><span class="setIcon2">더보기</span>뒤로</a>
+					<a href="#none" class="btn smGnR"><span class="setIcon3">더보기</span>고객분류(태그)추가</a>
+				</div>
 
-		<table class="popListTable mt8">
-			<caption>텍스트형</caption>
-			<colgroup>
-				<col width="10%" />
-				<col width="*" />
-				<col width="35%" />
-			</colgroup>
-			<thead>
-				<tr>
-					<th>선택</th>
-					<th colspan="2">등록된 분류필드</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td>
-						<input type="checkbox" />
-					</td>
-					<td class="tal"><span class="widthFull"><input type="text" value="Y" /></span></td>
-					<td class="red tac bderLN">(해당고객 10명)</td>
-				</tr>
-				<tr>
-					<td>
-						<input type="checkbox" />
-					</td>
-					<td class="tal"><span class="widthFull"><input type="text" value="N" /></span></td>
-					<td class="red tac bderLN">(해당고객 10명)</td>
-				</tr>
-				<tr>
-					<td>
-						<input type="checkbox" />
-					</td>
-					<td class="tal"><span class="widthFull"><input type="text" value="ioc" /></span></td>
-					<td class="red tac bderLN">(해당고객 10명)</td>
-				</tr>
-				<tr>
-					<td>
-						<input type="checkbox" />
-					</td>
-					<td class="tal"><span class="widthFull"><input type="text" value="친구가족" /></span></td>
-					<td class="red tac bderLN">(해당고객 10명)</td>
-				</tr>
-				<tr>
-					<td>
-						<input type="checkbox" />
-					</td>
-					<td class="tal"><span class="widthFull"><input type="text" value="친구가족" /></span></td>
-					<td class="red tac bderLN">(해당고객 10명)</td>
-				</tr>
-				<tr>
-					<td>
-						<input type="checkbox" />
-					</td>
-					<td class="tal"><span class="widthFull"><input type="text" value="친구가족" /></span></td>
-					<td class="red tac bderLN">(해당고객 10명)</td>
-				</tr>
-				<tr>
-					<td>
-						<input type="checkbox" />
-					</td>
-					<td class="tal"><span class="widthFull"><input type="text" value="친구가족" /></span></td>
-					<td class="red tac bderLN">(해당고객 10명)</td>
-				</tr>
-				<tr>
-					<td>
-						<input type="checkbox" />
-					</td>
-					<td class="tal"><span class="widthFull"><input type="text" value="친구가족" /></span></td>
-					<td class="red tac bderLN">(해당고객 10명)</td>
-				</tr>
-				<tr>
-					<td>
-						<input type="checkbox" />
-					</td>
-					<td class="tal"><span class="widthFull"><input type="text" value="친구가족" /></span></td>
-					<td class="red tac bderLN">(해당고객 10명)</td>
-				</tr>
-				<tr>
-					<td>
-						<input type="checkbox" />
-					</td>
-					<td class="tal"><span class="widthFull"><input type="text" value="친구가족" /></span></td>
-					<td class="red tac bderLN">(해당고객 10명)</td>
-				</tr>
-				<tr>
-					<td>
-						<input type="checkbox" />
-					</td>
-					<td class="tal"><span class="widthFull"><input type="text" value="친구가족" /></span></td>
-					<td class="red tac bderLN">(해당고객 10명)</td>
-				</tr>
-			</tbody>
-		</table>
-		
-		<div class="btnWrap">
-			<a class="btn lgLgR" href="#none">저장</a>
-			<a class="btn lgGyR" href="#none">취소</a>
-		</div>
+				<table class="table3">
+					<caption>고객분류(태그) 관리</caption>
+					<colgroup>
+						<col width="*" />
+						<col width="25%" />
+						<col width="16%" />
+					</colgroup>
+					<thead>
+						<tr>
+							<th>고객분류(태그)명</th>
+							<th>지정된 고객수</th>
+							<th>삭제</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>
+								<span class="widthFull">
+									<input type="text" value="태그명" />
+								</span>
+							</td>
+							<td>0</td>
+							<td>
+								<a href="#none"><img src="/img/common/btn_dels2.gif" alt="삭제" /></a>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<span class="widthFull">
+									<input type="text" value="태그명" />
+								</span>
+							</td>
+							<td>0</td>
+							<td>
+								<a href="#none"><img src="/img/common/btn_dels2.gif" alt="삭제" /></a>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<span class="widthFull">
+									<input type="text" value="태그명" />
+								</span>
+							</td>
+							<td>0</td>
+							<td>
+								<a href="#none"><img src="/img/common/btn_dels2.gif" alt="삭제" /></a>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<span class="widthFull">
+									<input type="text" value="태그명" />
+								</span>
+							</td>
+							<td>0</td>
+							<td>
+								<a href="#none"><img src="/img/common/btn_dels2.gif" alt="삭제" /></a>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<span class="widthFull">
+									<input type="text" value="태그명" />
+								</span>
+							</td>
+							<td>0</td>
+							<td>
+								<a href="#none"><img src="/img/common/btn_dels2.gif" alt="삭제" /></a>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<span class="widthFull">
+									<input type="text" value="태그명" />
+								</span>
+							</td>
+							<td>0</td>
+							<td>
+								<a href="#none"><img src="/img/common/btn_dels2.gif" alt="삭제" /></a>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<span class="widthFull">
+									<input type="text" value="태그명" />
+								</span>
+							</td>
+							<td>0</td>
+							<td>
+								<a href="#none"><img src="/img/common/btn_dels2.gif" alt="삭제" /></a>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<span class="widthFull">
+									<input type="text" value="태그명" />
+								</span>
+							</td>
+							<td>0</td>
+							<td>
+								<a href="#none"><img src="/img/common/btn_dels2.gif" alt="삭제" /></a>
+							</td>
+						</tr>
+					</tbody>
+				</table>
 
+			</fieldset>
+		</form>
+
+		<div class="btnWrap mt10">
+			<input type="submit" value="저장" class="btn lgLgR">
+		</div>
 	</div>
-	
-
-	<script type="text/javascript">
-		//<![CDATA[
-		var myTab = ci.tab.init($('.userSelect')); // 고객정보탭
-		var myTab1 = ci.tab.init($('.tabOutline')); //
-		//]]> 
-	</script>
-
 </div>
-
 
 </body>
 </html>
-
 

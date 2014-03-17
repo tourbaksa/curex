@@ -15,8 +15,8 @@
 </head>
 <body>
 
-<div class="popWrap" style="width:900px;">
-	<h1 class="hide-element">적합성진단실시</h1>
+<div id="popWrap" style="width:900px;">
+	<h1>적합성진단실시</h1>
 	<div class="popContents">
 		
 		<form method="post" action="/">
@@ -51,11 +51,11 @@
 							<li>1. 고객님께서 현재 대비가 필요하다고 생각하시는 위험의 종류는 무엇입니까?
 								<ul>
 									<li>
-										<input type="radio" id="wb1" name="wb1" /> 
+										<input type="checkbox" id="wb1" name="wb1" /> 
 										<label for="wb1">위험에 대비한 가족의 보장 자산 마련</label>
 									</li>
 									<li>
-										<input type="radio" id="wb2" name="wb1" /> 
+										<input type="checkbox" id="wb2" name="wb2" /> 
 										<label for="wb2">장기저축을 통한 목돈 마련 및 노후르 위한 연금 마련</label>
 									</li>
 								</ul>
@@ -63,13 +63,13 @@
 							<li>2. 보유 중인 보험 계약의 유지 기간, 혹은 보유한다면 예상 유지기간은 어느 정도 입니까?
 								<ul class="widSort">
 									<li>
-										<input type="radio" id="wb3" name="wb3" /> 
+										<input type="checkbox" id="wb3" name="wb3" /> 
 										<label for="wb3">3년 미만</label>
-										<input type="radio" id="wb4" name="wb3" /> 
+										<input type="checkbox" id="wb4" name="wb4" /> 
 										<label for="wb4">3 ~ 10년</label>
-										<input type="radio" id="wb5" name="wb3" /> 
+										<input type="checkbox" id="wb5" name="wb5" /> 
 										<label for="wb5">10 ~ 20년</label>
-										<input type="radio" id="wb6" name="wb3" /> 
+										<input type="checkbox" id="wb6" name="wb6" /> 
 										<label for="wb6">20년 이상</label>
 									</li>
 								</ul>
@@ -77,15 +77,15 @@
 							<li>3. 귀하의 월평균 소득은 어느 정도 입니까?
 								<ul class="widSort">
 									<li>
-										<input type="radio" id="wb7" name="wb7" /> 
+										<input type="checkbox" id="wb7" name="wb7" /> 
 										<label for="wb7">200만원 이하</label>
-										<input type="radio" id="wb8" name="wb7" /> 
+										<input type="checkbox" id="wb8" name="wb8" /> 
 										<label for="wb8">500만원 이하</label>
-										<input type="radio" id="wb9" name="wb7" /> 
+										<input type="checkbox" id="wb9" name="wb9" /> 
 										<label for="wb9">1000만원 이하</label> 
 									</li>
 									<li>
-										<input type="radio" id="wb10" name="wb7" />
+										<input type="checkbox" id="wb10" name="wb10" />
 										<label for="wb10">1000만원 이상</label>
 									</li>
 								</ul>
@@ -93,17 +93,17 @@
 							<li>4. 월평균 소득에서 보험료가 차지하는 비중은 어느정도 입니까?
 								<ul class="widSort">
 									<li>
-										<input type="radio" id="wb11" name="wb11" /> 
+										<input type="checkbox" id="wb11" name="wb11" /> 
 										<label for="wb11">10% 미만</label>
-										<input type="radio" id="wb12" name="wb11" /> 
+										<input type="checkbox" id="wb12" name="wb12" /> 
 										<label for="wb12">10 ~ 20%</label>
-										<input type="radio" id="wb13" name="wb11" /> 
+										<input type="checkbox" id="wb13" name="wb13" /> 
 										<label for="wb13">20 ~ 30%</label>
-										<input type="radio" id="wb14" name="wb11" /> 
+										<input type="checkbox" id="wb14" name="wb14" /> 
 										<label for="wb14">30 ~ 50%</label>
 									</li>
 									<li>
-										<input type="radio" id="wb15" name="wb11" /> 
+										<input type="checkbox" id="wb15" name="wb15" /> 
 										<label for="wb15">50% 이상</label>
 									</li>
 								</ul>
@@ -111,11 +111,11 @@
 							<li>5. 귀하가 판단하시기에 본인의 금융지식은 어느 정도라고 생각하십니까?
 								<ul class="widSort">
 									<li>
-										<input type="radio" id="wb16" name="wb16" /> 
+										<input type="checkbox" id="wb16" name="wb16" /> 
 										<label for="wb16">거의 없음</label>
-										<input type="radio" id="wb17" name="wb16" /> 
+										<input type="checkbox" id="wb17" name="wb17" /> 
 										<label for="wb17">보통이다</label>
-										<input type="radio" id="wb18" name="wb16" /> 
+										<input type="checkbox" id="wb18" name="wb18" /> 
 										<label for="wb18">높은 편이다</label>
 									</li>
 								</ul>
@@ -123,19 +123,19 @@
 							<li>6. 고객님께서 아래 중에서 투자해보신 경험이 있는 것을 모둘 선택해 주시기 바랍니다.
 								<ul class="widSort widSix">
 									<li>
-										<input type="radio" id="wb19" name="wb19" /> 
+										<input type="checkbox" id="wb19" name="wb19" /> 
 										<label for="wb19">투자경험 없음</label>
-										<input type="radio" id="wb20" name="wb19" /> 
+										<input type="checkbox" id="wb20" name="wb20" /> 
 										<label for="wb20">파생상품(ELS, ELW, ETF)</label>
 									</li>
 									<li>
-										<input type="radio" id="wb22" name="wb19" /> 
+										<input type="checkbox" id="wb22" name="wb22" /> 
 										<label for="wb22">주식</label>
-										<input type="radio" id="wb23" name="wb19" /> 
+										<input type="checkbox" id="wb23" name="wb23" /> 
 										<label for="wb23">변액보험</label>
 									</li>
 									<li>
-										<input type="radio" id="wb24" name="wb19" /> 
+										<input type="checkbox" id="wb24" name="wb24" /> 
 										<label for="wb24">펀드(수익증권)</label>
 									</li>
 								</ul>
@@ -148,11 +148,11 @@
 							<li>7. 귀하께서는 투자하실때 어떤 투자방식을 선호하시는 편입니까?
 								<ul>
 									<li>
-										<input type="radio" id="wb25" name="wb25" /> 
+										<input type="checkbox" id="wb25" name="wb25" /> 
 										<label for="wb25">간접투자 상품(펀드, 수익증권, 은행상품 등)</label>
 									</li>
 									<li>
-										<input type="radio" id="wb26" name="wb25" /> 
+										<input type="checkbox" id="wb26" name="wb26" /> 
 										<label for="wb26">직접투자 상품(주식, 파생상품 등)</label>
 									</li>
 								</ul>
@@ -160,15 +160,15 @@
 							<li>8. 귀하께서는 투자하실때 원금 보존과 투자수익율 중 어느쪽을 중요하게 생각하십니까?
 								<ul>
 									<li>
-										<input type="radio" id="wb27" name="wb27" /> 
+										<input type="checkbox" id="wb27" name="wb27" /> 
 										<label for="wb27">원금 보존을 중요시 한다 (안정형)</label>
 									</li>
 									<li>
-										<input type="radio" id="wb28" name="wb27" /> 
+										<input type="checkbox" id="wb28" name="wb28" /> 
 										<label for="wb28">원금 보존 및 투자수익율을 모두 고려한다 (중립형)</label>
 									</li>
 									<li>
-										<input type="radio" id="wb29" name="wb27" /> 
+										<input type="checkbox" id="wb29" name="wb29" /> 
 										<label for="wb29">투자수익율을 중요시 한다 (성장형)</label>
 									</li>
 								</ul>
@@ -176,15 +176,15 @@
 							<li>9. 귀하께서는 투자하실때 높은 수익율을 얻기위해 어느 정도의 손실을 감수할 수 있습니까?
 								<ul>
 									<li>
-										<input type="radio" id="wb30" name="wb30" /> 
+										<input type="checkbox" id="wb30" name="wb30" /> 
 										<label for="wb30">손실일이 발생하지 않도록 투자하고 싶다 (안정형)</label>
 									</li>
 									<li>
-										<input type="radio" id="wb31" name="wb30" /> 
+										<input type="checkbox" id="wb31" name="wb31" /> 
 										<label for="wb31">수익을 위해 손실에 대한 약간의 리스크를 감수할 수 있다 (중립형)</label>
 									</li>
 									<li>
-										<input type="radio" id="wb32" name="wb30" /> 
+										<input type="checkbox" id="wb32" name="wb32" /> 
 										<label for="wb32">고수익을 위해 손실에 대한 높은  리스크도 감수할 수 있다 (성장형)</label>
 									</li>
 								</ul>
@@ -192,15 +192,15 @@
 							<li>10. 월평균 소득에서 보험료가 차지하는 비중은 어느정도 입니까?
 								<ul>
 									<li>
-										<input type="radio" id="wb33" name="wb33" /> 
+										<input type="checkbox" id="wb33" name="wb33" /> 
 										<label for="wb33">일부 자산에 대하여 제한적 추가수익을 기대하며, 주로 채권 등의 안전 자산 중심의 보수적 투자를 선호함 (안정형)</label>
 									</li>
 									<li>
-										<input type="radio" id="wb34" name="wb33" /> 
+										<input type="checkbox" id="wb34" name="wb34" /> 
 										<label for="wb34">안정성과 수익성을 동시에 추구함. 직접 투자보다는 간접투자를 선호하며, 일부 주식 등의 위허자산에도 관심을 보임 (중립형)</label>
 									</li>
 									<li>
-										<input type="radio" id="wb35" name="wb33" /> 
+										<input type="checkbox" id="wb35" name="wb35" /> 
 										<label for="wb35">원금 손실 위험을 감내하고 높은 수익률을 원하며, 상당 부분 주식 등의 위험자산 중심의 투자를 선호함 (성장형)</label>
 									</li>
 								</ul>
@@ -222,10 +222,10 @@
 		<table class="table1">
 			<caption>상품성향,투자성향</caption>
 			<colgroup>
-				<col width="15%" />
-				<col width="35%" />
-				<col width="15%" />
-				<col width="35%" />
+				<col width="14%" />
+				<col width="36%" />
+				<col width="14%" />
+				<col width="36%" />
 			</colgroup>
 			<tbody>
 				<tr>

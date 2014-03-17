@@ -15,115 +15,86 @@
 </head>
 <body>
 
-<div class="popWrap" style="width:500px;">
-	<h1 class="hide-element">분류선택</h1>
+<div id="popWrap" style="width:400px">
+	<h1>고객분류(태그) 저장</h1>
 	<div class="popContents">
-		
-		<div class="popTit">
-			<p>분류필드가 존재하지 않는 경우에는 [분류목록편집] 버튼을 클릭해 주세요.</p>
-		</div>
-		<table class="listTable">
-			<caption>텍스트형</caption>
-			<colgroup>
-				<col width="10%" />
-				<col width="*" />
-			</colgroup>
-			<thead>
-				<tr>
-					<th>선택</th>
-					<th>등록된 분류필드</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td>
-						<input type="checkbox" />
-					</td>
-					<td class="tal">천승윤 인수고객</td>
-				</tr>
-				<tr>
-					<td>
-						<input type="checkbox" />
-					</td>
-					<td class="tal">취미지인</td>
-				</tr>
-				<tr>
-					<td>
-						<input type="checkbox" />
-					</td>
-					<td class="tal">친구</td>
-				</tr>
-				<tr>
-					<td>
-						<input type="checkbox" />
-					</td>
-					<td class="tal">친구가족</td>
-				</tr>
-				<tr>
-					<td>
-						<input type="checkbox" />
-					</td>
-					<td class="tal">친구가족</td>
-				</tr>
-				<tr>
-					<td>
-						<input type="checkbox" />
-					</td>
-					<td class="tal">친구가족</td>
-				</tr>
-				<tr>
-					<td>
-						<input type="checkbox" />
-					</td>
-					<td class="tal">친구가족</td>
-				</tr>
-				<tr>
-					<td>
-						<input type="checkbox" />
-					</td>
-					<td class="tal">친구가족</td>
-				</tr>
-				<tr>
-					<td>
-						<input type="checkbox" />
-					</td>
-					<td class="tal">친구가족</td>
-				</tr>
-				<tr>
-					<td>
-						<input type="checkbox" />
-					</td>
-					<td class="tal">친구가족</td>
-				</tr>
-				<tr>
-					<td>
-						<input type="checkbox" />
-					</td>
-					<td class="tal">친구가족</td>
-				</tr>
-			</tbody>
-		</table>
-		
-		<div class="btnWrap">
-			<a class="btn lgLgR btnL" href="#none">분류목록 편집</a>
-			<a class="btn lgLgR" href="#none">선택</a>
-			<a class="btn lgGyR" href="#none">취소</a>
+
+		<form method="post" action="/">
+			<fieldset>
+				<legend>고객분류(태그) 저장</legend>
+				
+				<div class="btnWrap">
+					<a href="#none" class="btn smGnR"><span class="setIcon1">더보기</span>고객분류(태그)관리</a>
+				</div>
+
+				<table class="table3">
+					<caption>고객분류(태그) 저장</caption>
+					<colgroup>
+						<col width="11%" />
+						<col width="*" />
+					</colgroup>
+					<thead>
+						<tr>
+							<th>
+								<input type="checkbox" id="thch1" />
+							</th>
+							<th>고객분류(태그)명</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><input type="checkbox" id="pch1" /></td>
+							<td class="textL"><label for="pch1">LP소식지</label></td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" id="pch1" /></td>
+							<td class="textL"><label for="pch1">태그명1</label></td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" id="pch2" /></td>
+							<td class="textL"><label for="pch2">태그명2</label></td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" id="pch3" /></td>
+							<td class="textL"><label for="pch3">태그명3</label></td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" id="pch4" /></td>
+							<td class="textL"><label for="pch4">태그명4</label></td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" id="pch5" /></td>
+							<td class="textL"><label for="pch5">태그명5</label></td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" id="pch6" /></td>
+							<td class="textL"><label for="pch6">태그명6</label></td>
+						</tr>
+					</tbody>
+					<tfoot class="textR bg">
+						<tr>
+							<td colspan="2">
+								<label for="">고객분류(태그)를</label>
+								<select id="">
+									<option>유지</option>
+									<option></option>
+								</select>
+							</td>
+						</tr>
+					</tfoot>
+				</table>
+				
+			</fieldset>
+		</form>
+
+		<div class="btnWrap mt20">
+			<input type="submit" value="저장" class="btn lgLgR">
 		</div>
 
 	</div>
-	
-
-	<script type="text/javascript">
-		//<![CDATA[
-		var myTab = ci.tab.init($('.userSelect')); // 고객정보탭
-		var myTab1 = ci.tab.init($('.tabOutline')); //
-		//]]> 
-	</script>
-
 </div>
 
 
 </body>
 </html>
-
 
