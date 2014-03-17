@@ -25,7 +25,7 @@ curex.ui = {
 			, $InfoWriteBtn =$("table a.InfoWbtn", scope) //테이블정보입력 버튼
 			, $Delbtn = $("a.cellDel", scope) || $("a.cellDel")  //테이블 셀삭제버튼
 			, $cinsrtbtn = $("a.cellInsert", scope) || $("a.cellInsert")//주계약/특약 특약피버험자 추가버튼
-			, $bePointBtn = $("a.bePoint", scope) || $("a.bePoint") //산출기준 팝업
+			, $bePointBtn = $("a.calcStandard", scope) || $("a.calcStandard") //산출기준 팝업
 			, $spClose = $("a.spClose", scope) || $("a.spClose"); //산출기준 팝업 닫기
 		
 			/* 기계약 합산잔여한도 */
