@@ -20,19 +20,4 @@ div.prevLP .prevRight dl dt{background:url(/img/common/blet_cir.gif) no-repeat 5
 div.prevLP .prevRight dl dd{background:url(/img/common/blet7.gif) no-repeat 29px 3px;padding-left:44px; line-height:21px;}
 div.prevLP .prevRight dl dd a:hover{color:#363636;}
 
-/* 메모 */
-.memoWrap p.all{text-align:right;font-size:14px;margin:8px 0;}
-.memoWrap:after{content:"";display:block;clear:both;} 
-.memoWrap ul li{float:left; width:334px; padding-bottom:4px; margin-left:10px;background:url(/img/common/bg_memo_b.gif) no-repeat 0 bottom;}
-.memoWrap ul li:first-child{margin-left:0;} 
-.memoWrap .memoW{border:1px solid #52aace;border-bottom:0;}
-.memoWrap .memoW p.tit{color:#fff;position:relative;border-top:1px solid #d4f2ff;padding:5px 0 5px 14px;
-	background-color:#6bc1e5;
-	background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPgo8bGluZWFyR3JhZGllbnQgaWQ9Imc5MDIiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjAlIiB5Mj0iMTAwJSI+CjxzdG9wIHN0b3AtY29sb3I9IiM3REQzRjciIG9mZnNldD0iMCIvPjxzdG9wIHN0b3AtY29sb3I9IiM2QkMxRTUiIG9mZnNldD0iMSIvPgo8L2xpbmVhckdyYWRpZW50Pgo8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2c5MDIpIiAvPgo8L3N2Zz4=);
-}
-.memoWrap .memoW p.tit span{position:absolute;right:5px;top:3px;}
 
-
-.memoC{height:224px;overflow:auto;overflow-x:hidden;background-color:#fcfcfd;}
-.memoC ul li{border-top:1px solid #cae0e4;height:31px;line-height:31px;margin-left:0;background:none;}
-.memoC ul li:first-child{border-top:0;}

@@ -413,9 +413,9 @@ div.paging a.next{margin-left:20px;}
 div.paging a.prev + strong,
 div.paging a.prev + a{margin-left:0;}
 
-.btn.smWtRb span.setIcon1{background:url(/img/common/blet5.gif) no-repeat 5px 50%; margin:0 5px 0 1px; display:inline-block; width:15px; text-indent:-99999px; font-size:0;  line-height:15px; height:15px;}
-.btn.smWtRb span.setIcon2{background:url(/img/common/blet6.gif) no-repeat 5px 50%; margin:0 5px 0 1px; display:inline-block; width:12px; text-indent:-99999px; font-size:0;  line-height:15px; height:15px;}
-.btn.smWtRb span.setIcon3{background:url(/img/common/blt_plus.gif) no-repeat 5px 50%; margin:0 5px 0 1px; display:inline-block; width:15px; text-indent:-99999px; font-size:0;  line-height:15px; height:15px;}
+.btn.smGnR span.setIcon1{background:url(/img/common/blet_lg1.gif) no-repeat 5px 50%; margin:0 5px 0 1px; display:inline-block; width:15px; text-indent:-99999px; font-size:0;  line-height:15px; height:15px;}
+.btn.smGnR span.setIcon2{background:url(/img/common/blet_lg2.gif) no-repeat 5px 50%; margin:0 5px 0 1px; display:inline-block; width:12px; text-indent:-99999px; font-size:0;  line-height:15px; height:15px;}
+.btn.smGnR span.setIcon3{background:url(/img/common/blet_lg3.gif) no-repeat 5px 50%; margin:0 5px 0 1px; display:inline-block; width:15px; text-indent:-99999px; font-size:0;  line-height:15px; height:15px;}
 
 .setUp, .setDown{position:relative;display:inline-block;}
 .setUp span.img{background:url(/img/common/blt_arrowR.png) no-repeat;}
@@ -465,6 +465,15 @@ table +.btnWrap{margin-top:10px;}
 	background-image: linear-gradient(top, #ffffff, #f1f1f1);
 	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#ffffff', endColorstr='#f1f1f1');
 } /* 작은 라운드화이트라운드보더 */
+.smWtRb1{line-height:15px; color:#707070; border:1px solid #cccccc; border-radius:2px; -moz-border-radius:2px; -webkit-border-radius:2px; -ms-border-radius:2px; padding:2px 6px 3px;
+	background-color: #fff;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#f1f1f1));
+	background-image: -webkit-linear-gradient(top, #ffffff, #f1f1f1);
+	background-image: -moz-linear-gradient(top, #ffffff, #f1f1f1);
+	background-image: -ms-linear-gradient(top, #ffffff, #f1f1f1);
+	background-image: linear-gradient(top, #ffffff, #f1f1f1);
+	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#ffffff', endColorstr='#f1f1f1');
+} /* 작은 라운드화이트라운드보더 정사각형 */
 
 .smbeRb{line-height:15px; color:#fff; border:1px solid #4a83cc; border-radius:2px; -moz-border-radius:2px; -webkit-border-radius:2px; -ms-border-radius:2px; padding:2px 5px 3px;
 	background-color: #589df3;} /* 작은 라운드화이트라운드보더 */
@@ -486,7 +495,7 @@ table +.btnWrap{margin-top:10px;}
 .lgBeR1{line-height:15px; height:29px; color:#fff; border-radius:2px; -moz-border-radius:2px; -webkit-border-radius:2px; -ms-border-radius:2px; padding:7px 12px 7px; background-color: #0084ff;}/* 블루좌우패딩12 */
 .lgLgR1{line-height:15px; height:29px; color:#fff; border-radius:2px; -moz-border-radius:2px; -webkit-border-radius:2px; -ms-border-radius:2px; padding:7px 12px 7px; background-color: #22B8C7;}/* 초록좌우패딩12 */
 .lgGyR1{line-height:15px; height:29px; color:#fff; border-radius:2px; -moz-border-radius:2px; -webkit-border-radius:2px; -ms-border-radius:2px; padding:7px 12px 7px; background-color: #818181;} /* 회색좌우패딩12 */
-.lgLgR{line-height:15px; height:29px; color:#fff; border-radius:2px; -moz-border-radius:2px; -webkit-border-radius:2px; -ms-border-radius:2px; padding:7px 12px 7px; background-color: #22b8c7;}
+.lgLgR1{line-height:15px; height:29px; color:#fff; border-radius:2px; -moz-border-radius:2px; -webkit-border-radius:2px; -ms-border-radius:2px; padding:7px 12px 7px; background-color: #22b8c7;}
 
 .mdLgRb{line-height:15px; color:#fff; border-radius:2px; -moz-border-radius:2px; -webkit-border-radius:2px; -ms-border-radius:2px; padding:2px 9px 3px; background-color: #22B8C7;border:1px solid #38a6b2;} /* 초록라운드보더 */
 .mdDyR{line-height:15px; color:#fff; border-radius:2px; -moz-border-radius:2px; -webkit-border-radius:2px; -ms-border-radius:2px; padding:3px 5px 4px; background-color: #a8c600;} /* 다크노랑 */
@@ -532,6 +541,19 @@ ul .point, ol .point{margin-left:-10px; color:#e8404f;}
 /* 마진 */
 .mt_4{margin-top:-4px !important;}
 
-
+/* 메모 */
+.memoWrap p.all{text-align:right;font-size:14px;margin:8px 0;}
+.memoWrap:after{content:"";display:block;clear:both;} 
+.memoWrap ul li{float:left; width:334px; padding-bottom:4px; margin-left:10px;background:url(/img/common/bg_memo_b.gif) no-repeat 0 bottom;}
+.memoWrap ul li:first-child{margin-left:0;} 
+.memoWrap .memoW{border:1px solid #52aace;border-bottom:0;}
+.memoWrap .memoW p.tit{color:#fff;position:relative;border-top:1px solid #d4f2ff;padding:5px 0 5px 14px;
+	background-color:#6bc1e5;
+	background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPgo8bGluZWFyR3JhZGllbnQgaWQ9Imc5MDIiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjAlIiB5Mj0iMTAwJSI+CjxzdG9wIHN0b3AtY29sb3I9IiM3REQzRjciIG9mZnNldD0iMCIvPjxzdG9wIHN0b3AtY29sb3I9IiM2QkMxRTUiIG9mZnNldD0iMSIvPgo8L2xpbmVhckdyYWRpZW50Pgo8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2c5MDIpIiAvPgo8L3N2Zz4=);
+}
+.memoWrap .memoW p.tit span{position:absolute;right:5px;top:3px;}
+.memoC{height:224px;overflow:auto;overflow-x:hidden;background-color:#fcfcfd;}
+.memoC ul li{border-top:1px solid #cae0e4;height:31px;line-height:31px;margin-left:0;background:none;}
+.memoC ul li:first-child{border-top:0;}
 
 

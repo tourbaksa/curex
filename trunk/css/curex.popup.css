@@ -5,15 +5,15 @@
 #popWrap h1{display: block; overflow:hidden; position:absolute; top: 0; left: 0;width: 0;height: 0;border:0;background: none !important; font-size: 0; line-height: 0;}
 #popWrap .popContents{padding:0 20px;}
 
-
 .popTit{position:relative;margin-bottom:5px;}
 .popTit p.tit{font-size:14px;color:#363636;}
 .popTit p.gap{padding-top:3px;}
-.popTit p.gap span{margin-left:10px;}
+.popTit p.gap span{margin-left:10px;display:inline-block;}
 .popTit p.gap span:first-child{margin-left:0;}
 .popTit span.txt{font-size:12px;color:#707070;}
 .popTit .more{position:absolute;right:0;top:0;font-weight:bold;}
 .popTit h2{font-size:14px; font-weight:bold; color:#363636;}
+.popTit .colorLg{color:#079EB1;}
 
 /*==========================
    레이어팝업 레이아웃 type
@@ -71,7 +71,7 @@ span.popSearchRlt{color:#000; line-height:15px; margin:20px 0 10px 0; display:bl
 .workBook{margin-top:20px;}
 .workBook:after{content:"";display:block;clear:both;}
 .workBook .wbL{float:left; margin-right:20px;width:420px;border:1px solid #dedede;height:610px;}
-.workBook .wbR{float:right;width:420px;border:1px solid #dedede;height:610px;}
+.workBook .wbR{float:right;width:420px;border:1px solid #dedede;height:610px;overflow:auto;overflow-x:hidden;}
 .workBook .wbL, .workBook .wbR{width:420px;border:1px solid #dedede; padding:10px;}
 .workBook .wbL ol > li, .workBook .wbR ol > li{margin-top:25px; color:#363636;}
 .workBook .wbL ol li:first-child, .workBook .wbR ol li:first-child{margin-top:0;}
@@ -166,3 +166,11 @@ div.LpContent{}
 div.LpContent ul.ctTab{margin:10px 0 0 0;}
 div.LpContent table{margin:10px 0;}
 div.LpEditor{border:1px solid #dedede; border-top:0; min-height:255px;}
+
+/* popTable th가 높은값을 가질때 */
+table .groupTit{
+	background-size:100% 100%;
+	background-color: #f3f4f5;
+	background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPgo8bGluZWFyR3JhZGllbnQgaWQ9Imc0MjgiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjAlIiB5Mj0iMTAwJSI+CjxzdG9wIHN0b3AtY29sb3I9IiNGQUZBRkEiIG9mZnNldD0iMCIvPjxzdG9wIHN0b3AtY29sb3I9IiNGMkYyRjIiIG9mZnNldD0iMSIvPgo8L2xpbmVhckdyYWRpZW50Pgo8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2c0MjgpIiAvPgo8L3N2Zz4=);
+}
+
