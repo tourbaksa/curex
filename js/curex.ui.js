@@ -3,16 +3,19 @@
 */
 
 $(document).ready(function(){
-	if($("div#checkList").length){curex.checkList();}
-	if($("div.tab02").length){curex.tab();}
-	curex.rolling();
-	curex.event();
-	if($("div.timeSchedule").length){curex.carlendar();}
+	if($("div#checkList").length){curex.ui.checkList();}
+	if($("div.tab02").length){curex.ui.tab();}
+	curex.ui.rolling();
+	curex.ui.event();
+	if($("div.timeSchedule").length){curex.ui.carlendar();}
 });
 
-var curex ={};
+var curex ={}
+/*if(!curex){
+	window.curex = curex = {};
+}*/ //실행안됨
 
-curex = {
+curex.ui = {
 	init:function(scope){
 		this.op = scope;
 	},
