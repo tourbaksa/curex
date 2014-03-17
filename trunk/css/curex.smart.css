@@ -327,3 +327,8 @@ div.headForm select{vertical-align:middle;}
 div.statisWrap{}
 div.statisGraphWrap{margin:10px 0;}
 div.statisGraphWrap p.garphDesc{text-align:right; margin:0 0 10px 0;}
+
+/*==========================
+  메모
+============================*/
+div.memoMore a.btn{display:block; text-align:center; height:26px; line-height:21px;}
