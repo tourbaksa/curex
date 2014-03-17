@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> 방문패키지출력 </title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
+<link rel="stylesheet" href="/css/common.css" type="text/css" />
+<link rel="stylesheet" href="/css/curex.common.css" type="text/css" />
+<link rel="stylesheet" href="/css/curex.layout.css" type="text/css" />
+<link rel="stylesheet" href="/css/curex.smart.css" type="text/css" />
+<link rel="stylesheet" href="/css/curex.dialog.css" type="text/css" />
+<script src="/ci/agent.js"></script>
+<script src="/thirdParty/jquery/jquery-1.10.2.min.js"></script>
+<script src="/thirdParty/jquery/jquery-ui-1.10.3.min.js"></script>
+<script src="/thirdParty/tab.js"></script>
+<script type="text/javascript" src="/js/dialog.js"></script>
+<script type="text/javascript" src="/js/popup.js"></script>
+<script src="/js/curex.ui.js"></script>
+
+</head>
+<body>
+
+<div id="wrap">
+	<!-- HEADER -->
+	<div id="header">
+		<img src="/img/common/img_header.jpg" alt="" />
+	</div>
+	<!-- //HEADER -->
+		
+	<div id="conteiner">
+		<div class="hgroup">
+			<h2>방문패키지 출력</h2>
+			<ul class="location">
+				<li><a href="#none">홈&nbsp;</a>&gt;</li>
+				<li><a href="#none">&nbsp;스마트CRM&nbsp;</a>&gt;</li>
+				<li><a href="#none">&nbsp;CS스테이션 &nbsp;</a></li>
+				<li><a href="#none">&nbsp;방문패키지출력 &nbsp;</a></li>
+			 </ul>	
+		</div>
+		 
+		<!-- 공통 컨텐츠 -->
+		<div id="contents">
+			<div class="smartWrap ci-tab">
+				<div class="headForm">
+					<span class="ResultSum">검색결과 : 총 OO건</span>
+					<select title="검색구분선택" style="width:80px">
+						<option>전체</option>
+					</select>
+				</div>
+				<table summary="번호, 이름, 주민번호, 처리상태, 예약일자, 생성일자, 출력등 방문패키지 출력정보를 제공합니다." width="100%" class="table3">
+					<caption>방문패키지 출력</caption>
+					<colgroup>
+						<col width="10%" />
+						<col width="15%" />
+						<col width="*" />
+						<col width="15%" />
+						<col width="15%" />
+						<col width="15%" />
+						<col width="15%" />
+					</colgroup>
+					<thead>
+					<tr>
+						<th scope="col">번호</th>
+						<th scope="col">이름</th>
+						<th scope="col">주민번호</th>
+						<th scope="col">처리상태</th>
+						<th scope="col">예약일자</th>
+						<th scope="col">생성일자</th>
+						<th scope="col">출력</th>
+					</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>10</td>
+							<td>신새롬</td>
+							<td>790000 -1******</td>
+							<td></td>
+							<td>2014.2.23</td>
+							<td>2014.2.23</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>9</td>
+							<td>신새롬</td>
+							<td>790000 -1******</td>
+							<td></td>
+							<td>2014.2.23</td>
+							<td>2014.2.23</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>1</td>
+							<td>신새롬</td>
+							<td>790000 -1******</td>
+							<td></td>
+							<td>2014.2.23</td>
+							<td>2014.2.23</td>
+							<td></td>
+						</tr>
+					</tbody>
+				</table>
+				<div class="paging">
+					<a href="#" class="prev"><img src="/img/common/arrow_prev.gif" alt="이전으로" /></a>
+					<strong>1</strong>
+					<a href="#">2</a>
+					<a href="#">3</a>
+					<a href="#">4</a>
+					<a href="#">5</a>
+					<a href="#">6</a>
+					<a href="#">7</a>
+					<a href="#">8</a>
+					<a href="#">9</a>
+					<a href="#">10</a>
+					<a href="#" class="next"><img src="/img/common/arrow_next.gif" alt="다음으로" /></a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //공통 컨텐츠 -->
+	<!-- CHECKLIST -->
+	<div id="checkList">
+		<ul class="list">
+			<li><a href="#none">초기화</a></li>
+			<li><a href="#none">미리보기</a></li>
+			<li><a href="#none">임시저장</a></li>
+			<li><a href="#none">발송</a></li>
+		</ul>
+	</div>
+	<!-- //CHECKLIST -->
+</div> 
+
+<script type="text/javascript">
+	//<![CDATA[
+	var myTab = ci.tab.init($('.PersonCont')); // 고객정보탭
+	var myTab1 = ci.tab.init($('.tabOutline')); // 
+	var myTab2 = ci.tab.init($('.smartWrap')); // 
+	//]]>
+</script>
+<!-- FOOTER -->
+<div id="footer">
+	<div class="fter">
+		<img src="/img/common/img_footer.jpg" alt="" />
+	</div>
+</div>
+<!--//FOOTER -->
+
+</body>
+</html>

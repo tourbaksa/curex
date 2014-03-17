@@ -98,6 +98,7 @@ table.listTable th{
 }
 table.listTable th:first-child{border-left:0;}
 table.listTable tbody td{border:1px solid #dedede; height:25px; padding:7px 0 5px;}
+table .lineY{border-left:1px solid #dedede !important;}
 
 /* table border none */
 table.bderTN{border-top:0 !important;}
@@ -265,7 +266,7 @@ dd span input[type="file"]{position:absolute;left:3px;top:0;}
 .fileBox table {float:right;width:551px;}
 
 /* tab */
-.tab01{border-bottom:2px solid #22b8c7;}
+.tab01{border-bottom:2px solid #22b8c7; overflow:hidden;}
 .tab01 li{float:left;margin-left:1px;}
 .tab01 li a{height:29px; line-height:29px;text-decoration:none; color:#707070; display:block; padding:0 15px;border-radius:2px 2px 0 0; -moz-border-radius:2px; -webkit-border-radius:2px; -ms-border-radius:2px;background-color:#e0e0e0;}
 .tab01 li:first-child{margin-left:0;}

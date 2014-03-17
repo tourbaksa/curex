@@ -314,3 +314,16 @@ div.statisTable .table1 tbody th{background:none;}
 div.statisTable .table1 th,
 div.statisTable .table1 td{text-align:center;}
 
+/*==========================
+   기념일서비스예약현황
+============================*/
+div.headForm{height:29px; position:relative; text-align:right; margin-bottom:10px;}
+div.headForm span.ResultSum{position:absolute; left:0; top:0; padding:0; height:29px; line-height:29px;}
+div.headForm select{vertical-align:middle;}
+
+/*==========================
+   활동통계
+============================*/
+div.statisWrap{}
+div.statisGraphWrap{margin:10px 0;}
+div.statisGraphWrap p.garphDesc{text-align:right; margin:0 0 10px 0;}
