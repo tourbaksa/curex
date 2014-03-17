@@ -2,17 +2,21 @@
 <html>
 <head>
 <title> CuREx </title>
+<title> CuREx </title>
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
-<link rel="stylesheet" href="/css/common.css" type="text/css" />
+<link rel="stylesheet" href="/WEB-APP/webponent/css/common.css" type="text/css" />
 <link rel="stylesheet" href="/css/curex.common.css" type="text/css" />
 <link rel="stylesheet" href="/css/curex.layout.css" type="text/css" />
-<link rel="stylesheet" href="/css/curex.lips.css" type="text/css" />
-<script src="/ci/agent.js"></script>
-<script src="/thirdParty/jquery/jquery-1.10.2.min.js"></script>
-<script src="/thirdParty/jquery/jquery-ui-1.10.3.min.js"></script>
-<script src="/thirdParty/tab.js"></script>
-<script src="/js/curex.ui.js"></script>
+<link rel="stylesheet" href="/css/curex.lipos.css" type="text/css" />
+<script type="text/javascript" src="/WEB-APP/webponent/dialog/css/dialog.css" type="text/css" />
+<script src="/WEB-APP/webponent/ci/agent.js"></script>
+<script type="text/javascript" src="/WEB-APP/webponent/thirdParty/jquery/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="/WEB-APP/webponent/thirdParty/jquery/jquery-ui-1.10.3.min.js"></script>
+<script type="text/javascript" src="/WEB-APP/webponent/tab/tab.js"></script>
+<script type="text/javascript" src="/WEB-APP/webponent/dialog/dialog.js"></script>
+<script type="text/javascript" src="/js/popup.js"></script>
+<script type="text/javascript" src="/js/curex.ui.js"></script>
 </head>
 <body>
 
@@ -23,7 +27,6 @@
 	</div>
 	<!-- //HEADER -->
 
-	
 	<div id="conteiner">
 		<div class="hgroup">
 			<div class="pageTit">
@@ -43,100 +46,107 @@
 				<ul class="tab01 clearfix tab-selector">
 					<li class="active"><a href="#none">가입설계</a></li>
 					<li><a href="#none">청약정보</a></li>
-					<li><a href="#none">기계약/한도</a></li>
-					<li><a href="#none">보장내역</a></li>
-					<li><a href="#none">보장금액/해지환급금</a></li>
+					<li><a href="#none">보장내용</a></li>
+					<li><a href="#none">표보기</a></li>
 				</ul>
 				<ul class="tab-panel">
 					<li>
 					<div class="add">
 						<h3 class="hide-element">가입설계</h3>
 						<div class="left">
-							<h3 class="mt0">기본정보</h3>
-							<form method="post" action="/">
-								<fieldset>
-									<legend>기본정보 테이블</legend>
-									<table class="table1">
-										<caption>기본정보</caption>
-										<colgroup>
-											<col width="33%" />
-											<col width="*" />
-										</colgroup>
-										<tbody>
-											<tr>
-												<th>산출일</th>
-												<td>
-													<input type="text" style="width:83px" />
-													<a class="carendar" href="#"><span class="cdr">23</span> <span class="today">Today</span></a>
-												</td>
-											</tr>
-											<tr>
-												<th rowspan="2">계약자</th>
-												<td>
-													<select style="width:102px">
-														<option>김푸르</option>
-														<option></option>
-													</select>
-												</td>
-											</tr>
-											<tr>
-												<td>841205-1******<br />보장,중립/불일치/고위험</td>
-											</tr>
-											<tr>
-												<th rowspan="2">피보험자</th>
-												<td>
-													<select style="width:102px">
-														<option>김대선(부)</option>
-														<option></option>
-													</select>
-												</td>
-											</tr>
-											<tr>
-												<td>521205-**<br />0102S(사무직) / 미운전</td>
-											</tr>
-											<tr>
-												<th>산출기준일자<br />보험연령</th>
-												<td class="txtIn">33세 / 남 <a class="btn smWtRb" href="#none">전환입력</a></td>
-											</tr>
-											<tr>
-												<th>상령일</th>
-												<td class="txtIn">2014-02-11</td>
-											</tr>
-										</tbody>
-									</table>
-								</fieldset>
-							</form>
+							<div class="btnWrap previous">
+								<h3 class="mt0 btnL">기본정보</h3>	
+								<a class="btn smWtRb InfoWbtn" href="#none">잔여한도 조회&nbsp;<span class="ImgArrow">더보기</span></a>
+							</div>
 
-							<div class="previous"><!-- preClick 클래스 삽입시 하단내용과 보더 추가 -->
-								<div class="preTit">
-									<h4 class="btnL">기계약 합산 잔여한도</h4>
-									<div class="btnWrap">
-										<a class="btn smWtRb" href="#none">조회</a>
-										<a class="btn smWtRb" href="#none"><span class="ImgArrow">더보기</span></a><!--  class="up시 빨강화살표로 전환됨" -->
+							<div class="previous">
+								<form method="post" action="/">
+									<fieldset>
+										<legend>기본정보 테이블</legend>
+										<table class="table1">
+											<caption>기본정보</caption>
+											<colgroup>
+												<col width="33%" />
+												<col width="*" />
+											</colgroup>
+											<tbody>
+												<tr>
+													<th>산출일</th>
+													<td>
+														<input type="text" style="width:83px" />
+														<a class="carendar" href="#"><span class="cdr">23</span> <span class="today">Today</span></a>
+													</td>
+												</tr>
+												<tr>
+													<th rowspan="2">계약자</th>
+													<td>
+														<select style="width:102px">
+															<option>김푸르</option>
+															<option></option>
+														</select>
+													</td>
+												</tr>
+												<tr>
+													<td>841205-1******<br />보장,중립/불일치/고위험</td>
+												</tr>
+												<tr>
+													<th rowspan="2">피보험자</th>
+													<td>
+														<select style="width:102px">
+															<option>김대선(부)</option>
+															<option></option>
+														</select>
+														(30세 / 남)
+													</td>
+												</tr>
+												<tr>
+													<td>521205-**<br />0102S(사무직) / 미운전</td>
+												</tr>
+											</tbody>
+										</table>
+									</fieldset>
+								</form>
 
-										<!-- 클릭시 하단 display:block;되고 상단에 클래스 preClick 삽입	-->
-									</div>	
+								<div class="tab02 clear-fix mt10">
+									<h3 class="tab1"><a class="on" href="#tabDiv01"><span>김푸르님의 Plan</span></a></h3>
+									<div id="tabDiv01">
+										<ul>
+											<li><a href="#none">11111 보험</a><span><a href="#none">14.02.02</a></span></li>
+											<li><a href="#none">종신 플러스 변액보험</a><span><a href="#none">14.02.02</a></span></li>
+											<li><a href="#none">종신 플러스 변액보험</a><span><a href="#none">14.02.02</a></span></li>
+											<li><a href="#none">종신 플러스 변액보험</a><span><a href="#none">14.02.02</a></span></li>
+											<li><a href="#none">종신 플러스 변액보험</a><span><a href="#none">14.02.02</a></span></li>
+											<li><a href="#none">종신 플러스 변액보험</a><span><a href="#none">14.02.02</a></span></li>
+										</ul>	
+									</div>
+									<h3 class="tab2"><a href="#tabDiv02"><span>출력이력</span></a></h3>
+									<div id="tabDiv02" style="display:none">
+										<ul>
+											<li><a href="#none">222222보험</a><span><a href="#none">14.02.02</a></span></li>
+											<li><a href="#none">종신 플러스 변액보험</a><span><a href="#none">14.02.02</a></span></li>
+											<li><a href="#none">종신 플러스 변액보험</a><span><a href="#none">14.02.02</a></span></li>
+											<li><a href="#none">종신 플러스 변액보험</a><span><a href="#none">14.02.02</a></span></li>
+											<li><a href="#none">종신 플러스 변액보험</a><span><a href="#none">14.02.02</a></span></li>
+											<li><a href="#none">종신 플러스 변액보험</a><span><a href="#none">14.02.02</a></span></li>
+										</ul>	
+									</div>
+									<h3 class="tab2"><a href="#tabDiv03"><span>MyPlan</span></a></h3>
+									<div id="tabDiv03" style="display:none">
+										<ul>
+											<li><a href="#none">33333보험</a><span><a href="#none">14.02.02</a></span></li>
+											<li><a href="#none">종신 플러스 변액보험</a><span><a href="#none">14.02.02</a></span></li>
+											<li><a href="#none">종신 플러스 변액보험</a><span><a href="#none">14.02.02</a></span></li>
+											<li><a href="#none">종신 플러스 변액보험</a><span><a href="#none">14.02.02</a></span></li>
+											<li><a href="#none">종신 플러스 변액보험</a><span><a href="#none">14.02.02</a></span></li>
+											<li><a href="#none">종신 플러스 변액보험</a><span><a href="#none">14.02.02</a></span></li>
+										</ul>	
+									</div>
 								</div>
-								<div class="preSearch" style="display:none"><!-- preClick클래스 삽입스 display:block 로 변경 -->
-									<table class="table5">
-										<caption>기계약 합산 잔여한도</caption>
-										<colgroup>
-											<col width="72%" />
-											<col width="*" />
-										</colgroup>
-										<tbody>
-											<tr class="bg1">
-												<th colspan="2">합산인수기준</th>
-											</tr>
-											<tr>
-												<th class="bg2">기계약합산 일반사망가입금액</th>
-												<td class="bg3 textC">100,000원</td>
-											</tr>
-											<tr class="bg4">
-												<th colspan="2">급부별 부가가능한 특약의 잔여한도</th>
-											</tr>
-										</tbody>
-									</table>
+
+								<div class="preSearch" style="display:none">
+									<div class="preSerTit">
+										<a href="#none" class="btn smWtRb">조회</a>
+									</div>
 									<table class="table6">
 										<caption>기계약 합산 잔여한도</caption>
 										<colgroup>
@@ -145,6 +155,10 @@
 											<col width="*" />
 										</colgroup>
 										<thead>
+											<tr>
+												<th colspan="2" class="bg2">일반사망가입금액<br />(신계약)</th>
+												<td class="bg3 tar">10,000만원<br />(4,000만원)</td>
+											</tr>
 											<tr>
 												<th>급부</th>
 												<th>특약</th>
@@ -218,37 +232,27 @@
 												<td class="textR">50,000</td>
 											</tr>
 											<tr>
-												<td>라이프케어</td>
-												<td>라이프케어</td>
+												<td>라이프케어<br />최대1억</td>
+												<td></td>
+												<td class="textR">50,000</td>
+											</tr>
+											<tr>
+												<td>암최대<br />최대1억</td>
+												<td></td>
+												<td class="textR">50,000</td>
+											</tr>
+											<tr>
+												<td>CI<br />최대1억</td>
+												<td></td>
 												<td class="textR">50,000</td>
 											</tr>
 										</tbody>
 									</table>
-								</div>
-							</div>
-
-							<div class="tab02 clear-fix">
-								<h3 class="tab1"><a class="on" href="#tabDiv01"><span>설계이력</span></a></h3>
-								<div id="tabDiv01">
-									<ul>
-										<li><a href="#none">11111 보험</a><span><a href="#none">2014-02-12</a></span></li>
-										<li><a href="#none">종신 플러스 변액보험</a><span><a href="#none">2014-02-12</a></span></li>
-										<li><a href="#none">종신 플러스 변액보험</a><span><a href="#none">2014-02-12</a></span></li>
-										<li><a href="#none">종신 플러스 변액보험</a><span><a href="#none">2014-02-12</a></span></li>
-										<li><a href="#none">종신 플러스 변액보험</a><span><a href="#none">2014-02-12</a></span></li>
-										<li><a href="#none">종신 플러스 변액보험</a><span><a href="#none">2014-02-12</a></span></li>
-									</ul>	
-								</div>
-								<h3 class="tab2"><a href="#tabDiv02"><span>MyPlan</span></a></h3>
-								<div id="tabDiv02" style="display:none">
-									<ul>
-										<li><a href="#none">222222보험</a><span><a href="#none">2014-02-12</a></span></li>
-										<li><a href="#none">종신 플러스 변액보험</a><span><a href="#none">2014-02-12</a></span></li>
-										<li><a href="#none">종신 플러스 변액보험</a><span><a href="#none">2014-02-12</a></span></li>
-										<li><a href="#none">종신 플러스 변액보험</a><span><a href="#none">2014-02-12</a></span></li>
-										<li><a href="#none">종신 플러스 변액보험</a><span><a href="#none">2014-02-12</a></span></li>
-										<li><a href="#none">종신 플러스 변액보험</a><span><a href="#none">2014-02-12</a></span></li>
-									</ul>	
+									<p class="blueMark">합산인수기준</p>
+									<ul class="footNote ml10 mb8">
+										<li><span>*</span> 헬스케어특약, 치료보장특약과 기타<br /> 건강특약을 동시 부가하는 경우 잔여한도는<br /> 달라질 수 있습니다.</li>
+									</ul>
+									<a href="#none" class="more"><img src="/img/common/btn_close1.gif" alt="닫기" /></a>
 								</div>
 							</div>
 
@@ -264,12 +268,12 @@
 									<table class="table2" width="100%">
 										<caption>주계약</caption>
 										<colgroup>
-											<col width="*" />
-											<col width="14%" />
+											<col width="33%" />
+											<col width="18%" />
 											<col width="13%" />
 											<col width="13%" />
 											<col width="10%" />
-											<col width="13%" />
+											<col width="12%" />
 										</colgroup>
 										<thead>
 											<tr>
@@ -285,12 +289,10 @@
 											<tr>
 												<td>
 													<select>
-														<option>하이브리드변액평생</option>
+														<option>우리아이변액유니버셜</option>
 														<option></option>
 													</select>
-													<select>
-														<option>집중6</option>
-													</select>
+													<a href="#none" class="btn smGyRb">검색</a>
 												</td>
 												<td>
 													<span class="selectFull">
@@ -320,28 +322,29 @@
 											</tr>
 										</tbody>
 									</table>
-									<!-- 특약피보험자 추가 버튼 클릭시 -->
-									<div class="riderPlus" style="display:none">
+									<!-- 보험종류 셀렉트 클릭시 -->
+									<div class="riderPlus" style="display:block">
 										<table class="table1">
-											<caption>특약피보험자</caption>
+											<caption>보험종류</caption>
 											<colgroup>
+												<col width="7%" />
+												<col width="26%" />
+												<col width="7%" />
 												<col width="11%" />
-												<col width="*" />
-												<col width="11%" />
+												<col width="13%" />
+												<col width="13%" />
 												<col width="10%" />
-												<col width="11%" />
-												<col width="10%" />
-												<col width="11%" />
-												<col width="10%" />
+												<col width="12%" />
 											</colgroup>
 											<tbody>
 												<tr>
-													<th>종피보험자</th>
+													<th>종피<br />보험자</th>
 													<td>
-														<select>
-															<option>김소원</option>
-														</select>
-														(110504-4234567)
+														<span class="selectFull">
+															<select>
+																<option>김소원(110504-4234567)</option>
+															</select>
+														</span>
 													</td>
 													<th>상령일</th>
 													<td class="tac">2014-02-28</td>
@@ -362,6 +365,7 @@
 
 									<div class="btnWrap more">
 										<span class="fRset">
+											<a href="#none" class="smGnR">종신전환</a>
 											<input type="checkbox" id="ju1" />
 											<label for="ju1">우량체</label>
 											<input type="checkbox" id="ju2" />
@@ -400,30 +404,12 @@
 										</thead>
 										<tfoot class="tfootType1"> 
 											<tr>
-												<td colspan="2" rowspan="2" class="textC">납입방법</td>
-												<td colspan="2" rowspan="2" class="textL">
-													<span class="">
-														<input type="radio" id="ra1" name="ra" />
-														<label for="ra1">월납</label>
-														<input type="radio" id="ra2" name="ra" />
-														<label for="ra2">3개월납</label>
-														<input type="radio" id="ra3" name="ra" />
-														<label for="ra3">6개월납</label>
-														<input type="radio" id="ra4" name="ra" />
-														<label for="ra4">연납</label>
-													</span>
-												</td>
-												<td colspan="4" class="textR price blue bderB">
-													초회보험료 : 85,000
-												</td>
-											</tr>
-											<tr>
-												<td colspan="4" class="textR price red">상령일이후(2014-02-24) : 105,000</td>
+												<td colspan="8" class="price tar">종피보험자 합계보험료 : 120,000</td>
 											</tr>
 										</tfoot>
 										<tbody>
 											<tr>
-												<td><img src="/img/common/blet3.gif" alt="" /></td>
+												<td><a href="#none"><img src="/img/common/blet3.gif" alt="순서" /></a></td>
 												<td><a class="btn mdDyR" href="#none">우량</a></td>
 												<td>
 													<span class="selectFull">
@@ -454,7 +440,7 @@
 												<td><a href="#none" class="cellDel"><img src="/img/common/icon4.gif" alt="삭제" /></a></td>
 											</tr>
 											<tr class="bg">
-												<td><img src="/img/common/blet3.gif" alt="" /></td>
+												<td><a href="#none"><img src="/img/common/blet3.gif" alt="순서" /></a></td>
 												<td><a class="btn mdDyR" href="#none">우량</a></td>
 												<td>
 													<span class="selectFull">
@@ -485,7 +471,7 @@
 												<td><a href="#none" class="cellDel"><img src="/img/common/icon4.gif" alt="삭제" /></a></td>
 											</tr>
 											<tr>
-												<td><img src="/img/common/blet3.gif" alt="" /></td>
+												<td><a href="#none"><img src="/img/common/blet3.gif" alt="순서" /></a></td>
 												<td><a class="btn mdDyR" href="#none">우량</a></td>
 												<td>
 													<span class="selectFull">
@@ -516,7 +502,7 @@
 												<td><a href="#none" class="cellDel"><img src="/img/common/icon4.gif" alt="삭제" /></a></td>
 											</tr> 
 											<tr class="bg">
-												<td><img src="/img/common/blet3.gif" alt="" /></td>
+												<td><a href="#none"><img src="/img/common/blet3.gif" alt="순서" /></a></td>
 												<td><a class="btn mdDyR" href="#none">우량</a></td>
 												<td>
 													<span class="selectFull">
@@ -547,7 +533,7 @@
 												<td><a href="#none" class="cellDel"><img src="/img/common/icon4.gif" alt="삭제" /></a></td>
 											</tr>
 											<tr>
-												<td><img src="/img/common/blet3.gif" alt="" /></td>
+												<td><a href="#none"><img src="/img/common/blet3.gif" alt="순서" /></a></td>
 												<td><a class="btn mdDyR" href="#none">우량</a></td>
 												<td>
 													<span class="selectFull">
@@ -578,7 +564,7 @@
 												<td><a href="#none" class="cellDel"><img src="/img/common/icon4.gif" alt="삭제" /></a></td>
 											</tr>
 											<tr class="bg">
-												<td><img src="/img/common/blet3.gif" alt="" /></td>
+												<td><a href="#none"><img src="/img/common/blet3.gif" alt="순서" /></a></td>
 												<td><a class="btn mdDyR" href="#none">우량</a></td>
 												<td>
 													<span class="selectFull">
@@ -614,6 +600,285 @@
 								</fieldset>
 							</form>
 
+							<h3>특약 - 특약피보험자1</h3>
+							<div class="riderPlus" style="display:block">
+								<table class="table1">
+									<caption>보험종류</caption>
+									<colgroup>
+										<col width="7%" />
+										<col width="26%" />
+										<col width="7%" />
+										<col width="11%" />
+										<col width="13%" />
+										<col width="13%" />
+										<col width="10%" />
+										<col width="12%" />
+									</colgroup>
+									<tbody>
+										<tr>
+											<th>종피<br />보험자</th>
+											<td>
+												<span class="selectFull">
+													<select>
+														<option>김소원(110504-4234567)</option>
+													</select>
+												</span>
+											</td>
+											<th>상령일</th>
+											<td class="tac">2014-02-28</td>
+											<th>산출기준의<br />보험연령</th>
+											<td class="tac">3세 / 여</td>
+											<th>피보험자<br />교체나이</th>
+											<td>
+												<span class="selectFull">
+													<select>
+														<option>23세</option>
+													</select>
+												</span>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+								
+								<form method="post" action="/" class="mt10">
+								<fieldset>
+									<legend>특약</legend>
+									<table class="table3">
+										<caption>특약리스트</caption>
+										<colgroup>
+											<col width="6%" />
+											<col width="7%" />
+											<col width="*" />
+											<col width="14%" />
+											<col width="13%" />
+											<col width="13%" />
+											<col width="12%" />
+											<col width="5%" />
+										</colgroup>
+										<thead>
+											<tr>
+												<th>순서</th>
+												<th>부</th>
+												<th>보험종류</th>
+												<th>보험기간</th>
+												<th>납입기간</th>
+												<th>가입금액(만원)</th>
+												<th>보험료(원)</th>
+												<th>삭제</th>
+											</tr>
+										</thead>
+										<tfoot class="tfootType1"> 
+											<tr>
+												<td colspan="8" class="price tar">특약피보험자 합계보험료 : 120,000</td>
+											</tr>
+										</tfoot>
+										<tbody>
+											<tr>
+												<td><a href="#none"><img src="/img/common/blet3.gif" alt="순서" /></a></td>
+												<td><a class="btn mdDyR" href="#none">우량</a></td>
+												<td>
+													<span class="selectFull">
+														<select>
+															<option>하이브리드 변액평생_집중6</option>
+															<option>종신</option>
+														</select>
+													</span>
+												</td>
+												<td>
+													<span class="selectFull">
+														<select>
+															<option>100세만기</option>
+														</select>
+													</span>
+												</td>
+												<td>
+													<span class="selectFull">
+														<select>
+															<option>60세납</option>
+														</select>
+													</span>
+												</td>
+												<td class="textR">
+													<span class="widthFull"><input type="text" /></span>
+												</td>
+												<td class="textR"><span class="pR2">20,000</span></td>
+												<td><a href="#none" class="cellDel"><img src="/img/common/icon4.gif" alt="삭제" /></a></td>
+											</tr>
+										</tbody>
+									</table>
+								</fieldset>
+								</form>
+							</div>
+
+							<h3>특약 - 특약피보험자1</h3>
+							<div class="riderPlus" style="display:block">
+								<table class="table1">
+									<caption>보험종류</caption>
+									<colgroup>
+										<col width="7%" />
+										<col width="26%" />
+										<col width="7%" />
+										<col width="11%" />
+										<col width="13%" />
+										<col width="13%" />
+										<col width="10%" />
+										<col width="12%" />
+									</colgroup>
+									<tbody>
+										<tr>
+											<th>종피<br />보험자</th>
+											<td>
+												<span class="selectFull">
+													<select>
+														<option>김소원(110504-4234567)</option>
+													</select>
+												</span>
+											</td>
+											<th>상령일</th>
+											<td class="tac">2014-02-28</td>
+											<th>산출기준의<br />보험연령</th>
+											<td class="tac">3세 / 여</td>
+											<th>피보험자<br />교체나이</th>
+											<td>
+												<span class="selectFull">
+													<select>
+														<option>23세</option>
+													</select>
+												</span>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+								
+								<form method="post" action="/" class="mt10">
+								<fieldset>
+									<legend>특약</legend>
+									<table class="table3">
+										<caption>특약리스트</caption>
+										<colgroup>
+											<col width="6%" />
+											<col width="7%" />
+											<col width="*" />
+											<col width="14%" />
+											<col width="13%" />
+											<col width="13%" />
+											<col width="12%" />
+											<col width="5%" />
+										</colgroup>
+										<thead>
+											<tr>
+												<th>순서</th>
+												<th>부</th>
+												<th>보험종류</th>
+												<th>보험기간</th>
+												<th>납입기간</th>
+												<th>가입금액(만원)</th>
+												<th>보험료(원)</th>
+												<th>삭제</th>
+											</tr>
+										</thead>
+										<tfoot class="tfootType1"> 
+											<tr>
+												<td colspan="8" class="price tar bderB">특약피보험자 합계보험료 : 120,000</td>
+											</tr>
+											<tr>
+												<td colspan="2" rowspan="2" class="textC">납입방법</td>
+												<td colspan="2" rowspan="2" class="textL">
+													<span class="">
+														<input type="radio" id="ra1" name="ra" />
+														<label for="ra1">월납</label>
+														<input type="radio" id="ra2" name="ra" />
+														<label for="ra2">3개월납</label>
+														<input type="radio" id="ra3" name="ra" />
+														<label for="ra3">6개월납</label>
+														<input type="radio" id="ra4" name="ra" />
+														<label for="ra4">연납</label>
+													</span>
+												</td>
+												<td colspan="4" class="textR price blue bderB">
+													초회보험료 : 85,000
+												</td>
+											</tr>
+											<tr>
+												<td colspan="4" class="textR price red bderL">상령일이후(2014-02-24) : 105,000</td>
+											</tr>
+										</tfoot>
+										<tbody>
+											<tr>
+												<td><a href="#none"><img src="/img/common/blet3.gif" alt="순서" /></a></td>
+												<td><a class="btn mdDyR" href="#none">우량</a></td>
+												<td>
+													<span class="selectFull">
+														<select>
+															<option>하이브리드 변액평생_집중6</option>
+															<option>종신</option>
+														</select>
+													</span>
+												</td>
+												<td>
+													<span class="selectFull">
+														<select>
+															<option>100세만기</option>
+														</select>
+													</span>
+												</td>
+												<td>
+													<span class="selectFull">
+														<select>
+															<option>60세납</option>
+														</select>
+													</span>
+												</td>
+												<td class="textR">
+													<span class="widthFull"><input type="text" /></span>
+												</td>
+												<td class="textR"><span class="pR2">20,000</span></td>
+												<td><a href="#none" class="cellDel"><img src="/img/common/icon4.gif" alt="삭제" /></a></td>
+											</tr>
+											<tr>
+												<td><a href="#none"><img src="/img/common/blet3.gif" alt="순서" /></a></td>
+												<td><a class="btn mdDyR" href="#none">우량</a></td>
+												<td>
+													<span class="selectFull">
+														<select>
+															<option>하이브리드 변액평생_집중6</option>
+															<option>종신</option>
+														</select>
+													</span>
+												</td>
+												<td>
+													<span class="selectFull">
+														<select>
+															<option>100세만기</option>
+														</select>
+													</span>
+												</td>
+												<td>
+													<span class="selectFull">
+														<select>
+															<option>60세납</option>
+														</select>
+													</span>
+												</td>
+												<td class="textR">
+													<span class="widthFull"><input type="text" /></span>
+												</td>
+												<td class="textR"><span class="pR2">20,000</span></td>
+												<td><a href="#none" class="cellDel"><img src="/img/common/icon4.gif" alt="삭제" /></a></td>
+											</tr>
+										</tbody>
+									</table>
+								</fieldset>
+								</form>
+							</div>
+
+							<ul class="footNote">
+								<li><span>＊</span>우리아이 변액유니버셜 보험의 경우 종피보험자 기준 최대 4건까지만 가입 가능하오니 기계약 내용 확인 후 진행하시기 바랍니다.</li>
+								<li><span>＊</span>우리아이 변액유니버셜보험의 종피보험자(확장 보험대상자)를 선택하여 주십시오.</li>
+								<li><span>＊</span>보험연령 0~18세에 해당하는 대상자만 조회되었습니다.</li>
+								<li><span>＊</span>보험연령 20세~28세 사이에서 교체나이를 선택할 수 있습니다.</li>
+							</ul>
+
 							<h3>제도성특약</h3>
 							<div class="box1">
 								<form method="post" action="/">
@@ -640,6 +905,83 @@
 									</fieldset>
 								</form>
 							</div>
+
+							<div class="juContact">
+								<h3>적합성정보</h3>
+								<table class="table3">
+									<caption>적합성정보</caption>
+									<colgroup>
+										<col width="12%" />
+										<col width="12%" />
+										<col width="12%" />
+										<col width="12%" />
+										<col width="10%" />
+										<col width="21%" />
+										<col width="21%" />
+									</colgroup>
+									<thead>
+										<tr>
+											<th>진단일</th>
+											<th>만기일</th>
+											<th>상품성향</th>
+											<th>투자성향</th>
+											<th>접수여부</th>
+											<th>상품성향불일치</th>
+											<th>투자성향불일치</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>2014-03-17</td>
+											<td>2014-03-17</td>
+											<td>보장형</td>
+											<td>중립형</td>
+											<td>Y</td>
+											<td>Y (접수일:2014-03-17)</td>
+											<td>Y (접수일:2014-03-17)</td>
+										</tr>
+									</tbody>
+								</table>
+								<span class="more"><a href="#none" class="btn smGnR">정보수정</a></span>
+							</div>
+							<ul class="footNote">
+								<li><span>*</span> 기존에 적합성진단을 실시한 고객 또는 전자청약을 통해 적합성진단을 실시한 경우, 위의 적합성진단 결과에 따라 변액보험 계획수립을 진행합니다.</li>
+							</ul>
+
+							<h3>특별계정</h3>
+							<table class="table1">
+								<caption>특별계정</caption>
+								<colgroup>
+									<col width="34%" />
+									<col width="33%" />
+									<col width="33%" />
+								</colgroup>
+								<tbody>
+									<tr>
+										<td>
+											<select style="">
+												<option>안정혼합형</option>
+												<option></option>
+											</select>
+											<input type="text" style="" />%
+										</td>
+										<td>
+											<select style="">
+												<option>플러스알파인덱스주식</option>
+												<option></option>
+											</select>
+											<input type="text" style="" />%
+										</td>
+										<td>
+											<select style="">
+												<option></option>
+												<option></option>
+											</select>
+											<input type="text" style="" />%
+										</td>
+									</tr>
+								</tbody>
+							</table>
 
 							<h3>보험료 정보</h3>
 							<form method="post" action="/">
