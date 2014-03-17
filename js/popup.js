@@ -5,7 +5,7 @@
 
 	/* 검색조건저장 */
 	$('.d4_btn1').on('click', function () {
-		alert("dd")
+		alert("dd");
 		var dia1 = ci.dialog.open({
 			id : 'd4_layer1', // id 지정
 			title : '검색조건저장', // title 지정
