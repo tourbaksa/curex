@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> CuREx </title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
+<link rel="stylesheet" href="/WEB-APP/webponent/css/common.css" type="text/css" />
+<link rel="stylesheet" href="/css/curex.common.css" type="text/css" />
+<link rel="stylesheet" href="/css/curex.layout.css" type="text/css" />
+<link rel="stylesheet" href="/css/curex.lips.css" type="text/css" />
+<link rel="stylesheet" href="/WEB-APP/webponent/dialog/css/dialog.css" type="text/css" />
+<script type="text/javascript" src="/WEB-APP/webponent/ci/agent.js"></script>
+<script type="text/javascript" src="/WEB-APP/webponent/thirdParty/jquery/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="/WEB-APP/webponent/thirdParty/jquery/jquery-ui-1.10.3.min.js"></script>
+<script type="text/javascript" src="/WEB-APP/webponent/tab/tab.js"></script>
+<script type="text/javascript" src="/WEB-APP/webponent/dialog/dialog.js"></script>
+<script type="text/javascript" src="/js/popup.js"></script>
+<script type="text/javascript" src="/js/curex.ui.js"></script>
+</head>
+<body>
+
+<div id="wrap">
+	<!-- HEADER -->
+	<div id="header">
+		<img src="/img/common/img_header.jpg" alt="" />
+	</div>
+	<!-- //HEADER -->
+
+	<div id="conteiner">
+		<div class="hgroup">
+			<div class="pageTit">
+				<h2>단체가상설계</h2>
+				<span><input type="text" value="계획명을 입력하세요" style="width:185px" /></span>
+				<a href="#none" class="btn smGnR">저장</a> 
+				<a href="#none" class="btn smGnR">MyPlan 저장</a> 
+			</div>
+			<ul class="location">
+				<li><a href="#none">홈&nbsp;</a>&gt;</li>
+				<li><a href="#none">&nbsp;LiPS&nbsp;</a>&gt;</li>
+				<li><a href="#none">&nbsp;계획수립&nbsp;</a>&gt;</li>
+				<li><a href="#none">&nbsp;단체가상설계&nbsp;</a></li>
+			 </ul>	
+		</div>
+		 
+		<!-- 공통 컨텐츠 -->
+		<div id="contents" class="lips clear-fix">
+			<div class="lipsWrap ci-tab">
+				<ul class="tab01 clearfix tab-selector">
+					<li class="active"><a href="#none">피보험자</a></li>
+					<li><a href="#none">청약정보</a></li>
+					<li><a href="#none">보장내용</a></li>
+					<li><a href="#none">표보기</a></li>
+				</ul>
+				<ul class="tab-panel">
+					<li>
+						<div class="add">
+							<h3 class="hide-element">피보험자</h3>
+							<div class="left">
+								<table class="table1">
+									<caption>계약자</caption>
+									<colgroup>
+										<col width="35%" />
+										<col width="*" />
+									</colgroup>
+									<tbody>
+										<tr>
+											<th>계약자</th>
+											<td>선택한단체명</td>
+										</tr>
+									</tbody>
+								</table>
+
+								<h3>등록/선택</h3>
+								<div class="box2">
+									<form method="post" action="/">
+										<fieldset>
+											<legend>등록/선택</legend>
+											<span class="fLset">
+												<input type="radio" id="ra1" name="ra1" />
+												<label for="ra1">가상고객등록</label>
+												<input type="radio" id="ra2" name="ra1" />
+												<label for="ra2">고객선택</label>
+											</span>
+										</fieldset>
+									</form>
+								</div>
+								
+								<div class="nizWrap bder0 mt10">
+									<div class="h5Tit">
+										<h5>일괄등록</h5>
+									</div>
+									<table class="table1">
+										<caption>일괄등록</caption>
+										<colgroup>
+											<col width="35%" />
+											<col width="*" />
+										</colgroup>
+										<tbody>
+											<tr>
+												<th>파일첨부</th>
+												<td>
+													<input type="text" style="width:125px" />
+													<a href="#none" class="btn smGyRb">찾기</a>
+												</td>
+											</tr>
+											<tr>
+												<td colspan="2" class="tar">
+													<a href="#none" class="btn smLgR">서식 다운로드</a>
+													<a href="#none" class="btn smGyRb">피보험자 추가</a>
+												</td>
+											</tr>
+											<tr>
+												<td colspan="2">
+													<ul class="footNote">
+														<li><span>＊</span> 반드시 지정 된 서식을 이용하여 업로드해야 하며, “명단서식다운”버튼을 클릭 하시면 서식을 다운로드 하실 수 있습니다.</li>
+													</ul>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+
+									<div class="h5Tit mt10">
+										<h5>개별등록</h5>
+									</div>
+									<table class="table1">
+										<caption>개별등록</caption>
+										<colgroup>
+											<col width="35%" />
+											<col width="*" />
+										</colgroup>
+										<tbody>
+											<tr>
+												<th>피보험자명</th>
+												<td>고객4</td>
+											</tr>
+											<tr>
+												<th><span class="red">*</span>생년월일</th>
+												<td>
+													<input type="text" style="width:125px;" />
+													<a href="#none"><img src="/img/common/icon3.gif" alt="달력" /></a>
+												</td>
+											</tr>
+											<tr>
+												<th><span class="red">*</span>성별</th>
+												<td>
+													<span class="fLset">
+														<input type="radio" id="sex1" name="sex1" />
+														<label for="sex1">남</label>
+														<input type="radio" id="sex2" name="sex1" />
+														<label for="sex2">여</label>
+													</span>
+												</td>
+											</tr>
+											<tr>
+												<th>직업</th>
+												<td>
+													<input type="text" style="width:125px" />
+													<a href="#none" class="btn smGyRb">검색</a>
+												</td>
+											</tr>
+											<tr>
+												<th>운전</th>
+												<td>
+													<input type="text" style="width:125px" />
+													<a href="#none" class="btn smGyRb">검색</a>
+												</td>
+											</tr>
+											<tr>
+												<td colspan="2" class="tar">
+													<a href="#none" class="btn smGyRb">피보험자 추가</a>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								
+							</div>
+
+							<div class="right">
+								<h3>피보험자 목록 (총 20명)</h3>
+								<form method="post" action="/">
+									<fieldset>
+										<legend>피보험자 목록</legend>
+										<table class="table3">
+											<caption>피보험자 목록</caption>
+											<colgroup>
+												<col width="5%" />
+												<col width="5%" />
+												<col width="15%" />
+												<col width="15%" />
+												<col width="15%" />
+												<col width="15%" />
+												<col width="15%" />
+												<col width="15%" />
+											</colgroup>
+											<thead>
+												<tr>
+													<th>
+														<input type="checkbox" />
+													</th>
+													<th>번호</th>
+													<th>피보험자명</th>
+													<th>생년월일</th>
+													<th>성별</th>
+													<th>보험연령</th>
+													<th>직업코드</th>
+													<th>운전코드</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>
+														<input type="checkbox" />
+													</td>
+													<td>1</td>
+													<td>신새롬</td>
+													<td>1982-01-01</td>
+													<td>남</td>
+													<td>18</td>
+													<td>012025</td>
+													<td>1234567</td>
+												</tr>
+												<tr>
+													<td>
+														<input type="checkbox" />
+													</td>
+													<td>2</td>
+													<td>신새롬</td>
+													<td>1982-01-01</td>
+													<td>남</td>
+													<td>18</td>
+													<td>012025</td>
+													<td>1234567</td>
+												</tr>
+												<tr>
+													<td>
+														<input type="checkbox" />
+													</td>
+													<td>3</td>
+													<td>신새롬</td>
+													<td>1982-01-01</td>
+													<td>남</td>
+													<td>18</td>
+													<td>012025</td>
+													<td>1234567</td>
+												</tr>
+												<tr>
+													<td>
+														<input type="checkbox" />
+													</td>
+													<td>4</td>
+													<td>신새롬</td>
+													<td>1982-01-01</td>
+													<td>남</td>
+													<td>18</td>
+													<td>012025</td>
+													<td>1234567</td>
+												</tr>
+												<tr>
+													<td>
+														<input type="checkbox" />
+													</td>
+													<td>5</td>
+													<td>신새롬</td>
+													<td>1982-01-01</td>
+													<td>남</td>
+													<td>18</td>
+													<td>012025</td>
+													<td>1234567</td>
+												</tr>
+												<tr>
+													<td>
+														<input type="checkbox" />
+													</td>
+													<td>6</td>
+													<td>신새롬</td>
+													<td>1982-01-01</td>
+													<td>남</td>
+													<td>18</td>
+													<td>012025</td>
+													<td>1234567</td>
+												</tr>
+												<tr>
+													<td>
+														<input type="checkbox" />
+													</td>
+													<td>7</td>
+													<td>신새롬</td>
+													<td>1982-01-01</td>
+													<td>남</td>
+													<td>18</td>
+													<td>012025</td>
+													<td>1234567</td>
+												</tr>
+												<tr>
+													<td>
+														<input type="checkbox" />
+													</td>
+													<td>8</td>
+													<td>신새롬</td>
+													<td>1982-01-01</td>
+													<td>남</td>
+													<td>18</td>
+													<td>012025</td>
+													<td>1234567</td>
+												</tr>
+												<tr>
+													<td>
+														<input type="checkbox" />
+													</td>
+													<td>9</td>
+													<td>신새롬</td>
+													<td>1982-01-01</td>
+													<td>남</td>
+													<td>18</td>
+													<td>012025</td>
+													<td>1234567</td>
+												</tr>
+												<tr>
+													<td>
+														<input type="checkbox" />
+													</td>
+													<td>10</td>
+													<td>신새롬</td>
+													<td>1982-01-01</td>
+													<td>남</td>
+													<td>18</td>
+													<td>012025</td>
+													<td>1234567</td>
+												</tr>
+												<tr>
+													<td>
+														<input type="checkbox" />
+													</td>
+													<td>11</td>
+													<td>신새롬</td>
+													<td>1982-01-01</td>
+													<td>남</td>
+													<td>18</td>
+													<td>012025</td>
+													<td>1234567</td>
+												</tr>
+												<tr>
+													<td>
+														<input type="checkbox" />
+													</td>
+													<td>12</td>
+													<td>신새롬</td>
+													<td>1982-01-01</td>
+													<td>남</td>
+													<td>18</td>
+													<td>012025</td>
+													<td>1234567</td>
+												</tr>
+												<tr>
+													<td>
+														<input type="checkbox" />
+													</td>
+													<td>13</td>
+													<td>신새롬</td>
+													<td>1982-01-01</td>
+													<td>남</td>
+													<td>18</td>
+													<td>012025</td>
+													<td>1234567</td>
+												</tr>
+												<tr>
+													<td>
+														<input type="checkbox" />
+													</td>
+													<td>14</td>
+													<td>신새롬</td>
+													<td>1982-01-01</td>
+													<td>남</td>
+													<td>18</td>
+													<td>012025</td>
+													<td>1234567</td>
+												</tr>
+												<tr>
+													<td>
+														<input type="checkbox" />
+													</td>
+													<td>15</td>
+													<td>신새롬</td>
+													<td>1982-01-01</td>
+													<td>남</td>
+													<td>18</td>
+													<td>012025</td>
+													<td>1234567</td>
+												</tr>
+												<tr>
+													<td>
+														<input type="checkbox" />
+													</td>
+													<td>16</td>
+													<td>신새롬</td>
+													<td>1982-01-01</td>
+													<td>남</td>
+													<td>18</td>
+													<td>012025</td>
+													<td>1234567</td>
+												</tr>
+												<tr>
+													<td>
+														<input type="checkbox" />
+													</td>
+													<td>17</td>
+													<td>신새롬</td>
+													<td>1982-01-01</td>
+													<td>남</td>
+													<td>18</td>
+													<td>012025</td>
+													<td>1234567</td>
+												</tr>
+												<tr>
+													<td>
+														<input type="checkbox" />
+													</td>
+													<td>18</td>
+													<td>신새롬</td>
+													<td>1982-01-01</td>
+													<td>남</td>
+													<td>18</td>
+													<td>012025</td>
+													<td>1234567</td>
+												</tr>
+												<tr>
+													<td>
+														<input type="checkbox" />
+													</td>
+													<td>19</td>
+													<td>신새롬</td>
+													<td>1982-01-01</td>
+													<td>남</td>
+													<td>18</td>
+													<td>012025</td>
+													<td>1234567</td>
+												</tr>
+												<tr>
+													<td>
+														<input type="checkbox" />
+													</td>
+													<td>20</td>
+													<td>신새롬</td>
+													<td>1982-01-01</td>
+													<td>남</td>
+													<td>18</td>
+													<td>012025</td>
+													<td>1234567</td>
+												</tr>
+											</tbody>
+										</table>
+										<div class="btnWrap">
+											<a href="#none" class="btn lgGyR">삭제</a>
+										</div>
+									</fieldset>
+								</form>
+							</div>
+
+						</div>
+					</li>
+					<li>
+						<div class="add">
+							<h3 class="hide-element">청약정보</h3>
+						</div>
+					</li>
+					<li>
+						<div class="add">
+							<h3 class="hide-element">보장내역</h3>
+						</div>
+					</li>
+					<li>
+						<div class="add">
+							<h3 class="hide-element">표보기</h3>
+						</div>
+					</li>
+				</ul>
+
+			</div>
+		</div>
+		<!-- //공통 컨텐츠 -->
+		<script type="text/javascript">
+			//<![CDATA[
+			var pobj = $('.add');
+			curex.ui.init(pobj);  // tab 데이터가 삭제되기전에 obj에 담아놓음.
+			var myTab = ci.tab.init($('.PersonCont')); // 고객정보탭
+			var myTab1 = ci.tab.init($('.tabOutline')); // 
+			var myTab2 = ci.tab.init($('.lipsWrap')); // 
+			//]]>
+		</script>
+	</div>
+
+	
+</div>
+
+<!-- FOOTER -->
+<div id="footer">
+	<div class="fter">
+		<img src="/img/common/img_footer.jpg" alt="" />
+	</div>
+</div>
+<!--//FOOTER -->
+
+</body>
+</html>
