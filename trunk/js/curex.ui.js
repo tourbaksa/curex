@@ -232,14 +232,15 @@ curex.ui = {
 			, ani = false
 			, footerHeight = $("#footer").height()
 
-		$(window).scroll( checkOffset );
+		$(window).unbind("scroll", checkOffset );
+		$(window).bind( "scroll", checkOffset  );
 		$(window).load( checkOffset ); //로드될때 스크롤길이 췌퀫!
 		$(window).resize( checkOffset ).resize(); //리사이즈될때 스크롤길이 췌퀫!
 		
 		function checkOffset(){
 			var scrollBottom = $(document).height() - $(window).height() - $(window).scrollTop();
 			if(scrollBottom >= footerHeight){
-				if(!ani){ani = true; $obj.addClass("fixed");}
+				if(!ani){ani = true; $obj.addClass("fixed"); }
 			}else{
 				if(ani){ani = false; $obj.removeClass("fixed");}
 			}
