@@ -107,3 +107,12 @@ ul.lipsTab li.active:first-child a span{background-image:url(/img/sub/bg_smartp_
 .sbxRed{width:8px;height:8px;background-color:#e8404f;display:inline-block;line-height:20px;vertical-align:middle;}
 .sbxGray{width:8px;height:8px;background-color:#959595;display:inline-block;line-height:20px;vertical-align:middle;}
 .sbxOrange{width:8px;height:8px;background-color:#ff9000;display:inline-block;line-height:20px;vertical-align:middle;}
+
+/* 말풍선 */
+.bubble{position:relative; display:none;}
+.bubble .bb{position:absolute;left:0;top:6px;z-index:100;border:1px solid #64ade5;background:#f9fcff; padding:16px 10px 8px;border-radius:3px;font-size:11px;}
+.bubble .arr{background:url(/img/common/icon_bubble.png) no-repeat;position:absolute;top:-7px;left:50%;margin-left:-4px;width:9px;height:6px;}
+
+.bubble1 .bb{position:absolute;right:0;top:30px;border:1px solid #64ade5;background:#f9fcff; padding:16px 10px 8px;border-radius:3px;font-size:11px;}
+.bubble1 .bb a{position:absolute;right:3px;top:3px;}
+.bubble1 .arr{background:url(/img/common/icon_bubble.png) no-repeat;position:absolute;top:-7px;right:10px;width:9px;height:6px;}
