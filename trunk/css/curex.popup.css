@@ -145,6 +145,7 @@ div.previewCont{min-height:490px;}
 ============================*/
 div.csstation{position:relative; min-height:100px;}
 div.csstation ul.tab01{overflow:hidden; margin:0 0 20px 0; width:100%;}
+div.emailWrap{width:900px;}
 div.ReceiverZone{padding:6px 0 0 0;}
 div.ReceiverZone .btnWrap span{position:absolute; left:0; top:0;}
 div.ReceiverZone div.scrolling{ overflow-y:scroll; overflow-x:hidden; margin-top:5px;}
