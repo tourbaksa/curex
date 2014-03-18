@@ -275,8 +275,6 @@
 
 		var tabSelector = tab.find("> .tab-selector > li");
 		var tabPanel = tab.find("> .tab-panel > li");
-
-		console.log(tabSelector)
 		if (option.disabled instanceof Array) {
 
 			tab = disableTabSelector(tab, tabSelector, option.disabled);
@@ -498,7 +496,6 @@
 	 *
 	 */
 	self.init = function (tab, option) {
-		console.log(tab)
 		var tabObject = $({});
 
 		if (option === undefined) {
