@@ -2,18 +2,10 @@
 	임순옥
 */
 
-$(document).ready(function(){
-	if($("div#checkList").length){curex.ui.checkList();}
-	if($("div.tab02").length){curex.ui.tab();}
-	curex.ui.rolling();
-	curex.ui.event();
-	if($("div.timeSchedule").length){curex.ui.carlendar();}
-});
 
-var curex ={}
-/*if(!curex){
-	window.curex = curex = {};
-}*/ //실행안됨
+if(!window.curex){
+	window.curex = {};
+}
 
 curex.ui = {
 	init:function(scope){
@@ -311,11 +303,36 @@ curex.ui = {
 
 	curexTab:function(){
 		var scope = this.op
-			, $obj = $(".tab")
+			, $obj = $(".2tab",scope) || $(".2tab")
+			, $link = $("> li > a", $obj)
+			, $hash = $link.attr("href")
+			, $tabCont = $obj.next(".2tabWrap").find(".2tabCont")
+			, flag = 0;
 
+			$link.each(function(idx){
+				$(this).off().on({
+					click:function(){
+						$tabCont.hide();
+						if($tabCont.eq(idx).is(':hidden')){
+							$tabCont.eq(idx).css({"display" : "block"})
+						}
+						return false;
+					}
+				});
+
+			});
 
 	}
 
 }
 
+
+$(document).ready(function(){
+	if($("div#checkList").length){curex.ui.checkList();}
+	if($("div.tab02").length){curex.ui.tab();}
+	curex.ui.rolling();
+	curex.ui.event();
+	if($("div.timeSchedule").length){curex.ui.carlendar();}
+	curex.ui.curexTab();
+});
 
