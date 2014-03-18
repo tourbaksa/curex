@@ -2,10 +2,7 @@
 	임순옥
 */
 
-
-if(!window.curex){
-	window.curex = {};
-}
+var curex = {}
 
 curex.ui = {
 	init:function(scope){
@@ -303,18 +300,22 @@ curex.ui = {
 
 	curexTab:function(){
 		var scope = this.op
-			, $obj = $(".2tab",scope) || $(".2tab")
+			, $obj = $(".attab",scope) || $(".attab")
 			, $link = $("> li > a", $obj)
-			, $hash = $link.attr("href")
-			, $tabCont = $obj.next(".2tabWrap").find(".2tabCont")
+			, $tabCont = $(".tabCont",scope)
 			, flag = 0;
+
 
 			$link.each(function(idx){
 				$(this).off().on({
 					click:function(){
+						var hash = $(this).attr("href");
+						console.log($tabCont)
+						$link.parent().removeClass("active");
+						$link.eq(idx).parent().addClass("active");
 						$tabCont.hide();
-						if($tabCont.eq(idx).is(':hidden')){
-							$tabCont.eq(idx).css({"display" : "block"})
+						if($(hash).is(":hidden")){
+							$(hash).css({"display" : "block"});
 						}
 						return false;
 					}

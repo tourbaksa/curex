@@ -38,7 +38,7 @@
 				<li>
 					<div class="add">
 						<h2 class="hide-element">EMAIL 센터</h2>
-						<ul class="tab01 2tab">
+						<ul class="tab01 attab">
 							<li class="active"><a href="#emilCont1">e-Card 보내기</a></li>
 							<li><a href="#emilCont2">e-Letter 보내기</a></li>
 							<li><a href="#emilCont3">e-Post 보내기</a></li>
@@ -47,8 +47,8 @@
 							<a href="#none" class="btn smWtRb">발송내역보기</a>
 							<a href="#none" class="btn smWtRb">임시저장함</a>
 						</span>
-						<div class="emailWrap">
-							<div id="emilCont1" style="display:block">
+						<div class="emailWrap 2tabWrap">
+							<div id="emilCont1" class="tabCont" style="display:block">
 								<h4 class="hide-element">e-Card 보내기</h4>
 								<table class="table1 mailTable" summary="메일발송을 위한 수신자선택및 예약발송 항목정보를 제공합니다." width="100%">
 									<caption>수신자선택</caption>
@@ -98,7 +98,7 @@
 														</thead>
 														<tbody>
 															<tr>
-																<td>김승헌 고객님</td>
+																<td>김승헌 고객님 e-card</td>
 																<td>kheunstory@pulipin.com</td>
 																<td class="tac"><input type="checkbox" title="현재행선택" /></td>
 															</tr>
@@ -240,7 +240,7 @@
 									</div>
 								</div>
 							</div>
-							<div id="emilCont2" style="display:none">
+							<div id="emilCont2" class="tabCont" style="display:none">
 								<h4 class="hide-element">e-Letter 보내기</h4>
 								<table class="table1 mailTable" summary="메일발송을 위한 수신자선택및 예약발송 항목정보를 제공합니다." width="100%">
 									<caption>수신자선택</caption>
@@ -290,7 +290,7 @@
 														</thead>
 														<tbody>
 															<tr>
-																<td>김승헌 고객님</td>
+																<td>김승헌 고객님 e-Letter</td>
 																<td>kheunstory@pulipin.com</td>
 																<td class="tac"><input type="checkbox" title="현재행선택" /></td>
 															</tr>
@@ -336,20 +336,20 @@
 									</tbody>
 								</table>
 
-								<h3>카드선택</h3>
+								<h4>카드선택</h4>
 								<ul class="ctTab 2tab">
-									<li><a href="#none">BEST</a></li>
-									<li><a href="#none">BABY</a></li>
-									<li><a href="#none">생일</a></li>
-									<li><a href="#none">느낌</a></li>
-									<li><a href="#none">계절</a></li>
-									<li><a href="#none">ENJOY</a></li>
-									<li><a href="#none">영문</a></li>
-									<li><a href="#none">특별한날</a></li>
+									<li><a href="#TempCon1">BEST</a></li>
+									<li><a href="#TempCon2">BABY</a></li>
+									<li><a href="#TempCon3">생일</a></li>
+									<li><a href="#TempCon4">느낌</a></li>
+									<li><a href="#TempCon5">계절</a></li>
+									<li><a href="#TempCon6">ENJOY</a></li>
+									<li><a href="#TempCon7">영문</a></li>
+									<li><a href="#TempCon8">특별한날</a></li>
 								</ul>
 
-								<div class="cardTemp 2tabWrap">
-									<div class="TempCon1 2tabCont">
+								<div class="cardTemp">
+									<div id="TempCon1" class="tabCont">
 										<h5 class="hide-element">BEST</h5>
 										<div class="templateList">
 											<ul>
@@ -402,34 +402,34 @@
 											</tbody>
 										</table>
 									</div>
-									<div class="TempCon2 2tabCont">
+									<div id="TempCon2" class="tabCont">
 										<h5 class="hide-element">BABY</h5>
 										
 									</div>
-									<div class="TempCon3 2tabCont">
+									<div id="TempCon3" class="tabCont">
 										<h5 class="hide-element">생일</h5>
 										
 									</div>
-									<div class="TempCon4 2tabCont">
+									<div id="TempCon4" class="tabCont">
 										<h5 class="hide-element">느낌</h5>
 										
 									</div>
-									<div class="TempCon5 2tabCont">
+									<div id="TempCon5" class="tabCont">
 										<h5 class="hide-element">계절</h5>
 									</div>
-									<div class="TempCon6 2tabCont">
+									<div id="TempCon6" class="tabCont">
 										<h5 class="hide-element">ENJOY</h5>
 									</div>
-									<div class="TempCon7 2tabCont">
+									<div id="TempCon7" class="tabCont">
 										<h5 class="hide-element">영문</h5>
 										
 									</div>
-									<div class="TempCon8 2tabCont">
+									<div id="TempCon8" class="tabCont">
 										<h5 class="hide-element">특별한날</h5>
 									</div>
 								</div>
 							</div>
-							<div id="emilCont3" style="display:none">
+							<div id="emilCont3" class="tabCont" style="display:none">
 								<h4 class="hide-element">e-Letter 보내기</h4>
 								<table class="table1 mailTable" summary="메일발송을 위한 수신자선택및 예약발송 항목정보를 제공합니다." width="100%">
 									<caption>수신자선택</caption>
@@ -479,7 +479,7 @@
 														</thead>
 														<tbody>
 															<tr>
-																<td>김승헌 고객님</td>
+																<td>김승헌 고객님 e-Post</td>
 																<td>kheunstory@pulipin.com</td>
 																<td class="tac"><input type="checkbox" title="현재행선택" /></td>
 															</tr>
