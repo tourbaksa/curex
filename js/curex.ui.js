@@ -307,6 +307,13 @@ curex.ui = {
 				$minimonth.hide();
 			}
 			$popbtn.off().on({click: function(){$popwrap.hide(); return false;}}); //팝업닫기
+	},
+
+	curexTab:function(){
+		var scope = this.op
+			, $obj = $(".tab")
+
+
 	}
 
 }
