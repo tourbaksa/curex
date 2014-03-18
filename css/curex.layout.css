@@ -4,7 +4,8 @@
 #wrap {width:100%;background:url(/img/common/bg_line1.gif) repeat-x 0 0; color:#666666; font-family:NanumGothic,"나눔고딕",dotum,arial; font-size:12px;}
 
 /* header */
-#header{width:1024px; margin:0 auto; position:relative;}
+#header-wrap{width:1024px;margin:0 auto; position:relative;}
+#header{width:1024px; margin:0 auto; position:relative; z-index:1000; background:url(/img/common/bg_line1.gif) repeat-x 0 0; }
 #header h1, #header a.total, #header div.gnbWrap{float:left;}
 #header h1 {padding-right:39px; height:50px;}
 #header a.total{border-left:1px solid #007c88; display:block;}
@@ -68,8 +69,8 @@ div.Tsearch span a{text-decoration:none; color:#707070; font-weight:bold;display
 div.personInfoArea{position:absolute; top:90px;overflow:hidden; background:#f7f7f7; z-index:222; border:1px solid #22b8c7; border-top:0; width:795px;}
 
 /* 기계약 하나만 보여질때 */
-div.personOne{width:426px;padding-bottom:36px;}
-div.PersonCont{float:left; width:367px; padding:20px 20px 45px 20px; background:#fff;}
+div.personOne{width:428px;padding-bottom:36px;}
+div.PersonCont{position:absolute;z-index:200;top:-450px;float:left; width:327px; padding:20px 20px 53px 20px; background:#fff; border:1px solid #22b8c7; border-top:0;}
 div.PersonCont.opened {top: 90px;}
 ul.personList li{border-bottom:1px solid #e8e9e9; line-height:37px; height:37px; position:relative; overflow:hidden;}
 ul.personList li a{display:block;}
@@ -82,7 +83,7 @@ button.btn_delst1{background:url(/img/common/btn_delst1.gif) no-repeat 0 0; widt
 button.btn_delst1 span{display: block; overflow: hidden; position: absolute; top: 0; left: 0; width: 0; height: 0; border: 0; background: none !important; font-size: 0; line-height: 0;}
 /* 고객정보 호버시 */
 ul.personList li.hover{background-color:#e4edf2;}
-ul.personList li.hover span.sut{color:#2c8ecb; background-image:url(../images/common/bg_sutBar_hover.gif);}
+ul.personList li.hover span.sut{color:#2c8ecb; background-image:url(/images/common/bg_sutBar_hover.gif);}
 ul.personList li.hover span.name{color:#000000;}
 
 div.personDetail{position: absolute;z-index:190;top: -450px;left: 170px;background-color:#f7f7f7;padding:47px 30px 0 30px;float:left;width:368px;border:1px solid #22b8c7;border-top:0;}
@@ -108,7 +109,7 @@ table.smarTable th{
 
 /* 알림 */
 dl.pNnotice{padding:12px 0; overflow:hidden;
-	background:#fff url(../images/common/bg_pnotice.gif) repeat-y 0 0;
+	background:#fff url(/images/common/bg_pnotice.gif) repeat-y 0 0;
 	border-radius:2px;
 	-webkit-border-radius:2px;
 	-moz-border-radius:2px;
@@ -142,7 +143,7 @@ div.personBtn .lgGyR1{padding:7px 10px;}
 #conteiner .location{position:absolute;right:0;top:0;}
 #conteiner .location li {float:left; font-size:11px;}
 #conteiner .location li a {text-decoration:none; color:#707070; line-height:23px; height:23px;}
-#conteiner #contents width{1024px;}
+#conteiner #contents {width:100%;}
 #conteiner #contents ul.tab01{margin:0 0 8px 0; overflow:hidden;}
 #conteiner #contents .left{float:left; width:270px;position:relative;}
 #conteiner #contents .right{float:right; width:733px}
