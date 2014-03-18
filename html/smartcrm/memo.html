@@ -8,6 +8,7 @@
 <link rel="stylesheet" href="/css/curex.common.css" type="text/css" />
 <link rel="stylesheet" href="/css/curex.layout.css" type="text/css" />
 <link rel="stylesheet" href="/css/curex.smart.css" type="text/css" />
+<link rel="stylesheet" href="/css/curex.popup.css" type="text/css" />
 <link rel="stylesheet" href="/WEB-APP/webponent/dialog/css/dialog.css" type="text/css" />
 <script src="/WEB-APP/webponent/ci/agent.js"></script>
 <script type="text/javascript" src="/WEB-APP/webponent/thirdParty/jquery/jquery-1.10.2.min.js"></script>
@@ -38,20 +39,21 @@
 		 
 		<!-- 공통 컨텐츠 -->
 		<div id="contents">
-			<div class="">
-				<div class="">
+			<div class="memoWrap">
+				<span>
 					<input type="text" style="width:110px" value="메모검색" />
 					<select title="메모구분선택">
 						<option>전체</option>
 						<option></option>
 					</select>
-				</div>
+				</span>
 
 				<div class="memoContentArea">
 					<!-- // 메모시작 -->
 					<div class="memo_wrapper new"><!-- 새메모에는 new 클래스적용(메모가 없을시 폰트색상이 다름) -->
 						<div class="memoHdr">
 							<span class="tit">고객을 등록해 주세요.</span> <!-- 디폴트는 체크박스가 없습니다. -->
+							<span class="data">2014-03-04 15:00</span>
 						</div>
 						<div class="memoarea">
 							<strong class="memo_subject bg">여기에 제목을 입력하세요.</strong>
@@ -71,44 +73,7 @@
 					<div class="memo_wrapper">
 						<div class="memoHdr">
 							<span class="tit"><input type="checkbox" id="cm2" /> <label for="cm2">신새롬</label></span>
-						</div>
-						<div class="memoarea">
-							<strong class="memo_subject bg">여기에 제목을 입력하세요.</strong>
-							<div class="mm_scroll">
-								여기에 새메모를 입력하세요!
-							</div>
-							<span class="lt"></span>
-						</div>
-						<div class="bottom_paper">
-							<a href="#" class="btn smGyRb">수정</a>
-							<a href="#" class="btn smWtRb">삭제</a>
-						</div>
-					</div>
-					<!--  // 메모시작 -->
-
-
-					<!-- // 메모시작 -->
-					<div class="memo_wrapper">
-						<div class="memoHdr">
-							<span class="tit"><input type="checkbox" id="cm2" /> <label for="cm2">신새롬</label></span>
-						</div>
-						<div class="memoarea">
-							<strong class="memo_subject">여기에 제목을 입력하세요.</strong>
-							<div class="mm_scroll">
-								여기에 새메모를 입력하세요!
-							</div>
-							<span class="lt"></span>
-						</div>
-						<div class="bottom_paper">
-							<a href="#" class="btn smBeR">저장</a>
-							<a href="#" class="btn smGy">취소</a>
-						</div>
-					</div>
-					<!--  // 메모시작 -->
-					<!-- // 메모시작 -->
-					<div class="memo_wrapper">
-						<div class="memoHdr">
-							<span class="tit"><input type="checkbox" id="cm2" /> <label for="cm2">신새롬</label></span>
+							<span class="data">2014-03-04 15:00</span>
 						</div>
 						<div class="memoarea">
 							<strong class="memo_subject bg">여기에 제목을 입력하세요.</strong>
@@ -129,6 +94,47 @@
 					<div class="memo_wrapper">
 						<div class="memoHdr">
 							<span class="tit"><input type="checkbox" id="cm2" /> <label for="cm2">신새롬</label></span>
+							<span class="data">2014-03-04 15:00</span>
+						</div>
+						<div class="memoarea">
+							<strong class="memo_subject">여기에 제목을 입력하세요.</strong>
+							<div class="mm_scroll">
+								여기에 새메모를 입력하세요!
+							</div>
+							<span class="lt"></span>
+						</div>
+						<div class="bottom_paper">
+							<a href="#" class="btn smBeR">저장</a>
+							<a href="#" class="btn smGy">취소</a>
+						</div>
+					</div>
+					<!--  // 메모시작 -->
+					<!-- // 메모시작 -->
+					<div class="memo_wrapper">
+						<div class="memoHdr">
+							<span class="tit"><input type="checkbox" id="cm2" /> <label for="cm2">신새롬</label></span>
+							<span class="data">2014-03-04 15:00</span>
+						</div>
+						<div class="memoarea">
+							<strong class="memo_subject bg">여기에 제목을 입력하세요.</strong>
+							<div class="mm_scroll">
+								여기에 새메모를 입력하세요!
+							</div>
+							<span class="lt"></span>
+						</div>
+						<div class="bottom_paper">
+							<a href="#" class="btn smGyRb">수정</a>
+							<a href="#" class="btn smWtRb">삭제</a>
+						</div>
+					</div>
+					<!--  // 메모시작 -->
+
+
+					<!-- // 메모시작 -->
+					<div class="memo_wrapper">
+						<div class="memoHdr">
+							<span class="tit"><input type="checkbox" id="cm2" /> <label for="cm2">신새롬</label></span>
+							<span class="data">2014-03-04 15:00</span>
 						</div>
 						<div class="memoarea">
 							<strong class="memo_subject">여기에 제목을 입력하세요.</strong>
@@ -148,6 +154,7 @@
 					<div class="memo_wrapper">
 						<div class="memoHdr">
 							<span class="tit"><input type="checkbox" id="cm2" /> <label for="cm2">신새롬</label></span>
+							<span class="data">2014-03-04 15:00</span>
 						</div>
 						<div class="memoarea">
 							<strong class="memo_subject">여기에 제목을 입력하세요.</strong>
@@ -168,6 +175,7 @@
 				<div class="memoMore">
 					<a href="#" class="btn smWtRb">더보기<span class="txtArrow">&nbsp;</span></a>
 				</div>
+
 
 
 

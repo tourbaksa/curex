@@ -544,22 +544,10 @@ ul .point, ol .point{margin-left:-10px; color:#e8404f;}
 /* 마진 */
 .mt_4{margin-top:-4px !important;}
 
-/* 메모 */
-.memoWrap p.all{text-align:right;font-size:14px;margin:8px 0;}
-.memoWrap:after{content:"";display:block;clear:both;} 
-.memoWrap ul li{float:left; width:334px; padding-bottom:4px; margin-left:10px;background:url(/img/common/bg_memo_b.gif) no-repeat 0 bottom;}
-.memoWrap ul li:first-child{margin-left:0;} 
-.memoWrap .memoW{border:1px solid #52aace;border-bottom:0;}
-.memoWrap .memoW p.tit{color:#fff;position:relative;border-top:1px solid #d4f2ff;padding:5px 0 5px 14px;
-	background-color:#6bc1e5;
-	background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPgo8bGluZWFyR3JhZGllbnQgaWQ9Imc5MDIiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjAlIiB5Mj0iMTAwJSI+CjxzdG9wIHN0b3AtY29sb3I9IiM3REQzRjciIG9mZnNldD0iMCIvPjxzdG9wIHN0b3AtY29sb3I9IiM2QkMxRTUiIG9mZnNldD0iMSIvPgo8L2xpbmVhckdyYWRpZW50Pgo8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2c5MDIpIiAvPgo8L3N2Zz4=);
-}
-.memoWrap .memoW p.tit span{position:absolute;right:5px;top:3px;}
-.memoC{height:224px;overflow:auto;overflow-x:hidden;background-color:#fcfcfd;}
-.memoC ul li{border-top:1px solid #cae0e4;height:31px;line-height:31px;margin-left:0;background:none;}
-.memoC ul li:first-child{border-top:0;}
 
-/* smartCRM 메모  */
+/* 메모  */
+p.memoResult{text-align:right; margin:10px 0; color:#000;}
+div.memoWrap{}
 div.memoContentArea{overflow:hidden; margin:9px 0 0 -10px;}
 div.memo_wrapper{overflow:hidden;border-bottom:0;float:left; width:334px; padding-bottom:4px; margin:0 0 11px 10px; background:url(/img/common/bg_memo_b.gif) no-repeat 0 bottom; height:261px; position:relative; color:#766b63;}
 div.memo_wrapper.new{color:#c0bcba !important;}
@@ -576,3 +564,4 @@ div.mm_scroll{margin-left:32px; height:30px; line-height:31px; height:158px; ove
 .bg{ url(/img/sub/bg_memosuject.gif) repeat-x 0 0;}
 div.memoarea .lt{background:url(/img/sub/bg_paper_side.gif) repeat-y 0 0; position:absolute; left:0; top:0px; width:23px; height:100%; z-index:1;}
 div.bottom_paper{position:absolute; left:1px; top:225px; width:332px; height:30px; background-color:#fff; z-index:11; padding:5px 9px 0 0; text-align:right;}
+

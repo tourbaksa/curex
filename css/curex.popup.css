@@ -16,8 +16,17 @@
 .popTit .colorLg{color:#079EB1;}
 
 /*==========================
-   레이어팝업 레이아웃 type
+   팝업 레이아웃 type2
 ============================*/
+
+div#PopWrap2{ border:1px solid #64ade5; border-bottom:1px solid #d6d6d6; background:#fff;  position:relative;}
+div#PopWrap2 div.popHeader{height:36px; background:#f7f7f7; border-bottom:1px solid #e5e6e8; padding-left:9px; line-height:35px; color:#000;}
+div#PopWrap2 h1{margin:0 !important; color: #363636; font-size: 16px; font-weight: bold; letter-spacing: -1px; margin: 8px 0;}
+div#PopWrap2 div.popcontent{padding:10px 9px 9px 9px; border-bottom:1px solid #64ade5;}
+div#PopWrap2 div.popcontent .table1{border:1px solid #dedede;}
+div#PopWrap2 a.btnClosePopup{position:absolute; right:9px; top:7px;}
+
+
 
 /* Layer popup type2 - 일정표전용 팝업 */
 div.layerPopWrap2{position:absolute; border:1px solid #64ade5; border-bottom:1px solid #d6d6d6; background:#fff; left:0; top:0; display:none;}
@@ -25,7 +34,7 @@ div.layerPopWrap2 div.layerPopHdr{height:36px; background:#f7f7f7; border-bottom
 div.layerPopWrap2 h3{margin:0 !important;}
 div.layerPopWrap2 div.layerPopCnt{padding:10px 9px 9px 9px; border-bottom:1px solid #64ade5;}
 div.layerPopWrap2 div.layerPopCnt .table1{border:1px solid #dedede;}
-div.layerPopWrap2 a.btnClosePopup{position:absolute; right:9px; top:7px;}
+div.layerPopWrap2 a.btnClosePopup{position:absolute; right:9px; top:7px;}*/
 
 /* 팝업공통 */
 .bderL{border-left:1px solid #dedede !important;}

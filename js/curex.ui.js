@@ -229,7 +229,7 @@ curex.ui = {
 
 	checkList:function(){
 		var $obj = $("#checkList")
-			, detached = false
+			, ani = false
 			, footerHeight = $("#footer").height()
 
 		$(window).scroll( checkOffset );
@@ -239,9 +239,9 @@ curex.ui = {
 		function checkOffset(){
 			var scrollBottom = $(document).height() - $(window).height() - $(window).scrollTop();
 			if(scrollBottom >= footerHeight){
-				if(!detached){detached = true; $obj.addClass("fixed");}
+				if(!ani){ani = true; $obj.addClass("fixed");}
 			}else{
-				if(detached){detached = false; $obj.removeClass("fixed");}
+				if(ani){ani = false; $obj.removeClass("fixed");}
 			}
 		}
 	},
@@ -252,9 +252,6 @@ curex.ui = {
 			, $objy = $obj.offset().top
 			, $objw = $obj.outerWidth()/2
 			, $objh = $obj.outerHeight()/2
-			, $btn1 = $obj.find("a.wkicon1") //기념일
-			, $btn2 = $obj.find("a.wkicon2") //활동관리
-			, $btn3 = $obj.find("a.wkicon3") //개인일정
 			, $popwrap = $("div.layerPopWrap2")
 			, $popbtn = $("a.btnClosePopup") //팝업닫기
 			, $tobdyList = $("#layerPop1")
@@ -263,9 +260,6 @@ curex.ui = {
 			, $miniYear = $("div.mini_calender.year") //연간 미니캘린더
 			, $minimonth = $("div.mini_calender.month") //주간미니캘린더
 
-			$btn1.off().on({click: function(){opcenter($(this)); return false;}}); //기념일
-			$btn2.off().on({click: function(){opcenter($(this)); return false;}}); //활동관리
-			$btn3.off().on({click: function(){opcenter($(this)); return false;}}); //개인일정
 			var opcenter = function(e){
 				var idName = e.attr("href")
 					 , popObjw = $objw - $(idName).width()/2
