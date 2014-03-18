@@ -250,26 +250,15 @@ curex.ui = {
 			, $miniYear = $("div.mini_calender.year") //연간 미니캘린더
 			, $minimonth = $("div.mini_calender.month") //주간미니캘린더
 
-			var opcenter = function(e){
-				var idName = e.attr("href")
-					 , popObjw = $objw - $(idName).width()/2
-					 , popObjh = $objh - $(idName).height()/2
-
-				hide();
-				$(idName).css({
-					"display" : "block",
-					"left" : popObjw,
-					"top" : popObjh
-				})
-			}
 			$tobdyMore.on({ //today일정
 				click:function(e){
 					var posx =$objw -$tobdyList.width()/2
-						, posy =$objh -$tobdyList.height()/2
+						, posy =$objh -$tobdyList.height()
 /*					var $tdw = $(this).closest("td")
 						, posx = $tdw.offset().left - $objx-1
 						, posy = $tdw.offset().top - $objy-1;*/
 						hide();
+
 					$("#layerPop1").css({
 						"display": "block",
 						"left" : posx,
@@ -301,27 +290,14 @@ curex.ui = {
 	curexTab:function(){
 		var scope = this.op
 			, $obj = $(".attab",scope) || $(".attab")
-			, $link = $("> li > a", $obj)
-			, $tabCont = $(".tabCont",scope)
+			, $tabBtn = $("> li > a", $obj)
+			, $act = $("> li.active ", $obj)			
+			, $tabCont = $obj.next(".tabWrap").find(".tabCont") || $obj.next().next(".tabWrap").find(".tabCont")
 			, flag = 0;
 
+			
+			$($act.find("a").attr("href")).css({"display":"block"});
 
-			$link.each(function(idx){
-				$(this).off().on({
-					click:function(){
-						var hash = $(this).attr("href");
-						console.log($tabCont)
-						$link.parent().removeClass("active");
-						$link.eq(idx).parent().addClass("active");
-						$tabCont.hide();
-						if($(hash).is(":hidden")){
-							$(hash).css({"display" : "block"});
-						}
-						return false;
-					}
-				});
-
-			});
 
 	}
 

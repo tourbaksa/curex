@@ -47,7 +47,7 @@
 							<a href="#none" class="btn smWtRb">발송내역보기</a>
 							<a href="#none" class="btn smWtRb">임시저장함</a>
 						</span>
-						<div class="emailWrap 2tabWrap">
+						<div class="emailWrap">
 							<div id="emilCont1" class="tabCont" style="display:block">
 								<h4 class="hide-element">e-Card 보내기</h4>
 								<table class="table1 mailTable" summary="메일발송을 위한 수신자선택및 예약발송 항목정보를 제공합니다." width="100%">
@@ -145,19 +145,19 @@
 								</table>
 
 								<h4>카드선택</h4>
-								<ul class="ctTab 2tab">
-									<li><a href="#none">BEST</a></li>
-									<li><a href="#none">BABY</a></li>
-									<li><a href="#none">생일</a></li>
-									<li><a href="#none">느낌</a></li>
-									<li><a href="#none">계절</a></li>
-									<li><a href="#none">ENJOY</a></li>
-									<li><a href="#none">영문</a></li>
-									<li><a href="#none">특별한날</a></li>
+								<ul class="ctTab attab">
+									<li class="active"><a href="#none">BEST</a></li>
+									<li><a href="#TempCon1">BABY</a></li>
+									<li><a href="#TempCon2">생일</a></li>
+									<li><a href="#TempCon3">느낌</a></li>
+									<li><a href="#TempCon4">계절</a></li>
+									<li><a href="#TempCon5">ENJOY</a></li>
+									<li><a href="#TempCon6">영문</a></li>
+									<li><a href="#TempCon7">특별한날</a></li>
 								</ul>
 
-								<div class="cardTemp 3tabWrap">
-									<div class="TempCon1 3tabCont">
+								<div class="cardTemp">
+									<div id="TempCon1 tabCont">
 										<h5 class="hide-element">BEST</h5>
 										<div class="templateList">
 											<ul>
@@ -210,31 +210,31 @@
 											</tbody>
 										</table>
 									</div>
-									<div class="TempCon2 3tabCont">
+									<div id="TempCon2 tabCont">
 										<h5 class="hide-element ">BABY</h5>
 										BaBy
 									</div>
-									<div class="TempCon3 3tabCont">
+									<div id="TempCon1 tabCont">
 										<h5 class="hide-element">생일</h5>
 										생일
 									</div>
-									<div class="TempCon4 3tabCont">
+									<div id="TempCon4 tabCont">
 										<h5 class="hide-element">느낌</h5>
 										느낌
 									</div>
-									<div class="TempCon5 3tabCont">
+									<div id="TempCon5 tabCont">
 										<h5 class="hide-element">계절</h5>
 										계절
 									</div>
-									<div class="TempCon6 3tabCont">
+									<div id="TempCon6 tabCont">
 										<h5 class="hide-element">ENJOY</h5>
 										ENJOY
 									</div>
-									<div class="TempCon7 3tabCont">
+									<div id="TempCon7 tabCont">
 										<h5 class="hide-element">영문</h5>
 										영문
 									</div>
-									<div class="TempCon8 3tabCont">
+									<div id="TempCon8 tabCont">
 										<h5 class="hide-element">특별한날</h5>
 										특별한날
 									</div>
@@ -242,381 +242,11 @@
 							</div>
 							<div id="emilCont2" class="tabCont" style="display:none">
 								<h4 class="hide-element">e-Letter 보내기</h4>
-								<table class="table1 mailTable" summary="메일발송을 위한 수신자선택및 예약발송 항목정보를 제공합니다." width="100%">
-									<caption>수신자선택</caption>
-									<colgroup>
-										<col width="20%" />
-										<col width="*" />
-									</colgroup>
-									<tbody>
-										<tr>
-											<th rowspan="2">수신자선택</th>
-											<td>
-												<div class="email">
-													<label for="name">이름</label>
-													<input type="text" style="width:90px" id="name">
-													<label for="mailID">이메일</label>
-													<input type="text" style="width:90px" id="mailID">
-													<input type="text" style="width:90px" title="메일주소입력">
-													@
-													<select style="width:102px" title="메일주소선택">
-														<option>선택</option>
-														<option></option>
-													</select>
-													<a href="#" class="btn smWtRb">추가</a>
-												</div>
-											</td>
-										</tr>
-										<tr>
-											<td>
-												<div class="ReceiverZone">
-													<div class="btnWrap">
-														<span>총 00명</span>
-														<a href="#" class="btn smGnR">선택삭제</a>
-													</div>
-													<table summary="수신자 이름 및 이메일선택" width="100%">
-														<caption></caption>
-														<colgroup>
-															<col width="30%" />
-															<col width="50%" />
-															<col width="*" />
-														</colgroup>
-														<thead>
-														<tr>
-															<th scope="col">이름</th>
-															<th scope="col">이메일</th>
-															<th scope="col">선택</th>
-														</tr>
-														</thead>
-														<tbody>
-															<tr>
-																<td>김승헌 고객님 e-Letter</td>
-																<td>kheunstory@pulipin.com</td>
-																<td class="tac"><input type="checkbox" title="현재행선택" /></td>
-															</tr>
-															<tr>
-																<td>김승헌 고객님</td>
-																<td>kheunstory@pulipin.com</td>
-																<td class="tac"><input type="checkbox" title="현재행선택" /></td>
-															</tr>
-															<tr>
-																<td>김승헌 고객님</td>
-																<td>kheunstory@pulipin.com</td>
-																<td class="tac"><input type="checkbox" title="현재행선택" /></td>
-															</tr>
-															<tr>
-																<td>김승헌 고객님</td>
-																<td>kheunstory@pulipin.com</td>
-																<td class="tac"><input type="checkbox" title="현재행선택" /></td>
-															</tr>
-														</tbody>
-													</table>
-														
-												</div>
-											</td>
-										</tr>
-										<tr>
-											<th>예약발송</th>
-											<td>
-												<input type="checkbox" />
-												<select style="width:90px;">
-													<option>2014</option>
-													<option></option>
-												</select>
-												<select style="width:90px;">
-													<option>2월</option>
-													<option></option>
-												</select>
-												<select style="width:90px;">
-													<option>25일</option>
-													<option></option>
-												</select>
-											</td>
-										</tr>
-									</tbody>
-								</table>
-
-								<h4>카드선택</h4>
-								<ul class="ctTab 2tab">
-									<li><a href="#TempCon1">BEST</a></li>
-									<li><a href="#TempCon2">BABY</a></li>
-									<li><a href="#TempCon3">생일</a></li>
-									<li><a href="#TempCon4">느낌</a></li>
-									<li><a href="#TempCon5">계절</a></li>
-									<li><a href="#TempCon6">ENJOY</a></li>
-									<li><a href="#TempCon7">영문</a></li>
-									<li><a href="#TempCon8">특별한날</a></li>
-								</ul>
-
-								<div class="cardTemp">
-									<div id="TempCon1" class="tabCont">
-										<h5 class="hide-element">BEST</h5>
-										<div class="templateList">
-											<ul>
-												<li><span class="img"><img src="/img/sub/img_emailTemp1.gif" alt="" /></span> <span class="tmName"><input type="radio"/><span>[계절] 봄</span></span></li>
-												<li><span class="img"><img src="/img/sub/img_emailTemp2.gif" alt="" /></span> <span class="tmName"><input type="radio" /><span>[baby] 토끼</span></span></li>
-												<li><span class="img"><img src="/img/sub/img_emailTemp3.gif" alt="" /></span> <span class="tmName"><input type="radio" /><span>[생일] 사랑해</span></span></li>
-												<li><span class="img"><img src="/img/sub/img_emailTemp4.gif" alt="" /></span> <span class="tmName"><input type="radio" /><span>[생일] 축하해</span></span></li>
-												<li><span class="img"><img src="/img/sub/img_emailTemp5.gif" alt="" /></span> <span class="tmName"><input type="radio" /><span>[특별한날] 축하해</span></span></li>
-												<li><span class="img"><img src="/img/sub/img_emailTemp6.gif" alt="" /></span> <span class="tmName"><input type="radio" /><span>[특별한날] 축하해</span></span></li>
-												<li><span class="img"><img src="/img/sub/img_emailTemp7.gif" alt="" /></span> <span class="tmName"><input type="radio" /><span>[계절] 겨울</span></span></li>
-												<li><span class="img"><img src="/img/sub/img_emailTemp8.gif" alt="" /></span> <span class="tmName"><input type="radio" /><span>[계절] 우산</span></span></li>
-												<li><span class="img"><img src="/img/sub/img_emailTemp9.gif" alt="" /></span> <span class="tmName"><input type="radio" /><span>[생일] 사랑해</span></span></li>
-												<li><span class="img"><img src="/img/sub/img_emailTemp10.gif" alt="" /></span> <span class="tmName"><input type="radio" /><span>[특별한날] 축하해</span></span></li>
-											</ul>
-										</div>
-										<div class="paging">
-											<a href="#" class="prev"><img src="/img/common/arrow_prev.gif" alt="이전으로" /></a>
-											<strong>1</strong>
-											<a href="#">2</a>
-											<a href="#">3</a>
-											<a href="#">4</a>
-											<a href="#">5</a>
-											<a href="#" class="next"><img src="/img/common/arrow_next.gif" alt="다음으로" /></a>
-										</div>
-
-										<table summary="제목, 내용, 파일첨부등 이메일전송을 위한 내용입력정보를 제공합니다." width="100%" class="table1 SendTable">
-											<caption>내용입력</caption>
-											<colgroup>
-												<col width="30%" />
-												<col width="*" />
-											</colgroup>
-											<tbody>
-												<tr>
-													<th>제목</th>
-													<td><span class="widthFull"><input type="text" title="제목입력" /></span></td>
-												</tr>
-												<tr>
-													<th>내용 <span>특수문자 중 특수문자 중 (%,“,&,=,>,/,’)를 <br /> 입력하시면 발송이 되지 않습니다</span></th>
-													<td><span class="textareaFull"><textarea rows="10" cols="15" title="내용입력"></textarea>
-													</span></td>
-												</tr>
-												<tr>
-													<th>파일첨부</th>
-													<td>
-														<input type="text" name="txtAttach0" id="txtAttach0" style="width:387px;" readonly="readonly" /><input type="file" id="fileAttach0" style="display:none;" /> <a href="#none" class="btn smGynb fileupload" type="button">찾아보기</a>
-														<a href="#none" class="btn smWtRb fileDel" type="button">삭제</a>
-														<a href="#none" class="btn smWtRb fileInsert" type="button">추가</a>
-													</td>
-												</tr>
-											</tbody>
-										</table>
-									</div>
-									<div id="TempCon2" class="tabCont">
-										<h5 class="hide-element">BABY</h5>
-										
-									</div>
-									<div id="TempCon3" class="tabCont">
-										<h5 class="hide-element">생일</h5>
-										
-									</div>
-									<div id="TempCon4" class="tabCont">
-										<h5 class="hide-element">느낌</h5>
-										
-									</div>
-									<div id="TempCon5" class="tabCont">
-										<h5 class="hide-element">계절</h5>
-									</div>
-									<div id="TempCon6" class="tabCont">
-										<h5 class="hide-element">ENJOY</h5>
-									</div>
-									<div id="TempCon7" class="tabCont">
-										<h5 class="hide-element">영문</h5>
-										
-									</div>
-									<div id="TempCon8" class="tabCont">
-										<h5 class="hide-element">특별한날</h5>
-									</div>
-								</div>
+									e-Card 보내기와 동일함
 							</div>
 							<div id="emilCont3" class="tabCont" style="display:none">
 								<h4 class="hide-element">e-Letter 보내기</h4>
-								<table class="table1 mailTable" summary="메일발송을 위한 수신자선택및 예약발송 항목정보를 제공합니다." width="100%">
-									<caption>수신자선택</caption>
-									<colgroup>
-										<col width="20%" />
-										<col width="*" />
-									</colgroup>
-									<tbody>
-										<tr>
-											<th rowspan="2">수신자선택</th>
-											<td>
-												<div class="email">
-													<label for="name">이름</label>
-													<input type="text" style="width:90px" id="name">
-													<label for="mailID">이메일</label>
-													<input type="text" style="width:90px" id="mailID">
-													<input type="text" style="width:90px" title="메일주소입력">
-													@
-													<select style="width:102px" title="메일주소선택">
-														<option>선택</option>
-														<option></option>
-													</select>
-													<a href="#" class="btn smWtRb">추가</a>
-												</div>
-											</td>
-										</tr>
-										<tr>
-											<td>
-												<div class="ReceiverZone">
-													<div class="btnWrap">
-														<span>총 00명</span>
-														<a href="#" class="btn smGnR">선택삭제</a>
-													</div>
-													<table summary="수신자 이름 및 이메일선택" width="100%">
-														<caption></caption>
-														<colgroup>
-															<col width="30%" />
-															<col width="50%" />
-															<col width="*" />
-														</colgroup>
-														<thead>
-														<tr>
-															<th scope="col">이름</th>
-															<th scope="col">이메일</th>
-															<th scope="col">선택</th>
-														</tr>
-														</thead>
-														<tbody>
-															<tr>
-																<td>김승헌 고객님 e-Post</td>
-																<td>kheunstory@pulipin.com</td>
-																<td class="tac"><input type="checkbox" title="현재행선택" /></td>
-															</tr>
-															<tr>
-																<td>김승헌 고객님</td>
-																<td>kheunstory@pulipin.com</td>
-																<td class="tac"><input type="checkbox" title="현재행선택" /></td>
-															</tr>
-															<tr>
-																<td>김승헌 고객님</td>
-																<td>kheunstory@pulipin.com</td>
-																<td class="tac"><input type="checkbox" title="현재행선택" /></td>
-															</tr>
-															<tr>
-																<td>김승헌 고객님</td>
-																<td>kheunstory@pulipin.com</td>
-																<td class="tac"><input type="checkbox" title="현재행선택" /></td>
-															</tr>
-														</tbody>
-													</table>
-														
-												</div>
-											</td>
-										</tr>
-										<tr>
-											<th>예약발송</th>
-											<td>
-												<input type="checkbox" />
-												<select style="width:90px;">
-													<option>2014</option>
-													<option></option>
-												</select>
-												<select style="width:90px;">
-													<option>2월</option>
-													<option></option>
-												</select>
-												<select style="width:90px;">
-													<option>25일</option>
-													<option></option>
-												</select>
-											</td>
-										</tr>
-									</tbody>
-								</table>
-
-								<h4>카드선택</h4>
-								<ul class="ctTab">
-									<li><a href="#">BEST</a></li>
-									<li><a href="#">BABY</a></li>
-									<li><a href="#">생일</a></li>
-									<li><a href="#">느낌</a></li>
-									<li><a href="#">계절</a></li>
-									<li><a href="#">ENJOY</a></li>
-									<li><a href="#">영문</a></li>
-									<li><a href="#">특별한날</a></li>
-								</ul>
-
-								<div class="cardTemp">
-									<div class="TempCon1">
-										<h5 class="hide-element">BEST</h5>
-										<div class="templateList">
-											<ul>
-												<li><span class="img"><img src="/img/sub/img_emailTemp1.gif" alt="" /></span> <span class="tmName"><input type="radio"/><span>[계절] 봄</span></span></li>
-												<li><span class="img"><img src="/img/sub/img_emailTemp2.gif" alt="" /></span> <span class="tmName"><input type="radio" /><span>[baby] 토끼</span></span></li>
-												<li><span class="img"><img src="/img/sub/img_emailTemp3.gif" alt="" /></span> <span class="tmName"><input type="radio" /><span>[생일] 사랑해</span></span></li>
-												<li><span class="img"><img src="/img/sub/img_emailTemp4.gif" alt="" /></span> <span class="tmName"><input type="radio" /><span>[생일] 축하해</span></span></li>
-												<li><span class="img"><img src="/img/sub/img_emailTemp5.gif" alt="" /></span> <span class="tmName"><input type="radio" /><span>[특별한날] 축하해</span></span></li>
-												<li><span class="img"><img src="/img/sub/img_emailTemp6.gif" alt="" /></span> <span class="tmName"><input type="radio" /><span>[특별한날] 축하해</span></span></li>
-												<li><span class="img"><img src="/img/sub/img_emailTemp7.gif" alt="" /></span> <span class="tmName"><input type="radio" /><span>[계절] 겨울</span></span></li>
-												<li><span class="img"><img src="/img/sub/img_emailTemp8.gif" alt="" /></span> <span class="tmName"><input type="radio" /><span>[계절] 우산</span></span></li>
-												<li><span class="img"><img src="/img/sub/img_emailTemp9.gif" alt="" /></span> <span class="tmName"><input type="radio" /><span>[생일] 사랑해</span></span></li>
-												<li><span class="img"><img src="/img/sub/img_emailTemp10.gif" alt="" /></span> <span class="tmName"><input type="radio" /><span>[특별한날] 축하해</span></span></li>
-											</ul>
-										</div>
-										<div class="paging">
-											<a href="#" class="prev"><img src="/img/common/arrow_prev.gif" alt="이전으로" /></a>
-											<strong>1</strong>
-											<a href="#">2</a>
-											<a href="#">3</a>
-											<a href="#">4</a>
-											<a href="#">5</a>
-											<a href="#" class="next"><img src="/img/common/arrow_next.gif" alt="다음으로" /></a>
-										</div>
-
-										<table summary="제목, 내용, 파일첨부등 이메일전송을 위한 내용입력정보를 제공합니다." width="100%" class="table1 SendTable">
-											<caption>내용입력</caption>
-											<colgroup>
-												<col width="30%" />
-												<col width="*" />
-											</colgroup>
-											<tbody>
-												<tr>
-													<th>제목</th>
-													<td><span class="widthFull"><input type="text" title="제목입력" /></span></td>
-												</tr>
-												<tr>
-													<th>내용 <span>특수문자 중 특수문자 중 (%,“,&,=,>,/,’)를 <br /> 입력하시면 발송이 되지 않습니다</span></th>
-													<td><span class="textareaFull"><textarea rows="10" cols="15" title="내용입력"></textarea>
-													</span></td>
-												</tr>
-												<tr>
-													<th>파일첨부</th>
-													<td>
-														<input type="text" name="txtAttach0" id="txtAttach0" style="width:387px;" readonly="readonly" /><input type="file" id="fileAttach0" style="display:none;" /> <a href="#none" class="btn smGynb fileupload" type="button">찾아보기</a>
-														<a href="#none" class="btn smWtRb fileDel" type="button">삭제</a>
-														<a href="#none" class="btn smWtRb fileInsert" type="button">추가</a>
-													</td>
-												</tr>
-											</tbody>
-										</table>
-									</div>
-									<div class="TempCon2">
-										<h5 class="hide-element">BABY</h5>
-										
-									</div>
-									<div class="TempCon3">
-										<h5 class="hide-element">생일</h5>
-										
-									</div>
-									<div class="TempCon4">
-										<h5 class="hide-element">느낌</h5>
-										
-									</div>
-									<div class="TempCon5">
-										<h5 class="hide-element">계절</h5>
-									</div>
-									<div class="TempCon6">
-										<h5 class="hide-element">ENJOY</h5>
-									</div>
-									<div class="TempCon7">
-										<h5 class="hide-element">영문</h5>
-										
-									</div>
-									<div class="TempCon8">
-										<h5 class="hide-element">특별한날</h5>
-									</div>
-								</div>
+								e-Card 보내기와 동일함
 							</div>
 						</div>
 					</div>
