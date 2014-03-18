@@ -84,6 +84,7 @@ div.juContact {position:relative;}
 div.juContact .more{position:absolute;right:0;top:0;margin:0;}
 div.juContact .more li{float:left;}
 div.juContact .more li label{padding-right:10px;}
+div.juContact .more1{position:absolute;right:0;top:-34px;margin:0;}
 
 /* list  */
 table.listTable{}
@@ -260,12 +261,12 @@ table.bderTN{border-top:0 !important;}
 .fileBox{border:1px solid #dedede; padding:17px 0 17px 20px; margin-bottom:10px;}
 .fileBox:after{content:"";display:block;clear:both;}
 .fileBox dl.file{float:left;width:420px;}
-dl.file dt{float:left;line-height:24px;padding-right:25px;}
-dl.file dd {float:left;width:320px;position:relative;}
+dl.file dt{float:left;line-height:31px;padding-right:25px;}
+dl.file dd {float:left;width:340px;position:relative; height:31px; line-height:31px;}
 dd input[type="text"]{}
-dd span input[type="file"]{position:absolute;left:3px;top:0;}
+dd span input[type="file"]{position:absolute;left:3px;top:5px;}
 
-.fileBox table {float:right;width:551px;}
+.fileBox table {float:right;width:551px;margin-right:5px;}
 
 /* tab */
 .tab01{border-bottom:2px solid #22b8c7; overflow:hidden;}
@@ -547,7 +548,7 @@ ul .point, ol .point{margin-left:-10px; color:#e8404f;}
 
 
 /* 메모  */
-p.memoResult{text-align:right; margin:10px 0; color:#000;}
+p.memoResult{text-align:right; margin:9px 0; color:#000;font-size:14px;font-weight:bold;}
 div.memoWrap{}
 div.memoContentArea{overflow:hidden; margin:9px 0 0 -10px;}
 div.memo_wrapper{overflow:hidden;border-bottom:0;float:left; width:334px; padding-bottom:4px; margin:0 0 11px 10px; background:url(/img/common/bg_memo_b.gif) no-repeat 0 bottom; height:261px; position:relative; color:#766b63;}

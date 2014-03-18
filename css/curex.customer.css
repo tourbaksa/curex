@@ -20,4 +20,5 @@ div.prevLP .prevRight dl dt{background:url(/img/common/blet_cir.gif) no-repeat 5
 div.prevLP .prevRight dl dd{background:url(/img/common/blet7.gif) no-repeat 29px 3px;padding-left:44px; line-height:21px;}
 div.prevLP .prevRight dl dd a:hover{color:#363636;}
 
-
+/* 고객통합뷰-법인-구성원등록 */
+span.ResultSumR{display:block;font-size:14px;font-weight:bold;line-height:16px;padding:0 0 9px;text-align:right;}
