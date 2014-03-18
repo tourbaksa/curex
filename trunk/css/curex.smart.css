@@ -236,11 +236,13 @@ table.schedule thead th{background:#f9f9f9; height:21px; padding:0;}
 table.schedule tbody td.sun{color:#e8404f;}
 table.schedule tbody td.sat{color:#00a2ff;}
 table.schedule tbody td {vertical-align:top; padding:0; position:relative;}
-table.schedule tbody td > div{ padding:7px 5px 5px 9px;width:100%;  height:87px; position:relative;}
+table.schedule tbody td > div{ padding:7px 5px 5px 4px;width:100%;  height:87px; position:relative;}
 table.schedule tbody td > div strong{float:right; margin-top:-2px; font-weight:normal;}
 table.schedule tbody td div.schedule_list{width:85px; float:left;}
 table.schedule tbody td div.schedule_list a{letter-spacing:-1px;}
 table.schedule tbody td button.schedule_more{background-color:#319be7; width:21px; height:21px; position:absolute; right:-1px; bottom:-1px; color:#fff; font-size:11px;}
+table.schedule tbody td > div strong.Lunar{position:absolute; left:4px; bottom:5px; font-size:11px;}
+
 
 div.calendarCnt td a.wkicon1,
 div.calendarCnt td a.wkicon2,
