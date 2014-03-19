@@ -148,6 +148,7 @@ table.bderTN{border-top:0 !important;}
 .table3 th:first-child{border-left:0;}
 .table3 thead th.bderL{border-left:1px solid #dedede;}
 .table3 tbody td{border:1px solid #dedede; height:30px;}
+.table3 tbody td.turn{background:url(/img/common/blet3.gif) no-repeat 50% 50%;}
 .table3 tbody tr.bg{background:#fafafa;}
 .table3 tfoot td{background:#dde3ef;border-left:1px solid #fff;padding-left:10px;}
 .table3 tfoot tr td:first-child{border-left:0;}
