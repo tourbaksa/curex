@@ -332,7 +332,7 @@ curex.ui = {
 						var newhash = $tSubBtn.eq(idx).attr("href");
 						$(newhash).css({"display":"block"});
 						oldhash = newhash;
-
+						return false;
 					}
 
 				})
