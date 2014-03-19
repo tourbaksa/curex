@@ -58,6 +58,7 @@ table .selectFull {display:block;}
 table .selectFull select{width:100%;}
 table .textareaFull {display:block;}
 table .textareaFull textarea{width:100%;}
+table tr.focusDrag{border:2px solid #64ade5;}
 
 /* 2.24 추가 테이블근처 설명 */
 * + .footNote{line-height:17px; margin-top:7px;}
@@ -304,7 +305,7 @@ ul.btnTab li.active a{
 .tab02 ul{width:234px;}
 .tab02 ul li{border-top:1px solid #dedede;background:url(/img/common/blet2.gif) no-repeat 0 center;padding:0 0 0 15px;height:30px;line-height:30px;position:relative;}
 .tab02 ul li:first-child{border-top:0;}
-.tab02 ul li span{position:absolute;right:0;top:0;padding-right:15px;background:url(/img/common/btn_dels2.gif) no-repeat right center; cursor:pointer;}
+.tab02 ul li span.close{position:absolute;right:0;top:0;padding-right:15px;background:url(/img/common/btn_dels2.gif) no-repeat right center; cursor:pointer;}
 
 /* tab03 */
 .tabData{position:relative;overflow:hidden;margin-bottom:20px;}
