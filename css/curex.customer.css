@@ -13,12 +13,24 @@ div.prevLP .prevLeft{width:163px;float:left;}
 div.prevLP .prevLeft dl.boxLP{border:1px solid #dedede;padding:8px;margin-top:10px;}
 div.prevLP .prevLeft dl.boxLP dt{padding-bottom:5px;}
 div.prevLP .prevLeft dl.boxLP dd{background:url(/img/common/blet7.gif) no-repeat 10px 0;padding-left:25px;}
-div.prevLP .prevRight{width:840px; float:right;border:1px solid #dedede;padding:0 5px;}
+div.prevLP .prevRight{width:840px; float:right;border:1px solid #dedede;}
 div.prevLP .prevRight:after{content:"";display:block;clear:both;}
-div.prevLP .prevRight dl{float:left;width:207px; padding-bottom:7px;}
-div.prevLP .prevRight dl dt{background:url(/img/common/blet_cir.gif) no-repeat 5px 16px; border-bottom:1px dashed #dedede; padding:10px 0 6px 18px; margin-bottom:7px;}
-div.prevLP .prevRight dl dd{background:url(/img/common/blet7.gif) no-repeat 29px 3px;padding-left:44px; line-height:21px;}
-div.prevLP .prevRight dl dd a:hover{color:#363636;}
+div.prevLP .prevRight table.table12{border:0;}
+div.prevLP .prevRight .table12 th,div.prevLP .prevRight .table12 td{border-left:1px solid #dedede;}
+div.prevLP .prevRight .table12 th:first-child,div.prevLP .prevRight .table12 td:first-child{border-left:0;}
+div.prevLP .prevRight .table12 th{padding:0 5px;border-bottom:0; text-align:left;margin-bottom:7px;}
+div.prevLP .prevRight .table12 th span{background:url(/img/common/blet_cir.gif) no-repeat 5px center; border-bottom:1px dashed #dedede; padding:9px 0 6px 20px;  font-size:14px; display:block;}
+div.prevLP .prevRight .table12 td{padding:8px 0; vertical-align:top;}
+div.prevLP .prevRight .table12 td ul li{background:url(/img/common/blet7.gif) no-repeat 29px 3px;padding-left:44px; line-height:21px;}
+div.prevLP .prevRight .table12 td ul li a:hover{color:#363636;}
+
 
 /* 고객통합뷰-법인-구성원등록 */
 span.ResultSumR{display:block;font-size:14px;font-weight:bold;line-height:16px;padding:0 0 9px;text-align:right;}
+
+/* 보고서이력 */
+h3.bt3{background:url(/img/common/blet_cir.gif) no-repeat 0 center;padding-left:12px;}
+
+#conteiner #contents h4{color:#363636; font-size:14px; margin:8px 0; letter-spacing:-1px; font-weight:bold;}
+#conteiner #contents h4 span.aQua{color:#079eb1}
+#conteiner #contents h4 span.red{color:#e8404f}

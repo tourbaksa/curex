@@ -170,7 +170,7 @@ div.personBtn .lgGyR1{padding:7px 10px;}
 .listMenu .enter{position:absolute;right:0;top:0;background:#ebebeb;color:#707070;width:40px;height:30px;line-height:30px;text-align:center;}
 
 /* 푸터 */
-#footer {background:url(/img/common/bg_line2.gif) repeat-x 0 0; height:62px; width:100%;}
+#footer {background:url(/img/common/bg_line2.gif) repeat-x 0 0; height:62px; width:100%; }
 #footer .fter{width:1024px; height:63px; margin:0 auto;}
 #footer h2{float:left;}
 #footer span{float:right;}
