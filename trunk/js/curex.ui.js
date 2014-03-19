@@ -297,8 +297,6 @@ curex.ui = {
 			, $tSubCont =  $(".subtabCont", scope) || $(".subtabCont") // 서브탭메뉴 컨텐츠
 			, oldhash;
 
-			console.log($tSubCont)
-
 			$($act.find("a").attr("href")).css({"display":"block"}); //초기로딩시 활성화된 탭은 display해준다.
 
 			$tBtn.each(function(idx){
