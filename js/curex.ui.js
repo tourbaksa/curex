@@ -228,14 +228,10 @@ curex.ui = {
 		$(window).unbind("scroll", checkOffset );
 		$(window).bind( "scroll", checkOffset  );
 		$(window).load( checkOffset ); //로드될때 
-		$(window).on("resize",function(){
+		/*$(window).on("resize",function(){
 			clearTimeout(timer);
 			timer = setTimeout(checkOffset , 300); 
-		});
-		window.addEventListener( 'resize', function( ) {
-			clearTimeout( timer );
-			timer = setTimeout( checkOffset, 300 );
-		}, false );
+		});*/
 
 		
 		function checkOffset(){
@@ -349,17 +345,49 @@ curex.ui = {
 				})
 			});
 
+	},
+
+	nidSlide : function(){
+		var scope = this.op
+			, $obj = $(".nizWrap" ,scope) ||  $(".nizWrap")
+			, $nizBtn = $obj.find(".nizDown")
+			, $slideBtn = $obj.find(".more a.btn")
+			, $slideCont = $obj.find(".nizCont")
+			, $slidelayer = $obj.find(".detailView")
+			, posx = 270;
+
+			$slideBtn.each(function(idx){
+				$(this).off().on({
+					click : function(){
+						move();
+						return false;
+					}
+				});
+			})
+
+			function move(){
+				$('html, body').animate({
+					scrollTop: $("#header").offset().top
+				}, 100, function(){
+					$slidelayer.show().animate({
+						"width" : 755 ,
+						"left" : posx 
+					},"500");
+				});
+			}
+
 	}
 
 }
 
 
 $(document).ready(function(){
-	if($("div#checkList").length){curex.ui.checkList();}
-	if($("div.tab02").length){curex.ui.tab();}
+	if($("#checkList").length){curex.ui.checkList();}
+	if($(".tab02").length){curex.ui.tab();}
 	curex.ui.rolling();
 	curex.ui.event();
-	if($("div.timeSchedule").length){curex.ui.carlendar();}
+	if($(".timeSchedule").length){curex.ui.carlendar();}
 	curex.ui.curexTab();
+	if($(".nizWrap").length){curex.ui.nidSlide();}
 });
 
