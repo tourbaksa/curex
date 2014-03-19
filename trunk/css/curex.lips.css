@@ -59,8 +59,10 @@ ul.lipsTab li:first-child a span{border-left:1px solid ##e5e6e8; border-right:0;
 ul.lipsTab li.active:first-child a span{background-image:url(/img/sub/bg_smartp_on.png);}
 
 /* 사망보장분석 */
-.nizWrap{border:1px solid #dedede;}
+.nizWrap{position:relative;}
 .nizWrap .nizTit{
+	position:relative; z-index:3;
+	border-left:1px solid #dedede; border-right:1px solid #dedede;
 	background-color: #f3f4f5;height:30px;line-height:30px;padding:0 5px 0 10px;
 	background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPgo8bGluZWFyR3JhZGllbnQgaWQ9Imc0MjgiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjAlIiB5Mj0iMTAwJSI+CjxzdG9wIHN0b3AtY29sb3I9IiNGQUZBRkEiIG9mZnNldD0iMCIvPjxzdG9wIHN0b3AtY29sb3I9IiNGMkYyRjIiIG9mZnNldD0iMSIvPgo8L2xpbmVhckdyYWRpZW50Pgo8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2c0MjgpIiAvPgo8L3N2Zz4=);
 }
@@ -68,6 +70,7 @@ ul.lipsTab li.active:first-child a span{background-image:url(/img/sub/bg_smartp_
 .nizWrap .nizTit a.btn{position:absolute;right:5px;top:3px;}
 .nizWrap .h5Tit{height:30px;background-color:#d0ebee;padding:6px 0 0 10px; position:relative;border-top:1px solid #dedede;}
 .nizWrap .h5Tit .more{position:absolute;right:5px;top:4px;}
+.nizWrap .nizCont{border:1px solid #dedede; border-top:0; position:relative; z-index:3; background:#fff;}
 
 #conteiner #contents .graphWrap .title{font-size:20px; text-align:center; margin:17px 0 13px;}
 #conteiner #contents .graphWrap .title p.tit{background-color:#fff;margin:0 7px;position:relative;padding-bottom:15px;}
@@ -92,7 +95,7 @@ ul.lipsTab li.active:first-child a span{background-image:url(/img/sub/bg_smartp_
 .graphWrap .refer{padding-top:8px; margin-top:20px;border-top:1px solid #dedede;}
 
 /* 상세레이어팝업 */
-.detailView{position:absolute;left:270px;top:-10px;z-index:10;background:#fff;border:5px solid #dedede;width:755px;}
+.detailView{position:absolute;left:0px;top:-10px;z-index:10;background:#fff;border:5px solid #dedede;width:270px; z-index:1;}
 .detailView h4{background-color:#00acde;color:#fff;font-size:14px;height:30px;line-height:30px;margin-bottom:15px; padding-left:15px;}
 .detailView .gap{padding:0 15px 10px;}
 .detailView div.detailC h5{font-size:14px; margin:8px 0;}
