@@ -61,26 +61,28 @@
 									<table class="table1">
 										<caption>기본정보</caption>
 										<colgroup>
-											<col width="9%" />
-											<col width="9%" />
-											<col width="9%" />
-											<col width="9%" />
-											<col width="9%" />
-											<col width="9%" />
-											<col width="9%" />
-											<col width="9%" />
-											<col width="9%" />
-											<col width="9%" />
-											<col width="9%" />
+											<col width="12%" />
+											<col width="12%" />
+											<col width="12%" />
+											<col width="12%" />
+											<col width="5%" />
+											<col width="12%" />
+											<col width="5%" />
+											<col width="7%" />
+											<col width="5%" />
+											<col width="7%" />
+											<col width="*" />
 										</colgroup>
 										<tbody>
 											<tr>
-												<th></th>
-												<td colspan="2"></td>
-												<th></th>
-												<td colspan="3"></td>
-												<th colspan="2"></th>
-												<td colspan="2"></td>
+												<th><span class="red">*</span>회사명</th>
+												<td colspan="2">
+													<span class="widthFull"><input type="text" /></span>
+												</td>
+												<th><span class="red">*</span>사업자등록번호</th>
+												<td colspan="3"><span class="widthFull"><input type="text" /></span></td>
+												<th colspan="2">업종</th>
+												<td colspan="2"><span class="widthFull"><input type="text" /></span></td>
 											</tr>
 											<tr>
 												<th>설립형태</th>
@@ -93,7 +95,7 @@
 													</span>
 												</td>
 												<th>법인등록번호</th>
-												<td colspan="2"></td>
+												<td colspan="2"><span class="widthFull"><input type="text" /></span></td>
 												<th>상장여부</th>
 												<td colspan="2">
 													<span class="fLset">
@@ -104,7 +106,26 @@
 													</span>
 												</td>
 												<th colspan="2">설립일자</th>
-												<td></td>
+												<td><span class="widthFull"><input type="text" /></span></td>
+											</tr>
+											<tr>
+												<th>대표자명</th>
+												<td><span class="widthFull"><input type="text" /></span></td>
+												<th>회사대표전화</th>
+												<td colspan="2"><span class="widthFull"><input type="text" /></span></td>
+												<th>홈페이지주소</th>
+												<td colspan="5"><span class="widthFull"><input type="text" /></span></td>
+											</tr>
+											<tr>
+												<th>회사주소</th>
+												<td colspan="5">
+													<input type="text" style="" />
+													<a href="#none" class="btn smGyRb">검색</a>
+													<input type="text" style="width:220px;" />
+													<input type="text" style="" />
+												</td>
+												<th colspan="2">대표FAX번화</th>
+												<td colspan="3"><span class="widthFull"><input type="text" /></span></td>
 											</tr>
 										</tbody>
 									</table>
@@ -127,139 +148,158 @@
 									<table class="table1">
 										<caption>기본정보 (레디언스 정보 보기)</caption>
 										<colgroup>
-											<col width="11%" />
+											<col width="12%" />
+											<col width="12%" />
+											<col width="12%" />
+											<col width="12%" />
+											<col width="5%" />
+											<col width="12%" />
+											<col width="5%" />
+											<col width="7%" />
+											<col width="5%" />
+											<col width="7%" />
 											<col width="*" />
-											<col width="8%" />
-											<col width="10%" />
-											<col width="8%" />
-											<col width="11%" />
 										</colgroup>
 										<tbody>
 											<tr>
-												<th>자택주소</th>
-												<td>
-													<input type="text" style="width:75px">
-													<input type="button" class="btn smGyRb" value="검색">
-													<input type="text" style="width:240px">
-													<input type="text" style="width:150px">
-												</td>
-												<th>휴대전화</th>
-												<td>
-													<span class="widthFull"><input type="text" style="" /></span>
-												</td>
-												<th>자택전화</th>
-												<td><span class="widthFull"><input type="text" /></span></td>
-											</tr>
-											<tr>
 												<th>회사주소</th>
-												<td>
-													<input type="text" style="width:75px">
-													<input type="button" class="btn smGyRb" value="검색">
-													<input type="text" style="width:240px">
-													<input type="text" style="width:150px">
-												</td>
-												<th>회사전화</th>
-												<td><span class="widthFull"><input type="text" /></span></td>
-												<th>방문지</th>
-												<td>
-													<span class="selectFull">
-														<select style="">
-															<option>미선택</option>
-															<option></option>
-														</select>
-													</span>
-												</td>
-											</tr>
-											<tr>
-												<th>E-mail</th>
 												<td colspan="5">
-													<input type="text" style="width:95px" />
-													@
-													<select style="width:102px">
-														<option>선택</option>
-														<option></option>
-													</select>
-													<input type="text" disabled="disabled" style="width:69px" />
+													<input type="text" style="" />
+													<a href="#none" class="btn smGyRb">검색</a>
+													<input type="text" style="width:220px;" />
+													<input type="text" style="" />
 												</td>
+												<th colspan="2">대표FAX번화</th>
+												<td colspan="3"><span class="widthFull"><input type="text" /></span></td>
 											</tr>
 										</tbody>
 									</table>
-									
-
 								</fieldset>
 							</form>
 						</div>
 						<!-- //레디언스정보보기 -->
 						
-						<div class="juContact mt20">
-							<h3>가족정보</h3>
-							<!-- 삭제시 행 없어짐 -->
-							<table class="listTable" style="display:none">
-								<caption>관계등록</caption>
-								<thead>
-									<tr>
-										<th>관계</th>
-										<th>이름</th>
-										<th>주민등록번호</th>
-										<th>생년월일</th>
-										<th>성별</th>
-										<th>연령(보험)</th>
-										<th>동거여부</th>
-										<th>삭제</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>친구</td>
-										<td>김승헌</td>
-										<td>831026-1******</td>
-										<td>1983.10.10(양)</td>
-										<td>남</td>
-										<td>30</td>
-										<td>Y</td>
-										<td><input type="button" value="삭제" class="btn smWtRb"></td>
-									</tr>
-								</tbody>
-							</table>
-							<!-- //삭제시 행 없어짐 -->
-						
-							<table class="listTable">
-								<caption>관계등록</caption>
-								<thead>
-									<tr>
-										<th>관계</th>
-										<th>이름</th>
-										<th>주민등록번호</th>
-										<th>생년월일</th>
-										<th>성별</th>
-										<th>연령(보험)</th>
-										<th>동거여부</th>
-									</tr>
-								</thead>
-									<tr>
-										<td colspan="7" class="tac h30">관계등록 버튼을 클릭하여 등록해 주세요.</td>
-									</tr>
-								</tbody>
-							</table>
-							<span class="more"><a href="#none" class="btn smGnR">가족구성원 등록</a></span>
-						</div>
-						
+						<h3>재무정보</h3>
+						<form method="post" action="/">
+							<fieldset>
+								<legend>재무정보</legend>
+								<table class="table1">
+									<caption>재무정보</caption>
+									<colgroup>
+										<col width="11%" />
+										<col width="15%" />
+										<col width="12%" />
+										<col width="10%" />
+										<col width="12%" />
+										<col width="10%" />
+										<col width="12%" />
+										<col width="*" />
+									</colgroup>
+									<tbody>
+										<tr>
+											<th>총자산</th>
+											<td><span class="widthFull"><input type="text" /></span></td>
+											<th>총종업원수</th>
+											<td><span class="widthFull"><input type="text" /></span></td>
+											<th>총부채</th>
+											<td><span class="widthFull"><input type="text" /></span></td>
+											<th>납입자본금</th>
+											<td><span class="widthFull"><input type="text" /></span></td>
+										</tr>
+										<tr>
+											<th colspan="2">매출액</th>
+											<td colspan="6">
+												<label for="year1">1년전</label>
+												<input type="text" id="year1" style="width:200px;" />
+												<label for="year2">2년전</label>
+												<input type="text" id="year2" style="width:200px" />
+												<label for="year3">3년전</label>
+												<input type="text" id="year3" style="width:200px" />
+											</td>
+										</tr>
+										<tr>
+											<th colspan="2">당기순이익</th>
+											<td colspan="6">
+												<label for="year4">1년전</label>
+												<input type="text" id="year4" style="width:200px;" />
+												<label for="year5">2년전</label>
+												<input type="text" id="year5" style="width:200px" />
+												<label for="year6">3년전</label>
+												<input type="text" id="year6" style="width:200px" />
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</fieldset>
+						</form>
+
+						<h3>담당자명</h3>
+						<form method="post" action="/">
+							<fieldset>
+								<legend>담당자명</legend>
+								<table class="table1">
+									<caption>담당자명</caption>
+									<colgroup>
+										<col width="11%" />
+										<col width="10%" />
+										<col width="11%" />
+										<col width="8%" />
+										<col width="4%" />
+										<col width="7%" />
+										<col width="8%" />
+										<col width="7%" />
+										<col width="4%" />
+										<col width="7%" />
+										<col width="*" />
+									</colgroup>
+									<tbody>
+										<tr>
+											<th>담당자명</th>
+											<td><span class="widthFull"><input type="text" /></span></td>
+											<th>부서</th>
+											<td><span class="widthFull"><input type="text" /></span></td>
+											<th colspan="2">직위</th>
+											<td><span class="widthFull"><input type="text" /></span></td>
+											<th colspan="2">E-mail</th>
+											<td colspan="2">
+												<input type="text" style="width:90px;" />
+												@
+												<select style="width:90px">
+													<option>선택</option>
+													<option></option>
+												</select>
+												<input type="text" style="width:90px;" />
+											</td>
+										</tr>
+										<tr>
+											<th>전화번호</th>
+											<td colspan="2"><span class="widthFull"><input type="text" /></span></td>
+											<th colspan="2">휴대전화</th>
+											<td colspan="3"><span class="widthFull"><input type="text" /></span></td>
+											<th colspan="2">FAX번호</th>
+											<td><span class="widthFull"><input type="text" /></span></td>
+										</tr>
+									</tbody>
+								</table>
+							</fieldset>
+						</form>
+
 						<div class="juContact">
 							<h3>적합성정보</h3>
-							<form method="post" action="/">
+							<form action="/" method="post">
 								<fieldset>
 									<legend>적합성정보</legend>
 									<table class="table3">
 										<caption>적합성정보</caption>
 										<colgroup>
-											<col width="9%" />
-											<col width="8%" />
-											<col width="9%" />
-											<col width="8%" />
-											<col width="10%" />
-											<col width="10%" />
-											<col width="12%" />
-											<col width="*" />
+											<col width="9%">
+											<col width="8%">
+											<col width="9%">
+											<col width="8%">
+											<col width="10%">
+											<col width="10%">
+											<col width="12%">
+											<col width="*">
 										</colgroup>
 										<tbody>
 											<tr>
@@ -271,11 +311,11 @@
 												<td rowspan="2">Y</td>
 												<th>상품성향 불일치 확인</th>
 												<td>
-													<span class="bder1"><input type="checkbox" /></span>
+													<span class="bder1"><input type="checkbox"></span>
 													<span class="bder2">
-														<label for="day1" class="mr10">신청일</label>
-														<input type="text" id="day1" style="width:100px;" />
-														<a href="#none"><img src="/img/common/icon3.gif" alt="달력" /></a>
+														<label class="mr10" for="day1">신청일</label>
+														<input type="text" style="width:100px;" id="day1">
+														<a href="#none"><img alt="달력" src="/img/common/icon3.gif"></a>
 													</span>
 													<span class="bder3">접수여부 Y</span>
 												</td>
@@ -288,11 +328,11 @@
 												<td></td>
 												<th>고위험변액보험 확인</th>
 												<td>
-													<span class="bder1"><input type="checkbox" /></span>
+													<span class="bder1"><input type="checkbox"></span>
 													<span class="bder2">
-														<label for="day2" class="mr10">신청일</label>
-														<input type="text" id="day2" style="width:100px" />
-														<a href="#none"><img src="/img/common/icon3.gif" alt="달력" /></a>
+														<label class="mr10" for="day2">신청일</label>
+														<input type="text" style="width:100px" id="day2">
+														<a href="#none"><img alt="달력" src="/img/common/icon3.gif"></a>
 													</span>
 													<span class="bder3">접수여부 Y</span>
 												</td>
@@ -305,184 +345,11 @@
 								</fieldset>
 							</form>
 							<div class="more">
-								<a href="#none" class="btn smGnR">변경이력</a>
-								<a href="#none" class="btn smGnR">적합성진단실시</a>
-							</div>
-						</div>
-						
-						<h3>기타</h3>
-						<form method="post" action="/">
-							<fieldset>
-								<legend>기타</legend>
-								<table class="table1">
-									<caption>기타</caption>
-									<colgroup>
-										<col width="12%" />
-										<col width="*" />
-										<col width="12%" />
-										<col width="7%" />
-										<col width="12%" />
-										<col width="12%" />
-										<col width="10%" />
-										<col width="2%" />
-										<col width="4%" />
-										<col width="4%" />
-										<col width="2%" />
-										<col width="6%" />
-										<col width="2%" />
-										<col width="6%" />
-									</colgroup>
-									<tbody>
-										<tr>
-											<th>결혼여부</th>
-											<td colspan="3">
-												<select style="width:143px">
-													<option>선택</option>
-													<option></option>
-												</select>
-												<input type="text" style="width:99px" />
-												<a href="#none"><img src="/img/common/icon3.gif" alt="달력" /></a>
-											</td>
-											<th>분류</th>
-											<td colspan="2">
-												<input type="text" style="width:180px" />
-												<input type="button" value="검색" class="btn smGyRb">
-											</td>
-											<th colspan="2">가족대표</th>
-											<td class="tac" colspan="2">
-												<input type="checkbox"  />
-											</td>
-											<th>우수고객</th>
-											<td colspan="2" class="tac">
-												<input type="checkbox"  />
-											</td>
-										</tr>
-										<tr>
-											<th>학교</th>
-											<td>
-												<select style="width:88px">
-													<option>선택</option>
-													<option></option>
-												</select>
-											</td>
-											<th>학년</th>
-											<td>
-												<select style="width:62px">
-													<option>선택</option>
-													<option></option>
-												</select>
-											</td>
-											<th>호칭</th>
-											<td colspan="2">
-												<input type="text" style="width:137px;" />
-												<select style="width:76px">
-													<option></option>
-													<option></option>
-												</select>
-											</td>
-											<th colspan="3">취미</th>
-											<td colspan="4">
-												<select style="width:150px">
-													<option>선택</option>
-													<option></option>
-												</select>
-											</td>
-										</tr>
-										<tr>
-											<th>소개자 및 관계</th>
-											<td colspan="5">
-												<input type="text" style="width:350px;" />
-												<a href="#none" class="btn smGyRb">검색</a>
-												<select style="width:100px;">
-													<option>직장동료</option>
-													<option></option>
-												</select>
-											</td>
-											<th colspan="2">소개일</th>
-											<td colspan="5">
-												<input type="text" style="" />
-												<a href="#none"><img src="/img/common/icon3.gif" alt="달력" /></a>
-											</td>
-											<td class="tac">
-												<a href="#none" class="btn smWtRb">삭제</a>
-											</td>
-										</tr>
-									</tbody>
-								</table>
-
-							</fieldset>
-						</form>
-						
-						<div class="juContact">
-							<h3>사용자정의필드</h3>
-							<form method="post" action="/">
-								<fieldset>
-									<legend>사용자정의필드</legend>
-									<table class="table1">
-										<caption></caption>
-										<colgroup>
-											<col width="12%" />
-											<col width="*" />
-											<col width="4%" />
-										</colgroup>
-										<tbody>
-											<tr>
-												<th>입력 값</th>
-												<td>
-													<span class="widthFull"><input type="text" style="" /></span>
-												</td>
-												<td><input type="button" value="삭제" class="btn smWtRb"></td>
-											</tr>
-											<tr>
-												<th>입력 값2</th>
-												<td>
-													<select style="width:452px;">
-														<option>선택</option>
-														<option></option>
-													</select>
-												</td>
-												<td><input type="button" value="삭제" class="btn smWtRb"></td>
-											</tr>
-										</tbody>
-									</table>
-								</fieldset>
-							</form>
-							<div class="more btnWrap">
-								<button class="mt_4 searchMore" type="button"><span class="hide-text">검색더보기</span></button>
-								<a href="#none" class="btn smGnR">필드관리</a>
+								<a class="btn smGnR" href="#none">변경이력</a>
+								<a class="btn smGnR" href="#none">적합성진단실시</a>
 							</div>
 						</div>
 
-						<h3>개인정보활용동의</h3>
-						<table class="table1">
-							<caption>개인정보활용동의</caption>
-							<colgroup>
-								<col width="*">
-								<col width="22%">
-								<col width="17%">
-								<col width="22%">
-								<col width="17%">
-							</colgroup>
-							<tbody>
-								<tr>
-									<th rowspan="3">신용정보활용</th>
-									<th>수집/이용</th>
-									<td class="tac">미동의</td>
-									<th>고유식별</th>
-									<td class="tac">미동의</td>
-								</tr>
-								<tr>
-									<th class="bderL">제공</th>
-									<td class="tac">미동의</td>
-									<th>상품소개</th>
-									<td class="tac">동의</td>
-								</tr>
-								<tr>
-									<th class="bderL">Do-Not-Call</th>
-									<td class="tac" colspan="3">수신허용/거부</td>
-								</tr>
-							</tbody>
-						</table>
 					</div>
 				</li>
 				<li>
