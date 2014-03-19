@@ -125,8 +125,8 @@ div.spVisual{width:494px; float:right; overflow:hidden;}
 
 /* 그래프 */
 div.spVisual div.graph{float:left; border-radius:3px; -webkit-border-radius:3px; -moz-border-radius:3px; -ms-border-radius:3px; border:1px solid #dedede; width:238px; height:185px; text-align:center;}
-div.spVisual div.graphCont{width:119px; margin:19px auto 10px; position:relative;}
-div.spVisual span.salStd{display:inline-block; position:absolute; left:50%; top:50%; width:35px; margin:-19px 0 0 -17px;  font-size:30px; font-weight:bold; padding-bottom:10px; border-bottom:3px solid #000; color:#000; letter-spacing:-1px;}
+div.spVisual div.graphCont{width:119px; margin:19px auto 10px;  text-align:center; position:relative; background:url(/img/sub/img_graph.gif) no-repeat 0 0; height:121px;}
+div.spVisual span.salStd{display:inline-block; font-size:30px; font-weight:bold; margin-top:35px;  padding-bottom:10px; border-bottom:3px solid #000; color:#000; letter-spacing:-1px;}
 span.myFavor{background:url(/img/sub/bg_Favor.gif) no-repeat 0 50%; padding-left:24px; height:17px; line-height:17px; display:inline-block; color:#000;}
 
 /* 스마트픽 배너존 */
@@ -152,7 +152,8 @@ span.calcPoint{position:absolute; right:0; top:13px; width:60px; text-align:cent
 
 
 /* 산출기준레이어 */
-div.compLayer{position:absolute; z-index:22; background:#fff; background:url(/img/sub/bg_layerArrow.gif) no-repeat 18px 0; left:-2px; top:83px; height:171px; padding:5px 0 0 0; display:none;}
+div.compLayer{position:absolute; z-index:22; background:#fff; background:url(/img/sub/bg_layerArrow.gif) no-repeat 18px 0; left:-2px; top:83px; height:171px; padding:5px 0 6px 0; display:none;}
+div.compLayer.bottom{background-image:none; bottom:28px; top:auto; }
 div.compLayer dl {width:242px;}
 div.compLayer dt{background:#585a5c; color:#fff; font-weight:bold; height:33px; line-height:33px; padding-left:15px;
 	width:242px;
@@ -163,8 +164,9 @@ div.compLayer dd{width:242px; background:#fff; padding:14px; border:1px solid #d
 	border-bottom-left-radius:4px;border-bottom-right-radius:4px; -webkit-border-bottom-left-radius:4px; -moz-border-bottom-left-radius:4px; -ms-border-bottom-left-radius:4px;
 	-webkit-border-bottom-right-radius:4px; -moz-border-bottom-right-radius:4px; -ms-border-bottom-right-radius:4px;
 }
-div.compLayer a.spClose{position:absolute; right:10px; top:9px;}
 
+span.btmArrow{background:url(/img/sub/bg_layerArrow_White.gif) no-repeat 0 0; position:absolute; left:18px; bottom:-8px; width:7px; height:6px;}
+div.compLayer a.spClose{position:absolute; right:10px; top:15px;}
 
 /*==========================
   일정표 - 월간
@@ -241,7 +243,7 @@ table.schedule tbody td > div strong{float:right; margin-top:-2px; font-weight:n
 table.schedule tbody td div.schedule_list{float:left;}
 table.schedule tbody td div.schedule_list a{letter-spacing:-1px;}
 table.schedule tbody td button.schedule_more{background-color:#319be7; width:21px; height:21px; position:absolute; right:-1px; bottom:-1px; color:#fff; font-size:11px;}
-table.schedule tbody td > div strong.Lunar{position:absolute; left:4px; bottom:5px; font-size:11px;}
+table.schedule tbody td > div strong.Lunar{position:absolute; left:4px; bottom:5px; font-size:11px; color:#707070;}
 
 
 div.calendarCnt td a.wkicon1,

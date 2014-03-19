@@ -2,7 +2,9 @@
 	임순옥
 */
 
-var curex = {}
+if(!window.curex){
+	window.curex = curex = {};
+}
 
 curex.ui = {
 	init:function(scope){
@@ -81,8 +83,8 @@ curex.ui = {
 			if(!$("div.smartPicWrap").length){return false;}
 			var flag ,
 				  stObj = $("div.smartPicWrap"),
-				  stObj_hw = stObj.height()/2,
-				  stObj_y = stObj.position().top
+				  stObj_hw = stObj.height()/2, // 전체컨텐츠 높이 /2
+				  stObj_y = stObj.position().top // 현재 컨텐츠가 window에서 떨어진 top길이
 
 			$spClose.off().on({
 				click:function(){
@@ -97,18 +99,19 @@ curex.ui = {
 					click:function(e){
 						var spBox = $(this).closest("div.spBox"),
 							  popObjLayer = spBox.find("div.compLayer"),
-							  spBoxy = spBox.position().top,
-							  posy= spBoxy- stObj_y;
-
-						if (posy > stObj_hw){
-							stObj.animate({
-								scrollTop : spBoxy
-							},"fast");
+							  spBoxy = spBox.position().top, 
+							  posy= spBoxy- stObj_y; // 레이어를 담고있는 spBox의 top위치
+						if (posy > stObj_hw){ //현재 클릭한 박스를 담고있는 컨텐츠 위치값이 컨텐츠높이반값보다 크면 박스가 위로뜸.
+							$(".btmArrow").remove();
+							popObjLayer.append("<span class='btmArrow' />")
+							popObjLayer.removeClass("bottom")
+							popObjLayer.addClass("bottom")
+							popObjLayer.css({"display" : "block" });
+							$(".btmArrow").css({"display" : "block"});
 						}
-
 						$("div.spBox").eq(flag).find("div.compLayer").css({"display" : "none"});
 						popObjLayer.css({"display" : "block"})
-
+						
 						flag = idx;
 						return false;
 					}
@@ -219,12 +222,21 @@ curex.ui = {
 	checkList:function(){
 		var $obj = $("#checkList")
 			, ani = false
+			, timer = null
 			, footerHeight = $("#footer").height()
 
 		$(window).unbind("scroll", checkOffset );
 		$(window).bind( "scroll", checkOffset  );
-		$(window).load( checkOffset ); //로드될때 스크롤길이 췌퀫!
-		$(window).resize( checkOffset ).resize(); //리사이즈될때 스크롤길이 췌퀫!
+		$(window).load( checkOffset ); //로드될때 
+		$(window).on("resize",function(){
+			clearTimeout(timer);
+			timer = setTimeout(checkOffset , 300); 
+		});
+		window.addEventListener( 'resize', function( ) {
+			clearTimeout( timer );
+			timer = setTimeout( checkOffset, 300 );
+		}, false );
+
 		
 		function checkOffset(){
 			var scrollBottom = $(document).height() - $(window).height() - $(window).scrollTop();
@@ -235,6 +247,7 @@ curex.ui = {
 			}
 		}
 	},
+
 	carlendar:function(){
 		var scope = this.op
 			, $obj = $(".timeSchedule", scope) || $(".timeSchedule")
