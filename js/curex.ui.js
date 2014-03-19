@@ -290,14 +290,53 @@ curex.ui = {
 	curexTab:function(){
 		var scope = this.op
 			, $obj = $(".attab",scope) || $(".attab")
-			, $tabBtn = $("> li > a", $obj)
-			, $act = $("> li.active ", $obj)			
-			, $tabCont = $obj.next(".tabWrap").find(".tabCont") || $obj.next().next(".tabWrap").find(".tabCont")
-			, flag = 0;
+			, $tBtn = $("> li > a", $obj)
+			, $act = $("> li.active ", $obj)
+			, $tabCont = $(".tabCont", scope) || $(".tabCont")
+			, $tSubBtn = $(".atsubtab > li > a", scope) // 서브탭메뉴 버튼
+			, $tSubCont =  $(".subtabCont", scope) || $(".subtabCont") // 서브탭메뉴 컨텐츠
+			, oldhash;
 
-			
-			$($act.find("a").attr("href")).css({"display":"block"});
+			console.log($tSubCont)
 
+			$($act.find("a").attr("href")).css({"display":"block"}); //초기로딩시 활성화된 탭은 display해준다.
+
+			$tBtn.each(function(idx){
+				$(this).off().on({
+					click:function(){
+					$tabCont.hide()
+					$tBtn.parent().removeClass("active");
+					$tBtn.eq(idx).parent().addClass("active");
+					if($(oldhash).length){$(oldhash).css({"display":"none"})}
+					var newhash = $tBtn.eq(idx).attr("href");
+					$(newhash).css({"display":"block"});
+					oldhash = newhash;
+						return false;
+					}
+				})
+			});
+
+			$tSubBtn.each(function(idx){
+				$(this).off().on({
+					click : function(){
+						if(oldhash === undefined){
+							$(this).closest(".tabCont").show();
+						}else{
+							if($(this).closest($(oldhash)).attr("id") == oldhash.split("#")[1]){
+							$(this).closest($(oldhash)).show();
+							}
+						}
+						$tSubCont.hide();
+						$tSubBtn.parent().removeClass("active");
+						$tSubBtn.eq(idx).parent().addClass("active");
+						var newhash = $tSubBtn.eq(idx).attr("href");
+						$(newhash).css({"display":"block"});
+						oldhash = newhash;
+
+					}
+
+				})
+			});
 
 	}
 
