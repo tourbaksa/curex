@@ -114,6 +114,7 @@ table.bderTN{border-top:0 !important;}
 	}
 .table1 th:first-child{border-left:0;}
 .table1 th.bderL{border-left:1px solid #dedede;}
+.table1 th.leftArray{text-align:left;padding-left:20px;}
 .table1 td{border-left:1px solid #dedede; border-bottom:1px solid #dedede;}
 .table1 td.txtIn{padding-left:10px;}
 .table1 td p{line-height:15px;margin-top:2px;}
@@ -124,7 +125,6 @@ table.bderTN{border-top:0 !important;}
 .table1 td.baseImg div ul.ver2{float:left;padding-top:24px;}
 .table1 td.baseImg div ul li{margin-top:4px;}
 .table1 td.baseImg div ul li:first-child{margin-top:0;}
-
 .table1 td.baseImg1{padding:10px 0 0 15px;}
 .table1 td.baseImg1 div ul{padding-top:50px;}
 
@@ -286,7 +286,7 @@ dd span input[type="file"]{position:absolute;left:3px;top:5px;}
 
 ul.btnTab{overflow:hidden;margin-bottom:8px;}
 ul.btnTab li{float:left;margin-left;}
-ul.btnTab li a{display:block;height:27px;line-height:27px;text-decoration:none;color:#8e8e8e;background:#f2f2f2;border:1px solid #cacaca;width:100px;text-align:center;border-left:0;}
+ul.btnTab li a{display:block;height:27px;line-height:27px;text-decoration:none;color:#8e8e8e;background:#f2f2f2;border:1px solid #cacaca;padding:0 10px;min-width:100px;text-align:center;border-left:0;}
 ul.btnTab li:first-child a{border-left:1px solid #cacaca;border-right:0;}
 ul.btnTab li.active a{
 	background-color: #f3f4f5;
