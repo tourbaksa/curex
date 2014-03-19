@@ -169,7 +169,8 @@ table.SendTable{margin:20px 0 0 0;}
 table.SendTable th span {display:block; color:#e8404f;}
 
 /* emailWrap */
-div.emailWrap h4{font-size:16px; color:#363636; line-height:15px; height:15px; margin:20px 0; font-weight:bold;}
+div.emailWrap{width:900px;}
+div.mainTabZone h4{font-size:16px; color:#363636; line-height:15px; height:15px; margin:20px 0; font-weight:bold;}
 
 /* LP소식지 */
 div.LpContent{}
