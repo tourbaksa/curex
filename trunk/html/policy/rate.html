@@ -1,0 +1,223 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+<title> 유지율 </title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
+<link rel="stylesheet" href="/WEB-APP/webponent/css/common.css" type="text/css" />
+<link rel="stylesheet" href="/css/curex.common.css" type="text/css" />
+<link rel="stylesheet" href="/css/curex.layout.css" type="text/css" />
+<link rel="stylesheet" href="/css/curex.policy.css" type="text/css" />
+<link rel="stylesheet" href="/WEB-APP/webponent/dialog/css/dialog.css" type="text/css" />
+<script type="text/javascript" src="/WEB-APP/webponent/ci/agent.js"></script>
+<script type="text/javascript" src="/WEB-APP/webponent/thirdParty/jquery/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="/WEB-APP/webponent/thirdParty/jquery/jquery-ui-1.10.3.min.js"></script>
+<script type="text/javascript" src="/WEB-APP/webponent/tab/tab.js"></script>
+<script type="text/javascript" src="/WEB-APP/webponent/dialog/dialog.js"></script>
+<script type="text/javascript" src="/js/popup.js"></script>
+<script type="text/javascript" src="/js/curex.ui.js"></script>
+</head>
+<body>
+
+<div id="wrap">
+	<!-- HEADER -->
+	<div id="header">
+		<img src="/img/common/img_header.jpg" alt="" />
+	</div>
+	<!-- //HEADER -->
+		
+	<div id="conteiner">
+		<div class="hgroup">
+			<h2>유지율</h2>
+			<ul class="location">
+				<li><a href="#none">홈&nbsp;</a>&gt;</li>
+				<li><a href="#none">&nbsp;계약&nbsp;</a>&gt;</li>
+				<li><a href="#none">&nbsp;유지율 &nbsp;</a></li>
+			</ul>
+		</div>
+		<div class="contartWrap">
+			<ul class="tab01 tab-selector">
+				<li><a href="#none">Rolling Avg</a></li>
+				<li class="active"><a href="#none">LP별 유지율</a></li>
+				<li><a href="#none">월별 유지율</a></li>
+				<li><a href="#none">유지율 우수 LP</a></li>
+			</ul>
+			<div class="btnWrap ctBtn">
+				<a href="#" class="btn smGnR">도움말</a>
+			</div>
+			<ul class="tab-panel">
+				<li>
+					<h3 class="hide-element">Rolling Avg</h3>
+					<div class="add">
+						<div class="rateZone">
+							<label for="sea1">구분</label>
+							<select id="sea1" style="width:143px;">
+								<option>선택안함</option>
+							</select>
+						</div>
+						<div class="btnWrap">
+							<a href="#" class="btn lgBeR">검색</a>
+						</div>
+
+						<div class="tHead">
+							<h4>Rolling Avg 목록(총00건) 산출기준월 : 2014년 3월</h4>
+							<span class="unit">(단워 : 천원, 비율 : %)</span>
+						</div>
+
+							<table summary="회차별 유지율 목록 정보제공" width="100%" class="table1">
+								<caption>회차별 유지율 목록</caption>
+								<colgroup>
+									<col width="10%" />
+									<col width="10%" />
+									<col width="10%" />
+									<col width="10%" />
+									<col width="10%" />
+									<col width="10%" />
+									<col width="10%" />
+									<col width="10%" />
+									<col width="10%" />
+									<col width="*" />
+								</colgroup>
+								<thead>
+								<tr>
+									<th scope="col" rowspan="2">구분 <button type="button" class="btnAlign"><span>정렬</span></button></th>
+									<th scope="col" colspan="3">13회차</th>
+									<th scope="col" colspan="3">25회차</th>
+									<th scope="col" colspan="3">37회차</th>
+								</tr>
+								<tr>
+									<th scope="col" class="lineY">성립AP <button type="button" class="btnAlign"><span>정렬</span></button></th>
+									<th scope="col">유지AP <button type="button" class="btnAlign"><span>정렬</span></button></th>
+									<th scope="col">유지율 <button type="button" class="btnAlign"><span>정렬</span></button></th>
+									<th scope="col">성립AP <button type="button" class="btnAlign"><span>정렬</span></button></th>
+									<th scope="col">유지AP <button type="button" class="btnAlign"><span>정렬</span></button></th>
+									<th scope="col">유지율 <button type="button" class="btnAlign"><span>정렬</span></button></th>
+									<th scope="col">성립AP <button type="button" class="btnAlign"><span>정렬</span></button></th>
+									<th scope="col">유지AP <button type="button" class="btnAlign"><span>정렬</span></button></th>
+									<th scope="col">유지율 <button type="button" class="btnAlign"><span>정렬</span></button></th>
+								</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td> 
+									</tr>
+								</tbody>
+							</table>
+					</div>
+				</li>
+				<li>
+					<h3 class="hide-element">LP별 유지율</h3>
+					<div class="add">
+						<div class="rateZone">
+							<label for="sea1">구분</label>
+							<select id="sea1" style="width:143px;">
+								<option>선택안함</option>
+							</select>
+						</div>
+						<div class="btnWrap">
+							<a href="#" class="btn lgBeR">검색</a>
+						</div>
+
+						<div class="tHead">
+							<h4>Rolling Avg 목록(총00건) 산출기준월 : 2014년 3월</h4>
+							<span class="unit">(단워 : 천원, 비율 : %)</span>
+						</div>
+
+							<table summary="회차별 유지율 목록 정보제공" width="100%" class="table1">
+								<caption>회차별 유지율 목록</caption>
+								<colgroup>
+									<col width="10%" />
+									<col width="10%" />
+									<col width="10%" />
+									<col width="10%" />
+									<col width="10%" />
+									<col width="10%" />
+									<col width="10%" />
+									<col width="10%" />
+									<col width="10%" />
+									<col width="*" />
+								</colgroup>
+								<thead>
+								<tr>
+									<th scope="col" rowspan="2">구분 <button type="button" class="btnAlign"><span>정렬</span></button></th>
+									<th scope="col" colspan="3">13회차</th>
+									<th scope="col" colspan="3">25회차</th>
+									<th scope="col" colspan="3">37회차</th>
+								</tr>
+								<tr>
+									<th scope="col" class="lineY">성립AP <button type="button" class="btnAlign"><span>정렬</span></button></th>
+									<th scope="col">유지AP <button type="button" class="btnAlign"><span>정렬</span></button></th>
+									<th scope="col">유지율 <button type="button" class="btnAlign"><span>정렬</span></button></th>
+									<th scope="col">성립AP <button type="button" class="btnAlign"><span>정렬</span></button></th>
+									<th scope="col">유지AP <button type="button" class="btnAlign"><span>정렬</span></button></th>
+									<th scope="col">유지율 <button type="button" class="btnAlign"><span>정렬</span></button></th>
+									<th scope="col">성립AP <button type="button" class="btnAlign"><span>정렬</span></button></th>
+									<th scope="col">유지AP <button type="button" class="btnAlign"><span>정렬</span></button></th>
+									<th scope="col">유지율 <button type="button" class="btnAlign"><span>정렬</span></button></th>
+								</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td> 
+									</tr>
+								</tbody>
+							</table>
+					</div>
+				</li>
+				<li>
+					<h3 class="hide-element">월별 유지율</h3>
+					<div class="add">
+					</div>
+				</li>
+				<li>
+					<h3 class="hide-element">유지율 우수 LP</h3>
+					<div class="add">
+					</div>
+				</li>
+			</ul>
+
+		</div>
+	</div>
+</div>
+<!-- 공통 컨텐츠 -->
+<div id="contents" class="clear-fix">
+
+</div>
+<!-- //공통 컨텐츠 -->
+<script type="text/javascript">
+	//<![CDATA[
+	var myTab = ci.tab.init($('.PersonCont')); // 고객정보탭
+	var myTab1 = ci.tab.init($('.tabOutline')); // 
+	var myTab2 = ci.tab.init($('.contartWrap')); // 
+	//]]>
+</script>
+</div>
+
+
+
+<!-- FOOTER -->
+<div id="footer">
+<div class="fter">
+<img src="/img/common/img_footer.jpg" alt="" />
+</div>
+</div>
+<!--//FOOTER -->
+
+</body>
+</html>

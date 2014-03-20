@@ -1,7 +1,47 @@
 @charset "utf-8";
 
+div.contartWrap{position:relative;}
 div.contartWrap h3{font-size:16px; color:#363636; font-weight:normal; line-height:16px; margin:20px 0 10px 0;}
 div.contartWrap h5{font-size:14px; color:#707070; font-weight:normal; margin:20px 0 10px 0;}
+div.contartWrap .table1 thead th,
+div.contartWrap .table1 tbody th,
+div.contartWrap .table1 tbody td{line-height:15px; height:26px; }
+div.contartWrap .table1 tbody td.tac{padding:0;}
+
+/* 계약 테이블 */
+table.listTable{}
+table.listTable {text-align:center;}
+table.listTable + h3{margin-bottom:20px;}
+table.listTable th{
+	border-left:1px solid #dedede; 
+	background-color: #f3f4f5;
+	border-left:1px solid #dedede; 
+	background-color: #f3f4f5;
+	background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPgo8bGluZWFyR3JhZGllbnQgaWQ9Imc0MjgiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjAlIiB5Mj0iMTAwJSI+CjxzdG9wIHN0b3AtY29sb3I9IiNGQUZBRkEiIG9mZnNldD0iMCIvPjxzdG9wIHN0b3AtY29sb3I9IiNGMkYyRjIiIG9mZnNldD0iMSIvPgo8L2xpbmVhckdyYWRpZW50Pgo8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2c0MjgpIiAvPgo8L3N2Zz4=);
+}
+table.listTable th:first-child{border-left:0;}
+table.listTable tbody td{border:1px solid #dedede;}
+table.listTable thead th,
+table.listTable tbody th,
+table.listTable tbody td{line-height:15px; height:26px; padding:0;}
+table.listTable td.PyNumber a{color:#00a1b1; text-decoration:underline;}
+
+table.result tbody td{line-height:15px; height:21px}
+
+/* 좌 버튼 */
+div.ctBtn{position:absolute; right:0; top:0; margin:0;}
+
+/*==========================
+  유지율
+============================*/
+div.rateZone{border:1px solid #dedede; padding:3px 0 3px 0; margin:10px 0 10px 0;}
+div.rateZone label{display:inline-block; width:61px; text-align:center;}
+
+div.tHead{position:relative; margin:10px 0 10px 0;}
+div.tHead h4{font-size:16px; color:#000; height:16px; font-weight:bold;}
+div.tHead span.unit{position:absolute; right:0; top:0;}
+
+
 div.contartHeader{margin:20px 0 0 0; overflow:hidden;}
 div.contartHeader div.ctList{border:1px solid #dedede; background-color:#f7f7f7; padding:5px; width:188px; float:left;}
 div.contartHeader div.ctList ul{padding:8px 0px 8px 20px; background-color:#fff; height:195px; overflow-y:scroll; overflow-x:hidden;}
@@ -24,8 +64,34 @@ ul.SchList > li li{line-height:13px; margin-bottom:8px;}
 ul.SchList > li li input{margin-right:5px;}
 ul.SchList > li li label{letter-spacing:-1px;}
 
-
-
-div.ctInfoWrap{}
+div.ctInfoWrap{position:relative;}
+div.ctInfoWrap ul.ctTab{margin-bottom:10px;}
 div.ctInfoWrap .table1 th{text-align:left; padding-left:11px;}
 div.ctInfoWrap .table1 td{padding-left:11px;}
+div.ctInfoWrap div.ensureCont{overflow:hidden;}
+div.ctInfoWrap div.ensureCont .tl{float:left; width:862px;}
+div.ctInfoWrap div.ensureCont .tr{float:right; width:141px;}
+div.ctInfoWrap div.ensureCont + .btnWrap{margin:10px 0 0 0;}
+
+
+/* 미결내용 */
+div.pendCnt h5{margin:0;}
+div.pendCnt table{width:371px;}
+div.pendCnt textarea.pendingArea{border:1px solid #dededd; margin:10px 0 0 0; width:1024px;}
+div.pendCnt .table1 th{text-align:center; padding:0;}
+div.pendCnt .table1 td{text-align:center; padding:0;}
+
+/*==========================
+  청약
+============================*/
+/* 증권전달대상계약 - 상세검색 */
+div.subscription{margin:20px 0 10px 0;}
+div.subscription table.table1 th,
+div.subscription table.table1 td{height:31px; padding-top:6px;}
+div.subscription table + table{margin-top:10px;}
+
+/* thankyou call */
+table.thankCall{margin:10px 0 10px 0;}
+table.thankCall th img{vertical-align:middle; margin-left:5px;}
+table.thankCall .callNum{text-align:center;}
+table.thankCall .callNum a{color:#00a1b1; text-decoration:underline;}
