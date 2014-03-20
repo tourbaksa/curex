@@ -2,6 +2,11 @@
 
 div.customerWrap{width:1024px;}
 
+/* h4 */
+#conteiner #contents h4{color:#363636; font-size:14px; margin:8px 0; letter-spacing:-1px; font-weight:bold;}
+#conteiner #contents h4 span.aQua{color:#079eb1}
+#conteiner #contents h4 span.red{color:#e8404f}
+
 .cusHistory:after{content:"";display:block;clear:both;}
 .cusHistory .cusLeft{float:left;width:501px;}
 .cusHistory .cusRight{float:right;width:503px;}
@@ -31,6 +36,21 @@ span.ResultSumR{display:block;font-size:14px;font-weight:bold;line-height:16px;p
 /* 보고서이력 */
 h3.bt3{background:url(/img/common/blet_cir.gif) no-repeat 0 center;padding-left:12px;}
 
-#conteiner #contents h4{color:#363636; font-size:14px; margin:8px 0; letter-spacing:-1px; font-weight:bold;}
-#conteiner #contents h4 span.aQua{color:#079eb1}
-#conteiner #contents h4 span.red{color:#e8404f}
+/* 방문현황 */
+.box3{border:1px solid #dedede;}
+.box3 p{
+	color:#8e8e8e;text-align:center;padding:9px 0;border-bottom:1px solid #dedede;
+	background-color: #f3f4f5;
+	background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPgo8bGluZWFyR3JhZGllbnQgaWQ9Imc0MjgiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjAlIiB5Mj0iMTAwJSI+CjxzdG9wIHN0b3AtY29sb3I9IiNGQUZBRkEiIG9mZnNldD0iMCIvPjxzdG9wIHN0b3AtY29sb3I9IiNGMkYyRjIiIG9mZnNldD0iMSIvPgo8L2xpbmVhckdyYWRpZW50Pgo8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2c0MjgpIiAvPgo8L3N2Zz4=);
+}
+.box3 .visit {padding:22px 0 23px 30px;}
+.box3 .visit:after{content:"";display:block;clear:both;}
+.box3 .visit li{float:left;width:248px;}
+.box3 .visit li dl {margin-left:65px;position:relative;font-size:14px;line-height:1.5;}
+.box3 .visit li dl dt{color:#707070;}
+.box3 .visit li dl dt strong{color:#363636;}
+.box3 .visit li dl dd{color:#363636; font-weight:bold;}
+.box3 .visit li dl dd.colorGray{color:#707070; font-weight:normal;}
+.box3 .visit li dl dd.colorGray strong{color:#363636;}
+.box3 .visit li dl dd span{font-size:12px; color:#707070; font-weight:normal;}
+.box3 .visit li dl dd.photo{position:absolute;left:-65px;top:0;}
