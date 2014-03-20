@@ -185,3 +185,17 @@ table .groupTit{
 	background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPgo8bGluZWFyR3JhZGllbnQgaWQ9Imc0MjgiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjAlIiB5Mj0iMTAwJSI+CjxzdG9wIHN0b3AtY29sb3I9IiNGQUZBRkEiIG9mZnNldD0iMCIvPjxzdG9wIHN0b3AtY29sb3I9IiNGMkYyRjIiIG9mZnNldD0iMSIvPgo8L2xpbmVhckdyYWRpZW50Pgo8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2c0MjgpIiAvPgo8L3N2Zz4=);
 }
 
+/* checkBoxList */
+.chboxWrap:after{content:"";display:block;clear:both;}
+.chboxWrap .chboxList{float:left;width:207px;border:1px solid #dedede;text-align:left;margin-left:4px;}
+.chboxWrap .chType2{width:217px;}
+.chboxWrap .chboxList:first-child{margin-left:0;}
+.chboxWrap .chboxList tbody tr.tTit1{background:#d0ebee;}
+.chboxWrap .chboxList tbody tr.tTit2{background:#f9f9f9;}
+.chboxWrap .chboxList tbody td{padding:8px 0 8px 4px;border-top:1px solid #dedede;}
+.chboxWrap .chboxList tbody td div{position:relative;}
+.chboxWrap .chboxList tbody td.ch{text-align:center;border-right:1px solid #dedede; padding-left:0;}
+.chboxWrap .chboxList tbody td span.tar1{position:absolute;right:4px;top:-4px;}
+.chboxWrap .chboxList tbody td span.tar2{position:absolute;right:9px;top:0;}
+.chboxWrap .chboxList tbody td label.bt1{background:url(/img/common/blet2.gif) no-repeat 0 center;padding-left:8px;}
+.chboxWrap .chboxList tbody td.formTd{padding:3px 0 3px 4px;}
