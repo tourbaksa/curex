@@ -123,8 +123,16 @@ div.smartPicWrap{border:1px solid #e5e6e8; height:400px; overflow-y:scroll; over
 
 div.spVisual{width:494px; float:right; overflow:hidden;}
 
+/* 내그룹 */
+div.myGroupWrap{float:left; width:238px; height:185px;}
+div.myGroupWrap dl{width:242px; height:89px; padding:20px 0 0 14px;}
+div.myGroupWrap dl dt{font-size:15px; color:#7b7b7a;}
+div.myGroupWrap dl dd{font-size:35px; font-weight:bold; color:#333333; letter-spacing:-1px;}
+dl.myGpList1{background:url(/img/sub/bg_mygroup1.gif) no-repeat 0 0; margin:0 0 9px 0;}
+dl.myGpList2{background:url(/img/sub/bg_mygroup2.gif) no-repeat 0 0;}
+
 /* 그래프 */
-div.spVisual div.graph{float:left; border-radius:3px; -webkit-border-radius:3px; -moz-border-radius:3px; -ms-border-radius:3px; border:1px solid #dedede; width:238px; height:185px; text-align:center;}
+div.spVisual div.graph{}
 div.spVisual div.graphCont{width:119px; margin:19px auto 10px;  text-align:center; position:relative; background:url(/img/sub/img_graph.gif) no-repeat 0 0; height:121px;}
 div.spVisual span.salStd{display:inline-block; font-size:30px; font-weight:bold; margin-top:35px;  padding-bottom:10px; border-bottom:3px solid #000; color:#000; letter-spacing:-1px;}
 span.myFavor{background:url(/img/sub/bg_Favor.gif) no-repeat 0 50%; padding-left:24px; height:17px; line-height:17px; display:inline-block; color:#000;}
@@ -148,7 +156,7 @@ div.spBox span.badge{display:block; height:16px;}
 div.spBox a.spCmt{line-height:15px; margin:4px 105px 8px 0; display:block; overflow:hidden;}
 div.spBox.clearB{clear:both;}
 a.calcStandard{background:url(/img/sub/bg_bePoint.gif) no-repeat 1px 50%; padding-left:13px; line-height:11px; font-size:11px;}
-span.calcPoint{position:absolute; right:0; top:13px; width:60px; text-align:center; display:block; height:40px; color:#fff; font-size:22px; line-height:18px; height:18px; font-weight:bold;}
+span.calcPoint{position:absolute; right:0; top:13px; width:60px; text-align:center; display:block; height:40px; color:#5d9cd7; font-size:22px; line-height:18px; height:18px; font-weight:bold;}
 
 
 /* 산출기준레이어 */
