@@ -139,6 +139,12 @@ table.popListTable tbody td{border-left:1px solid #dedede; border-top:1px solid 
 ============================*/
 div.previewCont{min-height:490px;}
 
+/*==========================
+  스마트crm - 방문패키지
+============================*/
+div.headForm{height:29px; position:relative; text-align:right; margin-bottom:10px;}
+div.headForm span.ResultSum{position:absolute; left:0; top:0; padding:0; height:29px; line-height:29px; display: block; font-size: 16px;  font-weight: bold;}
+div.headForm select{vertical-align:middle;}
 
 /*==========================
   EMAIL센터 - 팝업

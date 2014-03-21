@@ -122,10 +122,13 @@ curex.ui = {
 		standard();
 
 		$bubbleLnk.each(function(idx){
-			$(this).off.on({
+			$(this).off().on({
 				click:function(){
-					$(this).next(".bubble").show();
-				
+					$(".bubble").css("display","none");
+					$(this).parent().find(".bubble").css({
+						"display":"block" 
+
+					});
 				}
 			});
 		});

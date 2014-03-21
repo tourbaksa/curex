@@ -8,24 +8,6 @@ div.contartWrap .table1 tbody th,
 div.contartWrap .table1 tbody td{line-height:15px; height:26px; }
 div.contartWrap .table1 tbody td.tac{padding:0;}
 
-/* 계약 테이블 */
-table.listTable{}
-table.listTable {text-align:center;}
-table.listTable + h3{margin-bottom:20px;}
-table.listTable th{
-	border-left:1px solid #dedede; 
-	background-color: #f3f4f5;
-	border-left:1px solid #dedede; 
-	background-color: #f3f4f5;
-	background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPgo8bGluZWFyR3JhZGllbnQgaWQ9Imc0MjgiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjAlIiB5Mj0iMTAwJSI+CjxzdG9wIHN0b3AtY29sb3I9IiNGQUZBRkEiIG9mZnNldD0iMCIvPjxzdG9wIHN0b3AtY29sb3I9IiNGMkYyRjIiIG9mZnNldD0iMSIvPgo8L2xpbmVhckdyYWRpZW50Pgo8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2c0MjgpIiAvPgo8L3N2Zz4=);
-}
-table.listTable th:first-child{border-left:0;}
-table.listTable tbody td{border:1px solid #dedede;}
-table.listTable thead th,
-table.listTable tbody th,
-table.listTable tbody td{line-height:15px; height:26px; padding:0;}
-table.listTable td.PyNumber a{color:#00a1b1; text-decoration:underline;}
-
 table.result tbody td{line-height:15px; height:21px}
 
 /* 좌 버튼 */
@@ -97,6 +79,6 @@ table.thankCall .callNum{text-align:center;}
 table.thankCall .callNum a{color:#00a1b1; text-decoration:underline;}
 
 /* 말풍선 */
-span.bubble{position:relative;display:none;}
-span.bubble .bb{position:absolute;left:0;top:6px;z-index:100;border:1px solid #64ade5;background:#f9fcff; padding:16px 10px 8px;border-radius:3px;font-size:11px;line-height:11px;}
-span.bubble .arr{background:url(/img/common/icon_bubble.png) no-repeat;position:absolute;top:-7px;left:50%;margin-left:-4px;width:9px;height:6px;}
+span.bubble{position:relative;display:none; width:154px;}
+span.bubble .bb{position:absolute;left:-16;top:-87px;z-index:100;border:1px solid #64ade5;background:#f9fcff; padding:10px 10px;border-radius:3px;font-size:11px;line-height:11px; font-weight:normal; width:165px;}
+span.bubble .arr{background:url(/img/sub/icon_bubble_bottom.png) no-repeat;position:absolute;bottom:-7px;left:50%;margin-left:-4px;width:11px;height:6px;}
