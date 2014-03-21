@@ -17,7 +17,8 @@ curex.ui = {
 			, $Delbtn = $("a.cellDel", scope) || $("a.cellDel")  //테이블 셀삭제버튼
 			, $cinsrtbtn = $("a.cellInsert", scope) || $("a.cellInsert")//주계약/특약 특약피버험자 추가버튼
 			, $bePointBtn = $("a.calcStandard", scope) || $("a.calcStandard") //산출기준 팝업
-			, $spClose = $("a.spClose", scope) || $("a.spClose"); //산출기준 팝업 닫기
+			, $spClose = $("a.spClose", scope) || $("a.spClose") //산출기준 팝업 닫기
+			, $bubbleLnk = $("a.bubbleLnk", scope) || $("a.bubbleLnk"); // thankyou Call 말풍선
 		
 			/* 기계약 합산잔여한도 */
 			$previousBtn.off().on({
@@ -119,6 +120,16 @@ curex.ui = {
 			});
 		}
 		standard();
+
+		$bubbleLnk.each(function(idx){
+			$(this).off.on({
+				click:function(){
+					$(this).next(".bubble").show();
+				
+				}
+			});
+		});
+
 	},
 
 	tab:function(){
