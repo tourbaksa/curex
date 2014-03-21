@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> CuREx </title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
+<link rel="stylesheet" href="/WEB-APP/webponent/css/common.css" type="text/css" />
+<link rel="stylesheet" href="/css/curex.common.css" type="text/css" />
+<link rel="stylesheet" href="/css/curex.layout.css" type="text/css" />
+<link rel="stylesheet" href="/css/curex.popup.css" type="text/css" />
+<link rel="stylesheet" href="/WEB-APP/webponent/dialog/css/dialog.css" type="text/css" />
+<script type="text/javascript" src="/WEB-APP/webponent/ci/agent.js"></script>
+<script type="text/javascript" src="/WEB-APP/webponent/thirdParty/jquery/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="/WEB-APP/webponent/thirdParty/jquery/jquery-ui-1.10.3.min.js"></script>
+<script type="text/javascript" src="/WEB-APP/webponent/tab/tab.js"></script>
+<script type="text/javascript" src="/WEB-APP/webponent/dialog/dialog.js"></script>
+<script type="text/javascript" src="/js/popup.js"></script>
+<script type="text/javascript" src="/js/curex.ui.js"></script>
+</head>
+<body>
+
+<div id="popWrap" style="width:917px;">
+	<h1>통산 합산 인수기준 (기준:2013.9.1)</h1>
+	<div class="popContents">
+
+		<div class="sumWrap">
+			<div class="popL">
+				<ol>
+					<li>
+						<h2>1. 일반사망 가입한도</h2>
+						<p>위험 등급별 가입한도</p>
+						<table class="table3">
+							<caption>1. 일반사망 가입한도</caption>
+							<colgroup>
+								<col width="*" />
+								<col width="12%" />
+								<col width="12%" />
+								<col width="12%" />
+								<col width="12%" />
+								<col width="12%" />
+								<col width="16%" />
+							</colgroup>
+							<thead>
+								<tr>
+									<th>구분</th>
+									<th>1급</th>
+									<th>2급</th>
+									<th>3급</th>
+									<th>4급</th>
+									<th>std</th>
+									<th>비고</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>최고보장금액</td>
+									<td>1억</td>
+									<td>2억</td>
+									<td>6억</td>
+									<td>8억</td>
+									<td>50억</td>
+									<td></td>
+								</tr>
+							</tbody>
+						</table>
+					</li>
+					<li>
+						<h2>2. 재해사망 가입한도</h2>
+						<p>위험 등급별 가입한도</p>
+						<table class="table3">
+							<caption>2. 재해사망 가입한도</caption>
+							<colgroup>
+								<col width="*" />
+								<col width="12%" />
+								<col width="12%" />
+								<col width="12%" />
+								<col width="12%" />
+								<col width="12%" />
+								<col width="16%" />
+							</colgroup>
+							<thead>
+								<tr>
+									<th>구분</th>
+									<th>1급</th>
+									<th>2급</th>
+									<th>3급</th>
+									<th>4급</th>
+									<th>std</th>
+									<th>비고</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>재해사망</td>
+									<td colspan="2">부가기능</td>
+									<td colspan="2">5억</td>
+									<td>10억</td>
+								</tr>
+							</tbody>
+						</table>
+					</li>
+					<li>
+						<h2>3. 재해상해 및 고도장해</h2>
+						<p>위험 등급별 가입한도</p>
+						<table class="table3">
+							<caption>3. 재해상해 및 고도장해</caption>
+							<colgroup>
+								<col width="*" />
+								<col width="12%" />
+								<col width="12%" />
+								<col width="12%" />
+								<col width="12%" />
+								<col width="12%" />
+								<col width="16%" />
+							</colgroup>
+							<thead>
+								<tr>
+									<th>구분</th>
+									<th>1급</th>
+									<th>2급</th>
+									<th>3급</th>
+									<th>4급</th>
+									<th>std</th>
+									<th>비고</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>개별 특약한도</td>
+									<td>3천</td>
+									<td>6천</td>
+									<td>1억</td>
+									<td>2억</td>
+									<td>3억</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>합산한도</td>
+									<td>6천</td>
+									<td>1.2억</td>
+									<td>2억</td>
+									<td>4억</td>
+									<td>5억</td>
+									<td></td>
+								</tr>
+							</tbody>
+						</table>
+					</li>
+					<li>
+						<h2>4. 입원 가입한도</h2>
+						<table class="table3">
+							<caption>4. 입원 가입한도</caption>
+							<colgroup>
+								<col width="*" />
+								<col width="15%" />
+								<col width="15%" />
+								<col width="15%" />
+								<col width="15%" />
+								<col width="15%" />
+							</colgroup>
+							<tbody>
+								<tr>
+									<th rowspan="2">입원특약 일반사망<br />연동 가입한도</th>
+									<th>일사&gt;3천</th>
+									<th>일사&gt;5천</th>
+									<th>일사&gt;1억</th>
+									<th>일사&gt;5억</th>
+									<th>일사&#8805;5억</th>
+								</tr>
+								<tr>
+									<td>가입불가</td>
+									<td>2만원</td>
+									<td>3만원</td>
+									<td>5만원</td>
+									<td>10만원</td>
+								</tr>
+								<tr>
+									<th>보장한도<br />(HC, DUHC 포함)</th>
+									<td>2만원</td>
+									<td>4만원</td>
+									<td>6만원</td>
+									<td>8만원</td>
+									<td>10만원</td>
+								</tr>
+							</tbody>
+						</table>
+			
+						<p>위험 등급별 가입한도</p>
+						<table class="table3">
+							<caption>위험 등급별 가입한도</caption>
+							<colgroup>
+								<col width="*" />
+								<col width="15%" />
+								<col width="15%" />
+								<col width="15%" />
+								<col width="15%" />
+								<col width="15%" />
+							</colgroup>
+							<thead>
+								<tr>
+									<th>보장한도</th>
+									<th>1급</th>
+									<th>2급</th>
+									<th>3급</th>
+									<th>4급</th>
+									<th>std</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>입원특약</td>
+									<td>2만원</td>
+									<td>5만원</td>
+									<td>5만원</td>
+									<td>7만원</td>
+									<td>10만원</td>
+								</tr>
+							</tbody>
+						</table>
+					</li>
+					<li>
+						<h2>5. 수술 가입한도</h2>
+						<table class="table3">
+							<caption>5. 수술 가입한도</caption>
+							<colgroup>
+								<col width="*" />
+								<col width="15%" />
+								<col width="15%" />
+								<col width="15%" />
+								<col width="15%" />
+								<col width="15%" />
+							</colgroup>
+							<tbody>
+								<tr>
+									<th rowspan="2">수술특약 일반사망<br />연동 가입한도</th>
+									<th>일사&gt;3천</th>
+									<th>일사&gt;5천</th>
+									<th>일사&gt;1억</th>
+									<th>일사&gt;5억</th>
+									<th>비고</th>
+								</tr>
+								<tr>
+									<td>가입불가</td>
+									<td>1천만</td>
+									<td>2천만</td>
+									<td>3천만</td>
+									<td></td>
+								</tr>
+								<tr>
+									<th>보장한도<br />(HC, DUHC 포함)</th>
+									<td>1천</td>
+									<td>2천</td>
+									<td>3천</td>
+									<td>4천</td>
+									<td></td>
+								</tr>
+							</tbody>
+						</table>
+			
+						<p>위험 등급별 가입한도</p>
+						<table class="table3">
+							<caption>5. 수술 가입 한도</caption>
+							<colgroup>
+								<col width="*" />
+								<col width="15%" />
+								<col width="15%" />
+								<col width="15%" />
+								<col width="15%" />
+								<col width="15%" />
+							</colgroup>
+							<thead>
+								<tr>
+									<th>구분</th>
+									<th>1급</th>
+									<th>2급</th>
+									<th>3급</th>
+									<th>4급</th>
+									<th>std</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>수술특약</td>
+									<td>부가불가</td>
+									<td>1천만</td>
+									<td>2천만</td>
+									<td colspan="2">3천만</td>
+								</tr>
+							</tbody>
+						</table>
+					</li>
+				</ol>
+			</div>
+
+			<div class="popR">
+				<ol>
+					<li>
+						<h2>6. 암 가입한도</h2>
+						<table class="table3">
+							<caption>암 가입한도</caption>
+							<colgroup>
+								<col width="*" />
+								<col width="13%" />
+								<col width="13%" />
+								<col width="13%" />
+								<col width="14%" />
+								<col width="13%" />
+								<col width="13%" />
+							</colgroup>
+							<tbody>
+								<tr>
+									<th rowspan="2" class="groupTit">암특약<br />일반사망<br />연동 가입한도</th>
+									<th>일사&gt;3천</th>
+									<th>일사&gt;6천</th>
+									<th>일사&gt;7천</th>
+									<th>일사&gt;1.5억</th>
+									<th>일사&gt;3억</th>
+									<th>일사&gt;3억</th>
+								</tr>
+								<tr>
+									<td>가입불가</td>
+									<td>1천</td>
+									<td>2천</td>
+									<td>3천</td>
+									<td>4천</td>
+									<td>5천</td>
+								</tr>
+							</tbody>
+						</table>
+						
+						<p>위험 등급별 가입한도</p>
+						<table class="table3">
+							<caption>위험 등급별 가입한도</caption>
+							<thead>
+								<tr>
+									<th colspan="2" rowspan="2">구분</th>
+									<th colspan="2">40세이하</th>
+									<th colspan="2">41세~50세</th>
+									<th colspan="2">51세이상</th>
+								</tr>
+								<tr>
+									<th class="bderL">특약</th>
+									<th>보장</th>
+									<th>특약</th>
+									<th>보장</th>
+									<th>특약</th>
+									<th>보장</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td rowspan="2">암한도</td>
+									<td>여자</td>
+									<td>4천</td>
+									<td>6천</td>
+									<td>2천</td>
+									<td>4천</td>
+									<td>1,500만</td>
+									<td>3천</td>
+								</tr>
+								<tr>
+									<td>남자</td>
+									<td>5천</td>
+									<td>7천</td>
+									<td>3천</td>
+									<td>4천</td>
+									<td>2천</td>
+									<td>3천</td>
+								</tr>
+							</tbody>
+						</table>
+						<ul class="footNote mt0">
+							<li><span>*</span> 암보장 = 암, CI1 3종, HC, DUHC 포함</li>
+						</ul>
+					</li>
+					<li>
+						<h2>7. CI가입한도</h2>
+						<table class="table3">
+							<caption></caption>
+							<thead>
+								<tr>
+									<th>구분</th>
+									<th>일사&gt;3천</th>
+									<th>일사&gt;5천</th>
+									<th>일사&gt;1.5억</th>
+									<th>일사&#8805;1억</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>CI보장</td>
+									<td>가입불가</td>
+									<td>3천만</td>
+									<td>4천만</td>
+									<td>5천만</td>
+								</tr>
+							</tbody>
+						</table>
+					</li>
+					<li>
+						<h2>8. HC 및 DUHC 한도 (암,수술,임원, CI보장한도 합산요망)</h2>
+						<table class="table3">
+							<caption></caption>
+							<tbody>
+								<tr>
+									<th rowspan="3" class="groupTit">특약별<br />일반사망<br />연동<br />가입한도</th>
+									<th class="bderL"></th>
+									<th>일사&gt;3천</th>
+									<th>일사&gt;5천</th>
+									<th>일사&gt;1억</th>
+									<th>일사&gt;5억</th>
+									<th>일사&gt;5억</th>
+									<th>비고</th>
+								</tr>
+								<tr>
+									<th class="bderL">HC</th>
+									<td>가입불가</td>
+									<td>2천만</td>
+									<td>3천</td>
+									<td colspan="2">4천</td>
+									<td rowspan="2">환산배수<br />CI:수술:입원<br />1:1:2</td>
+								</tr>
+								<tr>
+									<th class="bderL">DUHC</th>
+									<td>1천</td>
+									<td>2천</td>
+									<td colspan="3">3천</td>
+								</tr>
+							</tbody>
+						</table>
+			
+						<p>위험 등급별 가입한도</p>
+						<table class="table3">
+							<caption></caption>
+							<thead>
+								<tr>
+									<th>구분</th>
+									<th>1급</th>
+									<th>2급</th>
+									<th>3급</th>
+									<th>4급</th>
+									<th>std</th>
+									<th>비고</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>HC</td>
+									<td>가입불가</td>
+									<td>1천</td>
+									<td>2천</td>
+									<td>3천</td>
+									<td>4천</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>HUHC</td>
+									<td>가입불가</td>
+									<td>1천</td>
+									<td>2천</td>
+									<td colspan="2">3천</td>
+									<td></td>
+								</tr>
+							</tbody>
+						</table>
+					</li>
+					<li>
+						<h2>9. 건강진단 기준</h2>
+						<p class="pt0">보장금액 및 기계약 합산 진단기준, 가입후 2년이내의 계약에 한함</p>
+						<table class="table3">
+							<caption>9. 건강진단 기준</caption>
+							<colgroup>
+								<col width="*" />
+								<col width="14%" />
+								<col width="14%" />
+								<col width="12%" />
+								<col width="12%" />
+								<col width="12%" />
+								<col width="12%" />
+								<col width="12%" />
+							</colgroup>
+							<thead>
+								<tr>
+									<th>진단종류</th>
+									<th>35세이하</th>
+									<th>40세이하</th>
+									<th>45세이하</th>
+									<th>50세이하</th>
+									<th>55세이하</th>
+									<th>60세이하</th>
+									<th>61세이상</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>TI</td>
+									<td>1.5억 초과</td>
+									<td>1.2억 초과</td>
+									<td>7천 초과</td>
+									<td>4천 초과</td>
+									<td>2천 초과</td>
+									<td>3천 이하</td>
+									<td>1천이하</td>
+								</tr>
+								<tr>
+									<td>특진A</td>
+									<td colspan="2">3억 초과</td>
+									<td colspan="2">1억 초과</td>
+									<td colspan="2">3천 초과</td>
+									<td>1천 초과</td>
+								</tr>
+								<tr>
+									<td>특진B</td>
+									<td colspan="2">6억 초과</td>
+									<td colspan="2">3억 초과</td>
+									<td colspan="2">1억 초과</td>
+									<td>5천 초과</td>
+								</tr>
+								<tr>
+									<td>특진C</td>
+									<td colspan="2">8억 초과</td>
+									<td colspan="2">4억 초과</td>
+									<td colspan="2">2억 초과</td>
+									<td>1억 초과</td>
+								</tr>
+								<tr>
+									<td>특진D</td>
+									<td colspan="2">15억 초과</td>
+									<td colspan="2">10억 초과</td>
+									<td colspan="2">6억 초과</td>
+									<td>2억 초과</td>
+								</tr>
+								<tr>
+									<td>특진E+적부</td>
+									<td colspan="2"></td>
+									<td colspan="2"></td>
+									<td colspan="2"></td>
+									<td>3억 초과</td>
+								</tr>
+							</tbody>
+						</table>
+						<ul class="footNote">
+							<li><span>*</span> 본 기준은 참고용으로 상세사항은 PINK 업무메뉴얼 참조 바랍니다.</li>
+						</ul>
+					</li>
+				</ol>
+			</div>
+		</div>
+
+	</div>
+</div>
+
+</body>
+</html>
+
