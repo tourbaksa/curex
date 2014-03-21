@@ -416,7 +416,7 @@ div.paging a.prev + a{margin-left:0;}
 .setUp a, .setDown a{padding-right:20px;}
 
 /* btnWrap */
-.btnWrap{clear:both; position:relative; text-align:right; line-height:0; font-size:0;}
+.btnWrap{clear:both; position:relative; text-align:right;}
 .btnWrap a{font-size:12px; margin-left:5px;}
 .btnWrap a:first-child{margin-left:0;}
 .btnL{left:0; position:absolute;}
