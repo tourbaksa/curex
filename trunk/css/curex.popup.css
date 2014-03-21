@@ -199,3 +199,19 @@ table .groupTit{
 .chboxWrap .chboxList tbody td span.tar2{position:absolute;right:9px;top:0;}
 .chboxWrap .chboxList tbody td label.bt1{background:url(/img/common/blet2.gif) no-repeat 0 center;padding-left:8px;}
 .chboxWrap .chboxList tbody td.formTd{padding:3px 0 3px 4px;}
+
+/* float테이블 */
+.fitTable:after{content:"";display:block;clear:both;}
+.fltTable table{float:left;margin-left:10px;}
+.fltTable table:first-child{margin-left:0;}
+.fltTable .fltTableR table{float:left;margin-top:10px;}
+.fltTable .fltTableR table:first-child{margin-left:10px;margin-top:0;}
+
+/* 합산 */
+.sumWrap:after{content:"";display:block;clear:both;}
+.sumWrap table{font-size:11px;}
+.sumWrap table th.bderL, .sumWrap table td.bderL{border-left:1px solid #dedede;}
+.sumWrap .popL{float:left;width:420px;margin-right:20px;}
+.sumWrap .popR{float:right;width:420px;}
+.sumWrap h2, .sumWrap p{line-height:12px;margin:8px 0;}
+.sumWrap p{background:url(/img/common/blet_arrow.gif) no-repeat 0 center; padding-left:12px;}
