@@ -45,11 +45,12 @@
 		<!-- 공통 컨텐츠 -->
 		<div id="contents" class="lips clear-fix">
 			<div class="lipsWrap ci-tab">
-				<ul class="tab01 clearfix tab-selector">
+				<ul class="tab01 tab-selector">
 					<li class="active"><a href="#none">가입설계</a></li>
 					<li><a href="#none">청약정보</a></li>
-					<li><a href="#none">보장내용</a></li>
-					<li><a href="#none">표보기</a></li>
+					<li><a href="#none" class="type1">보장내용</a></li>
+					<li><a href="#none" class="type1">보장금액/해지환급금</a></li>
+					<li><a href="#none" class="type1">표보기</a></li>
 				</ul>
 				<ul class="tab-panel">
 					<li>
@@ -336,7 +337,11 @@
 															<input type="text" style="width100%" />
 														</span>
 													</td>
-													<td class="textR">20,000</td>
+													<td class="textR">
+														<span class="widthFull">
+															<input type="text" class="bderN" style="width100%" value="20,000" />
+														</span>
+													</td>
 													<td class="textC">
 														<a class="btn smWtRb cellInsert" href="#none">추가</a>
 													</td>
@@ -426,6 +431,9 @@
 											<tfoot class="tfootType1"> 
 												<tr>
 													<td colspan="8" class="price tar">종피보험자 합계보험료 : 120,000</td>
+												</tr>
+												<tr>
+													<td colspan="8" class="price tar grayC">종피보험자 합계보험료 : 120,000</td>
 												</tr>
 											</tfoot>
 											<tbody>
@@ -648,8 +656,8 @@
 													<td class="textR">
 														<span class="widthFull"><input type="text" /></span>
 													</td>
-													<td class="textR"><span class="pR2">20,000</span></td>
-													<td><a href="#none" class="cellDel"><img src="/img/common/icon4.gif" alt="삭제" /></a></td>
+													<td class="textR"><span class="pR2 disebled">20,000</span></td>
+													<td class="disebled"><img src="/img/common/icon4_1.gif" alt="삭제" /></td>
 												</tr>
 											</tbody>
 										</table>

@@ -124,3 +124,16 @@ span.bubble1 .arr{background:url(/img/common/icon_bubble.png) no-repeat;position
 /* 화살표좌측 */
 span.bubble2 .bb{position:absolute;left:0;top:0;z-index:100;border:1px solid #64ade5;background:#f9fcff; padding:8px 10px;border-radius:3px;font-size:11px;line-height:11px;}
 span.bubble2 .arr{background:url(/img/common/icon_bubble.png) no-repeat;position:absolute;top:-7px;left:29px;margin-left:-4px;width:9px;height:6px;}
+
+/* tab01 추가 */
+.tab01{border-bottom:0;background:url(/img/common/bg_tab.gif) repeat-x 0 0;height:31px;border-bottom:0;}
+.tab01 li{height:31px;}
+.tab01 li.active a{height:29px;line-height:29px;}
+.tab01 li.active a.type1{background:#fff;color:#007d8b;border:2px solid #22b8c7;border-bottom:0;border-radius:3px 3px 0 0 ;padding:0 13px;height:31px;line-height:25px;}
+.tab01 li a.type1{background:#d9ebed;}
+
+table td.disebled{background:#e3e3e3;}
+table td span.disebled{color:#d0d0d0;}
+
+/* 색상 */
+.grayC{color:#d0d0d0;}
