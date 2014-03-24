@@ -58,20 +58,6 @@ ul.lipsTab li:first-child a{border-left:1px solid ##e5e6e8; border-right:0;}
 ul.lipsTab li:first-child a span{border-left:1px solid ##e5e6e8; border-right:0;}
 ul.lipsTab li.active:first-child a span{background-image:url(/img/sub/bg_smartp_on.png);}
 
-/* 사망보장분석 */
-.nizWrap{position:relative;}
-.nizWrap .nizTit{
-	position:relative; z-index:3;
-	border-left:1px solid #dedede; border-right:1px solid #dedede;
-	background-color: #f3f4f5;height:30px;line-height:30px;padding:0 5px 0 10px;
-	background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPgo8bGluZWFyR3JhZGllbnQgaWQ9Imc0MjgiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjAlIiB5Mj0iMTAwJSI+CjxzdG9wIHN0b3AtY29sb3I9IiNGQUZBRkEiIG9mZnNldD0iMCIvPjxzdG9wIHN0b3AtY29sb3I9IiNGMkYyRjIiIG9mZnNldD0iMSIvPgo8L2xpbmVhckdyYWRpZW50Pgo8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2c0MjgpIiAvPgo8L3N2Zz4=);
-}
-.nizWrap .nizTit{position:relative;border-top:1px solid #dedede; border-bottom:1px solid #dedede;}
-.nizWrap .nizTit a.btn{position:absolute;right:5px;top:3px;}
-.nizWrap .h5Tit{height:30px;background-color:#d0ebee;padding:6px 0 0 10px; position:relative;border-top:1px solid #dedede;}
-.nizWrap .h5Tit .more{position:absolute;right:5px;top:4px;}
-.nizWrap .nizCont{border:1px solid #dedede; border-top:0; position:relative; z-index:3; background:#fff;}
-
 #conteiner #contents .graphWrap .title{font-size:20px; text-align:center; margin:17px 0 13px;}
 #conteiner #contents .graphWrap .title p.tit{background-color:#fff;margin:0 7px;position:relative;padding-bottom:15px;}
 #conteiner #contents .graphWrap .title p.bg{background-color:#01509f;height:22px;width:100%;margin-top:-15px;}
@@ -107,9 +93,10 @@ ul.lipsTab li.active:first-child a span{background-image:url(/img/sub/bg_smartp_
 
 
 /* colorBox */
-.sbxRed{width:8px;height:8px;background-color:#e8404f;display:inline-block;line-height:20px;vertical-align:middle;}
-.sbxGray{width:8px;height:8px;background-color:#959595;display:inline-block;line-height:20px;vertical-align:middle;}
-.sbxOrange{width:8px;height:8px;background-color:#ff9000;display:inline-block;line-height:20px;vertical-align:middle;}
+.sbxRed{width:8px;height:8px;border-radius:8px;background-color:#e8404f;display:inline-block;line-height:20px;vertical-align:middle;}
+.sbxGray{width:8px;height:8px;border-radius:8px;background-color:#959595;display:inline-block;line-height:20px;vertical-align:middle;}
+.sbxOrange{width:8px;height:8px;border-radius:8px;background-color:#ff5b00;display:inline-block;line-height:20px;vertical-align:middle;}
+.sbxGreen{width:8px;height:8px;border-radius:8px;background-color:#0ec000;display:inline-block;line-height:20px;vertical-align:middle;}
 
 /* 말풍선 */
 span.bubble, span.bubble2{position:relative;display:none;}
@@ -146,4 +133,26 @@ table td span.disebled{color:#d0d0d0;}
 .groupTab li.active a{color:#00ade2;}
 .groupTab li.active a span.arr{border-color:white white white #00ade2;}
 
+/* 사망보장분석 */
+.nizWrap{position:relative;}
+.nizWrap .nizHeader{
+	position:relative; z-index:3;
+	border-left:1px solid #dedede; border-right:1px solid #dedede;
+	height:30px;line-height:30px;padding:0 5px 0 10px;
+	background-color:#d0ebee;
+}
+.nizWrap .nizHeader{position:relative;border-top:1px solid #dedede; border-bottom:1px solid #dedede;}
+.nizWrap .nizHeader a.btn{position:absolute;right:5px;top:3px;}
+.nizWrap .h5Tit{height:30px;padding:6px 0 0 10px; position:relative;border-top:1px solid #dedede;background:#f5f5f5;}
+.nizWrap .h5Tit .more{position:absolute;right:5px;top:4px;}
+.nizWrap .nizCont{border:1px solid #dedede; border-top:0; position:relative; z-index:3; background:#fff;}
 
+.capital {padding:12px 5px 0 14px;margin-bottom:20px;}
+.capital:after{content:"";display:block;clear:both;}
+.capital ul li{float:left;padding:0 10px 20px;position:relative;width:120px;text-align:center;background:url(/img/common/bg_dash.gif) repeat-y 0 0;}
+.capital ul li:first-child{padding:0 10px 0 0;width:110px;background:none;}
+.capital ul li dl{margin-top:80px;}
+.capital ul li dt{font-size:18px;}
+.capital ul li dd{width:100px;border:1px solid #dedede;color:#363636;font-size:14px;border-radius:3px;background:#f8f8f8;padding:8px;white-space:nowrap;}
+.capital ul li dd.photo{position:absolute;left:10px;top:0;text-align:center;width:100px;background:none;border-radius:0;border:0;}
+.capital ul li:first-child dd.photo{left:0;}
