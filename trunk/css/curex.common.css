@@ -60,12 +60,17 @@ table .textareaFull textarea{width:100%;}
 table tr.focusDrag{border:2px solid #64ade5;}
 
 /* 2.24 추가 테이블근처 설명 */
+
 * + .footNote{line-height:17px; margin-top:7px;}
 .footNote + * {margin-bottom:7px;}
 .footNote li{position:relative; padding-left:9px;}
 .footNote li span{position:absolute; left:0; top:0;}
 p.footNote{position:relative; padding-left:9px;}
 p.footNote span{position:absolute; left:0; top:0;}
+/* footNote에 title이 있는경우 */
+div.footNote strong{font-size:12px; font-weight:normal;}
+div.footNote strong + ul.footNote{margin-top:0;}
+
 
 /* table 공통 */
 table{table-layout:fixed; border:1px solid #dedede; width:100%; font-family:NanumGothic,"나눔고딕",dotum,arial;}

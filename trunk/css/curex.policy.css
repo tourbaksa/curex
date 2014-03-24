@@ -1,5 +1,7 @@
 @charset "utf-8";
 
+
+/* 계약 */
 div.contartWrap{position:relative;}
 div.contartWrap h3{font-size:16px; color:#363636; font-weight:normal; line-height:16px; margin:20px 0 10px 0;}
 div.contartWrap h5{font-size:14px; color:#707070; font-weight:normal; margin:20px 0 10px 0;}
@@ -22,7 +24,6 @@ div.rateZone label{display:inline-block; width:61px; text-align:center;}
 div.tHead{position:relative; margin:10px 0 10px 0;}
 div.tHead h4{font-size:16px; color:#000; height:16px; font-weight:bold;}
 div.tHead span.unit{position:absolute; right:0; top:0;}
-
 
 div.contartHeader{margin:20px 0 0 0; overflow:hidden;}
 div.contartHeader div.ctList{border:1px solid #dedede; background-color:#f7f7f7; padding:5px; width:188px; float:left;}
@@ -66,19 +67,32 @@ div.pendCnt .table1 td{text-align:center; padding:0;}
 /*==========================
   청약
 ============================*/
+span.ResultSum{font-size:14px; color:#363636;}
+span.ResultSum strong{color:#e8404f; font-weight:normal;}
 /* 증권전달대상계약 - 상세검색 */
 div.subscription{margin:20px 0 10px 0;}
 div.subscription table.table1 th,
 div.subscription table.table1 td{height:31px; padding-top:6px;}
 div.subscription table + table{margin-top:10px;}
 
-/* thankyou call */
-table.thankCall{margin:10px 0 10px 0;}
-table.thankCall th img{vertical-align:middle; margin-left:5px;}
-table.thankCall .callNum{text-align:center;}
-table.thankCall .callNum a{color:#00a1b1; text-decoration:underline;}
+/* policyTable*/
+table.policy{margin:10px 0 10px 0; clear:both;}
+table.policy th img{vertical-align:middle; margin-left:5px;}
+table.policy .callNum{text-align:center;}
+table.policy .callNum a{color:#00a1b1; text-decoration:underline;}
 
 /* 말풍선 */
 span.bubble{position:relative;display:none; width:154px;}
 span.bubble .bb{position:absolute;left:-16;top:-87px;z-index:100;border:1px solid #64ade5;background:#f9fcff; padding:10px 10px;border-radius:3px;font-size:11px;line-height:11px; font-weight:normal; width:165px;}
 span.bubble .arr{background:url(/img/sub/icon_bubble_bottom.png) no-repeat;position:absolute;bottom:-7px;left:50%;margin-left:-4px;width:11px;height:6px;}
+
+/* 청약진행사항 */
+ul.subsProcess{float:right; overflow:hidden; padding:0 0 8px 0;}
+ul.subsProcess li{font-size:12px; float:left; text-align:right; padding-right:10px; letter-sapcing:-1px;}
+ul.subsProcess li a{color:#00a1b1; text-decoration:underline;}
+
+/* 상세정보 */
+div.policyWrap div.detailInfo{border:1px solid #dededd; min-height:228px; position:relative;}
+div.policyWrap div.detailInfo span{position:absolute; display:block; text-align:center; top:50%; left:43%;}
+
+h4.subst{font-size:14px; color:#707070; margin:10px 0;}
