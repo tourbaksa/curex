@@ -30,7 +30,7 @@
 		<div class="hgroup">
 			<div class="pageTit">
 				<h2>개인설계</h2>
-				<span><input type="text" value="계획명을 입력하세요" style="width:185px" /></span>
+				<span class="entry"><input type="text" value="계획명을 입력하세요" style="width:185px" /></span>
 				<a href="#none" class="btn smGnR">저장</a> 
 				<a href="#none" class="btn smGnR">MyPlan 저장</a> 
 			</div>
@@ -428,14 +428,6 @@
 													<th>삭제</th>
 												</tr>
 											</thead>
-											<tfoot class="tfootType1"> 
-												<tr>
-													<td colspan="8" class="price tar">종피보험자 합계보험료 : 120,000</td>
-												</tr>
-												<tr>
-													<td colspan="8" class="price tar grayC">종피보험자 합계보험료 : 120,000</td>
-												</tr>
-											</tfoot>
 											<tbody>
 												<tr>
 													<td class="turn"></td>
@@ -661,6 +653,27 @@
 												</tr>
 											</tbody>
 										</table>
+										<table class="table3">
+											<caption>특약리스트</caption>
+											<colgroup>
+												<col width="6%" />
+												<col width="7%" />
+												<col width="*" />
+												<col width="14%" />
+												<col width="13%" />
+												<col width="13%" />
+												<col width="12%" />
+												<col width="5%" />
+											</colgroup>
+											<tfoot class="tfootType1"> 
+												<tr>
+													<td colspan="8" class="price tar">종피보험자 합계보험료 : 120,000</td>
+												</tr>
+												<tr>
+													<td colspan="8" class="price tar grayC">종피보험자 합계보험료 : 120,000</td>
+												</tr>
+											</tfoot>
+										</table>
 									</fieldset>
 								</form>
 
@@ -732,11 +745,6 @@
 															<th>삭제</th>
 														</tr>
 													</thead>
-													<tfoot class="tfootType1"> 
-														<tr>
-															<td colspan="8" class="price tar">특약피보험자 합계보험료 : 120,000</td>
-														</tr>
-													</tfoot>
 													<tbody>
 														<tr>
 															<td class="turn"></td>
@@ -770,6 +778,24 @@
 															<td><a href="#none" class="cellDel"><img src="/img/common/icon4.gif" alt="삭제" /></a></td>
 														</tr>
 													</tbody>
+												</table>
+												<table class="table3">
+													<caption>특약리스트</caption>
+													<colgroup>
+														<col width="6%" />
+														<col width="7%" />
+														<col width="*" />
+														<col width="14%" />
+														<col width="13%" />
+														<col width="13%" />
+														<col width="12%" />
+														<col width="5%" />
+													</colgroup>
+													<tfoot class="tfootType1"> 
+														<tr>
+															<td colspan="8" class="price tar">특약피보험자 합계보험료 : 120,000</td>
+														</tr>
+													</tfoot>
 												</table>
 											</fieldset>
 										</form>
@@ -845,32 +871,6 @@
 														<th>삭제</th>
 													</tr>
 												</thead>
-												<tfoot class="tfootType1"> 
-													<tr>
-														<td colspan="8" class="price tar bderB">특약피보험자 합계보험료 : 120,000</td>
-													</tr>
-													<tr>
-														<td colspan="2" rowspan="2" class="textC">납입방법</td>
-														<td colspan="2" rowspan="2" class="textL">
-															<span class="">
-																<input type="radio" id="ra1" name="ra" />
-																<label for="ra1">월납</label>
-																<input type="radio" id="ra2" name="ra" />
-																<label for="ra2">3개월납</label>
-																<input type="radio" id="ra3" name="ra" />
-																<label for="ra3">6개월납</label>
-																<input type="radio" id="ra4" name="ra" />
-																<label for="ra4">연납</label>
-															</span>
-														</td>
-														<td colspan="4" class="textR price blue bderB">
-															초회보험료 : 85,000
-														</td>
-													</tr>
-													<tr>
-														<td colspan="4" class="textR price red bderL">상령일이후(2014-02-24) : 105,000</td>
-													</tr>
-												</tfoot>
 												<tbody>
 													<tr>
 														<td class="turn"></td>
@@ -935,6 +935,45 @@
 														<td><a href="#none" class="cellDel"><img src="/img/common/icon4.gif" alt="삭제" /></a></td>
 													</tr>
 												</tbody>
+											</table>
+											<table class="table3">
+												<caption>특약리스트</caption>
+												<colgroup>
+													<col width="6%" />
+													<col width="7%" />
+													<col width="*" />
+													<col width="14%" />
+													<col width="13%" />
+													<col width="13%" />
+													<col width="12%" />
+													<col width="5%" />
+												</colgroup>
+												<tfoot class="tfootType1"> 
+													<tr>
+														<td colspan="8" class="price tar bderB">특약피보험자 합계보험료 : 120,000</td>
+													</tr>
+													<tr>
+														<td colspan="2" rowspan="2" class="textC">납입방법</td>
+														<td colspan="2" rowspan="2" class="textL">
+															<span class="">
+																<input type="radio" id="ra1" name="ra" />
+																<label for="ra1">월납</label>
+																<input type="radio" id="ra2" name="ra" />
+																<label for="ra2">3개월납</label>
+																<input type="radio" id="ra3" name="ra" />
+																<label for="ra3">6개월납</label>
+																<input type="radio" id="ra4" name="ra" />
+																<label for="ra4">연납</label>
+															</span>
+														</td>
+														<td colspan="4" class="textR price blue bderB">
+															초회보험료 : 85,000
+														</td>
+													</tr>
+													<tr>
+														<td colspan="4" class="textR price red bderL">상령일이후(2014-02-24) : 105,000</td>
+													</tr>
+												</tfoot>
 											</table>
 										</fieldset>
 										</form>
