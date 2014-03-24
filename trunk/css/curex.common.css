@@ -39,6 +39,7 @@ legend {
 /* Form & button */
 input{color:#707070;}
 input[type="text"] {border-left:1px solid #c2c5cc; border-top:1px solid #c1c6cc; border-bottom:1px solid #e0e3ea; border-right:1px solid #e0e3ea; padding:3px 5px 0; height:24px;font-size:12px; vertical-align:middle;}
+input[type="text"].bderN{border:0;}
 input[type="checkbox"]{width:13px;height:13px;margin:0;padding:0;vertical-align:middle;}
 input[type="radio"]{width:13px;height:13px;vertical-align:middle;margin-top:-1px;_margin-top:0;}
 select {font-family:NanumGothic,"나눔고딕";vertical-align:middle;font-size:12px; line-height:20px; padding:3px 0;; border-left:1px solid #c2c5cc; border-top:1px solid #c1c6cc; border-bottom:1px solid #e0e3ea; border-right:1px solid #e0e3ea;color:#707070;}
@@ -48,7 +49,6 @@ button span{display: block; overflow: hidden; position: absolute; top: 0; left: 
 /* fireFox button */
 button::-moz-focus-inner{padding:0; margin:0;}
 a{color:#707070; text-decoration:none;}
-
 
 /* table input, textarea */
 table .widthFull{display:block;}
