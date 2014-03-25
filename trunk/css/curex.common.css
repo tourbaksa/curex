@@ -90,6 +90,7 @@ div.juContact .more{position:absolute;right:0;top:0;margin:0;}
 div.juContact .more li{float:left;} 
 div.juContact .more li label{padding-right:10px;}
 div.juContact .more1{position:absolute;right:0;top:-34px;margin:0;}
+div.juContact .more2{position:absolute;right:0;top:6px;margin:0;}/* 단위(만원) */
 
 table .lineY{border-left:1px solid #dedede !important;}
 
@@ -138,6 +139,7 @@ table.bderTN{border-top:0 !important;}
 }
 .table3 th:first-child{border-left:0;}
 .table3 thead th.bderL{border-left:1px solid #dedede;}
+.table3 tbody th.bderL{border-left:1px solid #dedede;}
 .table3 tbody td{border:1px solid #dedede; height:30px;}
 .table3 tbody td.turn{background:url(/img/common/blet3.gif) no-repeat 50% 50%;}
 .table3 tbody tr.bg{background:#fafafa;}
@@ -305,13 +307,12 @@ ul.btnTab li.active a{
 	background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPgo8bGluZWFyR3JhZGllbnQgaWQ9Imc0MjgiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjAlIiB5Mj0iMTAwJSI+CjxzdG9wIHN0b3AtY29sb3I9IiNGQUZBRkEiIG9mZnNldD0iMCIvPjxzdG9wIHN0b3AtY29sb3I9IiNGMkYyRjIiIG9mZnNldD0iMSIvPgo8L2xpbmVhckdyYWRpZW50Pgo8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2c0MjgpIiAvPgo8L3N2Zz4=);
 	color:#666;
 	border:1px solid #a8a8a8;
-
 }
 
 /* tab02 */
 #conteiner #contents .tab02{overflow:hidden;border:1px solid #dedede;height:205px;position:relative;}
-#conteiner #contents .tab02 h3{float:left; height:32px;line-height:32px;border-left:1px solid #dedede;width:89px;text-align:center;background:#d9ebed;letter-spacing:0 !important;margin:0;}
-#conteiner #contents .tab02 h3:first-child{border-left:0;width:90px;letter-spacing:-1px !important;}
+#conteiner #contents .tab02 h3{float:left; height:32px;line-height:32px;border-left:1px solid #dedede;width:85px;text-align:center;background:#d9ebed;letter-spacing:0 !important;margin:0;}
+#conteiner #contents .tab02 h3:first-child{border-left:0;width:98px;letter-spacing:-1px !important;}
 #conteiner #contents .tab02 h3 a{color:#007d8b; text-decoration:none;font-size:12px;font-weight:bold; display:block;}
 #conteiner #contents .tab02 h3 a.on{background:#fff;color:#707070;display:block;}
 .tab02 div{overflow:auto;overflow-y:scroll;height:164px;position:absolute;left:15px;top:33px;padding-top:9px;}

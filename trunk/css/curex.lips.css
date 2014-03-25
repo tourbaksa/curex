@@ -61,24 +61,18 @@ ul.lipsTab li.active:first-child a span{background-image:url(/img/sub/bg_smartp_
 #conteiner #contents .graphWrap .title{font-size:20px; text-align:center; margin:17px 0 13px;}
 #conteiner #contents .graphWrap .title p.tit{background-color:#fff;margin:0 7px;position:relative;padding-bottom:15px;}
 #conteiner #contents .graphWrap .title p.bg{background-color:#01509f;height:22px;width:100%;margin-top:-15px;}
-
-
 #conteiner #contents .graphWrap .tit strong{color:#e8404f;}
-#conteiner #contents .graphWrap h3{font-size:14px;font-weight:bold;border-bottom:1px solid #dedede;padding-bottom:8px;}
-.graphWrap .graph{text-align:center;margin:20px 0 15px;}
-.graphWrap .graphTable:after{content:"";display:block;clear:both;}
-.graphWrap .graphTable .cir{width:310px; text-align:center;float:left;}
-.graphTable table{width:424px;border:1px solid #dedede;text-align:center;float:right;}
-.graphTable table tbody th{border-top:1px solid #fff;color:#fff;}
-.graphTable table tbody th:first-child{border-top:0;}
-.graphTable table tbody th.bgGreen{background-color:#3faf5d;}
-.graphTable table tbody th.bgAqua{background-color:#00ade2;}
-.graphTable table tbody th.bgNavy{background-color:#0c2156;}
-.graphTable table tbody th.bgBlue{background-color:#01509f;}
-.graphTable table tbody th.bgLgreen{background-color:#22b8c7;}
-.graphTable table tbody td{border-left:1px solid #dedede;border-top:1px solid #dedede;padding:9px 5px 7px;}
-.graphTable table tfoot td{background-color:#dde3ef;color:#00a2ff;text-align:right;padding:12px 15px 11px 0; font-size:14px;}
-.graphWrap .refer{padding-top:8px; margin-top:20px;border-top:1px solid #dedede;}
+#conteiner #contents .graphWrap h3{font-size:16px;font-weight:bold;border-bottom:1px solid #dedede;padding-bottom:8px;margin-bottom:0;}
+#conteiner #contents .graphWrap .refer{padding-top:8px; margin-top:20px;border-top:1px solid #dedede;}
+
+ul.graphTable {text-align:center;padding-left:117px;margin-top:20px;}
+ul.graphTable:after {content:"";display:block;clear:both;}
+ul.graphTable li{width:230px;float:left;margin-left:60px;}
+ul.graphTable li:first-child{margin-left:0;}
+ul.graphTable li p{font-size:16px;margin:8px 0;}
+ul.graphTable table{border-top:3px solid #01509f;border-bottom:1px solid #01509f;border-left:0;border-right:0;}
+ul.graphTable table th{color:#01509f;border-top:1px solid #01509f;border-left:0;border-right:1px solid #fff;border-bottom:0;}
+ul.graphTable table td{text-align:right;background:#efeff1;padding-right:10px;border-top:1px solid #01509f;}
 
 /* 상세레이어팝업 */
 .detailView{position:absolute;left:0px;top:-10px;z-index:10;background:#fff;border:5px solid #dedede;width:270px; z-index:1;}
@@ -147,12 +141,48 @@ table td span.disebled{color:#d0d0d0;}
 .nizWrap .h5Tit .more{position:absolute;right:5px;top:4px;}
 .nizWrap .nizCont{border:1px solid #dedede; border-top:0; position:relative; z-index:3; background:#fff;}
 
-.capital {padding:12px 5px 0 14px;margin-bottom:20px;}
-.capital:after{content:"";display:block;clear:both;}
-.capital ul li{float:left;padding:0 10px 20px;position:relative;width:120px;text-align:center;background:url(/img/common/bg_dash.gif) repeat-y 0 0;}
-.capital ul li:first-child{padding:0 10px 0 0;width:110px;background:none;}
-.capital ul li dl{margin-top:80px;}
-.capital ul li dt{font-size:18px;}
-.capital ul li dd{width:100px;border:1px solid #dedede;color:#363636;font-size:14px;border-radius:3px;background:#f8f8f8;padding:8px;white-space:nowrap;}
-.capital ul li dd.photo{position:absolute;left:10px;top:0;text-align:center;width:100px;background:none;border-radius:0;border:0;}
-.capital ul li:first-child dd.photo{left:0;}
+div.capital {padding:12px 5px 0 14px;margin-bottom:20px;}
+div.capital:after{content:"";display:block;clear:both;}
+div.capital ul li{float:left;padding:0 10px 20px;position:relative;width:120px;text-align:center;background:url(/img/common/bg_dash.gif) repeat-y 0 0;}
+div.capital ul li:first-child{padding:0 10px 0 0;width:110px;background:none;}
+div.capital ul li dl{margin-top:80px;}
+div.capital ul li dt{font-size:18px;}
+div.capital ul li dd{width:100px;border:1px solid #dedede;color:#363636;font-size:14px;border-radius:3px;background:#f8f8f8;padding:8px;white-space:nowrap;margin-top:8px;}
+div.capital ul li dd.photo{position:absolute;left:10px;top:0;text-align:center;width:100px;background:none;border-radius:0;border:0;margin-top:0;}
+div.capital ul li:first-child dd.photo{left:0;}
+
+div.needBox {border-radius:5px;background:#e8f7f9;text-align:center;border:1px solid #acd0d4;border-bottom:0;height:118px;}
+div.needBox p{font-size:24px;height:64px;line-height:64px;}
+div.needBox ul{overflow:hidden;border:1px solid #dedede; border-radius:5px;} 
+div.needBox ul li{float:left;color:#e8404f;background:#fff; font-size:18px;height:50px;line-height:50px;width:45%;position:relative;}
+div.needBox ul li.on{color:#fff;width:55%;background:#00ade2;}
+div.needBox ul li{border-right:0;}
+div.needBox ul li.first span{width:30px;height:50px;position:absolute;right:-28px;top:0;z-index:1;}
+div.needBox ul li.last span{width:30px;height:50px;position:absolute;left:-30px;top:0;z-index:1;}
+
+/* lips-개인설계-보장내용*/
+ul.guarn li{position:relative;}
+ul.guarn li h4{background:url(/img/common/bg_bx1.gif) no-repeat 0 center;font-size:14px;padding-left:11px;margin:8px 0;}
+ul.guarn li .more{position:absolute;right:0;top:6px;}
+
+table.deathForm input[type="text"] {text-align:center;}
+
+/* popTable th가 높은값을 가질때 */
+table .groupTit{
+	background-size:100% 100%;
+	background-color: #f3f4f5;
+	background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPgo8bGluZWFyR3JhZGllbnQgaWQ9Imc0MjgiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjAlIiB5Mj0iMTAwJSI+CjxzdG9wIHN0b3AtY29sb3I9IiNGQUZBRkEiIG9mZnNldD0iMCIvPjxzdG9wIHN0b3AtY29sb3I9IiNGMkYyRjIiIG9mZnNldD0iMSIvPgo8L2xpbmVhckdyYWRpZW50Pgo8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2c0MjgpIiAvPgo8L3N2Zz4=);
+}
+div.juContact table tr.addbg1 th {background:#d0ebee;}
+div.juContact table tr.addbg1 td {background:#ddedef;}
+div.juContact table .addbg1 {background:#d0ebee;}
+
+/* 노후보장분석 */
+.nohuBox {text-align:center;padding:20px 0 20px 26px;border-bottom:1px solid #dedede;}
+.nohuBox:after{content:"";display:block;clear:both;}
+.nohuBox li{width:321px;float:left;margin-left:20px;}
+.nohuBox li:first-child{margin-left:0;}
+.nohuBox li dl{border:1px solid #dedede; border-radius:3px;}
+.nohuBox li dl dt{font-size:14px;height:36px;line-height:36px;background:#22b8c7;color:#fff;border-radius:3px 3px 0 0;}
+.nohuBox li:first-child dl dt{background:#00ade2}
+.nohuBox dd{font-size:18px;height:54px;line-height:54px;}
