@@ -216,7 +216,7 @@ table.bderTN{border-top:0 !important;}
 /* table th color삽입 */
 .table10{border-left:0;border-right:0;border-bottom:0;}
 .table10 tbody th{border-bottom:0;border-top:1px solid #dedede;border-left:1px solid #dedede;background:#f5f5f5;padding:4px 0;}
-.table10 tbody tr.tit th{padding:4px 5px 4px 10px;}
+.table10 tbody tr.tit th{padding:0 5px 0 10px;height:31px;line-height:31px;}
 .table10 tbody tr.tit th{border-left:0;}
 .table10 tbody th:first-child{border-left:0;}
 .table10 tbody tr:first-child th{border-top:0;}
