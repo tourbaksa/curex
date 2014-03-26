@@ -3,7 +3,7 @@
 /* popup */
 #popWrap{position:relative;}
 #popWrap h1{display: block; overflow:hidden; position:absolute; top: 0; left: 0;width: 0;height: 0;border:0;background: none !important; font-size: 0; line-height: 0;}
-#popWrap .popContents{padding:0 20px; height:640px; overflow-y:scroll; overflow-x:hidden;} /* 팝업길이 픽스! 640이상길어지면 스크롤처리 */
+#popWrap .popContents{padding:0 20px; /*height:640px; overflow-y:scroll; overflow-x:hidden;*/} /* 팝업길이 픽스! 640이상길어지면 스크롤처리 */
 
 .popTit{position:relative;margin-bottom:5px;}
 .popTit p.tit{font-size:14px;color:#363636;}

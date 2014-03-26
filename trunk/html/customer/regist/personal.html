@@ -333,7 +333,7 @@
 				<!-- //정보가 없을경우 -->
 				<span class="more"><a class="btn smGnR" href="#none">가족구성원 등록</a></span>
 			</div>
-
+<!-- 03.26 적합성정보 삭제
 			<div class="juContact">
 				<h3>적합성정보</h3>
 				<form action="/" method="post">
@@ -398,7 +398,7 @@
 					<a class="btn smGnR" href="#none">변경이력</a>
 					<a class="btn smGnR" href="#none">적합성진단실시</a>
 				</div>
-			</div>
+			</div>-->
 
 			<h3>기타</h3>
 			<form action="/" method="post">
@@ -488,15 +488,38 @@
 										<option></option>
 									</select>
 								</td>
-								<th colspan="2">소개일</th>
+								<th>소개일</th>
 								<td colspan="5">
 									<input type="text" style="">
 									<a href="#none"><img alt="달력" src="/img/common/icon3.gif"></a>
 								</td>
-								<td class="tac">
+								<td class="tac" colspan="2">
+									<!-- 03.26 행추가 추가버튼추가  -->
+									<a class="btn smWtRb" href="#none">삭제</a>
+									<a class="btn smWtRb" href="#none">추가</a>
+								</td>
+							</tr>
+							<!-- 03.26 행추가   -->
+							<tr>
+								<th>소개자 및 관계</th>
+								<td colspan="5">
+									<input type="text" style="width:350px;">
+									<a class="btn smGyRb" href="#none">검색</a>
+									<select style="width:100px;">
+										<option>직장동료</option>
+										<option></option>
+									</select>
+								</td>
+								<th>소개일</th>
+								<td colspan="5">
+									<input type="text" style="">
+									<a href="#none"><img alt="달력" src="/img/common/icon3.gif"></a>
+								</td>
+								<td class="tac" colspan="2">
 									<a class="btn smWtRb" href="#none">삭제</a>
 								</td>
 							</tr>
+
 						</tbody>
 					</table>
 
@@ -539,7 +562,9 @@
 				</form>
 				
 				<div class="more btnWrap">
-					<button class="mt_4 searchMore" type="button"><span class="hide-text">검색더보기</span></button>
+					<!--  03.26 버튼삭제
+					
+					<button class="mt_4 searchMore" type="button"><span class="hide-text">검색더보기</span></button> -->
 					<a href="#none" class="btn smGnR">필드관리</a>
 				</div>
 			</div>
