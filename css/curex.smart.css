@@ -289,6 +289,7 @@ div.workcnt ul.worklist li table{border:0;}
 div.workcnt ul.worklist li table thead tr th{height:23px; padding:0;
 	background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPgo8bGluZWFyR3JhZGllbnQgaWQ9Imc1NzkiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjAlIiB5Mj0iMTAwJSI+CjxzdG9wIHN0b3AtY29sb3I9IiNGQUY5RjkiIG9mZnNldD0iMCIvPjxzdG9wIHN0b3AtY29sb3I9IiNGMkYzRjIiIG9mZnNldD0iMSIvPgo8L2xpbmVhckdyYWRpZW50Pgo8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2c1NzkpIiAvPgo8L3N2Zz4=);
 }
+div.workcnt ul.worklist li table tbody tr.suc{color:#bcbcbc;}
 div.workcnt ul.worklist li table tbody tr td{padding:0; text-align:center; height:23px;}
 div.workcnt ul.worklist li table thead tr th,
 div.workcnt ul.worklist li table tbody tr td{border:1px solid #e6e6e7; border-right:0;}

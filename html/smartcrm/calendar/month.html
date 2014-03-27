@@ -365,11 +365,14 @@
 											</tr>
 											</thead>
 											<tbody>
-												<tr>
+												<!-- 03.26일 수정됨 : 완료된 일정일경우 tr.에 suc클래스를 추가합니다. (완료시 폰트색상 변경)
+													완료일경우 <del></del> 엘리먼트를 아래처럼 추가해주세요.
+												-->
+												<tr class="suc">
 													<td><input type="checkbox" title="현재행선택" /></td>
-													<td>김*헌</td>
-													<td>정기적안부</td>
-													<td>완료</td>
+													<td><del>김*헌</del></td>
+													<td><del>정기적안부</del></td>
+													<td><del>완료</del></td>
 												</tr>
 												<tr>
 													<td><input type="checkbox" title="현재행선택" /></td>
