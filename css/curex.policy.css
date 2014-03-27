@@ -1,7 +1,39 @@
 @charset "utf-8";
 
 
-/* 계약 */
+/* 계약검색 */
+
+h5.contarTit{font-size:16px; color:#7c7c7c; margin:10px 0;}
+/* 계약검색결과  */
+div.contartShWrap table.result thead th,
+div.contartShWrap table.result tbody td{line-height:15px; height:21px} /* table height 20px */
+/* 계약정보 */
+div.contartShWrap div.contartDetail table tbody td,
+div.contartShWrap div.contartDetail table tbody th,
+div.contartShWrap div.contartDetail table thead th,
+div.contartShWrap div.ctInfoWrap table tbody td,
+div.contartShWrap div.ctInfoWrap table tbody th,
+div.contartShWrap div.ctInfoWrap table thead th{line-height:15px; height:26px; padding-top:0; padding-bottom:0;}
+
+/* 보장내용 탭 */
+div.ctInfoWrap{position:relative;}
+div.ctInfoWrap ul.ctTab{margin-bottom:10px;}
+div.ctInfoWrap .table1 th{text-align:left; padding-left:11px;}
+div.ctInfoWrap .table1 td{padding-left:11px;}
+div.ctInfoWrap div.ensureCont{overflow:hidden;}
+div.ctInfoWrap div.ensureCont .tl{float:left; width:862px;}
+div.ctInfoWrap div.ensureCont .tr{float:right; width:141px;}
+div.ctInfoWrap div.ensureCont + .btnWrap{margin:10px 0 0 0;}
+
+
+/* 계약상세 */
+div.contartDetail{overflow:hidden; margin:0 0 10px 0;}
+div.contartDetail .tl{width:462px; float:left;}
+div.contartDetail .tr{width:542px; float:right;}
+
+
+
+/* 공통계약 */
 div.contartWrap{position:relative;}
 div.contartWrap h3{font-size:16px; color:#363636; font-weight:normal; line-height:16px; margin:20px 0 10px 0;}
 div.contartWrap h5{font-size:14px; color:#707070; font-weight:normal; margin:20px 0 10px 0;}
@@ -10,7 +42,7 @@ div.contartWrap .table1 tbody th,
 div.contartWrap .table1 tbody td{line-height:15px; height:26px; }
 div.contartWrap .table1 tbody td.tac{padding:0;}
 
-table.result tbody td{line-height:15px; height:21px}
+
 
 /* 좌 버튼 */
 div.ctBtn{position:absolute; right:0; top:0; margin:0;}
@@ -46,15 +78,6 @@ ul.SchList > li > strong{display:block; background-color:#a2c1c4; color:#fff; te
 ul.SchList > li li{line-height:13px; margin-bottom:8px;}
 ul.SchList > li li input{margin-right:5px;}
 ul.SchList > li li label{letter-spacing:-1px;}
-
-div.ctInfoWrap{position:relative;}
-div.ctInfoWrap ul.ctTab{margin-bottom:10px;}
-div.ctInfoWrap .table1 th{text-align:left; padding-left:11px;}
-div.ctInfoWrap .table1 td{padding-left:11px;}
-div.ctInfoWrap div.ensureCont{overflow:hidden;}
-div.ctInfoWrap div.ensureCont .tl{float:left; width:862px;}
-div.ctInfoWrap div.ensureCont .tr{float:right; width:141px;}
-div.ctInfoWrap div.ensureCont + .btnWrap{margin:10px 0 0 0;}
 
 
 /* 미결내용 */

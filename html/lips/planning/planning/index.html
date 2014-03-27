@@ -647,13 +647,75 @@
 														</span>
 													</td>
 													<td class="textR">
-														<span class="widthFull"><input type="text" /></span>
+														<!-- 03.27 개발요구사항적용  -->
+														<span class="widthFull"><input type="text" class="amount"  /></span>
+														<div class="amountLayer">
+															<ul class="amountSelect">
+																<li><a href="#">1,000</a></li>
+																<li><a href="#">2,000</a></li>
+																<li><a href="#">3,000</a></li>
+																<li><a href="#">4,000</a></li>
+																<li><a href="#">5,000</a></li>
+																<li><a href="#">6,000</a></li>
+																<li><a href="#">7,000</a></li>
+																<li><a href="#">8,000</a></li>
+																<li><a href="#">9,000</a></li>
+																<li><a href="#">10,000</a></li>
+																<li><a href="#">20,000</a></li>
+																<li><a href="#">30,000</a></li>
+															</ul>
+														</div>
+
 													</td>
 													<td class="textR"><span class="pR2 disebled">20,000</span></td>
 													<td class="disebled"><img src="/img/common/icon4_1.gif" alt="삭제" /></td>
 												</tr>
 											</tbody>
 										</table>
+
+									<script type="text/javascript">
+									//<![CDATA[
+										//가입금액 layer
+										var amount = (function () {
+											var $obj = $(".amount")
+												, $evt = $(".amountSelect").find("a")
+												, $input;
+
+												$obj.each(function(){
+													$(this).off().on({
+														click:function(){
+															select($(this))
+														}
+													});
+												});
+
+												$evt.each(function(){
+													$(this).off().on({
+														click:function(){
+															var Listnum = $(this).text();
+															$input.val(Listnum);
+															$(".amountLayer").hide();
+															return false;
+														}
+													});
+												});
+
+											var select = function(input){
+												var $layer = input.parent().next(".amountLayer");
+												$layer.width($obj.outerWidth())
+												if($layer.is(":hidden")){
+													$layer.show();
+												}
+												$input = input;
+											}
+
+
+										}());
+										
+										
+									//]]>
+									</script>
+
 									</fieldset>
 								</form>
 								<table class="table3">
