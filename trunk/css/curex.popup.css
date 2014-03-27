@@ -249,4 +249,10 @@ table .groupTit{
 .sumWrap .popR{float:right;width:420px;}
 .sumWrap h2, .sumWrap p{line-height:12px;margin:8px 0;}
 .sumWrap p{background:url(/img/common/blet_arrow.gif) no-repeat 0 center; padding-left:12px;}
+<<<<<<< .mine
 
+/*==========================
+  계약
+============================*/
+/* 계약검색 - 팝업 */
+.contarPopTit{font-size:14px; color:#000;}
