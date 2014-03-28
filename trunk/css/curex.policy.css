@@ -1,9 +1,10 @@
 @charset "utf-8";
 
 
-/* 계약검색 */
+/* 계약에서 쓰이는 heading */
+.subst{font-size:14px; color:#707070; margin:10px 0;}
 
-h5.contarTit{font-size:16px; color:#7c7c7c; margin:10px 0;}
+/* 계약검색 */
 /* 계약검색결과  */
 div.contartShWrap table.result thead th,
 div.contartShWrap table.result tbody td{line-height:15px; height:21px} /* table height 20px */
@@ -25,6 +26,18 @@ div.ctInfoWrap div.ensureCont .tl{float:left; width:862px;}
 div.ctInfoWrap div.ensureCont .tr{float:right; width:141px;}
 div.ctInfoWrap div.ensureCont + .btnWrap{margin:10px 0 0 0;}
 
+/* 자동이체 탭 */
+div#automCnt2{position:relative;}
+div#automCnt2 div.automRadio{position:absolute; left:280px; top:-30px; width:203px; padding:0 10px; border:1px solid #e1e4eb;  border-top:1px solid #c1c6cc; height:25px; line-height:23px;}
+/* 환급금/대출/중도인철 */
+div#loanCnt2{position:relative; }
+div#loanCnt2 div.automRadio{position:absolute; left:161px; top:-30px; width:111px; padding:0 10px; border:1px solid #e1e4eb;  border-top:1px solid #c1c6cc; height:25px; line-height:23px;}
+div#loanCnt2 div.automRadio input{margin-left:15px;}
+div#loanCnt2 div.automRadio input:first-child{margin-left:0px;}
+div#loanCnt2 span.unit{display:inline-block; text-align:right; position:absolute; right:0; top:-30px;}
+div#loanCnt2 span.unit em{line-height:24px; display:inline-block;}
+
+div#RdTabCont1{}
 
 /* 계약상세 */
 div.contartDetail{overflow:hidden; margin:0 0 10px 0;}
@@ -118,4 +131,4 @@ ul.subsProcess li a{color:#00a1b1; text-decoration:underline;}
 div.policyWrap div.detailInfo{border:1px solid #dededd; min-height:228px; position:relative;}
 div.policyWrap div.detailInfo span{position:absolute; display:block; text-align:center; top:50%; left:43%;}
 
-h4.subst{font-size:14px; color:#707070; margin:10px 0;}
+

@@ -310,54 +310,82 @@ curex.ui = {
 			$popbtn.off().on({click: function(){$popwrap.hide(); return false;}}); //팝업닫기
 	},
 
+	/*큐렉스 탭역역 1tab, 2tab까지만 구현 */
+
+
 	curexTab:function(){
 		var scope = this.op
-			, $obj = $(".attab",scope) || $(".attab")
-			, $tBtn = $("> li > a", $obj)
-			, $act = $("> li.active ", $obj)
-			, $tabCont = $(".tabCont", scope) || $(".tabCont")
-			, $tSubBtn = $(".atsubtab > li > a", scope) // 서브탭메뉴 버튼
-			, $tSubCont =  $(".subtabCont", scope) || $(".subtabCont") // 서브탭메뉴 컨텐츠
-			, oldhash;
 
-			$($act.find("a").attr("href")).css({"display":"block"}); //초기로딩시 활성화된 탭은 display해준다.
+		console.log(scope)
+		$(".attab",scope).each(function(){
+			active(this);
+		});
 
-			$tBtn.each(function(idx){
-				$(this).off().on({
-					click:function(){
-					$tabCont.hide()
-					$tBtn.parent().removeClass("active");
-					$tBtn.eq(idx).parent().addClass("active");
-					if($(oldhash).length){$(oldhash).css({"display":"none"})}
-					var newhash = $tBtn.eq(idx).attr("href");
-					$(newhash).css({"display":"block"});
-					oldhash = newhash;
+
+		function active(obj){
+			var $obj = $(obj)
+				, $active
+				, $content
+				, $links = $obj.find("a");
+
+				if(!$links.parent().hasClass("active")){
+					$active = $($links.filter('[href="'+location.hash+'"]')[0] || $links[0]);
+				}else{
+					
+				}
+				
+				console.log($($obj.find("li.active a").filter('[href="'+location.hash+'"]')[0]));
+				$content = $($active[0].hash);
+
+				$links.not($active).each(function () { $(this.hash).hide();});
+
+				// click event
+
+				$obj.find("a").off().on({
+					click:function(e){
+					  // Make the old tab inactive.
+					  $active.parent().removeClass('active');
+					  $content.hide();
+
+					  $active = $(this);
+					  $content = $(this.hash);
+
+
+					  $active.parent().addClass('active');
+					  $content.show();
+
 						return false;
 					}
-				})
-			});
+				});
+		}
 
-			$tSubBtn.each(function(idx){
-				$(this).off().on({
-					click : function(){
-						if(oldhash === undefined){
-							$(this).closest(".tabCont").show();
-						}else{
-							if($(this).closest($(oldhash)).attr("id") == oldhash.split("#")[1]){
-							$(this).closest($(oldhash)).show();
-							}
-						}
-						$tSubCont.hide();
-						$tSubBtn.parent().removeClass("active");
-						$tSubBtn.eq(idx).parent().addClass("active");
-						var newhash = $tSubBtn.eq(idx).attr("href");
-						$(newhash).css({"display":"block"});
-						oldhash = newhash;
-						return false;
+
+
+
+
+	},
+
+	/*큐렉스 라디오버튼탭 */
+	RdTab:function(){
+		var scope = this.op
+			, $obj = $(".RdTab")
+
+			, $radio = $obj.find("input[type='radio']")
+			, $radioCnt = $("[class*='RdTabCont']")
+
+			$radioCnt.hide();
+			$radioCnt.eq(0).show();
+			$radio.each(function(idx){
+				$(this).change(function(){
+					var nidx = idx +1;
+					$radioCnt.hide()
+					if ($(".RdTabCont"+ nidx).is(":hidden")){
+						$(".RdTabCont"+ nidx).show();
 					}
-
-				})
+				});
 			});
+
+
 
 	},
 
@@ -402,6 +430,7 @@ $(document).ready(function(){
 	curex.ui.event();
 	if($(".timeSchedule").length){curex.ui.carlendar();}
 	curex.ui.curexTab();
+	curex.ui.RdTab();
 	if($(".nizWrap").length){curex.ui.nidSlide();}
 });
 
