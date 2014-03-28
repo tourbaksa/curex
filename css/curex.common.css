@@ -394,6 +394,13 @@ ul.rndTab li.active{ position:relative;z-index:2;}
 ul.rndTab li.active a{border-bottom:0; height:25px; line-height:25px; color:#363636; border-color:#dedede; border-left:1px solid #dedede; background-color:#fff;}
 
 
+/* 계약부분의 텍스트로 된 탭 */
+.txtTab{overflow:hidden; margin:0 0 10px 0;}
+.txtTab li{float:left;}
+.txtTab li a{color:#8e8e8e; display:block; padding:0 10px; background:url(/img/sub/bg_txtTabBar.gif) no-repeat 0 50%;}
+.txtTab li:first-child a{padding-left:0; background-image:none;}
+.txtTab li.active a{color:#000;}
+
 
 /* paging */
 div.paging{padding:12px 0 0 0; text-align:center; font-size:0;}
