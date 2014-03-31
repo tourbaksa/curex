@@ -84,7 +84,6 @@ table{table-layout:fixed; border:1px solid #dedede; width:100%; font-family:Nanu
 table th{padding:7px 0 5px; border-bottom:1px solid #dedede; line-height:1.5; text-align:center;font-weight:normal;}
 table td{padding:3px 3px 2px 3px;}
 table th, table td{vertical-align:middle;}
-table td.tac{padding-left:0 !important;}
 table td.tal{padding-left:9px !important;}
 table td.tar{padding-right:4px !important;}
 table tfoot th, table tfoot td{padding:6px 3px 5px;}
@@ -441,7 +440,7 @@ div.paging strong{display:inline-block;
    font-weight:normal;
    }
 div.paging a.prev,
-div.paging a.next{border:0; border-radius:0;}
+div.paging a.next{border:0; border-radius:0; -webkit-border-radius:0; -moz-border-radius:0; -ms-border-radius:0;}
 div.paging a.prev{margin-right:20px;}
 div.paging a.next{margin-left:20px;} 
 div.paging a.prev + strong,
