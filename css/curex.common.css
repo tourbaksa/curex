@@ -156,6 +156,7 @@ table.bderTN{border-top:0 !important;}
 .table3 tbody td span.bder1{width:35px; display:inline-block;}
 .table3 tbody td span.bder2{width:196px; display:inline-block;border-left:1px solid #dedede; border-right:1px solid #dedede;}
 .table3 tbody td span.bder3{width:96px; display:inline-block;}
+.table3 tr.bg2 th{background:#fff;background-image:none;}
 
 /* table DataTable형 */
 .table4 th{
