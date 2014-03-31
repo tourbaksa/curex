@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title> 자유납입월공제 </title>
+<title> 처리이력 </title>
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
 <link rel="stylesheet" href="/WEB-APP/webponent/css/common.css" type="text/css" />
@@ -19,44 +19,86 @@
 </head>
 <body>
 
-<div id="popWrap" style="width:765px;">
-	<h1>자유납입월공제</h1>
+<div id="popWrap" style="width:665px;">
+	<h1>처리이력</h1>
 	<div class="popContents">
-		<table summary="최종납부회차, 월공제액, 월공제가능금액등 자유납입월공제정보를 제공합니다." class="table3" width="100%">
-			<caption>자유납입월공제</caption>
+			<table summary="검색기간설정" class="table3" style="width:383px;">
+				<caption>검색기간설정</caption>
+				<colgroup>
+					<col width="30%" />
+					<col width="*" />
+				</colgroup>
+				<tbody>
+					<tr>
+						<th>검색기간설정</th>
+						<td class="tal">
+							<input type="text" style="width:95px">
+							<a class="carendar" href="#"><span class="cdr">23</span></a>
+							~
+							<input type="text" style="width:95px">
+							<a class="carendar" href="#"><span class="cdr">23</span></a>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		
+		
+		<table summary="처리이력 리스트정보를 제공합니다." class="table3 mt10" width="100%">
+			<caption>처리이력</caption>
 			<colgroup>
-				<col width="12%" />
-				<col width="13%" />
-				<col width="12%" />
-				<col width="13%" />
-				<col width="12%" />
-				<col width="13%" />
-				<col width="12%" />
+				<col width="18%" />
+				<col width="18%" />
+				<col width="18%" />
+				<col width="25%" />
 				<col width="*" />
 			</colgroup>
+			<thead>
+				<tr>
+					<th scope="col">변경일(유효일)</th>
+					<th scope="col">변경일(처리일)</th>
+					<th scope="col">변경종류</th>
+					<th scope="col">변경전</th>
+					<th scope="col">변경후</th>
+				</tr>
+			</thead>
 			<tbody>
 				<tr>
-					<th>최종납부회차</th>
 					<td></td>
-					<th>월공제액</th>
 					<td></td>
-					<th>월공제가능금액</th>
-					<td colspan="3"></td>
+					<td></td>
+					<td></td>
+					<td></td>
 				</tr>
 				<tr>
-					<th>월공제가능여부</th>
 					<td></td>
-					<th>PTD</th>
 					<td></td>
-					<th>미납보험료횟수</th>
 					<td></td>
-					<th>미납보험료합계</th>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
 					<td></td>
 				</tr>
 			</tbody>
 		</table>
-		
-
 		<div class="btnWrap">
 			<input type="submit" value="확인" class="btn lgLgR">
 		</div>
