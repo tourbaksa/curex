@@ -139,17 +139,16 @@ span.myFavor{background:url(/img/sub/bg_Favor.gif) no-repeat 0 50%; padding-left
 
 /* 스마트픽 배너존 */
 div.spbnrZone{width:242px; height:185px; float:left; position:relative; margin-left:10px; overflow:hidden;}
-div.bnrList{position:absolute; left:0; top:0;}
+div.bnrList{position:absolute; left:0; top:0; height:185px;}
 div.bnrList img{float:left;}
 
-/* 컨트롤버튼 */
+div.bnrList:before{content:''; display:block; width:242px; height:4px; background:url(/img/sub/bg_slideMask_top.png) 0 0; position:absolute; left:0; top:0; z-index:11;}
+div.bnrList:after{content:''; display:block; width:242px; height:4px; background:url(/img/sub/bg_slideMask_btm.png) 0 0; position:absolute; left:0; top:181px; z-index:11;}/* 컨트롤버튼 */
 span.bntCtrl{position:absolute; right:15px; top:15px; z-index:1;}
 span.bntCtrl button{float:left; background:url(/img/sub/btn_slide_off.gif) no-repeat 0 0; width:13px; height:12px; margin-left:5px;}
 span.bntCtrl button:first-child{margin-left:0;}
 span.bntCtrl button.on{background-image:url(/img/sub/btn_slide_on.gif);}
 
-/* 라운드마스크 */
-span.slideMask{background:url(/img/sub/bg_slideMask.png) 0 0; width:242px; height:185px; position:absolute; left:0; }
 
 div.spBox{position:relative; float:left; background:url(/img/sub/bg_spBox.gif) no-repeat 100% 0; padding:9px 0 9px 14px; width:240px; border-radius:3px; -webkit-border-radius:3px; -moz-border-radius:3px; -ms-border-radius:3px; border:1px solid #dedede; height:89px; margin:0 0 9px 9px;}
 div.spBox span.badge{display:block; height:16px;}
@@ -290,6 +289,8 @@ div.workcnt ul.worklist li table thead tr th{height:23px; padding:0;
 	background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPgo8bGluZWFyR3JhZGllbnQgaWQ9Imc1NzkiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjAlIiB5Mj0iMTAwJSI+CjxzdG9wIHN0b3AtY29sb3I9IiNGQUY5RjkiIG9mZnNldD0iMCIvPjxzdG9wIHN0b3AtY29sb3I9IiNGMkYzRjIiIG9mZnNldD0iMSIvPgo8L2xpbmVhckdyYWRpZW50Pgo8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2c1NzkpIiAvPgo8L3N2Zz4=);
 }
 div.workcnt ul.worklist li table tbody tr.suc{color:#bcbcbc;}
+div.workcnt ul.worklist li table tbody tr.suc del,
+div.workcnt ul.worklist li table tbody tr.suc td a del{color:#bcbcbc;}
 div.workcnt ul.worklist li table tbody tr td{padding:0; text-align:center; height:23px;}
 div.workcnt ul.worklist li table thead tr th,
 div.workcnt ul.worklist li table tbody tr td{border:1px solid #e6e6e7; border-right:0;}
