@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> CuREx </title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
+<link rel="stylesheet" href="/WEB-APP/webponent/css/common.css" type="text/css" />
+<link rel="stylesheet" href="/css/curex.common.css" type="text/css" />
+<link rel="stylesheet" href="/css/curex.layout.css" type="text/css" />
+<link rel="stylesheet" href="/css/curex.popup.css" type="text/css" />
+<link rel="stylesheet" href="/WEB-APP/webponent/dialog/css/dialog.css" type="text/css" />
+<script type="text/javascript" src="/WEB-APP/webponent/ci/agent.js"></script>
+<script type="text/javascript" src="/WEB-APP/webponent/thirdParty/jquery/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="/WEB-APP/webponent/thirdParty/jquery/jquery-ui-1.10.3.min.js"></script>
+<script type="text/javascript" src="/WEB-APP/webponent/tab/tab.js"></script>
+<script type="text/javascript" src="/WEB-APP/webponent/dialog/dialog.js"></script>
+<script type="text/javascript" src="/js/popup.js"></script>
+<script type="text/javascript" src="/js/curex.ui.js"></script>
+</head>
+<body>
+
+<div id="popWrap" style="width:700px;">
+	<h1>공적연금 예상수령액 예시표</h1>
+	<div class="popContents">
+		
+		<div class="userSelect ci-tab">
+			<ul class="popTab tab-selector">
+				<li class="active"><a href="#none">국민연금</a></li>
+				<li><a href="#none">직역연금</a></li>
+			</ul>
+			
+			<ul class="tab-panel">
+				<li class="active">
+					<div class="add">
+						<h3 class="hide-element">국민연금</h3>
+						<div class="popTit mt7">
+							<h2>연금액간편계산</h2>
+						</div>
+						<div class="contr">
+							<form method="post" action="/">
+								<fieldset>
+									<legend>연금액간편계산</legend>
+									<table class="table8">
+										<caption>연금액간편계산</caption>
+										<colgroup>
+											<col width="20%" />
+											<col width="20%" />
+											<col width="20%" />
+											<col width="20%" />
+											<col width="2%" />
+											<col width="18%" />
+										</colgroup>
+										<tbody>
+											<tr>
+												<th>현재연령</th>
+												<th>입사연령(최초가입)</th>
+												<th>퇴직연령</th>
+												<th>현재월소득</th>
+												<td rowspan="2" class="areaN"></td>
+												<td rowspan="2" class="ctrBox">
+													만 60세 이후 연금액<br /><strong>월 280만원</strong>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<input type="text" style="width:100px" />
+													세
+												</td>
+												<td>
+													<input type="text" style="width:100px" />
+													세
+												</td>
+												<td>
+													<input type="text" style="width:100px" />
+													세
+												</td>
+												<td>
+													<input type="text" style="width:90px" />
+													만원
+												</td>
+											</tr>
+										</tbody>
+									</table>
+
+								</fieldset>
+							</form>
+						</div>
+						
+						<div class="juContact mt10">
+							<div class="popTit">
+								<h2>국민연금 예상수령액 예시표</h2>
+							</div>
+							<table class="table11">
+								<caption>예상수령액</caption>
+								<colgroup>
+									<col width="5%">
+									<col width="*">
+									<col width="15%">
+									<col width="13%">
+									<col width="13%">
+									<col width="13%">
+									<col width="13%">
+									<col width="13%">
+								</colgroup>
+								<thead>
+									<tr>
+										<th rowspan="2">등급</th>
+										<th rowspan="2">월소득</th>
+										<th rowspan="2">연금보험료<br />9%</th>
+										<th colspan="5">가입기간</th>
+									</tr>
+									<tr>
+										<th class="bderL">15년</th>
+										<th>20년</th>
+										<th>25년</th>
+										<th>30년</th>
+										<th>35년</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="tac">22</td>
+										<td>1,060,000</td>
+										<td>95,400</td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+									</tr>
+									<tr>
+										<td class="tac">21</td>
+										<td>1,060,000</td>
+										<td>95,400</td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+									</tr>
+									<tr>
+										<td class="tac">20</td>
+										<td>1,060,000</td>
+										<td>95,400</td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+									</tr>
+									<tr>
+										<td class="tac">19</td>
+										<td>1,060,000</td>
+										<td>95,400</td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+									</tr>
+									<tr>
+										<td class="tac">18</td>
+										<td>1,060,000</td>
+										<td>95,400</td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+									</tr>
+									<tr>
+										<td class="tac">17</td>
+										<td>1,060,000</td>
+										<td>95,400</td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+									</tr>
+									<tr>
+										<td class="tac">16</td>
+										<td>1,060,000</td>
+										<td>95,400</td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+									</tr>
+									<tr>
+										<td class="tac">15</td>
+										<td>1,060,000</td>
+										<td>95,400</td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+									</tr>
+									<tr>
+										<td class="tac">14</td>
+										<td>1,060,000</td>
+										<td>95,400</td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+									</tr>
+									<tr>
+										<td class="tac">13</td>
+										<td>1,060,000</td>
+										<td>95,400</td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+									</tr>
+								</tbody>
+							</table>
+							<span class="more">출처 : 국민연금관리공단 (2011년)</span>
+						</div>
+
+						<ul class="footNote">
+							<li><span>*</span> 위 표는 2011년 가입자기준으로 향후 변동될 수 있습니다.</li>
+							<li><span>*</span> 소득 상한선으로 인해 월소득이 늘어나도 최대 33만 7500원까지만 보험료 납부가 가능합니다.</li>
+						</ul>
+						
+					</div>
+				</li>
+				<li>
+					<div class="add">
+						<h3 class="hide-element">직역연금</h3>
+						<div class="popTit mt7">
+							<h2>연금액간편계산</h2>
+						</div>
+						<div class="contr">
+							<form method="post" action="/">
+								<fieldset>
+									<legend>연금액간편계산</legend>
+									<table class="table1">
+										<caption>간편계산</caption>
+										<colgroup>
+											<col width="37%">
+											<col width="37%">
+											<col width="2%">
+											<col width="24%">
+										</colgroup>
+										<tbody>
+											<tr>
+												<th>연금구분</th>
+												<td>
+													<span class="fLset">
+														<input type="radio" id="ctr1" name="ctr1" />
+														<label for="ctr1">공무원/사학연금</label>
+														<input type="radio" id="ctr2" name="ctr1" />
+														<label for="ctr2">군인연금</label>
+													</span>
+												</td>
+												<td class="areaN" rowspan="4"></td>
+												<td class="ctrBox" rowspan="4">
+													만 60세 이후 연금액<br /><strong>월 280만원</strong>
+												</td>
+											</tr>
+											<tr>
+												<th>임용년도</th>
+												<td>
+													<span class="fLset">
+														<input type="radio" id="ctr3" name="ctr3"/>
+														<label for="ctr3">2009년 이전</label>
+														<input type="radio" id="ctr4" name="ctr3" />
+														<label for="ctr4">2010년 이후</label>
+													</span>
+												</td>
+											</tr>
+											<tr>
+												<th>퇴직 전 3년 평균 보수월액</th>
+												<td>
+													<input type="text" style="width:100px;" />
+													만원
+												</td>
+											</tr>
+											<tr>
+												<th>재직기간</th>
+												<td>
+													<input type="text" style="width:100px;" />
+													세
+												</td>
+											</tr>
+										</tbody>
+									</table>
+
+								</fieldset>
+							</form>
+						</div>
+
+						<div class="popTit mt7">
+							<h2>공무원, 군인연금, 사학연금 비교(2011년)</h2>
+						</div>
+						<table class="table7">
+							<caption>비교</caption>
+							<colgroup>
+								<col width="25%" />
+								<col width="25%" />
+								<col width="25%" />
+								<col width="25%" />
+							</colgroup>
+							<thead>
+								<tr>
+									<th></th>
+									<th>공무원연금</th>
+									<th>군인연금</th>
+									<th>사학연금</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>도입시기</td>
+									<td>1960년</td>
+									<td>1963년</td>
+									<td>1975년</td>
+								</tr>
+								<tr>
+									<td>적용대상</td>
+									<td>공무원</td>
+									<td>부사관,준사관 장교등 직업군인</td>
+									<td>사립학교 교직원</td>
+								</tr>
+								<tr>
+									<td>기여금</td>
+									<td>기준 소득월액의 6.7%</td>
+									<td>기준 소득월액의 6.7%</td>
+									<td>기준 소득월액의 7%</td>
+								</tr>
+								<tr>
+									<td>최소 가입기간</td>
+									<td>20년</td>
+									<td>20년</td>
+									<td>20년</td>
+								</tr>
+								<tr>
+									<td>연금액</td>
+									<td>재직기간 평균 기준<br />소득월액 × 재직기간(1년단위)<br />× 1.9%</td>
+									<td>직전 3년 평균 보수월액<br />× 50%(20년)~76%(33년)</td>
+									<td>재직기간 평균 기준<br />소득월액 × 재직기간(1년단위)<br />× 1.9%</td>
+								</tr>
+							</tbody>
+						</table>
+					
+					</div>
+				</li>
+			</ul>
+
+		</div>
+
+		
+	</div>
+	
+
+	<script type="text/javascript">
+		//<![CDATA[
+		var myTab = ci.tab.init($('.userSelect')); // 고객정보탭
+		var myTab1 = ci.tab.init($('.tabOutline')); //
+		//]]> 
+	</script>
+
+</div>
+
+
+</body>
+</html>
+
+
