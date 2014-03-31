@@ -159,7 +159,7 @@ curex.ui = {
 			, $bnrWrap = $("div.spbnrZone", scope) || $("div.spbnrZone")
 			, $btn = $bnrWrap.find("span.bntCtrl button")
 			, $bnrCont = $bnrWrap.find("div.bnrList")
-			, $bnrItem = $bnrCont.find("img")
+			, $bnrItem = $bnrCont.find("a")
 			, $bnrLeng = $bnrItem.length
 			, $bnrW = 242
 			, $flag = 0
@@ -316,14 +316,9 @@ curex.ui = {
 	curexTab:function(){
 		var scope = this.op
 
-		console.log(scope)
-		$(".attab",scope).each(function(){
-			active(this);
-		});
-
-
-		function active(obj){
-			var $obj = $(obj)
+		$.fn.tab = function(){
+			return this.each(function(){
+				var $obj = $(this)
 				, $active
 				, $content
 				, $links = $obj.find("a");
@@ -331,38 +326,34 @@ curex.ui = {
 				if(!$links.parent().hasClass("active")){
 					$active = $($links.filter('[href="'+location.hash+'"]')[0] || $links[0]);
 				}else{
-					
+					$active = $($obj.find("li.active a"));
 				}
-				
-				console.log($($obj.find("li.active a").filter('[href="'+location.hash+'"]')[0]));
-				$content = $($active[0].hash);
 
-				$links.not($active).each(function () { $(this.hash).hide();});
+				$content = $($active[0].hash, scope);
 
-				// click event
+				$links.not($active).each(function () {
+					$($(this).attr('href'),scope).hide();
+				});
 
+				// 이벤트
 				$obj.find("a").off().on({
 					click:function(e){
-					  // Make the old tab inactive.
-					  $active.parent().removeClass('active');
-					  $content.hide();
+					$active.parent().removeClass('active');
+					$content.hide();
 
-					  $active = $(this);
-					  $content = $(this.hash);
+					$active = $(this);
+					$content = $(this.hash);
 
-
-					  $active.parent().addClass('active');
-					  $content.show();
+					$active.parent().addClass('active');
+					$content.show();
 
 						return false;
 					}
 				});
+			});
 		}
-
-
-
-
-
+		$(".attab",scope).tab();
+		$(".atsubtab",scope).tab();
 	},
 
 	/*큐렉스 라디오버튼탭 */
