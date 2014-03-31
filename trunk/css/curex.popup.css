@@ -271,3 +271,14 @@ div.popContents .textSum strong{color:#01509f;}=======
 ============================*/
 /* 계약검색 - 팝업 */
 h2.contarPopTit{font-size:14px; color:#000; font-weight:bold; margin:0 0 10px 0;}
+
+/* 정기성보험 - 종신전환 */
+div.popContents .grayBox {border-left:0;padding:9px;background-color:#f6f6f6; border:1px solid #dedede; margin-top:10px;}
+div.popContents .grayBox .conTable {width:100%; text-align:center;}
+div.popContents .grayBox .conTable th{background-color:#ddedef;background-image:url(/img/common/bg_th2.gif); background-repeat:repeat;border-top:1px solid #dedede;border-left:1px solid #dedede;}
+div.popContents .grayBox .conTable th:first-child{border-top:0;}
+div.popContents .grayBox .conTable td{border-top:1px solid #dedede;padding:3px 3px 2px;background-color:#fff;border-left:1px solid #dedede;}
+div.popContents .grayBox .conTable td:first-child{border-left:0;}
+div.blueBox{background:#e5f6ff;border:1px solid #a7e1ff;padding:10px;margin-top:9px;color:#444;}
+.grayBox .footNote + *{margin-bottom:0;}
+.grayBox .footNote li{text-align:left;}
