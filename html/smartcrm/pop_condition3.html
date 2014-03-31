@@ -9,7 +9,7 @@
 <link rel="stylesheet" href="/css/curex.layout.css" type="text/css" />
 <link rel="stylesheet" href="/css/curex.popup.css" type="text/css" />
 <link rel="stylesheet" href="/WEB-APP/webponent/dialog/css/dialog.css" type="text/css" />
-<script type="text/javascript" src="/WEB-APP/webponent/ci/agent.js"></script>
+<script src="/WEB-APP/webponent/ci/agent.js"></script>
 <script type="text/javascript" src="/WEB-APP/webponent/thirdParty/jquery/jquery-1.10.2.min.js"></script>
 <script type="text/javascript" src="/WEB-APP/webponent/thirdParty/jquery/jquery-ui-1.10.3.min.js"></script>
 <script type="text/javascript" src="/WEB-APP/webponent/tab/tab.js"></script>
@@ -19,66 +19,41 @@
 </head>
 <body>
 
-<div id="popWrap" style="width:600px;">
-	<h1>이메일 발송</h1>
+<div id="popWrap" style="width:400px">
+	<h1>호칭저장</h1>
 	<div class="popContents">
-		
 		<form method="post" action="/">
 			<fieldset>
-				<legend>이메일 발송</legend>
+				<legend>호칭저장</legend>
 				<table class="table1">
-					<caption>이메일 발송</caption>
+					<caption>호칭저장</caption>
 					<colgroup>
 						<col width="30%" />
 						<col width="*" />
 					</colgroup>
 					<tbody>
 						<tr>
-							<th>수신자이름</th>
+							<th>호칭</th>
 							<td>
-								<input type="text" style="width:200px" />
+								<select id="" style="width:102px">
+									<option>직접입력</option>
+								</select>	
+								<input type="text" id="" style="width:125px" />
 							</td>
 						</tr>
-						 <tr>
-							<th>수신자 이메일</th>
-							<td>
-								<input type="text" style="width:200px" />
-								<input type="checkbox" id="ch1" />
-								<label for="ch1">본인에게도 발송</label>
-							</td>
-						 </tr>
-						 <tr>
-							<th>제목</th>
-							<td>
-								<span class="widthFull"><input type="text" /></span>
-							</td>
-						 </tr>
-						 <tr>
-							<th>내용</th>
-							<td>
-								<div class="textareaFull">
-									<textarea rows="7" cols="30"></textarea>
-								</div>
-							</td>
-						 </tr>
 					</tbody>
 				</table>
 			</fieldset>
 		</form>
 
-		<ul class="footNote">
-			<li><span>*</span> 상품설명서는 재정안정계획서 이메일발송대상에 포함되지 않습니다.</li>
-		</ul>
-
-		<div class="btnWrap">
-			<a href="#none" class="btn lgLgR">발송</a>
+		<div class="btnWrap mt20">
+			<input type="submit" class="btn lgLgR" value="저장">
 		</div>
-
+		
 	</div>
-	
+	<a href="#none" class="close"><img src="/img/common/btn_close.gif" alt="닫기" /></a>
 </div>
 
 
 </body>
 </html>
-

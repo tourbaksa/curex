@@ -22,11 +22,11 @@ a.cellDel{display:block;}
 /* table - table */
 #conteiner #contents tr.view > td{display:none;}
 #conteiner #contents tr.view td{padding:0;}
-#conteiner #contents tr.view .conTable{border-left:0;padding:9px 9px 14px;width:731px;background-color:#f6f6f6;}
+#conteiner #contents tr.view .conTable {border-left:0;padding:9px 9px 14px;width:731px;background-color:#f6f6f6;}
 #conteiner #contents tr.view .conTable table {width:713px;}
 #conteiner #contents tr.view .conTable table th{background-color:#ddedef;background-image:url(/img/common/bg_th2.gif); background-repeat:repeat;border-top:1px solid #dedede;}
 #conteiner #contents tr.view .conTable table th:first-child{border-top:0;}
-#conteiner #contents tr.view .conTable table td {border-top:1px solid #dedede;padding:3px 3px 2px;background-color:#fff; }
+#conteiner #contents tr.view .conTable table td{border-top:1px solid #dedede;padding:3px 3px 2px;background-color:#fff; }
 #conteiner #contents tr.view .conTable table td:first-child{border-top:0;}
 
 table + .riderPlus table{border-top:0;}
@@ -301,3 +301,12 @@ div.comparison .list dl dt{height:35px;line-height:35px;border-radius:3px;paddin
 div.amountLayer{width:100%; position:relative; z-index:44; display:none;}
 div.amountLayer ul.amountSelect{width:100%; height:150px; border:1px solid #b7b7b7; overflow-y:scroll; overflow-x:hidden; position:absolute; left:0; top:0; background:#fff;}
 div.amountLayer ul.amountSelect li a{line-height:17px; height:17px; color:#707070; display:block; text-align:left; padding-left:9px;}
+
+/* 종신전환 */
+.lifeTable{margin-bottom:8px;}
+.lifeTable table thead th, .lifeTable table tbody td{padding:7px 0 5px;text-align:center;border-left:1px solid #dedede;}
+.lifeTable table th{background:#d0ebee;background-image:none;}
+.lifeTable table td{background:#e7f5f6;background-image:none;}
+
+/* 중도부가설계 */
+td.colorBe{color:#00a2ff;}
