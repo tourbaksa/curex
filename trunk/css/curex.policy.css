@@ -8,6 +8,17 @@
 /* 계약검색결과  */
 div.contartShWrap table.result thead th,
 div.contartShWrap table.result tbody td{line-height:15px; height:21px} /* table height 20px */
+
+div.searchField{border:1px solid #64ade5; width:680px; padding:7px 9px; font-size:0;}
+div.searchField label{margin:0 9px 0 4px; font-size:12px; vertical-align:middle; display:inline-block; line-height:19px;}
+div.searchField div.btnWrap{margin:10px 0 1px 0;}
+
+
+
+div.searhResultBox{border:1px solid #dedede; padding:9px 0 9px 16px; margin:0 0 40px 0;}
+div.searhResultBox input[type="radio"]{margin-left:40px;}
+div.searhResultBox input[type="radio"]:first-child{margin-left:0px;}
+
 /* 계약정보 */
 div.contartShWrap div.contartDetail table tbody td,
 div.contartShWrap div.contartDetail table tbody th,
@@ -37,12 +48,24 @@ div#loanCnt2 div.automRadio input:first-child{margin-left:0px;}
 div#loanCnt2 span.unit{display:inline-block; text-align:right; position:absolute; right:0; top:-30px;}
 div#loanCnt2 span.unit em{line-height:24px; display:inline-block;}
 
+div.unitWrap{position:relative; min-height:24px;}
+div.unitWrap span.unit{display:inline-block; text-align:right; position:absolute; right:0; top:0px;}
+div.unitWrap span.unit em{line-height:24px; display:inline-block;}
+
 div#RdTabCont1{}
 
 /* 계약상세 */
 div.contartDetail{overflow:hidden; margin:0 0 10px 0;}
 div.contartDetail .tl{width:462px; float:left;}
 div.contartDetail .tr{width:542px; float:right;}
+
+/* 변액보험 탭 */
+div.varInsur{width:797px; overflow:hidden;}
+div.varInsur table{width:583px; float:left;}
+div.varInsur a.btn{margin:3px 0 0 3px;}
+
+div.varInsurBox{border:1px solid #dedede; padding:8px 0 8px 20px; margin:10px 0 0 0;}
+div.varInsurBox .footNote li{padding-left:17px; line-height:17px;}
 
 
 
@@ -64,7 +87,7 @@ div.ctBtn{position:absolute; right:0; top:0; margin:0;}
   유지율
 ============================*/
 div.rateZone{border:1px solid #dedede; padding:3px 3px 3px 0; margin:10px 0 10px 0;}
-div.rateZone label{display:inline-block; width:61px; text-align:center;}
+div.rateZone label{display:inline-block; min-width:61px; text-align:center;}
 
 div.tHead{position:relative; margin:10px 0 10px 0;}
 div.tHead h4{font-size:16px; color:#000; height:16px; font-weight:bold;}
