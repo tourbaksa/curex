@@ -19,6 +19,7 @@ legend {
 /* 색상 */
 .red{color:#e8404f;}
 .blue{color:#00a2ff;}
+.lightBlue{color:#22b8c7;}
 
 /* 정렬 */
 .textL{text-align:left;}
@@ -151,6 +152,7 @@ table.bderTN{border-top:0 !important;}
 .table3 tbody td.turn{background:url(/img/common/blet3.gif) no-repeat 50% 50%;}
 .table3 tbody tr.bg{background:#fafafa;}
 .table3 tfoot td{background:#dde3ef;border-left:1px solid #fff;padding-left:10px;}
+.table3 tfoot th{background:#dde3ef;}
 .table3 tfoot tr td:first-child{border-left:0;}
 .table3 tfoot td.price{padding:7px 14px 7px 0; font-size:14px;}
 .table3 tfoot td.bderL{border-left:1px solid #fff !important;}
@@ -557,14 +559,14 @@ div.fLset span.towLine{display:block; padding:4px 0 0 0; margin:4px 0 0 0;} /* �
 
 /* bg + 텍스트가 있는 아이콘 */
 /* 펼침아이콘 */
-.btn.smWtRb span.txtArrow{background:url(../img/common/blt_arrowB.png) no-repeat 0 50%; margin:0 1px 0 5px; display:inline-block; width:9px; text-indent:-99999px; font-size:0;  line-height:15px; height:15px;}/* 텍스트 + up */
-.btn.smWtRb span.txtArrow.up{background:url(../img/common/blt_arrowR.png) no-repeat 0 50%;}
-.btn.smWtRb span.ImgArrow{background:url(../img/common/blt_arrowB.png) no-repeat 0 50%; margin:0 1px 0 0px; display:inline-block; width:9px; text-indent:-99999px; font-size:0;  line-height:15px; height:15px;}/* up만 */
-.btn.smWtRb span.ImgArrow.up{background:url(../img/common/blt_arrowR.png) no-repeat 0 50%;}
+.btn.smWtRb span.txtArrow{background:url(/img/common/blt_arrowB.png) no-repeat 0 50%; margin:0 1px 0 5px; display:inline-block; width:9px; text-indent:-99999px; font-size:0;  line-height:15px; height:15px;}/* 텍스트 + up */
+.btn.smWtRb span.txtArrow.up{background:url(/img/common/blt_arrowR.png) no-repeat 0 50%;}
+.btn.smWtRb span.ImgArrow{background:url(/img/common/blt_arrowB.png) no-repeat 0 50%; margin:0 1px 0 0px; display:inline-block; width:9px; text-indent:-99999px; font-size:0;  line-height:15px; height:15px;}/* up만 */
+.btn.smWtRb span.ImgArrow.up{background:url(/img/common/blt_arrowR.png) no-repeat 0 50%;}
 /* 동기화아이콘 */
 .btn.smGnR span.sync{background:url(/img/sub/icon_Sync.gif) no-repeat 0 0; width:12px; height:12px; margin:0 6px 0 0;}
 /* 테이블 정렬아이콘 */
-button.btnAlign{background:url(../img/common/blt_alignArrow.gif) no-repeat 0 0; width:9px; height:12px; vertical-align:middle; margin-left:6px; position:relative; top:-2px;}
+button.btnAlign{background:url(/img/common/blt_alignArrow.gif) no-repeat 0 0; width:9px; height:12px; vertical-align:middle; margin-left:6px; position:relative; top:-2px;}
 /* 완료, 미완료아이콘 */
 .smWtRb span.comp{background:url(/img/sub/icon_comp.gif) no-repeat 0 50% !important; width:11px; height:11px; display:inline-block; position:relative; top:2px; margin-right:6px;}
 .smWtRb span.Incomp{background:url(/img/sub/icon_Incomp.gif) no-repeat 0 50% !important; width:11px; height:11px; display:inline-block; position:relative; top:2px; margin-right:6px;}

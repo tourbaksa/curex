@@ -272,6 +272,24 @@ div.popContents .textSum strong{color:#01509f;}=======
 /* 계약검색 - 팝업 */
 h2.contarPopTit{font-size:14px; color:#000; font-weight:bold; margin:0 0 10px 0;}
 
+/* 계약리스트 선택 */
+div.listSelectWrap{}
+div.listSelectWrap > ul > li:first-child{margin-left:0;}
+div.listSelectWrap > ul > li{float:left; width:164px; border:1px solid #dedede; margin-left:10px;}
+div.listSelectWrap > ul > li strong{
+	font-weight:normal;
+	text-align:center;
+	line-height:29px;
+	height:29px;
+	border-top:1px solid #fff;
+	border-left:1px solid #fff;
+	display:block;
+	background-color: #f3f4f5;
+	background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPgo8bGluZWFyR3JhZGllbnQgaWQ9Imc0MjgiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjAlIiB5Mj0iMTAwJSI+CjxzdG9wIHN0b3AtY29sb3I9IiNGQUZBRkEiIG9mZnNldD0iMCIvPjxzdG9wIHN0b3AtY29sb3I9IiNGMkYyRjIiIG9mZnNldD0iMSIvPgo8L2xpbmVhckdyYWRpZW50Pgo8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2c0MjgpIiAvPgo8L3N2Zz4=);	
+}
+div.listSelectWrap > ul > li > li{float:none; border-bottom:1px solid #dedede;}
+div.listSelectWrap > ul ul li a{display:block; border-top:1px solid #dedede; padding:8px 0 5px 10px;}
+
 /* 연금액세부조회 */
 div.annuDetail{overflow:hidden; margin:0 0 10px 0;}
 div.annuDetail table{width:185px; float:left;}

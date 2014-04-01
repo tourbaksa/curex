@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
 <head>
-<title> 계약검색 </title>
+<title> 계약리스트 </title>
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
 <link rel="stylesheet" href="/WEB-APP/webponent/css/common.css" type="text/css" />
@@ -32,97 +32,116 @@
 			<ul class="location">
 				<li><a href="#none">홈&nbsp;</a>&gt;</li>
 				<li><a href="#none">&nbsp;계약&nbsp;</a>&gt;</li>
-				<li><a href="#none">&nbsp;계약검색 &nbsp;</a></li>
+				<li><a href="#none">&nbsp;계약리스트 &nbsp;</a></li>
 			</ul>
 		</div>
 		<!-- 공통 컨텐츠 -->
 		<div id="contents" class="contartShWrap clear-fix">
-			<h3>검색결과 - 성명 "김승헌"에 대한 검색결과 총 000건</h3>
-			<table summary="검색결과 리스트" class="listTable result" width="100%">
-				<caption>검색결과리스트</caption>
+			<table summary="리스트종류, 검색조건등 계약리스트검색정보제공" width="100%" class="table1 mb10">
+				<caption>검색리스트</caption>
 				<colgroup>
-					<col width="3%" />
+					<col width="27%" />
 					<col width="*" />
-					<col width="9%" />
-					<col width="10%" />
-					<col width="10%" />
-					<col width="9%" />
-					<col width="9%" />
-					<col width="9%" />
-					<col width="12%" />
-					<col width="9%" />
-					<col width="9%" />
 				</colgroup>
-				<thead>
-				<tr class="border">
-					<th scope="col">삭제</th>
-					<th scope="col">증권번호<button type="button" class="btnAlign"><span>정렬</span></button></th>
-					<th scope="col">계약자<button type="button" class="btnAlign"><span>정렬</span></button></th>
-					<th scope="col">피보험자<button type="button" class="btnAlign"><span>정렬</span></button></th>
-					<th scope="col">계약일<button type="button" class="btnAlign"><span>정렬</span></button></th>
-					<th scope="col">보험종류<button type="button" class="btnAlign"><span>정렬</span></button></th>
-					<th scope="col">상태<button type="button" class="btnAlign"><span>정렬</span></button></th>
-					<th scope="col">보험료<button type="button" class="btnAlign"><span>정렬</span></button></th>
-					<th scope="col">일시보장금<button type="button" class="btnAlign"><span>정렬</span></button></th>
-					<th scope="col">납입주기<button type="button" class="btnAlign"><span>정렬</span></button></th>
-					<th scope="col">모집LP<button type="button" class="btnAlign"><span>정렬</span></button></th>
-				</tr>
-				</thead>
 				<tbody>
 					<tr>
-						<td><input type="checkbox" title="현재행선택" /></td>
-						<td class="PyNumber"><a href="#">12345678910</a></td>
-						<td>김승헌</td>
-						<td>김승현</td>
-						<td>2014-02-03</td>
-						<td>변액</td>
-						<td>정상</td>
-						<td>200,000</td>
-						<td>30,000,000</td>
-						<td>월납</td>
-						<td>김경숙</td>
+					<th scope="col">리스트 종류</th>
+					<th scope="col">검색조건</th>
 					</tr>
 					<tr>
-						<td><input type="checkbox" title="현재행선택" /></td>
-						<td class="PyNumber"><a href="#">12345678910</a></td>
-						<td>김승헌</td>
-						<td>김승현</td>
-						<td>2014-02-03</td>
-						<td>변액</td>
-						<td>정상</td>
-						<td>200,000</td>
-						<td>30,000,000</td>
-						<td>월납</td>
-						<td>김경숙</td>
-					</tr>
-					<tr>
-						<td><input type="checkbox" title="현재행선택" /></td>
-						<td class="PyNumber"><a href="#">12345678910</a></td>
-						<td>김승헌</td>
-						<td>김승현</td>
-						<td>2014-02-03</td>
-						<td>변액</td>
-						<td>정상</td>
-						<td>200,000</td>
-						<td>30,000,000</td>
-						<td>월납</td>
-						<td>김경숙</td>
-					</tr>
-					<tr>
-						<td><input type="checkbox" title="현재행선택" /></td>
-						<td class="PyNumber"><a href="#">12345678910</a></td>
-						<td>김승헌</td>
-						<td>김승현</td>
-						<td>2014-02-03</td>
-						<td>변액</td>
-						<td>정상</td>
-						<td>200,000</td>
-						<td>30,000,000</td>
-						<td>월납</td>
-						<td>김경숙</td>
+						<td><input type="text" value="리스트 종류를 선택하세요." style="width:227px;" /> <a href="#" class="btn smGyRb">검색</a></td>
+						<td>
+							<select title="검색조건선택" style="width:227px;">
+								<option>선택안함</option>
+								<option></option>
+							</select>
+							<input type="text" value="2014-01-08" style="width:214px">
+							<a class="carendar" href="#"><span class="cdr">23</span></a>
+							~
+							<input type="text" value="2014-01-08" style="width:214px">
+							<a class="carendar" href="#"><span class="cdr">23</span></a>
+						</td>
 					</tr>
 				</tbody>
 			</table>
+			<div class="btnWrap">
+				<input type="submit" class="btn lgBeR" value="검색" />
+			</div>
+			<div class="fieldWrap add">
+				<div class="btnWrap">
+					<h3 class="btnL">계약리스트 - 보유계약 리스트 검색결과 00건</h3>
+					<a href="#none" class="btn smGnR">산출조건 및 유의사항</a>
+					<a href="#none" class="btn smLgR fieldOpen">검색필드 선택 +</a>
+				</div>
+				<div class="searchField">
+					<div class="FormSet">
+						<input type="checkbox" id="feild01" /><label for="feild01">증권번호</label>
+						<input type="checkbox" id="feild02" /><label for="feild02">계약자</label>
+						<input type="checkbox" id="feild03" /><label for="feild03">피보험자</label>
+						<input type="checkbox" id="feild04" /><label for="feild04">계약일</label>
+						<input type="checkbox" id="feild05" /><label for="feild05">보험종류</label>
+						<input type="checkbox" id="feild06" /><label for="feild06">상태</label>
+						<input type="checkbox" id="feild07" /><label for="feild07">보험료</label>
+						<input type="checkbox" id="feild08" /><label for="feild08">일시보장금</label>
+						<input type="checkbox" id="feild09" /><label for="feild09">납입주기</label>
+						<input type="checkbox" id="feild10" /><label for="feild10">모집LP</label>
+						<input type="checkbox" id="feild11" /><label for="feild11">일반사망</label>
+						<input type="checkbox" id="feild12" /><label for="feild12">재해사망</label>
+						<input type="checkbox" id="feild13" /><label for="feild13">해약환급금</label>
+						<input type="checkbox" id="feild14" /><label for="feild14">대출가능금액</label>
+						<input type="checkbox" id="feild15" /><label for="feild15">PL원금</label>
+						<input type="checkbox" id="feild16" /><label for="feild16">APL원금</label>
+						<input type="checkbox" id="feild17" /><label for="feild17">LNB</label>
+						<input type="checkbox" id="feild18" /><label for="feild18">FBN</label>
+						<input type="checkbox" id="feild19" /><label for="feild19">DNB</label>
+						<input type="checkbox" id="feild20" /><label for="feild20">SNC</label><br />
+						<input type="checkbox" id="feild21" /><label for="feild21">핸드폰</label>
+						<input type="checkbox" id="feild22" /><label for="feild22">자택주소</label>
+						<input type="checkbox" id="feild23" /><label for="feild23">우편물수령처</label>
+						<input type="checkbox" id="feild24" /><label for="feild24">직장주소</label>
+					</div>
+					<div class="btnWrap">
+						<a href="#" class="btn smGyRb fieldClose">적용</a>
+					</div>
+					<!--  적용을 클릭면 레이어 닫힙니다. 필요 하지않으시면  위의 fieldClose를 지우시면 됩니다. -->
+				</div>
+				<table summary="검색결과 리스트" class="listTable result" width="100%">
+					<caption>검색결과리스트</caption>
+					<colgroup>
+						<col width="3%" />
+						<col width="*" />
+						<col width="9%" />
+						<col width="10%" />
+						<col width="10%" />
+						<col width="9%" />
+						<col width="9%" />
+						<col width="9%" />
+						<col width="12%" />
+						<col width="9%" />
+						<col width="9%" />
+					</colgroup>
+					<thead>
+					<tr class="border">
+						<th scope="col">삭제</th>
+						<th scope="col">증권번호</th>
+						<th scope="col">계약자</th>
+						<th scope="col">피보험자</th>
+						<th scope="col">계약일</th>
+						<th scope="col">보험종류</th>
+						<th scope="col">상태</th>
+						<th scope="col">보험료</th>
+						<th scope="col">일시보장금</th>
+						<th scope="col">납입주기</th>
+						<th scope="col">모집LP</th>
+					</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td style="height:315px" colspan="11"><img src="/img/sub/img_loadingBar.gif" alt="로딩중입니다." /></td>
+						</tr> 
+					</tbody>
+				</table>
+			</div>
 
 			<h3>계약정보</h3>
 			<div class="ctInfoWrap ci-tab">
@@ -148,7 +167,11 @@
 						<div class="add">
 							<h4 class="hide-element">가입내역</h4>
 							<div class="ensureCont">
-								<table class="listTable tl" summary="상품별 가입내역에대한 계약정보리스트를 제공합니다. " width="100%">
+								<div class="detailInfo">
+									<span>항목을 선택해 주세요.</span> <!-- 항목이 있으면 <span>상단 목록에서 항목을 선택해 주세요.</span> 통째로 없애시면됩니다. -->
+								</div>
+
+								<!-- <table class="listTable tl" summary="상품별 가입내역에대한 계약정보리스트를 제공합니다. " width="100%">
 									<caption>가입내역정보</caption>
 									<colgroup>
 										<col width="*" />
@@ -394,7 +417,7 @@
 								<a href="#" class="btn lgBeR">기계약 보장금액 예시표인쇄</a>
 								<a href="#" class="btn lgBeR">기계약 재정 안정계획 EMAIL 발송</a>
 								<a href="#" class="btn lgBeR">계약내용 인쇄</a>
-							</div>
+							</div> -->
 						</div>
 					</li>
 					<li>

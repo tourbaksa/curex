@@ -16,7 +16,7 @@ div.contartWrap .table1 tbody td.tac{padding:0;}
 /* 계약검색 */
 /* 계약검색결과  */
 div.contartShWrap table.result thead th,
-div.contartShWrap table.result tbody td{line-height:15px; height:21px} /* table height 20px */
+div.contartShWrap table.result tbody td{line-height:15px; height:21px; padding:0 !important;} /* table height 20px */
 
 /* 계약 리스트 */
 div.fieldWrap{position: relative;}
@@ -63,8 +63,6 @@ div.unitWrap{position:relative; min-height:24px;}
 div.unitWrap span.unit{display:inline-block; text-align:right; position:absolute; right:0; top:0px;}
 div.unitWrap span.unit em{line-height:24px; display:inline-block;}
 
-div#RdTabCont1{}
-
 /* 계약상세 */
 div.contartDetail{overflow:hidden; margin:0 0 10px 0;}
 div.contartDetail .tl{width:462px; float:left;}
@@ -77,11 +75,6 @@ div.varInsur a.btn{margin:3px 0 0 3px;}
 
 div.varInsurBox{border:1px solid #dedede; padding:8px 0 8px 20px; margin:10px 0 0 0;}
 div.varInsurBox .footNote li{padding-left:17px; line-height:17px;}
-
-
-
-
-
 
 /* 좌 버튼 */
 div.ctBtn{position:absolute; right:0; top:0; margin:0;}
@@ -144,9 +137,12 @@ table.policy .callNum{text-align:center;}
 table.policy .callNum a{color:#00a1b1; text-decoration:underline;}
 
 /* 말풍선 */
-span.bubble{position:relative;display:none; width:154px;}
-span.bubble .bb{position:absolute;left:-16;top:-87px;z-index:100;border:1px solid #64ade5;background:#f9fcff; padding:10px 10px;border-radius:3px;font-size:11px;line-height:11px; font-weight:normal; width:165px;}
-span.bubble .arr{background:url(/img/sub/icon_bubble_bottom.png) no-repeat;position:absolute;bottom:-7px;left:50%;margin-left:-4px;width:11px;height:6px;}
+table.policy span.bubble{position:relative;display:none; width:154px;}
+table.policy span.bubble .bb{position:absolute;left:-38px;bottom:26px;z-index:100;border:1px solid #64ade5;background:#f9fcff; padding:10px 10px;border-radius:3px;font-size:11px;line-height:15px; font-weight:normal; width:165px;}
+table.policy span.bubble .arr{background:url(/img/sub/icon_bubble_bottom.png) no-repeat;position:absolute;bottom:-7px;left:50%;margin-left:-4px;width:11px;height:6px;}
+
+table.policy span.bubble.b2 .bb{left:38px;}
+table.policy span.bubble.b4 .bb{left:-41px;}
 
 /* 청약진행사항 */
 ul.subsProcess{float:right; overflow:hidden; padding:0 0 8px 0;}
@@ -154,7 +150,16 @@ ul.subsProcess li{font-size:12px; float:left; text-align:right; padding-right:10
 ul.subsProcess li a{color:#00a1b1; text-decoration:underline;}
 
 /* 상세정보 */
-div.policyWrap div.detailInfo{border:1px solid #dededd; min-height:228px; position:relative;}
-div.policyWrap div.detailInfo span{position:absolute; display:block; text-align:center; top:50%; left:43%;}
+div.detailInfo{border:1px solid #dededd; min-height:228px; position:relative;}
+div.detailInfo span{position:absolute; display:block; text-align:center; top:50%; left:43%;}
 
 
+/*==========================
+  계약리뷰 - 보장리뷰 레이어
+============================*/
+a.btnReview{display:block; width:20px; height:20px; background:url(/img/common/blt_arrowR.png) no-repeat 50% 50%; font-size:0; line-height:0; overflow:hidden; text-indent:-9999;}
+a.btnReview.close{background-image:url(/img/common/blt_arrowB.png);}
+tr.ReviewWrap{display:none;}
+tr.ReviewWrap div.ReviewTableLayer{padding:19px; width:100%; background-color:#dde3ef;}
+tr.ReviewWrap div.ReviewTableLayer table td{background-color:#fff;}
+div.contartShWrap td span.selectFull{margin:2px 2px 1px 4px;}

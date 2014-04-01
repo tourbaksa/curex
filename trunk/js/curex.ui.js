@@ -19,7 +19,8 @@ curex.ui = {
 			, $bePointBtn = $(".calcStandard", scope) || $(".calcStandard") //산출기준 팝업
 			, $spClose = $(".spClose", scope) || $(".spClose") //산출기준 팝업 닫기
 			, $bubbleLnk = $(".bubbleLnk", scope) || $(".bubbleLnk") // thankyou Call 말풍선
-			, $fieldOpen = $(".fieldOpen", scope) || $(".fieldOpen"); // 검색필드선택
+			, $fieldOpen = $(".fieldOpen", scope) || $(".fieldOpen") // 검색필드선택
+			, $btnReview  = $(".btnReview ", scope) || $(".btnReview "); // 보장리뷰레이어
 
 			/* 기계약 합산잔여한도 */
 			$previousBtn.off().on({
@@ -80,77 +81,92 @@ curex.ui = {
 			});
 
 
-		/* 산출기준레이어팝업 */
-		function standard(){
-			if(!$("div.smartPicWrap").length){return false;}
-			var flag ,
-				  stObj = $("div.smartPicWrap"),
-				  stObj_hw = stObj.height()/2, // 전체컨텐츠 높이 /2
-				  stObj_y = stObj.position().top // 현재 컨텐츠가 window에서 떨어진 top길이
+			/* 산출기준레이어팝업 */
+			function standard(){
+				if(!$("div.smartPicWrap").length){return false;}
+				var flag ,
+					  stObj = $("div.smartPicWrap"),
+					  stObj_hw = stObj.height()/2, // 전체컨텐츠 높이 /2
+					  stObj_y = stObj.position().top // 현재 컨텐츠가 window에서 떨어진 top길이
 
-			$spClose.off().on({
-				click:function(){
-					var popObj = $("div.spBox").find("div.compLayer");
-					popObj.css({"display" : "none"})
-					return false;
-				}
+				$spClose.off().on({
+					click:function(){
+						var popObj = $("div.spBox").find("div.compLayer");
+						popObj.css({"display" : "none"})
+						return false;
+					}
+				});
+
+				$bePointBtn.each(function(idx){
+					$(this).off().on({
+						click:function(e){
+							var spBox = $(this).closest("div.spBox"),
+								  popObjLayer = spBox.find("div.compLayer"),
+								  spBoxy = spBox.position().top, 
+								  posy= spBoxy- stObj_y; // 레이어를 담고있는 spBox의 top위치
+							if (posy > stObj_hw){ //현재 클릭한 박스를 담고있는 컨텐츠 위치값이 컨텐츠높이반값보다 크면 박스가 위로뜸.
+								$(".btmArrow").remove();
+								popObjLayer.append("<span class='btmArrow' />")
+								popObjLayer.removeClass("bottom")
+								popObjLayer.addClass("bottom")
+								popObjLayer.css({"display" : "block" });
+								$(".btmArrow").css({"display" : "block"});
+							}
+							$("div.spBox").eq(flag).find("div.compLayer").css({"display" : "none"});
+							popObjLayer.css({"display" : "block"})
+							
+							flag = idx;
+							return false;
+						}
+					});
+				});
+			}
+			standard();
+
+			$bubbleLnk.each(function(idx){
+				$(this).off().on({
+					click:function(){
+						$(".bubble").css("display","none");
+						$(this).parent().find(".bubble").css({
+							"display":"block" 
+
+						});
+					}
+				});
 			});
 
-			$bePointBtn.each(function(idx){
+			$fieldOpen.each(function(){
 				$(this).off().on({
-					click:function(e){
-						var spBox = $(this).closest("div.spBox"),
-							  popObjLayer = spBox.find("div.compLayer"),
-							  spBoxy = spBox.position().top, 
-							  posy= spBoxy- stObj_y; // 레이어를 담고있는 spBox의 top위치
-						if (posy > stObj_hw){ //현재 클릭한 박스를 담고있는 컨텐츠 위치값이 컨텐츠높이반값보다 크면 박스가 위로뜸.
-							$(".btmArrow").remove();
-							popObjLayer.append("<span class='btmArrow' />")
-							popObjLayer.removeClass("bottom")
-							popObjLayer.addClass("bottom")
-							popObjLayer.css({"display" : "block" });
-							$(".btmArrow").css({"display" : "block"});
+					click:function(){
+						var $fieldLayer = $(".searchField", scope);
+						$fieldLayer.css({"display" : "none"});
+						if($fieldLayer.is(":hidden")){
+							$fieldLayer.css({"display" : "block"});
 						}
-						$("div.spBox").eq(flag).find("div.compLayer").css({"display" : "none"});
-						popObjLayer.css({"display" : "block"})
-						
-						flag = idx;
+					}
+				});
+			});
+
+			$(".fieldClose").click(function(){
+				$(".searchField", scope).css({"display" : "none"});
+			});
+
+			$btnReview.each(function(idx){
+				$btnReview.addClass("close");
+				$(this).off().on({
+					click:function(){
+						if($(this).hasClass("close")){
+							$btnReview.addClass("close");
+							$(".ReviewWrap", scope).hide();
+							$(this).removeClass("close");
+							$(".ReviewWrap", scope).eq(idx).show();
+						}
 						return false;
 					}
 				});
 			});
-		}
-		standard();
 
-		$bubbleLnk.each(function(idx){
-			$(this).off().on({
-				click:function(){
-					$(".bubble").css("display","none");
-					$(this).parent().find(".bubble").css({
-						"display":"block" 
-
-					});
-				}
-			});
-		});
-
-		$fieldOpen.each(function(){
-			$(this).off().on({
-				click:function(){
-					var $fieldLayer = $(".searchField", scope);
-					$fieldLayer.css({"display" : "none"});
-					if($fieldLayer.is(":hidden")){
-						$fieldLayer.css({"display" : "block"});
-					}
-				}
-			});
-		});
-
-		$(".fieldClose").click(function(){
-			$(".searchField", scope).css({"display" : "none"});
-		})
-
-
+			
 	},
 
 
@@ -336,7 +352,7 @@ curex.ui = {
 	curexTab:function(){
 		var scope = this.op
 
-		$.fn.tab = function(){
+		$.fn.attab = function(){
 			return this.each(function(){
 				var $obj = $(this)
 				, $active
@@ -372,8 +388,8 @@ curex.ui = {
 				});
 			});
 		}
-		$(".attab",scope).tab();
-		$(".atsubtab",scope).tab();
+		$(".attab",scope).attab();
+		$(".atsubtab",scope).attab();
 	},
 
 	/*큐렉스 라디오버튼탭 */
