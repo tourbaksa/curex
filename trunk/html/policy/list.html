@@ -69,131 +69,260 @@
 			<div class="btnWrap">
 				<input type="submit" class="btn lgBeR" value="검색" />
 			</div>
-			
-
-
-
-			<div class="btnWrap">
-				<h3 class="btnL">계약리스트 - 보유계약 리스트 검색결과 00건</h3>
-				<a href="#none" class="btn smGnR">산출조건 및 유의사항</a>
-				<a href="#none" class="btn smLgR">검색필드 선택 +</a>
-			</div>
-			<div class="searchField">
-				<div class="FormSet">
-					<input type="checkbox" id="feild01" /><label for="feild01">증권번호</label>
-					<input type="checkbox" id="feild02" /><label for="feild02">계약자</label>
-					<input type="checkbox" id="feild03" /><label for="feild03">피보험자</label>
-					<input type="checkbox" id="feild04" /><label for="feild04">계약일</label>
-					<input type="checkbox" id="feild05" /><label for="feild05">보험종류</label>
-					<input type="checkbox" id="feild06" /><label for="feild06">상태</label>
-					<input type="checkbox" id="feild07" /><label for="feild07">보험료</label>
-					<input type="checkbox" id="feild08" /><label for="feild08">일시보장금</label>
-					<input type="checkbox" id="feild09" /><label for="feild09">납입주기</label>
-					<input type="checkbox" id="feild10" /><label for="feild10">모집LP</label>
-					<input type="checkbox" id="feild11" /><label for="feild11">일반사망</label>
-					<input type="checkbox" id="feild12" /><label for="feild12">재해사망</label>
-					<input type="checkbox" id="feild13" /><label for="feild13">해약환급금</label>
-					<input type="checkbox" id="feild14" /><label for="feild14">대출가능금액</label>
-					<input type="checkbox" id="feild15" /><label for="feild15">PL원금</label>
-					<input type="checkbox" id="feild16" /><label for="feild16">APL원금</label>
-					<input type="checkbox" id="feild17" /><label for="feild17">LNB</label>
-					<input type="checkbox" id="feild18" /><label for="feild18">FBN</label>
-					<input type="checkbox" id="feild19" /><label for="feild19">DNB</label>
-					<input type="checkbox" id="feild20" /><label for="feild20">SNC</label><br />
-					<input type="checkbox" id="feild21" /><label for="feild21">핸드폰</label>
-					<input type="checkbox" id="feild22" /><label for="feild22">자택주소</label>
-					<input type="checkbox" id="feild23" /><label for="feild23">우편물수령처</label>
-					<input type="checkbox" id="feild24" /><label for="feild24">직장주소</label>
-				</div>
+			<div class="fieldWrap add">
 				<div class="btnWrap">
-					<a href="#" class="btn smGyRb">적용</a>
+					<h3 class="btnL">계약리스트 - 보유계약 리스트 검색결과 00건</h3>
+					<a href="#none" class="btn smGnR">산출조건 및 유의사항</a>
+					<a href="#none" class="btn smLgR fieldOpen">검색필드 선택 +</a>
 				</div>
+				<div class="searchField">
+					<div class="FormSet">
+						<input type="checkbox" id="feild01" /><label for="feild01">증권번호</label>
+						<input type="checkbox" id="feild02" /><label for="feild02">계약자</label>
+						<input type="checkbox" id="feild03" /><label for="feild03">피보험자</label>
+						<input type="checkbox" id="feild04" /><label for="feild04">계약일</label>
+						<input type="checkbox" id="feild05" /><label for="feild05">보험종류</label>
+						<input type="checkbox" id="feild06" /><label for="feild06">상태</label>
+						<input type="checkbox" id="feild07" /><label for="feild07">보험료</label>
+						<input type="checkbox" id="feild08" /><label for="feild08">일시보장금</label>
+						<input type="checkbox" id="feild09" /><label for="feild09">납입주기</label>
+						<input type="checkbox" id="feild10" /><label for="feild10">모집LP</label>
+						<input type="checkbox" id="feild11" /><label for="feild11">일반사망</label>
+						<input type="checkbox" id="feild12" /><label for="feild12">재해사망</label>
+						<input type="checkbox" id="feild13" /><label for="feild13">해약환급금</label>
+						<input type="checkbox" id="feild14" /><label for="feild14">대출가능금액</label>
+						<input type="checkbox" id="feild15" /><label for="feild15">PL원금</label>
+						<input type="checkbox" id="feild16" /><label for="feild16">APL원금</label>
+						<input type="checkbox" id="feild17" /><label for="feild17">LNB</label>
+						<input type="checkbox" id="feild18" /><label for="feild18">FBN</label>
+						<input type="checkbox" id="feild19" /><label for="feild19">DNB</label>
+						<input type="checkbox" id="feild20" /><label for="feild20">SNC</label><br />
+						<input type="checkbox" id="feild21" /><label for="feild21">핸드폰</label>
+						<input type="checkbox" id="feild22" /><label for="feild22">자택주소</label>
+						<input type="checkbox" id="feild23" /><label for="feild23">우편물수령처</label>
+						<input type="checkbox" id="feild24" /><label for="feild24">직장주소</label>
+					</div>
+					<div class="btnWrap">
+						<a href="#" class="btn smGyRb fieldClose">적용</a>
+					</div>
+					<!--  적용을 클릭면 레이어 닫힙니다. 필요 하지않으시면  위의 fieldClose를 지우시면 됩니다. -->
+				</div>
+				<table summary="검색결과 리스트" class="listTable result" width="100%">
+					<caption>검색결과리스트</caption>
+					<colgroup>
+						<col width="3%" />
+						<col width="*" />
+						<col width="9%" />
+						<col width="10%" />
+						<col width="10%" />
+						<col width="9%" />
+						<col width="9%" />
+						<col width="9%" />
+						<col width="12%" />
+						<col width="9%" />
+						<col width="9%" />
+					</colgroup>
+					<thead>
+					<tr class="border">
+						<th scope="col">삭제</th>
+						<th scope="col">증권번호</th>
+						<th scope="col">계약자</th>
+						<th scope="col">피보험자</th>
+						<th scope="col">계약일</th>
+						<th scope="col">보험종류</th>
+						<th scope="col">상태</th>
+						<th scope="col">보험료</th>
+						<th scope="col">일시보장금</th>
+						<th scope="col">납입주기</th>
+						<th scope="col">모집LP</th>
+					</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><input type="checkbox" title="현재행선택" /></td>
+							<td class="PyNumber"><a href="#">12345678910</a></td>
+							<td>김승헌</td>
+							<td>김승현</td>
+							<td>2014-02-03</td>
+							<td>변액</td>
+							<td>정상</td>
+							<td>200,000</td>
+							<td>30,000,000</td>
+							<td>월납</td>
+							<td>김경숙</td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" title="현재행선택" /></td>
+							<td class="PyNumber"><a href="#">12345678910</a></td>
+							<td>김승헌</td>
+							<td>김승현</td>
+							<td>2014-02-03</td>
+							<td>변액</td>
+							<td>정상</td>
+							<td>200,000</td>
+							<td>30,000,000</td>
+							<td>월납</td>
+							<td>김경숙</td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" title="현재행선택" /></td>
+							<td class="PyNumber"><a href="#">12345678910</a></td>
+							<td>김승헌</td>
+							<td>김승현</td>
+							<td>2014-02-03</td>
+							<td>변액</td>
+							<td>정상</td>
+							<td>200,000</td>
+							<td>30,000,000</td>
+							<td>월납</td>
+							<td>김경숙</td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" title="현재행선택" /></td>
+							<td class="PyNumber"><a href="#">12345678910</a></td>
+							<td>김승헌</td>
+							<td>김승현</td>
+							<td>2014-02-03</td>
+							<td>변액</td>
+							<td>정상</td>
+							<td>200,000</td>
+							<td>30,000,000</td>
+							<td>월납</td>
+							<td>김경숙</td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" title="현재행선택" /></td>
+							<td class="PyNumber"><a href="#">12345678910</a></td>
+							<td>김승헌</td>
+							<td>김승현</td>
+							<td>2014-02-03</td>
+							<td>변액</td>
+							<td>정상</td>
+							<td>200,000</td>
+							<td>30,000,000</td>
+							<td>월납</td>
+							<td>김경숙</td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" title="현재행선택" /></td>
+							<td class="PyNumber"><a href="#">12345678910</a></td>
+							<td>김승헌</td>
+							<td>김승현</td>
+							<td>2014-02-03</td>
+							<td>변액</td>
+							<td>정상</td>
+							<td>200,000</td>
+							<td>30,000,000</td>
+							<td>월납</td>
+							<td>김경숙</td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" title="현재행선택" /></td>
+							<td class="PyNumber"><a href="#">12345678910</a></td>
+							<td>김승헌</td>
+							<td>김승현</td>
+							<td>2014-02-03</td>
+							<td>변액</td>
+							<td>정상</td>
+							<td>200,000</td>
+							<td>30,000,000</td>
+							<td>월납</td>
+							<td>김경숙</td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" title="현재행선택" /></td>
+							<td class="PyNumber"><a href="#">12345678910</a></td>
+							<td>김승헌</td>
+							<td>김승현</td>
+							<td>2014-02-03</td>
+							<td>변액</td>
+							<td>정상</td>
+							<td>200,000</td>
+							<td>30,000,000</td>
+							<td>월납</td>
+							<td>김경숙</td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" title="현재행선택" /></td>
+							<td class="PyNumber"><a href="#">12345678910</a></td>
+							<td>김승헌</td>
+							<td>김승현</td>
+							<td>2014-02-03</td>
+							<td>변액</td>
+							<td>정상</td>
+							<td>200,000</td>
+							<td>30,000,000</td>
+							<td>월납</td>
+							<td>김경숙</td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" title="현재행선택" /></td>
+							<td class="PyNumber"><a href="#">12345678910</a></td>
+							<td>김승헌</td>
+							<td>김승현</td>
+							<td>2014-02-03</td>
+							<td>변액</td>
+							<td>정상</td>
+							<td>200,000</td>
+							<td>30,000,000</td>
+							<td>월납</td>
+							<td>김경숙</td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" title="현재행선택" /></td>
+							<td class="PyNumber"><a href="#">12345678910</a></td>
+							<td>김승헌</td>
+							<td>김승현</td>
+							<td>2014-02-03</td>
+							<td>변액</td>
+							<td>정상</td>
+							<td>200,000</td>
+							<td>30,000,000</td>
+							<td>월납</td>
+							<td>김경숙</td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" title="현재행선택" /></td>
+							<td class="PyNumber"><a href="#">12345678910</a></td>
+							<td>김승헌</td>
+							<td>김승현</td>
+							<td>2014-02-03</td>
+							<td>변액</td>
+							<td>정상</td>
+							<td>200,000</td>
+							<td>30,000,000</td>
+							<td>월납</td>
+							<td>김경숙</td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" title="현재행선택" /></td>
+							<td class="PyNumber"><a href="#">12345678910</a></td>
+							<td>김승헌</td>
+							<td>김승현</td>
+							<td>2014-02-03</td>
+							<td>변액</td>
+							<td>정상</td>
+							<td>200,000</td>
+							<td>30,000,000</td>
+							<td>월납</td>
+							<td>김경숙</td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" title="현재행선택" /></td>
+							<td class="PyNumber"><a href="#">12345678910</a></td>
+							<td>김승헌</td>
+							<td>김승현</td>
+							<td>2014-02-03</td>
+							<td>변액</td>
+							<td>정상</td>
+							<td>200,000</td>
+							<td>30,000,000</td>
+							<td>월납</td>
+							<td>김경숙</td>
+						</tr>																																																												
+					</tbody>
+				</table>
 			</div>
-			<table summary="검색결과 리스트" class="listTable result" width="100%">
-				<caption>검색결과리스트</caption>
-				<colgroup>
-					<col width="3%" />
-					<col width="*" />
-					<col width="9%" />
-					<col width="10%" />
-					<col width="10%" />
-					<col width="9%" />
-					<col width="9%" />
-					<col width="9%" />
-					<col width="12%" />
-					<col width="9%" />
-					<col width="9%" />
-				</colgroup>
-				<thead>
-				<tr class="border">
-					<th scope="col">삭제</th>
-					<th scope="col">증권번호</th>
-					<th scope="col">계약자</th>
-					<th scope="col">피보험자</th>
-					<th scope="col">계약일</th>
-					<th scope="col">보험종류</th>
-					<th scope="col">상태</th>
-					<th scope="col">보험료</th>
-					<th scope="col">일시보장금</th>
-					<th scope="col">납입주기</th>
-					<th scope="col">모집LP</th>
-				</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td><input type="checkbox" title="현재행선택" /></td>
-						<td class="PyNumber"><a href="#">12345678910</a></td>
-						<td>김승헌</td>
-						<td>김승현</td>
-						<td>2014-02-03</td>
-						<td>변액</td>
-						<td>정상</td>
-						<td>200,000</td>
-						<td>30,000,000</td>
-						<td>월납</td>
-						<td>김경숙</td>
-					</tr>
-					<tr>
-						<td><input type="checkbox" title="현재행선택" /></td>
-						<td class="PyNumber"><a href="#">12345678910</a></td>
-						<td>김승헌</td>
-						<td>김승현</td>
-						<td>2014-02-03</td>
-						<td>변액</td>
-						<td>정상</td>
-						<td>200,000</td>
-						<td>30,000,000</td>
-						<td>월납</td>
-						<td>김경숙</td>
-					</tr>
-					<tr>
-						<td><input type="checkbox" title="현재행선택" /></td>
-						<td class="PyNumber"><a href="#">12345678910</a></td>
-						<td>김승헌</td>
-						<td>김승현</td>
-						<td>2014-02-03</td>
-						<td>변액</td>
-						<td>정상</td>
-						<td>200,000</td>
-						<td>30,000,000</td>
-						<td>월납</td>
-						<td>김경숙</td>
-					</tr>
-					<tr>
-						<td><input type="checkbox" title="현재행선택" /></td>
-						<td class="PyNumber"><a href="#">12345678910</a></td>
-						<td>김승헌</td>
-						<td>김승현</td>
-						<td>2014-02-03</td>
-						<td>변액</td>
-						<td>정상</td>
-						<td>200,000</td>
-						<td>30,000,000</td>
-						<td>월납</td>
-						<td>김경숙</td>
-					</tr>
-				</tbody>
-			</table>
 
 			<h3>계약정보</h3>
 			<div class="ctInfoWrap ci-tab">
@@ -974,200 +1103,203 @@
 									</table>
 								</div>
 								<div id="automCnt2" class="tabCont">
-									<div class="automRadio RdTab">
-										<input type="radio" checked="checked" name="auto" id="pl" />
-										<label for="pl">PL 자동이체</label>
-										<input type="radio" name="auto" id="apl" />
-										<label for="apl">APL 자동이체</label>
-									</div>
-						
-									<div class="RdTabCont1">
-										<h5 class="subst">PL 자동이체</h5>
-										<table summary="PL자동이체를 위한 상세정보를 제공합니다." width="100%" class="table3">
-											<caption>PL자동이체</caption>
-											<colgroup>
-												<col width="12%" />
-												<col width="13%" />
-												<col width="12%" />
-												<col width="13%" />
-												<col width="12%" />
-												<col width="13%" />
-												<col width="12%" />
-												<col width="*" />
-											</colgroup>
-											<tbody>
+
+									<div class="RdWrap">
+										<div class="automRadio RdTab">
+											<input type="radio" checked="checked" name="auto" id="pl" />
+											<label for="pl">PL 자동이체</label>
+											<input type="radio" name="auto" id="apl" />
+											<label for="apl">APL 자동이체</label>
+										</div>
+							
+										<div class="RdTabCont1">
+											<h5 class="subst">PL 자동이체</h5>
+											<table summary="PL자동이체를 위한 상세정보를 제공합니다." width="100%" class="table3">
+												<caption>PL자동이체</caption>
+												<colgroup>
+													<col width="12%" />
+													<col width="13%" />
+													<col width="12%" />
+													<col width="13%" />
+													<col width="12%" />
+													<col width="13%" />
+													<col width="12%" />
+													<col width="*" />
+												</colgroup>
+												<tbody>
+													<tr>
+														<th>기대출원리금</th>
+														<td></td>
+														<th>대출원금</th>
+														<td></td>
+														<th>대출이자</th>
+														<td></td>
+														<th>계좌구분</th>
+														<td></td>
+													</tr>
+													<tr>
+														<th>약정액</th>
+														<td></td>
+														<th>이체일</th>
+														<td></td>
+														<th>청구개시일</th>
+														<td></td>
+														<th>청구종료일</th>
+														<td></td>
+													</tr>
+													<tr>
+														<th>약정액</th>
+														<td></td>
+														<th>이체일</th>
+														<td></td>
+														<th>청구개시일</th>
+														<td></td>
+														<th>청구종료일</th>
+														<td></td>
+													</tr>
+													<tr>
+														<th>처리일자</th>
+														<td></td>
+														<th>처리방식</th>
+														<td colspan="5"></td>
+													</tr>
+												</tbody>
+											</table>
+							
+											<h5 class="subst">PL 자동이체 변경이력</h5>
+											<table summary="계좌구분, 약정액, 약정이체일, 청구개시일, 청구종료일, 처리일자, 처리자, 비고등 자동이체 변경이력정보리스트를 제공합니다." width="100%" class="listTable">
+												<caption>PL 자동이체 변경이력</caption>
+												<colgroup>
+													<col width="10%" />
+													<col width="*" />
+													<col width="10%" />
+													<col width="10%" />
+													<col width="10%" />
+													<col width="10%" />
+													<col width="10%" />
+													<col width="10%" />
+												</colgroup>
+												<thead>
 												<tr>
-													<th>기대출원리금</th>
-													<td></td>
-													<th>대출원금</th>
-													<td></td>
-													<th>대출이자</th>
-													<td></td>
-													<th>계좌구분</th>
-													<td></td>
+													<th scope="col">계좌구분</th>
+													<th scope="col">약정액</th>
+													<th scope="col">약정이체일</th>
+													<th scope="col">청구개시일</th>
+													<th scope="col">청구종료일</th>
+													<th scope="col">처리일자</th>
+													<th scope="col">처리자</th>
+													<th scope="col">비고</th>
 												</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td></td>
+														<td></td>
+														<td></td>
+														<td></td>
+														<td></td>
+														<td></td>
+														<td></td>
+														<td></td>
+													</tr>
+												</tbody>
+											</table>
+											
+										</div>
+										<div class="RdTabCont2">
+											<h5 class="subst">APL 자동이체</h5>
+											<table summary="APL 자동이체를 위한 상세정보를 제공합니다." width="100%" class="table3">
+												<caption>APL자동이체</caption>
+												<colgroup>
+													<col width="12%" />
+													<col width="13%" />
+													<col width="12%" />
+													<col width="13%" />
+													<col width="12%" />
+													<col width="13%" />
+													<col width="12%" />
+													<col width="*" />
+												</colgroup>
+												<tbody>
+													<tr>
+														<th>APL 원리금</th>
+														<td></td>
+														<th>APL 원금</th>
+														<td></td>
+														<th>APL이자</th>
+														<td></td>
+														<th>계좌구분</th>
+														<td></td>
+													</tr>
+													<tr>
+														<th>약정액</th>
+														<td></td>
+														<th>이체일</th>
+														<td></td>
+														<th>청구개시일</th>
+														<td></td>
+														<th>청구종료일</th>
+														<td></td>
+													</tr>
+													<tr>
+														<th>약정액</th>
+														<td></td>
+														<th>이체일</th>
+														<td></td>
+														<th>청구개시일</th>
+														<td></td>
+														<th>청구종료일</th>
+														<td></td>
+													</tr>
+													<tr>
+														<th>처리일자</th>
+														<td></td>
+														<th>처리방식</th>
+														<td colspan="5"></td>
+													</tr>
+												</tbody>
+											</table>
+							
+											<h5 class="subst">APL 자동이체 변경이력</h5>
+											<table summary="계좌구분, 약정액, 약정이체일, 청구개시일, 청구종료일, 처리일자, 처리자, 비고등 자동이체 변경이력정보리스트를 제공합니다." width="100%" class="listTable">
+												<caption>PL 자동이체 변경이력</caption>
+												<colgroup>
+													<col width="10%" />
+													<col width="*" />
+													<col width="10%" />
+													<col width="10%" />
+													<col width="10%" />
+													<col width="10%" />
+													<col width="10%" />
+													<col width="10%" />
+												</colgroup>
+												<thead>
 												<tr>
-													<th>약정액</th>
-													<td></td>
-													<th>이체일</th>
-													<td></td>
-													<th>청구개시일</th>
-													<td></td>
-													<th>청구종료일</th>
-													<td></td>
+													<th scope="col">계좌구분</th>
+													<th scope="col">약정액</th>
+													<th scope="col">약정이체일</th>
+													<th scope="col">청구개시일</th>
+													<th scope="col">청구종료일</th>
+													<th scope="col">처리일자</th>
+													<th scope="col">처리자</th>
+													<th scope="col">비고</th>
 												</tr>
-												<tr>
-													<th>약정액</th>
-													<td></td>
-													<th>이체일</th>
-													<td></td>
-													<th>청구개시일</th>
-													<td></td>
-													<th>청구종료일</th>
-													<td></td>
-												</tr>
-												<tr>
-													<th>처리일자</th>
-													<td></td>
-													<th>처리방식</th>
-													<td colspan="5"></td>
-												</tr>
-											</tbody>
-										</table>
-						
-										<h5 class="subst">PL 자동이체 변경이력</h5>
-										<table summary="계좌구분, 약정액, 약정이체일, 청구개시일, 청구종료일, 처리일자, 처리자, 비고등 자동이체 변경이력정보리스트를 제공합니다." width="100%" class="listTable">
-											<caption>PL 자동이체 변경이력</caption>
-											<colgroup>
-												<col width="10%" />
-												<col width="*" />
-												<col width="10%" />
-												<col width="10%" />
-												<col width="10%" />
-												<col width="10%" />
-												<col width="10%" />
-												<col width="10%" />
-											</colgroup>
-											<thead>
-											<tr>
-												<th scope="col">계좌구분</th>
-												<th scope="col">약정액</th>
-												<th scope="col">약정이체일</th>
-												<th scope="col">청구개시일</th>
-												<th scope="col">청구종료일</th>
-												<th scope="col">처리일자</th>
-												<th scope="col">처리자</th>
-												<th scope="col">비고</th>
-											</tr>
-											</thead>
-											<tbody>
-												<tr>
-													<td></td>
-													<td></td>
-													<td></td>
-													<td></td>
-													<td></td>
-													<td></td>
-													<td></td>
-													<td></td>
-												</tr>
-											</tbody>
-										</table>
-										
-									</div>
-									<div class="RdTabCont2">
-										<h5 class="subst">APL 자동이체</h5>
-										<table summary="APL 자동이체를 위한 상세정보를 제공합니다." width="100%" class="table3">
-											<caption>APL자동이체</caption>
-											<colgroup>
-												<col width="12%" />
-												<col width="13%" />
-												<col width="12%" />
-												<col width="13%" />
-												<col width="12%" />
-												<col width="13%" />
-												<col width="12%" />
-												<col width="*" />
-											</colgroup>
-											<tbody>
-												<tr>
-													<th>APL 원리금</th>
-													<td></td>
-													<th>APL 원금</th>
-													<td></td>
-													<th>APL이자</th>
-													<td></td>
-													<th>계좌구분</th>
-													<td></td>
-												</tr>
-												<tr>
-													<th>약정액</th>
-													<td></td>
-													<th>이체일</th>
-													<td></td>
-													<th>청구개시일</th>
-													<td></td>
-													<th>청구종료일</th>
-													<td></td>
-												</tr>
-												<tr>
-													<th>약정액</th>
-													<td></td>
-													<th>이체일</th>
-													<td></td>
-													<th>청구개시일</th>
-													<td></td>
-													<th>청구종료일</th>
-													<td></td>
-												</tr>
-												<tr>
-													<th>처리일자</th>
-													<td></td>
-													<th>처리방식</th>
-													<td colspan="5"></td>
-												</tr>
-											</tbody>
-										</table>
-						
-										<h5 class="subst">APL 자동이체 변경이력</h5>
-										<table summary="계좌구분, 약정액, 약정이체일, 청구개시일, 청구종료일, 처리일자, 처리자, 비고등 자동이체 변경이력정보리스트를 제공합니다." width="100%" class="listTable">
-											<caption>PL 자동이체 변경이력</caption>
-											<colgroup>
-												<col width="10%" />
-												<col width="*" />
-												<col width="10%" />
-												<col width="10%" />
-												<col width="10%" />
-												<col width="10%" />
-												<col width="10%" />
-												<col width="10%" />
-											</colgroup>
-											<thead>
-											<tr>
-												<th scope="col">계좌구분</th>
-												<th scope="col">약정액</th>
-												<th scope="col">약정이체일</th>
-												<th scope="col">청구개시일</th>
-												<th scope="col">청구종료일</th>
-												<th scope="col">처리일자</th>
-												<th scope="col">처리자</th>
-												<th scope="col">비고</th>
-											</tr>
-											</thead>
-											<tbody>
-												<tr>
-													<td></td>
-													<td></td>
-													<td></td>
-													<td></td>
-													<td></td>
-													<td></td>
-													<td></td>
-													<td></td>
-												</tr>
-											</tbody>
-										</table>
-										
+												</thead>
+												<tbody>
+													<tr>
+														<td></td>
+														<td></td>
+														<td></td>
+														<td></td>
+														<td></td>
+														<td></td>
+														<td></td>
+														<td></td>
+													</tr>
+												</tbody>
+											</table>
+											
+										</div>
 									</div>
 								</div>
 								<div id="automCnt3" class="tabCont">
@@ -1357,205 +1489,207 @@
 									</table>
 								</div>
 								<div id="loanCnt2" class="tabCont">
-									<div class="automRadio RdTab">
-										<input type="radio" checked="checked" name="auto" id="pl1" />
-										<label for="pl1">PL</label>
-										<input type="radio" name="auto" id="apl1" />
-										<label for="apl1">APL</label>
-									</div>
-						
-									<div class="RdTabCont1">
-										<span class="unit"><em>조회기준일 : 2014-03-24</em><a class="carendar" href="#"> &nbsp; <span class="cdr">23</span></a></span>
-										<table summary="순대출한도액, 기대출원리금,현재대출가능액등 이자납부기일등 대출리스트정보를 제공합니다." width="100%" class="table3">
-											<caption>대출상세리스트</caption>
-											<colgroup>
-												<col width="8%" />
-												<col width="10%" />
-												<col width="10%" />
-												<col width="10%" />
-												<col width="10%" />
-												<col width="10%" />
-												<col width="10%" />
-												<col width="10%" />
-												<col width="10%" />
-												<col width="*" />
-											</colgroup>
-											<thead>
+									<div class="RdWrap">
+										<div class="automRadio RdTab">
+											<input type="radio" checked="checked" name="auto" id="pl1" />
+											<label for="pl1">PL</label>
+											<input type="radio" name="auto" id="apl1" />
+											<label for="apl1">APL</label>
+										</div>
+																
+										<div class="RdTabCont1">
+											<span class="unit"><em>조회기준일 : 2014-03-24</em><a class="carendar" href="#"> &nbsp; <span class="cdr">23</span></a></span>
+											<table summary="순대출한도액, 기대출원리금,현재대출가능액등 이자납부기일등 대출리스트정보를 제공합니다." width="100%" class="table3">
+												<caption>대출상세리스트</caption>
+												<colgroup>
+													<col width="8%" />
+													<col width="10%" />
+													<col width="10%" />
+													<col width="10%" />
+													<col width="10%" />
+													<col width="10%" />
+													<col width="10%" />
+													<col width="10%" />
+													<col width="10%" />
+													<col width="*" />
+												</colgroup>
+												<thead>
+													<tr>
+														<th scope="col">순대출한도액</th>
+														<th scope="col">PL대출원금</th>
+														<th scope="col">PL대출이자</th>
+														<th scope="col">APL대출원금</th>
+														<th scope="col">APL대출이자</th>
+														<th scope="col">기대출원리금</th>
+														<th scope="col">현재대출가능액</th>
+														<th scope="col">실제지급가능액</th>
+														<th scope="col">대출이율</th>
+														<th scope="col">이자납부기일<br />(원금+이자 합산예정일)</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td></td>
+														<td></td>
+														<td></td>
+														<td></td>
+														<td></td>
+														<td></td>
+														<td></td>
+														<td></td>
+														<td></td>
+														<td></td>
+													</tr>
+													<tr>
+														<td></td>
+														<td></td>
+														<td></td>
+														<td></td>
+														<td></td>
+														<td></td>
+														<td></td>
+														<td></td>
+														<td></td>
+														<td></td>
+													</tr>
+																
+												</tbody>
+											</table>
+																
+											<h5 class="subst">PL 자동이체 변경이력</h5>
+											<table summary="계좌구분, 약정액, 약정이체일, 청구개시일, 청구종료일, 처리일자, 처리자, 비고등 자동이체 변경이력정보리스트를 제공합니다." width="100%" class="listTable">
+												<caption>PL 자동이체 변경이력</caption>
+												<colgroup>
+													<col width="10%" />
+													<col width="*" />
+													<col width="10%" />
+													<col width="10%" />
+													<col width="10%" />
+													<col width="10%" />
+													<col width="10%" />
+													<col width="10%" />
+												</colgroup>
+												<thead>
 												<tr>
-													<th scope="col">순대출한도액</th>
-													<th scope="col">PL대출원금</th>
-													<th scope="col">PL대출이자</th>
-													<th scope="col">APL대출원금</th>
-													<th scope="col">APL대출이자</th>
-													<th scope="col">기대출원리금</th>
-													<th scope="col">현재대출가능액</th>
-													<th scope="col">실제지급가능액</th>
-													<th scope="col">대출이율</th>
-													<th scope="col">이자납부기일<br />(원금+이자 합산예정일)</th>
+													<th scope="col">계좌구분</th>
+													<th scope="col">약정액</th>
+													<th scope="col">약정이체일</th>
+													<th scope="col">청구개시일</th>
+													<th scope="col">청구종료일</th>
+													<th scope="col">처리일자</th>
+													<th scope="col">처리자</th>
+													<th scope="col">비고</th>
 												</tr>
-											</thead>
-											<tbody>
+												</thead>
+												<tbody>
+													<tr>
+														<td></td>
+														<td></td>
+														<td></td>
+														<td></td>
+														<td></td>
+														<td></td>
+														<td></td>
+														<td></td>
+													</tr>
+												</tbody>
+											</table>
+											
+										</div>
+										<div class="RdTabCont2">
+											<h5 class="subst">APL 자동이체</h5>
+											<table summary="APL 자동이체를 위한 상세정보를 제공합니다." width="100%" class="table3">
+												<caption>APL자동이체</caption>
+												<colgroup>
+													<col width="12%" />
+													<col width="13%" />
+													<col width="12%" />
+													<col width="13%" />
+													<col width="12%" />
+													<col width="13%" />
+													<col width="12%" />
+													<col width="*" />
+												</colgroup>
+												<tbody>
+													<tr>
+														<th>APL 원리금</th>
+														<td></td>
+														<th>APL 원금</th>
+														<td></td>
+														<th>APL이자</th>
+														<td></td>
+														<th>계좌구분</th>
+														<td></td>
+													</tr>
+													<tr>
+														<th>약정액</th>
+														<td></td>
+														<th>이체일</th>
+														<td></td>
+														<th>청구개시일</th>
+														<td></td>
+														<th>청구종료일</th>
+														<td></td>
+													</tr>
+													<tr>
+														<th>약정액</th>
+														<td></td>
+														<th>이체일</th>
+														<td></td>
+														<th>청구개시일</th>
+														<td></td>
+														<th>청구종료일</th>
+														<td></td>
+													</tr>
+													<tr>
+														<th>처리일자</th>
+														<td></td>
+														<th>처리방식</th>
+														<td colspan="5"></td>
+													</tr>
+												</tbody>
+											</table>
+																
+											<h5 class="subst">APL 자동이체 변경이력</h5>
+											<table summary="계좌구분, 약정액, 약정이체일, 청구개시일, 청구종료일, 처리일자, 처리자, 비고등 자동이체 변경이력정보리스트를 제공합니다." width="100%" class="listTable">
+												<caption>PL 자동이체 변경이력</caption>
+												<colgroup>
+													<col width="10%" />
+													<col width="*" />
+													<col width="10%" />
+													<col width="10%" />
+													<col width="10%" />
+													<col width="10%" />
+													<col width="10%" />
+													<col width="10%" />
+												</colgroup>
+												<thead>
 												<tr>
-													<td></td>
-													<td></td>
-													<td></td>
-													<td></td>
-													<td></td>
-													<td></td>
-													<td></td>
-													<td></td>
-													<td></td>
-													<td></td>
+													<th scope="col">계좌구분</th>
+													<th scope="col">약정액</th>
+													<th scope="col">약정이체일</th>
+													<th scope="col">청구개시일</th>
+													<th scope="col">청구종료일</th>
+													<th scope="col">처리일자</th>
+													<th scope="col">처리자</th>
+													<th scope="col">비고</th>
 												</tr>
-												<tr>
-													<td></td>
-													<td></td>
-													<td></td>
-													<td></td>
-													<td></td>
-													<td></td>
-													<td></td>
-													<td></td>
-													<td></td>
-													<td></td>
-												</tr>
-						
-											</tbody>
-										</table>
-						
-										<h5 class="subst">PL 자동이체 변경이력</h5>
-										<table summary="계좌구분, 약정액, 약정이체일, 청구개시일, 청구종료일, 처리일자, 처리자, 비고등 자동이체 변경이력정보리스트를 제공합니다." width="100%" class="listTable">
-											<caption>PL 자동이체 변경이력</caption>
-											<colgroup>
-												<col width="10%" />
-												<col width="*" />
-												<col width="10%" />
-												<col width="10%" />
-												<col width="10%" />
-												<col width="10%" />
-												<col width="10%" />
-												<col width="10%" />
-											</colgroup>
-											<thead>
-											<tr>
-												<th scope="col">계좌구분</th>
-												<th scope="col">약정액</th>
-												<th scope="col">약정이체일</th>
-												<th scope="col">청구개시일</th>
-												<th scope="col">청구종료일</th>
-												<th scope="col">처리일자</th>
-												<th scope="col">처리자</th>
-												<th scope="col">비고</th>
-											</tr>
-											</thead>
-											<tbody>
-												<tr>
-													<td></td>
-													<td></td>
-													<td></td>
-													<td></td>
-													<td></td>
-													<td></td>
-													<td></td>
-													<td></td>
-												</tr>
-											</tbody>
-										</table>
-										
-									</div>
-									<div class="RdTabCont2">
-										<h5 class="subst">APL 자동이체</h5>
-										<table summary="APL 자동이체를 위한 상세정보를 제공합니다." width="100%" class="table3">
-											<caption>APL자동이체</caption>
-											<colgroup>
-												<col width="12%" />
-												<col width="13%" />
-												<col width="12%" />
-												<col width="13%" />
-												<col width="12%" />
-												<col width="13%" />
-												<col width="12%" />
-												<col width="*" />
-											</colgroup>
-											<tbody>
-												<tr>
-													<th>APL 원리금</th>
-													<td></td>
-													<th>APL 원금</th>
-													<td></td>
-													<th>APL이자</th>
-													<td></td>
-													<th>계좌구분</th>
-													<td></td>
-												</tr>
-												<tr>
-													<th>약정액</th>
-													<td></td>
-													<th>이체일</th>
-													<td></td>
-													<th>청구개시일</th>
-													<td></td>
-													<th>청구종료일</th>
-													<td></td>
-												</tr>
-												<tr>
-													<th>약정액</th>
-													<td></td>
-													<th>이체일</th>
-													<td></td>
-													<th>청구개시일</th>
-													<td></td>
-													<th>청구종료일</th>
-													<td></td>
-												</tr>
-												<tr>
-													<th>처리일자</th>
-													<td></td>
-													<th>처리방식</th>
-													<td colspan="5"></td>
-												</tr>
-											</tbody>
-										</table>
-						
-										<h5 class="subst">APL 자동이체 변경이력</h5>
-										<table summary="계좌구분, 약정액, 약정이체일, 청구개시일, 청구종료일, 처리일자, 처리자, 비고등 자동이체 변경이력정보리스트를 제공합니다." width="100%" class="listTable">
-											<caption>PL 자동이체 변경이력</caption>
-											<colgroup>
-												<col width="10%" />
-												<col width="*" />
-												<col width="10%" />
-												<col width="10%" />
-												<col width="10%" />
-												<col width="10%" />
-												<col width="10%" />
-												<col width="10%" />
-											</colgroup>
-											<thead>
-											<tr>
-												<th scope="col">계좌구분</th>
-												<th scope="col">약정액</th>
-												<th scope="col">약정이체일</th>
-												<th scope="col">청구개시일</th>
-												<th scope="col">청구종료일</th>
-												<th scope="col">처리일자</th>
-												<th scope="col">처리자</th>
-												<th scope="col">비고</th>
-											</tr>
-											</thead>
-											<tbody>
-												<tr>
-													<td></td>
-													<td></td>
-													<td></td>
-													<td></td>
-													<td></td>
-													<td></td>
-													<td></td>
-													<td></td>
-												</tr>
-											</tbody>
-										</table>
-										
+												</thead>
+												<tbody>
+													<tr>
+														<td></td>
+														<td></td>
+														<td></td>
+														<td></td>
+														<td></td>
+														<td></td>
+														<td></td>
+														<td></td>
+													</tr>
+												</tbody>
+											</table>
+											
+										</div>
 									</div>
 								</div>
 								<div id="loanCnt3" class="tabCont">

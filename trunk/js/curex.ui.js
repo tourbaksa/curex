@@ -13,13 +13,14 @@ curex.ui = {
 	event:function(){
 		var scope = this.op
 			, $previousBtn = $("div.previous .ImgArrow", scope).parent() //기계약합산 잔여한도 조회버튼
-			, $InfoWriteBtn =$("table a.InfoWbtn", scope) //테이블정보입력 버튼
-			, $Delbtn = $("a.cellDel", scope) || $("a.cellDel")  //테이블 셀삭제버튼
-			, $cinsrtbtn = $("a.cellInsert", scope) || $("a.cellInsert")//주계약/특약 특약피버험자 추가버튼
-			, $bePointBtn = $("a.calcStandard", scope) || $("a.calcStandard") //산출기준 팝업
-			, $spClose = $("a.spClose", scope) || $("a.spClose") //산출기준 팝업 닫기
-			, $bubbleLnk = $("a.bubbleLnk", scope) || $("a.bubbleLnk"); // thankyou Call 말풍선
-		
+			, $InfoWriteBtn =$("table .InfoWbtn", scope) //테이블정보입력 버튼
+			, $Delbtn = $(".cellDel", scope) || $(".cellDel")  //테이블 셀삭제버튼
+			, $cinsrtbtn = $(".cellInsert", scope) || $(".cellInsert")//주계약/특약 특약피버험자 추가버튼
+			, $bePointBtn = $(".calcStandard", scope) || $(".calcStandard") //산출기준 팝업
+			, $spClose = $(".spClose", scope) || $(".spClose") //산출기준 팝업 닫기
+			, $bubbleLnk = $(".bubbleLnk", scope) || $(".bubbleLnk") // thankyou Call 말풍선
+			, $fieldOpen = $(".fieldOpen", scope) || $(".fieldOpen"); // 검색필드선택
+
 			/* 기계약 합산잔여한도 */
 			$previousBtn.off().on({
 				click : function(){
@@ -133,7 +134,26 @@ curex.ui = {
 			});
 		});
 
+		$fieldOpen.each(function(){
+			$(this).off().on({
+				click:function(){
+					var $fieldLayer = $(".searchField", scope);
+					$fieldLayer.css({"display" : "none"});
+					if($fieldLayer.is(":hidden")){
+						$fieldLayer.css({"display" : "block"});
+					}
+				}
+			});
+		});
+
+		$(".fieldClose").click(function(){
+			$(".searchField", scope).css({"display" : "none"});
+		})
+
+
 	},
+
+
 
 	tab:function(){
 		var scope = this.op
@@ -359,25 +379,30 @@ curex.ui = {
 	/*큐렉스 라디오버튼탭 */
 	RdTab:function(){
 		var scope = this.op
-			, $obj = $(".RdTab")
 
-			, $radio = $obj.find("input[type='radio']")
-			, $radioCnt = $("[class*='RdTabCont']")
-
-			$radioCnt.hide();
-			$radioCnt.eq(0).show();
-			$radio.each(function(idx){
-				$(this).change(function(){
-					var nidx = idx +1;
-					$radioCnt.hide()
-					if ($(".RdTabCont"+ nidx).is(":hidden")){
-						$(".RdTabCont"+ nidx).show();
-					}
+		$.fn.Rdtab = function(){
+			return this.each(function(){
+				var $objWrap = $(this)	
+				, $obj = $(".RdTab",$objWrap)
+				, $radio = $obj.find("input[type='radio']")
+				, $radioCnt = $("[class*='RdTabCont']", $objWrap)
+				console.log($radio.eq(0))
+				$radio.eq(0).prop('checked', true);
+				$radioCnt.hide();
+				$radioCnt.eq(0).show();
+				$radio.each(function(idx){
+					$(this).change(function(){
+						var nidx = idx +1;
+						$radioCnt.hide()
+						if ($(".RdTabCont"+ nidx).is(":hidden")){
+							$(".RdTabCont"+ nidx).show();
+						}
+						return false;
+					});
 				});
 			});
-
-
-
+		}
+		$(".RdWrap",scope).Rdtab();
 	},
 
 	nidSlide : function(){
