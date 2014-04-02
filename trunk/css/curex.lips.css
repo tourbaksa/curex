@@ -323,4 +323,5 @@ table .spT2{background:#e7f5f6 ;background-image:none ;}
 .txtPlace .floatL{line-height:1.8;}/* text한줄표현, 우측 버튼 존재일경우 */
 .spTable1 th{background:#fff;background-image:none;color:#666;}
 
-
+/* 복합설계 */
+.nmal{font-weight:normal;}
