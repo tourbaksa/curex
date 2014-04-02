@@ -452,9 +452,9 @@ div.paging a.next{margin-left:20px;}
 div.paging a.prev + strong,
 div.paging a.prev + a{margin-left:0;}
 
-.btn.smGnR span.setIcon1{background:url(/img/common/blet_lg1.gif) no-repeat 5px 50%; margin:0 5px 0 1px; display:inline-block; width:15px; text-indent:-99999px; font-size:0;  line-height:15px; height:15px;}
-.btn.smGnR span.setIcon2{background:url(/img/common/blet_lg2.gif) no-repeat 5px 50%; margin:0 5px 0 1px; display:inline-block; width:12px; text-indent:-99999px; font-size:0;  line-height:15px; height:15px;}
-.btn.smGnR span.setIcon3{background:url(/img/common/blet_lg3.gif) no-repeat 5px 50%; margin:0 5px 0 1px; display:inline-block; width:15px; text-indent:-99999px; font-size:0;  line-height:15px; height:15px;}
+span.setIcon1{background:url(/img/common/blet_lg1.gif) no-repeat 5px 48%; margin:0 5px 0 1px; display:inline-block; width:15px; text-indent:-99999px; font-size:0;  line-height:15px; height:15px;}
+span.setIcon2{background:url(/img/common/blet_lg2.gif) no-repeat 5px 48%; margin:0 5px 0 1px; display:inline-block; width:12px; text-indent:-99999px; font-size:0;  line-height:15px; height:15px;}
+span.setIcon3{background:url(/img/common/blet_lg3.gif) no-repeat 5px 48%; margin:0 5px 0 1px; display:inline-block; width:15px; text-indent:-99999px; font-size:0;  line-height:15px; height:15px;}
 
 .setUp, .setDown{position:relative;display:inline-block;}
 .setUp span.img{background:url(/img/common/blt_arrowR.png) no-repeat;}
