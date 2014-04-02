@@ -29,10 +29,11 @@
 	<div id="conteiner">
 		<div class="hgroup">
 			<div class="pageTit">
-				<h2>개인설계</h2>
+				<h2>개인가상설계</h2>
 				
 				<span class="entry entryFull">
-					<span class="entryBg"><input type="text" value="계획명을 입력하세요" /></span>
+					<input type="text" value="계획명을 입력하세요" />
+					<span class="entryBg"></span>
 				</span>
 				<a href="#none" class="btn smGnR">저장</a> 
 				<a href="#none" class="btn smGnR">MyPlan 저장</a> 
@@ -49,20 +50,17 @@
 		<div id="contents" class="lips clear-fix">
 			<div class="lipsWrap ci-tab">
 				<ul class="tab01 tab-selector">
-					<li class="active"><a href="#none" class="type2">가입설계</a></li><!-- 블루 -->
-					<li><a href="#none" class="type2">청약정보</a></li><!-- 블루 -->
-					<li><a href="#none">보장내용</a></li><!-- 기본 -->
-					<li><a href="#none">표보기</a></li><!-- 기본 -->
-					<li><a href="#none" class="type1">추가납입예시</a></li><!-- 비활성화일경우 -->
+					<li class="active"><a href="#none" class="type2">가입설계</a></li>
+					<li><a href="#none">보장내용</a></li>
+					<li><a href="#none">해지환급금</a></li>
 				</ul>
 				<ul class="tab-panel">
 					<li>
 						<div class="add">
 							<h3 class="hide-element">가입설계</h3>
 							<div class="left">
-								<div class="btnWrap previous">
-									<h3 class="mt0 btnL">기본정보</h3>	
-									<a class="btn smWtRb InfoWbtn" href="#none">잔여한도 조회&nbsp;<span class="ImgArrow">더보기</span></a>
+								<div class="previous">
+									<h3>기본정보</h3>	
 								</div>
 
 								<div class="previous">
@@ -84,29 +82,44 @@
 														</td>
 													</tr>
 													<tr>
-														<th rowspan="2">계약자</th>
+														<th>피보험자명</th>
+														<td><input type="text" style="width:83px" /></td>
+													</tr>
+													<tr>
+														<th>생년월일</th>
 														<td>
-															<select style="width:102px">
-																<option>김푸르</option>
-																<option></option>
-															</select>
+															<input type="text" style="width:83px" />
+															<a href="#none"><img src="/img/common/icon3.gif" alt="달력" /></a>
 														</td>
 													</tr>
 													<tr>
-														<td>841205-1******<br />보장,중립/불일치/고위험</td>
-													</tr>
-													<tr>
-														<th rowspan="2">피보험자</th>
+														<th>성별</th>
 														<td>
-															<select style="width:102px">
-																<option>김대선(부)</option>
-																<option></option>
-															</select>
-															(30세 / 남)
+															<span class="fLset">
+																<input type="radio" id="man" name="man" checked="checked" />
+																<label for="man">남</label>
+																<input type="radio" id="girl" name="man" />
+																<label for="girl">여</label>
+															</span>
 														</td>
 													</tr>
 													<tr>
-														<td>521205-**<br />0102S(사무직) / 미운전</td>
+														<th>직업</th>
+														<td>
+															<input type="text" style="width:83px;" />
+															<a href="#none" class="btn smGyRb">검색</a>
+														</td>
+													</tr>
+													<tr>
+														<th>운전</th>
+														<td>
+															<input type="text" style="width:83px;" />
+															<a href="#none" class="btn smGyRb">검색</a>
+														</td>
+													</tr>
+													<tr>
+														<th>산출기준일의<br />보험연령</th>
+														<td>33세 / 남</td>
 													</tr>
 												</tbody>
 											</table>
@@ -114,11 +127,11 @@
 									</form>
 
 									<div class="tab02 clear-fix mt10">
-										<h3 class="tab1"><a class="on" href="#tabDiv01"><span>김푸르님의 Plan</span></a></h3>
+										<h3 class="tab1"><a class="on" href="#tabDiv01"><span>고객님의 Plan</span></a></h3>
 										<div id="tabDiv01">
 											<ul>
 												<li><a href="#none" class="speechB">
-														<span class="ellip">111112014-04-02 보험</span>
+														<span class="ellip">11111 보험</span>
 														<span class="bubble2">
 															<span class="bb">
 																종신 플러스 변액보험
@@ -186,7 +199,7 @@
 											</colgroup>
 											<thead>
 												<tr>
-													<th colspan="2" class="bg2">일반사망가입금액<br />(신계약설계)</th>
+													<th colspan="2" class="bg2">일반사망가입금액<br />(신계약)</th>
 													<td class="bg3 tar">10,000만원<br />(4,000만원)</td>
 												</tr>
 												<tr>
@@ -197,12 +210,11 @@
 											</thead>
 											<tbody>
 												<tr>
-													<td>재사<br /><span class="blue">유지중<br />25,000원</span></td>
+													<td rowspan="3">재해<br /><span class="blue">유지중<br />25,000원</span></td>
 													<td>재해사망</td>
 													<td class="textR">15,000</td>
 												</tr>
 												<tr>
-													<td rowspan="2">상해*장해<br /><span class="red">유지중<br />0만원</span></td>
 													<td>고도장해</td>
 													<td class="textR">10,000</td>
 												</tr>
@@ -211,7 +223,7 @@
 													<td class="textR">10,000</td>
 												</tr>
 												<tr>
-													<td rowspan="3">수술<br /><span class="red">유지중<br />0만원</span></td>
+													<td rowspan="3">수술<br /><span class="red">유지중<br />0원</span></td>
 													<td>HC</td>
 													<td class="textR">1,000</td>
 												</tr>
@@ -221,42 +233,58 @@
 												</tr>
 												<tr>
 													<td>치료보장</td>
-													<td class="textR">1,000</td>
+													<td class="textR">50,000</td>
 												</tr>
 												<tr>
 													<td rowspan="3">입원<br /><span class="blue">유지중<br />25,000원</span></td>
 													<td>HC</td>
-													<td class="textR">1,000</td>
+													<td class="textR">50,000</td>
 												</tr>
 												<tr>
 													<td>치료보장</td>
-													<td class="textR">1,000</td>
+													<td class="textR">50,000</td>
 												</tr>
 												<tr>
 													<td>입원</td>
-													<td class="textR">2,000</td>
+													<td class="textR">50,000</td>
 												</tr>
 												<tr>
 													<td rowspan="3">암<br /><span class="blue">유지중<br />25,000원</span></td>
 													<td>HC</td>
-													<td class="textR">1,000</td>
+													<td class="textR">50,000</td>
 												</tr>
 												<tr>
 													<td>암</td>
-													<td class="textR">2,000</td>
+													<td class="textR">50,000</td>
 												</tr>
 												<tr>
 													<td>진단보장</td>
-													<td class="textR">1,000</td>
+													<td class="textR">50,000</td>
 												</tr>
 												<tr>
-													<td rowspan="2">CI<br /><span class="blue">유지중<br />25,000원</span></td>
+													<td rowspan="3">CI<br /><span class="blue">유지중<br />25,000원</span></td>
 													<td>HC</td>
-													<td class="textR">3,000</td>
+													<td class="textR">50,000</td>
+												</tr>
+												<tr>
+													<td>진단보장</td>
+													<td class="textR">50,000</td>
 												</tr>
 												<tr>
 													<td>특정질병진단</td>
-													<td class="textR">4,000</td>
+													<td class="textR">50,000</td>
+												</tr>
+												<tr>
+													<td colspan="2">라이프케어 최대1억</td>
+													<td class="textR">50,000</td>
+												</tr>
+												<tr>
+													<td colspan="2">암최대 최대1억</td>
+													<td class="textR">50,000</td>
+												</tr>
+												<tr>
+													<td colspan="2">CI 최대1억</td>
+													<td class="textR">50,000</td>
 												</tr>
 											</tbody>
 										</table>
@@ -272,50 +300,6 @@
 							</div>
 
 							<div class="right">
-								<!-- 종신전환 -->
-								<div class="lifeTable">
-									<table>
-										<caption>종신전환</caption>
-										<colgroup>
-											<col width="12%">
-											<col width="10%">
-											<col width="10%">
-											<col width="12%">
-											<col width="9%">
-											<col width="10%">
-											<col width="12%">
-											<col width="11%">
-											<col width="*">
-										</colgroup>
-										<thead>
-											<tr>
-												<th>증권번호</th>
-												<th>계약자</th>
-												<th>피보험자</th>
-												<th>계약일자</th>
-												<th>상태</th>
-												<th>보험종류</th>
-												<th>일사보장금</th>
-												<th>보험료</th>
-												<th>납입주기</th>
-											</tr>
-										</thead>
-										<tbody>
-											<tr>
-												<td>1234567890</td>
-												<td>홍길동</td>
-												<td>김푸르</td>
-												<td>2014-03-31</td>
-												<td>정상</td>
-												<td>정기보험</td>
-												<td>30,000,000</td>
-												<td>39,900</td>
-												<td>월납</td>
-											</tr>
-										</tbody>
-									</table>
-								</div>
-								<!-- //종신전환 -->
 						
 								<div class="juContact mb5">
 									<h3 class="mt0">주계약 / 특약</h3>
@@ -424,7 +408,6 @@
 
 										<div class="btnWrap more">
 											<span class="fRset">
-												<a href="#none" class="smGnR">종신전환</a>
 												<input type="checkbox" id="ju1" />
 												<label for="ju1">우량체</label>
 												<input type="checkbox" id="ju2" />
