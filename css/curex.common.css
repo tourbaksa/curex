@@ -67,8 +67,10 @@ table .textareaFull {display:block;}
 table .textareaFull textarea{width:100%;}
 table tr.focusDrag{border:2px solid #64ade5;}
 
-/* 2.24 추가 테이블근처 설명 */
+.entryFull {display:block;} 
+.entryFull input {width:97%; color:#707070;} 
 
+/* 2.24 추가 테이블근처 설명 */
 * + .footNote{line-height:17px; margin-top:7px;}
 .footNote + * {margin-bottom:7px;}
 .footNote li{position:relative; padding-left:9px;}
@@ -87,7 +89,7 @@ table td{padding:3px 3px 2px 3px;}
 table th, table td{vertical-align:middle;}
 table td.tal{padding-left:9px !important;}
 table td.tar{padding-right:4px !important;}
-table tfoot th, table tfoot td{padding:6px 3px 5px;}
+table tfoot.tfootType1 th, table tfoot.tfootType1 td{padding:6px 3px 5px;}
 table td.under a{text-decoration:underline;}
 .codeNum a{text-decoration:underline; color:#079eb1;}/* 링크색,언더라인 */
 table td.subject{padding:0 0 0 9px; text-align:left;}
@@ -321,15 +323,17 @@ ul.btnTab li.active a{
 
 /* tab02 */
 #conteiner #contents .tab02{overflow:hidden;border:1px solid #dedede;height:205px;position:relative;}
-#conteiner #contents .tab02 h3{float:left; height:32px;line-height:32px;border-left:1px solid #dedede;width:85px;text-align:center;background:#d9ebed;letter-spacing:0 !important;margin:0;}
-#conteiner #contents .tab02 h3:first-child{border-left:0;width:98px;letter-spacing:-1px !important;}
+#conteiner #contents .tab02 h3{float:left; height:32px;line-height:32px;border-left:1px solid #dedede;width:81px;text-align:center;background:#d9ebed;letter-spacing:0 !important;margin:0;}
+#conteiner #contents .tab02 h3:first-child{border-left:0;width:106px;letter-spacing:-1px !important;}
 #conteiner #contents .tab02 h3 a{color:#007d8b; text-decoration:none;font-size:12px;font-weight:bold; display:block;}
 #conteiner #contents .tab02 h3 a.on{background:#fff;color:#707070;display:block;}
 .tab02 div{overflow:auto;overflow-y:scroll;height:164px;position:absolute;left:15px;top:33px;padding-top:9px;}
 .tab02 ul{width:234px;}
-.tab02 ul li{border-top:1px solid #dedede;background:url(/img/common/blet2.gif) no-repeat 0 center;padding:0 0 0 15px;height:30px;line-height:30px;position:relative;}
+.tab02 ul li{border-top:1px solid #dedede;background:url(/img/common/blet2.gif) no-repeat 0 center;padding:0 0 0 15px;height:30px;line-height:30px;position:relative;margin-right:15px;}
 .tab02 ul li:first-child{border-top:0;}
-.tab02 ul li span.close{position:absolute;right:0;top:0;padding-right:15px;background:url(/img/common/btn_dels2.gif) no-repeat right center; cursor:pointer;}
+.tab02 ul li span.close{position:absolute;right:0;top:0;}
+.tab02 ul li span.close a img{vertical-align:middle;}
+.tab02 ul li a span.ellip{width:140px;white-space:nowrap;text-overflow:ellipsis;overflow:hidden;display:inline-block;}
 
 /* tab03 */
 .tabData{position:relative;overflow:hidden;margin-bottom:20px;}

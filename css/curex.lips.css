@@ -104,7 +104,7 @@ span.bubble1 .bb{position:absolute;right:0;top:30px;border:1px solid #64ade5;bac
 span.bubble1 .bb a{position:absolute;right:3px;top:3px;}
 span.bubble1 .arr{background:url(/img/common/icon_bubble.png) no-repeat;position:absolute;top:-7px;right:14px;width:9px;height:6px;}
 /* 화살표좌측 */
-span.bubble2 .bb{position:absolute;left:0;top:0;z-index:100;border:1px solid #64ade5;background:#f9fcff; padding:8px 10px;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;font-size:11px;line-height:11px;}
+span.bubble2 .bb{position:absolute;left:0;top:-7px;z-index:100;border:1px solid #64ade5;background:#f9fcff; padding:8px 10px;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;font-size:11px;line-height:11px;}
 span.bubble2 .arr{background:url(/img/common/icon_bubble.png) no-repeat;position:absolute;top:-7px;left:29px;margin-left:-4px;width:9px;height:6px;}
 
 /* tab01 추가 */
@@ -319,6 +319,8 @@ table.spTfoot th{background:#fafafa;padding-right:10px;}
 table .spT1{background:#d0ebee ;background-image:none;}
 table .spT2{background:#e7f5f6 ;background-image:none ;}
 
-
+/* 단체설계-청약정보 */
+.txtPlace .floatL{line-height:1.8;}/* text한줄표현, 우측 버튼 존재일경우 */
+.spTable1 th{background:#fff;background-image:none;color:#666;}
 
 
