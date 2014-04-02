@@ -160,7 +160,7 @@ span.calcPoint{position:absolute; right:0; top:13px; width:60px; text-align:cent
 
 /* 산출기준레이어 */
 div.compLayer{position:absolute; z-index:22; background:#fff; background:url(/img/sub/bg_layerArrow.gif) no-repeat 18px 0; left:-2px; top:83px; height:171px; padding:5px 0 6px 0; display:none;}
-div.compLayer.bottom{background-image:none; bottom:28px; top:auto; }
+div.compLayer.bottom{background-image:none; bottom:28px; top:auto; border:0 !important;}
 div.compLayer dl {width:242px;}
 div.compLayer dt{background:#585a5c; color:#fff; font-weight:bold; height:33px; line-height:33px; padding-left:15px;
 	width:242px;

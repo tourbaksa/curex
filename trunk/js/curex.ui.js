@@ -100,7 +100,7 @@ curex.ui = {
 				$bePointBtn.each(function(idx){
 					$(this).off().on({
 						click:function(e){
-							var spBox = $(this).closest("div.spBox"),
+							var spBox = $(this).parent("div.spBox"),
 								  popObjLayer = spBox.find("div.compLayer"),
 								  spBoxy = spBox.position().top, 
 								  posy= spBoxy- stObj_y; // 레이어를 담고있는 spBox의 top위치
@@ -421,7 +421,41 @@ curex.ui = {
 		$(".RdWrap",scope).Rdtab();
 	},
 
-	nidSlide : function(){
+	inputWidth:function(){
+		var $obj = $(".entry")
+			 , $input =$obj.find(input[type="text"]);
+
+		$input.keyup(function(){
+
+		  $(this).attr({width: 'auto', size: $(this).val().length});
+		});
+
+	},
+
+
+	nidFun:function(){
+		var scope = this.op
+
+		function household(){
+			var $obj = $(".importWrap ", scope)
+				 ,$revise = $(".revise", $obj);
+			
+			$revise.each(function(idx){
+				$(this).off().on({
+					click:function(){
+						console.log($(this).parent(".import"+(idx+1)));
+						
+					}
+				})
+			});
+			
+		}
+		household();
+
+	}
+
+
+/*nidSlide : function(){
 		var scope = this.op
 			, $obj = $(".nizWrap" ,scope) ||  $(".nizWrap")
 			, $nizBtn = $obj.find(".nizDown")
@@ -449,8 +483,7 @@ curex.ui = {
 					},"500");
 				});
 			}
-
-	}
+	}*/
 
 }
 
@@ -463,6 +496,9 @@ $(document).ready(function(){
 	if($(".timeSchedule").length){curex.ui.carlendar();}
 	curex.ui.curexTab();
 	curex.ui.RdTab();
-	if($(".nizWrap").length){curex.ui.nidSlide();}
+	curex.ui.nidFun(); //니드분석
+	if($(".entry ").length){curex.ui.inputWidth();}// input width
+
 });
+
 
