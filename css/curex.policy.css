@@ -163,3 +163,15 @@ tr.ReviewWrap{display:none;}
 tr.ReviewWrap div.ReviewTableLayer{padding:19px; width:100%; background-color:#dde3ef;}
 tr.ReviewWrap div.ReviewTableLayer table td{background-color:#fff;}
 div.contartShWrap td span.selectFull{margin:2px 2px 1px 4px;}
+
+/*==========================
+ 수익자관련보험계약
+============================*/
+div.beneBox{padding:14px 104px 14px 20px; border:1px solid #dedede; margin:0 0 10px 0;}
+div.beneBox div.bener{height:25px;} 
+div.beneBox div.bener label:first-child{font-size:16px; color:#000; line-height:25px; margin-right:10px; vertical-align:middle;}
+div.beneBox div.bener strong{font-size:16px; color:#00a1b1; display:inline-block; line-height:25px; margin-right:5px; font-weight:normal;vertical-align:middle;}
+div.beneBox ul.insurList{overflow:hidden; margin-top:10px;}
+div.beneBox ul.insurList li{text-align:right; margin-top:6px;}
+div.beneBox ul.insurList li:first-child{margin-top:0;}
+div.beneBox ul.insurList li span{float:left;}
