@@ -107,13 +107,6 @@ span.bubble1 .arr{background:url(/img/common/icon_bubble.png) no-repeat;position
 span.bubble2 .bb{position:absolute;left:0;top:-7px;z-index:100;border:1px solid #64ade5;background:#f9fcff; padding:8px 10px;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;font-size:11px;line-height:11px;}
 span.bubble2 .arr{background:url(/img/common/icon_bubble.png) no-repeat;position:absolute;top:-7px;left:29px;margin-left:-4px;width:9px;height:6px;}
 
-/* tab01 추가 */
-.tab01{border-bottom:0;background:url(/img/common/bg_tab.gif) repeat-x 0 0;height:31px;border-bottom:0;}
-.tab01 li{height:31px;}
-.tab01 li.active a{height:29px;line-height:29px;}
-.tab01 li.active a.type1{background:#fff;color:#007d8b;border:2px solid #22b8c7;border-bottom:0;border-radius:3px 3px 0 0;-webkit-border-radius:3px 3px 0 0;-moz-border-radius:3px 3px 0 0;-ms-border-radius:3px 3px 0 0;padding:0 13px;height:31px;line-height:25px;}
-.tab01 li a.type1{background:#d9ebed;}
-
 table td.disebled{background:#e3e3e3;}
 table td span.disebled{color:#d0d0d0;}
 
@@ -174,8 +167,6 @@ ul.deTable .ico2{background:url(/img/common/ico_bxBe2.gif) no-repeat 11px center
 ul.deTable .ico3{background:url(/img/common/ico_bxBe3.gif) no-repeat 11px center;padding-left:26px;}
 ul.deTable .ico4{background:url(/img/common/ico_bxBe4.gif) no-repeat 11px center;padding-left:26px;}
 
-
-
 /* lips-개인설계-보장내용*/
 ul.guarn li{position:relative;}
 ul.guarn li h4{background:url(/img/common/bg_bx1.gif) no-repeat 0 center;font-size:14px;padding-left:11px;margin:8px 0;}
@@ -202,7 +193,7 @@ div.juContact table .addbg1 {background:#d0ebee;}
 .nohuBox li dl dt{font-size:14px;height:36px;line-height:36px;background:#22b8c7;color:#fff;border-radius:3px 3px 0 0;-webkit-border-radius:3px 3px 0 0;-moz-border-radius:3px 3px 0 0;-ms-border-radius:3px 3px 0 0;}
 .nohuBox li:first-child dl dt{background:#00ade2}
 .nohuBox dd{font-size:18px;height:54px;line-height:54px;}
-.nohuGraph{background:url(/img/common/bg_graph_b.gif) repeat-x 0 bottom;padding:20px 0;}
+.nohuGraph{background:url(/img/common/bg_graph_b.gif) repeat-x 0 bottom;padding:20px 0;width:734px;height:478px;}
 ul.nohuTable {padding:0 40px;}
 ul.nohuTable li:first-child{width:304px;height:334px;}
 ul.nohuTable li{width:300px;}
@@ -325,3 +316,8 @@ table .spT2{background:#e7f5f6 ;background-image:none ;}
 
 /* 복합설계 */
 .nmal{font-weight:normal;}
+
+/* 그래프사이즈 */
+ul.graphTable .graphSize{width:250px;height:250px;}
+ul.graphTable .graphStick{width:304px;height:334px;}
+ul.graphTable .graphCir{width:210px;height:210px;}

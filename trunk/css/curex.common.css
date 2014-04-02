@@ -15,7 +15,6 @@ legend {
 	position:absolute; visibility:hidden; width:0; height:0; overflow:hidden; font-size:0;
 }
 
-
 /* 색상 */
 .red{color:#e8404f;}
 .blue{color:#00a2ff;}
@@ -296,18 +295,26 @@ dd span input[type="file"]{position:absolute;left:3px;top:5px;}
 
 .fileBox table {float:right;width:551px;margin-right:5px;}
 
-/* tab */
-.tab01{border-bottom:2px solid #22b8c7; overflow:hidden;}
-.tab01 li{float:left;margin-left:1px;}
-.tab01 li a{height:29px; line-height:29px;text-decoration:none; color:#707070; display:block; padding:0 15px;border-radius:2px 2px 0 0; -moz-border-radius:2px; -webkit-border-radius:2px; -ms-border-radius:2px;background-color:#e0e0e0;}
+/* tab01 추가 */
+.tab01{border-bottom:0;background:url(/img/common/bg_tab.gif) repeat-x 0 0;height:31px;overflow:hidden;}
+.tab01 li{height:31px;float:left;margin-left:1px;}
 .tab01 li:first-child{margin-left:0;}
+.tab01 li a{height:29px; line-height:29px;text-decoration:none; color:#22b8c7; display:block; padding:0 10px;border-radius:2px 2px 0 0; -moz-border-radius:2px; -webkit-border-radius:2px; -ms-border-radius:2px;background-color:#e0e0e0;border-top:2px solid #22b8c7;min-width:64px;text-align:center;}
 .tab01 li.active a{background:#22b8c7;color:#fff;}
+.tab01 li.active a{height:29px;line-height:29px;}
+/* 회색 */
+.tab01 li a.type1{background:#e3e3e3;color:#707070;border-top:2px solid #b9b9b9;}
+.tab01 li.active a.type1{height:29px;line-height:29px;}
+/* 블루 */
+.tab01 li a.type2{background:#d9e0ed;color:#0084ff;border-top:2px solid #0084ff;}
+.tab01 li.active a.type2{background:#0084ff;color:#fff;border:2px solid #0084ff;border-bottom:0;border-radius:3px 3px 0 0;-webkit-border-radius:3px 3px 0 0;-moz-border-radius:3px 3px 0 0;-ms-border-radius:3px 3px 0 0;padding:0 8px;height:29px;line-height:29px;}
+
 
 .tabGy01{border-bottom:2px solid #9d9d9d;}
 .tabGy01:after{content:"";display:block;clear:both;}
 .tabGy01 li{float:left;margin-left:1px;}
 .tabGy01 li a{height:29px; line-height:29px;text-decoration:none; color:#707070; display:block; padding:0 15px;border-radius:2px 2px 0 0; -moz-border-radius:2px; -webkit-border-radius:2px; -ms-border-radius:2px;background-color:#e0e0e0;}
-.tabGy01 li:first-child{margin-left:0;}
+.tabGy01 li:first-child{margin-left:0;color:#707070;}
 .tabGy01 li.on a{background:#9d9d9d;color:#fff;}
 
 ul.btnTab{overflow:hidden;margin-bottom:8px;}
@@ -334,6 +341,7 @@ ul.btnTab li.active a{
 .tab02 ul li span.close{position:absolute;right:0;top:0;}
 .tab02 ul li span.close a img{vertical-align:middle;}
 .tab02 ul li a span.ellip{width:140px;white-space:nowrap;text-overflow:ellipsis;overflow:hidden;display:inline-block;}
+#conteiner #contents div.coverTab h3, #conteiner #contents div.coverTab h3:first-child{width:134px;}
 
 /* tab03 */
 .tabData{position:relative;overflow:hidden;margin-bottom:20px;}
