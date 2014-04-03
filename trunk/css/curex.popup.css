@@ -264,7 +264,7 @@ table .groupTit{
 /* 공적연금 */
 div.contr table {border-top:0;border-bottom:0;}
 div.contr table th, div.contr table td{border-top:1px solid #dedede;}
-div.contr table td.areaN {border-top:0;border-bottom:0;border-left:1px solid #dedede;border-right:1px solid #dedede;}
+div.contr table td.areaN {border-top:1px solid #fff;border-bottom:1px solid #fff;}
 div.contr table .ctrBox{font-weight:bold;text-align:center; color:#01509f;}
 div.contr table .ctrBox strong{font-size:16px;}
 
@@ -315,3 +315,20 @@ div.popContents .grayBox .conTable td:first-child{border-left:0;}
 div.blueBox{background:#e5f6ff;border:1px solid #a7e1ff;padding:10px;margin-top:9px;color:#444;}
 .grayBox .footNote + *{margin-bottom:0;}
 .grayBox .footNote li{text-align:left;}
+
+/* 우편번호 */
+div.postWrap{margin-top:8px;background:url(/img/common/bg_line4.gif) repeat-y 50% top;}
+div.postWrap:after{content:"";display:block;clear:both;}
+div.postWrap .postL{float:left;width:360px;}
+div.postWrap .postR{float:right;width:360px;}
+div.postWrap .popTit h2{font-size:14px;}
+div.postWrap .postBox{border:1px solid #dedede; height:195px; overflow:scroll;overflow-x:hidden;margin-bottom:8px;line-height:18px; padding-left:10px;width:360px;}
+div.postWrap .postBox.postBoxHei{height:118px;}
+div.postWrap .postBox ul li{margin-top:5px;}
+div.postWrap .postBox ul li:first-child{margin-top:0;}
+div.postWrap .postBderT{padding:8px 0;border-top:1px solid #dedede; margin-top:10px;}
+div.postWrap .postAd input{margin-top:8px;}
+div.postWrap .textH2{font-size:14px;color:#363636;font-weight:bold;}
+div.postWrap .entryForm {margin-top:8px;}
+div.postWrap .entryForm li{padding-top:8px;}
+div.postWrap .entryForm li:first-child{border-top:1px solid #dedede;}
