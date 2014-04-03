@@ -332,3 +332,20 @@ div.postWrap .textH2{font-size:14px;color:#363636;font-weight:bold;}
 div.postWrap .entryForm {margin-top:8px;}
 div.postWrap .entryForm li{padding-top:8px;}
 div.postWrap .entryForm li:first-child{border-top:1px solid #dedede;}
+
+/* 팝업 */
+.ci-dialog .ui-dialog-titlebar{background:#22b8c7;border-bottom:1px solid #007c88;color:#fff;font-size:20px;font-weight:bold;height:50px;line-height:49px;padding-left:20px;}
+.ui-dialog .ui-dialog-title{width:85%;float:none;}
+.ui-dialog .ui-dialog-titlebar{padding:0 0 0 20px;}
+.ui-dialog .ui-dialog-content{padding:22px 20px 25px;position:relative;border:0;}
+.ci-dialog .ui-dialog-titlebar-close{background:url(/img/common/btn_close.gif) no-repeat 0 0;border:0;height:14px;width:15px;margin-top:-1px;}
+.ui-dialog .ui-dialog-titlebar-close{position:absolute;right:18px;top:17px;padding:1px;}
+
+/* 팝업2 */
+.ci-dialog .ui-dialog-titlebar.layer2{background:#22b8c7;border-bottom:10px solid #007c88;color:#fff;font-size:36px;font-weight:bold;height:50px;line-height:49px;padding:7px 0 0 20px;}
+.ui-dialog .ui-dialog-title.layer2{width:85%;float:none;}
+.ui-dialog .ui-dialog-titlebar.layer2{padding:7px 0 0 20px;}
+.ui-dialog .ui-dialog-content.layer2{padding:22px 20px 25px;position:relative;border:0;}
+.ci-dialog .ui-dialog-titlebar-close.layer2{background:url(/img/common/btn_close2.gif) no-repeat 0 0;border:0;height:14px;width:15px;margin-top:-1px;}
+.ui-dialog .ui-dialog-titlebar-close.layer2{position:absolute;right:18px;top:17px;padding:1px;}
+
