@@ -159,20 +159,20 @@ span.calcPoint{position:absolute; right:0; top:13px; width:60px; text-align:cent
 
 
 /* 산출기준레이어 */
-div.compLayer{position:absolute; z-index:22; background:#fff; background:url(/img/sub/bg_layerArrow.gif) no-repeat 18px 0; left:-2px; top:83px; height:171px; padding:5px 0 6px 0; display:none;}
-div.compLayer.bottom{background-image:none; bottom:28px; top:auto; border:0 !important;}
+div.compLayer{position:absolute; z-index:22; background:#fff; background:url(/img/sub/bg_layerArrow.gif) no-repeat 18px 0; left:-2px; top:83px; padding:5px 0 6px 0; display:none;}
+div.compLayer.bottom{background-image:none; bottom:32px; top:auto; border:0 !important;}
 div.compLayer dl {width:242px;}
 div.compLayer dt{background:#585a5c; color:#fff; font-weight:bold; height:33px; line-height:33px; padding-left:15px;
 	width:242px;
 	border:1px solid #dbdbdb; border-top:0;border-top-left-radius:4px;border-top-right-radius:4px; -webkit-border-top-left-radius:4px; -moz-border-top-left-radius:4px; -ms-border-top-left-radius:4px;
 	-webkit-border-top-right-radius:4px; -moz-border-top-right-radius:4px; -ms-border-top-right-radius:4px;
 }
-div.compLayer dd{width:242px; background:#fff; padding:14px; border:1px solid #dbdbdb; border-top:0; line-height:18px;
+div.compLayer dd{width:242px; background:#fff; padding:14px; border:1px solid #dbdbdb; border-top:0; line-height:18px; min-height:40px
 	border-bottom-left-radius:4px;border-bottom-right-radius:4px; -webkit-border-bottom-left-radius:4px; -moz-border-bottom-left-radius:4px; -ms-border-bottom-left-radius:4px;
 	-webkit-border-bottom-right-radius:4px; -moz-border-bottom-right-radius:4px; -ms-border-bottom-right-radius:4px;
 }
 
-span.btmArrow{background:url(/img/sub/bg_layerArrow_White.gif) no-repeat 0 0; position:absolute; left:18px; bottom:-8px; width:7px; height:6px;}
+span.btmArrow{background:url(/img/sub/bg_layerArrow_White.gif) no-repeat 0 0; position:absolute; left:18px; bottom:2px; width:7px; height:6px;}
 div.compLayer a.spClose{position:absolute; right:10px; top:15px;}
 
 /*==========================
