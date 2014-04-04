@@ -19,6 +19,7 @@ legend {
 .red{color:#e8404f;}
 .blue{color:#00a2ff;}
 .lightBlue{color:#22b8c7;}
+.colorNBe{color:#01509f;}
 
 /* 정렬 */
 .textL{text-align:left;}
@@ -627,3 +628,5 @@ div.bottom_paper{position:absolute; left:1px; top:225px; width:332px; height:30p
 span.attchfileBox{display:inline-block; height:23px; position:relative; overflow:hidden; vertical-align:middle;}
 span.attchfileBox input.fileHidden{font-size: 25px; opacity: 0; position: absolute; right: 0; top: 0; cursor: pointer;}
 
+/* 공통 */
+div.popTit h2 span.sizeDown{font-weight:normal;}
