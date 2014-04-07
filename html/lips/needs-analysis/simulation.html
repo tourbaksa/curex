@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> CuREx </title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
+<link rel="stylesheet" href="/WEB-APP/webponent/css/common.css" type="text/css" />
+<link rel="stylesheet" href="/css/curex.common.css" type="text/css" />
+<link rel="stylesheet" href="/css/curex.layout.css" type="text/css" />
+<link rel="stylesheet" href="/css/curex.sub.css" type="text/css" />
+<link rel="stylesheet" href="/WEB-APP/webponent/dialog/css/dialog.css" type="text/css" />
+<script type="text/javascript" src="/WEB-APP/webponent/ci/agent.js"></script>
+<script type="text/javascript" src="/WEB-APP/webponent/thirdParty/jquery/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="/WEB-APP/webponent/thirdParty/jquery/jquery-ui-1.10.3.min.js"></script>
+<script type="text/javascript" src="/WEB-APP/webponent/tab/tab.js"></script>
+<script type="text/javascript" src="/WEB-APP/webponent/dialog/dialog.js"></script>
+<script type="text/javascript" src="/js/popup.js"></script>
+<script type="text/javascript" src="/js/curex.ui.js"></script>
+</head>
+<body>
+
+<div id="wrap">
+	<!-- HEADER -->
+	<div id="header">
+		<img src="/img/common/img_header.jpg" alt="" />
+	</div>
+	<!-- //HEADER -->
+	
+	<div id="conteiner">
+		<div class="hgroup">
+			<div class="pageTit">
+				<h2 class="pr15">노후보장 시뮬레이션</h2>
+			 	<ul class="location">
+			 		<li><a href="#none">홈&nbsp;</a>&gt;</li>
+			 		<li><a href="#none">&nbsp;LiPS&nbsp;</a>&gt;</li>
+					<li><a href="#none">&nbsp;니드분석&nbsp;</a>&gt;</li>
+			 		<li><a href="#none">&nbsp;노후보장시뮬레이션&nbsp;</a></li>
+			 	</ul>
+			</div>
+		</div>
+		 
+		<!-- 공통 컨텐츠 -->
+		<div id="contents" class="lips clear-fix">
+			<div class="lipsWrap ci-tab">
+				<ul class="tab01 tab-selector">
+					<li class="active"><a href="#none"><span>보유자산</span></a></li>
+					<li><a href="#none"><span>공적연금</span></a></li>
+					<li><a href="#none"><span>희망월수령액</span></a></li>
+					<li><a href="#none"><span>가입시기</span></a></li>
+				</ul>
+				<ul class="tab-panel">
+					<li>
+						<div class="add">
+							<h3 class="hide-element">보유자산</h3>	
+							<div class="left">
+								<p>은퇴 이후 보유 자산 소모에 대한 내용을 확인 할 수<br />있습니다.</p>
+
+								<div class="nizWrap mt8">
+									<div class="nizHeader">
+										<h4>입력정보</h4>
+									</div>
+									<div class="nizContainer">
+										<div class="nizCont">
+											<table class="table10">
+												<caption>입력정보</caption>
+												<colgroup>
+													<col width="32%" />
+													<col width="*" />
+												</colgroup>
+												<tbody>
+													<tr>
+														<td class="tac">보유자산</td>
+														<td><input type="text" style="width:140px" /> 만원</td>
+													</tr>
+													<tr>
+														<td class="tac">수익률</td>
+														<td><input type="text" style="width:140px" /> %</td>
+													</tr>
+													<tr>
+														<td class="tac">노후생활비(월)</td>
+														<td><input type="text" style="width:140px" /> 만원</td>
+													</tr>
+													<tr>
+														<td class="tac">물가상승률</td>
+														<td><input type="text" style="width:140px" /> 세</td>
+													</tr>
+													<tr>
+														<td class="tac">은퇴연령</td>
+														<td><input type="text" style="width:140px" /> 세</td>
+													</tr>
+													<tr>
+														<td class="tac">기대수명</td>
+														<td><input type="text" style="width:140px" /> 세</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</div>
+
+								<div class="btnWrap mt10">
+									<a href="#none" class="btn lgBeR">통계값복원</a>
+									<a href="#none" class="btn lgBeR">계산하기</a>
+								</div>
+							</div>
+							<div class="right">
+								<div class="graphWrap">
+									<div class="title mt10"><p class="tit"><span class="lightBlue">1억원</span>의 자산을 노후자금으로 활용할 경우 <span class="red">70세</span> 시점에 고갈됩니다.<p class="bg">&nbsp;</p></div>
+									
+									<div class="nohuGraph" style="width:734px;height:471px">
+										<img src="/img/common/img_sim_graph1.gif" alt="보유자산 그래프" />
+									</div>
+
+									<form class="mt20" method="post" action="/">
+										<fieldset>
+											<legend>보유자산</legend>
+											<table class="graphTable1">
+												<caption>보유자산</caption>
+												<colgroup>
+													<col width="*">
+													<col width="28%">
+													<col width="28%">
+													<col width="28%">
+												</colgroup>
+												<thead>
+													<tr>
+														<th rowspan="2">나이</th>
+														<th colspan="3">보유자산</th>
+													</tr>
+													<tr class="bderTn">
+														<th>발생기간</th>
+														<th>지급액(년)</th>
+														<th>잔고</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>60</td>
+														<td class="tar">10,000</td>
+														<td class="tar">1,200</td>
+														<td class="tar">8,800</td>
+													</tr>
+													<tr>
+														<td>65</td>
+														<td class="tar">10,000</td>
+														<td class="tar">1,200</td>
+														<td class="tar">8,800</td>
+													</tr>
+													<tr>
+														<td>66</td>
+														<td class="tar">10,000</td>
+														<td class="tar">1,200</td>
+														<td class="tar">8,800</td>
+													</tr>
+													<tr>
+														<td>67</td>
+														<td class="tar">10,000</td>
+														<td class="tar">1,200</td>
+														<td class="tar">8,800</td>
+													</tr>
+													<tr>
+														<td>68</td>
+														<td class="tar">10,000</td>
+														<td class="tar">1,200</td>
+														<td class="red tar">-19</td>
+													</tr>
+													<tr>
+														<td>69</td>
+														<td class="tar">10,000</td>
+														<td class="tar">1,200</td>
+														<td class="red tar">-1566</td>
+													</tr>
+													<tr>
+														<td>70</td>
+														<td class="tar">10,000</td>
+														<td class="tar">1,200</td>
+														<td class="red tar">-1613</td>
+													</tr>
+												</tbody>
+											</table>
+										</fieldset>
+									</form>
+
+									<p class="refer">본 자료는 고객님께서 제공해주신 정보와 생애 전반에 걸쳐 통계치 등 일정한 가정하에 근거하여 고객님의 이해를 돕기 위해 작성된 자료로서 실제 내용은 사실과 다를 수 있습니다.</p>
+									
+								</div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="add">
+							<h3 class="hide-element">공적연금</h3>	
+							<div class="left">
+								<p>은퇴 이후 보유 자산 소모에 대한 내용을 확인 할 수<br />있습니다.</p>
+
+								<div class="nizWrap mt8">
+									<div class="nizHeader">
+										<h4>입력정보</h4>
+									</div>
+									<div class="nizContainer">
+										<div class="nizCont">
+											<table class="table10">
+												<caption>입력정보</caption>
+												<colgroup>
+													<col width="32%" />
+													<col width="*" />
+												</colgroup>
+												<tbody>
+													<tr>
+														<td class="tac">보유자산</td>
+														<td><input type="text" style="width:140px" /> 만원</td>
+													</tr>
+													<tr>
+														<td class="tac">수익률</td>
+														<td><input type="text" style="width:140px" /> %</td>
+													</tr>
+													<tr>
+														<td class="tac">노후생활비(월)</td>
+														<td><input type="text" style="width:140px" /> 만원</td>
+													</tr>
+													<tr>
+														<td class="tac">물가상승률</td>
+														<td><input type="text" style="width:140px" /> 세</td>
+													</tr>
+													<tr>
+														<td class="tac">은퇴연령</td>
+														<td><input type="text" style="width:140px" /> 세</td>
+													</tr>
+													<tr>
+														<td class="tac">기대수명</td>
+														<td><input type="text" style="width:140px" /> 세</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</div>
+
+								<div class="btnWrap mt10">
+									<a href="#none" class="btn lgBeR">통계값복원</a>
+									<a href="#none" class="btn lgBeR">계산하기</a>
+								</div>
+							</div>
+							<div class="right">
+								<div class="graphWrap">
+									<div class="title mt10"><p class="tit">공적연금 수령 이전을 대비하셔야 합니다.<p class="bg">&nbsp;</p></div>
+									
+									<div class="nohuGraph" style="width:734px;height:471px">
+										<img src="/img/common/img_sim_graph1.gif" alt="보유자산 그래프" />
+									</div>
+
+									<div class="tableImgWrap">
+										<div class="img">
+											<img src="/img/common/img_sim_graph2.gif" alt="그래프" />
+										</div>
+										<div class="table" style="width:384px">
+											<p class="textR">(단위:만원)</p>
+											<table class="graphTable2">
+												<caption>공적연금</caption>
+												<thead>
+													<tr>
+														<th>항목</th>
+														<th>현재시점</th>
+														<th>은퇴시점</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<th>노후생활비</th>
+														<td>150</td>
+														<td>300</td>
+													</tr>
+													<tr>
+														<th>공적연금(월)</th>
+														<td>150</td>
+														<td>300</td>
+													</tr>
+												</tbody>
+											</table>
+											<p class="detailCon">은퇴 후 월 <span class="red">300만원</span> 정도의 생활수준을 유지하려면, 공적연금 수령 이전에는<br />월 <span class="red">300만원</span>이 필요하고 공적연금 수령 시작연령 이후로는 월 <span class="red">100만</span>원이<br />추가로 필요 합니다.</p>
+										</div>
+									</div>
+
+									<p class="refer">본 자료는 고객님께서 제공해주신 정보와 생애 전반에 걸쳐 통계치 등 일정한 가정하에 근거하여 고객님의 이해를 돕기 위해 작성된 자료로서 실제 내용은 사실과 다를 수 있습니다.</p>
+									
+								</div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="add">
+							<h3 class="hide-element">희망월수령액</h3>
+							<div class="left">
+								<p>기본정보와 받고 싶은 희망 연금수령액을 입력하시면,<br />현재 납입해야 할 예상보험료를 보여줍니다.</p>
+
+								<div class="nizWrap mt8">
+									<div class="nizHeader">
+										<h4>연금정보</h4>
+									</div>
+									<div class="nizContainer">
+										<div class="nizCont">
+											<table class="table10">
+												<caption>연금정보</caption>
+												<colgroup>
+													<col width="32%" />
+													<col width="*" />
+												</colgroup>
+												<tbody>
+													<tr>
+														<td class="tac">상품</td>
+														<td>
+															 <span class="selectFull">
+																<select>
+																	<option>선택</option>
+																	<option></option>
+																</select>
+															 </span>
+														</td>
+													</tr>
+													<tr>
+														<td class="tac">성별</td>
+														<td>
+															<span class="fLset">
+																<input type="radio" id="m1" name="m1" />
+																<label for="m1">남</label>
+																<input type="radio" id="m2" name="m1" />
+																<label for="m2">여</label>
+															</span>
+														</td>
+													</tr>
+													<tr>
+														<td class="tac">가입나이</td>
+														<td><input type="text" style="width:140px" /> 세</td>
+													</tr>
+													<tr>
+														<td class="tac">연금개시나이</td>
+														<td>
+															 <span class="selectFull">
+																<select>
+																	<option>선택</option>
+																	<option></option>
+																</select>
+															 </span>
+														</td>
+													</tr>
+													<tr>
+														<td class="tac">납입기간</td>
+														<td>
+															 <span class="selectFull">
+																<select>
+																	<option>선택</option>
+																	<option></option>
+																</select>
+															 </span>
+														</td>
+													</tr>
+													<tr>
+														<td class="tac">희망연금액(월)</td>
+														<td><input type="text" style="width:140px" /> 만원</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</div>
+
+								<div class="btnWrap mt10">
+									<a href="#none" class="btn lgBeR">계산하기</a>
+								</div>
+							</div>
+							<div class="right">
+								<div class="graphWrap">
+									<div class="title mt10"><p class="tit">원하는 연금 수령액 월 <span class="red">100만원</span>을 받기 위한 예상 보험료는 월 <span class="red">70만원</span> 입니다.<p class="bg">&nbsp;</p></div>
+
+									<p class="tac mb8">홍길동 고객님이 60세부터 매월 100만원의 연금액(종신연금형)을 받기 위해서는 월 70만원의 보험료를 10년간 납입하셔야 합니다.</p>
+
+									<table class="graphTable1">
+										<caption>희망월수령액</caption>
+										<colgroup>
+											<col width="*">
+											<col width="10%">
+											<col width="17%">
+											<col width="17%">
+											<col width="17%">
+											<col width="17%">
+										</colgroup>
+										<thead>
+											<tr>
+												<th>나이</th>
+												<th>수익율</th>
+												<th>보험료(월)</th>
+												<th>연금합계액</th>
+												<th>납입보험료합계</th>
+												<th>총수익율</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td rowspan="3">종신연금형</td>
+												<td class="bderL">0 %</td>
+												<td class="tar">70만원</td>
+												<td class="tar">24,000만원</td>
+												<td class="tar">10,080만원</td>
+												<td>238%</td>
+											</tr>
+											<tr>
+												<td class="bderL">0 %</td>
+												<td class="tar">70만원</td>
+												<td class="tar">24,000만원</td>
+												<td class="tar">10,080만원</td>
+												<td>238%</td>
+											</tr>
+											<tr>
+												<td class="bderL">0 %</td>
+												<td class="tar">70만원</td>
+												<td class="tar">24,000만원</td>
+												<td class="tar">10,080만원</td>
+												<td>238%</td>
+											</tr>
+											<tr>
+												<td rowspan="3">확정연금형(10년)</td>
+												<td class="bderL">0 %</td>
+												<td class="tar">70만원</td>
+												<td class="tar">24,000만원</td>
+												<td class="tar">10,080만원</td>
+												<td>238%</td>
+											</tr>
+											<tr>
+												<td class="bderL">0 %</td>
+												<td class="tar">70만원</td>
+												<td class="tar">24,000만원</td>
+												<td class="tar">10,080만원</td>
+												<td>238%</td>
+											</tr>
+											<tr>
+												<td class="bderL">0 %</td>
+												<td class="tar">70만원</td>
+												<td class="tar">24,000만원</td>
+												<td class="tar">10,080만원</td>
+												<td>238%</td>
+											</tr>
+										</tbody>
+									</table>
+									
+									<div class="compare">
+										<ul>
+											<li>
+												<p class="head">가입시점 별 납입보험료 비교</p>
+												<p class="ml8">월 100만원을 수령하기 위해 현재와 2년/3년 후 가입 시 보험료 비교입니다.</p>
+												<div class="cp">
+													<img src="/img/common/img_sim_graph3.gif" alt="그래프" />
+													<ul class="bar">
+														<li>현재<br />(35세)<br /><strong>70만원</strong></li>
+														<li>2년후<br />(37세)<br /><strong>80만원</strong></li>
+														<li>5년후<br />(40세)<br /><strong>90만원</strong></li>
+													</ul>
+												</div>
+											</li>
+											<li>
+												<p class="head">필요 은퇴자금 규모</p>
+												<div class="cp1">
+													<ul>
+														<li>
+															현재<br /><span class="rBox">35세</span>
+														</li>
+														<li class="arrow1">&nbsp;</li>
+														<li class="rel1">준비기간<br />25년</li>
+														<li>
+															은퇴<br /><span class="rBox">60세</span>
+														</li>
+														<li class="arrow2">&nbsp;</li>
+														<li class="rel2">소비기간<br />30년</li>
+														<li>
+															사망<br /><span class="rBox">90세</span>
+														</li>
+													</ul>
+													<img src="/img/common/img_sim_graph4.gif" alt="은퇴준비를 위한 3층 보장체계" />
+												</div>
+											</li>
+										</ul>
+									</div>
+
+									<p class="refer">본 자료는 고객님께서 제공해주신 정보와 생애 전반에 걸쳐 통계치 등 일정한 가정하에 근거하여 고객님의 이해를 돕기 위해 작성된 자료로서 실제 내용은 사실과 다를 수 있습니다.</p>
+									
+								</div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="add">
+							<h3 class="hide-element">가입시기</h3>	
+							<div class="left">
+								<p>가입시기에 따른 적립금액 차이를 보여줍니다.</p>
+
+								<div class="nizWrap mt8">
+									<div class="nizHeader">
+										<h4>연금정보</h4>
+									</div>
+									<div class="nizContainer">
+										<div class="nizCont">
+											<table class="table10">
+												<caption>연금정보</caption>
+												<colgroup>
+													<col width="32%" />
+													<col width="*" />
+												</colgroup>
+												<tbody>
+													<tr>
+														<td class="tac">상품</td>
+														<td>
+															 <span class="selectFull">
+																<select>
+																	<option>선택</option>
+																	<option></option>
+																</select>
+															 </span>
+														</td>
+													</tr>
+													<tr>
+														<td class="tac">성별</td>
+														<td>
+															<span class="fLset">
+																<input type="radio" id="m1" name="m1" />
+																<label for="m1">남</label>
+																<input type="radio" id="m2" name="m1" />
+																<label for="m2">여</label>
+															</span>
+														</td>
+													</tr>
+													<tr>
+														<td class="tac">가입나이</td>
+														<td><input type="text" style="width:140px" /> 세</td>
+													</tr>
+													<tr>
+														<td class="tac">연금개시나이</td>
+														<td>
+															 <span class="selectFull">
+																<select>
+																	<option>선택</option>
+																	<option></option>
+																</select>
+															 </span>
+														</td>
+													</tr>
+													<tr>
+														<td class="tac">납입기간</td>
+														<td>
+															 <span class="selectFull">
+																<select>
+																	<option>선택</option>
+																	<option></option>
+																</select>
+															 </span>
+														</td>
+													</tr>
+													<tr>
+														<td class="tac">희망연금액(월)</td>
+														<td><input type="text" style="width:140px" /> 만원</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</div>
+
+								<div class="btnWrap mt10">
+									<a href="#none" class="btn lgBeR">계산하기</a>
+								</div>
+							</div>
+							<div class="right">
+								<div class="graphWrap">
+									<div class="title mt10"><p class="tit">의사결정 시기의 차이가 <span class="red">1억원</span>의 차이를 가져 옵니다.<p class="bg">&nbsp;</p></div>
+									
+									<div class="nohuGraph">
+										<img src="/img/common/img_sim_graph5.gif" alt="보유자산 그래프" />
+										<span class="barTextT">3억</span>
+										<span class="barTextM">2억</span>
+										<span class="barTextB">1억</span>
+										<div class="classNum">
+											<ol>
+												<li>가입연령</li>
+												<li class="first">35세(5년전)</li>
+												<li>40세(현재)</li>
+												<li>45세(5년후)</li>
+												<li>65세(연금개시시점)</li>
+											</ol>
+											<p>
+												푸르덴셜 연금보험 상품,년 수익율
+												<select style="width:80px">
+													<option></option>
+													<option></option>
+												</select>
+												%로 선택 한 경우입니다.
+											</p>
+										</div>
+									</div>
+
+									<form class="mt20" method="post" action="/">
+										<fieldset>
+											<legend>연금 개시시점</legend>
+											<table class="graphTable1">
+												<caption>연금 개시시점</caption>
+												<colgroup>
+													<col width="*">
+													<col width="15%">
+													<col width="15%">
+													<col width="19%">
+													<col width="19%">
+													<col width="19%">
+												</colgroup>
+												<thead>
+													<tr>
+														<th rowspan="2">가입연령</th>
+														<th rowspan="2">납입기간</th>
+														<th rowspan="2">연금개시시점</th>
+														<th colspan="3">연금 개시시점 적립금</th>
+													</tr>
+													<tr class="bderTn">
+														<th>0%</th>
+														<th>4%</th>
+														<th>8%</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>35</td>
+														<td>20년납</td>
+														<td>60세</td>
+														<td class="tar">1억원</td>
+														<td class="tar">1억1,000만원</td>
+														<td class="tar">1억3,000만원</td>
+													</tr>
+													<tr>
+														<td>40</td>
+														<td>25년납</td>
+														<td>65세</td>
+														<td class="tar">1.5억원</td>
+														<td class="tar">1.5억원</td>
+														<td class="tar">1억3,000만원</td>
+													</tr>
+													<tr>
+														<td>45</td>
+														<td>30년납</td>
+														<td>70세</td>
+														<td class="tar">2억원</td>
+														<td class="tar">1억1,000만원</td>
+														<td class="tar">1억3,000만원</td>
+													</tr>
+												</tbody>
+											</table>
+										</fieldset>
+									</form>
+
+									<p class="refer">본 자료는 고객님께서 제공해주신 정보와 생애 전반에 걸쳐 통계치 등 일정한 가정하에 근거하여 고객님의 이해를 돕기 위해 작성된 자료로서 실제 내용은 사실과 다를 수 있습니다.</p>
+									
+								</div>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!-- //공통 컨텐츠 -->
+		<script type="text/javascript">
+			//<![CDATA[
+			var pobj = $('.add');
+			curex.ui.init(pobj);  // tab 데이터가 삭제되기전에 obj에 담아놓음.
+			var myTab = ci.tab.init($('.PersonCont')); // 고객정보탭
+			var myTab1 = ci.tab.init($('.tabOutline')); // 
+			var myTab2 = ci.tab.init($('.lipsWrap')); // 
+			//]]>
+		</script>
+
+	<!-- CHECKLIST -->
+	<div id="checkList">
+		<ul class="h2List">
+			<li><a href="#listMenu">니즈분석메인</a></li>
+			<li><a href="#listMenu">FF일괄입력/수정</a></li>
+			<li><a href="#listMenu">보고서</a></li>
+		</ul><!-- 체크리스트 클릭시 listmenu 오픈 -->
+			
+		<div class="listMenu" style="display:none">
+			<h3>CHECK LIST <span class="red">*보험료 계산을 다시 하신 후 재확인해주세요</span></h3>
+			<ul class="view">
+				<li>- (RAD)계약자의 주민번호 13자리가 잘못 입력되었습니다.</li>
+				<li>- 오늘 홍길동님의 니즈분석 및 가입설계를 디테일하게 진행하셔야 합니다.</li>
+				<li>- (RAD)계약자의 주민번호 13자리가 잘못 입력되었습니다.</li>
+			</ul>
+			<a href="#none" class="enter">확인</a>
+		</div>
+		<ul class="list">
+			<li><a href="#none">저장</a></li>
+			<li><a href="#none">화면출력</a></li>
+		</ul>
+	</div>
+	<!-- //CHECKLIST -->
+
+
+</div>
+
+<!-- FOOTER -->
+<div id="footer">
+	<div class="fter">
+		<img src="/img/common/img_footer.jpg" alt="" />
+	</div>
+</div>
+<!--//FOOTER -->
+
+</body>
+</html>
