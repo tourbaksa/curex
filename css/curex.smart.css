@@ -237,7 +237,7 @@ div.mini_calender.month table td a.prevMon{color:#b2b2b2;}
 
 /* 월선택시  */
 div.monthSelLayer div.monthSet button.on{background-color:#0084ff; color:#fff; border:0;}
-div.calendarCnt{margin:5px 0 20px 0; overflow:hidden;}
+div.calendarCnt{margin:5px 0 0 0; width:1024px; height:462px;}
 table.schedule{ float:left; width:769px;}
 table.schedule th,
 table.schedule td{border:1px solid #e5e6e8;}
@@ -324,6 +324,7 @@ div.timeSchedule.week table tbody > tr > th:first-child{border-left:0;}
 
 div.timeSchedule.day{}
 
+div.statisTable{clear:both; padding:20px 0 0 0;}
 div.statisTable .table1 thead tr.tRow th,
 div.statisTable .table1 tbody th{background:none;}
 div.statisTable .table1 th,

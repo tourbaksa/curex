@@ -468,16 +468,18 @@ curex.ui = {
 		}
 		household();
 
-
-		function fundAni(){
-			var $obj = $(".nizWrap",scope)
-				, $nizDown = $obj.find(".nizDown")
-				, $nizDbtn = $obj.find(".nizTit .btn")
-				, $nizCont = $obj.find(".nizLayer")
-				, $nizCtar = $obj.find(".nizContainer")
-				, $nizTitarr = $obj.find(".nizTit")
-				, posx = 268 //width를 코딩으로박음
-				, $flag = 0;
+		$.fn.fundAni = function(){
+			return this.each(function(){
+				var _this = $(this)
+					, $obj = _this.find(".nizWrap")
+					, $nizDown = $obj.find(".nizDown")
+					, $nizDbtn = $obj.find(".nizTit .btn")
+					, $nizCont = $obj.find(".nizLayer")
+					, $nizCtar = $obj.find(".nizContainer")
+					, $nizTitarr = $obj.find(".nizTit")
+					, $nizClose = $obj.find(".close")
+					, posx = /*$obj.outerWidth()*/269
+					, $flag = 0;
 
 				/* arrow */
 				$nizDown.each(function(idx){
@@ -486,10 +488,13 @@ curex.ui = {
 							if($(this).find(".ImgArrow").hasClass("up")){
 								$(this).find(".ImgArrow").removeClass("up");
 								$nizCtar.eq(idx).slideDown();
+								$nizClose.eq($flag).click();
 							}else{
 								$(this).find(".ImgArrow").addClass("up");
 								$nizCtar.eq(idx).slideUp();
+								$nizClose.eq($flag).click();
 							}
+							return false;
 						}
 					});
 				});
@@ -498,57 +503,84 @@ curex.ui = {
 					$(this).off().on({
 						click:function(){
 							var nizTit = $(this).parent(".nizTit");
-							var old = $nizTitarr.eq($flag)
 							if(!nizTit.hasClass("slideOver")){
 								nizTit.addClass("slideOver")
-								nizAct(nizTit)
-								if (i != 0){
-									nizBisic(old)
+								nizAct(nizTit, i)
+								if (i != $flag){
+									var old = $nizDbtn.eq($flag).parent(".nizTit");
+									nizBisic(old);
 								}
 							}
-							$flag = $nizTitarr.index($(this).parent(".nizTit"));
+							$flag = i;
 							return false;
 						}
 					});
 				});
 
-
-			function nizAct(e){
-				e.animate({
-						"background-color" : "#00B7E6" ,
-						"color" : "#fff"
-					},"fast", function(){
-						$(this).find("h5").append("<span> &gt;</span>");
-						$(this).find("span[class*='sbx']").hide();
-						$(this).find(".btn ").hide();
-					}
-				);
-				e.parent(".nizCont").find(".detailView").show().animate({
-					"width" : 754 ,
-					"left" : posx 
-				},"slow");
-			}
-
-			function nizBisic(e){
-				e.removeClass("slideOver")
-				e.animate({
-						"background-color" : "#F5F5F5" ,
-						"color" : "#707070"
-					},"fast", function(){
-						$(this).find("h5 span").remove();
-						$(this).find(".sbxGreen").show();
-						$(this).find(".btn ").show();
-					}
-				);
-				e.parent(".nizCont").find(".detailView").animate({
-					"width" : 0 ,
-					"left" : -posx
-				},"fast",function(){
-					$(this).hide();
+				$nizClose.each(function(){
+					$(this).off().on({
+						click:function(){
+							var old = $nizDbtn.eq($flag).parent(".nizTit");
+							nizBisic(old)
+							return false;
+						}
+					});
 				});
-			}
+
+				function nizAct(e , index){
+					var layer = e.parent(".nizCont").find(".detailView");
+					var $btny = $nizDbtn.eq(index).parent().offset().top
+					var $_thisy = _this.offset().top
+					var $currenty =((_this.height()+_this.find(".btnWrap").outerHeight()) - ($btny - $_thisy));
+		
+					e.animate({
+							"background-color" : "#00B7E6" ,
+							"color" : "#fff"
+						},"fast", function(){
+							$(this).find("h5").append("<span> &gt;</span>");
+							$(this).find("span[class*='sbx']").hide();
+							$(this).find(".btn ").hide();
+						}
+					);
+					layer.show().animate({
+						"width" : 754 ,
+							"left" : posx
+						},"slow", function(){
+							var LayerH = $(this).outerHeight();
+							var $resty = LayerH - $currenty ;
+							if ($currenty <$resty ){
+								$("html, body").animate({ scrollTop: $(document).height() }, "fast",function(){
+									_this.css({
+										"padding-bottom" : $resty + 30
+									});
+								});
+							}
+						}
+					);
+				}
+
+				function nizBisic(e){
+					e.removeClass("slideOver")
+					e.animate({
+							"background-color" : "#F5F5F5" ,
+							"color" : "#707070"
+						},"fast", function(){
+							$(this).find("h5 span").remove();
+							$(this).find("span[class*='sbx']").show();
+							$(this).find(".btn ").show();
+						}
+					);
+					e.parent(".nizCont").find(".detailView").animate({
+						"width" : 150 ,
+						"left" : 0
+					},"slow",function(){
+						$(this).hide();
+					});
+				}
+			});
 		}
-		fundAni();
+
+		$(".mainTabZone .left", scope).fundAni();
 
 	},
 

@@ -126,25 +126,26 @@ table td span.disebled{color:#d0d0d0;}
 .nizWrap .h5Tit{height:30px;padding:6px 0 0 10px; position:relative;border-top:1px solid #dedede;background:#f5f5f5;}
 .nizWrap .h5Tit .more{position:absolute;right:5px;top:4px;}
 .nizWrap .nizContainer{border-top:0; position:relative; z-index:3; background:#fff; border-left:1px solid #dedede; border-right:1px solid #dedede;}
-.nizWrap .nizTit{background-color:#f5f5f5; height:30px; padding:3px 4px 0 10px; border-top:1px solid #dedede; text-align:right;}
+.nizWrap .nizCont{position:relative;}
+.nizWrap .nizTit{background-color:#f5f5f5; height:30px; padding:3px 4px 0 10px; border-top:1px solid #dedede; text-align:right; position:relative; z-index:10;}
 .nizWrap .nizTit.slideOver{background:#00b7e6; color:#fff;}
 .nizWrap .nizTit h5{float:left; line-height:25px; font-weight:bold;}
-.nizWrap .nizCont{position:relative;}
+.nizWrap .nizData{position:relative; z-index:10; background-color:#fff;}
 .nizWrap .table10{border-top:0;}
 .nizWrap .table10 > tbody > tr > td:first-child{border-left:0;}
 .nizWrap .table10 tbody th{height:30px;}
 
 /* 상세레이어팝업 */
-#conteiner #contents div.lipsWrap .detailView{display:none; position:absolute;left:-268px;top:1px;background:#fff;border:5px solid #00b7e6;width:0px;}
-#conteiner #contents div.lipsWrap .detailView h4{background-color:#00b7e6;color:#fff;font-size:14px;height:24px;line-height:19px;margin:0 0 15px; padding-left:15px;}
-#conteiner #contents div.lipsWrap .detailView .gap{padding:0 15px 10px;}
-#conteiner #contents div.lipsWrap .detailView div.detailC h5{font-size:14px; margin:8px 0;}
-#conteiner #contents div.lipsWrap .detailView div.detailC .hGroup5{position:relative;}
-#conteiner #contents div.lipsWrap .detailView div.detailC .hGroup5 p{position:absolute;right:0;top:0;}
-#conteiner #contents div.lipsWrap .detailView div.detailC .tableAd:after{content:"";display:block;clear:both;}
-#conteiner #contents div.lipsWrap .detailView div.detailC .tableAd table.table2{width:520px;float:left;}
-#conteiner #contents div.lipsWrap .detailView div.detailC .tableAd .adBox{width:184px;float:right;border:1px solid #dedede; text-align:center;color:#00a2ff;width:184px;height:63px;padding-top:15px;font-size:14px;}
-#conteiner #contents div.lipsWrap .detailView .close{position:absolute;right:10px;top:4px;}
+.nizWrap .detailView{display:none; position:absolute;left:0px;top:1px;background:#fff;border:5px solid #00b7e6;width:0px; }
+.nizWrap .detailView h6{background-color:#00b7e6;color:#fff !important;font-size:14px;height:24px;line-height:19px;margin:0 0 15px !important; padding-left:15px;}
+.nizWrap .detailView .gap{padding:0 15px 10px;}
+.nizWrap .detailView div.detailC h5{font-size:14px; margin:8px 0;}
+.nizWrap .detailView div.detailC .hGroup5{position:relative;}
+.nizWrap .detailView div.detailC .hGroup5 p{position:absolute;right:0;top:0;}
+.nizWrap .detailView div.detailC .tableAd:after{content:"";display:block;clear:both;}
+.nizWrap .detailView div.detailC .tableAd table.table2{width:520px;float:left;}
+.nizWrap .detailView div.detailC .tableAd .adBox{width:184px;float:right;border:1px solid #dedede; text-align:center;color:#00a2ff;width:184px;height:63px;padding-top:15px;font-size:14px;}
+.nizWrap .detailView .close{position:absolute;right:10px;top:4px;}
 
 
 
