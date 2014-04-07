@@ -74,18 +74,6 @@ ul.graphTable table{border-top:3px solid #01509f;border-bottom:1px solid #01509f
 ul.graphTable table th{color:#01509f;border-top:1px solid #01509f;border-left:0;border-right:1px solid #fff;border-bottom:0;}
 ul.graphTable table td{text-align:right;background:#efeff1;padding-right:10px;border-top:1px solid #01509f;}
 
-/* 상세레이어팝업 */
-#conteiner #contents div.lipsWrap .detailView{position:absolute;left:269px;top:269px;z-index:10;background:#fff;border:5px solid #00b7e6;width:754px; z-index:100;}
-#conteiner #contents div.lipsWrap .detailView h4{background-color:#00b7e6;color:#fff;font-size:14px;height:27px;line-height:25px;margin:0 0 15px; padding-left:15px;}
-#conteiner #contents div.lipsWrap .detailView .gap{padding:0 15px 10px;}
-#conteiner #contents div.lipsWrap .detailView div.detailC h5{font-size:14px; margin:8px 0;}
-#conteiner #contents div.lipsWrap .detailView div.detailC .hGroup5{position:relative;}
-#conteiner #contents div.lipsWrap .detailView div.detailC .hGroup5 p{position:absolute;right:0;top:0;}
-#conteiner #contents div.lipsWrap .detailView div.detailC .tableAd:after{content:"";display:block;clear:both;}
-#conteiner #contents div.lipsWrap .detailView div.detailC .tableAd table.table2{width:520px;float:left;}
-#conteiner #contents div.lipsWrap .detailView div.detailC .tableAd .adBox{width:184px;float:right;border:1px solid #dedede; text-align:center;color:#00a2ff;width:184px;height:63px;padding-top:15px;font-size:14px;}
-#conteiner #contents div.lipsWrap .detailView .close{position:absolute;right:10px;top:4px;}
-.nizWrap .nizCont .slideOver th{background:#00b7e6; color:#fff;}
 
 /* colorBox */
 .sbxRed{width:8px;height:8px;border-radius:8px;-webkit-border-radius:8px;-moz-border-radius:8px;-ms-border-radius:8px;background-color:#e8404f;display:inline-block;line-height:20px;vertical-align:middle;}
@@ -122,20 +110,44 @@ table td span.disebled{color:#d0d0d0;}
 .groupTab li.active a span.arr{border-color:white white white #00ade2;}
 
 /* 사망보장분석 */
-.nizWrap{position:relative;}
+.nizWrap{position:relative; border-bottom:1px solid #dedede;}
+.nizWrap:first-child div.nizHeader{border-top:1px solid #dedede; }
 .nizWrap .nizHeader{
+	border-right:1px solid #dedede; border-left:1px solid #dedede;
 	position:relative; z-index:3;
-	border:1px solid #dedede;
 	height:30px;line-height:30px;padding:0 5px 0 10px;
 	background-color:#d0ebee;
 }
-.nizWrap .nizHeader h4{line-height:15px;}
-.nizWrap .nizHeader a.btn{position:absolute;right:5px;top:3px;}
+.nizWrap .nizHeader h4{margin:0 !important; float:left; line-height:27px;}
+.nizWrap .nizHeader a.btn{position:absolute;right:4px;top:3px; padding:1px 5px 2px;}
 .nizWrap .nizHeader .absol{position:absolute;right:5px;top:-3px;}
 .nizWrap .nizHeader .absol .btn{position:static;right:0;top:0;}
 .nizWrap .h5Tit{height:30px;padding:6px 0 0 10px; position:relative;border-top:1px solid #dedede;background:#f5f5f5;}
 .nizWrap .h5Tit .more{position:absolute;right:5px;top:4px;}
-.nizWrap .nizCont{border:1px solid #dedede; border-top:0; position:relative; z-index:3; background:#fff;}
+.nizWrap .nizContainer{border-top:0; position:relative; z-index:3; background:#fff; border-left:1px solid #dedede; border-right:1px solid #dedede;}
+.nizWrap .nizTit{background-color:#f5f5f5; height:30px; padding:3px 4px 0 10px; border-top:1px solid #dedede; text-align:right;}
+.nizWrap .nizTit.slideOver{background:#00b7e6; color:#fff;}
+.nizWrap .nizTit h5{float:left; line-height:25px; font-weight:bold;}
+.nizWrap .nizCont{position:relative;}
+.nizWrap .table10{border-top:0;}
+.nizWrap .table10 > tbody > tr > td:first-child{border-left:0;}
+.nizWrap .table10 tbody th{height:30px;}
+
+/* 상세레이어팝업 */
+#conteiner #contents div.lipsWrap .detailView{display:none; position:absolute;left:-268px;top:1px;z-index:10;background:#fff;border:5px solid #00b7e6;width:0px; z-index:100;}
+#conteiner #contents div.lipsWrap .detailView h4{background-color:#00b7e6;color:#fff;font-size:14px;height:24px;line-height:19px;margin:0 0 15px; padding-left:15px;}
+#conteiner #contents div.lipsWrap .detailView .gap{padding:0 15px 10px;}
+#conteiner #contents div.lipsWrap .detailView div.detailC h5{font-size:14px; margin:8px 0;}
+#conteiner #contents div.lipsWrap .detailView div.detailC .hGroup5{position:relative;}
+#conteiner #contents div.lipsWrap .detailView div.detailC .hGroup5 p{position:absolute;right:0;top:0;}
+#conteiner #contents div.lipsWrap .detailView div.detailC .tableAd:after{content:"";display:block;clear:both;}
+#conteiner #contents div.lipsWrap .detailView div.detailC .tableAd table.table2{width:520px;float:left;}
+#conteiner #contents div.lipsWrap .detailView div.detailC .tableAd .adBox{width:184px;float:right;border:1px solid #dedede; text-align:center;color:#00a2ff;width:184px;height:63px;padding-top:15px;font-size:14px;}
+#conteiner #contents div.lipsWrap .detailView .close{position:absolute;right:10px;top:4px;}
+
+
+
+
 
 div.capital {padding:12px 5px 0 14px;margin-bottom:20px;}
 div.capital:after{content:"";display:block;clear:both;}

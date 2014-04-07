@@ -30,7 +30,7 @@
 		<div class="hgroup">
 			<div class="pageTit">
 				<h2 class="pr15">사망보장 분석</h2>
-				<div class="lipsWrap ci-tab">
+				<div class="lipsWrap ci-tab lipsTab">
 					<ul class="groupTab tab-selector">
 						<li class="active"><a href="#none"><span class="arr"></span><span>수입/지출 분석</span></a></li>
 						<li><a href="#none"><span class="arr"></span><span>자산/부채 분석</span></a></li>
@@ -917,30 +917,7 @@
 					<li>
 						<div class="add">
 							<h3 class="hide-element">자산/부채 분석</h3>	
-							<ul class="tab01 attab">
-								<li class="active"><a href="#dasan1"><span>요약</span></a></li>
-								<li><a href="#jasan2"><span>연령별필요자금</span></a></li>
-								<li><a href="#jasan3"><span>연령별누적필요자금</span></a></li>
-								<li><a href="#jasan4"><span>연령별누적준비자금</span></a></li>
-								<li><a href="#jasan5"><span>연령별필요보장자금분석</span></a></li>
-							</ul>
-							<div class="mainTabZone">
-								<div id="dasan1" class="tabCont">
-
-								</div>
-								<div id="dasan2" class="tabCont">
-
-								</div>
-								<div id="dasan3" class="tabCont">
-
-								</div>
-								<div id="dasan4" class="tabCont">
-
-								</div>
-								<div id="dasan5" class="tabCont">
-
-								</div>
-							</div>
+						
 						</div>
 					</li>
 					<li>
@@ -962,7 +939,7 @@
 													<h4>기본정보</h4>
 													<a class="btn smWtRb nizDown" href="#none"><span class="ImgArrow">더보기</span></a>
 												</div>
-												<div class="nizCont">
+												<div class="nizContainer">
 													<table class="table10">
 														<caption>기본정보</caption>
 														<colgroup>
@@ -991,403 +968,718 @@
 																<td><input type="text" style="width:60px" /> 세</td>
 																<td><input type="text" style="width:60px" /> 세</td>
 															</tr>
-															<tr class="tit">
-																<th colspan="2" class="tal">소득	</th>
-																<th class="tar">
-																	<span class="sbxGreen">&nbsp;</span>
-																		<a href="#none" class="btn smbeRb">상세</a>
-																</th>
-															</tr>
-															<tr>
-																<td class="tac">정규소득<br />(월소득)</td>
-																<td><input type="text" style="width:50px" /> 만원</td>
-																<td><input type="text" style="width:50px" /> 만원</td>
-															</tr>
-															<tr>
-																<td class="tac">비정규소득<br />(사업외소득)</td>
-																<td colspan="2">상세를 클릭하여 입력하십시오.</td>
-															</tr>
-															<!-- 오른쪽 슬라이드 없을경우 -->
-															<!--
-															<tr class="tit slideOver">
-																<th colspan="2" class="tal">공적연금</th>
-																<th class="tar">
-																	<a href="#none" class="btn smLgR">참고</a>
-																</th>
-															</tr>
-															 -->
-															<tr class="tit slideOver">
-																<th colspan="3" class="tal">공적연금 &gt;</th>
-															</tr>
-															<tr>
-																<td class="tal">공적연금(월)</td>
-																<td><input type="text" style="width:50px" /> 만원</td>
-																<td><input type="text" style="width:50px" /> 만원</td>
-															</tr>
-															<tr class="tit">
-																<th colspan="2" class="tal">퇴직금</th>
-																<th class="tar">
-																	<a href="#none" class="btn smLgR">참고</a>
-																</th>
-															</tr>
-															<tr>
-																<td class="tal">현재퇴직금</td>
-																<td><input type="text" style="width:50px" /> 만원</td>
-																<td><input type="text" style="width:50px" /> 만원</td>
-															</tr>
 														</tbody>
 													</table>
+													<div class="nizCont">
+														<div class="nizTit">
+															<h5>소득</h5>
+															<span class="sbxGreen">&nbsp;</span>
+															<a href="#none" class="btn smbeRb">상세</a>
+														</div>
+														<div class="nizData">
+															<table class="table10">
+																<caption>소득</caption>
+																<colgroup>
+																	<col width="34%" />
+																	<col width="*" />
+																</colgroup>
+																<tbody>
+																	<tr>
+																		<td class="tac">정규소득<br />(월소득)</td>
+																		<td><input type="text" style="width:50px" /> 만원</td>
+																		<td><input type="text" style="width:50px" /> 만원</td>
+																	</tr>
+																	<tr>
+																		<td class="tac">비정규소득<br />(사업외소득)</td>
+																		<td colspan="2">상세를 클릭하여 입력하십시오.</td>
+																	</tr>
+																	<!-- 오른쪽 슬라이드 없을경우 -->
+																	<!--
+																	<tr class="tit slideOver">
+																		<th colspan="2" class="tal">공적연금</th>
+																		<th class="tar">
+																			<a href="#none" class="btn smLgR">참고</a>
+																		</th>
+																	</tr>
+																	 -->
+																</tbody>
+															</table>
+														</div>
+														<!-- //소득 상세뷰 레이어 -->
+														<div class="detailView nizLayer">
+															<h4>소득</h4>
+															<div class="gap">
+																<ul class="detailV tabGy01">
+																	<li class="on"><a href="#none">국민연금</a></li>
+																	<li><a href="#none">직접연금</a></li>
+																</ul>
+																<div class="detailC">
+																	<div>
+																		<div class="tableAd">
+																			<h5>연금액 간편계산</h5>
+																			<table class="table2">
+																				<caption></caption>
+																				<colgroup>
+																					<col width="10%" />
+																					<col width="10%" />
+																					<col width="10%" />
+																					<col width="10%" />
+																				</colgroup>
+																				<thead>
+																					<tr>
+																						<th>현재연령</th>
+																						<th>입사연령(최초가입)</th>
+																						<th>퇴직연령</th>
+																						<th>현재 월소득</th>
+																					</tr>
+																				</thead>
+																				<tbody>
+																					<tr>
+																						<td>
+																							<input type="text" style="width:100px;" /> 세
+																						</td>
+																						<td>
+																							<input type="text" style="width:100px;" /> 세
+																						</td>
+																						<td>
+																							<input type="text" style="width:100px;" /> 세
+																						</td>
+																						<td>
+																							<input type="text" style="width:100px;" /> 세
+																						</td>
+																					</tr>
+																				</tbody>
+																			</table>
+																			<div class="adBox">
+																				만 60세 이후 연금액<br />월 280만원
+																			</div>
+																		</div>
+																
+																		<div class="hGroup5">
+																			<h5>국민연금 예상수령액 예시표</h5>
+																			<p>출처 : 국민연금관리공단 (2011년)</p>
+																		</div>
+																
+																		<table class="table11">
+																			<caption>국민연금 예상수령액 예시표</caption>
+																			<colgroup>
+																				<col width="5%" />
+																				<col width="10%" />
+																				<col width="10%" />
+																				<col width="10%" />
+																				<col width="10%" />
+																				<col width="10%" />
+																				<col width="10%" />
+																				<col width="10%" />
+																			</colgroup>
+																			<thead>
+																				<tr>
+																					<th rowspan="2">등급</th>
+																					<th rowspan="2">월소득</th>
+																					<th rowspan="2">연금보험료<br />9%</th>
+																					<th colspan="5">가입기간</th>
+																				</tr>
+																				<tr>
+																					<th class="bderL">15년</th>
+																					<th>20년</th>
+																					<th>25년</th>
+																					<th>30년</th>
+																					<th>35년</th>
+																				</tr>
+																			</thead>
+																			<tbody>
+																				<tr>
+																					<td class="tac">22</td>
+																					<td class="tac">1,050,000</td>
+																					<td class="tac">95,400</td>
+																					<td>243,340</td>
+																					<td>315,990</td>
+																					<td>460,190</td>
+																					<td>523,290</td>
+																					<td>523,290</td>
+																				</tr>
+																				<tr>
+																					<td class="tac">22</td>
+																					<td class="tac">1,050,000</td>
+																					<td class="tac">95,400</td>
+																					<td>243,340</td>
+																					<td>315,990</td>
+																					<td>460,190</td>
+																					<td>523,290</td>
+																					<td>523,290</td>
+																				</tr>
+																				<tr>
+																					<td class="tac">22</td>
+																					<td class="tac">1,050,000</td>
+																					<td class="tac">95,400</td>
+																					<td>243,340</td>
+																					<td>315,990</td>
+																					<td>460,190</td>
+																					<td>523,290</td>
+																					<td>523,290</td>
+																				</tr>
+																				<tr>
+																					<td class="tac">22</td>
+																					<td class="tac">1,050,000</td>
+																					<td class="tac">95,400</td>
+																					<td>243,340</td>
+																					<td>315,990</td>
+																					<td>460,190</td>
+																					<td>523,290</td>
+																					<td>523,290</td>
+																				</tr>
+																				<tr>
+																					<td class="tac">22</td>
+																					<td class="tac">1,050,000</td>
+																					<td class="tac">95,400</td>
+																					<td>243,340</td>
+																					<td>315,990</td>
+																					<td>460,190</td>
+																					<td>523,290</td>
+																					<td>523,290</td>
+																				</tr>
+																				<tr>
+																					<td class="tac">22</td>
+																					<td class="tac">1,050,000</td>
+																					<td class="tac">95,400</td>
+																					<td>243,340</td>
+																					<td>315,990</td>
+																					<td>460,190</td>
+																					<td>523,290</td>
+																					<td>523,290</td>
+																				</tr>
+																			</tbody>
+																		</table>
+																		<ul class="footNote">
+																			<li><span>*</span> 위 표는 2011년 가입자기준으로 향후 변동될 수 있습니다.</li>
+																			<li><span>*</span> 소득 상한선으로 인해 월소득이 늘어나도 최대 33만 7500원까지만 보험료 납부가 가능합니다.</li>
+																		</ul>
+																	</div>
+																	
+																</div>
+															</div>
+															<a href="#none" class="close"><img src="/img/common/btn_viewclose.gif" alt="닫기" /></a>
+														</div>
+													</div>
+													<div class="nizCont">
+														<div class="nizTit">
+															<h5>공적연금</h5>
+															<span class="sbxGreen">&nbsp;</span>
+															<a href="#none" class="btn smbeRb">상세</a>
+														</div>
+														<div class="nizData">
+															<table class="table10">
+																<caption>공적연금</caption>
+																<colgroup>
+																	<col width="34%" />
+																	<col width="*" />
+																</colgroup>
+																<tbody>
+
+																	<tr>
+																		<td class="tal">공적연금(월)</td>
+																		<td><input type="text" style="width:50px" /> 만원</td>
+																		<td><input type="text" style="width:50px" /> 만원</td>
+																	</tr>
+																	<tr class="tit">
+																		<th colspan="2" class="tal">퇴직금</th>
+																		<th class="tar">
+																			<a href="#none" class="btn smLgR">참고</a>
+																		</th>
+																	</tr>
+																	<tr>
+																		<td class="tal">현재퇴직금</td>
+																		<td><input type="text" style="width:50px" /> 만원</td>
+																		<td><input type="text" style="width:50px" /> 만원</td>
+																	</tr>
+																</tbody>
+															</table>
+														</div>
+														<!-- //소득 상세뷰 레이어 -->
+														<div class="detailView nizLayer">
+															<h4>공적연금 예상수령액 예시표</h4>
+															<div class="gap">
+																<ul class="detailV tabGy01">
+																	<li class="on"><a href="#none">국민연금</a></li>
+																	<li><a href="#none">직접연금</a></li>
+																</ul>
+																<div class="detailC">
+																	<div>
+																		<div class="tableAd">
+																			<h5>연금액 간편계산</h5>
+																			<table class="table2">
+																				<caption></caption>
+																				<colgroup>
+																					<col width="10%" />
+																					<col width="10%" />
+																					<col width="10%" />
+																					<col width="10%" />
+																				</colgroup>
+																				<thead>
+																					<tr>
+																						<th>현재연령</th>
+																						<th>입사연령(최초가입)</th>
+																						<th>퇴직연령</th>
+																						<th>현재 월소득</th>
+																					</tr>
+																				</thead>
+																				<tbody>
+																					<tr>
+																						<td>
+																							<input type="text" style="width:100px;" /> 세
+																						</td>
+																						<td>
+																							<input type="text" style="width:100px;" /> 세
+																						</td>
+																						<td>
+																							<input type="text" style="width:100px;" /> 세
+																						</td>
+																						<td>
+																							<input type="text" style="width:100px;" /> 세
+																						</td>
+																					</tr>
+																				</tbody>
+																			</table>
+																			<div class="adBox">
+																				만 60세 이후 연금액<br />월 280만원
+																			</div>
+																		</div>
+																
+																		<div class="hGroup5">
+																			<h5>국민연금 예상수령액 예시표</h5>
+																			<p>출처 : 국민연금관리공단 (2011년)</p>
+																		</div>
+																
+																		<table class="table11">
+																			<caption>국민연금 예상수령액 예시표</caption>
+																			<colgroup>
+																				<col width="5%" />
+																				<col width="10%" />
+																				<col width="10%" />
+																				<col width="10%" />
+																				<col width="10%" />
+																				<col width="10%" />
+																				<col width="10%" />
+																				<col width="10%" />
+																			</colgroup>
+																			<thead>
+																				<tr>
+																					<th rowspan="2">등급</th>
+																					<th rowspan="2">월소득</th>
+																					<th rowspan="2">연금보험료<br />9%</th>
+																					<th colspan="5">가입기간</th>
+																				</tr>
+																				<tr>
+																					<th class="bderL">15년</th>
+																					<th>20년</th>
+																					<th>25년</th>
+																					<th>30년</th>
+																					<th>35년</th>
+																				</tr>
+																			</thead>
+																			<tbody>
+																				<tr>
+																					<td class="tac">22</td>
+																					<td class="tac">1,050,000</td>
+																					<td class="tac">95,400</td>
+																					<td>243,340</td>
+																					<td>315,990</td>
+																					<td>460,190</td>
+																					<td>523,290</td>
+																					<td>523,290</td>
+																				</tr>
+																				<tr>
+																					<td class="tac">22</td>
+																					<td class="tac">1,050,000</td>
+																					<td class="tac">95,400</td>
+																					<td>243,340</td>
+																					<td>315,990</td>
+																					<td>460,190</td>
+																					<td>523,290</td>
+																					<td>523,290</td>
+																				</tr>
+																				<tr>
+																					<td class="tac">22</td>
+																					<td class="tac">1,050,000</td>
+																					<td class="tac">95,400</td>
+																					<td>243,340</td>
+																					<td>315,990</td>
+																					<td>460,190</td>
+																					<td>523,290</td>
+																					<td>523,290</td>
+																				</tr>
+																				<tr>
+																					<td class="tac">22</td>
+																					<td class="tac">1,050,000</td>
+																					<td class="tac">95,400</td>
+																					<td>243,340</td>
+																					<td>315,990</td>
+																					<td>460,190</td>
+																					<td>523,290</td>
+																					<td>523,290</td>
+																				</tr>
+																				<tr>
+																					<td class="tac">22</td>
+																					<td class="tac">1,050,000</td>
+																					<td class="tac">95,400</td>
+																					<td>243,340</td>
+																					<td>315,990</td>
+																					<td>460,190</td>
+																					<td>523,290</td>
+																					<td>523,290</td>
+																				</tr>
+																				<tr>
+																					<td class="tac">22</td>
+																					<td class="tac">1,050,000</td>
+																					<td class="tac">95,400</td>
+																					<td>243,340</td>
+																					<td>315,990</td>
+																					<td>460,190</td>
+																					<td>523,290</td>
+																					<td>523,290</td>
+																				</tr>
+																			</tbody>
+																		</table>
+																		<ul class="footNote">
+																			<li><span>*</span> 위 표는 2011년 가입자기준으로 향후 변동될 수 있습니다.</li>
+																			<li><span>*</span> 소득 상한선으로 인해 월소득이 늘어나도 최대 33만 7500원까지만 보험료 납부가 가능합니다.</li>
+																		</ul>
+																	</div>
+																	
+																</div>
+															</div>
+															<a href="#none" class="close"><img src="/img/common/btn_viewclose.gif" alt="닫기" /></a>
+														</div>
+													</div>
+													<div class="nizCont">
+														<div class="nizTit">
+															<h5>퇴직금</h5>
+															<a class="btn smLgR" href="#none">참고</a>
+														</div>
+														<div class="nizData">
+															<table class="table10">
+																<caption>퇴직금</caption>
+																<colgroup>
+																	<col width="34%" />
+																	<col width="*" />
+																</colgroup>
+																<tbody>
+																	<tr>
+																		<td class="tal">현재퇴직금</td>
+																		<td><input type="text" style="width:50px" /> 만원</td>
+																		<td><input type="text" style="width:50px" /> 만원</td>
+																	</tr>
+																</tbody>
+															</table>
+														</div>
+														<!-- //퇴직금 참고 -->
+														<div class="detailView nizLayer">
+															<h4>퇴직금</h4>
+															<div class="gap">
+																<ul class="detailV tabGy01">
+																	<li class="on"><a href="#none">국민연금</a></li>
+																	<li><a href="#none">직접연금</a></li>
+																</ul>
+																<div class="detailC">
+																	<div>
+																		<div class="tableAd">
+																			<h5>연금액 간편계산</h5>
+																			<table class="table2">
+																				<caption></caption>
+																				<colgroup>
+																					<col width="10%" />
+																					<col width="10%" />
+																					<col width="10%" />
+																					<col width="10%" />
+																				</colgroup>
+																				<thead>
+																					<tr>
+																						<th>현재연령</th>
+																						<th>입사연령(최초가입)</th>
+																						<th>퇴직연령</th>
+																						<th>현재 월소득</th>
+																					</tr>
+																				</thead>
+																				<tbody>
+																					<tr>
+																						<td>
+																							<input type="text" style="width:100px;" /> 세
+																						</td>
+																						<td>
+																							<input type="text" style="width:100px;" /> 세
+																						</td>
+																						<td>
+																							<input type="text" style="width:100px;" /> 세
+																						</td>
+																						<td>
+																							<input type="text" style="width:100px;" /> 세
+																						</td>
+																					</tr>
+																				</tbody>
+																			</table>
+																			<div class="adBox">
+																				만 60세 이후 연금액<br />월 280만원
+																			</div>
+																		</div>
+																
+																		<div class="hGroup5">
+																			<h5>국민연금 예상수령액 예시표</h5>
+																			<p>출처 : 국민연금관리공단 (2011년)</p>
+																		</div>
+																
+																		<table class="table11">
+																			<caption>국민연금 예상수령액 예시표</caption>
+																			<colgroup>
+																				<col width="5%" />
+																				<col width="10%" />
+																				<col width="10%" />
+																				<col width="10%" />
+																				<col width="10%" />
+																				<col width="10%" />
+																				<col width="10%" />
+																				<col width="10%" />
+																			</colgroup>
+																			<thead>
+																				<tr>
+																					<th rowspan="2">등급</th>
+																					<th rowspan="2">월소득</th>
+																					<th rowspan="2">연금보험료<br />9%</th>
+																					<th colspan="5">가입기간</th>
+																				</tr>
+																				<tr>
+																					<th class="bderL">15년</th>
+																					<th>20년</th>
+																					<th>25년</th>
+																					<th>30년</th>
+																					<th>35년</th>
+																				</tr>
+																			</thead>
+																			<tbody>
+																				<tr>
+																					<td class="tac">22</td>
+																					<td class="tac">1,050,000</td>
+																					<td class="tac">95,400</td>
+																					<td>243,340</td>
+																					<td>315,990</td>
+																					<td>460,190</td>
+																					<td>523,290</td>
+																					<td>523,290</td>
+																				</tr>
+																				<tr>
+																					<td class="tac">22</td>
+																					<td class="tac">1,050,000</td>
+																					<td class="tac">95,400</td>
+																					<td>243,340</td>
+																					<td>315,990</td>
+																					<td>460,190</td>
+																					<td>523,290</td>
+																					<td>523,290</td>
+																				</tr>
+																				<tr>
+																					<td class="tac">22</td>
+																					<td class="tac">1,050,000</td>
+																					<td class="tac">95,400</td>
+																					<td>243,340</td>
+																					<td>315,990</td>
+																					<td>460,190</td>
+																					<td>523,290</td>
+																					<td>523,290</td>
+																				</tr>
+																				<tr>
+																					<td class="tac">22</td>
+																					<td class="tac">1,050,000</td>
+																					<td class="tac">95,400</td>
+																					<td>243,340</td>
+																					<td>315,990</td>
+																					<td>460,190</td>
+																					<td>523,290</td>
+																					<td>523,290</td>
+																				</tr>
+																				<tr>
+																					<td class="tac">22</td>
+																					<td class="tac">1,050,000</td>
+																					<td class="tac">95,400</td>
+																					<td>243,340</td>
+																					<td>315,990</td>
+																					<td>460,190</td>
+																					<td>523,290</td>
+																					<td>523,290</td>
+																				</tr>
+																				<tr>
+																					<td class="tac">22</td>
+																					<td class="tac">1,050,000</td>
+																					<td class="tac">95,400</td>
+																					<td>243,340</td>
+																					<td>315,990</td>
+																					<td>460,190</td>
+																					<td>523,290</td>
+																					<td>523,290</td>
+																				</tr>
+																			</tbody>
+																		</table>
+																		<ul class="footNote">
+																			<li><span>*</span> 위 표는 2011년 가입자기준으로 향후 변동될 수 있습니다.</li>
+																			<li><span>*</span> 소득 상한선으로 인해 월소득이 늘어나도 최대 33만 7500원까지만 보험료 납부가 가능합니다.</li>
+																		</ul>
+																	</div>
+																	
+																</div>
+															</div>
+															<a href="#none" class="close"><img src="/img/common/btn_viewclose.gif" alt="닫기" /></a>
+														</div>
+													</div>
 												</div>
 											</div>
 
-											<div class="nizWrap mt10">
+											<div class="nizWrap">
 												<div class="nizHeader">
 													<h4>수입/지출</h4>
 													<a class="btn smWtRb nizDown" href="#none"><span class="ImgArrow">더보기</span></a>
 												</div>
-												<div class="nizCont">
-													<table class="table10">
-														<caption>가족생활비</caption>
-														<colgroup>
-															<col width="34%" />
-															<col width="*" />
-														</colgroup>
-														<tbody>
-															<tr class="tit">
-																<th colspan="2" class="tal">가족생활비</th>
-															</tr>
-															<tr>
-																<td class="tal">월생활비</td>
-																<td><input type="text" style="width:120px" /> 만원</td>
-															</tr>
-														</tbody>
-													</table>
-												</div>
-											</div>		
-
-											<div class="nizWrap mt10">
-												<div class="nizHeader">
-													<h4>자산/부채</h4>
-													<a class="btn smWtRb nizDown" href="#none"><span class="ImgArrow">더보기</span></a>
-												</div>
-												<div class="nizCont">
-													<table class="table10">
-														<caption>자산/부채</caption>
-														<colgroup>
-															<col width="40%" />
-															<col width="*" />
-														</colgroup>
-														<tbody>
-															<tr class="tit">
-																<th class="tal">보험자산</th>
-																<th class="tar">
-																	<span class="sbxRed">&nbsp;</span>
-																	<a class="btn smbeRb" href="#none">상세</a>
-																</th>
-															</tr>
-															<tr>
-																<td class="tal">
-																	<div class="btnWrap pr5">
-																		<span class="btnL">당사</span>
-																		<a href="#none" class="smGyRb">불러오기</a>
-																	</div>
-																</td>
-																<td>3rjs / 사망보장 10억원</td>
-															</tr>
-															<tr>
-																<td class="tal">타사</td>
-																<td>상세 클릭하여 주십시오.</td>
-															</tr>
-															<tr class="tit">
-																<th class="tal">자산</th>
-																<th class="tar">
-																	<span class="sbxGreen">&nbsp;</span>
-																	<a class="btn smbeRb" href="#none">상세</a>
-																</th>
-															</tr>
-															<tr>
-																<td>
-																	<div class="btnWrap pr5">
-																		<span class="btnL pl5">금융자산</span>
-																		<a href="#none" class="smGyRb">배분</a>
-																	</div>
-																</td>
-																<td><input type="text" style="width:120px" /> 만원</td>
-															</tr>
-															<tr>
-																<td>
-																	<div class="btnWrap pr5">
-																		<span class="btnL pl5">금융자산</span>
-																		<a href="#none" class="smGyRb">배분</a>
-																	</div>
-																</td>
-																<td><input type="text" style="width:120px" /> 만원</td>
-															</tr>
-															<tr>
-																<td>
-																	<div class="btnWrap pr5">
-																		<span class="btnL pl5">금융자산</span> 
-																		<a href="#none" class="smGyRb">배분</a>
-																	</div>
-																</td>
-																<td><input type="text" style="width:120px" /> 만원</td>
-															</tr>
-															<tr class="tit">
-																<th class="tal">부채상환비</th>
-																<th class="tar">
-																	<span class="sbxGreen">&nbsp;</span>
-																	<a class="btn smbeRb" href="#none">상세</a>
-																</th>
-															</tr>
-															<tr>
-																<td class="tal">대출잔액/기간</td>
-																<td><input type="text" style="width:65px" /> 만원 <input type="text" style="width:35px" /> 년</td>
-															</tr>
-															<tr>
-																<td class="tal">임대보증금</td>
-																<td><input type="text" style="width:120px" /> 만원</td>
-															</tr>
-														</tbody>
-													</table>
+												<div class="nizContainer">
+													<div class="nizCont">
+														<div class="nizTit">
+															<h5>가족생활비</h5>
+														</div>
+														<div class="nizData">
+															<table class="table10">
+																<caption>가족생활비</caption>
+																<colgroup>
+																	<col width="34%" />
+																	<col width="*" />
+																</colgroup>
+																<tbody>
+																	<tr>
+																		<td class="tal">월생활비</td>
+																		<td><input type="text" style="width:120px" /> 만원</td>
+																	</tr>
+																</tbody>
+															</table>
+														</div>
+													</div>
 												</div>
 											</div>
 
-											<div class="nizWrap mt10">
+
+											<div class="nizWrap">
 												<div class="nizHeader">
 													<h4>재무목표</h4>
 													<a href="#none" class="btn smWtRb nizDown"><span class="ImgArrow">더보기</span></a>
 												</div>
-												<div class="nizCont">
-													<table class="table10">
-														<caption>재무목표</caption>
-														<colgroup>
-															<col width="34%" />
-															<col width="*" />
-														</colgroup>
-														<tbody>
-															<tr class="tit">
-																<th class="tal">자녀교육자금</th>
-																<th class="tar">
-																	<span class="sbxRed">&nbsp;</span>
-																		<a class="btn smbeRb" href="#none">상세</a>
-																</th>
-															</tr>
-															<tr>
-																<td class="tal child1">자녀이름</td>
-																<td><input type="text" style="width:130px" /> 만원</td>
-															</tr>
-															<tr>
-																<td class="tal child2">자녀이름</td>
-																<td><input type="text" style="width:130px" /> 만원</td>
-															</tr>
-															<tr>
-																<td class="tal child2">자녀이름</td>
-																<td><input type="text" style="width:130px" /> 만원</td>
-															</tr>
-															<tr class="tit">
-																<th colspan="2" class="tal">자녀결혼자금</th>
-															</tr>
-															<tr>
-																<td class="tal child1">자녀이름</td>
-																<td><input type="text" style="width:130px" /> 만원</td>
-															</tr>
-															<tr>
-																<td class="tal child2">자녀이름</td>
-																<td><input type="text" style="width:130px" /> 만원</td>
-															</tr>
-															<tr>
-																<td class="tal child2">자녀이름</td>
-																<td><input type="text" style="width:130px" /> 만원</td>
-															</tr>
-															<tr class="tit">
-																<th class="tal">주택/기타목적</th>
-																<th class="tar">
-																	<span class="sbxGreen">&nbsp;</span>
-																	<a class="btn smbeRb" href="#none">상세</a>
-																</th>
-															</tr>
-															<tr>
-																<td class="tal">주택구입금액</td>
-																<td><input type="text" style="width:80px" /> 만원 <input type="text" style="width:35px" /> 년</td>
-															</tr>
-															<tr>
-																<td class="tal">기타목적</td>
-																<td>상세를 입력하십시오.</td>
-															</tr>
-															<tr>
-																<td class="tal">장례비/병원비</td>
-																<td><input type="text" style="width:135px" /> 만원</td>
-															</tr>
-															<tr>
-																<td class="tal">긴급예비자금</td>
-																<td><input type="text" style="width:135px" /> 만원</td>
-															</tr>
-														</tbody>
-													</table>
+												<div class="nizContainer">
+													<div class="nizCont">
+														<div class="nizTit">
+															<h5>자녀교육자금</h5>
+															<span class="sbxRed">&nbsp;</span>
+															<a class="btn smbeRb" href="#none">상세</a>
+														</div>
+														<div class="nizData">
+															<table class="table10">
+																<caption>자녀교육자금</caption>
+																<colgroup>
+																	<col width="34%" />
+																	<col width="*" />
+																</colgroup>
+																<tbody>
+																	<tr>
+																		<td class="tal child1">자녀이름</td>
+																		<td><input type="text" style="width:130px" /> 만원</td>
+																	</tr>
+																	<tr>
+																		<td class="tal child2">자녀이름</td>
+																		<td><input type="text" style="width:130px" /> 만원</td>
+																	</tr>
+																	<tr>
+																		<td class="tal child2">자녀이름</td>
+																		<td><input type="text" style="width:130px" /> 만원</td>
+																	</tr>
+																</tbody>
+															</table>
+														</div>
+														<!-- //자녀교육자금 상세 -->
+														<div class="detailView nizLayer">
+															<h4>자녀교육자금</h4>
+
+															<a href="#none" class="close"><img src="/img/common/btn_viewclose.gif" alt="닫기" /></a>
+														</div>
+													</div>
+													<div class="nizCont">
+														<div class="nizTit">
+															<h5>자녀결혼자금</h5>
+															<span class="sbxRed">&nbsp;</span>
+															<a class="btn smbeRb" href="#none">상세</a>
+														</div>
+														<div class="nizData">
+															<table class="table10">
+																<caption>자녀결혼자금</caption>
+																<colgroup>
+																	<col width="34%" />
+																	<col width="*" />
+																</colgroup>
+																<tbody>
+																	<tr>
+																		<td class="tal child1">자녀이름</td>
+																		<td><input type="text" style="width:130px" /> 만원</td>
+																	</tr>
+																	<tr>
+																		<td class="tal child2">자녀이름</td>
+																		<td><input type="text" style="width:130px" /> 만원</td>
+																	</tr>
+																	<tr>
+																		<td class="tal child2">자녀이름</td>
+																		<td><input type="text" style="width:130px" /> 만원</td>
+																	</tr>
+																</tbody>
+															</table>
+														</div>
+													</div>
+
+													<div class="nizCont">
+														<div class="nizTit">
+															<h5>주택/기타목적</h5>
+															<span class="sbxRed">&nbsp;</span>
+															<a class="btn smbeRb" href="#none">상세</a>
+														</div>
+														<div class="nizData">
+															<table class="table10">
+																<caption>주택/기타목적</caption>
+																<colgroup>
+																	<col width="34%" />
+																	<col width="*" />
+																</colgroup>
+																<tbody>
+																<tr>
+																	<td class="tal">주택구입금액</td>
+																	<td><input type="text" style="width:80px" /> 만원 <input type="text" style="width:35px" /> 년</td>
+																</tr>
+																<tr>
+																	<td class="tal">기타목적</td>
+																	<td>상세를 입력하십시오.</td>
+																</tr>
+																<tr>
+																	<td class="tal">장례비/병원비</td>
+																	<td><input type="text" style="width:135px" /> 만원</td>
+																</tr>
+																<tr>
+																	<td class="tal">긴급예비자금</td>
+																	<td><input type="text" style="width:135px" /> 만원</td>
+																</tr>
+																</tbody>
+															</table>
+														</div>
+														<!-- //주택/기타목적 상세 -->
+														<div class="detailView nizLayer">
+															<h4>주택/기타 목적</h4>
+
+															<a href="#none" class="close"><img src="/img/common/btn_viewclose.gif" alt="닫기" /></a>
+														</div>
+													</div>
 												</div>
 											</div>
-											
 											<div class="btnWrap mt10">
 												<a class="btn lgBeR" href="#none">최근값복원</a>
 												<a class="btn lgBeR" href="#none">저장</a>
 											</div>
-											
-											<!-- 상세뷰어 -->
-											<div class="detailView" style="display:block">
-												<h4>공적연금 예상수령액 예시표</h4>
-												<div class="gap">
-													<ul class="detailV tabGy01">
-														<li class="on"><a href="#none">국민연금</a></li>
-														<li><a href="#none">직접연금</a></li>
-													</ul>
-													<div class="detailC">
-														<div>
-															<div class="tableAd">
-																<h5>연금액 간편계산</h5>
-																<table class="table2">
-																	<caption></caption>
-																	<colgroup>
-																		<col width="10%" />
-																		<col width="10%" />
-																		<col width="10%" />
-																		<col width="10%" />
-																	</colgroup>
-																	<thead>
-																		<tr>
-																			<th>현재연령</th>
-																			<th>입사연령(최초가입)</th>
-																			<th>퇴직연령</th>
-																			<th>현재 월소득</th>
-																		</tr>
-																	</thead>
-																	<tbody>
-																		<tr>
-																			<td>
-																				<input type="text" style="width:100px;" /> 세
-																			</td>
-																			<td>
-																				<input type="text" style="width:100px;" /> 세
-																			</td>
-																			<td>
-																				<input type="text" style="width:100px;" /> 세
-																			</td>
-																			<td>
-																				<input type="text" style="width:100px;" /> 세
-																			</td>
-																		</tr>
-																	</tbody>
-																</table>
-																<div class="adBox">
-																	만 60세 이후 연금액<br />월 280만원
-																</div>
-															</div>
-													
-															<div class="hGroup5">
-																<h5>국민연금 예상수령액 예시표</h5>
-																<p>출처 : 국민연금관리공단 (2011년)</p>
-															</div>
-													
-															<table class="table11">
-																<caption>국민연금 예상수령액 예시표</caption>
-																<colgroup>
-																	<col width="5%" />
-																	<col width="10%" />
-																	<col width="10%" />
-																	<col width="10%" />
-																	<col width="10%" />
-																	<col width="10%" />
-																	<col width="10%" />
-																	<col width="10%" />
-																</colgroup>
-																<thead>
-																	<tr>
-																		<th rowspan="2">등급</th>
-																		<th rowspan="2">월소득</th>
-																		<th rowspan="2">연금보험료<br />9%</th>
-																		<th colspan="5">가입기간</th>
-																	</tr>
-																	<tr>
-																		<th class="bderL">15년</th>
-																		<th>20년</th>
-																		<th>25년</th>
-																		<th>30년</th>
-																		<th>35년</th>
-																	</tr>
-																</thead>
-																<tbody>
-																	<tr>
-																		<td class="tac">22</td>
-																		<td class="tac">1,050,000</td>
-																		<td class="tac">95,400</td>
-																		<td>243,340</td>
-																		<td>315,990</td>
-																		<td>460,190</td>
-																		<td>523,290</td>
-																		<td>523,290</td>
-																	</tr>
-																	<tr>
-																		<td class="tac">22</td>
-																		<td class="tac">1,050,000</td>
-																		<td class="tac">95,400</td>
-																		<td>243,340</td>
-																		<td>315,990</td>
-																		<td>460,190</td>
-																		<td>523,290</td>
-																		<td>523,290</td>
-																	</tr>
-																	<tr>
-																		<td class="tac">22</td>
-																		<td class="tac">1,050,000</td>
-																		<td class="tac">95,400</td>
-																		<td>243,340</td>
-																		<td>315,990</td>
-																		<td>460,190</td>
-																		<td>523,290</td>
-																		<td>523,290</td>
-																	</tr>
-																	<tr>
-																		<td class="tac">22</td>
-																		<td class="tac">1,050,000</td>
-																		<td class="tac">95,400</td>
-																		<td>243,340</td>
-																		<td>315,990</td>
-																		<td>460,190</td>
-																		<td>523,290</td>
-																		<td>523,290</td>
-																	</tr>
-																	<tr>
-																		<td class="tac">22</td>
-																		<td class="tac">1,050,000</td>
-																		<td class="tac">95,400</td>
-																		<td>243,340</td>
-																		<td>315,990</td>
-																		<td>460,190</td>
-																		<td>523,290</td>
-																		<td>523,290</td>
-																	</tr>
-																	<tr>
-																		<td class="tac">22</td>
-																		<td class="tac">1,050,000</td>
-																		<td class="tac">95,400</td>
-																		<td>243,340</td>
-																		<td>315,990</td>
-																		<td>460,190</td>
-																		<td>523,290</td>
-																		<td>523,290</td>
-																	</tr>
-																</tbody>
-															</table>
-															<ul class="footNote">
-																<li><span>*</span> 위 표는 2011년 가입자기준으로 향후 변동될 수 있습니다.</li>
-																<li><span>*</span> 소득 상한선으로 인해 월소득이 늘어나도 최대 33만 7500원까지만 보험료 납부가 가능합니다.</li>
-															</ul>
-														</div>
-														
-													</div>
-												</div>
-												<a href="#none" class="close"><img src="/img/common/btn_viewclose.gif" alt="닫기" /></a>
-											</div>
-												
 										</div>
 										<div class="right mt10">
 											<div class="graphWrap">
@@ -2313,7 +2605,7 @@
 											</div>
 											
 											<!-- 상세뷰어 -->
-											<div class="detailView" style="display:none">
+											<div id="nizLayer1" class="detailView" style="display:none">
 												<h4>공적연금 예상수령액 예시표</h4>
 												<div class="gap">
 													<ul class="detailV tabGy01">
@@ -2469,6 +2761,30 @@
 												</div>
 											</div>
 												
+											<div id="nizLayer2" class="detailView" style="display:none">
+												<h4>공적연금 예상수령액 예시표</h4>
+												<div></div>
+											</div>
+											<div id="nizLayer3" class="detailView" style="display:none">
+												<h4>공적연금 예상수령액 예시표</h4>
+												<div></div>
+											</div>											
+											<div id="nizLayer4" class="detailView" style="display:none">
+												<h4>공적연금 예상수령액 예시표</h4>
+												<div></div>
+											</div>										
+											<div id="nizLayer5" class="detailView" style="display:none">
+												<h4>공적연금 예상수령액 예시표</h4>
+												<div></div>
+											</div>			
+											<div id="nizLayer6" class="detailView" style="display:none">
+												<h4>공적연금 예상수령액 예시표</h4>
+												<div></div>
+											</div>			
+											<div id="nizLayer7" class="detailView" style="display:none">
+												<h4>공적연금 예상수령액 예시표</h4>
+												<div></div>
+											</div>																																														
 										</div>
 										<div class="right mt10">
 											<div class="graphWrap">
@@ -2616,7 +2932,9 @@
 			curex.ui.init(pobj);  // tab 데이터가 삭제되기전에 obj에 담아놓음.
 			var myTab = ci.tab.init($('.PersonCont')); // 고객정보탭
 			var myTab1 = ci.tab.init($('.tabOutline')); // 
-			var myTab2 = ci.tab.init($('.lipsWrap')); // 
+			var myTab2 = ci.tab.init($('.lipsWrap'), {
+				defaultTabIndex : [2]
+			}); // 
 			//]]>
 		</script>
 

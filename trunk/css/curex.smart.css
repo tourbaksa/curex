@@ -204,9 +204,9 @@ div.calendar div.yearSel button,
 div.calendar div.yearSel span.current{vertical-align:top;}
 div.calendar div.yearSel button.ybefore{background:url(/img/sub/btn_mkYbefore.gif) no-repeat 0 0; width:20px; height:20px; margin:4px 0 0 0;}
 div.calendar div.yearSel span.current{ display:inline-block; min-width:162px; position:relative; text-align:left; height:27px; line-height:27px;}
-div.calendar div.yearSel span.current > a:first-child{background:url(/img/sub/icon_ySelArwclose.gif) no-repeat 100% 50%; display:inline-block; font-size:18px; min-width:113px; font-weight:bold; color:#fff; padding:0 21px 0 23px; margin-right:9px;}
+div.calendar div.yearSel span.current > a:first-child{background:url(/img/sub/icon_ySelArwclose.gif) no-repeat 100% 50%; display:inline-block; font-size:18px; /*min-width:113px;*/ font-weight:bold; color:#fff; padding:0 21px 0 23px; margin-right:9px;}
 div.calendar div.yearSel span.current a.close{background-image:url(/img/sub/icon_ySelArwclose.gif);}
-div.calendar div.yearSel span.current a.carendar span.today{vertical-align:top; display:inline-block; width:36px; font-family:Myriad Pro; font-size:11px; background-color:#318eb9; margin:3px 25px 0 0;}
+div.calendar div.yearSel span.current a.carendar span.today{vertical-align:top; display:inline-block; font-family:Myriad Pro; font-size:11px; background-color:#318eb9; margin:3px 25px 0 0;}
 div.calendar div.yearSel button.ynext{background:url(/img/sub/btn_mkYnext.gif) no-repeat 0 0; width:20px; height:20px; height:20px; margin:4px 0 0 0;}
 
 

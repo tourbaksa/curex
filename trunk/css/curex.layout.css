@@ -129,7 +129,7 @@ div.personBtn .lgBeR1{padding:7px 10px;}
 div.personBtn .lgGyR1{padding:7px 10px;}
 
 /* 컨텐츠 */
-#conteiner{width:1024px; margin:20px auto 0;}
+#conteiner{width:1024px; margin:20px auto 0; min-height:613px;}
 #conteiner div.hgroup{position:relative;margin-bottom:20px; height:23px; line-height:23px;}
 #conteiner div.hgroup.mtB0{margin-bottom:0;}
 #conteiner div.hgroup h2{font-size:24px;color:#363636; float:left; font-weight:bold;}

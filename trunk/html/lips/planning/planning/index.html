@@ -32,7 +32,7 @@
 				<h2>개인설계</h2>
 				
 				<span class="entry entryFull">
-					<span class="entryBg"><input type="text" value="계획명을 입력하세요" /></span>
+					<span class="entryBg"><input type="text" value="계획명을 입력하세요" style="width:130px;" size="12" /></span>
 				</span>
 				<a href="#none" class="btn smGnR">저장</a> 
 				<a href="#none" class="btn smGnR">MyPlan 저장</a> 
@@ -48,7 +48,7 @@
 		<!-- 공통 컨텐츠 -->
 		<div id="contents" class="lips clear-fix">
 			<div class="lipsWrap ci-tab">
-				<ul class="tab01 tab-selector">
+				<ul class="tab01 tab-selector planTab">
 					<li class="active"><a href="#none" class="type2">가입설계</a></li><!-- 블루 -->
 					<li><a href="#none" class="type2">청약정보</a></li><!-- 블루 -->
 					<li><a href="#none">보장내용</a></li><!-- 기본 -->
@@ -3667,7 +3667,8 @@
 			curex.ui.init(pobj);  // tab 데이터가 삭제되기전에 obj에 담아놓음.
 			var myTab = ci.tab.init($('.PersonCont')); // 고객정보탭
 			var myTab1 = ci.tab.init($('.tabOutline')); // 
-			var myTab2 = ci.tab.init($('.lipsWrap')); // 
+			var myTab2 = ci.tab.init($('.lipsWrap')); 
+
 			//]]>
 		</script>
 	</div>
