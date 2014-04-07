@@ -138,21 +138,13 @@ table td span.disebled{color:#d0d0d0;}
 
 /* 상세레이어팝업 */
 #conteiner #contents div.lipsWrap .detailView{display:none; position:absolute;left:-268px;top:1px;background:#fff;border:5px solid #00b7e6;width:0px;}
-#conteiner #contents div.lipsWrap .detailView h4{background-color:#00b7e6;color:#fff;font-size:14px;height:24px;line-height:19px;margin:0 0 15px; padding-left:15px;}
+#conteiner #contents div.lipsWrap .detailView h6{background-color:#00b7e6;color:#fff;font-size:14px;height:24px;line-height:19px;margin:0 0 15px; padding-left:15px;}
 #conteiner #contents div.lipsWrap .detailView .close{position:absolute;right:10px;top:4px;}
 #conteiner #contents div.lipsWrap .detailView .detailContent{padding:0 15px 15px;}
 .detailContent .child1{background:url(/img/common/icon_child1.gif) no-repeat 10px center;padding-left:30px !important;}
 .detailContent .child2{background:url(/img/common/icon_child2.gif) no-repeat 10px center;padding-left:30px !important;}
 .detailContent .textSum {font-size:16px;margin:7px 0;}
 .detailContent .textSum strong{color:#01509F;}
-
-#conteiner #contents div.lipsWrap .detailView .gap{padding:0 15px 10px;}
-#conteiner #contents div.lipsWrap .detailView div.detailC h5{font-size:14px; margin:8px 0;}
-#conteiner #contents div.lipsWrap .detailView div.detailC .hGroup5{position:relative;}
-#conteiner #contents div.lipsWrap .detailView div.detailC .hGroup5 p{position:absolute;right:0;top:0;}
-#conteiner #contents div.lipsWrap .detailView div.detailC .tableAd:after{content:"";display:block;clear:both;}
-#conteiner #contents div.lipsWrap .detailView div.detailC .tableAd table.table2{width:520px;float:left;}
-#conteiner #contents div.lipsWrap .detailView div.detailC .tableAd .adBox{width:184px;float:right;border:1px solid #dedede; text-align:center;color:#00a2ff;width:184px;height:63px;padding-top:15px;font-size:14px;}
 
 div.capital {padding:12px 5px 0 14px;margin-bottom:20px;}
 div.capital:after{content:"";display:block;clear:both;}
