@@ -110,7 +110,8 @@ table td span.disebled{color:#d0d0d0;}
 .groupTab li.active a span.arr{border-color:white white white #00ade2;}
 
 /* 사망보장분석 */
-.nizWrap{position:relative; border-bottom:1px solid #dedede;}
+#conteiner #contents div.lipsWrap .left{position:relative; z-index:100;}
+.nizWrap{position:relative; border-bottom:1px solid #dedede; z-index:100;}
 .nizWrap:first-child div.nizHeader{border-top:1px solid #dedede; }
 .nizWrap .nizHeader{
 	border-right:1px solid #dedede; border-left:1px solid #dedede;
@@ -134,7 +135,7 @@ table td span.disebled{color:#d0d0d0;}
 .nizWrap .table10 tbody th{height:30px;}
 
 /* 상세레이어팝업 */
-#conteiner #contents div.lipsWrap .detailView{display:none; position:absolute;left:-268px;top:1px;z-index:10;background:#fff;border:5px solid #00b7e6;width:0px; z-index:100;}
+#conteiner #contents div.lipsWrap .detailView{display:none; position:absolute;left:-268px;top:1px;background:#fff;border:5px solid #00b7e6;width:0px;}
 #conteiner #contents div.lipsWrap .detailView h4{background-color:#00b7e6;color:#fff;font-size:14px;height:24px;line-height:19px;margin:0 0 15px; padding-left:15px;}
 #conteiner #contents div.lipsWrap .detailView .gap{padding:0 15px 10px;}
 #conteiner #contents div.lipsWrap .detailView div.detailC h5{font-size:14px; margin:8px 0;}
