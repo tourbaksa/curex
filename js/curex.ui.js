@@ -358,20 +358,26 @@ curex.ui = {
 				, $links = $obj.find("a");
 
 				if(!$links.parent().hasClass("active")){
+					console.log("1"+$obj)
 					$active = $($links.filter('[href="'+location.hash+'"]')[0] || $links[0]);
 				}else{
 					$active = $($obj.find("li.active a"));
+					
 				}
 
 				$content = $($active[0].hash, scope);
-
 				$links.not($active).each(function () {
 					$($(this).attr('href'),scope).hide();
 				});
 
 				// 이벤트
+				$obj.find("a").click(function(){
+					alert("dd")
+
+				})
 				$obj.find("a").off().on({
 					click:function(e){
+						
 					$active.parent().removeClass('active');
 					$content.hide();
 
@@ -422,37 +428,142 @@ curex.ui = {
 	inputWidth:function(){
 		var $obj = $(".entry")
 			 ,$input =$obj.find("input[type='text']")
-			 ,$size = $input.val().length
+			 ,$dsize = $input.attr("size")
+			 ,$dwidth = $input.outerWidth()
+			 ,$ewidth = "200px";
 
+		$input.val("계획명을 입력하세요.");
+		$input.focus(function(){ this.value = "";}); /*blur(function(){this.value = "계획명을 입력하세요."; $(this).outerWidth($dwidth);});*/
 
-	function resizeInput() {
-		console.log($(this).val().length)
-    $(this).attr('size', $(this).val().length+2);
-}   
-
-$input.keyup(resizeInput).each(resizeInput);
-
+		$input.focus(function(){
+			$(this).val(function() {
+				$(this).val('');
+			});
+			$(this).animate({
+				width: $ewidth
+			}, 400 )
+		}); 
 	},
 
+	/* 니드분석 */
 
 	nidFun:function(){
 		var scope = this.op
-
 		function household(){
 			var $obj = $(".importWrap ", scope)
-				 ,$revise = $(".revise", $obj);
-			
+				 ,$revise = $(".revise", $obj)
+				 ,$reviseWrap = $revise.closest(".importForm").parent("div[class*='import']");
+
+			$reviseWrap.hide();
+			$reviseWrap.eq(0).show();
 			$revise.each(function(idx){
 				$(this).off().on({
 					click:function(){
-						console.log($(this).parent(".import"+(idx+1)));
-						
+						$reviseWrap.show();
+						$(this).closest(".importForm").parent(".import"+(idx+1)).hide();
 					}
 				})
 			});
 			
 		}
 		household();
+
+
+		function fundAni(){
+			var $obj = $(".nizWrap",scope)
+				, $nizDown = $obj.find(".nizDown")
+				, $nizDbtn = $obj.find(".nizTit .btn")
+				, $nizCont = $obj.find(".nizLayer")
+				, $nizCtar = $obj.find(".nizContainer")
+				, $nizTitarr = $obj.find(".nizTit")
+				, $flag;
+
+				/* arrow */
+				$nizDown.each(function(idx){
+					$(this).off().on({
+						click:function(){
+							if($(this).find(".ImgArrow").hasClass("up")){
+								$(this).find(".ImgArrow").removeClass("up");
+								$nizCtar.eq(idx).slideDown();
+							}else{
+								$(this).find(".ImgArrow").addClass("up");
+								$nizCtar.eq(idx).slideUp();
+							}
+						}
+					});
+				});
+
+				$nizDbtn.each(function(i){
+					$(this).off().on({
+						click:function(){
+							var nizTit = $(this).parent(".nizTit");
+							var old = $nizTitarr.eq(old)
+							if(!nizTit.hasClass("slideOver")){
+								nizTit.addClass("slideOver")
+								nizAct(nizTit)
+								nizBisic(old)
+
+							}
+							$flag = $nizTitarr.index($(this).parent(".nizTit"));
+							return false;
+						}
+					});
+				});
+
+
+			function nizAct(e){
+				e.animate({
+						"background-color" : "#00B7E6" ,
+						"color" : "#fff"
+					},"fast", function(){
+						$(this).find("h5").append("<span> &gt;</span>");
+						$(this).find(".sbxGreen").hide();
+						$(this).find(".btn ").hide();
+					}
+				);
+				e.parent(".nizCont").find(".detailView").animate({
+					"width" : 754 ,
+					"left" : 268 
+				});
+			}
+
+			function nizBisic(e){
+				e.removeClass("slideOver")
+				e.animate({
+						"background-color" : "#F5F5F5" ,
+						"color" : "#707070"
+					},"fast", function(){
+						$(this).find("h5 span").remove();
+						$(this).find(".sbxGreen").show();
+						$(this).find(".btn ").show();
+					}
+				);
+				e.parent(".nizCont").find(".detailView").animate({
+					"width" : 0 ,
+					"left" : -268 
+				});
+			}
+		}
+		fundAni();
+
+	},
+
+	planTab:function(){
+	 $(".planTab a").each(function(){
+		if($(this).hasClass("type2")){
+			$(this).closest(".planTab").addClass("type2");
+		}
+		$(this).off().on({
+			click:function(){
+				if($(this).hasClass("type2")){
+					$(this).closest(".planTab").removeClass("type2");
+					$(this).closest(".planTab").addClass("type2");
+				}else{
+					$(this).closest(".planTab").removeClass("type2");
+				}
+			}
+		});
+	 });
 
 	}
 
@@ -501,7 +612,8 @@ $(document).ready(function(){
 	curex.ui.RdTab();
 	curex.ui.nidFun(); //니드분석
 	if($(".entry ").length){curex.ui.inputWidth();}// input width
-
+	if($(".planTab").length){curex.ui.planTab();}// 개인설계 tab 스타일적용
+	
 });
 
 

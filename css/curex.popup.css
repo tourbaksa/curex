@@ -18,10 +18,10 @@
 /*==========================
    팝업 레이아웃 type2
 ============================*/
-div#PopWrap2{ border:1px solid #64ade5; border-bottom:1px solid #d6d6d6; background:#fff;  position:relative;}
-div#PopWrap2 div.popHeader{height:36px; background:#f7f7f7; border-bottom:1px solid #e5e6e8; padding-left:9px; line-height:35px; color:#000;}
+div#PopWrap2{ position:relative;}
+div#PopWrap2 div.popHeader{height:36px; /*background:#f7f7f7; border-bottom:1px solid #e5e6e8;*/ padding-left:9px; line-height:35px; color:#000;}
 div#PopWrap2 h1{margin:0 !important; color: #363636; font-size: 16px; font-weight: bold; letter-spacing: -1px; margin: 8px 0;}
-div#PopWrap2 div.popcontent{padding:10px 9px 9px 9px; border-bottom:1px solid #64ade5;}
+div#PopWrap2 div.popcontent{padding:10px 9px 9px 9px;}
 div#PopWrap2 div.popcontent .table1{border:1px solid #dedede;}
 div#PopWrap2 a.btnClosePopup{position:absolute; right:9px; top:7px;}
 
@@ -105,6 +105,8 @@ dl.searchZone dt{
 dl.searchZone dd{margin-left:110px; height:30px; line-height:30px; padding:0 0 0 3px; border-left:1px solid #dedede;}
 span.popSearchRlt{color:#000; line-height:15px; margin:20px 0 10px 0; display:block; font-size:14px; font-weight:bold;}
 
+/* 고객재검색 */
+div.popResearchWrap{overflow-y:scroll; overflow-x:hidden; height:185px;}
 
 /* 적합성진단실시 */
 .workBook{margin-top:20px;}

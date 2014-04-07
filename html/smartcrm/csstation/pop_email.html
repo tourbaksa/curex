@@ -398,7 +398,11 @@
 											<tr>
 												<th>사진선택</th>
 												<td>
-													<input type="text" name="txtAttach0" id="txtAttach0" style="width:337px;" readonly="readonly" /><input type="file" id="fileAttach0" style="display:none;" /> <a href="#none" class="btn smGynb fileupload" type="button">찾아보기</a>
+														<input type="text" title="파일이름" readonly="readonly" class="fileName" style="width:337px;">
+														<span class="attchfileBox">
+															<a href="#none" class="btn smGynb" type="button">찾아보기</a>
+															<input type="file" onchange="getFilename(this)" class="fileHidden" id="addfile">
+														</span>
 												</td>
 											</tr>
 											<tr>
@@ -513,13 +517,29 @@
 												<tr>
 													<th scope="row">파일첨부</th>
 													<td>
-														<input type="text" style="width:387px;" readonly="readonly" /><input type="file" id="fileAttach0" style="display:none;" /> <a href="#none" class="btn smGynb fileupload" type="button">찾아보기</a>
-														<a href="#none" class="btn smGynb fileupload" type="button">삭제</a>
+														<input type="text" title="파일이름" readonly="readonly" class="fileName" style="width:337px;">
+														<span class="attchfileBox">
+															<a href="#none" class="btn smGynb" type="button">찾아보기</a>
+															<input type="file" onchange="getFilename(this)" class="fileHidden" id="addfile">
+														</span>
+														<a href="#none" class="btn smGynb fileDel" type="button">삭제</a>
 													</td>
 												</tr>
 											</tbody>
 										</table>
 									</div>
+										<script type="text/javascript">
+										//<!CDATA[
+											$(document).ready(function(){
+												$(".fileName").val('');
+											});
+											function getFilename(ele){
+												var fileName = $(ele).parent().prev(".fileName");
+													fileName.val(ele.value);
+											}
+											$(".fileDel").off().on({ click:function(){ $(this).parent().find(".fileName").val('');}});
+										//]]>
+										</script>
 									<div class="btnWrap tac">
 										<a href="#" class="btn lgLgR">초기화</a>
 										<a href="#" class="btn lgLgR">미리보기</a>
@@ -540,75 +560,7 @@
 
 <script type="text/javascript">
 	//<![CDATA[
-	//파일업로드
-	var fileupload = (function($){
-		var $Obj = $(".fileupload") // 파일업로드버튼
-			, $fileDel = $(".fileDel") //행삭제 버튼
-			, $fileInsert = $(".fileInsert") //파일첨부 행추가버튼
-			, $tr = $(".SendTable tr:last")
-			, $tbody = $(".SendTable tbody:last")
-			, idx;
 
-
-		console.log($('input[id*="txtAttach"]'))
-		$Obj.each(function(i){
-			$(this).off().on({
-				click:function(){
-					$("#fileAttach"+i).click();
-					$("#fileAttach"+i).change(function(){
-						 var selected_item = $(this).val()
-							$("#txtAttach"+i).val(selected_item);
-							$("#txtAttach"+i).attr('value', $("#fileAttach"+i).val())
-						});
-					return false;
-				}
-			});
-		$fileInsert.each(function(){
-			$(this).off().on({
-				click:function(){
-					var cloned = $(this).closest("tr").addClass("attchFile").clone(true).addClass("cloned");
-					var idx = $(this).closest("table").find("tr.attchFile").length;
-					console.log(idx)
-					if(idx < 3){ // 파일첨부는 3개이상 추가되지않는다.
-						$tbody.append(cloned) //복사한후 클론된 tr의 갯수를 센다.
-						$(this).closest("table").find("tr.cloned .fileInsert").remove(); //추가버튼은 제일상단에만 위치.
-						number()
-					}else{
-						return false;
-					}
-					return false;
-				}
-			});
-		});
-		$fileDel.each(function(){
-			$(this).off().on({
-				click:function(){
-					$(this).closest("tr").remove();
-					number(idx);
-				}
-			});
-		});
-		function number(){  //삭제 되거나, 추가될때마다 input id갱신
-			var $file = $("tr.attchFile input:file")
-				, $txt = $("tr.attchFile input:text");
-				$file.each(function(i){
-					$file.eq(i).attr({
-						name :"fileAttach" + i,
-						id :"fileAttach" + i,
-						value:""
-					})
-				});
-				$txt.each(function(i){
-					$txt.eq(i).attr({
-						name :"txtAttach" + i,
-						id :"txtAttach" +i,
-						value:""
-					})
-				});
-		}
-	});
-
-	})(jQuery);
 	var pobj = $('.add');
 	curex.ui.init(pobj);  // tab 데이터가 삭제되기전에 obj에 담아놓음.
 	var myTab2 = ci.tab.init($('.csstation')); // 
