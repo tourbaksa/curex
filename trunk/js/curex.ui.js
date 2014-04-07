@@ -476,7 +476,8 @@ curex.ui = {
 				, $nizCont = $obj.find(".nizLayer")
 				, $nizCtar = $obj.find(".nizContainer")
 				, $nizTitarr = $obj.find(".nizTit")
-				, $flag;
+				, posx = 268 //width를 코딩으로박음
+				, $flag = 0;
 
 				/* arrow */
 				$nizDown.each(function(idx){
@@ -497,12 +498,13 @@ curex.ui = {
 					$(this).off().on({
 						click:function(){
 							var nizTit = $(this).parent(".nizTit");
-							var old = $nizTitarr.eq(old)
+							var old = $nizTitarr.eq($flag)
 							if(!nizTit.hasClass("slideOver")){
 								nizTit.addClass("slideOver")
 								nizAct(nizTit)
-								nizBisic(old)
-
+								if (i != 0){
+									nizBisic(old)
+								}
 							}
 							$flag = $nizTitarr.index($(this).parent(".nizTit"));
 							return false;
@@ -517,14 +519,14 @@ curex.ui = {
 						"color" : "#fff"
 					},"fast", function(){
 						$(this).find("h5").append("<span> &gt;</span>");
-						$(this).find(".sbxGreen").hide();
+						$(this).find("span[class*='sbx']").hide();
 						$(this).find(".btn ").hide();
 					}
 				);
-				e.parent(".nizCont").find(".detailView").animate({
+				e.parent(".nizCont").find(".detailView").show().animate({
 					"width" : 754 ,
-					"left" : 268 
-				});
+					"left" : posx 
+				},"slow");
 			}
 
 			function nizBisic(e){
@@ -540,7 +542,9 @@ curex.ui = {
 				);
 				e.parent(".nizCont").find(".detailView").animate({
 					"width" : 0 ,
-					"left" : -268 
+					"left" : -posx
+				},"fast",function(){
+					$(this).hide();
 				});
 			}
 		}
