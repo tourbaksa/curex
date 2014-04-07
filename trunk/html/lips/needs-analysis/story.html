@@ -29,7 +29,7 @@
 	<div id="conteiner">
 		<div class="hgroup">
 			<div class="pageTit">
-				<h2 class="pr15">사망보장 분석</h2>
+				<h2 class="pr15">생애Story</h2>
 			 	<ul class="location">
 			 		<li><a href="#none">홈&nbsp;</a>&gt;</li>
 			 		<li><a href="#none">&nbsp;LiPS&nbsp;</a>&gt;</li>
@@ -59,28 +59,30 @@
 									<div class="nizHeader">
 										<h4>기본정보</h4>
 									</div>
-									<div class="nizCont">
-										<table class="table10">
-											<caption>기본정보</caption>
-											<colgroup>
-												<col width="30%" />
-												<col width="*" />
-											</colgroup>
-											<tbody>
-												<tr>
-													<td class="tac">월소득</td>
-													<td><input type="text" style="width:140px" /> 만원</td>
-												</tr>
-												<tr>
-													<td class="tac">월지출</td>
-													<td><input type="text" style="width:140px" /> 만원</td>
-												</tr>
-												<tr>
-													<td class="tac">은퇴연령</td>
-													<td><input type="text" style="width:140px" /> 세</td>
-												</tr>
-											</tbody>
-										</table>
+									<div class="nizContainer">
+										<div class="nizCont">
+											<table class="table10">
+												<caption>기본정보</caption>
+												<colgroup>
+													<col width="30%" />
+													<col width="*" />
+												</colgroup>
+												<tbody>
+													<tr>
+														<td class="tac">월소득</td>
+														<td><input type="text" style="width:140px" /> 만원</td>
+													</tr>
+													<tr>
+														<td class="tac">월지출</td>
+														<td><input type="text" style="width:140px" /> 만원</td>
+													</tr>
+													<tr>
+														<td class="tac">은퇴연령</td>
+														<td><input type="text" style="width:140px" /> 세</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
 									</div>
 								</div>
 
@@ -92,74 +94,76 @@
 											<a href="#none" class="btn smLgR">삭제</a>
 										</span>
 									</div>
-									<div class="nizCont">
-										<table class="table10">
-											<caption>가족정보</caption>
-											<colgroup>
-												<col width="33%">
-												<col width="25%">
-												<col width="18%">
-											</colgroup>
-											<tbody>
-												<tr>
-													<th>성명</th>
-													<th>성별</th>
-													<th>연령</th>
-												</tr>
-												<tr>
-													<td><span class="widthFull"><input type="text" /></span></td>
-													<td>
-														<span class="selectFull">
-															<select>
-																<option></option>
-																<option></option>
-															</select>
-														</span>
-													</td>
-													<td>
-														<input type="text" style="width:40px;" />
-														세
-													</td>
-												</tr>
-												<tr>
-													<td><span class="widthFull"><input type="text" /></span></td>
-													<td>
-														<span class="selectFull">
-															<select>
-																<option></option>
-																<option></option>
-															</select>
-														</span>
-													</td>
-													<td>
-														<input type="text" style="width:40px;" />
-														세
-													</td>
-												</tr>
-												<tr>
-													<td>
-														<input type="checkbox" />
-														<input type="text" style="width:60px;" />
-													</td>
-													<td>
-														<span class="selectFull">
-															<select>
-																<option></option>
-																<option></option>
-															</select>
-														</span>
-													</td>
-													<td>
-														<input type="text" style="width:40px;" />
-														세
-													</td>
-												</tr>
-											</tbody>
-										</table>
+									<div class="nizContainer">
+										<div class="nizCont">
+											<table class="table10">
+												<caption>가족정보</caption>
+												<colgroup>
+													<col width="33%">
+													<col width="25%">
+													<col width="18%">
+												</colgroup>
+												<tbody>
+													<tr>
+														<th>성명</th>
+														<th>성별</th>
+														<th>연령</th>
+													</tr>
+													<tr>
+														<td><span class="widthFull"><input type="text" /></span></td>
+														<td>
+															<span class="selectFull">
+																<select>
+																	<option></option>
+																	<option></option>
+																</select>
+															</span>
+														</td>
+														<td>
+															<input type="text" style="width:40px;" />
+															세
+														</td>
+													</tr>
+													<tr>
+														<td><span class="widthFull"><input type="text" /></span></td>
+														<td>
+															<span class="selectFull">
+																<select>
+																	<option></option>
+																	<option></option>
+																</select>
+															</span>
+														</td>
+														<td>
+															<input type="text" style="width:40px;" />
+															세
+														</td>
+													</tr>
+													<tr>
+														<td>
+															<input type="checkbox" />
+															<input type="text" style="width:60px;" />
+														</td>
+														<td>
+															<span class="selectFull">
+																<select>
+																	<option></option>
+																	<option></option>
+																</select>
+															</span>
+														</td>
+														<td>
+															<input type="text" style="width:40px;" />
+															세
+														</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
 									</div>
 								</div>		
 								<div class="btnWrap mt10">
-									<a href="#none" class="btn smLgR">가족등록</a>
+									<a href="#none" class="btn lgBeR">적용</a>
 								</div>
 
 							</div>
@@ -196,7 +200,7 @@
 															<input type="checkbox" id="fam1" />
 															<label for="fam1">가족생활자금</label>
 														</td>
-														<td>7억5,600만원</td>
+														<td class="tar">7억5,600만원</td>
 														<td>38세~55세</td>
 														<td class="tal">
 															월 생활비
@@ -209,7 +213,7 @@
 															<input type="checkbox" id="fam2" />
 															<label for="fam2">자녀교육자금</label>
 														</td>
-														<td>7억5,600만원</td>
+														<td class="tar">7억5,600만원</td>
 														<td>38세~55세</td>
 														<td class="tal">
 															월 생활비
@@ -222,10 +226,9 @@
 															<input type="checkbox" id="fam3" />
 															<label for="fam3">자녀결혼자금</label>
 														</td>
-														<td>7억5,600만원</td>
+														<td class="tar">7억5,600만원</td>
 														<td>38세~55세</td>
 														<td class="tal">
-															
 														</td>
 													</tr>
 													<tr>
@@ -233,10 +236,9 @@
 															<input type="checkbox" id="fam4" />
 															<label for="fam4">주택마련자금</label>
 														</td>
-														<td>7억5,600만원</td>
+														<td class="tar">7억5,600만원</td>
 														<td>38세~55세</td>
 														<td class="tal">
-															
 														</td>
 													</tr>
 													<tr>
@@ -244,10 +246,9 @@
 															<input type="checkbox" id="fam5" />
 															<label for="fam5">노후생활자금</label>
 														</td>
-														<td>7억5,600만원</td>
+														<td class="tar">7억5,600만원</td>
 														<td>38세~55세</td>
 														<td class="tal">
-															
 														</td>
 													</tr>
 												</tbody>
@@ -295,24 +296,26 @@
 									<div class="nizHeader">
 										<h4>기본정보</h4>
 									</div>
-									<div class="nizCont">
-										<table class="table10">
-											<caption>기본정보</caption>
-											<colgroup>
-												<col width="30%" />
-												<col width="*" />
-											</colgroup>
-											<tbody>
-												<tr>
-													<td class="tac">소득</td>
-													<td><input type="text" style="width:140px" /> 만원</td>
-												</tr>
-												<tr>
-													<td class="tac">지출</td>
-													<td><input type="text" style="width:140px" /> 만원</td>
-												</tr>
-											</tbody>
-										</table>
+									<div class="nizContainer">
+										<div class="nizCont">
+											<table class="table10">
+												<caption>기본정보</caption>
+												<colgroup>
+													<col width="30%" />
+													<col width="*" />
+												</colgroup>
+												<tbody>
+													<tr>
+														<td class="tac">소득</td>
+														<td><input type="text" style="width:140px" /> 만원</td>
+													</tr>
+													<tr>
+														<td class="tac">지출</td>
+														<td><input type="text" style="width:140px" /> 만원</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
 									</div>
 								</div>
 
@@ -320,42 +323,44 @@
 									<div class="nizHeader">
 										<h4>가족정보</h4>
 									</div>
-									<div class="nizCont">
-										<table class="table10 tac">
-											<caption>가족정보</caption>
-											<colgroup>
-												<col width="33%">
-												<col width="25%">
-												<col width="18%">
-											</colgroup>
-											<tbody>
-												<tr>
-													<th>성명</th>
-													<th>성별</th>
-													<th>연령</th>
-												</tr>
-												<tr>
-													<td class="tal">본인</td>
-													<td>남</td>
-													<td>50세</td>
-												</tr>
-												<tr>
-													<td class="tal">배우자이름</td>
-													<td>여</td>
-													<td>50세</td>
-												</tr>
-												<tr>
-													<td class="tal">자녀이름</td>
-													<td>남</td>
-													<td>15세</td>
-												</tr>
-												<tr>
-													<td class="tal">자녀이름</td>
-													<td>여</td>
-													<td>5세</td>
-												</tr>
-											</tbody>
-										</table>
+									<div class="nizContainer">
+										<div class="nizCont">
+											<table class="table10 tac">
+												<caption>가족정보</caption>
+												<colgroup>
+													<col width="33%">
+													<col width="25%">
+													<col width="18%">
+												</colgroup>
+												<tbody>
+													<tr>
+														<th>성명</th>
+														<th>성별</th>
+														<th>연령</th>
+													</tr>
+													<tr>
+														<td class="tal">본인</td>
+														<td>남</td>
+														<td>50세</td>
+													</tr>
+													<tr>
+														<td class="tal">배우자이름</td>
+														<td>여</td>
+														<td>50세</td>
+													</tr>
+													<tr>
+														<td class="tal">자녀이름</td>
+														<td>남</td>
+														<td>15세</td>
+													</tr>
+													<tr>
+														<td class="tal">자녀이름</td>
+														<td>여</td>
+														<td>5세</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
 									</div>
 								</div>		
 
@@ -499,28 +504,30 @@
 									<div class="nizHeader">
 										<h4>기본정보</h4>
 									</div>
-									<div class="nizCont">
-										<table class="table10">
-											<caption>기본정보</caption>
-											<colgroup>
-												<col width="30%" />
-												<col width="*" />
-											</colgroup>
-											<tbody>
-												<tr>
-													<td class="tac">소득</td>
-													<td><input type="text" style="width:140px" /> 만원</td>
-												</tr>
-												<tr>
-													<td class="tac">지출</td>
-													<td><input type="text" style="width:140px" /> 만원</td>
-												</tr>
-												<tr>
-													<td class="tac">은퇴연령</td>
-													<td><input type="text" style="width:140px" /> 세</td>
-												</tr>
-											</tbody>
-										</table>
+									<div class="nizContainer">
+										<div class="nizCont">
+											<table class="table10">
+												<caption>기본정보</caption>
+												<colgroup>
+													<col width="30%" />
+													<col width="*" />
+												</colgroup>
+												<tbody>
+													<tr>
+														<td class="tac">소득</td>
+														<td><input type="text" style="width:140px" /> 만원</td>
+													</tr>
+													<tr>
+														<td class="tac">지출</td>
+														<td><input type="text" style="width:140px" /> 만원</td>
+													</tr>
+													<tr>
+														<td class="tac">은퇴연령</td>
+														<td><input type="text" style="width:140px" /> 세</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
 									</div>
 								</div>
 
@@ -531,42 +538,44 @@
 											<a href="#none" class="btn smLgR">가족등록</a>
 										</span>
 									</div>
-									<div class="nizCont">
-										<table class="table10 tac">
-											<caption>가족정보</caption>
-											<colgroup>
-												<col width="33%">
-												<col width="25%">
-												<col width="18%">
-											</colgroup>
-											<tbody>
-												<tr>
-													<th>성명</th>
-													<th>성별</th>
-													<th>연령</th>
-												</tr>
-												<tr>
-													<td class="tal">본인</td>
-													<td>남</td>
-													<td>50세</td>
-												</tr>
-												<tr>
-													<td class="tal">배우자이름</td>
-													<td>여</td>
-													<td>50세</td>
-												</tr>
-												<tr>
-													<td class="tal">자녀이름</td>
-													<td>남</td>
-													<td>15세</td>
-												</tr>
-												<tr>
-													<td class="tal">자녀이름</td>
-													<td>여</td>
-													<td>5세</td>
-												</tr>
-											</tbody>
-										</table>
+									<div class="nizContainer">
+										<div class="nizCont">
+											<table class="table10 tac">
+												<caption>가족정보</caption>
+												<colgroup>
+													<col width="33%">
+													<col width="25%">
+													<col width="18%">
+												</colgroup>
+												<tbody>
+													<tr>
+														<th>성명</th>
+														<th>성별</th>
+														<th>연령</th>
+													</tr>
+													<tr>
+														<td class="tal">본인</td>
+														<td>남</td>
+														<td>50세</td>
+													</tr>
+													<tr>
+														<td class="tal">배우자이름</td>
+														<td>여</td>
+														<td>50세</td>
+													</tr>
+													<tr>
+														<td class="tal">자녀이름</td>
+														<td>남</td>
+														<td>15세</td>
+													</tr>
+													<tr>
+														<td class="tal">자녀이름</td>
+														<td>여</td>
+														<td>5세</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
 									</div>
 								</div>		
 
@@ -666,32 +675,34 @@
 									<div class="nizHeader">
 										<h4>기본정보</h4>
 									</div>
-									<div class="nizCont">
-										<table class="table10">
-											<caption>기본정보</caption>
-											<colgroup>
-												<col width="30%" />
-												<col width="*" />
-											</colgroup>
-											<tbody>
-												<tr>
-													<td class="tac">월소득</td>
-													<td><input type="text" style="width:140px" /> 만원</td>
-												</tr>
-												<tr>
-													<td class="tac">월지출</td>
-													<td><input type="text" style="width:140px" /> 만원</td>
-												</tr>
-												<tr>
-													<td class="tac">발병연령</td>
-													<td><input type="text" style="width:140px" /> 세</td>
-												</tr>
-												<tr>
-													<td class="tac">은퇴연령</td>
-													<td><input type="text" style="width:140px" /> 세</td>
-												</tr>
-											</tbody>
-										</table>
+									<div class="nizContainer">
+										<div class="nizCont">
+											<table class="table10">
+												<caption>기본정보</caption>
+												<colgroup>
+													<col width="30%" />
+													<col width="*" />
+												</colgroup>
+												<tbody>
+													<tr>
+														<td class="tac">월소득</td>
+														<td><input type="text" style="width:140px" /> 만원</td>
+													</tr>
+													<tr>
+														<td class="tac">월지출</td>
+														<td><input type="text" style="width:140px" /> 만원</td>
+													</tr>
+													<tr>
+														<td class="tac">발병연령</td>
+														<td><input type="text" style="width:140px" /> 세</td>
+													</tr>
+													<tr>
+														<td class="tac">은퇴연령</td>
+														<td><input type="text" style="width:140px" /> 세</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
 									</div>
 								</div>
 
@@ -702,70 +713,72 @@
 											<a href="#none" class="btn smLgR">가족등록</a>
 										</span>
 									</div>
-									<div class="nizCont">
-										<table class="table10 tac">
-											<caption>가족정보</caption>
-											<colgroup>
-												<col width="33%">
-												<col width="25%">
-												<col width="18%">
-											</colgroup>
-											<tbody>
-												<tr>
-													<th>성명</th>
-													<th>성별</th>
-													<th>연령</th>
-												</tr>
-												<tr>
-													<td><span class="widthFull"><input type="text" /></span></td>
-													<td>
-														<span class="selectFull">
-															<select>
-																<option></option>
-																<option></option>
-															</select>
-														</span>
-													</td>
-													<td>
-														<input type="text" style="width:40px;" />
-														세
-													</td>
-												</tr>
-												<tr>
-													<td><span class="widthFull"><input type="text" /></span></td>
-													<td>
-														<span class="selectFull">
-															<select>
-																<option></option>
-																<option></option>
-															</select>
-														</span>
-													</td>
-													<td>
-														<input type="text" style="width:40px;" />
-														세
-													</td>
-												</tr>
-												<tr>
-													<td>
-														<input type="checkbox" />
-														<input type="text" style="width:60px;" />
-													</td>
-													<td>
-														<span class="selectFull">
-															<select>
-																<option></option>
-																<option></option>
-															</select>
-														</span>
-													</td>
-													<td>
-														<input type="text" style="width:40px;" />
-														세
-													</td>
-												</tr>
-											</tbody>
-										</table>
+									<div class="nizContainer">
+										<div class="nizCont">
+											<table class="table10 tac">
+												<caption>가족정보</caption>
+												<colgroup>
+													<col width="33%">
+													<col width="25%">
+													<col width="18%">
+												</colgroup>
+												<tbody>
+													<tr>
+														<th>성명</th>
+														<th>성별</th>
+														<th>연령</th>
+													</tr>
+													<tr>
+														<td><span class="widthFull"><input type="text" /></span></td>
+														<td>
+															<span class="selectFull">
+																<select>
+																	<option></option>
+																	<option></option>
+																</select>
+															</span>
+														</td>
+														<td>
+															<input type="text" style="width:40px;" />
+															세
+														</td>
+													</tr>
+													<tr>
+														<td><span class="widthFull"><input type="text" /></span></td>
+														<td>
+															<span class="selectFull">
+																<select>
+																	<option></option>
+																	<option></option>
+																</select>
+															</span>
+														</td>
+														<td>
+															<input type="text" style="width:40px;" />
+															세
+														</td>
+													</tr>
+													<tr>
+														<td>
+															<input type="checkbox" />
+															<input type="text" style="width:60px;" />
+														</td>
+														<td>
+															<span class="selectFull">
+																<select>
+																	<option></option>
+																	<option></option>
+																</select>
+															</span>
+														</td>
+														<td>
+															<input type="text" style="width:40px;" />
+															세
+														</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
 									</div>
 								</div>		
 
