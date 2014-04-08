@@ -618,7 +618,10 @@ div.memoHdr span.data{position:absolute; right:11px; top:0; z-index:11;}
 div.memoarea{border:1px solid #a4c0cc; border-top:0; border-bottom:0; height:224px; background-color:#fcfcfd; background:url(/img/sub/bg_memocnt.gif) repeat 0 1px; position:absolute; left:0; top:32px; z-index:10; width:334px;}
 div.memoarea div.mm_scroll:first-child{margin-top:34px;}
 div.memoarea strong.memo_subject{ display:block; font-weight:normal; border-bottom:1px solid #cae0e4; height:34px; line-height:34px; padding-left:12px; background-color:#fcfcfd; position:relative; z-index:11;} 
-div.mm_scroll{margin-left:32px; height:30px; line-height:31px; height:158px; overflow-y:scroll; overflow-x:hidden; padding-right:15px; word-break: break-all; word-wrap: break-word;}
+div.memoarea strong.memo_subject input[type="text"]{border:none; padding:0; background:transparent;}
+div.mm_scroll{margin-left:32px; height:30px; line-height:31px; height:158px;}
+div.mm_scroll textarea{height:30px; line-height:31px; height:158px; overflow-y:scroll; overflow-x:hidden; padding-right:15px; word-break: break-all; word-wrap: break-word; border:none; resize:none; width:300px; background:transparent; display:block; padding:0;}
+
 .bg{ url(/img/sub/bg_memosuject.gif) repeat-x 0 0;}
 div.memoarea .lt{background:url(/img/sub/bg_paper_side.gif) repeat-y 0 0; position:absolute; left:0; top:32px; width:23px; height:158px; z-index:1;}
 
