@@ -479,7 +479,8 @@ curex.ui = {
 					, $nizTitarr = $obj.find(".nizTit")
 					, $nizClose = $obj.find(".close")
 					, posx = /*$obj.outerWidth()*/269
-					, $flag = 0;
+					, $flag = 0
+					, paddingbtm;
 
 				/* arrow */
 				$nizDown.each(function(idx){
@@ -532,7 +533,8 @@ curex.ui = {
 					var $btny = $nizDbtn.eq(index).parent().offset().top
 					var $_thisy = _this.offset().top
 					var $currenty =((_this.height()+_this.find(".btnWrap").outerHeight()) - ($btny - $_thisy));
-		
+					var LayerH = layer.outerHeight();
+					var $resty = (LayerH - $currenty) + 20 ;
 					e.animate({
 							"background-color" : "#00B7E6" ,
 							"color" : "#fff"
@@ -542,21 +544,19 @@ curex.ui = {
 							$(this).find(".btn ").hide();
 						}
 					);
-					layer.show().animate({
-						"width" : 754 ,
-							"left" : posx
-						},"slow", function(){
-							var LayerH = $(this).outerHeight();
-							var $resty = LayerH - $currenty ;
-							if ($currenty <$resty ){
-								$("html, body").animate({ scrollTop: $(document).height() }, "fast",function(){
-									_this.css({
-										"padding-bottom" : $resty + 30
-									});
-								});
-							}
-						}
-					);
+
+					if (0< $resty ){
+						_this.animate({
+							"padding-bottom" : $resty
+						});
+						paddingbtm = $resty ;
+					}
+					layer.show("slide",{direction:"left"},500, function(){
+						$('html, body').animate({
+							scrollTop: $(this).offset().top
+						}, 400);
+					});
+
 				}
 
 				function nizBisic(e){
@@ -570,11 +570,12 @@ curex.ui = {
 							$(this).find(".btn ").show();
 						}
 					);
-					e.parent(".nizCont").find(".detailView").animate({
-						"width" : 150 ,
-						"left" : 0
-					},"slow",function(){
-						$(this).hide();
+					e.parent(".nizCont").find(".detailView").hide("slide",{direction:"right"},100, function(){
+							if (parseInt(_this.css("padding-bottom")) == paddingbtm){
+								_this.animate({
+									"padding-bottom" : 0
+								},400);
+							}
 					});
 				}
 			});
