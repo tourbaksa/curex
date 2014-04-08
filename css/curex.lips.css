@@ -62,7 +62,7 @@ ul.lipsTab li.active:first-child a span{background-image:url(/img/sub/bg_smartp_
 #conteiner #contents .graphWrap .title p.tit{background-color:#fff;margin:0 7px;position:relative;padding-bottom:15px;}
 #conteiner #contents .graphWrap .title p.bg{background-color:#01509f;height:22px;width:100%;margin-top:-15px;}
 #conteiner #contents .graphWrap .tit strong{color:#e8404f;}
-#conteiner #contents .graphWrap h3{font-size:16px;font-weight:bold;border-bottom:1px solid #dedede;padding-bottom:8px;margin-bottom:0;}
+#conteiner #contents .graphWrap h3{font-size:16px;font-weight:bold;border-bottom:1px solid #dedede;padding-bottom:13px;margin-bottom:0;margin-top:13px;}
 #conteiner #contents .graphWrap .refer{padding-top:8px; margin-top:20px;border-top:1px solid #dedede;}
 
 ul.graphTable {text-align:center;padding:0 108px 0 117px;margin-top:20px;}
@@ -70,9 +70,9 @@ ul.graphTable:after {content:"";display:block;clear:both;}
 ul.graphTable li{width:230px;float:right;}
 ul.graphTable li:first-child{float:left;}
 ul.graphTable li p{font-size:16px;margin:8px 0;}
-ul.graphTable table{border-top:3px solid #01509f;border-bottom:1px solid #01509f;border-left:0;border-right:0;}
-ul.graphTable table th{color:#01509f;border-top:1px solid #01509f;border-left:0;border-right:1px solid #fff;border-bottom:0;}
-ul.graphTable table td{text-align:right;background:#efeff1;padding-right:10px;border-top:1px solid #01509f;}
+ul.graphTable table, div.graphTable table{border-top:3px solid #01509f;border-bottom:1px solid #01509f;border-left:0;border-right:0;}
+ul.graphTable table th,  div.graphTable table th{color:#01509f;border-top:1px solid #01509f;border-left:0;border-right:1px solid #fff;border-bottom:0;}
+ul.graphTable table td,  div.graphTable table td{text-align:right;background:#efeff1;padding-right:10px;border-top:1px solid #01509f;}
 
 
 /* colorBox */
@@ -205,7 +205,8 @@ div.juContact table .addbg1 {background:#d0ebee;}
 .nohuBox li dl dt{font-size:14px;height:36px;line-height:36px;background:#22b8c7;color:#fff;border-radius:3px 3px 0 0;-webkit-border-radius:3px 3px 0 0;-moz-border-radius:3px 3px 0 0;-ms-border-radius:3px 3px 0 0;}
 .nohuBox li:first-child dl dt{background:#00ade2}
 .nohuBox dd{font-size:18px;height:54px;line-height:54px;}
-.nohuGraph{background:url(/img/common/bg_graph_b.gif) repeat-x 0 bottom;padding:20px 0;width:734px;height:500px;position:relative;}
+.nohuGraph{background:url(/img/common/bg_graph_b.gif) repeat-x 0 bottom;padding:20px 0;width:734px;height:540px;position:relative;}
+.nohuGraph .more{position:absolute;right:0;top:20px;}
 ul.nohuTable {padding:0 40px;}
 ul.nohuTable li:first-child{width:304px;height:334px;}
 ul.nohuTable li{width:300px;}
@@ -216,7 +217,7 @@ ul.nohuTable .smTable td.ico1{background:url(/img/common/ico_bxBe1.gif) no-repea
 ul.nohuTable .smTable td.ico2{background:url(/img/common/ico_bxBe2.gif) no-repeat 25px 11px;}
 ul.nohuTable .smTable td.ico3{background:url(/img/common/ico_bxBe3.gif) no-repeat 25px 11px;}
 ul.nohuTable .smTable td.ico4{background:url(/img/common/ico_bxBe4.gif) no-repeat 25px 11px;}
-ul.nohuTable .smTable .more{position:absolute;right:0;top:-20px;}
+ul.nohuTable .smTable .more{position:absolute;right:0;top:18px;}
   
 /* 수입지출분석 */
 .importWrap {width:940px; margin:0 auto;}
@@ -300,6 +301,9 @@ div.comparison .list dl dt{height:35px;line-height:35px;border-radius:3px;-webki
 	background-color: #f3f4f5;
 	background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPgo8bGluZWFyR3JhZGllbnQgaWQ9Imc0MjgiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjAlIiB5Mj0iMTAwJSI+CjxzdG9wIHN0b3AtY29sb3I9IiNGQUZBRkEiIG9mZnNldD0iMCIvPjxzdG9wIHN0b3AtY29sb3I9IiNGMkYyRjIiIG9mZnNldD0iMSIvPgo8L2xpbmVhckdyYWRpZW50Pgo8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2c0MjgpIiAvPgo8L3N2Zz4=);
 }
+div.comparison.assetList h3{width:720px;margin:20px auto !important;}
+div.comparison.assetList .list{width:720px;margin:auto;}
+div.comparison.assetList .list dl{width:350px;}
 
 /* 가입설계 주계약/특약 가입금액 input */
 div.amountLayer{width:100%; position:relative; z-index:44; display:none;}
@@ -400,3 +404,18 @@ ul.graphTable .graphCir{width:210px;height:210px;}
 .nohuGraph .classNum ol li.first{background:none;}
 .nohuGraph .classNum p{text-align:center;margin-top:13px;}
 
+/* 자산/부채분석 */
+.importForm2{width:710px;margin:0 auto 20px;}
+
+/* 사망보장 분석 */
+.boxTable {border:1px solid #dedede; border-radius:10px;-webkit-border-radius:10px;-moz-border-radius:10px;-ms-border-radius:10px;padding:22px 32px;position:relative;margin-top:10px;}
+.boxTable:after{content:"";display:block;clear:both;}
+.boxTable .graphTable{width:184px;float:left;margin-left:90px;}
+.boxTable .graphTable:first-child{margin-left:0;}
+.boxTable .graphTable p.tit{font-size:16px;color:#01509f;text-align:center;margin-bottom:8px;}
+.boxTable .graphTable .total{font-size:16px;color:#01509f;font-weight:bold;text-align:right;margin-top:8px;}
+.boxTable .sum1{position:absolute;left:237px;top:117px;}
+.boxTable .sum2{position:absolute;right:174px;top:117px;}
+.boxTable .boxPrice{float:right;margin-top:91px;text-align:center;}
+.boxTable .boxPrice dt{font-size:24px;font-weight:bold;color:#000;}
+.boxTable .boxPrice dd{font-size:18px;font-weight:bold;color:#e8404f;margin-top:5px;}
