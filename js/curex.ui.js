@@ -552,9 +552,9 @@ curex.ui = {
 						paddingbtm = $resty ;
 					}
 					layer.show("slide",{direction:"left"},500, function(){
-						$('html, body').animate({
+						/*$('html, body').animate({
 							scrollTop: $(this).offset().top
-						}, 400);
+						}, 400);*/
 					});
 
 				}
