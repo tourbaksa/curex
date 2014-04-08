@@ -110,12 +110,13 @@ table td span.disebled{color:#d0d0d0;}
 .groupTab li.active a span.arr{border-color:white white white #00ade2;}
 
 /* 사망보장분석 */
-#conteiner #contents div.lipsWrap .left{position:relative; z-index:100;}
-.nizWrap{position:relative; border-bottom:1px solid #dedede; z-index:100;}
+#conteiner #contents div.lipsWrap .left{position:relative; background-color:#fff; z-index:100;}
+div.lipsWrap .left .inner{position:relative; background-color:#fff; z-index:80;}
+.nizWrap{position:relative; border-bottom:1px solid #dedede;background-color:#fff;  z-index:5;}
 .nizWrap:first-child div.nizHeader{border-top:1px solid #dedede; }
 .nizWrap .nizHeader{
 	border-right:1px solid #dedede; border-left:1px solid #dedede;
-	position:relative; z-index:3;
+	position:relative; 
 	height:30px;line-height:30px;padding:0 5px 0 10px;
 	background-color:#d0ebee;
 }
@@ -125,19 +126,19 @@ table td span.disebled{color:#d0d0d0;}
 .nizWrap .nizHeader .absol .btn{position:static;right:0;top:0;}
 .nizWrap .h5Tit{height:30px;padding:6px 0 0 10px; position:relative;border-top:1px solid #dedede;background:#f5f5f5;}
 .nizWrap .h5Tit .more{position:absolute;right:5px;top:4px;}
-.nizWrap .nizContainer{border-top:0; position:relative; z-index:3; background:#fff; border-left:1px solid #dedede; border-right:1px solid #dedede;}
+.nizWrap .nizContainer{border-top:0; position:relative;  background:#fff; border-left:1px solid #dedede; border-right:1px solid #dedede;}
 .nizWrap .nizCont{position:relative;}
-.nizWrap .nizTit{background-color:#f5f5f5; height:30px; padding:3px 4px 0 10px; border-top:1px solid #dedede; text-align:right; position:relative; z-index:10;}
+.nizWrap .nizTit{background-color:#f5f5f5; height:30px; padding:3px 4px 0 10px; border-top:1px solid #dedede; text-align:right; position:relative; }
 .nizWrap .nizTit.slideOver{background:#00b7e6; color:#fff;}
 .nizWrap .nizTit h5{float:left; line-height:25px;}
-.nizWrap .nizData{position:relative; z-index:10; background-color:#fff;}
+.nizWrap .nizData{position:relative;background-color:#fff;}
 .nizWrap .table10{border-top:0;}
 .nizWrap .table10 > tbody > tr > td:first-child{border-left:0;}
 .nizWrap .table10 tbody th{height:30px;}
 .nizWrap .nizCont .table10 tbody td:first-child{border-left:0;}
 
 /* 상세레이어팝업 */
-#conteiner #contents div.lipsWrap .detailView{display:none; position:absolute;left:-268px;top:1px;background:#fff;border:5px solid #00b7e6;width:0px;}
+#conteiner #contents div.lipsWrap .detailView{display:none; position:absolute;left:268px;top:1px;background:#fff;border:5px solid #00b7e6;width:754px; z-index:-1;}
 #conteiner #contents div.lipsWrap .detailView h6{background-color:#00b7e6;color:#fff;font-size:14px;height:24px;line-height:19px;margin:0 0 15px; padding-left:15px;}
 #conteiner #contents div.lipsWrap .detailView .close{position:absolute;right:10px;top:4px;}
 #conteiner #contents div.lipsWrap .detailView .detailContent{padding:0 15px 15px;}
