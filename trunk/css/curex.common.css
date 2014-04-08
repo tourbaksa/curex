@@ -316,9 +316,8 @@ dd span input[type="file"]{position:absolute;left:3px;top:5px;}
 .tab01 li a.type2{background:#4ca9ff;color:#fff;}
 .tab01 li.active a.type2{background:#fff;color:#4ca9ff;border:2px solid #4ca9ff;border-bottom:0;border-radius:3px 3px 0 0;-webkit-border-radius:3px 3px 0 0;-moz-border-radius:3px 3px 0 0;-ms-border-radius:3px 3px 0 0;padding:0 8px;height:31px;line-height:25px;}
 /* 회색 */
-.tab01 li a.type1{background:#e3e3e3;color:#707070;}
-.tab01 li.active a.type1{background:#e3e3e3;color:#707070;border:2px solid #e3e3e3;border-bottom:0;border-radius:3px 3px 0 0;-webkit-border-radius:3px 3px 0 0;-moz-border-radius:3px 3px 0 0;-ms-border-radius:3px 3px 0 0;padding:0 8px;height:29px;line-height:25px;}
-
+.tab01 li.ci-tab-disebled a.type1{background:#e3e3e3;color:#707070;}
+.tab01 li.ci-tab-disebled.active a.type1{background:#e3e3e3;color:#707070;border:2px solid #e3e3e3;border-bottom:0;border-radius:3px 3px 0 0;-webkit-border-radius:3px 3px 0 0;-moz-border-radius:3px 3px 0 0;-ms-border-radius:3px 3px 0 0;padding:0 8px;height:29px;line-height:25px;}
 
 .tabGy01{border-bottom:2px solid #9d9d9d;}
 .tabGy01:after{content:"";display:block;clear:both;}

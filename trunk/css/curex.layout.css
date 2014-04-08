@@ -136,7 +136,7 @@ div.personBtn .lgGyR1{padding:7px 10px;}
 
 #conteiner div.pageTit{overflow:hidden; float:left;}
 #conteiner div.pageTit h2{font-size:24px;color:#363636; float:left;font-weight:bold;}
-#conteiner div.pageTit span.entry{float:left; margin:0 0 0 9px; padding:0 0 0 3px; background:url(/img/common/bg_tit.png) no-repeat 0 100%; }
+#conteiner div.pageTit span.entry{float:left; margin:0 10px 0 9px; padding:0 0 0 3px; background:url(/img/common/bg_tit.png) no-repeat 0 100%; }
 #conteiner div.pageTit span.entry input{ width:auto;}
 #conteiner div.pageTit span.entry .entryBg{background:url(/img/common/bg_tit.png) no-repeat 100% 100%; padding:0 3px 3px 0;  display:block;}
 #conteiner div.pageTit input {border:1px solid #fff; line-height:19px;}
@@ -154,10 +154,10 @@ div.personBtn .lgGyR1{padding:7px 10px;}
 /* 체크리스트 */
 #checkList{background-color:#22b8c7; width:1024px; height:40px; margin:20px auto 0;position:relative;left:50%;bottom:0;margin-left:-512px;z-index:2222;}
 #checkList.fixed{position:fixed;}
-#checkList .listMenu{width:1022px;height:200px;border:1px solid #dedede;background:#fff;position:absolute;left:0;bottom:40px;}
+#checkList .listMenu{width:1024px;border:1px solid #dedede;background:#fff;position:absolute;left:0;bottom:40px;}
 #checkList h2{float:left;}
 #checkList h2 a{display:block;width:150px;height:40px;line-height:40px;font-size:14px;font-weight:bold;color:#bdf1ff;background:url(/img/common/blet4.gif) #1d5d6f no-repeat 30px center;text-align:right;padding-right:20px;}
-#checkList ul.h2List li a{float:left;padding:0 10px;letter-spacing:-1px;display:block;height:40px;line-height:40px;font-size:14px;font-weight:bold;color:#bdf1ff;background:#1d5d6f;border-left:1px solid #4a7d8c;}
+#checkList ul.h2List li a{float:left;padding:0 15px;letter-spacing:-1px;display:block;height:40px;line-height:40px;font-size:14px;font-weight:bold;color:#bdf1ff;background:#1d5d6f;border-left:1px solid #4a7d8c;}
 #checkList ul.h2List li:first-child a{border-left:0;}
 #checkList ul.list {float:right;}
 #checkList ul.list li {float:left; height:40px; line-height:40px; text-align:center; border-left:1px solid #00919f;}
@@ -167,11 +167,14 @@ div.personBtn .lgGyR1{padding:7px 10px;}
 #checkList ul.list li.quB {text-align:right;}
 #checkList ul.list li.quB a{border-left:0;padding:0;}
 
-#checkList .listMenu{border-top:5px solid #22b8c7;border-left:1px solid #dedede;border-right:1px solid #dedede; height:125px;position:absolute;bottom:40px;}
-.listMenu h3{height:30px; line-height:30px; font-size:14px; color:#363636; border-bottom:1px solid #dedede;padding-left:26px;}
+#checkList .listMenu{border-top:5px solid #22b8c7;border-left:1px solid #dedede;border-right:1px solid #dedede; position:absolute;bottom:40px;}
+.listMenu .checkHeader{height:40px; font-size:14px; color:#363636; border-bottom:1px solid #dedede;padding-left:10px;position:relative;}
+.listMenu .checkHeader h3{line-height:40px;}
+.listMenu .checkHeader .btnModal{position:absolute;right:35px;top:5px;}
 .listMenu span{padding-left:20px;font-size:12px;}
-.listMenu ul.view{padding:20px 0 0 26px;}
-.listMenu .enter{position:absolute;right:0;top:0;background:#ebebeb;color:#707070;width:40px;height:30px;line-height:30px;text-align:center;}
+.listMenu .checkContainer{padding:10px;}
+.listMenu .checkContainer:after{content:"";display:block;clear:both;}
+.listMenu .enter{position:absolute;right:11px;top:12px;}
 
 /* 푸터 */
 #footer {background:url(/img/common/bg_line2.gif) repeat-x 0 0; height:62px; width:100%; clear:both;}
