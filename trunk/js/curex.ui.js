@@ -171,9 +171,12 @@ curex.ui = {
 
 	tab:function(){
 		var scope = this.op
-			 , $tabObj = $("div.tab02", scope)
+
+		function notice(){
+		var $tabObj = $("div.tab02", scope)
 			 , $tabBtn = $tabObj.find("h3 a")
 			 , $tabCnt = $tabObj.find("div[id*='tabDiv']")
+
 			$tabBtn.each(function(){
 				$(this).off().on({
 					click:function(){
@@ -186,6 +189,8 @@ curex.ui = {
 					}
 				});
 			});
+		}
+		notice();
 	},
 
 	rolling:function(){
@@ -640,11 +645,11 @@ curex.ui = {
 
 $(document).ready(function(){
 	if($("#checkList").length){curex.ui.checkList();}
-	if($(".tab02").length){curex.ui.tab();}
 	curex.ui.rolling();
 	curex.ui.event();
 //	if($("div.smartPicWrap").length){curex.ui.standard();} 페이지에서 직접호출
 	if($(".timeSchedule").length){curex.ui.carlendar();}
+	curex.ui.tab();
 	curex.ui.curexTab();
 	curex.ui.RdTab();
 	curex.ui.nidFun(); //니드분석
