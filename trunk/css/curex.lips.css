@@ -201,23 +201,24 @@ div.juContact table .addbg1 {background:#d0ebee;}
 .nohuBox:after{content:"";display:block;clear:both;}
 .nohuBox li{width:321px;float:left;margin-left:20px;}
 .nohuBox li:first-child{margin-left:0;}
-.nohuBox li dl{border:1px solid #dedede; border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;}
+.nohuBox li dl{border:1px solid #dedede; border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;margin-bottom:8px;}
 .nohuBox li dl dt{font-size:14px;height:36px;line-height:36px;background:#22b8c7;color:#fff;border-radius:3px 3px 0 0;-webkit-border-radius:3px 3px 0 0;-moz-border-radius:3px 3px 0 0;-ms-border-radius:3px 3px 0 0;}
 .nohuBox li:first-child dl dt{background:#00ade2}
 .nohuBox dd{font-size:18px;height:54px;line-height:54px;}
 .nohuGraph{background:url(/img/common/bg_graph_b.gif) repeat-x 0 bottom;padding:20px 0;width:734px;height:540px;position:relative;}
 .nohuGraph .more{position:absolute;right:0;top:20px;}
-ul.nohuTable {padding:0 40px;}
-ul.nohuTable li:first-child{width:304px;height:334px;}
-ul.nohuTable li{width:300px;}
-ul.nohuTable table td{text-align:left;background:#fff;border-left:1px solid #fff;padding:8px 5px 8px 40px;}
+ul.nohuTable {padding:0 20px;}
+ul.nohuTable li:first-child{width:252px;height:238px;}
+ul.nohuTable li.grCir{width:267px;float:left;padding:14px 0 0 57px;}
+ul.nohuTable li.smTableWrap{width:150px;margin-top:10px;}
+ul.nohuTable table td{text-align:left;background:#fff;border-left:1px solid #fff;padding:3px 5px 3px 25px;line-height:14px;}
 ul.nohuTable table td:first-child{border-left:0;}
 ul.nohuTable .smTable {position:relative;margin-top:25px;}
-ul.nohuTable .smTable td.ico1{background:url(/img/common/ico_bxBe1.gif) no-repeat 25px 11px;}
-ul.nohuTable .smTable td.ico2{background:url(/img/common/ico_bxBe2.gif) no-repeat 25px 11px;}
-ul.nohuTable .smTable td.ico3{background:url(/img/common/ico_bxBe3.gif) no-repeat 25px 11px;}
-ul.nohuTable .smTable td.ico4{background:url(/img/common/ico_bxBe4.gif) no-repeat 25px 11px;}
-ul.nohuTable .smTable .more{position:absolute;right:0;top:18px;}
+ul.nohuTable .smTable td.ico1{background:url(/img/common/ico_bxBe1.gif) no-repeat 10px 11px;}
+ul.nohuTable .smTable td.ico2{background:url(/img/common/ico_bxBe2.gif) no-repeat 10px 11px;}
+ul.nohuTable .smTable td.ico3{background:url(/img/common/ico_bxBe3.gif) no-repeat 10px 11px;}
+ul.nohuTable .smTable td.ico4{background:url(/img/common/ico_bxBe4.gif) no-repeat 10px 11px;}
+ul.nohuTable .smTable .more{position:absolute;right:0;top:-18px;}
   
 /* 수입지출분석 */
 .importWrap {width:940px; margin:0 auto;}
