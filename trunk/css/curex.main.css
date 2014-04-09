@@ -1,10 +1,10 @@
 @charset "utf-8";
 
 body.main{background-color:#fbfcfd;}
-div#mcontainer{width:1024px; margin:25px auto 0; overflow:hidden; padding:0 0 30px 0; }
+div#mcontainer{width:1024px; margin:25px auto 0; padding:0 0 30px 0; position:relative;}
+div#mcontainer:after{content:""; display:block; clear:both;}
 div.mcontentL{width:328px; float:left;}
-div.mcontentR{width:677px; float:left; margin-left:17px;}
-div.mcontentR:after{content:""; display:block; clear:both;}
+div.mcontentR{width:677px; float:left; margin:0 0 0 17px;}
 
 /* main calendar */
 
