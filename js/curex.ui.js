@@ -172,6 +172,7 @@ curex.ui = {
 	tab:function(){
 		var scope = this.op
 
+		/* 설계페이지 좌측 탭 */
 		function notice(){
 		var $tabObj = $("div.tab02", scope)
 			 , $tabBtn = $tabObj.find("h3 a")
@@ -191,6 +192,27 @@ curex.ui = {
 			});
 		}
 		notice();
+
+		/* 가입설계 탭스타일 적용 */
+		$(".planTab a").each(function(){
+			if($(this).hasClass("type2")){
+				$(this).closest(".planTab").addClass("type2");
+			}
+			$(this).off().on({
+				click:function(){
+				
+					if($(this).hasClass("type2")){
+						$(this).closest(".planTab").removeClass("type2");
+						$(this).closest(".planTab").addClass("type2");
+					}else{
+						$(this).closest(".planTab").removeClass("type2");
+					}
+				}
+			});
+		});
+
+
+
 	},
 
 	rolling:function(){
@@ -585,60 +607,18 @@ curex.ui = {
 				}
 			});
 		}
-
 		$(".mainTabZone .left", scope).fundAni();
-
 	},
 
-	planTab:function(){
-	 $(".planTab a").each(function(){
-		if($(this).hasClass("type2")){
-			$(this).closest(".planTab").addClass("type2");
-		}
-		$(this).off().on({
-			click:function(){
-				if($(this).hasClass("type2")){
-					$(this).closest(".planTab").removeClass("type2");
-					$(this).closest(".planTab").addClass("type2");
-				}else{
-					$(this).closest(".planTab").removeClass("type2");
-				}
-			}
-		});
-	 });
+	quick:function(){
+		var scope = this.op
+			, $obj = $("div.quick" , scope) || $("div.quick");
 
+		console.log($obj)
+
+	
 	}
 
-
-/*nidSlide : function(){
-		var scope = this.op
-			, $obj = $(".nizWrap" ,scope) ||  $(".nizWrap")
-			, $nizBtn = $obj.find(".nizDown")
-			, $slideBtn = $obj.find(".more a.btn")
-			, $slideCont = $obj.find(".nizCont")
-			, $slidelayer = $obj.find(".detailView")
-			, posx = 270;
-
-			$slideBtn.each(function(idx){
-				$(this).off().on({
-					click : function(){
-						move();
-						return false;
-					}
-				});
-			})
-
-			function move(){
-				$('html, body').animate({
-					scrollTop: $("#header").offset().top
-				}, 100, function(){
-					$slidelayer.show().animate({
-						"width" : 755 ,
-						"left" : posx 
-					},"500");
-				});
-			}
-	}*/
 
 }
 
@@ -654,8 +634,7 @@ $(document).ready(function(){
 	curex.ui.RdTab();
 	curex.ui.nidFun(); //니드분석
 	if($(".entry ").length){curex.ui.inputWidth();}// input width
-	if($(".planTab").length){curex.ui.planTab();}// 개인설계 tab 스타일적용
-	
+	if($(".quick ").length){curex.ui.quick();}// 퀵메뉴
 });
 
 
