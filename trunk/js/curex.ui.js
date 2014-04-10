@@ -314,28 +314,35 @@ curex.ui = {
 	},
 
 	checkList:function(){
-		var $obj = $("#checkList")
-			, ani = false
-			, timer = null
-			, footerHeight = $("#footer").height()
+		if($("#checkList").length){
+			var $obj = $("#checkList")
+				, ani = false
+				, timer = null
+				, footerHeight = $("#footer").height()
 
-		$(window).unbind("scroll", checkOffset );
-		$(window).bind( "scroll", checkOffset  );
-		$(window).load( checkOffset ); //로드될때 
-		/*$(window).on("resize",function(){
-			clearTimeout(timer);
-			timer = setTimeout(checkOffset , 300); 
-		});*/
-
-		
-		function checkOffset(){
-			var scrollBottom = $(document).height() - $(window).height() - $(window).scrollTop();
-			if(scrollBottom >= footerHeight){
-				if(!ani){ani = true; $obj.addClass("fixed"); }
-			}else{
-				if(ani){ani = false; $obj.removeClass("fixed");}
+			$obj.parents("#wrap").addClass("checkList");
+			function checkOffset(){
+				var scrollBottom = $(document).height() - $(window).height() - $(window).scrollTop();
+				if(scrollBottom >= footerHeight){
+					if(!ani){ani = true; $obj.addClass("fixed"); }
+				}else{
+					if(ani){ani = false; $obj.removeClass("fixed");}
+				}
 			}
-		}
+
+			$(window).unbind("scroll", checkOffset );
+			$(window).bind( "scroll", checkOffset  );
+			$(window).load( checkOffset ); //로드될때 
+			/*$(window).on("resize",function(){
+				clearTimeout(timer);
+				timer = setTimeout(checkOffset , 300); 
+			});*/
+
+			
+
+	}
+
+
 	},
 
 	carlendar:function(){
@@ -630,7 +637,6 @@ curex.ui = {
 
 	quick:function(){
 		var scope = this.op
-			console.log("dd")
 			, $quickbar = $("#quick" , scope) || $("#quick")
 			, $window = $(window)
 			, offset = $quickbar.offset()
@@ -653,7 +659,7 @@ curex.ui = {
 
 
 $(document).ready(function(){
-	if($("#checkList").length){curex.ui.checkList();}
+	curex.ui.checkList();
 	curex.ui.rolling();
 	curex.ui.event();
 //	if($("div.smartPicWrap").length){curex.ui.standard();} 페이지에서 직접호출

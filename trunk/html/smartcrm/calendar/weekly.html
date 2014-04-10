@@ -883,22 +883,24 @@
 		<!-- //공통 컨텐츠 -->
 		<script type="text/javascript">
 			//<![CDATA[
+			$(document).ready(function(){
+				$("#footer").append("<div />")
+			
+			});
 			var myTab = ci.tab.init($('.PersonCont')); // 고객정보탭
 			var myTab1 = ci.tab.init($('.tabOutline')); // 
 			var myTab2 = ci.tab.init($('.smartWrap')); // 
 			//]]>
 		</script>
 	</div>
-
-
-	<!-- FOOTER -->
-	<div id="footer">
-		<div class="fter">
-			<img src="/img/common/img_footer.jpg" alt="" />
-		</div>
+</div>
+<!-- FOOTER -->
+<div id="footer">
+	<div class="fter">
+		<img src="/img/common/img_footer.jpg" alt="" />
 	</div>
-	<!--//FOOTER -->
-</div> 
+</div>
+<!--//FOOTER -->
 
 </body>
 </html>
