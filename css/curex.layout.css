@@ -1,8 +1,11 @@
 @charset "utf-8";
 
+html, body{height:100%;}
 /* wrap */
-#wrap {width:100%;background:url(/img/common/bg_line1.gif) repeat-x 0 0; color:#666666; font-family:NanumGothic,"나눔고딕",dotum,arial; font-size:12px; position:relative;}
-
+#wrap {width:100%;background:url(/img/common/bg_line1.gif) repeat-x 0 0; color:#666666; font-family:NanumGothic,"나눔고딕",dotum,arial; font-size:12px; position:relative; min-height:100%;
+margin-bottom:-62px; padding-bottom:62px;
+}
+#wrap.checkList #container{padding-bottom:40px;}
 /* header */
 #header-wrap{width:1024px;margin:0 auto; position:relative;}
 #header{width:1024px; margin:0 auto; position:relative; z-index:1000; background:url(/img/common/bg_line1.gif) repeat-x 0 0; }
@@ -129,7 +132,7 @@ div.personBtn .lgBeR1{padding:7px 10px;}
 div.personBtn .lgGyR1{padding:7px 10px;}
 
 /* 컨텐츠 */
-#conteiner{width:1024px; margin:-93px auto -62px; min-height:100%; position:relative; padding-top:113px;}
+#conteiner{width:1024px; margin:0 auto; position:relative; min-height:450px; padding-bottom:40px;}
 #conteiner div.hgroup{position:relative;margin-bottom:20px; height:23px; line-height:23px;}
 #conteiner div.hgroup.mtB0{margin-bottom:0;}
 #conteiner div.hgroup h2{font-size:24px;color:#363636; float:left; font-weight:bold;}
@@ -145,15 +148,15 @@ div.personBtn .lgGyR1{padding:7px 10px;}
 #conteiner .location{position:absolute;right:0;top:0;}
 #conteiner .location li {float:left; font-size:11px;}
 #conteiner .location li a {text-decoration:none; color:#707070; line-height:23px; height:23px;}
-#conteiner #contents {width:100%;}
+#conteiner #contents {width:100%; min-height:450px;}
 #conteiner #contents ul.tab01{margin:0 0 8px 0; overflow:hidden;}
 #conteiner #contents .left{float:left; width:270px;position:relative;}
 #conteiner #contents .right{float:right; width:733px}
 #conteiner #contents h3{color:#363636; font-size:16px; margin:8px 0; letter-spacing:-1px; font-weight:bold;}
 
 /* 체크리스트 */
-#checkList{background-color:#22b8c7; width:1024px; height:40px; margin:20px auto 0;position:relative;left:50%;bottom:0;margin-left:-512px;z-index:2222;}
-#checkList.fixed{position:fixed;}
+#checkList{background-color:#22b8c7; width:1024px; height:40px; margin:20px auto 0; position:absolute;left:50%;bottom:62px;margin-left:-512px;z-index:2222;}
+#checkList.fixed{position:fixed; bottom:0;}
 #checkList .listMenu{width:1024px;border:1px solid #dedede;background:#fff;position:absolute;left:0;bottom:40px;}
 #checkList h2{float:left;}
 #checkList h2 a{display:block;width:150px;height:40px;line-height:40px;font-size:14px;font-weight:bold;color:#bdf1ff;background:url(/img/common/blet4.gif) #1d5d6f no-repeat 30px center;text-align:right;padding-right:20px;}
@@ -177,7 +180,7 @@ div.personBtn .lgGyR1{padding:7px 10px;}
 .listMenu .enter{position:absolute;right:11px;top:12px;}
 
 /* 퀵메뉴 */
-div#quick{width:50px; position:absolute; right:0px; top:23px; background:#fff;}
+div#quick{width:50px; position:absolute; right:-70px; top:23px; background:#fff;}
 body.main div#quick{top:0px;}
 div#quick h2{background-color:#7ad4dd; color:#fff; height:25px; border-top-left-radius:2px; -webkit-border-top-left-radius:2px; -moz-border-top-left-radius:2px; -ms-border-top-left-radius:2px;
 	border-top-right-radius:2px; -webkit-border-top-right-radius:2px; -moz-border-top-right-radius:2px; -ms-border-top-right-radius:2px; border:1px solid #5fb8c1; font-size:11px;}
