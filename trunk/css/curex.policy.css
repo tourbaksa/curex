@@ -137,9 +137,10 @@ table.policy .callNum{text-align:center;}
 table.policy .callNum a{color:#00a1b1; text-decoration:underline;}
 
 /* 말풍선 */
+table.policy span.bubble{display:block;}
 table.policy span.bubble{position:relative;display:none; width:154px;}
-table.policy span.bubble .bb{position:absolute;left:-38px;bottom:26px;z-index:100;border:1px solid #64ade5;background:#f9fcff; padding:10px 10px;border-radius:3px;font-size:11px;line-height:15px; font-weight:normal; width:165px;}
-table.policy span.bubble .arr{background:url(/img/sub/icon_bubble_bottom.png) no-repeat;position:absolute;bottom:-7px;left:50%;margin-left:-4px;width:11px;height:6px;}
+table.policy span.bubble .bb{position:absolute;left:-38px;bottom:26px; top:inherit;z-index:100;border:1px solid #64ade5;background:#f9fcff; padding:10px 10px;border-radius:3px;font-size:11px;line-height:15px; font-weight:normal; width:165px;}
+table.policy span.bubble .arr{background:url(/img/sub/icon_bubble_bottom.png) no-repeat;position:absolute;bottom:-7px;top:inherit;left:50%;margin-left:-4px;width:11px;height:6px;}
 
 table.policy span.bubble.b2 .bb{left:38px;}
 table.policy span.bubble.b4 .bb{left:-41px;}

@@ -16,7 +16,7 @@ curex.ui = {
 			, $InfoWriteBtn =$("table .InfoWbtn", scope) //테이블정보입력 버튼
 			, $Delbtn = $(".cellDel", scope) || $(".cellDel")  //테이블 셀삭제버튼
 			, $cinsrtbtn = $(".cellInsert", scope) || $(".cellInsert")//주계약/특약 특약피버험자 추가버튼
-			, $bubbleLnk = $(".bubbleLnk", scope) || $(".bubbleLnk") // thankyou Call 말풍선
+			, $tooltip = $(".tooltip", scope) || $(".bubbleLnk") // thankyou Call 말풍선
 			, $fieldOpen = $(".fieldOpen", scope) || $(".fieldOpen") // 검색필드선택
 			, $btnReview  = $(".btnReview ", scope) || $(".btnReview "); // 보장리뷰레이어
 
@@ -77,17 +77,36 @@ curex.ui = {
 					}
 				});
 			});
-			$bubbleLnk.each(function(idx){
-				$(this).off().on({
-					click:function(){
-						$(".bubble").css("display","none");
-						$(this).parent().find(".bubble").css({
-							"display":"block" 
-
-						});
-					}
-				});
+			$tooltip.each(function(idx){
+				if ($(this).hasClass("over")){
+					$(this).off().on({
+						mouseover:function(){
+							$(".bubble").css("display","none");
+							$(this).parents().find(".bubble").eq(idx).css({
+								"display":"block" 
+							});
+						},
+						mouseleave:function(){
+							$(".bubble").css("display","none");
+						},
+						click:function(){
+							return false;
+						}
+					});
+				}else{
+					$(this).off().on({
+						click:function(){
+							$(".bubble").css("display","none");
+							$(this).parents().find(".bubble").eq(idx).css({
+								"display":"block" 
+							});
+							return false;
+						}
+					});
+				}
 			});
+
+			
 
 			$fieldOpen.each(function(){
 				$(this).off().on({
@@ -473,7 +492,6 @@ curex.ui = {
 	},
 
 	/* 니드분석 */
-
 	nidFun:function(){
 		var scope = this.op
 		function household(){
@@ -612,20 +630,31 @@ curex.ui = {
 
 	quick:function(){
 		var scope = this.op
-			, $obj = $("div.quick" , scope) || $("div.quick");
+			, $quickbar = $("#quick" , scope) || $("#quick")
+			, $window = $(window)
+			, offset = $quickbar.offset()
+			, top = 15 ;
 
-		console.log($obj)
 
-	
+		$window.scroll(function() {
+			if ($window.scrollTop() > offset.top) {
+				$quickbar.stop().animate({
+					marginTop: $window.scrollTop() - offset.top + top
+				});
+			} else {
+				$quickbar.stop().animate({
+					marginTop: 0
+				});
+			}
+		});
 	}
-
-
 }
 
 
 $(document).ready(function(){
 	if($("#checkList").length){curex.ui.checkList();}
 	curex.ui.rolling();
+	curex.ui.quick();
 	curex.ui.event();
 //	if($("div.smartPicWrap").length){curex.ui.standard();} 페이지에서 직접호출
 	if($(".timeSchedule").length){curex.ui.carlendar();}
@@ -634,7 +663,7 @@ $(document).ready(function(){
 	curex.ui.RdTab();
 	curex.ui.nidFun(); //니드분석
 	if($(".entry ").length){curex.ui.inputWidth();}// input width
-	if($(".quick ").length){curex.ui.quick();}// 퀵메뉴
+	if($("#quick ").length){curex.ui.quick();}// 퀵메뉴
 });
 
 

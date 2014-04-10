@@ -1,7 +1,8 @@
 @charset "utf-8";
 
 body.main{background-color:#fbfcfd;}
-div#mcontainer{width:1024px; margin:25px auto 0; padding:0 0 30px 0; position:relative;}
+body.main div#wrap{position:relative;}
+div#mcontainer{width:1024px; margin:25px auto 0; padding:0 0 92px 0; position:relative; }
 div#mcontainer:after{content:""; display:block; clear:both;}
 div.mcontentL{width:328px; float:left;}
 div.mcontentR{width:677px; float:left; margin:0 0 0 17px;}
@@ -99,12 +100,22 @@ div.graphCont{padding-top:28px;}
 div.mtabCont a.more{position:absolute; right:10px; top:0;}
 
 div.mcontentR div.mstats{background:url(/img/main/bg_mstatCont.gif) no-repeat 0 0; width:676px; height:130px;}
-div.mcontentR div.mstats ul{overflow:hidden;}
+div.mcontentR div.mstats ul{}
+div.mcontentR div.mstats ul:after{content:''; display:block; clear:both;}
 div.mcontentR div.mstats ul li{float:left; width:90px; margin-left:27px; position:relative; height:130px;}
 div.mcontentR div.mstats ul li:first-child{margin-left:0;}
 div.mcontentR div.mstats ul li dt{border-bottom:3px solid #cdcdcd; height:25px; padding-bottom:9px; text-align:center; color:#787b7d; position:absolute; left:15px; bottom:0; min-width:61px;}
-div.mcontentR div.mstats ul li dd{color:#444444; font-size:30px; font-weight:bold; position:absolute; top:26px; width:90px; text-align:center;}
+div.mcontentR div.mstats ul li dd{position:absolute; top:138px; left:14px;}
+div.mcontentR div.mstats ul li dt + dd{color:#444444; font-size:30px; font-weight:bold; position:absolute; top:26px; width:90px; text-align:center; left:0;}
 div.mcontentR div.mstats ul li dd.orange{color:#ec6958;}
+
+
+/* 말풍선 */
+div.mstats .bubble{position:relative;display:none; width:154px;}
+div.mstats .bubble .bb{position:absolute;left:0px; top:-6px; z-index:100;border:1px solid #64ade5;background:#f9fcff; padding:10px 10px;border-radius:3px;font-size:11px;line-height:15px; font-weight:normal; width:165px;}
+div.mstats .bubble .arr{background:url(/img/common/icon_bubble.png) no-repeat;position:absolute;top:-6px;left:21px;width:11px;height:6px;}
+
+
 
 div.MainDataWrap{margin:23px 0 0 0; overflow:hidden;}
 ul.dataTab{width:182px; float:left;}
