@@ -1,5 +1,5 @@
 @charset "utf-8";
-html,body{height:100%;}
+
 /* wrap */
 #wrap {width:100%;background:url(/img/common/bg_line1.gif) repeat-x 0 0; color:#666666; font-family:NanumGothic,"나눔고딕",dotum,arial; font-size:12px; position:relative;}
 
@@ -129,8 +129,8 @@ div.personBtn .lgBeR1{padding:7px 10px;}
 div.personBtn .lgGyR1{padding:7px 10px;}
 
 /* 컨텐츠 */
-#conteiner{width:1024px; margin:-93px auto -62px; min-height:100%; position:relative;}
-#conteiner div.hgroup{position:relative;margin-bottom:20px; height:23px; line-height:23px; padding:110px 0 0 0;}
+#conteiner{width:1024px; margin:-93px auto -62px; min-height:100%; position:relative; padding-top:113px;}
+#conteiner div.hgroup{position:relative;margin-bottom:20px; height:23px; line-height:23px;}
 #conteiner div.hgroup.mtB0{margin-bottom:0;}
 #conteiner div.hgroup h2{font-size:24px;color:#363636; float:left; font-weight:bold;}
 
@@ -145,7 +145,7 @@ div.personBtn .lgGyR1{padding:7px 10px;}
 #conteiner .location{position:absolute;right:0;top:0;}
 #conteiner .location li {float:left; font-size:11px;}
 #conteiner .location li a {text-decoration:none; color:#707070; line-height:23px; height:23px;}
-#conteiner #contents {width:100%; padding:0 0 62px 0; }
+#conteiner #contents {width:100%;}
 #conteiner #contents ul.tab01{margin:0 0 8px 0; overflow:hidden;}
 #conteiner #contents .left{float:left; width:270px;position:relative;}
 #conteiner #contents .right{float:right; width:733px}
