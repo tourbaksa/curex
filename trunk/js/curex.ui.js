@@ -82,6 +82,15 @@ curex.ui = {
 					$(this).off().on({
 						mouseover:function(){
 							$(".bubble").css("display","none");
+							if ( idx == $tooltip.length -1){
+								$(this).parents().find(".bubble").eq(idx).css({
+									"display":"block",
+									"left" : -10,
+								});
+								$(this).parents().find(".bubble .arr").eq(idx).css({
+									"left" : 50
+								});
+							}
 							$(this).parents().find(".bubble").eq(idx).css({
 								"display":"block" 
 							});
@@ -105,8 +114,6 @@ curex.ui = {
 					});
 				}
 			});
-
-			
 
 			$fieldOpen.each(function(){
 				$(this).off().on({
@@ -138,8 +145,6 @@ curex.ui = {
 					}
 				});
 			});
-
-			
 	},
 
 		/* 산출기준레이어팝업 */
@@ -337,9 +342,6 @@ curex.ui = {
 				clearTimeout(timer);
 				timer = setTimeout(checkOffset , 300); 
 			});*/
-
-			
-
 	}
 
 
@@ -640,8 +642,24 @@ curex.ui = {
 			, $quickbar = $("#quick" , scope) || $("#quick")
 			, $window = $(window)
 			, offset = $quickbar.offset()
+			, $quickBtn = $quickbar.find(".quickBtn")
+			, $quickList = $quickbar.find("ul")
 			, top = 15 ;
 
+		$window.load(function(){ mainSize() });
+		$window.resize(function(){mainSize() }).resize();
+		function mainSize(){
+			var width = parseInt($(this).width());
+			if(width <= 1024){
+				$quickbar.css({
+					"right" : 0
+				});
+			}else{
+				$quickbar.css({
+					"right" : -70
+				});
+			}
+		}
 
 		$window.scroll(function() {
 			if ($window.scrollTop() > offset.top) {
@@ -654,6 +672,27 @@ curex.ui = {
 				});
 			}
 		});
+		$quickList.css({
+			"margin-top" : -$quickList.height()
+		});
+		$quickBtn.off().on({
+			click:function(){
+				if(!$(this).hasClass("down")){
+					$(this).addClass("down");
+					$quickList.animate({
+						"margin-top" : 0
+					});
+				}else{
+					$(this).removeClass("down");
+					$quickList.animate({
+						"margin-top" : -$quickList.height()
+					});
+				}
+				return false;
+			}
+		});
+
+
 	}
 }
 
