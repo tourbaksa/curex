@@ -10,11 +10,11 @@ margin-bottom:-62px; padding-bottom:62px;
 #header-wrap{width:1024px;margin:0 auto; position:relative;}
 #header{width:1024px; margin:0 auto; position:relative; z-index:1000; background:url(/img/common/bg_line1.gif) repeat-x 0 0; }
 #header h1, #header a.total, #header div.gnbWrap{float:left;}
-#header h1 {padding-right:39px; height:50px;}
+#header h1 {padding-right:79px; height:50px;}
 #header a.total{border-left:1px solid #007c88; display:block;}
 
 /* gnb */
-div.gnbWrap{position:relative; border-right:1px solid #00919f;}
+div.gnbWrap{position:relative;}
 div.gnbWrap ul#gnb{overflow:hidden; float:left;}
 div.gnbWrap ul#gnb li {float:left;font-size:14px;border-left:1px solid #00919f;}
 div.gnbWrap ul#gnb li a{text-decoration:none; color:#707070; width:120px; display:block; text-align:center; line-height:50px; height:50px; color:#fff; font-size:16px; font-weight:bold;border-left:1px solid #33b4cl}
@@ -29,7 +29,14 @@ div.gnbWrap ul#gnb ul ul{ background:url(/img/common/gnb_bar.gif) #fff no-repeat
 div.gnbWrap ul#gnb li li li {background:url(/img/common/blet1.gif) no-repeat 0 center; width:90px; margin-left:15px; padding-left:15px;}
 div.gnbWrap ul#gnb li li li a{height:28px; line-height:28px;text-align:left;font-size:13px;}
 div.gnbWrap ul#gnb li li li:first-child{background:url(/img/common/blet1.gif) no-repeat 0 center; width:90px; margin-top:7px;}
-div.gnbWrap span.globalIcon{float:left;}
+
+div.gnbWrap span.globalIcon{float:left;border-left:1px solid #00919F;}
+div.gnbWrap .globlaIon .icoTotal{width:117px;margin:auto;}
+div.gnbWrap span.globalIcon 
+a{width:53px;height:50px;line-height:50px;padding-top:15px;text-align:center;display:block;float:left;}
+div.gnbWrap span.globalIcon a:first-child{margin-left:0;}
+div.gnbWrap span.globalIcon a.last{width:40px;padding-top:0;}
+
 
 /* 전체메뉴 레이어 */
 div.allmenu{ width:1024px; position:absolute; left:0; top:50px; min-height:230px; background:#fff; z-index:2; border:1px solid #22b8c7; border-top:0; padding:0 0 29px 0;}
@@ -57,16 +64,17 @@ div.siteMenu > ul ul ul li{margin:0}
 div.siteMenu > ul ul ul li a{font-size:12px; color:#a2a2a2; border:0;background:url(/img/common/blt_minusBk.gif) no-repeat 0 8px; line-height:16px;}
 
 /* 상단검색  */
-div.Tsearch{clear:both; background-color:#f4f4f4; height:39px; padding:8px 0 0 9px; border-left:1px solid #d7d7d7;border-right:1px solid #d7d7d7; width:290px;}
+div.Tsearch{clear:both; background-color:#f4f4f4; height:39px; padding:0 0 0 9px; border-left:1px solid #d7d7d7;border-right:1px solid #d7d7d7; width:330px;}
 div.Tsearch form fieldset{display:block; height:39px;}
-button.searchMore{background:url(/img/common/btn_searchMore.gif) no-repeat 0 0; width:24px; height:24px; vertical-align:top;}
+button.searchMore{background:url(/img/common/btn_gnb_user.gif) no-repeat 0 0; width:21px; height:24px; margin-left:8px;}
+button.userMore{background:url(/img/common/btn_gnb_list.gif) no-repeat 0 0; width:21px; height:24px;margin-left:6px;}
+
+div.Tsearch .btnTsearch{padding-top:8px;float:left;width:230px;}
 div.Tsearch input[type="image"],
 div.Tsearch input[type="text"]{vertical-align:top;}
-div.Tsearch button.searchMore{vertical-align:top;}
-div.Tsearch span.Name{ height:24px; line-height:24px; margin-left:14px; position:relative; display:inline-block; width:89px; padding:0 7px 0 22px; vertical-align:top;}
-div.Tsearch span.Name.woman{background:url(/img/common/icon_women.gif) no-repeat 0 0;}
-div.Tsearch span.Name.man{}
-div.Tsearch span a{text-decoration:none; color:#707070; font-weight:bold;display:block; letter-spacing:-1px; background:url(/img/common/ico_nameArrow.gif) no-repeat 100% 50%;}
+div.Tsearch button.searchMore, div.Tsearch button.userMore{vertical-align:top;}
+div.Tsearch span.Name{ height:39px; line-height:39px; position:relative; display:inline-block; width:88px; text-align:center; vertical-align:top;color:#00ade2;float:right;}
+div.Tsearch span a{text-decoration:none; color:#00ade2; font-weight:bold;display:block; letter-spacing:-1px; background:url(/img/common/ico_nameArrow.gif) no-repeat 90% 50%;}
 
 /* 검색결과 회원리스트 출력 */
 div.personInfoArea{position:absolute; top:90px;overflow:hidden; background:#f7f7f7; z-index:222; border:1px solid #22b8c7; border-top:0; width:795px;}

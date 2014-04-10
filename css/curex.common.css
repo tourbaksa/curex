@@ -20,7 +20,7 @@ legend {
 .blue{color:#00a2ff;}
 .lightBlue{color:#22b8c7;}
 .colorNBe{color:#01509f;}
-.disebled{color:#D0D0D0}
+.disebled{color:#D0D0D0 !important;}
 
 /* 정렬 */
 .textL{text-align:left;}
