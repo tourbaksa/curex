@@ -368,15 +368,17 @@ div.postWrap .entryForm li:first-child{border-top:1px solid #dedede;}
 .ui-dialog .ui-dialog-titlebar-close.layer2{position:absolute;right:18px;top:17px;padding:1px;}
 
 /* 제어판 */
+.controlWrap {background:url(/img/common/bg_pop_line.gif) repeat-y 170px 0;min-height:406px;}
+.controlWrap:after{content:"";display:block;clear:both;}
 .controlWrap .contrL{float:left;width:169px;}
 .controlWrap .contrL ul li a{border-bottom:1px solid #dedede;display:block;padding:12px 0 10px 10px;font-size:14px;}
 .controlWrap .contrL ul li a:hover, .controlWrap .contrL ul li a:focus{color:#22B8C7;background:url(/img/common/cp_arrow.gif) no-repeat 160px center;}
 .controlWrap .contrL ul li ul{border-bottom:1px solid #dedede; padding-left:20px;background:#f4f6f6;}
 .controlWrap .contrL ul li ul li a{border-bottom:0;padding:5px 0;font-size:12px;}
 .controlWrap .contrL ul li ul li a:hover, .controlWrap .contrL ul li ul li a:focus{background:none;}
-.controlWrap .contrR{float:right;width:645px;border-left:1px solid #dedede;padding-left:20px;}
+.controlWrap .contrR{float:right;width:645px;padding-left:20px;}
 .coverControl h3{color:#363636;font-size:14px;font-weight:bold;margin-bottom:4px;}
-.coverControl .coverList{margin-bottom:30px;}
+.coverControl .coverList{}
 .coverControl .coverList:after{content:"";display:block;clear:both;}
 .coverControl .coverList dl{float:left;margin-left:10px;text-align:center;}
 .coverControl .coverList dl:first-child{margin-left:0;}
@@ -388,3 +390,14 @@ div.postWrap .entryForm li:first-child{border-top:1px solid #dedede;}
 .controlWrap .contrR .ctrlPhoto {text-align:center;}
 .controlWrap .contrR .ctrlPhoto img{border:1px solid #dedede;width:100px;height:137px;margin-bottom:10px;}
 .controlWrap .contrR .ctrlVm {position:absolute;left:130px;top:3px;}
+
+.controlWrap .checkTableWrap:after{content:"";display:block;clear:both;}
+.controlWrap .checkTableWrap li {width:201px;margin-left:10px;float:left;}
+.controlWrap .checkTableWrap li:first-child {margin-left:0;}
+.controlWrap .checkTableWrap li div.checkDiv{margin-top:10px;}
+.controlWrap .checkTableWrap li div:first-child.checkDiv{margin-top:0;}
+
+.controlWrap .checkTable2Wrap li {width:307px;}
+
+.controlWrap .contrR .popH2Tit {margin-top:10px;position:relative;line-height:12px;}
+.controlWrap .contrR .ProfilePhoto{width:101px;height:112px; margin:0 auto 8px; text-align:center;}

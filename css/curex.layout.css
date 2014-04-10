@@ -160,7 +160,7 @@ div.personBtn .lgGyR1{padding:7px 10px;}
 #checkList ul.h2List li a{float:left;padding:0 15px;letter-spacing:-1px;display:block;height:40px;line-height:40px;font-size:14px;font-weight:bold;color:#bdf1ff;background:#1d5d6f;border-left:1px solid #4a7d8c;}
 #checkList ul.h2List li:first-child a{border-left:0;}
 #checkList ul.list {float:right;}
-#checkList ul.list li {float:left; height:40px; line-height:40px; text-align:center; border-left:1px solid #00919f;}
+#checkList ul.list li {float:left; height:40px; line-height:40px; text-align:center; border-left:1px solid #1fa5b3;}
 #checkList ul.list li a{color:#fff; font-size:14px; border-left:1px solid #4ec6d2; display:block; padding:0 15px;} 
 #checkList ul.list li a:hover{text-decoration:none !important;}
 #checkList ul.list li a.on{color:#fff; border-left:1px solid #33b4cl; display:block;background-color:#00a1b1;} 
