@@ -630,6 +630,7 @@ curex.ui = {
 
 	quick:function(){
 		var scope = this.op
+			console.log("dd")
 			, $quickbar = $("#quick" , scope) || $("#quick")
 			, $window = $(window)
 			, offset = $quickbar.offset()
@@ -654,7 +655,6 @@ curex.ui = {
 $(document).ready(function(){
 	if($("#checkList").length){curex.ui.checkList();}
 	curex.ui.rolling();
-	curex.ui.quick();
 	curex.ui.event();
 //	if($("div.smartPicWrap").length){curex.ui.standard();} 페이지에서 직접호출
 	if($(".timeSchedule").length){curex.ui.carlendar();}
@@ -663,7 +663,8 @@ $(document).ready(function(){
 	curex.ui.RdTab();
 	curex.ui.nidFun(); //니드분석
 	if($(".entry ").length){curex.ui.inputWidth();}// input width
-	if($("#quick ").length){curex.ui.quick();}// 퀵메뉴
+	if($("#quick").length){curex.ui.quick();}// 퀵메뉴
+
 });
 
 
