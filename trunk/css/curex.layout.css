@@ -3,7 +3,7 @@
 html, body{height:100%;}
 /* wrap */
 #wrap {width:100%;background:url(/img/common/bg_line1.gif) repeat-x 0 0; color:#666666; font-family:NanumGothic,"나눔고딕",dotum,arial; font-size:12px; position:relative; min-height:100%;
-margin-bottom:-62px; padding-bottom:62px;
+margin-bottom:-62px; padding-bottom:82px;
 }
 #wrap.checkList #container{padding-bottom:40px;}
 /* header */
@@ -140,7 +140,7 @@ div.personBtn .lgBeR1{padding:7px 10px;}
 div.personBtn .lgGyR1{padding:7px 10px;}
 
 /* 컨텐츠 */
-#conteiner{width:1024px; margin:0 auto; position:relative; min-height:450px; padding-bottom:40px;}
+#conteiner{width:1024px; margin:20px auto 0; position:relative; min-height:450px; padding-bottom:40px;}
 #conteiner div.hgroup{position:relative;margin-bottom:20px; height:23px; line-height:23px;}
 #conteiner div.hgroup.mtB0{margin-bottom:0;}
 #conteiner div.hgroup h2{font-size:24px;color:#363636; float:left; font-weight:bold;}
@@ -163,7 +163,7 @@ div.personBtn .lgGyR1{padding:7px 10px;}
 #conteiner #contents h3{color:#363636; font-size:16px; margin:8px 0; letter-spacing:-1px; font-weight:bold;}
 
 /* 체크리스트 */
-#checkList{background-color:#22b8c7; width:1024px; height:40px; margin:20px auto 0; position:absolute;left:50%;bottom:62px;margin-left:-512px;z-index:2222;}
+#checkList{background-color:#22b8c7; width:1024px; height:40px; margin:0 auto; position:absolute;left:50%;bottom:62px;margin-left:-512px;z-index:2222;}
 #checkList.fixed{position:fixed; bottom:0;}
 #checkList .listMenu{width:1024px;border:1px solid #dedede;background:#fff;position:absolute;left:0;bottom:40px;}
 #checkList h2{float:left;}

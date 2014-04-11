@@ -304,7 +304,7 @@ dl.file dd {float:left;width:340px;position:relative; height:31px; line-height:3
 dd input[type="text"]{}
 dd span input[type="file"]{position:absolute;left:3px;top:5px;}
 
-.fileBox table {float:right;width:551px;margin-right:5px;}
+.fileBox table {float:right;width:571px;margin-right:5px;}
 
 /*   추가 bg_tab2.gif 파란색 */
 .tab01{border-bottom:0;background:url(/img/common/bg_tab1.gif) repeat-x 0 0;height:31px;overflow:hidden;}
