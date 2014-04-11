@@ -563,6 +563,31 @@
 		<!-- 공통 컨텐츠 -->
 		<div id="contents" class="lips clear-fix">
 			<div class="lipsWrap ci-tab">
+				<h2 style="font-size:20px;color:red"><strong>감싸는 순서</strong></h2>
+				<pre>
+					<div style="border:5px solid green;padding:5px;font-size:16px;line-height:16px;">
+						wrap
+							<div style="border:3px solid blue;padding:5px;">
+								header
+							</div>
+							<div style="border:3px solid blue;padding:5px;">
+								container
+								<div style="border:1px solid red;padding:5px;">
+									contents
+								</div>
+								<div style="border:1px solid red;padding:5px;">
+									quick - include
+								</div>
+							</div>
+							<div style="border:3px solid blue;padding:5px;">
+								checkList
+							</div>
+					</div>
+					<div style="border:5px solid green;padding:5px;">
+						footer
+					</div>
+				</pre>
+
 				<h2 style="font-size:20px;color:red"><strong>class="tab01"(TabType1)</strong></h2>
 				<ul class="tab01 clearfix tab-selector">
 					<li class="active"><a href="#none">가입설계</a></li>
