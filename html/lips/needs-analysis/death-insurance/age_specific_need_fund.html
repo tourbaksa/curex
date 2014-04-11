@@ -50,7 +50,7 @@
 		 
 		<!-- 공통 컨텐츠 -->
 		<div id="contents" class="lips clear-fix">
-			<div class="lipsWrap">
+			<div class="lipsWrap nidAssayWrap add">
 				<ul class="tab-panel">
 					<li><!-- 수입지출분석 -->
 						<div class="add">
@@ -21352,18 +21352,6 @@
 				</ul>
 			</div>
 		</div>
-		<!-- //공통 컨텐츠 -->
-		<script type="text/javascript">
-			//<![CDATA[
-			var pobj = $('.add');
-			curex.ui.init(pobj);  // tab 데이터가 삭제되기전에 obj에 담아놓음.
-			var myTab = ci.tab.init($('.PersonCont')); // 고객정보탭
-			var myTab1 = ci.tab.init($('.tabOutline')); // 
-			var myTab2 = ci.tab.init($('.lipsWrap'), {
-				defaultTabIndex : [3]
-			}); // 
-			//]]>
-		</script>
 	</div>
 
 	<!-- CHECKLIST -->
@@ -21618,10 +21606,21 @@
 			<a href="#none" class="enter"><img src="/img/common/btn_checklist_close.gif" alt="닫기" /></a>
 		</div>
 		<!-- //노후보장 필요/준비자금조정 -->
-
 	</div>
+</div>
 	<!-- //CHECKLIST -->
-
+	<!-- //공통 컨텐츠 -->
+	<script type="text/javascript">
+		//<![CDATA[
+		var pobj = $('.add');
+		curex.ui.init(pobj);  // tab 데이터가 삭제되기전에 obj에 담아놓음.
+		var myTab = ci.tab.init($('.PersonCont')); // 고객정보탭
+		var myTab1 = ci.tab.init($('.tabOutline')); // 
+		var myTab2 = ci.tab.init($('.lipsWrap'), {
+			defaultTabIndex : [0]
+		}); // 
+		//]]>
+	</script>
 <!-- FOOTER -->
 <div id="footer">
 	<div class="fter">

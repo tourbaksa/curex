@@ -138,7 +138,7 @@ div.lipsWrap .left .inner{position:relative; background-color:#fff; z-index:80;}
 .nizWrap .nizCont .table10 tbody td:first-child{border-left:0;}
 
 /* 상세레이어팝업 */
-#conteiner #contents div.lipsWrap .detailView{display:none; position:absolute;left:268px;top:1px;background:#fff;border:5px solid #00b7e6;width:754px; z-index:-1;}
+#conteiner #contents div.lipsWrap .detailView{display:none; position:absolute;left:269px;top:1px;background:#fff;border:5px solid #00b7e6;width:755px; z-index:-1;}
 #conteiner #contents div.lipsWrap .detailView h6{background-color:#00b7e6;color:#fff;font-size:14px;height:24px;line-height:19px;margin:0 0 15px; padding-left:15px;}
 #conteiner #contents div.lipsWrap .detailView .close{position:absolute;right:10px;top:4px;}
 #conteiner #contents div.lipsWrap .detailView .detailContent{padding:0 15px 15px;}
@@ -334,6 +334,9 @@ table .spT2{background:#e7f5f6 ;background-image:none ;}
 
 /* 복합설계 */
 .nmal{font-weight:normal;}
+
+div.nidAssayWrap ul.tab-panel li div.add{display:none;}
+div.nidAssayWrap ul.tab-panel li.active div.add{display:block;}
 
 /* 그래프사이즈 */
 ul.graphTable .graphSize{width:250px;height:250px;}

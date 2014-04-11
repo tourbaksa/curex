@@ -370,13 +370,14 @@ div.postWrap .entryForm li:first-child{border-top:1px solid #dedede;}
 /* 제어판 */
 .controlWrap {background:url(/img/common/bg_pop_line.gif) repeat-y 170px 0;min-height:406px;}
 .controlWrap:after{content:"";display:block;clear:both;}
-.controlWrap .contrL{float:left;width:169px;}
-.controlWrap .contrL ul li a{border-bottom:1px solid #dedede;display:block;padding:12px 0 10px 10px;font-size:14px;}
-.controlWrap .contrL ul li a:hover, .controlWrap .contrL ul li a:focus{color:#22B8C7;background:url(/img/common/cp_arrow.gif) no-repeat 160px center;}
-.controlWrap .contrL ul li ul{border-bottom:1px solid #dedede; padding-left:20px;background:#f4f6f6;}
-.controlWrap .contrL ul li ul li a{border-bottom:0;padding:5px 0;font-size:12px;}
-.controlWrap .contrL ul li ul li a:hover, .controlWrap .contrL ul li ul li a:focus{background:none;}
-.controlWrap .contrR{float:right;width:645px;padding-left:20px;}
+.controlWrap .ctrlMenu{float:left;width:169px;}
+.controlWrap .ctrlMenu ul li a{border-bottom:1px solid #dedede;display:block;padding:12px 0 10px 10px;font-size:14px;}
+.controlWrap .ctrlMenu ul li a:hover, .controlWrap .ctrlMenu ul li a:focus , .controlWrap .ctrlMenu ul li a.active{color:#22B8C7;background:url(/img/common/cp_arrow.gif) no-repeat 160px center;}
+
+.controlWrap .ctrlMenu ul li ul{border-bottom:1px solid #dedede; padding-left:20px;background:#f4f6f6; display:none;}
+.controlWrap .ctrlMenu ul li ul li a{border-bottom:0;padding:5px 0;font-size:12px;}
+.controlWrap .ctrlMenu ul li ul li a:hover, .controlWrap .ctrlMenu ul li ul li a:focus, .controlWrap .ctrlMenu ul li ul li a.active{background:none;}
+.controlWrap .ctrlContent{float:right;width:645px;padding-left:20px;}
 .coverControl h3{color:#363636;font-size:14px;font-weight:bold;margin-bottom:4px;}
 .coverControl .coverList{}
 .coverControl .coverList:after{content:"";display:block;clear:both;}
@@ -384,8 +385,10 @@ div.postWrap .entryForm li:first-child{border-top:1px solid #dedede;}
 .coverControl .coverList dl:first-child{margin-left:0;}
 .coverControl .coverList dl dt{border:2px solid #dedede;width:148px;height:203px;}
 .coverControl .coverList dl dd{margin-top:10px;}
-.coverControl .coverList dl:hover dt, .coverControl .coverList dl:focus dt{border:2px solid #22B8C7;width:148px;height:203px;}
-.coverControl .coverList dl:hover dd a, .coverControl .coverList dl:focus dd a{color:#22B8C7;}
+.coverControl .coverList dl.hover dt,
+.coverControl .coverList dl.select dt{border:2px solid #22B8C7;width:148px;height:203px;}
+.coverControl .coverList dl.hover dd a,
+.coverControl .coverList dl.select dd a{color:#22B8C7;}
 
 .controlWrap .contrR .ctrlPhoto {text-align:center;}
 .controlWrap .contrR .ctrlPhoto img{border:1px solid #dedede;width:100px;height:137px;margin-bottom:10px;}

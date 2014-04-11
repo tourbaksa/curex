@@ -405,31 +405,35 @@ curex.ui = {
 	curexTab:function(){
 		var scope = this.op
 
-		$.fn.attab = function(){
+		$.fn.attab = function(options){
+			var defaults = {
+				display : "block"
+			}
+			var opts = $.extend(defaults, options);
+
 			return this.each(function(){
 				var $obj = $(this)
 				, $active
 				, $content
 				, $links = $obj.find("a");
-
 				if(!$links.parent().hasClass("active")){
-					console.log("1"+$obj)
 					$active = $($links.filter('[href="'+location.hash+'"]')[0] || $links[0]);
 				}else{
 					$active = $($obj.find("li.active a"));
-					
+				}
+				$content = $($active[0].hash, scope);
+				
+				if(opts.display == "block"){
+					$links.not($active).each(function () {
+						$($(this).attr('href'),scope).hide();
+					});
+				}else{
+					$links.each(function () {
+						$($(this).attr('href'),scope).hide();
+					});
 				}
 
-				$content = $($active[0].hash, scope);
-				$links.not($active).each(function () {
-					$($(this).attr('href'),scope).hide();
-				});
-
 				// 이벤트
-				$obj.find("a").click(function(){
-					alert("dd")
-
-				})
 				$obj.find("a").off().on({
 					click:function(e){
 						
@@ -461,7 +465,6 @@ curex.ui = {
 				, $obj = $(".RdTab",$objWrap)
 				, $radio = $obj.find("input[type='radio']")
 				, $radioCnt = $("[class*='RdTabCont']", $objWrap)
-				console.log($radio.eq(0))
 				$radio.eq(0).prop('checked', true);
 				$radioCnt.hide();
 				$radioCnt.eq(0).show();
@@ -581,7 +584,6 @@ curex.ui = {
 						}
 					});
 				});
-
 				function nizAct(e , index){
 					var layer = e.parent(".nizCont").find(".detailView");
 					var $btny = $nizDbtn.eq(index).parent().offset().top
@@ -598,7 +600,6 @@ curex.ui = {
 							$(this).find(".btn ").hide();
 						}
 					);
-
 					if (0< $resty ){
 						_this.animate({
 							"padding-bottom" : $resty
@@ -610,9 +611,7 @@ curex.ui = {
 							scrollTop: $(this).offset().top
 						}, 400);*/
 					});
-
 				}
-
 				function nizBisic(e){
 					e.removeClass("slideOver")
 					e.animate({
@@ -624,7 +623,7 @@ curex.ui = {
 							$(this).find(".btn ").show();
 						}
 					);
-					e.parent(".nizCont").find(".detailView").hide("slide",{direction:"right"},100, function(){
+					e.parent(".nizCont").find(".detailView").hide("slide",{direction:"left"},500, function(){
 							if (parseInt(_this.css("padding-bottom")) == paddingbtm){
 								_this.animate({
 									"padding-bottom" : 0
@@ -636,7 +635,6 @@ curex.ui = {
 		}
 		$(".mainTabZone .left", scope).fundAni();
 	},
-
 	quick:function(){
 		var scope = this.op
 			, $quickbar = $("#quick" , scope) || $("#quick")
@@ -660,7 +658,6 @@ curex.ui = {
 				});
 			}
 		}
-
 		$window.scroll(function() {
 			if ($window.scrollTop() > offset.top) {
 				$quickbar.stop().animate({
@@ -691,11 +688,58 @@ curex.ui = {
 				return false;
 			}
 		});
+	},
 
-
+	/* 제어판 */
+	control:function(){
+		if (!$(".ctrlMenu").length){return false;}
+		var ctrlMenu = function(menu){
+			var $ctrlMenu = $(menu)
+				, $ctrlMenulist = $ctrlMenu.find("ul")
+				, $selector = $ctrlMenu.find("> ul > li > a")
+				, flag;
+			$selector.each(function(idx){
+				$(this).off().on({
+					click:function(){
+						if (!$(this).hasClass("active")){
+							$selector.removeClass();
+							$(this).addClass("active");
+							$selector.eq(flag).next().slideUp(500);
+							$(this).next("ul").slideDown(500);
+						}else{
+							$selector.removeClass();
+							$(this).next("ul").slideUp(500)
+						}
+						flag = idx;
+						return false;
+					}
+				});
+			});
+		}
+		ctrlMenu(".ctrlMenu");
+		var coverList = function(cover){
+			var $cover = $(cover)
+				, $hover = $cover.find("a")
+			$hover.each(function(){
+				$(this).off().on({
+					mouseover:function(){
+						$cover.find("dl").removeClass("hover");
+						$(this).parents("dl").addClass("hover");
+					},
+					mouseleave:function(){
+						$cover.find("dl").removeClass("hover");
+					},
+					click:function(){
+						$cover.find("dl").removeClass("select");
+						$(this).parents("dl").addClass("select");
+						return false;
+					}
+				});
+			});
+		}
+		coverList(".coverList");
 	}
 }
-
 
 $(document).ready(function(){
 	curex.ui.checkList();
@@ -709,6 +753,7 @@ $(document).ready(function(){
 	curex.ui.nidFun(); //니드분석
 	if($(".entry ").length){curex.ui.inputWidth();}// input width
 	if($("#quick").length){curex.ui.quick();}// 퀵메뉴
+	curex.ui.control(); //제어판메뉴
 
 });
 
