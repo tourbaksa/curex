@@ -4,7 +4,7 @@
 #popWrap{position:relative;}
 #popWrap h1{display: block; overflow:hidden; position:absolute; top: 0; left: 0;width: 0;height: 0;border:0;background: none !important; font-size: 0; line-height: 0;}
 #popWrap .popContents{padding:0 20px; /*height:640px; overflow-y:scroll; overflow-x:hidden;*/} /* 팝업길이 픽스! 640이상길어지면 스크롤처리 */
-
+#popWrap .ptit{color: #363636; font-size: 16px; font-weight: bold; letter-spacing: -1px; margin: 8px 0;}
 .popTit{position:relative;margin-bottom:5px;}
 .popTit p.tit{font-size:14px;color:#363636;}
 .popTit p.gap{padding-top:3px;}
@@ -333,6 +333,14 @@ div.popContents .grayBox .conTable td:first-child{border-left:0;}
 div.blueBox{background:#e5f6ff;border:1px solid #a7e1ff;padding:10px;margin-top:9px;color:#444;}
 .grayBox .footNote + *{margin-bottom:0;}
 .grayBox .footNote li{text-align:left;}
+
+/* 우량체 */
+div.healthy{overflow:hidden;}
+div.healthy table{width:450px; float:right;}
+div.healthy table:first-child{float:left;}
+
+
+
 
 /* 우편번호 */
 div.postWrap{margin-top:8px;background:url(/img/common/bg_line4.gif) repeat-y 50% top;}

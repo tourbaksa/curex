@@ -77,6 +77,8 @@ curex.ui = {
 					}
 				});
 			});
+
+			/* 툴팁 */
 			$tooltip.each(function(idx){
 				if ($(this).hasClass("over")){
 					$(this).off().on({
@@ -234,9 +236,6 @@ curex.ui = {
 				}
 			});
 		});
-
-
-
 	},
 
 	rolling:function(){
@@ -319,8 +318,8 @@ curex.ui = {
 	},
 
 	checkList:function(){
-		if($("#checkList").length){
-			var $obj = $("#checkList")
+		var checkList = function(obj){
+			var $obj = $(obj)
 				, ani = false
 				, timer = null
 				, footerHeight = $("#footer").height()
@@ -342,9 +341,45 @@ curex.ui = {
 				clearTimeout(timer);
 				timer = setTimeout(checkOffset , 300); 
 			});*/
-	}
 
+			if ($(".h2List").length){
+				var _this = $(".h2List")
+					, $btn = _this.find("a")
+					, $close = $obj.find(".enter")
+					, flag = 0;
 
+				$close.click(function(){
+					$btn.each(function(){
+						$($(this).attr("href")).hide();
+					});
+					return false;
+				});
+				$btn.each(function(idx){
+					$(this).off().on({
+						click:function(){
+							$btn.each(function(){
+								$($(this).attr("href")).hide();
+							});
+							$($(this).attr("href")).show();
+							flag = idx;
+							return false;
+						}
+					});
+				});
+			}
+
+			function maskWrap(){
+			$("body").append('<div class="layerMask"/>');
+			var $layerMask = $('.layerMask');
+			var maskHeight = $(document).height();
+			var maskWidth = $(window).width();
+			$layerMask.css({'width':maskWidth,'height':maskHeight});  
+			//$layerMask.fadeIn(1000);
+			$layerMask.fadeTo("200",0.4);
+		}
+
+		}
+		if($("#checkList").length){checkList("#checkList");}
 	},
 
 	carlendar:function(){
@@ -401,10 +436,8 @@ curex.ui = {
 
 	/*큐렉스 탭역역 1tab, 2tab까지만 구현 */
 
-
 	curexTab:function(){
 		var scope = this.op
-
 		$.fn.attab = function(options){
 			var defaults = {
 				display : "block"
