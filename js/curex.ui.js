@@ -180,24 +180,21 @@ curex.ui = {
 			  popObjLayer = spBox.find("div.compLayer"),
 			  spBoxy = spBox.position().top, 
 			  posy= spBoxy- stObj_y; // 레이어를 담고있는 spBox의 top위치
-		if (posy > stObj_hw){ //현재 클릭한 박스를 담고있는 컨텐츠 위치값이 컨텐츠높이반값보다 크면 박스가 위로뜸.
-			$(".btmArrow").remove();
-			popObjLayer.append("<span class='btmArrow' />")
-			popObjLayer.removeClass("bottom")
-			popObjLayer.addClass("bottom")
-			popObjLayer.css({"display" : "block" });
-			$(".btmArrow").css({"display" : "block"});
+			if (posy > stObj_hw){ //현재 클릭한 박스를 담고있는 컨텐츠 위치값이 컨텐츠높이반값보다 크면 박스가 위로뜸.
+				$(".btmArrow").remove();
+				popObjLayer.append("<span class='btmArrow' />")
+				popObjLayer.removeClass("bottom")
+				popObjLayer.addClass("bottom")
+				popObjLayer.css({"display" : "block" });
+				$(".btmArrow").css({"display" : "block"});
+			}
+			$("div.spBox").find("div.compLayer").css({"display" : "none"});
+			popObjLayer.css({"display" : "block"})
+			return false;
 		}
-		$("div.spBox").find("div.compLayer").css({"display" : "none"});
-		popObjLayer.css({"display" : "block"})
-		return false;
-	}
-
 	},
-
 	tab:function(){
 		var scope = this.op
-
 		/* 설계페이지 좌측 탭 */
 		function notice(){
 		var $tabObj = $("div.tab02", scope)
@@ -218,7 +215,6 @@ curex.ui = {
 			});
 		}
 		notice();
-
 		/* 가입설계 탭스타일 적용 */
 		$(".planTab a").each(function(){
 			if($(this).hasClass("type2")){
@@ -237,7 +233,6 @@ curex.ui = {
 			});
 		});
 	},
-
 	rolling:function(){
 		var scope = this.op
 			, $bnrWrap = $("div.spbnrZone", scope) || $("div.spbnrZone")
@@ -297,26 +292,22 @@ curex.ui = {
 						isAnimating = 'no'
 					});
 				}
-
 				if ($btn) {
 					$btn.eq($flag).removeClass("on");
 					$btn.eq($idx).addClass("on");
 				}
 				$flag = $idx;
 			}
-
 			function start(){
 				stop();
 				$timer = window.setTimeout(next, 2000)
 			}
-			
 			function stop(){
 				window.clearTimeout($timer);
 				$timer = null;
 			}
 			start();
 	},
-
 	checkList:function(){
 		var checkList = function(obj){
 			var $obj = $(obj)
@@ -346,37 +337,34 @@ curex.ui = {
 				var _this = $(".h2List")
 					, $btn = _this.find("a")
 					, $close = $obj.find(".enter")
+					, $listMenu = $obj.find(".listMenu").height()
 					, flag = 0;
-
+				
+				$obj.wrapInner("<div class='checkInner' />")
 				$close.click(function(){
-					$btn.each(function(){
-						$($(this).attr("href")).hide();
-					});
-					return false;
+					$($btn.eq(flag).attr("href")).dialog( "close" );
 				});
 				$btn.each(function(idx){
 					$(this).off().on({
-						click:function(){
-							$btn.each(function(){
-								$($(this).attr("href")).hide();
+						click:function(e){
+						var layer = $($btn.eq(idx).attr("href"))
+							layer.dialog({
+									appendTo: ".checkInner",
+									autoOpen: false,
+									resizable: false,
+									closeOnEscape: false,
+									width:1024,
+									modal: true,
 							});
-							$($(this).attr("href")).show();
+							$(".ui-dialog-titlebar").hide()
+							layer.dialog({dialogClass:'checkPopMenu'});
+							layer.dialog("open");
 							flag = idx;
 							return false;
 						}
 					});
 				});
 			}
-
-			function maskWrap(){
-			$("body").append('<div class="layerMask"/>');
-			var $layerMask = $('.layerMask');
-			var maskHeight = $(document).height();
-			var maskWidth = $(window).width();
-			$layerMask.css({'width':maskWidth,'height':maskHeight});  
-			//$layerMask.fadeIn(1000);
-			$layerMask.fadeTo("200",0.4);
-		}
 
 		}
 		if($("#checkList").length){checkList("#checkList");}
