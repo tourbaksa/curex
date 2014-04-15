@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> CuREx </title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
+<link rel="stylesheet" href="/WEB-APP/webponent/css/common.css" type="text/css" />
+<link rel="stylesheet" href="/css/curex.common.css" type="text/css" />
+<link rel="stylesheet" href="/css/curex.layout.css" type="text/css" />
+<link rel="stylesheet" href="/css/curex.sub.css" type="text/css" />
+<link rel="stylesheet" href="/WEB-APP/webponent/dialog/css/dialog.css" type="text/css" />
+<script type="text/javascript" src="/WEB-APP/webponent/ci/agent.js"></script>
+<script type="text/javascript" src="/WEB-APP/webponent/thirdParty/jquery/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="/WEB-APP/webponent/thirdParty/jquery/jquery-ui-1.10.3.min.js"></script>
+<script type="text/javascript" src="/WEB-APP/webponent/tab/tab.js"></script>
+<script type="text/javascript" src="/WEB-APP/webponent/dialog/dialog.js"></script>
+<script type="text/javascript" src="/js/popup.js"></script>
+<script type="text/javascript" src="/js/curex.ui.js"></script>
+</head>
+<body>
+
+<div id="popWrap" style="width:680px;">
+	<h1>보고서</h1>
+	<div class="popContents">
+		
+		<div class="btnWrap">
+			<a href="#none" class="btn smGyRb">미리보기</a>
+			<a href="#none" class="btn smGyRb">이메일발송</a>
+			<a href="#none" class="btn smGnR">출력</a>
+		</div>
+		
+		<form method="post" action="/">
+			<fieldset>
+				<legend>보고서</legend>
+				<div class="chboxWrap">
+					<table class="chboxList">
+						<caption>Sales Material</caption>
+						<colgroup>
+							<col width="15%" />
+							<col width="*" />
+						</colgroup>
+						<tbody>
+							<tr class="tTit1">
+								<td class="ch"><input type="checkbox" id="sm1" /></td>
+								<td><label for="sm1">Sales Material</label></td>
+							</tr>
+							<tr class="tTit2">
+								<td class="ch"><input type="checkbox" id="sm2" /></td>
+								<td><label for="sm2">즐겨찾기</label></td>
+							</tr>
+							<tr>
+								<td class="ch"><input type="checkbox" id="sm3" /></td>
+								<td><label for="sm3">Sales Material Title</label></td>
+							</tr>
+							<tr>
+								<td class="ch"><input type="checkbox" id="sm4" /></td>
+								<td><label for="sm4">Sales Material Title 35</label></td>
+							</tr>
+							<tr class="tTit2">
+								<td class="ch"><input type="checkbox" id="sm5" /></td>
+								<td>
+									<div>
+										<label for="sm5">Sales Material</label><span class="tar1"><a href="#none" class="btn smGyRb">추가</a></span>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td class="ch"><input type="checkbox" id="sm6" /></td>
+								<td>
+									<div>
+										<label for="sm6">추가 Sales Material</label><span class="tar2">
+										<a href="#none"><img src="/img/common/btn_dels2.gif" alt="삭제" /></a></span>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td class="ch"><input type="checkbox" id="sm7" /></td>
+								<td>
+									<div>
+										<label for="sm7">추가된 Sales Material</label><span class="tar2">
+										<a href="#none"><img src="/img/common/btn_dels2.gif" alt="삭제" /></a></span>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td class="ch"><input type="checkbox" id="sm8" /></td>
+								<td>
+									<div>
+										<label for="sm8">추가된 Sales Material</label>
+										<span class="tar2"><a href="#none"><img src="/img/common/btn_dels2.gif" alt="삭제" /></a></span>
+									</div>								
+								</td>
+							</tr>
+							<tr>
+								<td class="ch"><input type="checkbox" id="sm9" /></td>
+								<td>
+									<div>
+										<label for="sm9">추가 S/M</label>
+										<span class="tar2"><a href="#none"><img src="/img/common/btn_dels2.gif" alt="삭제" /></a></span>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					
+					<table class="chboxList">
+						<caption>니드분석</caption>
+						<colgroup>
+							<col width="15%" />
+							<col width="*" />
+						</colgroup>
+						<tbody>
+							<tr class="tTit1">
+								<td class="ch"><input type="checkbox" id="nd1" /></td>
+								<td><label for="nd1">니드분석</label><span class="tar1"></span></td>
+							</tr>
+							<tr class="tTit2">
+								<td class="ch"><input type="checkbox" id="nd2" /></td>
+								<td><label for="nd2">공통</label><span class="tar1"></span></td>
+							</tr>
+							<tr>
+								<td class="ch"><input type="checkbox" id="nd3" /></td>
+								<td>	
+									<div>
+										<label for="nd3">표지</label>
+										<span class="tar1"><a href="#none" class="btn smGyRb">입력</a></span>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td class="ch"><input type="checkbox" id="nd4" /></td>
+								<td>
+									<div>
+										<label for="nd4">속지</label>
+										<span class="tar1"><a href="#none" class="btn smGyRb">입력</a></span>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td class="ch"><input type="checkbox" id="nd4_1" /></td>
+								<td>
+									<div>
+										<label for="nd4_1">고객정보</label>
+									</div>
+								</td>
+							</tr>
+							<tr class="tTit2">
+								<td class="ch"><input type="checkbox" id="nd5" /></td>
+								<td><label for="nd5">생애Stroy</label><span class="tar1"></span></td>
+							</tr>
+							<tr>
+								<td class="ch"><input type="checkbox" id="nd6_1" /></td>
+								<td><label for="nd6_1">전생애 시뮬레이션</label><span class="tar1"></span></td>
+							</tr>
+							<tr>
+								<td class="ch"><input type="checkbox" id="nd6_2" /></td>
+								<td><label for="nd6_2">사망 시뮬레이션</label><span class="tar1"></span></td>
+							</tr>
+							<tr>
+								<td class="ch"><input type="checkbox" id="nd6_3" /></td>
+								<td><label for="nd6_3">질병 시뮬레이션</label><span class="tar1"></span></td>
+							</tr>
+							<tr>
+								<td class="ch"><input type="checkbox" id="nd6_4" /></td>
+								<td><label for="nd6_4">노후 시뮬레이션</label><span class="tar1"></span></td>
+							</tr>
+
+							<tr class="tTit2">
+								<td class="ch"><input type="checkbox" id="nd7_1" /></td>
+								<td><label for="nd7_1">노후보장시뮬레이션</label><span class="tar1"></span></td>
+							</tr>
+							<tr>
+								<td class="ch"><input type="checkbox" id="nd7_2" /></td>
+								<td><label for="nd7_2">보유자산</label><span class="tar1"></span></td>
+							</tr>
+							<tr>
+								<td class="ch"><input type="checkbox" id="nd7_3" /></td>
+								<td><label for="nd7_3">공적연금</label><span class="tar1"></span></td>
+							</tr>
+							<tr>
+								<td class="ch"><input type="checkbox" id="nd7_4" /></td>
+								<td><label for="nd7_4">희망 월 수령액</label><span class="tar1"></span></td>
+							</tr>
+							<tr>
+								<td class="ch"><input type="checkbox" id="nd7_5" /></td>
+								<td><label for="nd7_5">가입시기</label><span class="tar1"></span></td>
+							</tr>
+							<tr class="tTit2">
+								<td class="ch"><input type="checkbox" id="nd8_1" /></td>
+								<td><label for="nd8_1">수입/지출분석</label><span class="tar1"></span></td>
+							</tr>
+							<tr>
+								<td class="ch"><input type="checkbox" id="nd8_2" /></td>
+								<td><label for="nd8_2">수입/지출분석</label><span class="tar1"></span></td>
+							</tr>
+							<tr>
+								<td class="ch"><input type="checkbox" id="nd8_3" /></td>
+								<td><label for="nd8_3">지출조정</label><span class="tar1"></span></td>
+							</tr>
+							<tr class="tTit2">
+								<td class="ch"><input type="checkbox" id="nd88" /></td>
+								<td><label for="nd88">자산부채분석</label><span class="tar1"></span></td>
+							</tr>
+							<tr>
+								<td class="ch"><input type="checkbox" id="nd89" /></td>
+								<td><label for="nd89">자산부채분석</label><span class="tar1"></span></td>
+							</tr>
+						</tbody>
+					</table>
+					
+					<table class="chboxList chType2">
+						<caption>니드분석</caption>
+						<colgroup>
+							<col width="15%" />
+							<col width="*" />
+						</colgroup>
+						<tbody>
+							<tr class="tTit1">
+								<td class="ch"><input type="checkbox" id="nd10" /></td>
+								<td><label for="nd10">사망보장분석</label><span class="tar1"></span></td>
+							</tr>
+							<tr>
+								<td class="ch"><input type="checkbox" id="nd11" /></td>
+								<td><label for="nd11">연령별 필요자금</label><span class="tar1"></span></td>
+							</tr>
+							<tr>
+								<td class="ch"><input type="checkbox" id="nd12" /></td>
+								<td><label for="nd12">연령별 누적 필요자금</label><span class="tar1"></span></td>
+							</tr>
+							<tr>
+								<td class="ch"><input type="checkbox" id="nd13" /></td>
+								<td><label for="nd13">연령별 누적 준비자금</label><span class="tar1"></span></td>
+							</tr>
+							<tr>
+								<td class="ch"><input type="checkbox" id="nd14" /></td>
+								<td><label for="nd14">연령별 필요보장자금분석</label><span class="tar1"></span></td>
+							</tr>
+							<tr class="tTit2">
+								<td class="ch"><input type="checkbox" id="nd15" /></td>
+								<td><label for="nd15">노후보장분석</label><span class="tar1"></span></td>
+							</tr>
+							<tr>
+								<td class="ch"><input type="checkbox" id="nd16" /></td>
+								<td><label for="nd16">필요보장자금 분석(요약)</label><span class="tar1"></span></td>
+							</tr>
+							<tr>
+								<td class="ch"><input type="checkbox" id="nd17" /></td>
+								<td><label for="nd17">연령별 필요자금</label><span class="tar1"></span></td>
+							</tr>
+							<tr>
+								<td class="ch"><input type="checkbox" id="nd18" /></td>
+								<td><label for="nd18">연령별 준비자금</label><span class="tar1"></span></td>
+							</tr>
+							<tr>
+								<td class="ch"><input type="checkbox" id="nd19" /></td>
+								<td><label for="nd19">연령별 필요보장자금분석</label><span class="tar1"></span></td>
+							</tr>
+							<tr class="tTit2">
+								<td class="ch"><input type="checkbox" id="nd20" /></td>
+								<td><label for="nd20">목적자금분석</label><span class="tar1"></span></td>
+							</tr>
+							<tr>
+								<td class="ch"><input type="checkbox" id="nd21" /></td>
+								<td><label for="nd21">자녀교육자금</label><span class="tar1"></span></td>
+							</tr>
+							<tr>
+								<td class="ch"><input type="checkbox" id="nd22" /></td>
+								<td><label for="nd22">자녀결혼자금</label><span class="tar1"></span></td>
+							</tr>
+							<tr>
+								<td class="ch"><input type="checkbox" id="nd23" /></td>
+								<td><label for="nd23">기타목적자금</label><span class="tar1"></span></td>
+							</tr>
+
+							<tr class="tTit2">
+								<td class="ch"><input type="checkbox" id="nd25" /></td>
+								<td><label for="nd25">증권분석</label><span class="tar1"></span></td>
+							</tr>
+							<tr>
+								<td class="ch"><input type="checkbox" id="nd26" /></td>
+								<td><label for="nd26">계약현황분석</label><span class="tar1"></span></td>
+							</tr>
+							<tr>
+								<td class="ch"><input type="checkbox" id="nd27" /></td>
+								<td><label for="nd27">상품별보장내역분석</label><span class="tar1"></span></td>
+							</tr>
+							<tr>
+								<td class="ch"><input type="checkbox" id="nd28" /></td>
+								<td><label for="nd28">기간별보장내역분석</label><span class="tar1"></span></td>
+							</tr>
+							<tr>
+								<td class="ch"><input type="checkbox" id="nd29" /></td>
+								<td><label for="nd29">가족보장분석</label><span class="tar1"></span></td>
+							</tr>
+						</tbody>
+					</table>
+					
+					
+				</div>
+
+			</fieldset>
+		</form>
+
+		<div class="btnWrap lineBderT">
+			<a href="#none" class="btn smGyRb">미리보기</a>
+			<a href="#none" class="btn smGyRb">이메일발송</a>
+			<a href="#none" class="btn smGnR">출력</a>
+		</div>
+
+	</div>
+	
+</div>
+
+
+</body>
+</html>
+

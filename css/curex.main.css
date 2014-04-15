@@ -7,6 +7,9 @@ div#mcontainer:after{content:""; display:block; clear:both;}
 div.mcontentL{width:328px; float:left;}
 div.mcontentR{width:677px; float:left; margin:0 0 0 17px;}
 
+div.nizcntL{width:270px;}
+div.nizcntR{width:733px;}
+
 /* main calendar */
 
 div.mcarlendar{margin:0 0 20px 0;}
@@ -146,3 +149,4 @@ span.serviceLink a{border-bottom:1px solid #e9e9e9; display:block; height:43px; 
 span.serviceLink a:first-child{border-top:1px solid #e9e9e9;}
 span.serviceLink a.two{background-image:url(/img/main/bg_mbnr2_2.gif);}
 span.serviceLink a.three{background-image:url(/img/main/bg_mbnr2_3.gif);}
+
