@@ -416,6 +416,26 @@ div.postWrap .entryForm li:first-child{border-top:1px solid #dedede;}
 /* bderT */
 .lineBderT{border-top:1px solid #dedede;padding-top:10px;margin-top:10px;}
 
+
+/* sales material 이미지 슬라이드 */
+
+.viewWrap:after{content:"";display:block;clear:both;}
+.viewWrap .viewCont {width:738px;position:relative;border:1px solid #dedede;float:left;height:390px; overflow:hidden;}
+.viewWrap .viewCont:after{content:"";display:block;clear:both;}
+.viewWrap .viewCont span.slideCtrl a.prev{position:absolute;left:10px;top:50%;margin-top:-35px;}
+.viewWrap .viewCont span.slideCtrl a.next{position:absolute;right:10px;top:50%;margin-top:-35px;}
+.viewWrap .slideList{width:736px; height:388px;}
+.viewWrap .slideList img{width:736px; height:388px; float:left;}
+.viewWrap .Viewthumbnail {width:114px;float:right;}
+
+.thumbList {padding:0 0 25px 15px;height:390px;overflow:scroll;overflow-x:hidden;border:1px solid #dedede;}
+.thumbList p{padding:5px 0 0;}
+.thumbList li{width:70px;height:70px;overflow:hidden;border:1px solid #dedede;background:#f8f8f8;margin-top:10px;position:relative;}
+.thumbList li a{display:block;width:70px;height:70px;}
+.thumbList li img{width:70px;height:70px;}
+
+
+
 /* 브로셔-view */
 .viewWrap:after{content:"";display:block;clear:both;}
 .viewWrap .viewL {width:738px;position:relative;border:1px solid #dedede;float:left;height:390px;}

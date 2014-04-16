@@ -147,6 +147,35 @@ curex.ui = {
 					}
 				});
 			});
+			/* lips 세일즈메테리얼 */
+			var sales = function(obj){
+				var $obj = $(obj)
+					, $btn = $obj.find(".smWtRb")
+					, $objLayer = $obj.find(".salesListBox")
+
+				$btn.off().on({
+					click:function(){
+						var $span = $(this).find("span");
+						if ($span.hasClass("up")){
+							$objLayer.stop(true, true).slideUp();
+							$span.removeClass("up");
+							$span.addClass("down");
+							if($(this).find(".txt").text() == "닫기"){
+								$(this).find(".txt").text("열기")
+							}
+						}else{
+							$objLayer.stop(true, true).slideDown();
+							$span.removeClass("down");
+							$span.addClass("up");
+							if($(this).find(".txt").text() == "열기"){
+								$(this).find(".txt").text("닫기")
+							}
+						}
+						return false;
+					}
+				});
+			}
+			sales(".salesListWrap");
 	},
 
 		/* 산출기준레이어팝업 */
@@ -235,78 +264,168 @@ curex.ui = {
 	},
 	rolling:function(){
 		var scope = this.op
-			, $bnrWrap = $("div.spbnrZone", scope) || $("div.spbnrZone")
-			, $btn = $bnrWrap.find("span.bntCtrl button")
-			, $bnrCont = $bnrWrap.find("div.bnrList")
-			, $bnrItem = $bnrCont.find("a")
-			, $bnrLeng = $bnrItem.length
-			, $bnrW = 242
-			, $flag = 0
-			, $idx
-			, $timer = null
-			, isAnimating = 'no';
-
-
-			//$bnrCont.wrap("<div class='slideWrap'></div>")
-			$bnrCont.width($bnrW * $bnrLeng);
-
-			$bnrItem.each(function(i){
-				$(this).css({
-					position:"absolute",
-						left:"0",
-						top:"0",
-						display:i==0 ? "block" : "none"
+		/* smartcrm 스마트픽 롤링 */
+		var smartRolling = function(obj){ 
+				var $bnrWrap = $(obj)
+				, $btn = $bnrWrap.find(".bntCtrl button")
+				, $bnrCont = $bnrWrap.find("div.bnrList")
+				, $bnrItem = $bnrCont.find("a")
+				, $bnrLeng = $bnrItem.length
+				, $bnrW = 242
+				, $flag = 0
+				, $idx
+				, $timer = null
+				, isAnimating = 'no';
+				//$bnrCont.wrap("<div class='slideWrap'></div>")
+				$bnrCont.width($bnrW * $bnrLeng);
+				$bnrItem.each(function(i){
+					$(this).css({
+						position:"absolute",
+							left:"0",
+							top:"0",
+							display:i==0 ? "block" : "none"
+					});
 				});
-			});
+				$btn.each(function(){
+					$(this).off().on({
+						click:function(){
+							var $idx = $(this).index();
+							move($idx);
+							$flag = $idx;
+							return false;
+						}
+					});
+				});
 
-			$btn.each(function(){
-				$(this).off().on({
+				function next(){move(($flag+1) % $bnrLeng);}
+				function move($idx){
+					if($idx == $flag) return;
+					if(isAnimating == 'no'){
+						isAnimating = 'yes'
+						window.clearTimeout($timer); 
+						$bnrItem.eq($flag).show().css({"left": 0}).animate({
+							"left" : -$bnrW
+						},"slow", function(){
+							$(this).hide();
+							if ($timer) { start(); }
+							isAnimating = 'no'
+						});
+
+						$bnrItem.eq($idx).show().css({
+							"left": $bnrW
+						}).animate({
+							"left" : 0
+						},"slow", function(){
+							isAnimating = 'no'
+						});
+					}
+					if ($btn) {
+						$btn.eq($flag).removeClass("on");
+						$btn.eq($idx).addClass("on");
+					}
+					$flag = $idx;
+				}
+				function start(){
+					stop();
+					$timer = window.setTimeout(next, 2000)
+				}
+				function stop(){
+					window.clearTimeout($timer);
+					$timer = null;
+				}
+				start();
+		}
+		smartRolling(".spbnrZone");
+
+		$.fn.salesSlide = function(options){
+			var defaults = {
+				prev : ".prev",
+				next : ".next"
+			}
+			options = $.extend(defaults, options);
+			return this.each(function(i){
+				var o = options
+					, $obj = $(this)
+					, $btn = $(o.btn, $obj)
+					, $prev = $(o.prev, $obj)
+					, $next = $(o.next, $obj)
+					, $slideWrap = $(".slideList", $obj) // 슬라이드할 컨텐츠
+					, $item = $(".slideList", $obj).children()
+					, $thumbLink= $(".item", $obj).find("a")
+					, isAnimating = 'no'
+					, $speed
+					, oldidx = null;
+
+				$slideWrap.width($item.outerWidth() * $item.size());
+				$prev.click( prevClick );
+				$next.click( nextClick );
+
+				function prevClick(){
+					Imgchange("prev",$slideWrap);
+					return false;
+				}
+				function nextClick(){
+					Imgchange("next",$slideWrap);
+					return false;
+				}
+				$thumbLink.off().on({
 					click:function(){
-						var $idx = $(this).index();
-						move($idx);
-						$flag = $idx;
+						var n = $thumbLink.index(this);
+						fade(n);
+						showNum($(this));
 						return false;
 					}
 				});
+
+				function showNum(active){
+					$btn.removeClass("on")
+					active.addClass("on")
+				}
+
+				function fade(n){
+					//if($item.eq(n).is(":visible")) return false;
+					$item.fadeOut(100);
+					$item.eq(n).fadeIn(100);
+					$item.eq(n).appendTo($slideWrap)
+					oldidx = n;
+					
+				}
+				function Imgchange(d, ulwrap){
+					ulwrap.width($item.outerWidth() * $item.size()); // 목록갯수만큼 ul의 width를 갱신함
+					var widthx = $item.outerWidth(true); // 리스트 가로사이즈
+					move(d , ulwrap,widthx)
+				}
+				function move(d,ulwrap , widthx){
+					if(isAnimating == 'no'){
+						isAnimating = 'yes'
+						$item.each(function(){
+							$item.show();
+						});
+						if(d === "prev"){
+							if (oldindx = ulwrap.find("img:first"))
+							{
+							}
+							ulwrap.animate({
+								"margin-left" : -widthx
+							},$speed || 400, function(){
+								ulwrap.find("img:first").appendTo(ulwrap);
+								ulwrap.css("margin-left", 0);
+								isAnimating = 'no'
+							});
+						}else if(d === "next"){
+							ulwrap.css("margin-left", -widthx);
+							ulwrap.find("img:last").prependTo(ulwrap);
+							ulwrap.animate({
+								"margin-left" : 0
+							},$speed || 400, function(){
+								isAnimating = 'no'
+							});
+						}
+					}
+				}
 			});
-
-			function next(){move(($flag+1) % $bnrLeng);}
-			function move($idx){
-				if($idx == $flag) return;
-				if(isAnimating == 'no'){
-					isAnimating = 'yes'
-					window.clearTimeout($timer); 
-					$bnrItem.eq($flag).show().css({"left": 0}).animate({
-						"left" : -$bnrW
-					},"slow", function(){
-						$(this).hide();
-						if ($timer) { start(); }
-						isAnimating = 'no'
-					});
-
-					$bnrItem.eq($idx).show().css({
-						"left": $bnrW
-					}).animate({
-						"left" : 0
-					},"slow", function(){
-						isAnimating = 'no'
-					});
-				}
-				if ($btn) {
-					$btn.eq($flag).removeClass("on");
-					$btn.eq($idx).addClass("on");
-				}
-				$flag = $idx;
-			}
-			function start(){
-				stop();
-				$timer = window.setTimeout(next, 2000)
-			}
-			function stop(){
-				window.clearTimeout($timer);
-				$timer = null;
-			}
-			start();
+		}
+		$(".viewWrap").salesSlide({});
 	},
 	checkList:function(){
 		var checkList = function(obj){
@@ -370,60 +489,7 @@ curex.ui = {
 		if($("#checkList").length){checkList("#checkList");}
 	},
 
-	carlendar:function(){
-		var scope = this.op
-			, $obj = $(".timeSchedule", scope) || $(".timeSchedule")
-			, $objx = $obj.offset().left
-			, $objy = $obj.offset().top
-			, $objw = $obj.outerWidth()/2
-			, $objh = $obj.outerHeight()/2
-			, $popwrap = $("div.layerPopWrap2")
-			, $popbtn = $("a.btnClosePopup") //팝업닫기
-			, $tobdyList = $("#layerPop1")
-			, $tobdyMore = $("button.schedule_more") //일정표리스트
-			, $dateBtn = $("span.current a.close")
-			, $miniYear = $("div.mini_calender.year") //연간 미니캘린더
-			, $minimonth = $("div.mini_calender.month") //주간미니캘린더
-
-			$tobdyMore.on({ //today일정
-				click:function(e){
-					var posx =$objw -$tobdyList.width()/2
-						, posy =$objh -$tobdyList.height()
-/*					var $tdw = $(this).closest("td")
-						, posx = $tdw.offset().left - $objx-1
-						, posy = $tdw.offset().top - $objy-1;*/
-						hide();
-
-					$("#layerPop1").css({
-						"display": "block",
-						"left" : posx,
-						"top" : posy
-					});
-				}
-			});
-			$dateBtn.off().on({
-				click:function(){
-					hide();
-					if ($("div.yearSel").hasClass("month")){
-						$("div.mini_calender").css({"display" : "none"})
-						$miniYear.css({"display": "block"})
-					}else {
-						$("div.mini_calender").css({"display" : "none"})
-						$minimonth.css({"display": "block"})
-					}
-					return false;
-				}
-			});
-			var hide = function(){
-				$popwrap.hide();
-				$miniYear.hide();
-				$minimonth.hide();
-			}
-			$popbtn.off().on({click: function(){$popwrap.hide(); return false;}}); //팝업닫기
-	},
-
 	/*큐렉스 탭역역 1tab, 2tab까지만 구현 */
-
 	curexTab:function(){
 		var scope = this.op
 		$.fn.attab = function(options){
@@ -466,8 +532,7 @@ curex.ui = {
 
 					$active.parent().addClass('active');
 					$content.show();
-
-						return false;
+					e.preventDefault();
 					}
 				});
 			});
@@ -759,7 +824,8 @@ curex.ui = {
 			});
 		}
 		coverList(".coverList");
-	}
+	},
+
 }
 
 $(document).ready(function(){
@@ -767,7 +833,6 @@ $(document).ready(function(){
 	curex.ui.rolling();
 	curex.ui.event();
 //	if($("div.smartPicWrap").length){curex.ui.standard();} 페이지에서 직접호출
-	if($(".timeSchedule").length){curex.ui.carlendar();}
 	curex.ui.tab();
 	curex.ui.curexTab();
 	curex.ui.RdTab();
