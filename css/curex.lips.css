@@ -474,9 +474,10 @@ p.total strong{color:#e8404f;font-size:20px;}
 
 /* sales material */
 .btnWrap.schView{background:#f5f5f5;padding:3px;border:1px solid #dedede;}
+.btnWrap.schView span.txt{color:#707070;}
 .btnWrap.schView .btnL{left:3px;}
 
-.salesListBox{border:1px solid #dedede;padding:10px;}
+.salesListBox{border:1px solid #dedede;padding:10px; border-bottom:0;}
 .salesListBox:after{content:"";display:block;clear:both;}
 .salesListBox li{width:500px;float:left;margin-bottom:5px;}
 .salesListBox li:after{content:"";display:block;clear:both;}
