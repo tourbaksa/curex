@@ -415,3 +415,25 @@ div.postWrap .entryForm li:first-child{border-top:1px solid #dedede;}
 
 /* bderT */
 .lineBderT{border-top:1px solid #dedede;padding-top:10px;margin-top:10px;}
+
+/* 브로셔-view */
+.viewWrap:after{content:"";display:block;clear:both;}
+.viewWrap .viewL {width:738px;position:relative;border:1px solid #dedede;float:left;height:390px;}
+.viewWrap .viewL:after{content:"";display:block;clear:both;}
+.viewWrap .viewL a.prev{position:absolute;left:10px;top:50%;margin-top:-35px;}
+.viewWrap .viewL a.next{position:absolute;right:10px;top:50%;margin-top:-35px;}
+
+.viewWrap .viewR {width:114px;float:right;}
+
+.imgList {padding:0 0 25px 15px;height:390px;overflow:scroll;overflow-x:hidden;border:1px solid #dedede;}
+.imgList p{padding:5px 0 0;}
+.imgList li{width:70px;height:70px;overflow:hidden;border:1px solid #dedede;background:#f8f8f8;margin-top:10px;position:relative;}
+.imgList li a.close{display:none;}
+.imgList li.pageDisebled {border:1px solid #9b9b9b;background:#adadad;}
+.imgList li.pageDisebled a.close{position:absolute;right:6px;top:6px;z-index:1;display:block;}
+
+.salesContact{position:relative;border-top:1px solid #dedede;padding-top:5px;}
+.salesContact .detailBox{border:1px solid #dedede;background:#f8f8f8;height:70px;padding:10px;}
+.salesContact .cment{margin-top:5px;position:relative;padding-left:45px;height:21px;line-height:21px;}
+.salesContact .cment .pentagon{position:absolute;left:0;top:0;}
+.salesContact .more2{position:absolute;right:0;top:5px;}
