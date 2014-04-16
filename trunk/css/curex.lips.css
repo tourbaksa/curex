@@ -479,8 +479,9 @@ p.total strong{color:#e8404f;font-size:20px;}
 .salesListBox{border:1px solid #dedede;padding:10px;}
 .salesListBox:after{content:"";display:block;clear:both;}
 .salesListBox li{width:500px;float:left;margin-bottom:5px;}
+.salesListBox li:after{content:"";display:block;clear:both;}
 .salesListBox dt{background:#00ade2;color:#fff;width:111px;height:24px;line-height:24px;text-align:center;border-radius:2px;-webkit-border-radius:2px;-moz-border-radius:2px;-ms-border-radius:2px;float:left;}
-.salesListBox dd{width:380px;float:right;height:24px;line-height:24px;color:#707070;}
+.salesListBox dd{width:380px;float:right;line-height:18px;padding:3px 0;color:#707070;}
 .salesListBox dd a{padding-left:5px;background:url(/img/common/bg_sales_line.gif) no-repeat 0 center;}
 .salesListBox dd a:first-child{padding-left:0;background:none}
 
@@ -491,7 +492,7 @@ p.total strong{color:#e8404f;font-size:20px;}
 .salesL .headerForm .titL{position:absolute;left:0;top:0;font-size:16px;color:#363636;font-weight:bold;letter-spacing:-1px;}
 .salesL .headerForm .titL span{font-size:12px;}
 
-.salesThumbnail{position:relative;padding:20px;border:1px solid #dedede;height:227px;overflow:auto;overflow-x:hidden;}
+.salesThumbnail{position:relative;padding:20px;border:1px solid #dedede;height:227px;overflow:scroll;overflow-x:hidden;}
 .salesThumbnail:after{content:"";display:block;clear:both;}
 .salesThumbnail ul{margin-top:10px;}
 .salesThumbnail ul:after{content:"";display:block;clear:both;}
@@ -510,7 +511,7 @@ p.total strong{color:#e8404f;font-size:20px;}
 
 .salesName .salesR{width:222px;float:right;}
 .broMake p.tit{background:url(/img/common/ico_brochure.gif) #99dfe6 no-repeat 50px center;height:32px;line-height:32px;text-align:center;font-size:14px;border:1px solid #86bcd2;color:#0098a7;padding-left:20px;}
-.broMake ul.broNail{height:257px;overflow:auto;overflow-x:hidden;padding:10px;border:1px solid #dedede;border-top:0;}
+.broMake ul.broNail{height:257px;overflow:scroll;overflow-x:hidden;padding:10px;border:1px solid #dedede;border-top:0;}
 .broMake ul.broNail:after{content:"";display:block;clear:both;}
 .broMake ul.broNail li{position:relative;margin-top:10px;overflow:hidden;}
 .broMake ul.broNail li li{margin-top:0;}
@@ -529,6 +530,41 @@ p.total strong{color:#e8404f;font-size:20px;}
 	background-image: linear-gradient(top, #ffffff, #f1f1f1);
 	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#ffffff', endColorstr='#f1f1f1');
 } 
-
 .salesName .fnt16{font-size:16px !important;}
+
+/* 내브로셔 */
+.salesLtype1{width:160px;float:left;}
+.salesLtype1 .salesList{height:455px;overflow:scroll;overflow-x:hidden;border:1px solid #dedede;margin-top:5px;}
+.salesLtype1 .salesList li{border-top:1px solid #dedede;}
+.salesLtype1 .salesList li:first-child{border-top:0;}
+.salesLtype1 .salesList li a{height:31px;line-height:31px;padding-left:10px;display:block;}
+.salesLtype1 .salesList li a span{background:url(/img/common/bg_arrowR.png) no-repeat right center;padding-right:13px;}
+.salesLtype1 .salesList li a:hover, .salesLtype1 .salesList li a:focus{background:#d7ecf2;}
+
+.salesRtype1{width:844px;float:right;}
+.salesRtype1 .pageListWrap:after{content:"";display:block;clear:both;}
+.salesRtype1 .pageListWrap .pageL{width:119px;border:1px solid #dedede;float:left;}
+.salesRtype1 .pageListWrap .pageL p.tit{background:#99dfe6; height:32px;line-height:32px;text-align:center;font-size:14px;border:1px solid #86bcd2;color:#0098a7;}
+
+.pageSM {padding:0 0 25px 11px;height:406px;overflow:scroll;overflow-x:hidden;}
+.pageSM li{width:80px;height:80px;overflow:hidden;border:1px solid #dedede;background:#f8f8f8;margin-top:10px;position:relative;}
+.pageSM li a.close{display:none;}
+.pageSM li.pageDisebled {border:1px solid #9b9b9b;background:#adadad;}
+.pageSM li.pageDisebled a.close{position:absolute;right:6px;top:6px;z-index:1;display:block;}
+.salesRtype1 .pageListWrap .pageR{width:715px;float:right;}
+.salesRtype1 .pageBox1{height:328px;overflow:scroll;overflow-x:hidden;border:1px solid #dedede;padding:10px;}
+.pageTopicWrap {margin-top:10px;}
+.pageTopicWrap:after{content:"";display:block;clear:both;}
+.pageTopicWrap .pageBox2{height:72px;overflow:scroll;overflow-x:hidden;border:1px solid #dedede;border-bottom:0;padding:10px;}
+table.topic th, table.topic td{background:#d7ecf2;padding:3px 0 5px;}
+table.topic th{padding-left:5px;}
+.pentagon{background:url(/img/common/ico_pentagon.png) no-repeat 0 0;color:#fff;width:42px;height:21px;line-height:21px;text-align:center;display:block;padding-right:5px;}
+
+
+
+
+
+
+
+
 
