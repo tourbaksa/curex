@@ -484,6 +484,8 @@ p.total strong{color:#e8404f;font-size:20px;}
 .salesListBox dd a{padding-left:5px;background:url(/img/common/bg_sales_line.gif) no-repeat 0 center;}
 .salesListBox dd a:first-child{padding-left:0;background:none}
 
+.salesName{margin-top:8px;}
+.salesName:after {content:"";display:block;clear:both;}
 .salesName .salesL{width:782px;float:left;}
 .salesL .headerForm{text-align:right;position:relative;}
 .salesL .headerForm .titL{position:absolute;left:0;top:0;font-size:16px;color:#363636;font-weight:bold;letter-spacing:-1px;}
@@ -498,7 +500,9 @@ p.total strong{color:#e8404f;font-size:20px;}
 .salesThumbnail ul li:first-child{margin-left:0;}
 .salesThumbnail .photo{width:108px;height:108px;overflow:hidden;border:1px solid #dedede;background:#f8f8f8;margin-top:5px;}
 .salesThumbnail dl{margin-top:3px;}
-.salesThumbnail dl dt{background:url(/img/common/bg_star.gif) no-repeat 0 center;white-space:nowrap;text-overflow:ellipsis;width:108px;padding-left:15px;overflow:hidden;}
+.salesThumbnail dl dt{white-space:nowrap;text-overflow:ellipsis;width:108px;overflow:hidden;margin-bottom:2px;}
+.salesThumbnail dl dt a.star{padding-right:3px;}
+.salesThumbnail dl dt a.star img{vertical-align:middle;}
 .salesThumbnail dl dd li{float:none;margin-left:0;letter-spacing:-1px;}
 .evenBox{border:1px solid #dedede;background:#d7ecf2;text-align:right;padding:3px 5px 4px 0;}
 .btn.longWtRb span.txtArrow{background:url(/img/common/blt_arrowB.png) no-repeat 0 50%; margin:0 1px 0 0; display:inline-block; width:9px; text-indent:-99999px; font-size:0;  line-height:15px; height:15px;}/* 텍스트 + up */
