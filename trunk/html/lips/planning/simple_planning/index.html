@@ -49,6 +49,7 @@
 		<div id="contents" class="lips clear-fix">
 			<div class="lipsWrap ci-tab">
 				<ul class="tab01 tab-selector">
+					<!-- 청약정보가 없을경우 가입설계 class에 mr5가 들어가며, 청약정보가 있을경우에는 청약정보에만 들어간다 -->
 					<li class="active"><a href="#none" class="type2 mr5">가입설계</a></li>
 					<li><a href="#none" class="type2">청약정보</a></li>
 					<li><a href="#none">보장내용</a></li>
@@ -1583,8 +1584,8 @@
 																		</td>
 																		<th>주민번호</th>
 																		<td>
-																			<input type="text" style="width:58px" />
-																			<input type="text" style="width:58px" />
+																			<input type="text" style="width:60px" />
+																			<input type="text" style="width:70px" />
 																		</td>
 																	</tr>
 																	<tr>
@@ -1601,27 +1602,33 @@
 																		</td>
 																	</tr>
 																	<tr>
-																		<th>자택주소</th>
-																		<td>
-																			<input type="text" style="width:78px" />
-																			<input type="text" style="width:98px" />
-																			<input type="text" style="width:78px" />
-																		</td>
 																		<th>자택전화</th>
+																		<td>
+																			<span class="widthFull"><input type="text" id="" /></span>
+																		</td>
+																		<th>직장전화</th>
 																		<td>
 																			<span class="widthFull"><input type="text" id="" /></span>
 																		</td>
 																	</tr>
 																	<tr>
-																		<th>회사주소</th>
-																		<td>
-																			<input type="text" style="width:78px" />
-																			<input type="text" style="width:98px" />
-																			<input type="text" style="width:78px" />
+																		<th>자택주소</th>
+																		<td colspan="3">
+																			<input type="text" style="width:80px" />
+																			<input type="text" style="width:170px" />
+																			<input type="text" style="width:230px" />
+																			<a href="#none" class="btn smWtRb">찾기</a>
+																			<a href="#none" class="btn smWtRb">삭제</a>
 																		</td>
-																		<th>직장전화</th>
-																		<td>
-																			<span class="widthFull"><input type="text" id="" /></span>
+																	</tr>
+																	<tr>
+																		<th>회사주소</th>
+																		<td colspan="3">
+																			<input type="text" style="width:80px" />
+																			<input type="text" style="width:170px" />
+																			<input type="text" style="width:230px" />
+																			<a href="#none" class="btn smWtRb">찾기</a>
+																			<a href="#none" class="btn smWtRb">삭제</a>
 																		</td>
 																	</tr>
 																	<tr>
@@ -1633,6 +1640,8 @@
 																				<option></option>
 																			</select>
 																			<input type="text"style="width:200px" />
+																			<input type="checkbox" id="me2" />
+																			<label for="me2">E-Mail 미출력</label>
 																		</td>
 																	</tr>
 																</tbody>
@@ -1698,8 +1707,8 @@
 																		</td>
 																		<th>주민번호</th>
 																		<td>
-																			<input type="text" style="width:58px" />
-																			<input type="text" style="width:58px" />
+																			<input type="text" style="width:60px" />
+																			<input type="text" style="width:70px" />
 																		</td>
 																	</tr>
 																	<tr>
@@ -1716,27 +1725,33 @@
 																		</td>
 																	</tr>
 																	<tr>
-																		<th>자택주소</th>
-																		<td>
-																			<input type="text" style="width:78px" />
-																			<input type="text" style="width:98px" />
-																			<input type="text" style="width:78px" />
-																		</td>
 																		<th>자택전화</th>
+																		<td>
+																			<span class="widthFull"><input type="text" id="" /></span>
+																		</td>
+																		<th>직장전화</th>
 																		<td>
 																			<span class="widthFull"><input type="text" id="" /></span>
 																		</td>
 																	</tr>
 																	<tr>
-																		<th>회사주소</th>
-																		<td>
-																			<input type="text" style="width:78px" />
-																			<input type="text" style="width:98px" />
-																			<input type="text" style="width:78px" />
+																		<th>자택주소</th>
+																		<td colspan="3">
+																			<input type="text" style="width:80px" />
+																			<input type="text" style="width:170px" />
+																			<input type="text" style="width:230px" />
+																			<a href="#none" class="btn smWtRb">찾기</a>
+																			<a href="#none" class="btn smWtRb">삭제</a>
 																		</td>
-																		<th>직장전화</th>
-																		<td>
-																			<span class="widthFull"><input type="text" id="" /></span>
+																	</tr>
+																	<tr>
+																		<th>회사주소</th>
+																		<td colspan="3">
+																			<input type="text" style="width:80px" />
+																			<input type="text" style="width:170px" />
+																			<input type="text" style="width:230px" />
+																			<a href="#none" class="btn smWtRb">찾기</a>
+																			<a href="#none" class="btn smWtRb">삭제</a>
 																		</td>
 																	</tr>
 																	<tr>
@@ -1748,6 +1763,8 @@
 																				<option></option>
 																			</select>
 																			<input type="text"style="width:200px" />
+																			<input type="checkbox" id="me1" />
+																			<label for="me1">E-Mail 미출력</label>
 																		</td>
 																	</tr>
 																</tbody>
@@ -1859,8 +1876,8 @@
 																		</td>
 																		<th>주민번호</th>
 																		<td>
-																			<input type="text" style="width:58px" />
-																			<input type="text" style="width:58px" />
+																			<input type="text" style="width:60px" />
+																			<input type="text" style="width:70px" />
 																		</td>
 																	</tr>
 																	<tr>
@@ -1877,27 +1894,33 @@
 																		</td>
 																	</tr>
 																	<tr>
-																		<th>자택주소</th>
-																		<td>
-																			<input type="text" style="width:78px" />
-																			<input type="text" style="width:98px" />
-																			<input type="text" style="width:78px" />
-																		</td>
 																		<th>자택전화</th>
+																		<td>
+																			<span class="widthFull"><input type="text" id="" /></span>
+																		</td>
+																		<th>직장전화</th>
 																		<td>
 																			<span class="widthFull"><input type="text" id="" /></span>
 																		</td>
 																	</tr>
 																	<tr>
-																		<th>회사주소</th>
-																		<td>
-																			<input type="text" style="width:78px" />
-																			<input type="text" style="width:98px" />
-																			<input type="text" style="width:78px" />
+																		<th>자택주소</th>
+																		<td colspan="3">
+																			<input type="text" style="width:80px" />
+																			<input type="text" style="width:170px" />
+																			<input type="text" style="width:230px" />
+																			<a href="#none" class="btn smWtRb">찾기</a>
+																			<a href="#none" class="btn smWtRb">삭제</a>
 																		</td>
-																		<th>직장전화</th>
-																		<td>
-																			<span class="widthFull"><input type="text" id="" /></span>
+																	</tr>
+																	<tr>
+																		<th>회사주소</th>
+																		<td colspan="3">
+																			<input type="text" style="width:80px" />
+																			<input type="text" style="width:170px" />
+																			<input type="text" style="width:230px" />
+																			<a href="#none" class="btn smWtRb">찾기</a>
+																			<a href="#none" class="btn smWtRb">삭제</a>
 																		</td>
 																	</tr>
 																	<tr>
@@ -1908,7 +1931,8 @@
 																				<option></option>
 																				<option></option>
 																			</select>
-																			<input type="text"style="width:78px" />
+																			<input type="text"style="width:200px" />
+																			<input type="checkbox" id="me2" />
 																		</td>
 																	</tr>
 																</tbody>
