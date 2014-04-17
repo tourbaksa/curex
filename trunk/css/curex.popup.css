@@ -339,9 +339,6 @@ div.healthy{overflow:hidden;}
 div.healthy table{width:450px; float:right;}
 div.healthy table:first-child{float:left;}
 
-
-
-
 /* 우편번호 */
 div.postWrap{margin-top:8px;background:url(/img/common/bg_line4.gif) repeat-y 50% top;}
 div.postWrap:after{content:"";display:block;clear:both;}
@@ -460,3 +457,16 @@ div.postWrap .entryForm li:first-child{border-top:1px solid #dedede;}
 
 .plusSales li{width:440px;}
 .plusSales li dd{width:319px;}
+
+/* 타사계약정보입력 */
+.otherWrap {margin-top:10px;position:relative;}
+.otherWrap .otherL{float:left;width:471px;}
+.otherWrap .otherR{float:right;width:381px;}
+
+/* 검진센터 */
+.checkupCenter {margin-top:20px;}
+.checkupCenter li{margin-top:10px;}
+.checkupCenter li:first-child{margin:0;}
+.checkupCenter li input[type="radio"]{margin-right:5px;}
+
+/* 재무계산기 */
