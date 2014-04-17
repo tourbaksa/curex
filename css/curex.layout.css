@@ -189,13 +189,9 @@ div.personBtn .lgGyR1{padding:7px 10px;}
 .listMenu .checkContainer:after{content:"";display:block;clear:both;}
 .listMenu .enter{position:absolute;right:11px;top:12px;}
 
-
-
-
-
 /* 퀵메뉴 */
 div#quick{width:50px; position:absolute; right:-70px; top:23px; background:#fff; overflow:hidden;}
-body.main div#quick{top:0px;}
+body.main div#quick{top:17px;}
 div#quick h2{background-color:#7ad4dd; color:#fff; height:25px; border-top-left-radius:2px; -webkit-border-top-left-radius:2px; -moz-border-top-left-radius:2px; -ms-border-top-left-radius:2px;
 	border-top-right-radius:2px; -webkit-border-top-right-radius:2px; -moz-border-top-right-radius:2px; -ms-border-top-right-radius:2px; border:1px solid #5fb8c1; font-size:11px; position:relative; z-index:1;}
 div#quick h2 span{display:block;border-top:1px solid #8edfe7; line-height:22px; text-align:center;}

@@ -48,7 +48,7 @@ ul.smartTab li.active:first-child a span{background-image:url(/img/sub/bg_smartp
 
 .sInrTab li:first-child a{
 	border-top-left-radius:2px;
-	-webkit-border-top-left--radius:2px;
+	-webkit-border-top-left-radius:2px;
 	-moz-border-top-left-radius:2px;
 	-ms-border-top-left-radius:2px;
 	border-bottom-left-radius:2px;

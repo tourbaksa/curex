@@ -624,9 +624,7 @@ div.mm_scroll textarea{height:30px; line-height:31px; height:158px; overflow-y:s
 
 .bg{ url(/img/sub/bg_memosuject.gif) repeat-x 0 0;}
 div.memoarea .lt{background:url(/img/sub/bg_paper_side.gif) repeat-y 0 0; position:absolute; left:0; top:32px; width:23px; height:158px; z-index:1;}
-
 div.bottom_paper{position:absolute; left:1px; top:225px; width:332px; height:30px; background-color:#fff; z-index:11; padding:5px 9px 0 0; text-align:right;}
-
 /* border reset */
 #wrap .bder0{border:0;}
 
