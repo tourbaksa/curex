@@ -1,17 +1,46 @@
 @charset "utf-8";
 
 body.main{background-color:#fbfcfd;}
-body.main div#wrap{position:relative;}
-div#mcontainer{width:1024px; margin:25px auto 0; padding:0 0 20px 0; position:relative; }
+body.main div#wrap{position:relative; background-image:url(/img/main/bg_mainWrap.gif);}
+body.main div#header{background-image:none;}
+body.main div#header:after{content:""; display:block; clear:both;}
+div#mcontainer{width:1024px; margin:0 auto; padding:0 0 20px 0; position:relative; }
 div#mcontainer:after{content:""; display:block; clear:both;}
-div.mcontentL{width:328px; float:left;}
-div.mcontentR{width:677px; float:left; margin:0 0 0 17px;}
+div.mcontentL{width:328px; float:left; margin:17px 0 0 0;}
+div.mcontentR{width:677px; float:left; margin:17px 0 0 17px;}
 
 div.nizcntL{width:270px;}
 div.nizcntR{width:733px;}
 
-/* main calendar */
+div.mSearchWrap{clear:both; height:43px;}
+div.msearchCnt{padding:3px 0 0 0; width:600px; margin:0 auto;}
+div.msearchCnt input[type="text"]{height:33px; border:3px solid #50a6ca; border-right:0; width:307px;}
+div.msearchCnt span.msearchBtn{display:inline-block; width:61px; height:33px; 
+	border-radius:0 2px 2px 0;
+	-webkit-border-radius:0 2px 2px 0;
+	-moz-border-radius:0 2px 2px 0;
+	-ms-border-top-right-radius:2px;
+	border:1px solid #43a6c6;
+	
+	}
+div.msearchCnt span.msearchBtn input{
+	width:59px; height:31px;
+	border-top:1px solid #76c8e2;
+	border-bottom:1px solid #4aa6c4;
+	background-color:#5cbcda;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#5cbcda), to(#4eaecc));
+	background-image: -webkit-linear-gradient(top, #5cbcda, #4eaecc);
+	background-image: -moz-linear-gradient(top, #5cbcda, #4eaecc);
+	background-image: -ms-linear-gradient(top, #5cbcda, #4eaecc);
+	background-image: linear-gradient(top, #5cbcda, #4eaecc);
+	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#5cbcda', endColorstr='#4eaecc');
+}
 
+span.searchBtnset button{height:33px; background-image:none; background-color:#fff; width:111px;}
+span.searchBtnset button {background:url(/img/main/btn_gnb_userL.gif) no-repeat 9px 48% !important;  display:inline-block; width:31px; text-indent:-99999px; font-size:0;  line-height:15px; height:15px;}
+
+
+/* main calendar */
 div.mcarlendar{margin:0 0 20px 0;}
 div.mcarlenHdr {overflow:hidden;}
 div.mcarlenHdr h2{font-size:29px; color:#444; font-weight:bold; float:left; height:26px; line-height:26px;}

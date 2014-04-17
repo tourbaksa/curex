@@ -411,7 +411,6 @@ curex.ui = {
 								$(this).hide();
 								isAnimating = 'no'
 							});
-
 							$item.eq(newIdx).show().css({
 								"left": widthx
 								}).animate({
@@ -426,7 +425,6 @@ curex.ui = {
 								$(this).hide();
 								isAnimating = 'no'
 							});
-
 							$item.eq(newIdx).show().css({
 								"left": -widthx
 								}).animate({
@@ -434,9 +432,7 @@ curex.ui = {
 								},"normal", function(){
 									isAnimating = 'no'
 							});
-
 						}
-						
 					}
 				}
 			});

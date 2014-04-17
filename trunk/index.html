@@ -20,8 +20,118 @@
 
 <div id="wrap">
 	<!-- HEADER -->
-	<div id="header">
-		<img src="/img/common/img_header.jpg" alt="" />
+	<div id="header-wrap">
+		<div id="header">
+			<h1><img src="/img/common/logo.gif" alt="CurEX Prudential" /></h1>
+			<a href="#none" class="total"><img src="/img/sub/gnb_total.gif" alt="전체메뉴" /></a>
+			<!-- 전체메뉴 클릭시 block -->
+			<div class="allmenu" style="display:none;">
+				<!-- 알림창 -->
+				<div class="anceWindow">
+					<h2>푸르덴셜 SFA 알림 메세지 4개가 있습니다.</h2>
+					<ol class="list">
+						<li>1. 김푸르님의 신규 계약 리스트</li>
+						<li>2. 푸르덴셜 SFA공통알림</li>
+						<li>3. 푸르덴셜 SFA관리자 사이트가...</li>
+					</ol>
+				</div>
+		
+				<div class="siteMenu">
+					<ul>
+						<li><a href="#">고객관리</a>
+							<ul>
+								<li><a href="#">고객등록</a>
+									<ul>
+										<li><a href="#">개인</a></li>
+										<li><a href="#">법인</a></li>
+									</ul>
+								</li>
+								<li><a href="#">고객통합뷰</a></li>
+								<li><a href="#">고객정보관리</a></li>
+							</ul>
+						</li>
+						<li><a href="#">LiPS</a>
+							<ul>
+								<li><a href="#">니즈분석</a>
+									<ul>
+										<li><a href="#">니즈분석메인</a></li>
+										<li><a href="#">수입/지출</a></li>
+										<li><a href="#">LC분석</a></li>
+										<li><a href="#">Sales Material</a></li>
+										<li><a href="#">사망보장</a></li>
+										<li><a href="#">노후보장</a></li>
+										<li><a href="#">목적자금</a></li>
+										<li><a href="#">상세입력</a></li>
+										<li><a href="#">증권분석</a></li>
+										<li><a href="#">보고서출력</a></li>
+									</ul>
+								</li>
+								<li><a href="#">계획수립</a>
+									<ul>
+										<li><a href="#">개인설계</a></li>
+										<li><a href="#">법인설계</a></li>
+										<li><a href="#">복합설계</a></li>
+									</ul>
+								</li>
+								<li><a href="#">니즈환기자료</a></li>
+								<li><a href="#">금융계산기</a></li>
+							</ul>
+						</li>
+						<li><a href="#">계약</a>
+							<ul>
+								<li><a href="#">계약검색</a></li>
+								<li><a href="#">계약리스트</a></li>
+								<li><a href="#">계약리뷰</a></li>
+								<li><a href="#">감사고객</a></li>
+								<li><a href="#">청약</a></li>
+							</ul>
+						</li>
+						<li class="last"><a href="#">스마트CRM</a>
+							<ul>
+								<li><a href="#">스마트서비스</a></li>
+								<li><a href="#">일정표</a></li>
+								<li><a href="#">CS스테이션</a></li>
+								<li><a href="#">접촉이력</a></li>
+								<li><a href="#">LP활동관리</a></li>
+							</ul>
+						</li>
+					</ul>
+					
+				</div>
+		
+				<a href="#" class="allMenuClose"><img src="/img/common/btn_MenuClose.gif" alt="전체메뉴닫기" /></a>
+			</div>
+			<div class="gnbWrap">
+				<ul id="gnb">
+					<li><a href="#none">고객관리</a></li>
+					<li><a href="#none" class="on">LiPS</a></li>
+					<li><a href="#none">계약</a></li>
+					<li><a href="#none">스마트CRM</a></li>
+				</ul>			
+				<span class="globalIcon">
+					<span class="icoTotal">
+						<a href="#none"><img src="/img/common/ico_gnb1.gif" alt="" /></a>
+						<a href="#none"><img src="/img/common/ico_gnb2.gif" alt="" /></a>
+						<a href="#none"><img src="/img/common/ico_gnb3.gif" alt="" /></a>
+					</span>
+					<a href="#none" class="last"><img src="/img/common/ico_gnb4.gif" alt="" /></a>
+				</span>
+			</div>
+			<div class="mSearchWrap">
+				<form id="" method="post" action="/">
+					<fieldset>
+						<legend>메인검색존</legend>
+						<div class="msearchCnt">
+							<input type="text" /><span class="msearchBtn"><input type="button" class="btn" value="검색" /></span>
+							<span class="searchBtnset">
+								<button type="button" class="btn smWtRb"><span>&nbsp;</span>신규개인등록</button>
+								<button type="button" class="btn smWtRb"><span>&nbsp;</span>신규단체등록</button>
+							</span>
+						</div>
+					</fieldset>
+				</form>
+			</div>
+		</div>
 	</div>
 	<!-- //HEADER -->
 	<div id="mcontainer">
@@ -379,8 +489,8 @@
 			var cmt = parseInt($("#mcontainer").css("margin-top"));
 			if (minus > cmt){
 				$("#mcontainer").css({
-					"margin-top" :minus/2 ,
-					"margin-bottom" :minus/2
+					"padding-top" :minus/2 ,
+					"padding-bottom" :minus/2
 				});
 				
 
