@@ -422,8 +422,8 @@ div.postWrap .entryForm li:first-child{border-top:1px solid #dedede;}
 .viewWrap:after{content:"";display:block;clear:both;}
 .viewWrap .viewCont {width:738px;position:relative;border:1px solid #dedede;float:left;height:390px; overflow:hidden;}
 .viewWrap .viewCont:after{content:"";display:block;clear:both;}
-.viewWrap .viewCont span.slideCtrl a.prev{position:absolute;left:10px;top:50%;margin-top:-35px;}
-.viewWrap .viewCont span.slideCtrl a.next{position:absolute;right:10px;top:50%;margin-top:-35px;}
+.viewWrap .viewCont span.slideCtrl a.prev{position:absolute;left:10px;top:50%;margin-top:-35px; z-index:22; display:block;}
+.viewWrap .viewCont span.slideCtrl a.next{position:absolute;right:10px;top:50%;margin-top:-35px; z-index:22; display:block;}
 .viewWrap .slideList{width:736px; height:388px;}
 .viewWrap .slideList img{width:736px; height:388px; float:left;}
 .viewWrap .Viewthumbnail {width:114px;float:right;}
