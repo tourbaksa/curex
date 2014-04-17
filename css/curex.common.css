@@ -563,7 +563,7 @@ table +.btnWrap{margin-top:10px;}
 .mdGnRw{line-height:15px; color:#fff; border-radius:2px; -moz-border-radius:2px; -webkit-border-radius:2px; -ms-border-radius:2px; padding:3px 9px 4px; background-color: #50a6ca;} /* 초록 높이22px 라운드 */
 
 a.carendar *{vertical-align:middle;}
-a.carendar span.cdr{background:url(/img/common/bg_calendar.png) no-repeat 0 0; color:#707070; text-align:center; font-size:11px; padding:10px 0 0 0; display:inline-block; width:21px; line-height:15px; height:24px;}
+a.carendar span.cdr{background:url(/img/common/bg_calendar.png) no-repeat 0 0; color:#707070; text-align:center; font-size:11px; padding:9px 0 0 0; display:inline-block; width:21px; line-height:15px; height:24px;}
 div.carlendar{margin:9px 0 1px 0;}
 div.carlendar span.today{position:relative; top:2px;}
 div.cellCrnr{margin:9px 0 1px 0;}
