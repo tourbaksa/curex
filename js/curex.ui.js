@@ -352,80 +352,96 @@ curex.ui = {
 					, $slideWrap = $(".slideList", $obj) // 슬라이드할 컨텐츠
 					, $item = $(".slideList", $obj).children()
 					, $thumbLink= $(".item", $obj).find("a")
+					, widthx = $item.outerWidth(true) // 리스트 가로사이즈
 					, isAnimating = 'no'
-					, $speed
-					, oldidx = null;
+					, direction
+					, oldIdx = 0
+					, newIdx = 0;
 
-				$slideWrap.width($item.outerWidth() * $item.size());
-				$prev.click( prevClick );
-				$next.click( nextClick );
-
-				function prevClick(){
-					Imgchange("prev",$slideWrap);
-					return false;
-				}
-				function nextClick(){
-					Imgchange("next",$slideWrap);
-					return false;
-				}
-				$thumbLink.off().on({
-					click:function(){
-						var n = $thumbLink.index(this);
-						fade(n);
-						showNum($(this));
-						return false;
-					}
+				$item.each(function(idx){
+					$(this).css({
+						position:"absolute",
+							left:"0",
+							top:"0",
+							display:idx==0 ? "block" : "none"
+					});
 				});
 
-				function showNum(active){
-					$btn.removeClass("on")
-					active.addClass("on")
+				$prev.click( btnClick );
+				$next.click( btnClick );
+
+				function btnClick(){
+					if($(this).attr("class") == "next"){
+						direction = "next"; 
+						newIdx++ ;
+					}else{
+						direction = "prev";
+						newIdx--;
+					}
+					newIdx = newIdx === -1 ? $item.size()-1 : newIdx % $item.size();
+					move(newIdx)
+					showNum(newIdx)
+					oldIdx = newIdx;
+					return false;
 				}
 
-				function fade(n){
-					//if($item.eq(n).is(":visible")) return false;
-					$item.fadeOut(100);
-					$item.eq(n).fadeIn(100);
-					$item.eq(n).appendTo($slideWrap)
-					oldidx = n;
-					
+				$thumbLink.each(function(idx){
+					$(this).off().on({
+						click:function(){
+							var newIdx = $thumbLink.index(this);
+							showNum(newIdx);
+							move(newIdx);
+							oldIdx = newIdx;
+							return false;
+						}
+					});
+				});
+
+				function showNum(newIdx){
+					$(".itemLeng").find("span").text(newIdx+1)
 				}
-				function Imgchange(d, ulwrap){
-					ulwrap.width($item.outerWidth() * $item.size()); // 목록갯수만큼 ul의 width를 갱신함
-					var widthx = $item.outerWidth(true); // 리스트 가로사이즈
-					move(d , ulwrap,widthx)
-				}
-				function move(d,ulwrap , widthx){
+				function move(newIdx){
+					if(newIdx == oldIdx) return;
 					if(isAnimating == 'no'){
 						isAnimating = 'yes'
-						$item.each(function(){
-							$item.show();
-						});
-						if(d === "prev"){
-							if (oldindx = ulwrap.find("img:first"))
-							{
-							}
-							ulwrap.animate({
-								"margin-left" : -widthx
-							},$speed || 400, function(){
-								ulwrap.find("img:first").appendTo(ulwrap);
-								ulwrap.css("margin-left", 0);
+						if (direction === "next"){
+							$item.eq(oldIdx).show().css({"left": 0}).animate({
+							"left" : -widthx
+							},"normal", function(){
+								$(this).hide();
 								isAnimating = 'no'
 							});
-						}else if(d === "next"){
-							ulwrap.css("margin-left", -widthx);
-							ulwrap.find("img:last").prependTo(ulwrap);
-							ulwrap.animate({
-								"margin-left" : 0
-							},$speed || 400, function(){
+
+							$item.eq(newIdx).show().css({
+								"left": widthx
+								}).animate({
+									"left" : 0
+								},"normal", function(){
+									isAnimating = 'no'
+							});
+						}else{
+							$item.eq(oldIdx).show().css({"left": 0}).animate({
+							"left" : widthx
+							},"normal", function(){
+								$(this).hide();
 								isAnimating = 'no'
 							});
+
+							$item.eq(newIdx).show().css({
+								"left": -widthx
+								}).animate({
+									"left" : 0
+								},"normal", function(){
+									isAnimating = 'no'
+							});
+
 						}
+						
 					}
 				}
 			});
 		}
-		$(".viewWrap").salesSlide({});
+		$(".viewWrap").salesSlide();
 	},
 	checkList:function(){
 		var checkList = function(obj){
