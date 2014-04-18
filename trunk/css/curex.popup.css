@@ -470,3 +470,63 @@ div.postWrap .entryForm li:first-child{border-top:1px solid #dedede;}
 .checkupCenter li input[type="radio"]{margin-right:5px;}
 
 /* 재무계산기 */
+.reckBlueWrap{border-top:1px solid #dedede;margin-top:10px;padding-top:10px;}
+.reckBlueWrap .headerTab:after{content:"";display:block;clear:both;}
+.reckBlueWrap .headerTab div.popTit{float:left;height:29px;line-height:29px;margin-right:10px;}
+div.popTit h2.reckTit{background:url(/img/common/bg_tit_arrowR.gif) no-repeat 0 center; padding-left:10px;}
+.reckBlueWrap .headerTab ul.btnTab1{float:left;}
+.reckBlueWrap div.mainTabZone h3{font-size:14px;font-weight:bold;color:#333;}
+
+.leaveWrap:after{content:"";display:block;clear:both;}
+.leaveWrap li{width:320px;float:left;margin-left:20px;}
+.leaveWrap li:first-child{margin-left:0;}
+.leaveWrap li h4.leaveTit{background:#22b8c7;color:#fff;font-size:16px;text-align:center;height:30px;line-height:30px;margin:0;}
+.leaveWrap li div.leaveBox{border:1px solid #dedede;}
+.leaveWrap li div.leaveBox .lineBder{border:5px solid #f7f7f7;padding:25px 20px 0;}
+.leaveWrap li div.leaveBox .lineBder:after{content:"";display:block;clear:both;}
+.leaveWrap li div.leaveBox .lineBder .userGraphWrap{overflow:hidden;}
+.leaveWrap li div.leaveBox .lineBder .userGraph{float:left;width:130px;border-bottom:1px solid #dedede;text-align:center;}
+.leaveWrap li div.leaveBox .lineBder .userGraph span.first{}
+.leaveWrap li div.leaveBox .lineBder .userGraph .imgG1,
+.leaveWrap li div.leaveBox .lineBder .userGraph .imgG2 {float:left;padding-top:110px;position:relative;margin-left:20px;}
+.leaveWrap li div.leaveBox .lineBder .userGraph .imgG1{background:url(/img/common/bg_bar_blue.gif) no-repeat 0 bottom;width:35px;height:93px;display:block;}
+.leaveWrap li div.leaveBox .lineBder .userGraph .imgG2{background:url(/img/common/bg_bar_red.gif) no-repeat 0 bottom;width:35px;height:53px;display:block;}
+.leaveWrap li div.leaveBox .lineBder .userGraph span.soloG{margin-left:47px;}/* 하나일경우 */
+.leaveWrap li div.leaveBox .lineBder .userGraph span span{position:absolute;left:50%;top:0;font-size:14px;white-space:nowrap;color:#0080ff;width:70px;margin-left:-35px;}
+.leaveWrap li div.leaveBox .lineBder .userGraph span.imgG1 span{top:0;}
+.leaveWrap li div.leaveBox .lineBder .userGraph span.imgG2 span{top:39px;color:#e8404f;}
+
+.leaveWrap li div.leaveBox .lineBder dl{float:right;width:123px;margin-top:10px;}
+.leaveWrap li div.leaveBox .lineBder dl dt{font-size:16px;font-weight:bold;color:#333;margin-bottom:6px;}
+.leaveWrap li div.leaveBox .lineBder dl dd{font-size:14px;color:#363636;}
+.leaveWrap li div.leaveBox .lineBder dl dd ul{margin-bottom:8px;}
+.leaveWrap li div.leaveBox .lineBder dl dd li{width:auto;float:none;margin-left:0;line-height:18px;}
+.leaveWrap li div.leaveBox .lineBder .leaveTotal{margin-top:10px;text-align:center;border:1px solid #dedede;height:40px;line-height:40px;color:#e8404f;font-size:16px;font-weight:bold;background:#f7f7f7;}
+.leaveWrap li div.leaveBox .lineBder .boxBg{text-align:center;clear:both;padding:19px 0 10px;}
+.leaveWrap li div.leaveBox .lineBder .leaveTotal + .boxBg{padding-top:10px;}
+.leaveWrap li div.leaveBox .lineBder .chartBtn{border:1px solid #006cd8;font-size:14px;background:#3399ff;}
+.leaveWrap li div.leaveBox .lineBder .chartBtn a{border:1px solid #89c4ff;height:30px;line-height:30px;text-align:center;color:#fff;display:block;}
+.leaveWrap li .tableView{position:relative;}
+.leaveWrap li .tableView .table4{border-top:0;}
+.leaveWrap li .tableView .close{position:absolute;right:10px;top:10px;}
+.leaveWrap li .tableView .table4.tblR td:first-child{text-align:center;}
+.leaveWrap li .tableView .table4.tblR td{text-align:right;}
+
+div.formWrap {margin-top:10px;}
+div.formWrap:after{content:"";display:block;clear:both;}
+div.formWrap .formL{width:386px;float:left;}
+div.formWrap .formR{width:264px;float:right;}
+
+ul.btnTab1{overflow:hidden;margin-bottom:8px;}
+ul.btnTab1 li{float:left;margin-left:5px;}
+ul.btnTab1 li:first-child{margin-left:0;}
+ul.btnTab1 li a{display:block;height:29px;line-height:29px;text-decoration:none;color:#8e8e8e;background:#f2f2f2;padding:0 10px;min-width:100px;text-align:center;border:1px solid #dedede; border-radius:2px;-webkit-border-radius:2px;-moz-border-radius:2px;-ms-border-radius:2px;}
+ul.btnTab1 li.active a{background:#0084ff; height:29px; line-height:29px;color:#fff; border:1px solid #0084ff;border-radius:2px;-webkit-border-radius:2px;-moz-border-radius:2px;-ms-border-radius:2px;}
+
+.reckTab{background:#f8f8f8;border-bottom:1px solid #dedede; height:34px;line-height:34px;}
+.reckTab li{float:left;}
+.reckTab li.active a{color:#01509f;}
+.reckTab li a{padding:0 7px;border-left:1px solid #dedede;line-height:14px;font-size:14px;}
+.reckTab li:first-child a{padding-left:11px;border-left:0;}
+
+

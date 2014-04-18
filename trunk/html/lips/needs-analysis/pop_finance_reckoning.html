@@ -53,19 +53,17 @@
 				<li>
 					<div class="add">
 						<h3 class="hide-element">세무</h3>
-						4
 						<div class="reckWrap">
 							<ul class="reckTab attab"> 
 								<li class="active"><a href="#reck1">상속세계산</a></li>
 								<li><a href="#reck2">증여세계산</a></li>
 							</ul>
-							<div class="mainTabZone">
+							<div class="mainTabZone mt10">
 								<div id="reck1">
-									4-1
 									<form method="post" action="/">
 										<fieldset>
 											<legend>상속세</legend>
-											<table class="table3">
+											<table class="table8">
 												<caption>상속세</caption>
 												<colgroup>
 													<col width="20%" />
@@ -102,9 +100,9 @@
 													<table class="table3">
 														<caption>상속자산</caption>
 														<colgroup>
-															<col width="20%" />
-															<col width="40%" />
-															<col width="40%" />
+															<col width="30%" />
+															<col width="35%" />
+															<col width="35%" />
 														</colgroup>
 														<thead>
 															<tr>
@@ -119,13 +117,13 @@
 														<tbody>
 															<tr>
 																<td>본인</td>
-																<td><input type="text" style="width:100px;" /> 억원</td>
-																<td><input type="text" style="width:100px;" /> 억원</td>
+																<td class="textL"><input type="text" style="width:100px;" /> 억원</td>
+																<td class="textL"><input type="text" style="width:100px;" /> 억원</td>
 															</tr>
 															<tr>
 																<td>배우자</td>
-																<td><input type="text" style="width:100px;" /> 억원</td>
-																<td><input type="text" style="width:100px;" /> 억원</td>
+																<td class="textL"><input type="text" style="width:100px;" /> 억원</td>
+																<td class="textL"><input type="text" style="width:100px;" /> 억원</td>
 															</tr>
 														</tbody>
 													</table>
@@ -133,8 +131,8 @@
 													<table class="table1 mt10">
 														<caption>물가상승률</caption>
 														<colgroup>
-															<col width="20%" />
-															<col width="80%" />
+															<col width="30%" />
+															<col width="*" />
 														</colgroup>
 														<tbody>
 															<tr>
@@ -152,7 +150,7 @@
 														<caption>단기상속 관련 사항</caption>
 														<colgroup>
 															<col width="50%" />
-															<col width="50%" />
+															<col width="*" />
 														</colgroup>
 														<thead>
 															<tr>
@@ -162,7 +160,7 @@
 														<tbody>
 															<tr>
 																<td>재상속기간</td>
-																<td>
+																<td class="textL">
 																	<span class="selectFull">
 																		<select>
 																			<option></option>
@@ -173,26 +171,26 @@
 															</tr>
 															<tr>
 																<td>재상속재산가액</td>
-																<td>
-																	<input type="text" style="width:100px;" /> 억원
+																<td class="textL">
+																	<input type="text" style="width:95px;" /> 억원
 																</td>
 															</tr>
 															<tr>
 																<td>전상속재산가액</td>
-																<td>
-																	<input type="text" style="width:100px;" /> 억원
+																<td class="textL">
+																	<input type="text" style="width:95px;" /> 억원
 																</td>
 															</tr>
 															<tr>
 																<td>전상속세과세가액</td>
-																<td>
-																	<input type="text" style="width:100px;" /> 억원
+																<td class="textL">
+																	<input type="text" style="width:95px;" /> 억원
 																</td>
 															</tr>
 															<tr>
 																<td>전상속세산출내역</td>
-																<td>
-																	<input type="text" style="width:100px;" /> 억원
+																<td class="textL">
+																	<input type="text" style="width:95px;" /> 억원
 																</td>
 															</tr>
 														</tbody>
@@ -207,9 +205,9 @@
 									<div class="reckBlueWrap">
 										<div class="headerTab">
 											<div class="popTit">
-												<h2>&gt; 계산결과</h2>
+												<h2 class="reckTit">계산결과</h2>
 											</div>
-											<ul class="btnTab attab">
+											<ul class="btnTab1 attab">
 												<li class="active"><a href="#reckBlue1">현재시점 상속세 계산</a></li>
 												<li><a href="#reckBlue2">평균 수명시점 상속세 계산</a></li>
 												<li><a href="#reckBlue3">기간별 상속세 계산</a></li>
@@ -217,33 +215,35 @@
 										</div>
 										<div class="mainTabZone">
 											<div id="reckBlue1">
-												4-2-1
-												<h3>현재시점 기준 상속세 계산</h3>
+												<h3 class="mb8">현재시점 기준 상속세 계산</h3>
 												<div class="leaveWrap">
 													<ul>
 														<li>
 															<h4 class="leaveTit">본인 先상속시</h4>
 															<div class="leaveBox">
-																<dl>
-																	<dt>1차 본인 상속</dt>
-																	<dd>
-																		<ul>
-																			<li>상속자산 : 200억</li>
-																			<li>상속세 : 20.46억</li>
-																		</ul>
-																	</dd>
-																	<dd>
-																		<a href="#none">자세히 보기</a>
-																	</dd>
-																</dl>
-																<div class="userGraph">
-																	<span class="imgG1">200억</span>
-																	<span class="imgG2">80.46억</span>
+																<div class="lineBder">
+																	<div class="userGraph">
+																		<span class="imgG1"><span>200억</span></span>
+																		<span class="imgG2"><span>80.46억</span></span>
+																	</div>
+																	<dl>
+																		<dt>1차 본인 상속</dt>
+																		<dd>
+																			<ul>
+																				<li>상속자산 : 200억</li>
+																				<li>상속세 : 20.46억</li>
+																			</ul>
+																		</dd>
+																		<dd class="chartBtn">
+																			<a href="#none">자세히 보기</a>
+																		</dd>
+																	</dl>
+																	<p class="boxBg"><img src="/img/common/bg_arrow_b.gif" alt="" /></p>
 																</div>
 															</div>
 															<!-- tableView -->
 															<div class="tableView">
-																<table class="listTable">
+																<table class="table4 tblR">
 																	<caption>1차 본인상속</caption>
 																	<colgroup>
 																		<col width="50%" />
@@ -276,7 +276,7 @@
 																			<td>0억</td>
 																		</tr>
 																		<tr>
-																			<td>산출세액<a href="#none"><img src="/img/common/ico_qus.gif" alt="" /></a></td>
+																			<td>산출세액 <a href="#none"><img src="/img/common/ico_qus1.gif" class="vm" alt="" /></a></td>
 																			<td>0억</td>
 																		</tr>
 																		<tr>
@@ -289,39 +289,43 @@
 																		</tr>
 																	</tbody>
 																</table>
-																<a href="#none" class="close"><img src="/img/common/btn_checklist_close.gif" alt="닫기" /></a>
+																<a href="#none" class="close"><img src="/img/common/btn_close4.png" alt="닫기" /></a>
 															</div>
 															<!-- //tableView -->
 															<div class="leaveBox">
-																<dl>
-																	<dt>1차 본인 상속</dt>
-																	<dd>
-																		<ul>
-																			<li>상속자산 : 200억</li>
-																			<li>상속세 : 20.46억</li>
-																		</ul>
-																	</dd>
-																	<dd>
-																		<a href="#none">자세히 보기</a>
-																	</dd>
-																</dl>
-																<div class="userGraph">
-																	<span class="imgG1">0억</span>
-																	<span class="imgG2">0억</span>
+																<div class="lineBder">
+																	<div class="userGraphWrap">
+																		<div class="userGraph">
+																			<span class="imgG1 soloG"><span>0억</span></span>
+																		</div>
+																		<dl>
+																			<dt>2차 배우자 상속</dt>
+																			<dd>
+																				<ul>
+																					<li>상속자산 : 200억</li>
+																					<li>상속세 : 20.46억</li>
+																				</ul>
+																			</dd>
+																			<dd class="chartBtn">
+																				<a href="#none">자세히 보기</a>
+																			</dd>
+																		</dl>
+																	</div>
+																	<p class="leaveTotal">총 상속세 80억</p>
+																	<p class="boxBg"><img src="/img/common/bg_arrow_b.gif" alt="" /></p>
 																</div>
-																<p class="leaveTotal">총 상속세 80억</p>
 															</div>
 															<!-- tableView -->
 															<div class="tableView">
-																<table class="listTable">
-																	<caption>1차 본인상속</caption>
+																<table class="table4 tblR">
+																	<caption>2차 배우자 상속</caption>
 																	<colgroup>
 																		<col width="50%" />
 																		<col width="50%" />
 																	</colgroup>
 																	<thead>
 																		<tr>
-																			<th colspan="2">1차 본인상속 자세히 보기</th>
+																			<th colspan="2">2차 배우자상속 자세히 보기</th>
 																		</tr>
 																	</thead>
 																	<tbody>
@@ -346,7 +350,7 @@
 																			<td>0억</td>
 																		</tr>
 																		<tr>
-																			<td>산출세액<a href="#none"><img src="/img/common/ico_qus.gif" alt="" /></a></td>
+																			<td>산출세액 <a href="#none"><img src="/img/common/ico_qus1.gif" class="vm" alt="" /></a></td>
 																			<td>0억</td>
 																		</tr>
 																		<tr>
@@ -359,41 +363,45 @@
 																		</tr>
 																	</tbody>
 																</table>
-																<a href="#none" class="close"><img src="/img/common/btn_checklist_close.gif" alt="닫기" /></a>
+																<a href="#none" class="close"><img src="/img/common/btn_close4.png" alt="닫기" /></a>
 															</div>
 															<!-- //tableView -->
 														</li>
 														<li>
+															<h4 class="leaveTit">본인 先상속시</h4>
 															<div class="leaveBox">
-																<h4>본인 先상속시</h4>
-																<dl>
-																	<dt>1차 본인 상속</dt>
-																	<dd>
-																		<ul>
-																			<li>상속자산 : 200억</li>
-																			<li>상속세 : 20.46억</li>
-																		</ul>
-																	</dd>
-																	<dd>
-																		<a href="#none">자세히 보기</a>
-																	</dd>
-																</dl>
-																<div class="userGraph">
-																	<span class="imgG1">200억</span>
-																	<span class="imgG2">80.46억</span>
+																<div class="lineBder">
+																	<div class="userGraphWrap">
+																		<div class="userGraph">
+																			<span class="imgG1 soloG"><span>200억</span></span>
+																		</div>
+																		<dl>
+																			<dt>1차 배우자 상속</dt>
+																			<dd>
+																				<ul>
+																					<li>상속자산 : 0억</li>
+																					<li>상속세 : 0억</li>
+																				</ul>
+																			</dd>
+																			<dd class="chartBtn">
+																				<a href="#none">자세히 보기</a>
+																			</dd>
+																		</dl>
+																	</div>
+																	<p class="boxBg"><img src="/img/common/bg_arrow_b.gif" alt="" /></p>
 																</div>
 															</div>
 															<!-- tableView -->
 															<div class="tableView">
-																<table class="listTable">
-																	<caption>1차 본인상속</caption>
+																<table class="table4 tblR">
+																	<caption>1차 배우자 상속</caption>
 																	<colgroup>
 																		<col width="50%" />
 																		<col width="50%" />
 																	</colgroup>
 																	<thead>
 																		<tr>
-																			<th colspan="2">1차 본인상속 자세히 보기</th>
+																			<th colspan="2">1차 배우자 상속 자세히 보기</th>
 																		</tr>
 																	</thead>
 																	<tbody>
@@ -418,7 +426,7 @@
 																			<td>0억</td>
 																		</tr>
 																		<tr>
-																			<td>산출세액<a href="#none"><img src="/img/common/ico_qus.gif" alt="" /></a></td>
+																			<td>산출세액 <a href="#none"><img src="/img/common/ico_qus1.gif" class="vm" alt="" /></a></td>
 																			<td>0억</td>
 																		</tr>
 																		<tr>
@@ -431,39 +439,44 @@
 																		</tr>
 																	</tbody>
 																</table>
-																<a href="#none" class="close"><img src="/img/common/btn_checklist_close.gif" alt="닫기" /></a>
+																<a href="#none" class="close"><img src="/img/common/btn_close4.png" alt="닫기" /></a>
 															</div>
 															<!-- //tableView -->
 															<div class="leaveBox">
-																<dl>
-																	<dt>1차 본인 상속</dt>
-																	<dd>
-																		<ul>
-																			<li>상속자산 : 200억</li>
-																			<li>상속세 : 20.46억</li>
-																		</ul>
-																	</dd>
-																	<dd>
-																		<a href="#none">자세히 보기</a>
-																	</dd>
-																</dl>
-																<div class="userGraph">
-																	<span class="imgG1">200억</span>
-																	<span class="imgG2">80.46억</span>
+																<div class="lineBder">
+																	<div class="userGraphWrap">
+																		<div class="userGraph">
+																			<span class="imgG1"><span>200억</span></span>
+																			<span class="imgG2"><span>80.46억</span></span>
+																		</div>
+																		<dl>
+																			<dt>2차 본인 상속</dt>
+																			<dd>
+																				<ul>
+																					<li>상속자산 : 200억</li>
+																					<li>상속세 : 20.46억</li>
+																				</ul>
+																			</dd>
+																			<dd class="chartBtn">
+																				<a href="#none">자세히 보기</a>
+																			</dd>
+																		</dl>
+																	</div>
+																	<p class="leaveTotal">총 상속세 80억</p>
+																	<p class="boxBg"><img src="/img/common/bg_arrow_b.gif" alt="" /></p>
 																</div>
-																<p class="leaveTotal">총 상속세 80억</p>
 															</div>
 															<!-- tableView -->
 															<div class="tableView">
-																<table class="listTable">
-																	<caption></caption>
+																<table class="table4 tblR">
+																	<caption>2차 본인상속</caption>
 																	<colgroup>
 																		<col width="50%" />
 																		<col width="50%" />
 																	</colgroup>
 																	<thead>
 																		<tr>
-																			<th colspan="2">1차 본인상속 자세히 보기</th>
+																			<th colspan="2">2차 본인상속 자세히 보기</th>
 																		</tr>
 																	</thead>
 																	<tbody>
@@ -488,7 +501,7 @@
 																			<td>0억</td>
 																		</tr>
 																		<tr>
-																			<td>산출세액<a href="#none"><img src="/img/common/ico_qus.gif" alt="" /></a></td>
+																			<td>산출세액 <a href="#none"><img src="/img/common/ico_qus1.gif" class="vm" alt="" /></a></td>
 																			<td>0억</td>
 																		</tr>
 																		<tr>
@@ -501,19 +514,21 @@
 																		</tr>
 																	</tbody>
 																</table>
-																<a href="#none" class="close"><img src="/img/common/btn_checklist_close.gif" alt="닫기" /></a>
+																<a href="#none" class="close"><img src="/img/common/btn_close4.png" alt="닫기" /></a>
 															</div>
 															<!-- //tableView -->
 														</li>
 													</ul>
 												</div>
-												<ul class="footNote">
+												<ul class="footNote mb8">
 													<li>단, 상속세 계산은 배우자 및 자녀가 법정 상속 지분만큼 상속 받은 것으로 가정하여 계산(일괄공제 적용)</li>
 												</ul>
 												
 												<div class="juContact">
-													<h2>&gt; 단기상속결과</h2>
-													<table class="table3">
+													<div class="popTit">
+														<h2 class="reckTit">단기상속결과</h2>
+													</div>
+													<table class="table11">
 														<caption>단기상속결과</caption>
 														<thead>
 															<tr>
@@ -536,7 +551,7 @@
 															</tr>
 														</tbody>
 													</table>
-													<span class="more">[단위:억원]</span>
+													<span class="more2">[단위:억원]</span>
 												</div>
 											</div>
 											<div id="reckBlue2">
