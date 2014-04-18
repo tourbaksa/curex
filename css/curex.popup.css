@@ -486,7 +486,7 @@ div.postWrap .entryForm li:first-child{border-top:1px solid #dedede;}
 /* 재무계산기 */
 .reckBlueWrap{border-top:1px solid #dedede;margin-top:10px;padding-top:10px;}
 .reckBlueWrap .headerTab:after{content:"";display:block;clear:both;}
-.reckBlueWrap .headerTab div.popTit{float:left;height:29px;line-height:29px;margin-right:10px;}
+.reckBlueWrap .headerTab div.popTit{float:left;height:29px;line-height:29px;margin:0 10px 0 0;}
 div.popTit h2.reckTit{background:url(/img/common/bg_tit_arrowR.gif) no-repeat 0 center; padding-left:10px;}
 .reckBlueWrap .headerTab ul.btnTab1{float:left;}
 .reckBlueWrap div.mainTabZone h3{font-size:14px;font-weight:bold;color:#333;}
@@ -531,10 +531,13 @@ div.formWrap:after{content:"";display:block;clear:both;}
 div.formWrap .formL{width:386px;float:left;}
 div.formWrap .formR{width:264px;float:right;}
 
-ul.btnTab1{overflow:hidden;margin-bottom:8px;}
+.headerTab{margin-bottom:8px;text-align:center;}
+.headerTab.bderHr{border-bottom:1px solid #dedede;padding-bottom:10px;}
+div.popTit, ul.btnTab1{float:none !important;display:inline-block;vertical-align:top;}
+ul.btnTab1{overflow:hidden;}
 ul.btnTab1 li{float:left;margin-left:5px;}
 ul.btnTab1 li:first-child{margin-left:0;}
-ul.btnTab1 li a{display:block;height:29px;line-height:29px;text-decoration:none;color:#8e8e8e;background:#f2f2f2;padding:0 10px;min-width:100px;text-align:center;border:1px solid #dedede; border-radius:2px;-webkit-border-radius:2px;-moz-border-radius:2px;-ms-border-radius:2px;}
+ul.btnTab1 li a{display:block;height:29px;line-height:29px;text-decoration:none;color:#8e8e8e;background:#f2f2f2;padding:0 10px;min-width:73px;text-align:center;border:1px solid #dedede; border-radius:2px;-webkit-border-radius:2px;-moz-border-radius:2px;-ms-border-radius:2px;}
 ul.btnTab1 li.active a{background:#0084ff; height:29px; line-height:29px;color:#fff; border:1px solid #0084ff;border-radius:2px;-webkit-border-radius:2px;-moz-border-radius:2px;-ms-border-radius:2px;}
 
 .reckTab{background:#f8f8f8;border-bottom:1px solid #dedede; height:34px;line-height:34px;}
@@ -543,4 +546,24 @@ ul.btnTab1 li.active a{background:#0084ff; height:29px; line-height:29px;color:#
 .reckTab li a{padding:0 7px;border-left:1px solid #dedede;line-height:14px;font-size:14px;}
 .reckTab li:first-child a{padding-left:11px;border-left:0;}
 
+.reckGraph{position:relative;margin-top:10px;}
+.reckGraph .more{position:absolute;right:0;top:-14px;}
+
+div.popTit h3.reckTit{background:url(/img/common/bg_arrowR.png) no-repeat right center;padding-right:15px;font-size:14px;}
+
+/* 자금계산기 */
+dl.yearWeal { text-align:center;border:1px solid #dedede;}
+dl.yearWeal dt{font-size:24px;font-weight:bold;background:url(/img/common/bg_arrowR1.png) #e5f2f3 no-repeat 44% center;
+height:61px;line-height:61px;}
+dl.yearWeal dt span:first-child{margin-right:60px;}
+dl.yearWeal dt span:first-child span{margin-right:0;}
+dl.yearWeal dd {font-size:14px;border-top:1px solid #dedede;height:61px;line-height:61px;}
+dl.yearWeal dd strong{font-size:20px;margin:0 15px;}
+
+.reckWrap .grayBox {font-size:14px;line-height:38px;}
+.reckWrap .grayBox span.blue{font-size:20px;}
+
+.lineHR{height:1px;border:1px solid #dedede;margin-top:10px;}
+
+/* 예적금 */
 
