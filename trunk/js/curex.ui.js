@@ -52,17 +52,17 @@ curex.ui = {
 			});
 
 			/* 테이블 셀삭제 버튼 */
-			$Delbtn.each(function(){
+			/*$Delbtn.each(function(){
 				$(this).off().on({
 					click:function(){
 						$(this).closest("tr").remove();
 						return false;
 					}
 				});
-			});
+			});*/
 
 			/* 주계약&특약 추가버튼 */
-			$cinsrtbtn.each(function(){
+			/*$cinsrtbtn.each(function(){
 				$(this).off().on({
 					click:function(){
 						var $riderCont = $("div.riderPlus",scope) ||$("div.riderPlus")
@@ -76,7 +76,7 @@ curex.ui = {
 						return false;
 					}
 				});
-			});
+			});*/
 
 			/* 툴팁 */
 			$tooltip.each(function(idx){
@@ -733,6 +733,8 @@ curex.ui = {
 		}
 		$(".mainTabZone .left", scope).fundAni();
 	},
+
+	// 퀵메뉴
 	quick:function(){
 		var scope = this.op
 			, $quickbar = $("#quick" , scope) || $("#quick")
@@ -837,7 +839,30 @@ curex.ui = {
 		}
 		coverList(".coverList");
 	},
-
+	smmode:function(){
+		var sm = function(obj){
+			var $obj = $(obj)
+				, $btn = $obj.find(".smIcon")
+				, $motionLayer = $("div.smModWrap");
+			$btn.each(function(){
+				$(this).off().on({
+					click:function(){
+						var posy = $motionLayer.height();
+						if ($motionLayer.is(":hidden")){
+							$motionLayer.show();
+							$motionLayer.animate({
+								"height" : posy
+							},"slow");
+							$("#wrap").css({
+								"background-position" :"0px "+posy+"px"
+							});
+						}
+					}
+				});
+			});
+		};
+		sm(".smmode");
+	}
 }
 
 $(document).ready(function(){
@@ -852,6 +877,7 @@ $(document).ready(function(){
 	if($(".entry ").length){curex.ui.inputWidth();}// input width
 	if($("#quick").length){curex.ui.quick();}// 퀵메뉴
 	curex.ui.control(); //제어판메뉴
+	if($(".smmode").length){curex.ui.smmode();}//sm모드
 
 });
 

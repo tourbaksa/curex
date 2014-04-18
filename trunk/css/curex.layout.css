@@ -1,6 +1,14 @@
 @charset "utf-8";
 
 html, body{height:100%;}
+
+div.smModWrap{height:29px; background-color:#d3f3f5; display:none}
+div.smModWrap div.smMod{width:1024px; margin:0 auto; height:29px;}
+div.smMod h2{width:72px; background:#00a1b1; color:#fff; text-align:center; height:29px; line-height:29px; float:left; }
+div.smMod .infoSel{float:left; font-size:0; padding:2px 0 0 0;}
+div.smMod label{display:inline-block; background:url(/img/common/bg_smbadge.gif) no-repeat 0 0; width:39px; height:16px; font-size:11px; text-align:center; color:#fff; padding-right:10px; margin:0 5px 0 10px; vertical-align:middle;}
+div.smMod select{font-size:11px; vertical-align:middle; margin-right:5px;}
+
 /* wrap */
 #wrap {width:100%;background:url(/img/common/bg_line1.gif) repeat-x 0 0; color:#666666; font-family:NanumGothic,"나눔고딕",dotum,arial; font-size:12px; position:relative; min-height:100%;
 margin-bottom:-62px; padding-bottom:82px;
@@ -31,11 +39,14 @@ div.gnbWrap ul#gnb li li li a{height:28px; line-height:28px;text-align:left;font
 div.gnbWrap ul#gnb li li li:first-child{background:url(/img/common/blet1.gif) no-repeat 0 center; width:90px; margin-top:7px;}
 
 div.gnbWrap span.globalIcon{float:left;border-left:1px solid #00919F;}
-div.gnbWrap .globlaIon .icoTotal{width:117px;margin:auto;}
-div.gnbWrap span.globalIcon 
-a{width:53px;height:50px;line-height:50px;padding-top:15px;text-align:center;display:block;float:left;}
+div.gnbWrap span.globalIcon .icoTotal{width:170px; display:inline-block; float:left;}
+div.gnbWrap span.globalIcon a{width:53px;height:50px;line-height:50px;padding-top:15px;text-align:center;display:block;float:left;}
 div.gnbWrap span.globalIcon a:first-child{margin-left:0;}
 div.gnbWrap span.globalIcon a.last{width:40px;padding-top:0;}
+div.gnbWrap span.smmode{} /* smmode가 있을시 smmode클래스가생성됩니다. */
+div.gnbWrap span.smmode .icoTotal{width:128px;}
+div.gnbWrap span.smmode .icoTotal a{width:42px;}
+div.gnbWrap span.globalIcon a.smIcon{width:40px; height:49px; display:inline; line-height:100%; background-color:#00a1b1; color:#fff600; margin-right:1px;}
 
 
 /* 전체메뉴 레이어 */

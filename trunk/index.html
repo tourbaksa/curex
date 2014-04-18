@@ -20,6 +20,32 @@
 
 <div id="wrap">
 	<!-- HEADER -->
+	<div class="smModWrap">
+		<div class="smMod">
+			<h2>SM모드</h2>
+			<form id="" method="post" action="/">
+				<fieldset>
+					<legend>sm모드</legend>
+					<span class="infoSel">
+						<label for="spot">지점</label>
+						<select id="spot" style="width:149px">
+							<option>지점명</option>
+						</select>
+						<label for="team">팀</label>
+						<select id="team" style="width:149px">
+							<option>팀명</option>
+						</select>
+						<label for="Lp">LP</label>
+						<select id="Lp" style="width:149px">
+							<option>김엘피(TH001)</option>
+						</select>
+					<a href="#" class="btn smBeR">검색</a>
+					</span>
+				</fieldset>
+			</form>
+		</div>
+
+	</div>
 	<div id="header-wrap">
 		<div id="header">
 			<h1><img src="/img/common/logo.gif" alt="CurEX Prudential" /></h1>
@@ -104,16 +130,17 @@
 			<div class="gnbWrap">
 				<ul id="gnb">
 					<li><a href="#none">고객관리</a></li>
-					<li><a href="#none" class="on">LiPS</a></li>
+					<li><a href="#none">LiPS</a></li>
 					<li><a href="#none">계약</a></li>
 					<li><a href="#none">스마트CRM</a></li>
 				</ul>			
-				<span class="globalIcon">
+				<span class="globalIcon smmode"><!-- smmode시 smmode 클래스생성 -->
 					<span class="icoTotal">
 						<a href="#none"><img src="/img/common/ico_gnb1.gif" alt="" /></a>
 						<a href="#none"><img src="/img/common/ico_gnb2.gif" alt="" /></a>
 						<a href="#none"><img src="/img/common/ico_gnb3.gif" alt="" /></a>
 					</span>
+					<a href="#none" class="smIcon">SM<br />모드</a><!-- smmode시 해당 링크추가 -->
 					<a href="#none" class="last"><img src="/img/common/ico_gnb4.gif" alt="" /></a>
 				</span>
 			</div>
@@ -492,13 +519,11 @@
 					"padding-top" :minus/2 ,
 					"padding-bottom" :minus/2
 				});
-				
 
+				$("#quick").css({
+					"top" : minus/2
+				});
 			}
-
-
-			
-			
 		})();
 		var myTab = ci.tab.init($('.PersonCont')); // 고객정보탭
 		var myTab1 = ci.tab.init($('.tabOutline')); // 

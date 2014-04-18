@@ -14,16 +14,16 @@ div.nizcntR{width:733px;}
 
 div.mSearchWrap{clear:both; height:43px;}
 div.msearchCnt{padding:3px 0 0 0; width:600px; margin:0 auto;}
-div.msearchCnt input[type="text"]{height:33px; border:3px solid #50a6ca; border-right:0; width:307px;}
+div.msearchCnt input[type="text"]{height:33px; border:3px solid #50a6ca; border-right:0; width:307px; vertical-align:middle;}
 div.msearchCnt span.msearchBtn{display:inline-block; width:61px; height:33px; 
 	border-radius:0 2px 2px 0;
 	-webkit-border-radius:0 2px 2px 0;
 	-moz-border-radius:0 2px 2px 0;
 	-ms-border-top-right-radius:2px;
 	border:1px solid #43a6c6;
-	
 	}
 div.msearchCnt span.msearchBtn input{
+	vertical-align:middle;
 	width:59px; height:31px;
 	border-top:1px solid #76c8e2;
 	border-bottom:1px solid #4aa6c4;
@@ -35,10 +35,9 @@ div.msearchCnt span.msearchBtn input{
 	background-image: linear-gradient(top, #5cbcda, #4eaecc);
 	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#5cbcda', endColorstr='#4eaecc');
 }
-
-span.searchBtnset button{height:33px; background-image:none; background-color:#fff; width:111px;}
-span.searchBtnset button {background:url(/img/main/btn_gnb_userL.gif) no-repeat 9px 48% !important;  display:inline-block; width:31px; text-indent:-99999px; font-size:0;  line-height:15px; height:15px;}
-
+span.searchBtnset{font-size:0;}
+span.searchBtnset button{height:33px; background-color:#fff; width:111px; background:url(/img/main/btn_gnb_listL.gif) no-repeat 9px 48%; padding-left:35px; font-size:12px; vertical-align:top; filter:none;}
+span.searchBtnset button:first-child{ background-image:url(/img/main/btn_gnb_userL.gif); margin-right:5px;}
 
 /* main calendar */
 div.mcarlendar{margin:0 0 20px 0;}
