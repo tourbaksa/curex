@@ -732,6 +732,40 @@ curex.ui = {
 			});
 		}
 		$(".mainTabZone .left", scope).fundAni();
+
+		/* 재무계산기 슬라이딩 */
+		var leaveWrap = function(obj){
+			var $obj = $(obj)
+				, $objListArr = $obj.find("ul:first").children()
+				, $allLayer = $obj.find(".tableView")
+				$objListArr.each(function(){
+					var _this = $(this)
+						, $btn = _this.find(".chartBtn a");
+					$btn.each(function(idx){
+						$(this).off().on({
+							click:function(){
+								var $thisParent = _this
+									, $thislayer = _this.find(".tableView").eq(idx)
+									, $otherParent = $objListArr.not(_this)
+									, $otherlayer  = $otherParent.find(".tableView").eq(idx)
+
+									if ($thislayer.is(":hidden")){
+										$allLayer.slideUp(200);
+										$thislayer.add($otherlayer).slideDown(400);
+									}
+								
+							}
+						});
+					
+					});
+				
+				});
+
+		
+		}
+		leaveWrap(".leaveWrap")
+
+
 	},
 
 	// 퀵메뉴
@@ -850,9 +884,6 @@ curex.ui = {
 						var posy = $motionLayer.height();
 						if ($motionLayer.is(":hidden")){
 							$motionLayer.show();
-							$motionLayer.animate({
-								"height" : posy
-							},"slow");
 							$("#wrap").css({
 								"background-position" :"0px "+posy+"px"
 							});

@@ -212,9 +212,11 @@ div.templateList{overflow:hidden; margin:10px 0 0 0; border-bottom:1px solid #e8
 div.templateList ul{margin-left:-15px; overflow:hidden;}
 div.templateList li{float:left; margin-left:15px;}
 div.templateList li span.img{display:block; border:1px solid #dedede; width:160px; height:120px; }
+div.templateList li span.img img{width:160px; height:120px; }
 div.templateList li span.tmName{display:block; height:41px; padding:10px 0 0 0; text-align:center;}
 div.templateList li span.tmName span{margin-left:4px;}
 div.templateList.skin li span.img{border:0; width:160px; height:220px;}
+div.templateList.skin li span.img img{width:160px; height:220px;}
 
 /* email센터 서브탭 */
 div.tempTab{width:100%; border-bottom:1px solid #e8e9e9;}
@@ -518,7 +520,7 @@ div.popTit h2.reckTit{background:url(/img/common/bg_tit_arrowR.gif) no-repeat 0 
 .leaveWrap li div.leaveBox .lineBder .leaveTotal + .boxBg{padding-top:10px;}
 .leaveWrap li div.leaveBox .lineBder .chartBtn{border:1px solid #006cd8;font-size:14px;background:#3399ff;}
 .leaveWrap li div.leaveBox .lineBder .chartBtn a{border:1px solid #89c4ff;height:30px;line-height:30px;text-align:center;color:#fff;display:block;}
-.leaveWrap li .tableView{position:relative;}
+.leaveWrap li .tableView{position:relative; display:none;}
 .leaveWrap li .tableView .table4{border-top:0;}
 .leaveWrap li .tableView .close{position:absolute;right:10px;top:10px;}
 .leaveWrap li .tableView .table4.tblR td:first-child{text-align:center;}
