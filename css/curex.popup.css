@@ -477,11 +477,11 @@ div.postWrap .entryForm li:first-child{border-top:1px solid #dedede;}
 .otherWrap .otherL{float:left;width:471px;}
 .otherWrap .otherR{float:right;width:381px;}
 
-/* 검진센터 */
-.checkupCenter {margin-top:20px;}
-.checkupCenter li{margin-top:10px;}
-.checkupCenter li:first-child{margin:0;}
-.checkupCenter li input[type="radio"]{margin-right:5px;}
+/* 고객유형코드 */
+.typeCodeWrap:after{content:"";display:block;clear:both;}
+.typeCodeWrap .typeCode{float:left;width:260px;}
+.typeCodeWrap .typeCode:first-child{margin-right:10px;}
+
 
 /* 재무계산기 */
 .reckBlueWrap{border-top:1px solid #dedede;margin-top:10px;padding-top:10px;}
@@ -515,7 +515,7 @@ div.popTit h2.reckTit{background:url(/img/common/bg_tit_arrowR.gif) no-repeat 0 
 .leaveWrap li div.leaveBox .lineBder dl dd{font-size:14px;color:#363636;}
 .leaveWrap li div.leaveBox .lineBder dl dd ul{margin-bottom:8px;}
 .leaveWrap li div.leaveBox .lineBder dl dd li{width:auto;float:none;margin-left:0;line-height:18px;}
-.leaveWrap li div.leaveBox .lineBder .leaveTotal{margin-top:10px;text-align:center;border:1px solid #dedede;height:40px;line-height:40px;color:#e8404f;font-size:16px;font-weight:bold;background:#f7f7f7;}
+.leaveTotal{margin-top:10px;text-align:center;border:1px solid #dedede;height:40px;line-height:40px;color:#e8404f;font-size:16px;font-weight:bold;background:#f7f7f7;}
 .leaveWrap li div.leaveBox .lineBder .boxBg{text-align:center;clear:both;padding:19px 0 10px;}
 .leaveWrap li div.leaveBox .lineBder .leaveTotal + .boxBg{padding-top:10px;}
 .leaveWrap li div.leaveBox .lineBder .chartBtn{border:1px solid #006cd8;font-size:14px;background:#3399ff;}
@@ -533,12 +533,17 @@ div.formWrap .formR{width:264px;float:right;}
 
 .headerTab{margin-bottom:8px;text-align:center;}
 .headerTab.bderHr{border-bottom:1px solid #dedede;padding-bottom:10px;}
-div.popTit, ul.btnTab1{float:none !important;display:inline-block;vertical-align:top;}
+div.popTitAdd{height:29px;line-height:29px;margin:0 10px 0 0;float:left;}
+div.popTitAdd, ul.btnTab1{display:inline-block;vertical-align:top;}
 ul.btnTab1{overflow:hidden;}
 ul.btnTab1 li{float:left;margin-left:5px;}
 ul.btnTab1 li:first-child{margin-left:0;}
 ul.btnTab1 li a{display:block;height:29px;line-height:29px;text-decoration:none;color:#8e8e8e;background:#f2f2f2;padding:0 10px;min-width:73px;text-align:center;border:1px solid #dedede; border-radius:2px;-webkit-border-radius:2px;-moz-border-radius:2px;-ms-border-radius:2px;}
 ul.btnTab1 li.active a{background:#0084ff; height:29px; line-height:29px;color:#fff; border:1px solid #0084ff;border-radius:2px;-webkit-border-radius:2px;-moz-border-radius:2px;-ms-border-radius:2px;}
+
+div.popTitAdd1{height:29px;line-height:29px;margin:0 10px 0 0;}
+div.popTitAdd h3.reckTit, div.popTitAdd1 h3.reckTit{background:url(/img/common/bg_arrowR.png) no-repeat right center;padding-right:15px;font-size:14px;}
+div.popTitAdd1, .reckBlueWrap .headerTab ul.btnTab1Add{display:inline-block;vertical-align:top;float:none !important;}
 
 .reckTab{background:#f8f8f8;border-bottom:1px solid #dedede; height:34px;line-height:34px;}
 .reckTab li{float:left;}
@@ -549,7 +554,8 @@ ul.btnTab1 li.active a{background:#0084ff; height:29px; line-height:29px;color:#
 .reckGraph{position:relative;margin-top:10px;}
 .reckGraph .more{position:absolute;right:0;top:-14px;}
 
-div.popTit h3.reckTit{background:url(/img/common/bg_arrowR.png) no-repeat right center;padding-right:15px;font-size:14px;}
+
+
 
 /* 자금계산기 */
 dl.yearWeal { text-align:center;border:1px solid #dedede;}
@@ -565,5 +571,17 @@ dl.yearWeal dd strong{font-size:20px;margin:0 15px;}
 
 .lineHR{height:1px;border:1px solid #dedede;margin-top:10px;}
 
-/* 예적금 */
+/* 가로저축 */
+.widthSaving{border-top:1px solid #dedede;margin:10px 0 20px;}
+.widthSaving:after{content:"";display:block;clear:both;}
+.widthSaving .savingL{float:left;width:330px;padding:23px 20px 20px;}
+.widthSaving .savingL:first-child{border-right:1px solid #dedede;}
+.widthSaving .savingL h5{font-size:16px; text-align:center;margin-bottom:24px; }
+.widthSaving .savingL .wsWrap{padding:0 10px;}
+
+.savingNote{margin-top:8px;}
+.savingNote li:first-child{background:url(/img/common/bx_red.gif) no-repeat 0 center;}
+.savingNote li{background:url(/img/common/bx_blue.gif) no-repeat 0 center;padding-left:15px;line-height:18px;}
+
+.savingTit{font-size:18px;text-align:center;
 

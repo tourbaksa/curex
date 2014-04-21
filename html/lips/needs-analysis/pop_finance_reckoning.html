@@ -24,11 +24,11 @@
 	<div class="popContents">
 		<div class="userSelect ci-tab">
 			<ul class="popTab tab-selector">
-				<li><a href="#none">자금계산기</a></li>
+				<li class="active"><a href="#none">자금계산기</a></li>
 				<li><a href="#none">예적금</a></li>
 				<li><a href="#none">대출</a></li>
 				<li><a href="#none">세무</a></li>
-				<li class="active"><a href="#none">가로저축계산</a></li>
+				<li><a href="#none">가로저축계산</a></li>
 			</ul>
 			
 			<ul class="tab-panel">
@@ -89,7 +89,7 @@
 											<span class="more">[단위:만원]</span>
 										</div>
 										<div class="headerTab bderHr mt10">
-											<div class="popTit">
+											<div class="popTitAdd">
 												<h3 class="reckTit">과세방법선택</h3>
 											</div>
 											<ul class="btnTab1 attab">
@@ -219,10 +219,10 @@
 											<span class="more">[단위:만원]</span>
 										</div>
 										<div class="headerTab bderHr mt10">
-											<div class="popTit">
+											<div class="popTitAdd1">
 												<h3 class="reckTit">이율계산선택</h3>
 											</div>
-											<ul class="btnTab1 attab">
+											<ul class="btnTab1 btnTab1Add attab">
 												<li class="active"><a href="#m2Blue1">연복리</a></li>
 												<li><a href="#m2Blue2">월복리</a></li>
 												<li><a href="#m2Blue3">단리</a></li>
@@ -289,9 +289,9 @@
 						<h3 class="hide-element">예적금</h3>
 						<div class="reckWrap">
 							<ul class="reckTab attab">
-								<li><a href="#savingReck1">할인율/수익율</a></li>
+								<li class="active"><a href="#savingReck1">할인율/수익율</a></li>
 								<li><a href="#savingReck2">선이자계산</a></li>
-								<li class="active"><a href="#savingReck3">복리이자율계산</a></li>
+								<li><a href="#savingReck3">복리이자율계산</a></li>
 							</ul>
 							<div class="mainTabZone">
 								<div id="savingReck1">
@@ -534,8 +534,8 @@
 						<h3 class="hide-element">대출</h3>
 						<div class="reckWrap">
 							<ul class="reckTab attab">
-								<li><a href="#loanReck1">대출이자계산</a></li>
-								<li class="active"><a href="#loanReck2">대출비용계산</a></li>
+								<li class="active"><a href="#loanReck1">대출이자계산</a></li>
+								<li><a href="#loanReck2">대출비용계산</a></li>
 							</ul>
 							<div class="mainTabZone">
 								<div id="loanReck1">
@@ -814,8 +814,8 @@
 						<h3 class="hide-element">세무</h3>
 						<div class="reckWrap">
 							<ul class="reckTab attab"> 
-								<li><a href="#reck1">상속세계산</a></li>
-								<li class="active"><a href="#reck2">증여세계산</a></li>
+								<li class="active"><a href="#reck1">상속세계산</a></li>
+								<li><a href="#reck2">증여세계산</a></li>
 							</ul>
 							<div class="mainTabZone mt10">
 								<div id="reck1">
@@ -1712,10 +1712,40 @@
 							</form>
 
 							<div class="widthSaving">
-								
+								<div class="savingL">
+									<h5>세로저축결과(재무목표에 올인)</h5>
+									<div class="wsWrap">
+										<div class="savingGraph">
+											<img src="/img/common/img_graph_saving1.gif" alt="세로저축그래프" />
+										</div>
+										<p class="leaveTotal">
+											총금액 : 47000만원
+										</p>
+										<ul class="savingNote">
+											<li>교육자금 : 월 50만원 / 5년</li>
+											<li>노후자금 : 월 30만원 / 5년</li>
+										</ul>
+									</div>
+								</div>
+								<div class="savingL">
+									<h5>가로저축결과(재무목표와 노후준비 동시)</h5>
+									<div class="wsWrap">
+										<div class="savingGraph">
+											<img src="/img/common/img_graph_saving2.gif" alt="가로저축그래프" />
+										</div>
+										<p class="leaveTotal">
+											총금액 : 47000만원
+										</p>
+										<ul class="savingNote">
+											<li>교육자금 : 월 50만원 / 5년</li>
+											<li>노후자금 : 월 30만원 / 5년</li>
+										</ul>
+									</div>
+								</div>
 							</div>
 
-							<p>세로저축은 5</p>
+							<p class="savingTit">세로저축은 5년, 가로저축은 10년간 노후자금을 저축하였습니다.</p>
+							<p class="savingTit">가로저축을 한 경우 65세 시점에 총 1,000만원이 더 많습니다.</p>
 
 						</div>
 					</div>
