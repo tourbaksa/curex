@@ -54,18 +54,30 @@ div.allmenu{ width:1024px; position:absolute; left:0; top:50px; min-height:230px
 div.allmenu .allbg{height:5px;width:1018px;background:#22B8C7;position:absolute;left:2px;bottom:3px;}
 a.allMenuClose{position:absolute; right:10px; top:10px;}
 /* 알림창 */
-div.allmenu div.anceWindow{position:relative; padding:27px 0 0 32px; width:1024px;}
+.anceWrap{width:964px;margin:0 auto 34px;}
+.anceWrap:after{content:"";display:block;clear:both;}
+div.allmenu div.anceWindow{position:relative; padding:27px 0 0 0; width:1024px;}
+div.allmenu div.anceWindow:after{content:"";display:block;clear:both;}
 div.allmenu div.anceWindow .anceDetial{width:555px;float:left;}
 div.allmenu div.anceWindow .anceDetial h2{border-bottom:1px solid #dedede;color:#01509f;font-size:14px;padding-bottom:9px;}
 div.allmenu div.anceWindow .anceDetial .scroll{height:190px;line-height:18px;overflow:scroll;overflow-x:hidden;padding:9px 2px;}
+div.allmenu div.anceWindow .anceScroll{width:311px;padding-right:20px;height:190px;line-height:18px;overflow:scroll;overflow-x:hidden;}
+
 div.allmenu div.anceWindow .anceAlim {width:378px;float:left;background:url(/img/common/bg_arrow_l.gif) no-repeat 27px center;padding-left:67px;}
-div.allmenu div.anceWindow .anceAlim h2{background:url(/img/common/ico_alim1.gif) no-repeat 0 center;}
-div.allmenu div.anceWindow .anceAlim ul li{border-top:1px solid #dedede;height:26px;line-height:26px;}
+div.allmenu div.anceWindow .anceAlim h2{background:url(/img/common/ico_alim1.gif) no-repeat 0 center;font-size:14px;margin-bottom:4px;padding-left:34px;line-height:24px;}
+div.allmenu div.anceWindow .anceAlim ul {height:190px;overflow:scroll;overflow-x:hidden;width:311px;padding-right:20px;}
+div.allmenu div.anceWindow .anceAlim ul li{border-top:1px solid #dedede;height:26px;line-height:26px;position:relative;background:url(/img/common/blt_grayDot.gif) no-repeat 0 center;padding-left:7px;}
 div.allmenu div.anceWindow .anceAlim ul li:first-child{border-top:0;}
-div.allmenu div.anceWindow .anceAlim ul li.new *{color:#01509f;}
 
+div.allmenu div.anceWindow .anceAlim ul li .img{display:block;width:287px;}
+div.allmenu div.anceWindow .anceAlim ul li.new{background:url(/img/common/blt_grayDot.gif) no-repeat 0 center;padding-left:7px;color:#01509f;}
+div.allmenu div.anceWindow .anceAlim ul li.new .img{background:url(/img/common/ico_alim2.gif) no-repeat 0 center;display:block;padding-left:20px;width:287px;}
+div.allmenu div.anceWindow .anceAlim ul li.new .img:after{content:"";display:block;clear:both;}
+div.allmenu div.anceWindow .anceAlim ul li.new .img a{float:left;color:#01509f;width:175px;display:inline-block;white-space:nowrap;text-overflow:ellipsis;overflow:hidden;}
+div.allmenu div.anceWindow .anceAlim ul li.new .date{width:70px;text-align:right;float:right;}
 
-div.allmenu div.anceWindow .anceAlim .scroll{height:190px;line-height:18px;overflow:scroll;overflow-x:hidden;padding:9px 2px;}
+div.allmenu div.anceWindow .dayClose{border-top:1px solid #dedede;height:31px;line-height:31px;background:#fbfbfb;width:1018px;position:relative;margin:0 auto 8px;padding:0 0 0 10px;}
+div.allmenu div.anceWindow .dayClose input[type="checkbox"]{margin:-2px 10px 0 0;}
 
 /* 전체메뉴 */
 div.siteMenu{padding:39px 0 0 0; width:1024px;display:none;}
@@ -129,12 +141,14 @@ ul.personList li.hover{background-color:#e4edf2;}
 ul.personList li.hover span.sut{color:#2c8ecb; background-image:url(/images/common/bg_sutBar_hover.gif);}
 ul.personList li.hover span.name{color:#000000;}
 
-div.personDetail{position: absolute;z-index:190;top: -450px;left: 170px;background-color:#f7f7f7;padding:47px 30px 0 30px;float:left;width:368px;border:1px solid #22b8c7;border-top:0;}
+div.personDetail{position:relative;z-index:190;top: -450px;left: 170px;background-color:#f7f7f7;padding:47px 20px 20px 
+30px;float:left;width:408px;border:1px solid #22b8c7;border-top:0;}
+.PersonCont{display:none;}
 div.personDetail.opened {top: 90px;}
 div.personDetail.from-result-before {left: 0px;}
 div.personDetail.from-result-after {left: 326px;}
 dl.pernalInfo{margin:0 0 18px 0;}
-dl.pernalInfo dt{color:#3199d6; font-size:14px; font-weight:bold; padding:0 0 5px 0;}
+dl.pernalInfo dt{color:#3199d6; padding:0 0 5px 0;}
 dl.pernalInfo dt strong{font-size:18px; color:#333;}
 dl.pernalInfo dd.sutIcon{background:url(/img/common/bg_sutIcon.gif) no-repeat 0 0; width:34px; height:30px; text-align:center; color:#fff; line-height:30px; font-size:11px; position:absolute; left:0; top:0;}
 
@@ -151,21 +165,25 @@ table.smarTable th{
 }
 
 /* 알림 */
-dl.pNnotice{padding:12px 0; overflow:hidden;
-	background:#fff url(/images/common/bg_pnotice.gif) repeat-y 0 0;
+dl.pNnotice{padding:8px 0; overflow:hidden;
+	background:url(/img/common/bg_pnotice.gif) #fff repeat-y 0 0;
 	border-radius:2px;
 	-webkit-border-radius:2px;
 	-moz-border-radius:2px;
 	-ms-border-radius:2px;
 	border:1px solid #d2d2d2;
 }
-dl.pNnotice dt{width:81px; float:left; text-align:center;}
+dl.pNnotice dt{width:81px; float:left; text-align:center;font-size:13px;font-weight:bold;line-height:54px;color:#1f1f1f;}
 dl.pNnotice dd{margin-left:82px; padding-left:14px;}
+dl.pNnotice dd ul li{line-height:18px;}
+dl.pNnotice dd ul li.listcc{background:url(/img/common/blt_circle.gif) no-repeat 0 center;padding-left:15px;color:#66667D;}
+dl.pNnotice dd ul li.pnOrg{color:#EA5A2E;}
+dl.pNnotice dd ul li.listcc span{color:#66667D;}
 
 button.userInfoclose{background:url(/img/common/btn_userInfoclose.gif) no-repeat 0 0; width:35px; height:35px; position:absolute; right:0; top:0;}
 
 /* 기계약버튼 */
-div.personBtn{text-align:left; margin-top:10px;}
+div.personBtn{text-align:center; margin-top:10px;}
 div.personBtn a{margin-left:4px;}
 div.personBtn a:first-child{margin-left:0;}
 div.personBtn .lgBeR1{padding:7px 10px;}
