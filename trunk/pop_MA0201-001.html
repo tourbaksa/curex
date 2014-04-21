@@ -22,27 +22,35 @@
 <div id="popWrap" style="width:400px;">
 	<h1>검진센터 선택</h1>
 	<div class="popContents">
-		<div class="popTit">
-			<h2>검진센터를 선택해주세요</h2>
-		</div>
-
+		<p class="mb8">검진센터를 선택해주세요.</p>
 		<form method="post" action="/">
 			<fieldset>
 				<legend>검진센터</legend>
-				<ul class="checkupCenter">
-					<li>
-						<input type="radio" id="rater1" name="rater1" /><label for="rater1">세인파라메딕</label>
-					</li>
-					<li>
-						<input type="radio" id="rater2" name="rater1" /><label for="rater2">차파라메딕</label>
-					</li>
-					<li>
-						<input type="radio" id="rater3" name="rater1" /><label for="rater3">안심파라메딕</label>
-					</li>
-					<li>
-						<input type="radio" id="rater4" name="rater1" /><label for="rater4">검진센터리스트</label>
-					</li>
-				</ul>
+				<table class="table3">
+					<caption>검진센터</caption>
+					<colgroup>
+						<col width="10%" />
+						<col width="*" />
+					</colgroup>
+					<tbody>
+						<tr>
+							<td><input type="radio" id="rater1" name="rater1" /></td>
+							<td class="tal"><label for="rater1">세인파라메딕</label></td>
+						</tr>
+						<tr>
+							<td><input type="radio" id="rater2" name="rater1" /></td>
+							<td class="tal"><label for="rater2">차파라메딕</label></td>
+						</tr>
+						<tr>
+							<td><input type="radio" id="rater3" name="rater1" /></td>
+							<td class="tal"><label for="rater3">안심파라메딕</label></td>
+						</tr>
+						<tr>
+							<td><input type="radio" id="rater4" name="rater1" /></td>
+							<td class="tal"><label for="rater4">검진센터리스트</label></td>
+						</tr>
+					</tbody>
+				</table>
 			</fieldset>
 		</form>
 		

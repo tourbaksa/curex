@@ -735,9 +735,10 @@ curex.ui = {
 
 		/* 재무계산기 슬라이딩 */
 		var leaveWrap = function(obj){
-			var $obj = $(obj)
+			var $obj = $(obj,scope)
 				, $objListArr = $obj.find("ul:first").children()
 				, $allLayer = $obj.find(".tableView")
+				, $leaveClose = $obj.find(".close")
 				$objListArr.each(function(){
 					var _this = $(this)
 						, $btn = _this.find(".chartBtn a");
@@ -756,7 +757,6 @@ curex.ui = {
 								
 							}
 						});
-					
 					});
 				
 				});
