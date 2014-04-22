@@ -330,7 +330,7 @@ dd span input[type="file"]{position:absolute;left:3px;top:5px;}
 .tabGy01 li.on a{background:#9d9d9d;color:#fff;}
 
 ul.btnTab{overflow:hidden;margin-bottom:8px;}
-ul.btnTab li{float:left;margin-left;}
+ul.btnTab li{float:left;margin-left:0}
 ul.btnTab li a{display:block;height:27px;line-height:27px;text-decoration:none;color:#8e8e8e;background:#f2f2f2;border:1px solid #cacaca;padding:0 10px;min-width:100px;text-align:center;border-left:0;}
 ul.btnTab li:first-child a{border-left:1px solid #cacaca;border-right:0;}
 ul.btnTab li.active a{
@@ -339,6 +339,12 @@ ul.btnTab li.active a{
 	color:#666;
 	border:1px solid #a8a8a8;
 }
+
+ul.textTab {overflow:hidden;}
+ul.textTab li{float:left;background:url(/img/common/bg_texttab_line.gif) no-repeat 0 center;padding:0 10px;}
+ul.textTab li:first-child{background:none;padding:0 10px 0 0;}
+ul.textTab li a{color:#777;font-size:14px;}
+ul.textTab li.active a{color:#363636;}
 
 /* tab02 */
 #conteiner #contents .tab02{overflow:hidden;border:1px solid #dedede;height:205px;position:relative;}

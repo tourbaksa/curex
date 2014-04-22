@@ -584,5 +584,10 @@ dl.yearWeal dd strong{font-size:20px;margin:0 15px;}
 .savingNote li:first-child{background:url(/img/common/bx_red.gif) no-repeat 0 center;}
 .savingNote li{background:url(/img/common/bx_blue.gif) no-repeat 0 center;padding-left:15px;line-height:18px;}
 
-.savingTit{font-size:18px;text-align:center;
+.savingTit{font-size:18px;text-align:center;}
 
+/* 노후생활비참고표 */
+table.table3 th.bgFa1{background:#beeff4;}
+table.table3 th.bgFa2{background:#83dfe8;}
+table.table3 th.bgFa3{background:#4fcfdc;}
+table.table3 th.bgFa4{background:#22b8c7;}
