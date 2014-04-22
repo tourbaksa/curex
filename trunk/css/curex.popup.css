@@ -50,10 +50,10 @@ div.layerPopWrap2 a.btnClosePopup{position:absolute; right:9px; top:7px;}
 #factWrap ul.finance li{font-size:14px;float:left;}
 #factWrap ul.finance li a{border-left:1px solid #bebebe;padding:0 7px;}
 #factWrap ul.finance li:first-child a{border-left:0;padding:0 7px 0 0;}
-#factWrap ul.finance li.active a{color:#01509f;}
+#factWrap ul.finance li.active a{color:#0080ff;font-weight:bold;}
 #factWrap .importForm{width:710px;margin:0 auto;}
 #factWrap div.bderT{margin-top:20px;border-top:1px solid #dedede;padding-top:10px;}
-#factWrap h3{font-size:14px;height:24px;line-height:14px;margin-top:10px;}
+#factWrap h3{color:#363636;font-size:14px;font-weight:bold;height:24px;line-height:14px;margin-top:10px;}
 #factWrap div.left{width:241px;float:left;}
 #factWrap div.right{width:720px;float:right;}
 #factWrap div.right div.juContact {border-left:1px solid #dedede;padding-left:20px;}

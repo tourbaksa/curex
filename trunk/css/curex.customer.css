@@ -12,6 +12,10 @@ div.customerWrap{width:1024px;}
 .cusHistory .cusRight{float:right;width:503px;}
 .cusHistory .cusRight td.columnList{height:164px; }
 
+.cusHistory table.table3 th.memoBG1{background:#aae4e6}
+.cusHistory table.table3 th.memoBG2{background:#d7e5ff}
+.cusHistory table.table3 th.memoBG3{background:#d7d4f4}
+
 /* lp이력다운로드 */
 div.prevLP:after{content:"";display:block;clear:both;}
 div.prevLP .prevLeft{width:163px;float:left;}
@@ -54,3 +58,6 @@ h3.bt3{background:url(/img/common/blet_cir.gif) no-repeat 0 center;padding-left:
 .box3 .visit li dl dd.colorGray strong{color:#363636;}
 .box3 .visit li dl dd span{font-size:12px; color:#707070; font-weight:normal;}
 .box3 .visit li dl dd.photo{position:absolute;left:-65px;top:0;}
+
+/* 구성원등록 */
+.searchMorePlus{background:url(/img/common/btn_plus.gif) no-repeat 0 0;height:24px;line-height:24px;margin-left:8px;width:24px;}
