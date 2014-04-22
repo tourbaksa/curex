@@ -412,9 +412,9 @@ div.postWrap .entryForm li:first-child{border-top:1px solid #dedede;}
 .coverControl .coverList dl.hover dd a,
 .coverControl .coverList dl.select dd a{color:#22B8C7;}
 
-.controlWrap .contrR .ctrlPhoto {text-align:center;}
-.controlWrap .contrR .ctrlPhoto img{border:1px solid #dedede;width:100px;height:137px;margin-bottom:10px;}
-.controlWrap .contrR .ctrlVm {position:absolute;left:130px;top:3px;}
+.controlWrap .ctrlContent .ctrlPhoto {text-align:center;}
+.controlWrap .ctrlContent .ctrlPhoto img{border:1px solid #dedede;width:100px;height:137px;margin-bottom:10px;}
+.controlWrap .ctrlContent .ctrlVm {position:absolute;left:130px;top:3px;}
 
 .controlWrap .checkTableWrap:after{content:"";display:block;clear:both;}
 .controlWrap .checkTableWrap li {width:201px;margin-left:10px;float:left;}
@@ -424,8 +424,9 @@ div.postWrap .entryForm li:first-child{border-top:1px solid #dedede;}
 
 .controlWrap .checkTable2Wrap li {width:307px;}
 
-.controlWrap .contrR .popH2Tit {margin-top:10px;position:relative;line-height:12px;}
-.controlWrap .contrR .ProfilePhoto{width:101px;height:112px; margin:0 auto 8px; text-align:center;}
+.controlWrap .ctrlContent .popH2Tit {margin-top:10px;position:relative;line-height:12px;}
+.controlWrap .ctrlContent .ProfilePhoto{width:101px;height:112px; margin:0 auto 8px; text-align:center;}
+.controlWrap .ctrlContent .ProfilePhoto img{width:101px;height:112px;}
 
 /* bderT */
 .lineBderT{border-top:1px solid #dedede;padding-top:10px;margin-top:10px;}
