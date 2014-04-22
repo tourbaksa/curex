@@ -40,7 +40,7 @@ div.gnbWrap ul#gnb li li li:first-child{background:url(/img/common/blet1.gif) no
 
 div.gnbWrap span.globalIcon{float:left;border-left:1px solid #00919F;}
 div.gnbWrap span.globalIcon .icoTotal{width:170px; display:inline-block; float:left;}
-div.gnbWrap span.globalIcon a{width:53px;height:50px;line-height:50px;padding-top:15px;text-align:center;display:block;float:left;}
+div.gnbWrap span.globalIcon a{width:53px;height:50px;line-height:50px;padding-top:13px;text-align:center;display:block;float:left;}
 div.gnbWrap span.globalIcon a:first-child{margin-left:0;}
 div.gnbWrap span.globalIcon a.last{width:40px;padding-top:0;}
 div.gnbWrap span.smmode{} /* smmode가 있을시 smmode클래스가생성됩니다. */
