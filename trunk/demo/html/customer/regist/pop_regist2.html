@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> CuREx </title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
+<link rel="stylesheet" href="/WEB-APP/webponent/css/common.css" type="text/css" />
+<link rel="stylesheet" href="/css/curex.common.css" type="text/css" />
+<link rel="stylesheet" href="/css/curex.layout.css" type="text/css" />
+<link rel="stylesheet" href="/css/curex.sub.css" type="text/css" />
+<link rel="stylesheet" href="/WEB-APP/webponent/dialog/css/dialog.css" type="text/css" />
+<script type="text/javascript" src="/WEB-APP/webponent/ci/agent.js"></script>
+<script type="text/javascript" src="/WEB-APP/webponent/thirdParty/jquery/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="/WEB-APP/webponent/thirdParty/jquery/jquery-ui-1.10.3.min.js"></script>
+<script type="text/javascript" src="/WEB-APP/webponent/tab/tab.js"></script>
+<script type="text/javascript" src="/WEB-APP/webponent/dialog/dialog.js"></script>
+<script type="text/javascript" src="/js/popup.js"></script>
+<script type="text/javascript" src="/js/curex.ui.js"></script>
+</head>
+<body>
+
+<div id="popWrap" style="width:700px;">
+	<h1>관계등록</h1>
+	<div class="popContents">
+		
+		<div class="popTit">
+			<h2>Life Planning Service 신청서 정보</h2>
+		</div>
+
+		<form method="post" action="/">
+			<fieldset>
+				<legend>Life Planning Service 신청서 정보</legend>
+			</fieldset>
+			<table class="table2">
+				<caption>신청서 정보</caption>
+				<colgroup>
+					<col width="25%">
+					<col width="21%">
+					<col width="*">
+					<col width="18%">
+				</colgroup>
+				<thead>
+					<tr>
+						<th>LPs신청서번호</th>
+						<th>LPs신청일자</th>
+						<th>동의항목</th>
+						<th>접수여부</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>
+							<span class="widthFull">
+								<input type="text" id="">
+							</span>
+						</td>
+						<td>
+							<input type="text" style="width:100px">
+							<a href="#none"><img src="/img/common/icon3.gif" alt="달력"></a>
+						</td>
+						<td>
+							<span class="fLset">
+								<input type="checkbox" id="cht1">
+								<label for="cht1">수집</label>
+								<input type="checkbox" id="cht2">
+								<label for="cht2">민감</label>
+								<input type="checkbox" id="cht3">
+								<label for="cht3">고유식별</label>
+								<input type="checkbox" id="cht4">
+								<label for="cht4">제공</label>
+							</span>
+						</td>
+						<td class="textC"></td>
+					</tr>
+				</tbody>
+			</table>
+		</form>
+
+		<ul class="footNote red">
+			<li><span>*</span>  LPS신청번호 및 동의항목을 체크 후 고객정보를 입력해주시기 바랍니다.</li>
+			<li><span>*</span> 고객이 고유식별정보에 동의하지 않았을 경우 주민등록번호 뒷자리는 입력불가 합니다.</li>
+		</ul>
+
+		<div class="popTit mt20">
+			<h2>가족구성원 추가</h2>
+		</div>
+		<form method="post" action="/">
+			<fieldset>
+				<legend>가족구성원 추가</legend>
+				<table class="table1">
+					<caption>가족구성원 추가</caption>
+					<colgroup>
+						<col width="15%" />
+						<col width="35%" />
+						<col width="15%" />
+						<col width="35%" />
+					</colgroup>
+					<tbody>
+						<tr>
+							<th>가족관계</th>
+							<td>
+								<select style="width:133px">
+									<option>선택</option>
+									<option></option>
+								</select>
+							</td>
+							<th>이름</th>
+							<td>
+								<input type="text" style="width:176px;" value="김푸르" />
+							</td>
+						</tr>
+						<tr>
+							<th>주민등록번호</th>
+							<td>
+								<input type="text" style="width:176px" value="800201-1234567" /> 
+								<input type="button" class="btn smGyRb" value="체크">
+							</td>
+							<th>생년월일</th>
+							<td>
+								<select id="" style="width:73px">
+									<option>양력</option>
+									<option></option>
+								</select>
+								<input type="text" style="width:100px" value="2014.03.17" />
+								<a href="#none"><img src="/img/common/icon3.gif" alt="달력"></a>
+							</td>
+						</tr>
+						<tr>
+							<th>연령(보험)</th>
+							<td colspan="3">34세(34세)</td>
+						</tr>
+						<tr>
+							<th>성별</th>
+							<td>여</td>
+							<th>동거여부</th>
+							<td>
+								<span class="fLset">
+									<input type="radio" id="ra1" name="ra" />
+									<label for="ra1">예</label>
+									<input type="radio" id="ra2" name="ra" />
+									<label for="ra2">아니오</label>
+								</span>
+							</td>
+						</tr>
+						<tr>
+							<th>직업코드</th>
+							<td>
+								<input type="text" style="width:73px" value="01025">
+								<input type="button" class="btn smGyRb" value="검색">
+								<input type="text" style="width:73px" value="사무직">
+							</td>
+							<th>운전코드</th>
+							<td colspan="3">
+								<input type="text" style="width:73px" value="01025">
+								<input type="button" class="btn smGyRb" value="검색">
+								<input type="text" style="width:73px" value="미운전">
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</fieldset>
+		</form>
+
+		<div class="btnWrap mt10">
+			<a href="#none" class="btn lgLgR">저장</a>
+			<a href="#none" class="btn lgGyR">닫기</a>
+		</div>
+		
+		
+	</div>
+	
+</div>
+
+
+</body>
+</html>
+
+

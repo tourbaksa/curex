@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> CuREx </title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
+<link rel="stylesheet" href="/WEB-APP/webponent/css/common.css" type="text/css" />
+<link rel="stylesheet" href="/css/curex.common.css" type="text/css" />
+<link rel="stylesheet" href="/css/curex.layout.css" type="text/css" />
+<link rel="stylesheet" href="/css/curex.sub.css" type="text/css" />
+<link rel="stylesheet" href="/WEB-APP/webponent/dialog/css/dialog.css" type="text/css" />
+<script type="text/javascript" src="/WEB-APP/webponent/ci/agent.js"></script>
+<script type="text/javascript" src="/WEB-APP/webponent/thirdParty/jquery/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="/WEB-APP/webponent/thirdParty/jquery/jquery-ui-1.10.3.min.js"></script>
+<script type="text/javascript" src="/WEB-APP/webponent/tab/tab.js"></script>
+<script type="text/javascript" src="/WEB-APP/webponent/dialog/dialog.js"></script>
+<script type="text/javascript" src="/js/popup.js"></script>
+<script type="text/javascript" src="/js/curex.ui.js"></script>
+</head>
+<body>
+
+<div id="popWrap" style="width:900px;">
+	<h1>타사계약정보입력 - 사망보험</h1>
+	<div class="popContents">
+		
+		<form method="post" action="/">
+			<fieldset>
+				<legend>타사계약정보입력</legend>
+				<table class="table1">
+					<caption>타사계약정보입력</caption>
+					<colgroup>
+						<col width="14%" />
+						<col width="36%" />
+						<col width="14%" />
+						<col width="36%" />
+					</colgroup>
+					<tbody>
+						<tr>
+							<th>피보험자</th>
+							<td>
+								<span class="selectFull">
+									<select>
+										<option></option>
+										<option></option>
+									</select>
+								</span> 
+							</td>
+							<th>가입인사</th>
+							<td><span class="widthFull"><input type="text" /></span></td>
+						</tr>
+						<tr>
+							<th>상품명</th>
+							<td><span class="widthFull"><input type="text" /></span></td>
+							<th>연금개시연령</th>
+							<td>
+								<input type="text" style="width:130px" /> 세
+							</td>
+						</tr>
+						<tr>
+							<th>계약년월</th>
+							<td>
+								<input type="text" style="width:130px;" />
+								<a class="carendar" href="#"><span class="cdr">23</span></a>
+							</td>
+							<th>보험기간</th>
+							<td>
+								<input type="text" style="width:130px" />
+								<select style="width:150px">
+									<option></option>
+									<option></option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<th>납입기간</th>
+							<td>
+								<input type="text" style="width:130px" />
+								<select style="width:150px">
+									<option></option>
+									<option></option>
+								</select>
+							</td>
+							<th>납입주기</th>
+							<td>
+								<span class="selectFull">
+									<select>
+										<option></option>
+										<option></option>
+									</select>
+								</span>
+							</td>
+						</tr>
+						<tr>
+							<th>보험료</th>
+							<td colspan="3">
+								<input type="text" style="width:130px" /> 원
+								<span class="fRset">
+									<input type="radio" id="bo1" name="bo1" />
+									<label for="bo1">보험료 변동없음</label>
+									<input type="radio" id="bo2" name="bo1" />
+									<label for="bo2">보험료 변동</label>
+								</span>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</fieldset>
+		</form>
+
+		<form method="post" action="/">
+			<fieldset>
+				<legend>보험료</legend>
+				<div class="btnWrap mt10">
+					<a href="#none" class="btn smGnR">추가</a>
+					<a href="#none" class="btn smGnR">삭제</a>
+				</div>
+				<div class="juContact mt5">
+					<table class="table3">
+						<caption>보험료</caption>
+						<colgroup>
+							<col width="50%" />
+							<col width="45%" />
+							<col width="5%" />
+						</colgroup>
+						<thead>
+							<tr>
+								<th>보험료 변동일자</th>
+								<th>보험료</th>
+								<th>선택</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td class="textL">
+									<input type="text" style="width:390px;" />
+									<a class="carendar" href="#"><span class="cdr">23</span></a>
+								</td>
+								<td class="textL">
+									<input type="text" style="width:350px;" /> 만원
+								</td>
+								<td>
+									<input type="checkbox" />
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="otherWrap">
+					<div class="otherL">
+						<table class="table3"">
+							<caption>보험료</caption>
+							<colgroup>
+								<col width="15%">
+								<col width="16%">
+								<col width="*">
+								<col width="20%">
+								<col width="16%">
+							</colgroup>
+							<thead>
+								<tr>
+									<th colspan="3">급부명</th>
+									<th>보장금액</th>
+									<th>보험기간</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td rowspan="4">사망<br />보장</td>
+									<td rowspan="3">일반사망</td>
+									<td>종신</td>
+									<td>
+										<span class="widthFull"><input type="text" class="tar" value="만원" /></span>
+									</td>
+									<td>
+										<span class="selectFull">
+											<select>
+												<option></option>
+												<option></option>
+											</select>
+										</span>
+									</td>
+								</tr>
+								<tr>
+									<td>정기</td>
+									<td></td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>가족수입/소득보장</td>
+									<td></td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>재해사망</td>
+									<td>재해사망</td>
+									<td></td>
+									<td></td>
+								</tr>
+								<tr>
+									<td rowspan="12">소득<br />보상</td>
+									<td rowspan="2">재해장해</td>
+									<td>고도장해</td>
+									<td></td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>재해상해</td>
+									<td></td>
+									<td></td>
+								</tr>
+								<tr>
+									<td rowspan="10">진단</td>
+									<td>라이프케어 질병 및 수술</td>
+									<td></td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>암</td>
+									<td></td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>뇌출혈</td>
+									<td></td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>급성심근경색</td>
+									<td></td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>말기신부전</td>
+									<td></td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>말기간질환</td>
+									<td></td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>말기폐질환</td>
+									<td></td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>여명급부</td>
+									<td></td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>SNC</td>
+									<td></td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>중대화상 및 부식</td>
+									<td></td>
+									<td></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="otherR">
+						<table class="table3"">
+							<caption>보험료</caption>
+							<colgroup>
+								<col width="15%">
+								<col width="16%">
+								<col width="*">
+								<col width="25%">
+								<col width="20%">
+							</colgroup>
+							<thead>
+								<tr>
+									<th colspan="3">급부명</th>
+									<th>보장금액</th>
+									<th>보험기간</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td rowspan="10">의료<br />보장</td>
+									<td rowspan="5">수술</td>
+									<td>암</td>
+									<td>
+										<span class="widthFull"><input type="text" class="tar" value="만원" /></span>
+									</td>
+									<td>
+										<span class="selectFull">
+											<select>
+												<option></option>
+												<option></option>
+											</select>
+										</span>
+									</td>
+								</tr>
+								<tr>
+									<td>수술 5종(최소)</td>
+									<td></td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>수술 5종(최대)</td>
+									<td></td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>수술 3종(최소)</td>
+									<td></td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>수술 3종(최대)</td>
+									<td></td>
+									<td></td>
+								</tr>
+								<tr>
+									<td rowspan="2">입원</td>
+									<td>암</td>
+									<td></td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>일반</td>
+									<td></td>
+									<td></td>
+								</tr>
+								<tr>
+									<td rowspan="3">의료<br />실손</td>
+									<td>입원</td>
+									<td></td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>외래</td>
+									<td></td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>처방</td>
+									<td></td>
+									<td></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</fieldset>
+		</form>
+		
+	</div>
+</div>
+
+</body>
+</html>
+

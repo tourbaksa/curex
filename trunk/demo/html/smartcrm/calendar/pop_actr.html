@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> CuREx </title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
+<link rel="stylesheet" href="/WEB-APP/webponent/css/common.css" type="text/css" />
+<link rel="stylesheet" href="/css/curex.common.css" type="text/css" />
+<link rel="stylesheet" href="/css/curex.layout.css" type="text/css" />
+<link rel="stylesheet" href="/css/curex.popup.css" type="text/css" />
+<link rel="stylesheet" href="/WEB-APP/webponent/dialog/css/dialog.css" type="text/css" />
+<script src="/WEB-APP/webponent/ci/agent.js"></script>
+<script type="text/javascript" src="/WEB-APP/webponent/thirdParty/jquery/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="/WEB-APP/webponent/thirdParty/jquery/jquery-ui-1.10.3.min.js"></script>
+<script type="text/javascript" src="/WEB-APP/webponent/tab/tab.js"></script>
+<script type="text/javascript" src="/WEB-APP/webponent/dialog/dialog.js"></script>
+<script type="text/javascript" src="/js/popup.js"></script>
+<script type="text/javascript" src="/js/curex.ui.js"></script>
+</head>
+<body>
+
+<div id="PopWrap2" style="width:600px;">
+	<div class="popHeader">
+		<span class="carAtvSel">
+			<input type="radio" checked="checked" id="atv1" />
+			<label for="atv1">활동관리</label>
+			<input type="radio" id="atv2" />
+			<label for="atv2">개인일정</label>
+		</span>
+	</div>
+	<div class="popcontent">
+		<table summary="고객명, 생년월일등 계획유형및 내용에대한 정보를 제공합니다." width="100%" class="table1">
+			<caption>활동관리</caption>
+			<colgroup>
+				<col width="10%" />
+				<col width="20%" />
+				<col width="10%" />
+				<col width="10%" />
+				<col width="13%" />
+				<col width="15%" />
+				<col width="13%" />
+				<col width="*" />
+			</colgroup>
+			<tbody>
+				<tr>
+					<th>고객명</th>
+					<td><span class="widthFull"><input type="text" /></span><!--
+					2014.03.26 수정
+					<span class="carAtvSearch">신*롬 <a href="#" class="btn smGyRb">검색</a></span>--></td>
+					<th>미등록</th>
+					<td class="tac"><input type="checkbox" title="미등록선택" /></td>
+					<th>생년월일</th>
+					<td>83.10.26</td>
+					<th>상태</th>
+					<td>계약</td>
+				</tr>
+				<tr>
+					<th>일시</th>
+					<td colspan="7">
+						<div class="cellCrnr">
+							<input type="text" readonly="readonly" style="width:85px" value="2001-10-11" />
+							<a class="carendar" href="#"><span class="cdr">23</span></a>
+							<select title="시작시간선택" style="width:72px;">
+								<option>09:00</option>
+								<option>10:00</option>
+							</select>
+							~
+							<input type="text" readonly="readonly" style="width:85px" value="2001-10-11" />
+							<a class="carendar" href="#"><span class="cdr">23</span></a>
+							<select title="종료시간선택" style="width:72px;">
+								<option>09:00</option>
+								<option>10:00</option>
+							</select>
+							<input type="checkbox" id="h24" />
+							<label for="h24">종일여부선택</label>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th>계획유형</th>
+					<td colspan="7">
+						<div class="fLset">
+								<input type="checkbox" id="pln1" /><label for="pln1">AP</label>
+								<input type="checkbox" id="pln2" /><label for="pln2">FF</label>
+								<input type="checkbox" id="pln3" /><label for="pln3">P</label>
+								<input type="checkbox" id="pln4" /><label for="pln4">C</label>
+								<input type="checkbox" id="pln5" /><label for="pln5">청약</label>
+								<input type="checkbox" id="pln6" /><label for="pln6">진단 </label>
+								<input type="checkbox" id="pln7" /><label for="pln7">증권전달</label>
+								<input type="checkbox" id="pln8" /><label for="pln8">계약리뷰</label>
+							<span class="towLine">
+								<input type="checkbox" id="pln9" /><label for="pln8">정기적안부</label>
+								<input type="checkbox" id="pln10" /><label for="pln10">보전</label>
+								<input type="checkbox" id="pln11" /><label for="pln11">보험금</label>
+								<input type="checkbox" id="pln12" /><label for="pln12">기타기념일</label>
+							</span>
+					</td>
+				</tr>
+				<tr>
+					<th>제목</th>
+					<td colspan="7"><span class="widthFull"><input type="text" title="제목입력" /></span></td>
+				</tr>
+				<tr>
+					<th>내용</th>
+					<td colspan="7"><span class="textareaFull"><textarea title="내용입력" rows="3" cols="5"></textarea></span></td>
+				</tr>
+			</tbody>
+		</table>
+		<div class="btnWrap">
+			<div class="btnL">
+				<span class="fLset"><input type="checkbox" id="succ" /><label for="succ">완료</label></span>
+			</div>
+			<a class="btn lgLgR" href="#none">저장</a>
+			<a class="btn lgLgR" href="#none">삭제</a>
+		</div>
+	</div>
+	<a href="#none" class="btnClosePopup"><img src="/img/sub/btn_close_popup.gif" alt="팝업창 닫기"/></a>
+</div>
+
+</body>
+</html>
