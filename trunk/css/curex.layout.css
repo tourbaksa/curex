@@ -141,8 +141,12 @@ ul.personList li.hover{background-color:#e4edf2;}
 ul.personList li.hover span.sut{color:#2c8ecb; background-image:url(/images/common/bg_sutBar_hover.gif);}
 ul.personList li.hover span.name{color:#000000;}
 
-div.personDetail{position:relative;z-index:190;top: -450px;left: 170px;background-color:#f7f7f7;padding:47px 20px 20px 
+/* svn 수정 20140423*/
+div.personDetail{position:absolute;z-index:190;top: -525px;left: 170px;background-color:#f7f7f7;padding:47px 20px 20px 
 30px;float:left;width:408px;border:1px solid #22b8c7;border-top:0;}
+.ie8 div.personDetail{top:-531px;}
+/* svn 수정 20140423*/
+
 .PersonCont{display:none;}
 div.personDetail.opened {top: 90px;}
 div.personDetail.from-result-before {left: 0px;}
@@ -221,7 +225,7 @@ div.personBtn .lgGyR1{padding:7px 10px;}
 #checkList ul.h2List li:first-child a{border-left:0;}
 #checkList ul.list {float:right;}
 #checkList ul.list li {float:left; height:40px; line-height:40px; text-align:center; border-left:1px solid #1fa5b3;}
-#checkList ul.list li a{color:#fff; font-size:14px; border-left:1px solid #4ec6d2; display:block; padding:0 15px;} 
+#checkList ul.list li a{color:#fff; font-size:14px; border-left:1px solid #4ec6d2; display:block; padding:0 15px;background:#22B8C7 !important;} 
 #checkList ul.list li a:hover{text-decoration:none !important;}
 #checkList ul.list li a.on{color:#fff; border-left:1px solid #33b4cl; display:block;background-color:#00a1b1;} 
 #checkList ul.list li.quB {text-align:right;}

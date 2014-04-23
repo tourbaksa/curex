@@ -389,6 +389,16 @@ div.postWrap .entryForm li:first-child{border-top:1px solid #dedede;}
 .ci-dialog .ui-dialog-titlebar-close.layer2{background:url(/img/common/btn_close2.gif) no-repeat 0 0;border:0;height:14px;width:15px;margin-top:-1px;}
 .ui-dialog .ui-dialog-titlebar-close.layer2{position:absolute;right:18px;top:17px;padding:1px;}
 
+/* svn 수정 20140423 */
+/* 팝업2 */
+.ci-dialog.layer2 .ui-dialog-titlebar{background:#22b8c7;border-bottom:10px solid #007c88;color:#fff;font-size:36px;font-weight:bold;height:50px;line-height:49px;padding:7px 0 0 20px;}
+.ui-dialog.layer2 .ui-dialog-title{width:85%;float:none;}
+.ui-dialog.layer2 .ui-dialog-titlebar{padding:7px 0 0 20px;}
+.ui-dialog.layer2 .ui-dialog-content{padding:22px 20px 25px;position:relative;border:0;}
+.ci-dialog.layer2 .ui-dialog-titlebar-close{background:url(/img/common/btn_close2.gif) no-repeat 0 0;border:0;height:14px;width:15px;margin-top:-1px;}
+.ui-dialog.layer2 .ui-dialog-titlebar-close{position:absolute;right:18px;top:17px;padding:1px;}
+/* svn 수정 20140423 */
+
 /* 제어판 */
 .controlWrap {background:url(/img/common/bg_pop_line.gif) repeat-y 170px 0;min-height:406px;}
 .controlWrap:after{content:"";display:block;clear:both;}

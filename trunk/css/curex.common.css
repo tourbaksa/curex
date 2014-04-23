@@ -54,6 +54,11 @@ input[type="checkbox"]{width:13px;height:13px;margin:0;padding:0;vertical-align:
 input[type="radio"]{width:13px;height:13px;vertical-align:middle;margin-top:-1px;_margin-top:0;}
 select {font-family:NanumGothic,"나눔고딕";vertical-align:middle;font-size:12px; line-height:20px; padding:3px 0;; border-left:1px solid #c2c5cc; border-top:1px solid #c1c6cc; border-bottom:1px solid #e0e3ea; border-right:1px solid #e0e3ea;color:#707070;}
 select option{font-family:NanumGothic,"나눔고딕";}
+
+/* svn 추가 내용 20140423*/
+.ie8 select option{font-family:NanumGothic,"나눔고딕";}
+/* svn 추가 내용 20140423*/
+
 textarea {color:#464646; border:1px solid #b9c6d4; padding:5px; vertical-align:top; font-size:12px; line-height:16px;font-family: NanumGothic,sans-serif; color:#707070;}
 button {overflow: hidden; margin: 0; padding: 0; border: 0 none; font-family:NanumGothic,"나눔고딕",Dotum,"돋움",Gulim,"굴림",Verdana,sans-serif;  cursor: pointer;}
 button span{display: block; overflow: hidden; position: absolute; top: 0; left: 0; width: 0; height: 0; border: 0; background: none !important; font-size: 0; line-height: 0;}
@@ -653,3 +658,10 @@ div.popTit h2 span.sizeDown{font-weight:normal;}
 #loginWrap .login form ul li:first-child{margin-top:0;}
 #loginWrap .login form ul li input[type="text"] {height:30px;line-height:30px;}
 #loginWrap .btnLogin{position:absolute;right:20px;top:134px;}
+
+/* svn 추가 내용 20140423*/
+/*로딩바*/
+.loadingBar {vertical-align:middle;position:absolute;z-index:2000000000;width:36px;height:36px;background:url(/img/common/loading_clear_large.gif) center no-repeat; }
+.blockOverlay {z-index:3000 !important; opacity:0.2 !important; -ms-filter:alpha(opacity=0.2);}
+.blockPage {z-index:3001 !important;}
+/* svn 추가 내용 20140423*/
