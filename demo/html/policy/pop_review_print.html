@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> 계약리뷰 출력 </title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
+<link rel="stylesheet" href="/WEB-APP/webponent/css/common.css" type="text/css" />
+<link rel="stylesheet" href="/css/curex.common.css" type="text/css" />
+<link rel="stylesheet" href="/css/curex.layout.css" type="text/css" />
+<link rel="stylesheet" href="/css/curex.sub.css" type="text/css" />
+<link rel="stylesheet" href="/WEB-APP/webponent/dialog/css/dialog.css" type="text/css" />
+<script src="/WEB-APP/webponent/ci/agent.js"></script>
+<script type="text/javascript" src="/WEB-APP/webponent/thirdParty/jquery/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="/WEB-APP/webponent/thirdParty/jquery/jquery-ui-1.10.3.min.js"></script>
+<script type="text/javascript" src="/WEB-APP/webponent/tab/tab.js"></script>
+<script type="text/javascript" src="/WEB-APP/webponent/dialog/dialog.js"></script>
+<script type="text/javascript" src="/js/popup.js"></script>
+<script type="text/javascript" src="/js/curex.ui.js"></script>
+</head>
+<body>
+
+<div id="popWrap" style="width:500px;">
+	<h1>계약리뷰 출력</h1>
+	<div class="popContents">
+		<table summary="계약정보, 보장리뷰등 출력옵션설정항목정보를 제공합니다." width="100%" class="table3">
+			<caption>출력옵션정보</caption>
+			<colgroup>
+				<col width="7%" />
+				<col width="43%" />
+				<col width="7%" />
+				<col width="*" />
+			</colgroup>
+			<thead>
+			<tr>
+				<th scope="col"><input type="checkbox" title="현재열선택" /></th>
+				<th scope="col">계약정보</th>
+				<th scope="col"><input type="checkbox" title="현재열선택" /></th>
+				<th scope="col">보장리뷰</th>
+			</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td><input type="checkbox" /></td>
+					<td class="tal">고객정보확인서</td>
+					<td><input type="checkbox" /></td>
+					<td class="tal">피보험자별 보유계약리스트</td>
+				</tr>
+				<tr>
+					<td><input type="checkbox" /></td>
+					<td class="tal">보유계약리스트</td>
+					<td><input type="checkbox" /></td>
+					<td class="tal">사망/질병보장 시뮬레이션</td>
+				</tr>
+				<tr>
+					<td><input type="checkbox" /></td>
+					<td class="tal">보험증권별 세부사항</td>
+					<td><input type="checkbox" /></td>
+					<td class="tal">연령별 사망 보장내역</td>
+				</tr>
+				<tr>
+					<td><input type="checkbox" /></td>
+					<td class="tal">변액리뷰</td>
+					<td><input type="checkbox" /></td>
+					<td class="tal">상세 질병 보장내역1</td>
+				</tr>
+				<tr>
+					<td><input type="checkbox" /></td>
+					<td class="tal">펀드리뷰</td>
+					<td><input type="checkbox" /></td>
+					<td class="tal">상세 질병 보장내역2</td>
+				</tr>
+				<tr>
+					<td><input type="checkbox" /></td>
+					<td class="tal">기계약보장내역</td>
+					<td><input type="checkbox" /></td>
+					<td class="tal">상세 질병 보장내역3</td>
+				</tr>
+				<tr>
+					<td><input type="checkbox" /></td>
+					<td class="tal">연금전환특약</td>
+					<td><input type="checkbox" /></td>
+					<td class="tal">상세 질병 보장내역4</td>
+				</tr>
+				<tr>
+					<td><input type="checkbox" /></td>
+					<td class="tal">가입당시 연금전환 특약</td>
+					<td><input type="checkbox" /></td>
+					<td class="tal">연령별 노후보장 내역</td>
+				</tr>
+				<tr>
+					<td><input type="checkbox" /></td>
+					<td class="tal">실버널싱연금전환특약</td>
+					<td><input type="checkbox" /></td>
+					<td class="tal">특약기간별급부예시1</td>
+				</tr>
+				<tr>
+					<td><input type="checkbox" /></td>
+					<td class="tal"></td>
+					<td><input type="checkbox" /></td>
+					<td class="tal">특약기간별급부예시2</td>
+				</tr>
+			</tbody>
+		</table>
+		<ul class="footNote">
+			<li><span>*</span> 계약정보의 장표는 본인이 계약자인 증권번호 기준으로 출력됩니다.</li>
+			<li><span>*</span> 보장리뷰의 장표는 본인계약의 피보험자 기준으로 출력됩니다.</li>
+			<li><span>*</span> 법인계약의 경우 일부 출력물의 선택만 가능합니다.</li>
+			<li><span>*</span> 보유계약이 다수 고객의 경우, 출력시간이 길어질 수 있으니, 예약출력기능을 활용하시기 바랍니다.</li>
+		</ul>
+		
+		<div class="btnWrap">
+			<a href="#none" class="btn lgGyR">이메일발송</a>
+			<a href="#none" class="btn lgLgR">예약출력</a>
+			<a href="#none" class="btn lgLgR">보고서출력</a>
+		</div>
+	</div>
+</div>
+
+
+</body>
+</html>

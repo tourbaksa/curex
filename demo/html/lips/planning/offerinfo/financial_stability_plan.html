@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> CuREx </title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
+<link rel="stylesheet" href="/WEB-APP/webponent/css/common.css" type="text/css" />
+<link rel="stylesheet" href="/css/curex.common.css" type="text/css" />
+<link rel="stylesheet" href="/css/curex.layout.css" type="text/css" />
+<link rel="stylesheet" href="/css/curex.sub.css" type="text/css" />
+<link rel="stylesheet" href="/WEB-APP/webponent/dialog/css/dialog.css" type="text/css" />
+<script type="text/javascript" src="/WEB-APP/webponent/ci/agent.js"></script>
+<script type="text/javascript" src="/WEB-APP/webponent/thirdParty/jquery/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="/WEB-APP/webponent/thirdParty/jquery/jquery-ui-1.10.3.min.js"></script>
+<script type="text/javascript" src="/WEB-APP/webponent/tab/tab.js"></script>
+<script type="text/javascript" src="/WEB-APP/webponent/dialog/dialog.js"></script>
+<script type="text/javascript" src="/js/popup.js"></script>
+<script type="text/javascript" src="/js/curex.ui.js"></script>
+</head>
+<body>
+
+<div id="popWrap" style="width:917px;">
+	<h1>재정안정계획서_김푸르(820101-1234567)</h1>
+	<div class="popContents">
+		
+		<div class="btnWrap">
+			<a href="#none" class="btn smGyRb">미리보기</a>
+			<a href="#none" class="btn smGyRb">이메일발송</a>
+			<a href="#none" class="btn smGnR">발급</a>
+		</div>
+		
+		<form method="post" action="/">
+			<fieldset>
+				<legend>재정안정계획서</legend>
+				<div class="chboxWrap">
+					<table class="chboxList">
+						<caption>Sales Material</caption>
+						<colgroup>
+							<col width="15%" />
+							<col width="*" />
+						</colgroup>
+						<tbody>
+							<tr class="tTit1">
+								<td class="ch"><input type="checkbox" id="sm1" /></td>
+								<td><label for="sm1">Sales Material</label></td>
+							</tr>
+							<tr class="tTit2">
+								<td class="ch"><input type="checkbox" id="sm2" /></td>
+								<td><label for="sm2">즐겨찾기</label></td>
+							</tr>
+							<tr>
+								<td class="ch"><input type="checkbox" id="sm3" /></td>
+								<td><label for="sm3">Sales Material Title</label></td>
+							</tr>
+							<tr>
+								<td class="ch"><input type="checkbox" id="sm4" /></td>
+								<td><label for="sm4">Sales Material Title 35</label></td>
+							</tr>
+							<tr class="tTit2">
+								<td class="ch"><input type="checkbox" id="sm5" /></td>
+								<td>
+									<div>
+										<label for="sm5">Sales Material</label><span class="tar1"><a href="#none" class="btn smGyRb">추가</a></span>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td class="ch"><input type="checkbox" id="sm6" /></td>
+								<td>
+									<div>
+										<label for="sm6">추가 Sales Material</label><span class="tar2">
+										<a href="#none"><img src="/img/common/btn_dels2.gif" alt="삭제" /></a></span>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td class="ch"><input type="checkbox" id="sm7" /></td>
+								<td>
+									<div>
+										<label for="sm7">추가된 Sales Material</label><span class="tar2">
+										<a href="#none"><img src="/img/common/btn_dels2.gif" alt="삭제" /></a></span>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td class="ch"><input type="checkbox" id="sm8" /></td>
+								<td>
+									<div>
+										<label for="sm8">추가된 Sales Material</label>
+										<span class="tar2"><a href="#none"><img src="/img/common/btn_dels2.gif" alt="삭제" /></a></span>
+									</div>								
+								</td>
+							</tr>
+							<tr>
+								<td class="ch"><input type="checkbox" id="sm9" /></td>
+								<td>
+									<div>
+										<label for="sm9">추가 S/M</label>
+										<span class="tar2"><a href="#none"><img src="/img/common/btn_dels2.gif" alt="삭제" /></a></span>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					
+					<table class="chboxList">
+						<caption>니드분석</caption>
+						<colgroup>
+							<col width="15%" />
+							<col width="*" />
+						</colgroup>
+						<tbody>
+							<tr class="tTit1">
+								<td class="ch"><input type="checkbox" id="nd1" /></td>
+								<td><label for="nd1">니드분석</label><span class="tar"></span></td>
+							</tr>
+							<tr class="tTit2">
+								<td class="ch"><input type="checkbox" id="nd2" /></td>
+								<td><label for="nd2">공통</label><span class="tar"></span></td>
+							</tr>
+							<tr>
+								<td class="ch"><input type="checkbox" id="nd3" /></td>
+								<td>	
+									<div>
+										<label for="nd3">표지</label>
+										<span class="tar1"><a href="#none" class="btn smGyRb">입력</a></span>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td class="ch"><input type="checkbox" id="nd4" /></td>
+								<td>
+									<div>
+										<label for="nd4">속지</label>
+										<span class="tar1"><a href="#none" class="btn smGyRb">입력</a></span>
+									</div>
+								</td>
+							</tr>
+							<tr class="tTit2">
+								<td class="ch"><input type="checkbox" id="nd5" /></td>
+								<td><label for="nd5">수입/지출분석</label><span class="tar"></span></td>
+							</tr>
+							<tr>
+								<td class="ch"><input type="checkbox" id="nd6" /></td>
+								<td><label for="nd6">수입/지출분석</label><span class="tar"></span></td>
+							</tr>
+							<tr>
+								<td class="ch"><input type="checkbox" id="nd7" /></td>
+								<td><label for="nd7">지출조정</label><span class="tar"></span></td>
+							</tr>
+							<tr class="tTit2">
+								<td class="ch"><input type="checkbox" id="nd8" /></td>
+								<td><label for="nd8">자산부채분석</label><span class="tar"></span></td>
+							</tr>
+							<tr>
+								<td class="ch"><input type="checkbox" id="nd9" /></td>
+								<td><label for="nd9">자산부채분석</label><span class="tar"></span></td>
+							</tr>
+							<tr class="tTit2">
+								<td class="ch"><input type="checkbox" id="nd10" /></td>
+								<td><label for="nd10">사망보장분석</label><span class="tar"></span></td>
+							</tr>
+							<tr>
+								<td class="ch"><input type="checkbox" id="nd11" /></td>
+								<td><label for="nd11">연령별 필요자금</label><span class="tar"></span></td>
+							</tr>
+							<tr>
+								<td class="ch"><input type="checkbox" id="nd12" /></td>
+								<td><label for="nd12">연령별 누적 필요자금</label><span class="tar"></span></td>
+							</tr>
+							<tr>
+								<td class="ch"><input type="checkbox" id="nd13" /></td>
+								<td><label for="nd13">연령별 누적 준비자금</label><span class="tar"></span></td>
+							</tr>
+							<tr>
+								<td class="ch"><input type="checkbox" id="nd14" /></td>
+								<td><label for="nd14">연령별 필요보장자금분석</label><span class="tar"></span></td>
+							</tr>
+							<tr class="tTit2">
+								<td class="ch"><input type="checkbox" id="nd15" /></td>
+								<td><label for="nd15">노후보장분석</label><span class="tar"></span></td>
+							</tr>
+							<tr>
+								<td class="ch"><input type="checkbox" id="nd16" /></td>
+								<td><label for="nd16">필요보장자금 분석(요약)</label><span class="tar"></span></td>
+							</tr>
+							<tr>
+								<td class="ch"><input type="checkbox" id="nd17" /></td>
+								<td><label for="nd17">연령별 필요자금</label><span class="tar"></span></td>
+							</tr>
+							<tr>
+								<td class="ch"><input type="checkbox" id="nd18" /></td>
+								<td><label for="nd18">연령별 준비자금</label><span class="tar"></span></td>
+							</tr>
+							<tr>
+								<td class="ch"><input type="checkbox" id="nd19" /></td>
+								<td><label for="nd19">연령별 필요보장자금분석</label><span class="tar"></span></td>
+							</tr>
+							<tr class="tTit2">
+								<td class="ch"><input type="checkbox" id="nd20" /></td>
+								<td><label for="nd20">목적자금분석</label><span class="tar"></span></td>
+							</tr>
+							<tr>
+								<td class="ch"><input type="checkbox" id="nd21" /></td>
+								<td><label for="nd21">자녀교육자금</label><span class="tar"></span></td>
+							</tr>
+							<tr>
+								<td class="ch"><input type="checkbox" id="nd22" /></td>
+								<td><label for="nd22">자녀결혼자금</label><span class="tar"></span></td>
+							</tr>
+							<tr>
+								<td class="ch"><input type="checkbox" id="nd23" /></td>
+								<td><label for="nd23">기타목적자금</label><span class="tar"></span></td>
+							</tr>
+						</tbody>
+					</table>
+					
+					<table class="chboxList chType2">
+						<caption>계획수립</caption>
+						<colgroup>
+							<col width="15%" />
+							<col width="*" />
+						</colgroup>
+						<tbody>
+							<tr class="tTit1">
+								<td class="ch"><input type="checkbox" id="ct1" /></td>
+								<td><label for="ct1">계획수립</label><span class="tar"></span></td>
+							</tr>
+							<tr><td class="ch"><input type="checkbox" id="ct2" /></td>
+								<td><label for="ct2">1. 필요장보자금 자금대비 연금연에서 그래피</label><span class="tar"></span></td>
+							</tr>
+							<tr><td class="ch"><input type="checkbox" id="ct3" /></td>
+								<td><label for="ct3">1. 기계약 필요보장자금 대비연금연액 예시 그래프</label><span class="tar"></span></td>
+							</tr>
+							<tr>
+								<td class="ch"><input type="checkbox" id="ct4" /></td>
+								<td><label for="ct4">2. 보장내용요약</label><span class="tar"></span></td>
+							</tr>
+							<tr>
+								<td class="ch"><input type="checkbox" id="ct5" /></td>
+								<td><label for="ct5">3. 가입설계서</label><span class="tar"></span></td>
+							</tr>
+							<tr>
+								<td class="ch"><input type="checkbox" id="ct6" /></td>
+								<td><label for="ct6">4. 보장금액 예시표</label><span class="tar"></span></td>
+							</tr>
+							<tr>
+								<td class="ch"><input type="checkbox" id="ct7" /></td>
+								<td><label for="ct7">5. 변액보험 보장금액 예시표</label><span class="tar"></span></td>
+							</tr>
+							<tr>
+								<td class="ch"><input type="checkbox" id="ct8" /></td>
+								<td><label for="ct8">6. 보장위험별 연간보험료 / 보험료지수/수수료안내</label><span class="tar"></span></td>
+							</tr>
+							<tr>
+								<td class="ch"><input type="checkbox" id="ct9" /></td>
+								<td><label for="ct9">7. 연금지급형태별 연금연액 예시표</label><span class="tar"></span></td>
+							</tr>
+							<tr>
+								<td class="ch"><input type="checkbox" id="ct10" /></td>
+								<td><label for="ct10">8. 연금지급형태별 연금월액 예시표</label><span class="tar"></span></td>
+							</tr>
+							<tr>
+								<td class="ch"><input type="checkbox" /></td>
+								<td>
+									<label for="ct11">9. 연금전환예시(연금전환특약</label>
+									<input type="checkbox" id="ct11" />
+									<label for="ct12">가입당시 연금전환특약</label>
+									<input type="checkbox" id="ct12" />
+									<label for="ct13">실버널싱연금전환특약</label>
+									<input type="checkbox" id="ct13" />
+									<span class="tar"></span></td>
+							</tr>
+							<tr>
+								<td class="ch"><input type="checkbox" id="ct14" /></td>
+								<td><label for="ct14">리빙베네핏 지급방법 변경예시표</label><span class="tar"></span></td>
+							</tr>
+							<tr>
+								<td class="ch"><input type="checkbox" id="ct15" /></td>
+								<td><label for="ct15">[보조자료제출] 납입보험료 대비 환급금 그래프</label><span class="tar"></span></td>
+							</tr>
+							<tr>
+								<td class="ch"><input type="checkbox" id="ct16" /></td>
+								<td><label for="ct16">[보조자료제출] 변액보험보험금액 및 해지환급금</label><span class="tar"></span></td>
+							</tr>
+							<tr>
+								<td class="ch"><input type="checkbox" id="ct17" /></td>
+								<td><label for="ct17">알아두실 사항</label><span class="tar"></span></td>
+							</tr>
+							<tr class="tTit2">
+								<td class="ch"><input type="checkbox" id="ct18" /></td>
+								<td><label for="ct18">상품설명서</label><span class="tar"></span></td>
+							</tr>
+							<tr>
+								<td colspan="2" class="formTd">
+									<label for="ct1" class="bt1">외국인전용 설명서</label>
+									<select style="width:100px;">
+										<option>베트남어</option>
+										<option></option>
+									</select>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					
+					<table class="chboxList chType2">
+						<caption>전자청약</caption>
+						<colgroup>
+							<col width="15%" />
+							<col width="*" />
+						</colgroup>
+						<tbody>
+							<tr class="tTit1">
+								<td class="ch"><input type="checkbox" id="ja1" /></td>
+								<td><label for="ja1">전자청약</label>
+								(<input type="checkbox" id="ja2" /><label for="ja2">미결</label>)
+								<input type="radio" id="ja3" /><label for="ja3">전산발행</label>
+								</td>
+							</tr>
+							<tr>
+								<td class="ch"><input type="checkbox" id="ja4" /></td>
+								<td><label for="ja4">청약서_계약사항면</label><span class="tar"></span></td>
+							</tr>
+							<tr>
+								<td class="ch"><input type="checkbox" id="ja5" /></td>
+								<td><label for="ja5">청약서_계약사항면 이외</label><span class="tar"></span></td>
+							</tr>
+							<tr>
+								<td class="ch"><input type="checkbox" id="ja6" /></td>
+								<td><label for="ja6">종신전환 신청서</label><span class="tar"></span></td>
+							</tr>
+							<tr>
+								<td class="ch"><input type="checkbox" id="ja7" /></td>
+								<td><label for="ja7">비흡연고지서</label><span class="tar"></span></td>
+							</tr>
+							<tr>
+								<td class="ch"><input type="checkbox" id="ja8" /></td>
+								<td><label for="ja8">법인계약확인서</label><span class="tar"></span></td>
+							</tr>
+							<tr>
+								<td class="ch"><input type="checkbox" id="ja9" /></td>
+								<td><label for="ja9">친권자확인서</label><span class="tar"></span></td>
+							</tr>
+							<tr>
+								<td class="ch"><input type="checkbox" id="ja10" /></td>
+								<td><label for="ja10">특별인수특약신청서(제왕절개용)</label><span class="tar"></span></td>
+							</tr>
+							<tr>
+								<td class="ch"><input type="checkbox" id="ja11" /></td>
+								<td><label for="ja11">종피보험자청약서</label><span class="tar"></span></td>
+							</tr>
+							<tr>
+								<td class="ch"><input type="checkbox" id="ja12" /></td>
+								<td><label for="ja12">대출-납입일시중지후 신계약신청서</label><span class="tar"></span></td>
+							</tr>
+							<tr>
+								<td class="ch"><input type="checkbox" id="ja13" /></td>
+								<td><label for="ja13">비교안내문 (전환 또는 대체계약)</label><span class="tar"></span></td>
+							</tr>
+							<tr>
+								<td class="ch"><input type="checkbox" id="ja14" /></td>
+								<td><label for="ja14">VIP고객질문지</label><span class="tar"></span></td>
+							</tr>
+							<tr>
+								<td class="ch"><input type="checkbox" id="ja15" /></td>
+								<td><label for="ja15">공동청약확인서</label><span class="tar"></span></td>
+							</tr>
+							<tr>
+								<td class="ch"><input type="checkbox" id="ja16" /></td>
+								<td><label for="ja16">기부보험수익자지정동의서</label><span class="tar"></span></td>
+							</tr>
+							<tr>
+								<td class="ch"><input type="checkbox" id="ja17" /></td>
+								<td><label for="ja17">예상미결_checklist</label><span class="tar"></span></td>
+							</tr>
+							<tr>
+								<td class="ch"><input type="checkbox" id="ja18" /></td>
+								<td><label for="ja18">감액법신청서</label><span class="tar"></span></td>
+							</tr>
+							<tr>
+								<td colspan="2" class="formTd">
+									<label for="ja1" class="bt1">해지환급금</label>
+									<select style="width:100px;">
+										<option>해지환급금</option>
+										<option></option>
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<td colspan="2" class="formTd">
+									<label for="ja1" class="bt1">경과기간별보험료</label>
+									<select style="width:100px">
+										<option>7단계보기</option>
+										<option></option>
+									</select>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+
+			</fieldset>
+		</form>
+
+		<ul class="footNote">
+			<li>＊재정안정계획서는 신계약설계 시를 기준으로 하는 산출물이며, 유지계약의 재설계 시 가입금액 감액, 특약 해지 및 중도부가, 납입기간 단축 등의 계약변경이 있을 경우 납입보험료 누계, 해지환급금 등이 실제와 달라질 수 있습니다.</li>
+			<li>＊발급 후 보고서 이력이 남지 않을 경우 재저장을 누르시기 바랍니다.</li>
+			<li>＊전자 청약 발급 불가 케이스
+				<ul class="red">
+					<li>- 계약자/피보험자 상이, 계약자 미지정</li>
+					<li>- 부가 가능한 상품 및 특약 추가 (KVUL, HC(자녀형), 어린이보험, 배m우자특약 등 특약 / 종피보험자 존재하는 상품)</li>
+				</ul>
+			</li>
+		</ul>
+
+		<div class="btnWrap">
+			<a href="#none" class="btn smGyRb">미리보기</a>
+			<a href="#none" class="btn smGyRb">이메일발송</a>
+			<a href="#none" class="btn smGnR">발급</a>
+		</div>
+
+	</div>
+	
+</div>
+
+
+</body>
+</html>
+

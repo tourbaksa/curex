@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> CuREx </title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
+<link rel="stylesheet" href="/WEB-APP/webponent/css/common.css" type="text/css" />
+<link rel="stylesheet" href="/css/curex.common.css" type="text/css" />
+<link rel="stylesheet" href="/css/curex.layout.css" type="text/css" />
+<link rel="stylesheet" href="/css/curex.sub.css" type="text/css" />
+<link rel="stylesheet" href="/WEB-APP/webponent/dialog/css/dialog.css" type="text/css" />
+<script type="text/javascript" src="/WEB-APP/webponent/ci/agent.js"></script>
+<script type="text/javascript" src="/WEB-APP/webponent/thirdParty/jquery/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="/WEB-APP/webponent/thirdParty/jquery/jquery-ui-1.10.3.min.js"></script>
+<script type="text/javascript" src="/WEB-APP/webponent/tab/tab.js"></script>
+<script type="text/javascript" src="/WEB-APP/webponent/dialog/dialog.js"></script>
+<script type="text/javascript" src="/js/popup.js"></script>
+<script type="text/javascript" src="/js/curex.ui.js"></script>
+</head>
+<body>
+
+<div id="popWrap" style="width:800px;">
+	<h1>Window</h1>
+	<div class="popContents">
+		
+		<div class="userSelect ci-tab">
+			<ul class="popTab tab-selector">
+				<li class="active"><a href="#none">구 주소(읍/면/동) 조회</a></li>
+				<li><a href="#none">도로명 주소(도로명+건물번호) 조회</a></li>
+			</ul>
+			
+			<ul class="tab-panel">
+				<li>
+					<div class="add">
+						<h3 class="hide-element">구 주소(읍/면/동) 조회</h3>
+						<div class="postWrap">
+							<form method="post" action="/">
+								<fieldset>
+									<legend>구 주소(읍/면/동)</legend>
+									<div class="postL">
+										<div class="popTit">
+											<h2>현재 거주하고 있는 읍/면/동 명을 입력하세요.</h2>
+										</div>
+										<p><input type="text" style="width:298px" /> <a href="#none" class="btn smWtRb">주소검색</a></p>
+
+										<p class="postBderT">※ 아래 목록에서 주소를 선택하신 후, 상세주소를 입력해 주세요.</p>
+										<div class="postBox">
+											<ul>
+												<li><a href="#none"></a></li>
+												<li><a href="#none"></a></li>
+												<li><a href="#none"></a></li>
+												<li><a href="#none"></a></li>
+												<li><a href="#none"></a></li>
+												<li><a href="#none"></a></li>
+												<li><a href="#none"></a></li>
+												<li><a href="#none"></a></li>
+												<li><a href="#none"></a></li>
+											</ul>
+										</div>
+
+										<div class="popTit mt8 mb0">
+											<h2>상세주소를 입력하세요</h2>
+										</div>
+										<div class="postAd">
+											<input type="text" style="width:53px;" />	 - <input type="text" style="width:53px;" /><br />
+											<input type="text" style="width:358px;" /><br />
+											<input type="text" style="width:358px" />
+										</div>
+
+										<div class="popTit nwrap mt8">
+											<h2>[검증] 버튼을 클릭하여 주소 확인 후, [선택] 버튼을 누르세요.</h2>
+										</div>
+
+										<p class="textR mt8"><a href="#none" class="btn smWtRb">주소검증</a></p>
+									</div>
+
+									<div class="postR">
+										<p><input type="text" style="width:360px" /></p>
+										<div class="popTit mt10">
+											<h2>선택할 주소</h2>
+										</div>
+										<div class="postBox postBoxHei">
+											<ul>
+												<li><a href="#none"></a></li>
+												<li><a href="#none"></a></li>
+												<li><a href="#none"></a></li>
+												<li><a href="#none"></a></li>
+												<li><a href="#none"></a></li>
+												<li><a href="#none"></a></li>
+												<li><a href="#none"></a></li>
+												<li><a href="#none"></a></li>
+												<li><a href="#none"></a></li>
+											</ul>
+										</div>
+										<div class="popTit mt8">
+											<h2>주소 확인</h2>
+										</div>
+										<ul class="entryForm">
+											<li>
+												<p>
+													<input type="radio" id="ad1" name="ad" />
+													<label for="ad1">입력주소</label>
+												</p>
+												<div class="postAd">
+													<p>
+														<input type="text" style="width:53px" /> - 
+														<input type="text" style="width:53px" />
+														<input type="text" class="ml5" style="width:233px" />
+													</p>
+													<p><input type="text" style="width:358px" /></p>
+												</div>
+											</li>
+											<li>
+												<p>
+													<input type="radio" id="ad2" name="ad" />
+													<label for="ad2">입력주소</label>
+												</p>
+												<div class="postAd">
+													<p>
+														<input type="text" style="width:53px" /> - 
+														<input type="text" style="width:53px" />
+														<input type="text" class="ml5" style="width:233px" />
+													</p>
+													<p><input type="text" style="width:358px" /></p>
+												</div>
+											</li>
+											<li>
+												<p>
+													<input type="radio" id="ad3" name="ad" />
+													<label for="ad3">입력주소</label>
+												</p>
+												<div class="postAd">
+													<p>
+														<input type="text" style="width:53px" /> - 
+														<input type="text" style="width:53px" />
+														<input type="text" class="ml5" style="width:233px" />
+													</p>
+													<p><input type="text" style="width:358px" /></p>
+												</div>
+											</li>
+										</ul>
+										<div class="btnWrap mt10">
+											<a href="#none" class="btn lgLgR">선택</a>
+										</div>
+									</div>
+								</fieldset>
+							</form>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="add">
+						<h3 class="hide-element">도로명 주소(도로명+건물번호) 조회</h3>
+						<div class="postWrap">
+							<form method="post" action="/">
+								<fieldset>
+									<legend>구 주소(읍/면/동)</legend>
+									<div class="postL">
+										<div class="popTit">
+											<h2>현재 거주하고 있는 읍/면/동 명을 입력하세요.</h2>
+										</div>
+										<p>※ 공동주택 또는 건물명으로 조회하시는 경우에는 [공동주택/건물명]을 선택하여 주십시오. 예시 : 강남대로 298, 강남대로 298-1</p>
+										<p class="mt8">
+											<label for="st1" class="textH2">도로명</label>
+											<input type="text" id="st1" style="width:310px;" />
+										</p>
+										<p class="mt8">
+											<span class="fLset">
+												<input type="radio" id="st2" name="st2" />
+												<label for="st2">건물번호</label>
+												<input type="radio" id="st3" name="st2" />
+												<label for="st3">공동주택/건물명</label>
+												<input type="text" class="mr10" style="width:105px" />
+												<a href="#none" class="btn smWtRb">주소검색</a>
+											</span>
+										</p>
+										<p class="mt8 mb8">※ 아래 목록에서 주소를 선택하신 후, 상세주소를 입력해 주세요.</p>
+										<div class="postBox">
+											<ul>
+												<li><a href="#none"></a></li>
+												<li><a href="#none"></a></li>
+												<li><a href="#none"></a></li>
+												<li><a href="#none"></a></li>
+												<li><a href="#none"></a></li>
+												<li><a href="#none"></a></li>
+												<li><a href="#none"></a></li>
+												<li><a href="#none"></a></li>
+												<li><a href="#none"></a></li>
+											</ul>
+										</div>
+
+										<div class="popTit mt8 mb0">
+											<h2>상세주소를 입력하세요</h2>
+										</div>
+										<div class="postAd">
+											<input type="text" style="width:53px;" />	 - <input type="text" style="width:53px;" /><br />
+											<input type="text" style="width:358px;" /><br />
+											<input type="text" style="width:358px" />
+										</div>
+
+										<div class="popTit nwrap mt8">
+											<h2>[검증] 버튼을 클릭하여 주소 확인 후, [선택] 버튼을 누르세요.</h2>
+										</div>
+
+										<p class="textR mb10"><a href="#none" class="btn smWtRb">주소검증</a></p>
+									</div>
+
+									<div class="postR">
+										<p><input type="text" style="width:360px" /></p>
+										<div class="popTit mt10">
+											<h2>선택할 주소</h2>
+										</div>
+										<div class="postBox postBoxHei">
+											<ul>
+												<li><a href="#none"></a></li>
+												<li><a href="#none"></a></li>
+												<li><a href="#none"></a></li>
+												<li><a href="#none"></a></li>
+												<li><a href="#none"></a></li>
+												<li><a href="#none"></a></li>
+												<li><a href="#none"></a></li>
+												<li><a href="#none"></a></li>
+												<li><a href="#none"></a></li>
+											</ul>
+										</div>
+										<div class="popTit mt8">
+											<h2>주소 확인</h2>
+										</div>
+										<ul class="entryForm">
+											<li>
+												<p>
+													<input type="radio" id="ad1" name="ad" />
+													<label for="ad1">입력주소</label>
+												</p>
+												<div class="postAd">
+													<p>
+														<input type="text" style="width:53px" /> - 
+														<input type="text" style="width:53px" />
+														<input type="text" class="ml5" style="width:233px" />
+													</p>
+													<p><input type="text" style="width:358px" /></p>
+												</div>
+											</li>
+											<li>
+												<p>
+													<input type="radio" id="ad2" name="ad" />
+													<label for="ad2">입력주소</label>
+												</p>
+												<div class="postAd">
+													<p>
+														<input type="text" style="width:53px" /> - 
+														<input type="text" style="width:53px" />
+														<input type="text" class="ml5" style="width:233px" />
+													</p>
+													<p><input type="text" style="width:358px" /></p>
+												</div>
+											</li>
+											<li>
+												<p>
+													<input type="radio" id="ad3" name="ad" />
+													<label for="ad3">입력주소</label>
+												</p>
+												<div class="postAd">
+													<p>
+														<input type="text" style="width:53px" /> - 
+														<input type="text" style="width:53px" />
+														<input type="text" class="ml5" style="width:233px" />
+													</p>
+													<p><input type="text" style="width:358px" /></p>
+												</div>
+											</li>
+										</ul>
+										<div class="btnWrap mt10">
+											<a href="#none" class="btn lgLgR">선택</a>
+										</div>
+									</div>
+								</fieldset>
+							</form>
+						</div>
+					</div>
+				</li>
+			</ul>
+
+		</div>
+		
+	</div>
+
+	<script type="text/javascript">
+		//<![CDATA[
+		var myTab = ci.tab.init($('.userSelect')); // 고객정보탭
+		var myTab1 = ci.tab.init($('.tabOutline')); //
+		//]]> 
+	</script>
+
+</div>
+
+
+</body>
+</html>
+
+

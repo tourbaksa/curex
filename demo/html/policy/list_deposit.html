@@ -1,0 +1,2442 @@
+<!DOCTYPE html>
+<head>
+<title> 계약리스트 </title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
+<link rel="stylesheet" href="/WEB-APP/webponent/css/common.css" type="text/css" />
+<link rel="stylesheet" href="/css/curex.common.css" type="text/css" />
+<link rel="stylesheet" href="/css/curex.layout.css" type="text/css" />
+<link rel="stylesheet" href="/css/curex.sub.css" type="text/css" />
+<link rel="stylesheet" href="/WEB-APP/webponent/dialog/css/dialog.css" type="text/css" />
+<script type="text/javascript" src="/WEB-APP/webponent/ci/agent.js"></script>
+<script type="text/javascript" src="/WEB-APP/webponent/thirdParty/jquery/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="/WEB-APP/webponent/thirdParty/jquery/jquery-ui-1.10.3.min.js"></script>
+<script type="text/javascript" src="/WEB-APP/webponent/tab/tab.js"></script>
+<script type="text/javascript" src="/WEB-APP/webponent/dialog/dialog.js"></script>
+<script type="text/javascript" src="/js/popup.js"></script>
+<script type="text/javascript" src="/js/curex.ui.js"></script>
+</head>
+<body>
+
+<div id="wrap">
+	<!-- HEADER -->
+	<div id="header">
+		<img src="/img/common/img_header.jpg" alt="" />
+	</div>
+	<!-- //HEADER -->
+		
+	<div id="conteiner">
+		<div class="hgroup">
+			<h2>계약검색</h2>
+			<ul class="location">
+				<li><a href="#none">홈&nbsp;</a>&gt;</li>
+				<li><a href="#none">&nbsp;계약&nbsp;</a>&gt;</li>
+				<li><a href="#none">&nbsp;계약리스트 &nbsp;</a></li>
+			</ul>
+		</div>
+		<!-- 공통 컨텐츠 -->
+		<div id="contents" class="contartShWrap clear-fix">
+			<table summary="리스트종류, 검색조건등 계약리스트검색정보제공" width="100%" class="table1 mb10">
+				<caption>검색리스트</caption>
+				<colgroup>
+					<col width="27%" />
+					<col width="*" />
+				</colgroup>
+				<tbody>
+					<tr>
+					<th scope="col">리스트 종류</th>
+					<th scope="col">검색조건</th>
+					</tr>
+					<tr>
+						<td><input type="text" value="리스트 종류를 선택하세요." style="width:227px;" /> <a href="#" class="btn smGyRb">검색</a></td>
+						<td>
+							<input type="radio" id="depo1" />
+							<label for="depo1">입금현황</label>
+							<input type="radio" id="depo2" />
+							<label for="depo2">입금현황</label>
+							<input type="radio" id="depo3" />
+							<label for="depo3">입금현황</label>
+
+							<label for="mons1" class="ml15">산출월선택</label>
+							<input type="radio" id="mons2" />
+							<select title="년선택" style="width:78px;">
+								<option>2014</option>
+								<option></option>
+							</select>
+							<select title="월선택" style="width:58px;">
+								<option>1월</option>
+								<option></option>
+							</select>
+							<label for="mons3" class="ml20">구분선택</label>
+							<input type="radio" id="mons3" />
+							<select title="구분선택" style="width:108px;">
+								<option>고객명</option>
+								<option></option>
+							</select>
+							<input type="text" title="검색어입력" style="width:98px;" />
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<div class="btnWrap">
+				<input type="submit" class="btn lgBeR" value="검색" />
+			</div>
+			<div class="fieldWrap add">
+				<div class="btnWrap">
+					<h3 class="btnL">계약리스트 - 자동이체출금현황 리스트 검색결과 00건</h3>
+					<a href="#none" class="btn smGnR">산출조건 및 유의사항</a>
+					<a href="#none" class="btn smLgR fieldOpen">검색필드 선택 +</a>
+				</div>
+				<div class="searchField">
+					<div class="FormSet">
+						<input type="checkbox" id="feild01" /><label for="feild01">증권번호</label>
+						<input type="checkbox" id="feild02" /><label for="feild02">계약자</label>
+						<input type="checkbox" id="feild03" /><label for="feild03">피보험자</label>
+						<input type="checkbox" id="feild04" /><label for="feild04">계약일</label>
+						<input type="checkbox" id="feild05" /><label for="feild05">보험종류</label>
+						<input type="checkbox" id="feild06" /><label for="feild06">상태</label>
+						<input type="checkbox" id="feild07" /><label for="feild07">보험료</label>
+						<input type="checkbox" id="feild08" /><label for="feild08">일시보장금</label>
+						<input type="checkbox" id="feild09" /><label for="feild09">납입주기</label>
+						<input type="checkbox" id="feild10" /><label for="feild10">모집LP</label>
+						<input type="checkbox" id="feild11" /><label for="feild11">일반사망</label>
+						<input type="checkbox" id="feild12" /><label for="feild12">재해사망</label>
+						<input type="checkbox" id="feild13" /><label for="feild13">해약환급금</label>
+						<input type="checkbox" id="feild14" /><label for="feild14">대출가능금액</label>
+						<input type="checkbox" id="feild15" /><label for="feild15">PL원금</label>
+						<input type="checkbox" id="feild16" /><label for="feild16">APL원금</label>
+						<input type="checkbox" id="feild17" /><label for="feild17">LNB</label>
+						<input type="checkbox" id="feild18" /><label for="feild18">FBN</label>
+						<input type="checkbox" id="feild19" /><label for="feild19">DNB</label>
+						<input type="checkbox" id="feild20" /><label for="feild20">SNC</label><br />
+						<input type="checkbox" id="feild21" /><label for="feild21">핸드폰</label>
+						<input type="checkbox" id="feild22" /><label for="feild22">자택주소</label>
+						<input type="checkbox" id="feild23" /><label for="feild23">우편물수령처</label>
+						<input type="checkbox" id="feild24" /><label for="feild24">직장주소</label>
+					</div>
+					<div class="btnWrap">
+						<a href="#" class="btn smGyRb fieldClose">적용</a>
+					</div>
+					<!--  적용을 클릭면 레이어 닫힙니다. 필요 하지않으시면  위의 fieldClose를 지우시면 됩니다. -->
+				</div>
+				<table summary="검색결과 리스트" class="listTable result" width="100%">
+					<caption>검색결과리스트</caption>
+					<colgroup>
+						<col width="3%" />
+						<col width="*" />
+						<col width="9%" />
+						<col width="10%" />
+						<col width="10%" />
+						<col width="9%" />
+						<col width="9%" />
+						<col width="9%" />
+						<col width="12%" />
+						<col width="9%" />
+						<col width="9%" />
+					</colgroup>
+					<thead>
+					<tr class="border">
+						<th scope="col">삭제</th>
+						<th scope="col">증권번호</th>
+						<th scope="col">계약자</th>
+						<th scope="col">피보험자</th>
+						<th scope="col">계약일</th>
+						<th scope="col">보험종류</th>
+						<th scope="col">상태</th>
+						<th scope="col">보험료</th>
+						<th scope="col">일시보장금</th>
+						<th scope="col">납입주기</th>
+						<th scope="col">모집LP</th>
+					</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><input type="checkbox" title="현재행선택" /></td>
+							<td class="PyNumber"><a href="#">12345678910</a></td>
+							<td>김승헌</td>
+							<td>김승현</td>
+							<td>2014-02-03</td>
+							<td>변액</td>
+							<td>정상</td>
+							<td>200,000</td>
+							<td>30,000,000</td>
+							<td>월납</td>
+							<td>김경숙</td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" title="현재행선택" /></td>
+							<td class="PyNumber"><a href="#">12345678910</a></td>
+							<td>김승헌</td>
+							<td>김승현</td>
+							<td>2014-02-03</td>
+							<td>변액</td>
+							<td>정상</td>
+							<td>200,000</td>
+							<td>30,000,000</td>
+							<td>월납</td>
+							<td>김경숙</td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" title="현재행선택" /></td>
+							<td class="PyNumber"><a href="#">12345678910</a></td>
+							<td>김승헌</td>
+							<td>김승현</td>
+							<td>2014-02-03</td>
+							<td>변액</td>
+							<td>정상</td>
+							<td>200,000</td>
+							<td>30,000,000</td>
+							<td>월납</td>
+							<td>김경숙</td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" title="현재행선택" /></td>
+							<td class="PyNumber"><a href="#">12345678910</a></td>
+							<td>김승헌</td>
+							<td>김승현</td>
+							<td>2014-02-03</td>
+							<td>변액</td>
+							<td>정상</td>
+							<td>200,000</td>
+							<td>30,000,000</td>
+							<td>월납</td>
+							<td>김경숙</td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" title="현재행선택" /></td>
+							<td class="PyNumber"><a href="#">12345678910</a></td>
+							<td>김승헌</td>
+							<td>김승현</td>
+							<td>2014-02-03</td>
+							<td>변액</td>
+							<td>정상</td>
+							<td>200,000</td>
+							<td>30,000,000</td>
+							<td>월납</td>
+							<td>김경숙</td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" title="현재행선택" /></td>
+							<td class="PyNumber"><a href="#">12345678910</a></td>
+							<td>김승헌</td>
+							<td>김승현</td>
+							<td>2014-02-03</td>
+							<td>변액</td>
+							<td>정상</td>
+							<td>200,000</td>
+							<td>30,000,000</td>
+							<td>월납</td>
+							<td>김경숙</td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" title="현재행선택" /></td>
+							<td class="PyNumber"><a href="#">12345678910</a></td>
+							<td>김승헌</td>
+							<td>김승현</td>
+							<td>2014-02-03</td>
+							<td>변액</td>
+							<td>정상</td>
+							<td>200,000</td>
+							<td>30,000,000</td>
+							<td>월납</td>
+							<td>김경숙</td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" title="현재행선택" /></td>
+							<td class="PyNumber"><a href="#">12345678910</a></td>
+							<td>김승헌</td>
+							<td>김승현</td>
+							<td>2014-02-03</td>
+							<td>변액</td>
+							<td>정상</td>
+							<td>200,000</td>
+							<td>30,000,000</td>
+							<td>월납</td>
+							<td>김경숙</td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" title="현재행선택" /></td>
+							<td class="PyNumber"><a href="#">12345678910</a></td>
+							<td>김승헌</td>
+							<td>김승현</td>
+							<td>2014-02-03</td>
+							<td>변액</td>
+							<td>정상</td>
+							<td>200,000</td>
+							<td>30,000,000</td>
+							<td>월납</td>
+							<td>김경숙</td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" title="현재행선택" /></td>
+							<td class="PyNumber"><a href="#">12345678910</a></td>
+							<td>김승헌</td>
+							<td>김승현</td>
+							<td>2014-02-03</td>
+							<td>변액</td>
+							<td>정상</td>
+							<td>200,000</td>
+							<td>30,000,000</td>
+							<td>월납</td>
+							<td>김경숙</td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" title="현재행선택" /></td>
+							<td class="PyNumber"><a href="#">12345678910</a></td>
+							<td>김승헌</td>
+							<td>김승현</td>
+							<td>2014-02-03</td>
+							<td>변액</td>
+							<td>정상</td>
+							<td>200,000</td>
+							<td>30,000,000</td>
+							<td>월납</td>
+							<td>김경숙</td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" title="현재행선택" /></td>
+							<td class="PyNumber"><a href="#">12345678910</a></td>
+							<td>김승헌</td>
+							<td>김승현</td>
+							<td>2014-02-03</td>
+							<td>변액</td>
+							<td>정상</td>
+							<td>200,000</td>
+							<td>30,000,000</td>
+							<td>월납</td>
+							<td>김경숙</td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" title="현재행선택" /></td>
+							<td class="PyNumber"><a href="#">12345678910</a></td>
+							<td>김승헌</td>
+							<td>김승현</td>
+							<td>2014-02-03</td>
+							<td>변액</td>
+							<td>정상</td>
+							<td>200,000</td>
+							<td>30,000,000</td>
+							<td>월납</td>
+							<td>김경숙</td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" title="현재행선택" /></td>
+							<td class="PyNumber"><a href="#">12345678910</a></td>
+							<td>김승헌</td>
+							<td>김승현</td>
+							<td>2014-02-03</td>
+							<td>변액</td>
+							<td>정상</td>
+							<td>200,000</td>
+							<td>30,000,000</td>
+							<td>월납</td>
+							<td>김경숙</td>
+						</tr>																																																												
+					</tbody>
+				</table>
+			</div>
+
+			<h3>계약정보</h3>
+			<div class="ctInfoWrap ci-tab">
+
+				<ul class="ctTab tab-selector">
+					<li class="active"><a href="#none">가입내역</a></li>
+					<li><a href="#none">계약상세</a></li>
+					<li><a href="#none">계약자정보</a></li>
+					<li><a href="#none">보험료</a></li>
+					<li><a href="#none">자동이체</a></li>
+					<li><a href="#none">환급금/대출/중도인출</a></li>
+					<li><a href="#none">지급이력</a></li>
+					<li><a href="#none">계약변경이력</a></li>
+					<li><a href="#none">변액보험</a></li>
+					<li><a href="#none">연금</a></li>
+				</ul>
+				<div class="btnWrap ctBtn">
+					<a href="#none" class="btn smGnR">구비서류</a>
+					<a href="#none" class="btn smGnR">신청서발행</a>
+				</div>
+				<ul class="tab-panel">
+					<li>
+						<div class="add">
+							<h4 class="hide-element">가입내역</h4>
+							<div class="ensureCont">
+								<div class="detailInfo">
+									<span>항목을 선택해 주세요.</span> <!-- 항목이 있으면 <span>상단 목록에서 항목을 선택해 주세요.</span> 통째로 없애시면됩니다. -->
+								</div>
+
+								<!-- <table class="listTable tl" summary="상품별 가입내역에대한 계약정보리스트를 제공합니다. " width="100%">
+									<caption>가입내역정보</caption>
+									<colgroup>
+										<col width="*" />
+										<col width="5%" />
+										<col width="6%" />
+										<col width="10%" />
+										<col width="10%" />
+										<col width="10%" />
+										<col width="10%" />
+										<col width="11%" />
+										<col width="11%" />
+										<col width="10%" />
+									</colgroup>
+									<thead>
+									<tr>
+										<th scope="col">상품명</th>
+										<th scope="col">상태</th>
+										<th scope="col">우량체</th>
+										<th scope="col">가입금액</th>
+										<th scope="col">보장금액</th>
+										<th scope="col">보험료</th>
+										<th scope="col">보장/납입기간</th>
+										<th scope="col">만기/소멸일</th>
+										<th scope="col">중도부가</th>
+										<th scope="col">특약별피보험자</th>
+									</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>변액유니버셜종신(우)</td>
+											<td>정상</td>
+											<td>Y</td>
+											<td>50,000,000</td>
+											<td>50,000,000</td>
+											<td>50,000</td>
+											<td>종신/55세납</td>
+											<td>2014-03-24</td>
+											<td>2014-03-24</td>
+											<td>김승헌</td>
+										</tr>
+										<tr>
+											<td>변액유니버셜종신(우)</td>
+											<td>정상</td>
+											<td>Y</td>
+											<td>50,000,000</td>
+											<td>50,000,000</td>
+											<td>50,000</td>
+											<td>종신/55세납</td>
+											<td>2014-03-24</td>
+											<td>2014-03-24</td>
+											<td>김승헌</td>
+										</tr>
+										<tr>
+											<td>변액유니버셜종신(우)</td>
+											<td>정상</td>
+											<td>Y</td>
+											<td>50,000,000</td>
+											<td>50,000,000</td>
+											<td>50,000</td>
+											<td>종신/55세납</td>
+											<td>2014-03-24</td>
+											<td>2014-03-24</td>
+											<td>김승헌</td>
+										</tr>
+										<tr>
+											<td>변액유니버셜종신(우)</td>
+											<td>정상</td>
+											<td>Y</td>
+											<td>50,000,000</td>
+											<td>50,000,000</td>
+											<td>50,000</td>
+											<td>종신/55세납</td>
+											<td>2014-03-24</td>
+											<td>2014-03-24</td>
+											<td>김승헌</td>
+										</tr>
+										<tr>
+											<td>변액유니버셜종신(우)</td>
+											<td>정상</td>
+											<td>Y</td>
+											<td>50,000,000</td>
+											<td>50,000,000</td>
+											<td>50,000</td>
+											<td>종신/55세납</td>
+											<td>2014-03-24</td>
+											<td>2014-03-24</td>
+											<td>김승헌</td>
+										</tr>
+										<tr>
+											<td>변액유니버셜종신(우)</td>
+											<td>정상</td>
+											<td>Y</td>
+											<td>50,000,000</td>
+											<td>50,000,000</td>
+											<td>50,000</td>
+											<td>종신/55세납</td>
+											<td>2014-03-24</td>
+											<td>2014-03-24</td>
+											<td>김승헌</td>
+										</tr>
+										<tr>
+											<td>변액유니버셜종신(우)</td>
+											<td>정상</td>
+											<td>Y</td>
+											<td>50,000,000</td>
+											<td>50,000,000</td>
+											<td>50,000</td>
+											<td>종신/55세납</td>
+											<td>2014-03-24</td>
+											<td>2014-03-24</td>
+											<td>김승헌</td>
+										</tr>
+										<tr>
+											<td>변액유니버셜종신(우)</td>
+											<td>정상</td>
+											<td>Y</td>
+											<td>50,000,000</td>
+											<td>50,000,000</td>
+											<td>50,000</td>
+											<td>종신/55세납</td>
+											<td>2014-03-24</td>
+											<td>2014-03-24</td>
+											<td>김승헌</td>
+										</tr>
+										<tr>
+											<td>변액유니버셜종신(우)</td>
+											<td>정상</td>
+											<td>Y</td>
+											<td>50,000,000</td>
+											<td>50,000,000</td>
+											<td>50,000</td>
+											<td>종신/55세납</td>
+											<td>2014-03-24</td>
+											<td>2014-03-24</td>
+											<td>김승헌</td>
+										</tr>
+										<tr>
+											<td>변액유니버셜종신(우)</td>
+											<td>정상</td>
+											<td>Y</td>
+											<td>50,000,000</td>
+											<td>50,000,000</td>
+											<td>50,000</td>
+											<td>종신/55세납</td>
+											<td>2014-03-24</td>
+											<td>2014-03-24</td>
+											<td>김승헌</td>
+										</tr>
+										<tr>
+											<td>변액유니버셜종신(우)</td>
+											<td>정상</td>
+											<td>Y</td>
+											<td>50,000,000</td>
+											<td>50,000,000</td>
+											<td>50,000</td>
+											<td>종신/55세납</td>
+											<td>2014-03-24</td>
+											<td>2014-03-24</td>
+											<td>김승헌</td>
+										</tr>
+										</tr>
+										<tr>
+											<td>변액유니버셜종신(우)</td>
+											<td>정상</td>
+											<td>Y</td>
+											<td>50,000,000</td>
+											<td>50,000,000</td>
+											<td>50,000</td>
+											<td>종신/55세납</td>
+											<td>2014-03-24</td>
+											<td>2014-03-24</td>
+											<td>김승헌</td>
+										</tr>
+									</tbody>
+								</table>
+						
+								<table class="listTable tr" summary="제도성특약 가입여부 정보" width="100%">
+									<caption>제도성특약</caption>
+									<colgroup>
+										<col width="65%" />
+										<col width="*" />
+									</colgroup>
+									<thead>
+									<tr>
+										<th scope="col">제도성특약</th>
+										<th scope="col">가입여부</th>
+									</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<th>특수인수특약</th>
+											<td>Y</td>
+										</tr>
+										<tr>
+											<th>여명급부특약</th>
+											<td>Y</td>
+										</tr>
+										<tr>
+											<th>사후정리특약</th>
+											<td>Y</td>
+										</tr>
+										<tr>
+											<th>자녀사랑지급</th>
+											<td>Y</td>
+										</tr>
+										<tr>
+											<th>자녀승계특약</th>
+											<td>Y</td>
+										</tr>
+										<tr>
+											<th>특별인수특약</th>
+											<td>Y</td>
+										</tr>
+										<tr>
+											<th>여명급부특약</th>
+											<td>Y</td>
+										</tr>
+										<tr>
+											<th>사후정리특약</th>
+											<td>Y</td>
+										</tr>
+										<tr>
+											<th>자녀사랑지급</th>
+											<td>Y</td>
+										</tr>
+										<tr>
+											<th>자녀승계특약</th>
+											<td>Y</td>
+										</tr>
+										<tr>
+											<th>특별인수특약</th>
+											<td>Y</td>
+										</tr>
+										<tr>
+											<th>여명급부특약</th>
+											<td>Y</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<div class="btnWrap">
+								<a href="#" class="btn lgBeR">SNC 중도부가예시표</a>
+								<a href="#" class="btn lgBeR">기계약 보장금액 예시표인쇄</a>
+								<a href="#" class="btn lgBeR">기계약 재정 안정계획 EMAIL 발송</a>
+								<a href="#" class="btn lgBeR">계약내용 인쇄</a>
+							</div> -->
+						</div>
+					</li>
+					<li>
+						<div class="add">
+							<h4 class="hide-element">계약상세</h4>
+							
+							<div class="contartDetail">
+								<table class="table3 tl" summary="계약자, 피보험자등 계약상세 정보를 제공합니다." width="100%">
+									<caption>인적사항상세</caption>
+									<colgroup>
+										<col width="25%" />
+										<col width="15%" />
+										<col width="*" />
+										<col width="16%" />
+										<col width="16%" />
+									</colgroup>
+									<thead>
+										<tr>
+											<th>구분</th>
+											<th>성명</th>
+											<th>주민등록번호</th>
+											<th colspan="2">추가정보</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<th>계약자</th>
+											<td class="tac">김승헌</td>
+											<td>831026-1******</td>
+											<td colspan="2">가입(30세)</td>
+										</tr>
+										<tr>
+											<th>피보험자</th>
+											<td class="tac">김승헌</td>
+											<td>831026-1******</td>
+											<td colspan="2">가입(30세)</td>
+										</tr>
+										<tr>
+											<th>종피보험자</th>
+											<td class="tac">김승헌</td>
+											<td>831026-1******</td>
+											<td colspan="2">가입(30세)</td>
+										</tr>
+										<tr>
+											<th>만기/생손수익자</th>
+											<td class="tac">김승헌</td>
+											<td>831026-1******</td>
+											<td colspan="2">가입(30세)</td>
+										</tr>
+										<tr>
+											<th>사망수익자1</th>
+											<td class="tac">김승헌</td>
+											<td>831026-1******</td>
+											<td>가입(30세)</td>
+											<td>가입(30세)</td>
+										</tr>
+										<tr>
+											<th>사망수익자2</th>
+											<td class="tac">김승헌</td>
+											<td>831026-1******</td>
+											<td>가입(30세)</td>
+											<td>가입(30세)</td>
+										</tr>
+										<tr>
+											<th>사망수익자3</th>
+											<td class="tac">김승헌</td>
+											<td>831026-1******</td>
+											<td>가입(30세)</td>
+											<td>가입(30세)</td>
+										</tr>
+										<tr>
+											<th>사망수익자4</th>
+											<td class="tac">김승헌</td>
+											<td>831026-1******</td>
+											<td>가입(30세)</td>
+											<td>가입(30세)</td>
+										</tr>
+										<tr>
+											<th>지정대리청구인</th>
+											<td class="tac">김승헌</td>
+											<td>831026-1******</td>
+											<td colspan="2">가입(30세)</td>
+										</tr>
+										<tr>
+											<th>승계자녀</th>
+											<td class="tac">김승헌</td>
+											<td>831026-1******</td>
+											<td colspan="2">가입(30세)</td>
+										</tr>
+						
+									</tbody>
+								</table>
+								<table class="table3 tr" summary="보험종류및 계약상태,보험료등 보험 상세정보를 제공합니다." width="100%">
+									<caption>보험상세</caption>
+									<colgroup>
+										<col width="20%" />
+										<col width="25%" />
+										<col width="*" />
+										<col width="15%" />
+										<col width="15%" />
+									</colgroup>
+									<tbody>
+										<tr>
+											<th>보험종류</th>
+											<td>(무)연금양로보험</td>
+											<th>Do Not Call</th>
+											<td>(계)수신동의</td>
+											<td>(피)수신동의</td>
+										</tr>
+										<tr>
+											<th>계약상태</th>
+											<td>정상(신계약)</td>
+											<th>정보활용동의</th>
+											<td>(계)동의</td>
+											<td>(피)동의</td>
+										</tr>
+										<tr>
+											<th>납입보험로</th>
+											<td>200.000원</td>
+											<th>통신해지신청</th>
+											<td colspan="2">Y</td>
+										</tr>
+										<tr>
+											<th>최종납입월/회</th>
+											<td>2014년 2월 /32회</td>
+											<th>우편물수령인</th>
+											<td colspan="2">김승헌</td>
+										</tr>
+										<tr>
+											<th>차기납입일</th>
+											<td>2014-03-26</td>
+											<th>우편물 수령처</th>
+											<td colspan="2">직장</td>
+										</tr>
+										<tr>
+											<th>납입주기</th>
+											<td>월납</td>
+											<th rowspan="4">우편물 수령처 <br />(주소)</th>
+											<td colspan="2">(우)135-230</td>
+										</tr>
+										<tr>
+											<th>수금방법</th>
+											<td>자동이체</td>
+											<td rowspan="3" colspan="2">서울 강남구 역삼동 푸르덴셜타워 19층 계약서비스팀</td>
+										</tr>
+										<tr>
+											<th>실효선택</th>
+											<td>APL</td>
+										</tr>
+										<tr>
+											<th>실요일자</th>
+											<td>2014-03-26</td>
+										</tr>
+										<tr>
+											<th>배당수령</th>
+											<td>&nbsp;</td>
+											<th></th>
+											<td colspan="2"></td>
+										</tr>
+										<tr>
+											<th>납입중지</th>
+											<td>N</td>
+											<th></th>
+											<td colspan="2"></td>
+										</tr>
+						
+									</tbody>
+								</table>
+							</div>
+							<div class="btnWrap">
+								<a href="#" class="btn lgBeR">검색</a>
+							</div>
+						
+						</div>
+					</li>
+					<li>
+						<div class="add">
+							<h4 class="hide-element">계약자정보</h4>
+							<h5 class="subst">기본정보</h5>
+							<table summary="회사명, 사업자등록번호, 업종등 기본정보에 대한정보제공" width="100%" class="table3">
+								<caption>기본정보</caption>
+								<colgroup>
+									<col width="16%" />
+									<col width="17%" />
+									<col width="16%" />
+									<col width="17%" />
+									<col width="16%" />
+									<col width="*" />
+								</colgroup>
+								<tbody>
+									<tr>
+										<th>회사명</th>
+										<td></td>
+										<th>사업자등록번호</th>
+										<td></td>
+										<th>업종</th>
+										<td></td>
+									</tr>
+								</tbody>
+							</table>
+						
+							<h5 class="subst">상세정보</h5>
+							<table summary="계약자 상세정보에 대한 내용을 제공합니다." width="100%" class="table3">
+								<caption>상세정보</caption>
+								<colgroup>
+									<col width="16%" />
+									<col width="17%" />
+									<col width="16%" />
+									<col width="17%" />
+									<col width="16%" />
+									<col width="*" />
+								</colgroup>
+								<tbody>
+									<tr>
+										<th>설립형태</th>
+										<td></td>
+										<th>법인등록번호</th>
+										<td></td>
+										<th>상장여부</th>
+										<td></td>
+									</tr>
+									<tr>
+										<th>대표자명</th>
+										<td></td>
+										<th>설립일자</th>
+										<td></td>
+										<th></th>
+										<td></td>
+									</tr>
+									<tr>
+										<th>회사주소</th>
+										<td colspan="3"></td>
+										<th>회사대표전화</th>
+										<td></td>
+									</tr>
+									<tr>
+										<th>홈페이지주소</th>
+										<td colspan="3"></td>
+										<th>대표FAX번호</th>
+										<td></td>
+									</tr>
+								</tbody>
+							</table>
+						
+						</div>
+					</li>
+					<li>
+						<div class="add">
+							<h4 class="hide-element">보험료</h4>
+						
+							<table summary="보험료상세정보제공" width="100%" class="table3">
+								<caption>보험료상세</caption>
+								<colgroup>
+									<col width="12%" />
+									<col width="13%" />
+									<col width="12%" />
+									<col width="13%" />
+									<col width="12%" />
+									<col width="13%" />
+									<col width="12%" />
+									<col width="*" />
+								</colgroup>
+								<tbody>
+									<tr>
+										<th>수금LP</th>
+										<td>김승헌</td>
+										<th>수금방법</th>
+										<td>자동이체</td>
+										<th>보험료</th>
+										<td>200,000</td>
+										<th>차기납입일</th>
+										<td>2014-03-26</td>
+									</tr>
+									<tr>
+										<th>납입주기</th>
+										<td>월납</td>
+										<th>선수보험료</th>
+										<td>0원</td>
+										<th>가수보험료</th>
+										<td>0원</td>
+										<th>선납보험료</th>
+										<td>0월</td>
+									</tr>
+								</tbody>
+							</table>
+						
+							<div class="rateZone">
+								<label for="sea1">납입유형</label>
+								<select style="width:143px;" id="sea1">
+									<option>전체</option>
+								</select>
+								<div class="floatR">
+									<a href="#" class="btn smGyRb">부활 연체보험료</a>
+									<a href="#" class="btn smGyRb">우량체 변경차액</a>
+									<a href="#" class="btn smGyRb">자유납입 월공제</a>
+									<a href="#" class="btn smGyRb">기간별 보험료</a>
+								</div>
+							</div>
+						
+							<table summary="횟수, 월분, 납입/입금일, 입금일, 납입금, 선수 ,납주, 경로, 납입사유등의 보험료 리스트정보" width="100%" class="listTable">
+								<caption>보험료 정보 리스트</caption>
+								<colgroup>
+									<col width="11%" />
+									<col width="11%" />
+									<col width="11%" />
+									<col width="11%" />
+									<col width="11%" />
+									<col width="11%" />
+									<col width="11%" />
+									<col width="11%" />
+									<col width="*" />
+								</colgroup>
+								<thead>
+								<tr>
+									<th scope="col">횟수</th>
+									<th scope="col">월분</th>
+									<th scope="col">납입/입금일</th>
+									<th scope="col">입금일</th>
+									<th scope="col">납입금</th>
+									<th scope="col">선수</th>
+									<th scope="col">납주</th>
+									<th scope="col">경로</th>
+									<th scope="col">납입사유</th>
+								</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>75</td>
+										<td>2014.01</td>
+										<td>2014.01.27</td>
+										<td>123,700</td>
+										<td></td>
+										<td>0</td>
+										<td>월납</td>
+										<td>자동이체</td>
+										<td>계속보험료</td>
+									</tr>
+									<tr>
+										<td>75</td>
+										<td>2014.01</td>
+										<td>2014.01.27</td>
+										<td>123,700</td>
+										<td></td>
+										<td>0</td>
+										<td>월납</td>
+										<td>자동이체</td>
+										<td>계속보험료</td>
+									</tr>
+									<tr>
+										<td>75</td>
+										<td>2014.01</td>
+										<td>2014.01.27</td>
+										<td>123,700</td>
+										<td></td>
+										<td>0</td>
+										<td>월납</td>
+										<td>자동이체</td>
+										<td>계속보험료</td>
+									</tr>
+									<tr>
+										<td>75</td>
+										<td>2014.01</td>
+										<td>2014.01.27</td>
+										<td>123,700</td>
+										<td></td>
+										<td>0</td>
+										<td>월납</td>
+										<td>자동이체</td>
+										<td>계속보험료</td>
+									</tr>
+									<tr>
+										<td>75</td>
+										<td>2014.01</td>
+										<td>2014.01.27</td>
+										<td>123,700</td>
+										<td></td>
+										<td>0</td>
+										<td>월납</td>
+										<td>자동이체</td>
+										<td>계속보험료</td>
+									</tr>
+									<tr>
+										<td>75</td>
+										<td>2014.01</td>
+										<td>2014.01.27</td>
+										<td>123,700</td>
+										<td></td>
+										<td>0</td>
+										<td>월납</td>
+										<td>자동이체</td>
+										<td>계속보험료</td>
+									</tr>
+								</tbody>
+							</table>
+						
+						</div>
+					</li>
+					<li>
+						<div class="add">
+							<h4 class="hide-element">자동이체</h4>
+							<ul class="txtTab attab pt5">
+								<li class="active"><a href="#automCnt1">자동이체</a></li>
+								<li><a href="#automCnt2">대출자동상환약정</a></li>
+								<li><a href="#automCnt3">추가납입자동이체</a></li>
+							</ul>
+							<div class="automaticWrap">
+								<div id="automCnt1" class="tabCont">
+									<table summary="자동이체를 위한 상세정보를 제공합니다." width="100%" class="table3">
+										<caption>자동이체</caption>
+										<colgroup>
+											<col width="12%" />
+											<col width="13%" />
+											<col width="12%" />
+											<col width="13%" />
+											<col width="12%" />
+											<col width="13%" />
+											<col width="12%" />
+											<col width="*" />
+										</colgroup>
+										<tbody>
+											<tr>
+												<th>수금방법</th>
+												<td>자동이체</td>
+												<th>납입주기</th>
+												<td>월납</td>
+												<th>계좌 최종 등록/변경일</th>
+												<td></td>
+												<th>미입금사유</th>
+												<td></td>
+											</tr>
+											<tr>
+												<th>예금주/주민번호</th>
+												<td></td>
+												<th>납주보험료</th>
+												<td></td>
+												<th>최종납입 월/회</th>
+												<td></td>
+												<th>선납보험료</th>
+												<td></td>
+											</tr>
+											<tr>
+												<th>은행/계좌번호</th>
+												<td></td>
+												<th>자동이체보험료</th>
+												<td></td>
+												<th>최종청구일/월분</th>
+												<td></td>
+												<th>선수보험료</th>
+												<td></td>
+											</tr>
+											<tr>
+												<th>이체일</th>
+												<td></td>
+												<th>차기납입일</th>
+												<td></td>
+												<th>최종입금일</th>
+												<td></td>
+												<th>가수보험료</th>
+												<td></td>
+											</tr>
+										</tbody>
+									</table>
+									<h5 class="subst">계좌변경 이력</h5>
+									<table summary="은행,계좌번호, 처리자 구분등 계좌변경이력 등에 대한정보를 제공합니다." width="100%" class="listTable">
+										<caption>계좌변경이력</caption>
+										<colgroup>
+											<col width="10%" />
+											<col width="10%" />
+											<col width="10%" />
+											<col width="10%" />
+											<col width="10%" />
+											<col width="10%" />
+											<col width="10%" />
+											<col width="10%" />
+											<col width="10%" />
+											<col width="*" />
+										</colgroup>
+										<thead>
+										<tr>
+											<th scope="col">은행</th>
+											<th scope="col">계좌번호</th>
+											<th scope="col">처리자</th>
+											<th scope="col">구분</th>
+											<th scope="col">이체일</th>
+											<th scope="col">신청장소</th>
+											<th scope="col">신청일</th>
+											<th scope="col">완료일</th>
+											<th scope="col">예금주</th>
+											<th scope="col">결과</th>
+										</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>국민은행</td>
+												<td>4317613*****</td>
+												<td>김승헌</td>
+												<td>신청</td>
+												<td>2014.02.24</td>
+												<td>회사</td>
+												<td>2014.02.24</td>
+												<td>2014.02.24</td>
+												<td>김승헌</td>
+												<td>정상반영</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<div id="automCnt2" class="tabCont">
+
+									<div class="RdWrap">
+										<div class="automRadio RdTab">
+											<input type="radio" checked="checked" name="auto" id="pl" />
+											<label for="pl">PL 자동이체</label>
+											<input type="radio" name="auto" id="apl" />
+											<label for="apl">APL 자동이체</label>
+										</div>
+							
+										<div class="RdTabCont1">
+											<h5 class="subst">PL 자동이체</h5>
+											<table summary="PL자동이체를 위한 상세정보를 제공합니다." width="100%" class="table3">
+												<caption>PL자동이체</caption>
+												<colgroup>
+													<col width="12%" />
+													<col width="13%" />
+													<col width="12%" />
+													<col width="13%" />
+													<col width="12%" />
+													<col width="13%" />
+													<col width="12%" />
+													<col width="*" />
+												</colgroup>
+												<tbody>
+													<tr>
+														<th>기대출원리금</th>
+														<td></td>
+														<th>대출원금</th>
+														<td></td>
+														<th>대출이자</th>
+														<td></td>
+														<th>계좌구분</th>
+														<td></td>
+													</tr>
+													<tr>
+														<th>약정액</th>
+														<td></td>
+														<th>이체일</th>
+														<td></td>
+														<th>청구개시일</th>
+														<td></td>
+														<th>청구종료일</th>
+														<td></td>
+													</tr>
+													<tr>
+														<th>약정액</th>
+														<td></td>
+														<th>이체일</th>
+														<td></td>
+														<th>청구개시일</th>
+														<td></td>
+														<th>청구종료일</th>
+														<td></td>
+													</tr>
+													<tr>
+														<th>처리일자</th>
+														<td></td>
+														<th>처리방식</th>
+														<td colspan="5"></td>
+													</tr>
+												</tbody>
+											</table>
+							
+											<h5 class="subst">PL 자동이체 변경이력</h5>
+											<table summary="계좌구분, 약정액, 약정이체일, 청구개시일, 청구종료일, 처리일자, 처리자, 비고등 자동이체 변경이력정보리스트를 제공합니다." width="100%" class="listTable">
+												<caption>PL 자동이체 변경이력</caption>
+												<colgroup>
+													<col width="10%" />
+													<col width="*" />
+													<col width="10%" />
+													<col width="10%" />
+													<col width="10%" />
+													<col width="10%" />
+													<col width="10%" />
+													<col width="10%" />
+												</colgroup>
+												<thead>
+												<tr>
+													<th scope="col">계좌구분</th>
+													<th scope="col">약정액</th>
+													<th scope="col">약정이체일</th>
+													<th scope="col">청구개시일</th>
+													<th scope="col">청구종료일</th>
+													<th scope="col">처리일자</th>
+													<th scope="col">처리자</th>
+													<th scope="col">비고</th>
+												</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td></td>
+														<td></td>
+														<td></td>
+														<td></td>
+														<td></td>
+														<td></td>
+														<td></td>
+														<td></td>
+													</tr>
+												</tbody>
+											</table>
+											
+										</div>
+										<div class="RdTabCont2">
+											<h5 class="subst">APL 자동이체</h5>
+											<table summary="APL 자동이체를 위한 상세정보를 제공합니다." width="100%" class="table3">
+												<caption>APL자동이체</caption>
+												<colgroup>
+													<col width="12%" />
+													<col width="13%" />
+													<col width="12%" />
+													<col width="13%" />
+													<col width="12%" />
+													<col width="13%" />
+													<col width="12%" />
+													<col width="*" />
+												</colgroup>
+												<tbody>
+													<tr>
+														<th>APL 원리금</th>
+														<td></td>
+														<th>APL 원금</th>
+														<td></td>
+														<th>APL이자</th>
+														<td></td>
+														<th>계좌구분</th>
+														<td></td>
+													</tr>
+													<tr>
+														<th>약정액</th>
+														<td></td>
+														<th>이체일</th>
+														<td></td>
+														<th>청구개시일</th>
+														<td></td>
+														<th>청구종료일</th>
+														<td></td>
+													</tr>
+													<tr>
+														<th>약정액</th>
+														<td></td>
+														<th>이체일</th>
+														<td></td>
+														<th>청구개시일</th>
+														<td></td>
+														<th>청구종료일</th>
+														<td></td>
+													</tr>
+													<tr>
+														<th>처리일자</th>
+														<td></td>
+														<th>처리방식</th>
+														<td colspan="5"></td>
+													</tr>
+												</tbody>
+											</table>
+							
+											<h5 class="subst">APL 자동이체 변경이력</h5>
+											<table summary="계좌구분, 약정액, 약정이체일, 청구개시일, 청구종료일, 처리일자, 처리자, 비고등 자동이체 변경이력정보리스트를 제공합니다." width="100%" class="listTable">
+												<caption>PL 자동이체 변경이력</caption>
+												<colgroup>
+													<col width="10%" />
+													<col width="*" />
+													<col width="10%" />
+													<col width="10%" />
+													<col width="10%" />
+													<col width="10%" />
+													<col width="10%" />
+													<col width="10%" />
+												</colgroup>
+												<thead>
+												<tr>
+													<th scope="col">계좌구분</th>
+													<th scope="col">약정액</th>
+													<th scope="col">약정이체일</th>
+													<th scope="col">청구개시일</th>
+													<th scope="col">청구종료일</th>
+													<th scope="col">처리일자</th>
+													<th scope="col">처리자</th>
+													<th scope="col">비고</th>
+												</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td></td>
+														<td></td>
+														<td></td>
+														<td></td>
+														<td></td>
+														<td></td>
+														<td></td>
+														<td></td>
+													</tr>
+												</tbody>
+											</table>
+											
+										</div>
+									</div>
+								</div>
+								<div id="automCnt3" class="tabCont">
+									<table summary="약정액, 약정기간등 추가납입자동이체정보제공" width="100%" class="table3">
+										<caption>추가납입자동이체</caption>
+										<colgroup>
+											<col width="15%" />
+											<col width="35%" />
+											<col width="15%" />
+											<col width="*" />
+										</colgroup>
+										<tbody>
+											<tr>
+												<th>약정액</th>
+												<td></td>
+												<th>약정기간</th>
+												<td></td>
+											</tr>
+										</tbody>
+									</table>
+						
+									<h5 class="subst">추가납입 보험료 자동이체 변경이력</h5>
+									<table summary="접수일, 약정액, 이체일, 약정기간, 처리일자, 삭제로그, 처리자등 추가납입 보험료 자동이체 변경이력에대한 정보를 제공합니다." width="100%" class="listTable">
+										<caption>추가납입 보험료 자동이체 변경이력</caption>
+										<colgroup>
+											<col width="10%" />
+											<col width="*" />
+											<col width="10%" />
+											<col width="15%" />
+											<col width="15%" />
+											<col width="15%" />
+											<col width="15%" />
+										</colgroup>
+										<thead>
+										<tr>
+											<th scope="col">접수일</th>
+											<th scope="col">약정액</th>
+											<th scope="col">이체일</th>
+											<th scope="col">약정기간</th>
+											<th scope="col">처리일자</th>
+											<th scope="col">삭제로그</th>
+											<th scope="col">처리자</th>
+										</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td></td>
+												<td></td>
+												<td></td>
+												<td></td>
+												<td></td>
+												<td></td>
+												<td></td>
+											</tr>
+											<tr>
+												<td></td>
+												<td></td>
+												<td></td>
+												<td></td>
+												<td></td>
+												<td></td>
+												<td></td>
+											</tr>
+										</tbody>
+									</table>
+									
+									
+						
+						
+						
+								</div>
+									
+									
+						
+							</div>
+						
+						</div>
+					</li>
+					<li>
+						<div class="add">
+							<h4 class="hide-element">환급금/대출/중도인출</h4>
+							<ul class="txtTab attab pt5">
+								<li class="active"><a href="#loanCnt1">환급금</a></li>
+								<li><a href="#loanCnt2">대출</a></li>
+								<li><a href="#loanCnt3">중도인출</a></li>
+							</ul>
+							<div class="loanWrap">
+								<div id="loanCnt1" class="tabCont">
+									<table summary="자동이체를 위한 상세정보를 제공합니다." width="100%" class="table3">
+										<caption>자동이체</caption>
+										<colgroup>
+											<col width="12%" />
+											<col width="13%" />
+											<col width="12%" />
+											<col width="13%" />
+											<col width="12%" />
+											<col width="13%" />
+											<col width="12%" />
+											<col width="*" />
+										</colgroup>
+										<tbody>
+											<tr>
+												<th>수금방법</th>
+												<td>자동이체</td>
+												<th>납입주기</th>
+												<td>월납</td>
+												<th>계좌 최종 등록/변경일</th>
+												<td></td>
+												<th>미입금사유</th>
+												<td></td>
+											</tr>
+											<tr>
+												<th>예금주/주민번호</th>
+												<td></td>
+												<th>납주보험료</th>
+												<td></td>
+												<th>최종납입 월/회</th>
+												<td></td>
+												<th>선납보험료</th>
+												<td></td>
+											</tr>
+											<tr>
+												<th>은행/계좌번호</th>
+												<td></td>
+												<th>자동이체보험료</th>
+												<td></td>
+												<th>최종청구일/월분</th>
+												<td></td>
+												<th>선수보험료</th>
+												<td></td>
+											</tr>
+											<tr>
+												<th>이체일</th>
+												<td></td>
+												<th>차기납입일</th>
+												<td></td>
+												<th>최종입금일</th>
+												<td></td>
+												<th>가수보험료</th>
+												<td></td>
+											</tr>
+										</tbody>
+									</table>
+									<h5 class="subst">계좌변경 이력</h5>
+									<table summary="은행,계좌번호, 처리자 구분등 계좌변경이력 등에 대한정보를 제공합니다." width="100%" class="listTable">
+										<caption>계좌변경이력</caption>
+										<colgroup>
+											<col width="10%" />
+											<col width="10%" />
+											<col width="10%" />
+											<col width="10%" />
+											<col width="10%" />
+											<col width="10%" />
+											<col width="10%" />
+											<col width="10%" />
+											<col width="10%" />
+											<col width="*" />
+										</colgroup>
+										<thead>
+										<tr>
+											<th scope="col">은행</th>
+											<th scope="col">계좌번호</th>
+											<th scope="col">처리자</th>
+											<th scope="col">구분</th>
+											<th scope="col">이체일</th>
+											<th scope="col">신청장소</th>
+											<th scope="col">신청일</th>
+											<th scope="col">완료일</th>
+											<th scope="col">예금주</th>
+											<th scope="col">결과</th>
+										</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>국민은행</td>
+												<td>4317613*****</td>
+												<td>김승헌</td>
+												<td>신청</td>
+												<td>2014.02.24</td>
+												<td>회사</td>
+												<td>2014.02.24</td>
+												<td>2014.02.24</td>
+												<td>김승헌</td>
+												<td>정상반영</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<div id="loanCnt2" class="tabCont">
+									<div class="RdWrap">
+										<div class="automRadio RdTab">
+											<input type="radio" checked="checked" name="auto" id="pl1" />
+											<label for="pl1">PL</label>
+											<input type="radio" name="auto" id="apl1" />
+											<label for="apl1">APL</label>
+										</div>
+																
+										<div class="RdTabCont1">
+											<span class="unit"><em>조회기준일 : 2014-03-24</em><a class="carendar" href="#"> &nbsp; <span class="cdr">23</span></a></span>
+											<table summary="순대출한도액, 기대출원리금,현재대출가능액등 이자납부기일등 대출리스트정보를 제공합니다." width="100%" class="table3">
+												<caption>대출상세리스트</caption>
+												<colgroup>
+													<col width="8%" />
+													<col width="10%" />
+													<col width="10%" />
+													<col width="10%" />
+													<col width="10%" />
+													<col width="10%" />
+													<col width="10%" />
+													<col width="10%" />
+													<col width="10%" />
+													<col width="*" />
+												</colgroup>
+												<thead>
+													<tr>
+														<th scope="col">순대출한도액</th>
+														<th scope="col">PL대출원금</th>
+														<th scope="col">PL대출이자</th>
+														<th scope="col">APL대출원금</th>
+														<th scope="col">APL대출이자</th>
+														<th scope="col">기대출원리금</th>
+														<th scope="col">현재대출가능액</th>
+														<th scope="col">실제지급가능액</th>
+														<th scope="col">대출이율</th>
+														<th scope="col">이자납부기일<br />(원금+이자 합산예정일)</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td></td>
+														<td></td>
+														<td></td>
+														<td></td>
+														<td></td>
+														<td></td>
+														<td></td>
+														<td></td>
+														<td></td>
+														<td></td>
+													</tr>
+													<tr>
+														<td></td>
+														<td></td>
+														<td></td>
+														<td></td>
+														<td></td>
+														<td></td>
+														<td></td>
+														<td></td>
+														<td></td>
+														<td></td>
+													</tr>
+																
+												</tbody>
+											</table>
+																
+											<h5 class="subst">PL 자동이체 변경이력</h5>
+											<table summary="계좌구분, 약정액, 약정이체일, 청구개시일, 청구종료일, 처리일자, 처리자, 비고등 자동이체 변경이력정보리스트를 제공합니다." width="100%" class="listTable">
+												<caption>PL 자동이체 변경이력</caption>
+												<colgroup>
+													<col width="10%" />
+													<col width="*" />
+													<col width="10%" />
+													<col width="10%" />
+													<col width="10%" />
+													<col width="10%" />
+													<col width="10%" />
+													<col width="10%" />
+												</colgroup>
+												<thead>
+												<tr>
+													<th scope="col">계좌구분</th>
+													<th scope="col">약정액</th>
+													<th scope="col">약정이체일</th>
+													<th scope="col">청구개시일</th>
+													<th scope="col">청구종료일</th>
+													<th scope="col">처리일자</th>
+													<th scope="col">처리자</th>
+													<th scope="col">비고</th>
+												</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td></td>
+														<td></td>
+														<td></td>
+														<td></td>
+														<td></td>
+														<td></td>
+														<td></td>
+														<td></td>
+													</tr>
+												</tbody>
+											</table>
+											
+										</div>
+										<div class="RdTabCont2">
+											<h5 class="subst">APL 자동이체</h5>
+											<table summary="APL 자동이체를 위한 상세정보를 제공합니다." width="100%" class="table3">
+												<caption>APL자동이체</caption>
+												<colgroup>
+													<col width="12%" />
+													<col width="13%" />
+													<col width="12%" />
+													<col width="13%" />
+													<col width="12%" />
+													<col width="13%" />
+													<col width="12%" />
+													<col width="*" />
+												</colgroup>
+												<tbody>
+													<tr>
+														<th>APL 원리금</th>
+														<td></td>
+														<th>APL 원금</th>
+														<td></td>
+														<th>APL이자</th>
+														<td></td>
+														<th>계좌구분</th>
+														<td></td>
+													</tr>
+													<tr>
+														<th>약정액</th>
+														<td></td>
+														<th>이체일</th>
+														<td></td>
+														<th>청구개시일</th>
+														<td></td>
+														<th>청구종료일</th>
+														<td></td>
+													</tr>
+													<tr>
+														<th>약정액</th>
+														<td></td>
+														<th>이체일</th>
+														<td></td>
+														<th>청구개시일</th>
+														<td></td>
+														<th>청구종료일</th>
+														<td></td>
+													</tr>
+													<tr>
+														<th>처리일자</th>
+														<td></td>
+														<th>처리방식</th>
+														<td colspan="5"></td>
+													</tr>
+												</tbody>
+											</table>
+																
+											<h5 class="subst">APL 자동이체 변경이력</h5>
+											<table summary="계좌구분, 약정액, 약정이체일, 청구개시일, 청구종료일, 처리일자, 처리자, 비고등 자동이체 변경이력정보리스트를 제공합니다." width="100%" class="listTable">
+												<caption>PL 자동이체 변경이력</caption>
+												<colgroup>
+													<col width="10%" />
+													<col width="*" />
+													<col width="10%" />
+													<col width="10%" />
+													<col width="10%" />
+													<col width="10%" />
+													<col width="10%" />
+													<col width="10%" />
+												</colgroup>
+												<thead>
+												<tr>
+													<th scope="col">계좌구분</th>
+													<th scope="col">약정액</th>
+													<th scope="col">약정이체일</th>
+													<th scope="col">청구개시일</th>
+													<th scope="col">청구종료일</th>
+													<th scope="col">처리일자</th>
+													<th scope="col">처리자</th>
+													<th scope="col">비고</th>
+												</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td></td>
+														<td></td>
+														<td></td>
+														<td></td>
+														<td></td>
+														<td></td>
+														<td></td>
+														<td></td>
+													</tr>
+												</tbody>
+											</table>
+											
+										</div>
+									</div>
+								</div>
+								<div id="loanCnt3" class="tabCont">
+									<table summary="약정액, 약정기간등 추가납입자동이체정보제공" width="100%" class="table3">
+										<caption>추가납입자동이체</caption>
+										<colgroup>
+											<col width="15%" />
+											<col width="35%" />
+											<col width="15%" />
+											<col width="*" />
+										</colgroup>
+										<tbody>
+											<tr>
+												<th>약정액</th>
+												<td></td>
+												<th>약정기간</th>
+												<td></td>
+											</tr>
+										</tbody>
+									</table>
+						
+									<h5 class="subst">추가납입 보험료 자동이체 변경이력</h5>
+									<table summary="접수일, 약정액, 이체일, 약정기간, 처리일자, 삭제로그, 처리자등 추가납입 보험료 자동이체 변경이력에대한 정보를 제공합니다." width="100%" class="listTable">
+										<caption>추가납입 보험료 자동이체 변경이력</caption>
+										<colgroup>
+											<col width="10%" />
+											<col width="*" />
+											<col width="10%" />
+											<col width="15%" />
+											<col width="15%" />
+											<col width="15%" />
+											<col width="15%" />
+										</colgroup>
+										<thead>
+										<tr>
+											<th scope="col">접수일</th>
+											<th scope="col">약정액</th>
+											<th scope="col">이체일</th>
+											<th scope="col">약정기간</th>
+											<th scope="col">처리일자</th>
+											<th scope="col">삭제로그</th>
+											<th scope="col">처리자</th>
+										</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td></td>
+												<td></td>
+												<td></td>
+												<td></td>
+												<td></td>
+												<td></td>
+												<td></td>
+											</tr>
+											<tr>
+												<td></td>
+												<td></td>
+												<td></td>
+												<td></td>
+												<td></td>
+												<td></td>
+												<td></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="add">
+							<h4 class="hide-element">지급이력</h4>
+							<table summary="지급유형" class="table1">
+								<caption>지급유형</caption>
+								<colgroup>
+									<col width="20%" />
+									<col width="*" />
+								</colgroup>
+								<tbody>
+									<tr>
+										<th class="tac">지급유형</th>
+										<td>
+											<span class="fLset">
+												<input type="radio" id="rs1" /><label for="rs1">전체</label>
+												<input type="radio" id="rs2" /><label for="rs2">대출</label>
+												<input type="radio" id="rs3" /><label for="rs3">연금</label>
+												<input type="radio" id="rs4" /><label for="rs4">보험금</label>
+												<input type="radio" id="rs5" />x<label for="rs5">기타</label>
+											</span>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+
+							<table summary="지급유형별 리스트정보제공" class="listTable mt10">
+								<caption>지급유형별 리스트</caption>
+								<colgroup>
+									<col width="5%" />
+									<col width="9%" />
+									<col width="9%" />
+									<col width="9%" />
+									<col width="9%" />
+									<col width="9%" />
+									<col width="9%" />
+									<col width="9%" />
+									<col width="*" />
+									<col width="9%" />
+									<col width="9%" />
+								</colgroup>
+								<thead>
+									<tr>
+										<th scope="col">번호</th>
+										<th scope="col">접수일</th>
+										<th scope="col">처리일</th>
+										<th scope="col">송금일</th>
+										<th scope="col">지급금유형</th>
+										<th scope="col">지급종류</th>
+										<th scope="col">실지급금</th>
+										<th scope="col">은행</th>
+										<th scope="col">계좌번호</th>
+										<th scope="col">예금주</th>
+										<th scope="col">상태</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</li>
+					<li>
+						<div class="add">
+							<h4 class="hide-element">계약변경이력</h4>
+							<table summary="계약변경이력리스트정보를 제공합니다." class="listTable">
+								<caption>계약변경이력리스트</caption>
+								<colgroup>
+									<col width="20%" />
+									<col width="20%" />
+									<col width="20%" />
+									<col width="20%" />
+									<col width="*" />
+								</colgroup>
+								<thead>
+									<tr>
+										<th scope="col">변경일(유효일)</th>
+										<th scope="col">변경일(처리일)</th>
+										<th scope="col">변경종류</th>
+										<th scope="col">변경전</th>
+										<th scope="col">변경후</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+									</tr>
+								</tbody>
+							</table>
+
+						</div>
+					</li>
+					<li>
+						<div class="add">
+							<h4 class="hide-element">변액보험</h4>
+							<!-- 저축상품일경우 -->
+							<div class="unitWrap">
+								<div class="varInsur">
+									<table summary="투자성향, 만기일등의 정보를 제공합니다." width="100%" class="table3">
+										<caption>투자성향만기일</caption>
+										<colgroup>
+											<col width="25%" />
+											<col width="25%" />
+											<col width="25%" />
+											<col width="*" />
+										</colgroup>
+										<tbody>
+											<tr>
+												<th>투자성향</th>
+												<td>안정형(고위험작성)</td>
+												<th>만기일</th>
+												<td>2014-03-24</td>
+											</tr>
+										</tbody>
+									</table>
+									<a href="#none" class="btn smGnR">필드변경내역</a>
+									<a href="#none" class="btn smGnR">변액보험펀드설명서</a>
+								</div>
+
+								<span class="unit"><em>조회기준일 : <input type="text" value="2014-03-24" /></em><a href="#" class="carendar"> &nbsp; <span class="cdr">23</span></a></span>
+							</div>
+
+							<table summary="변액저축보험종류별 상세리스트 정보를 제공합니다." width="100%" class="listTable mt10">
+								<caption>변액저축보험상품</caption>
+								<colgroup>
+									<col width="9%" />
+									<col width="8%" />
+									<col width="9%" />
+									<col width="8%" />
+									<col width="*" />
+									<col width="12%" />
+									<col width="17%" />
+									<col width="12%" />
+									<col width="8%" />
+								</colgroup>
+								<thead>
+								<tr>
+									<th scope="col">펀드종류</th>
+									<th scope="col">현재투입비율</th>
+									<th scope="col">펀드좌당기준가</th>
+									<th scope="col">보유좌수</th>
+									<th scope="col">납입 주계약 보험료 합계(A)</th>
+									<th scope="col">차감금액(B)*</th>
+									<th scope="col">특별계정 투입금액(A-B)</th>
+									<th scope="col">계약자적립금(C)</th>
+									<th scope="col">적립률</th>
+								</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>주식혼합형</td>
+										<td>70%</td>
+										<td>1333.9</td>
+										<td>5,000</td>
+										<td rowspan="7">5,800,000</td>
+										<td rowspan="7">200,000</td>
+										<td rowspan="7">5,000,000</td>
+										<td rowspan="7">5,000,000</td>
+										<td rowspan="7">99.99%</td>
+									</tr>
+									<tr>
+										<td>주식혼합형</td>
+										<td>70%</td>
+										<td>1333.9</td>
+										<td>5,000</td>
+									</tr>
+									<tr>
+										<td>주식혼합형</td>
+										<td>70%</td>
+										<td>1333.9</td>
+										<td>5,000</td>
+									</tr>
+									<tr>
+										<td>주식혼합형</td>
+										<td>70%</td>
+										<td>1333.9</td>
+										<td>5,000</td>
+									</tr>
+									<tr>
+										<td>주식혼합형</td>
+										<td>70%</td>
+										<td>1333.9</td>
+										<td>5,000</td>
+									</tr>
+									<tr>
+										<td>주식혼합형</td>
+										<td>70%</td>
+										<td>1333.9</td>
+										<td>5,000</td>
+									</tr>
+									<tr>
+										<td>주식혼합형</td>
+										<td>70%</td>
+										<td>1333.9</td>
+										<td>5,000</td>
+									</tr>
+
+								</tbody>
+							</table>
+							
+							<div class="varInsurBox">
+								<ol class="footNote">
+									<li><span>1)</span> 납입 주계약보험료 합계(A)는 주계약 기본보험료와 추가납입료를 합산한 금액입니다.</li>
+									<li><span>2)</span> 차감금액(B)은 사업비와 위험보험료가 포함된 금액입니다.</li>
+									<li><span>3)</span> 납입한 보험료 중 위험보험료, 사업비 및 특약보험료를 차감한 후 특별계정으로 투입 운용되며, 계약자 적립금은 특별계정 수익률에 따라 변동됩니다.</li>
+									<li><span>4)</span> 적립률(%)은 납입 주계약 보험료 합계 대비 계약자 적립금의 비율이며, 중도인출, 보험계약대출 잔액이 있는 계약의 적립률은 (계약자적립금액(C) +중도인출금액 + 보험계약대출적립금)/납입주계약보험료 합계(A)로 계산된 비율입니다.</li>
+									
+								</ol>
+							</div>
+
+							<table summary="납입보헙료 합계, 해지환급금, 특별계정투입금액등의 정보를 제공합니다." width="100%" class="listTable mt10">
+								<caption>납입보험료합계</caption>
+								<colgroup>
+									<col width="25%" />
+									<col width="30%" />
+									<col width="30%" />
+									<col width="*" />
+								</colgroup>
+								<thead>
+								<tr>
+									<th scope="col" rowspan="2">납입보험료 합계 <br />(특약포함) (A)</th>
+									<th scope="col" colspan="2">해지환급금</th>
+									<th scope="col" rowspan="2">특별계정투입금액</th>
+								</tr>
+								<tr>
+									<th scope="col" class="bgn lineY">금액(B)</th>
+									<th scope="col" class="bgn">환급률</th>
+								</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>5,800,000</td>
+										<td>5,000,000</td>
+										<td>99.99%</td>
+										<td>5,000,000</td>
+									</tr>
+									<tr>
+										<td>5,800,000</td>
+										<td>5,000,000</td>
+										<td>99.99%</td>
+										<td>5,000,000</td>
+									</tr>
+									<tr>
+										<td>5,800,000</td>
+										<td>5,000,000</td>
+										<td>99.99%</td>
+										<td>5,000,000</td>
+									</tr>
+									<tr>
+										<td>5,800,000</td>
+										<td>5,000,000</td>
+										<td>99.99%</td>
+										<td>5,000,000</td>
+									</tr>
+									<tr>
+										<td>5,800,000</td>
+										<td>5,000,000</td>
+										<td>99.99%</td>
+										<td>5,000,000</td>
+									</tr>
+								</tbody>
+							</table>
+
+							<div class="varInsurBox">
+								<ol class="footNote">
+									<li><span>1)</span> 납입보험료 합계(특약포함) (A) 금액은 주계약 기본보험료와 특약보험료, 추가납입보험료를 합산한 금액입니다.</li>
+									<li><span>2)</span> 납입보험료 중 위험보험료, 사업비 및 특약보험료를 차감한 후 특별계정으로 투입 운용되며, 중도해지시에는 특별계정 적립금에서 미상각신계약비(해지공제액)를 차감하므로 해지환급금은 <br /> 납입보험료보다 적거나 없을 수도 있으며, 특별계정 수익률에 따라 변동합니다.</li>
+									<li><span>3)</span> 해지환급금 금액(B) 은 기준일 현재 해지를 가정할 경우 환급 가능한 금액으로, 주계약 및 특약의 해지환급금을 합산한 금액입니다. 단, 보험계약대출 잔액이 있는 계약의 해지시에는 해지환급금에서<br /> 보험계약대출 원리금을 차감하여 지급합니다</li>
+									<li><span>4)</span> 환급률(%)은 납입보험료 합계금액(특약포함)(A) 대비 해지환급금(B) 의 비율이며 중도인출 금액이 있는 계약의 환급률은 ‘(해지환급금(B)+중도인출금액/납입보험료합계(특약포함(A))’로 계산된 <br /> 비율입니다</li>
+									
+								</ol>
+							</div>
+
+							<!-- 저축상품이 아닐경우 
+							<div class="unitWrap">
+								<span class="unit"><em>조회기준일 : <input type="text" value="2014-03-24" /></em><a href="#" class="carendar"> &nbsp; <span class="cdr">23</span></a></span>
+							</div>
+							<table summary="펀드명, 펀드명, 펀드좌당 기준가, 보유좌수, 계약자적립금, 해지환급금등 변액보험리스트" width="100%" class="listTable mt10">
+								<caption>변액보험리스트</caption>
+								<colgroup>
+									<col width="16%" />
+									<col width="17%" />
+									<col width="16%" />
+									<col width="17%" />
+									<col width="16%" />
+									<col width="*" />
+								</colgroup>
+								<thead>
+								<tr>
+									<th scope="col">펀드명</th>
+									<th scope="col">펀드명</th>
+									<th scope="col">펀드좌당 기준가</th>
+									<th scope="col">보유좌수</th>
+									<th scope="col">계약자적립금</th>
+									<th scope="col">해지환급금</th>
+								</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>혼합형</td>
+										<td>70%</td>
+										<td>1333.9</td>
+										<td>5,000</td>
+										<td>5,800,000</td>
+										<td>200,000</td>
+									</tr>
+									<tr>
+										<td>혼합형</td>
+										<td>70%</td>
+										<td>1333.9</td>
+										<td>5,000</td>
+										<td>5,800,000</td>
+										<td>200,000</td>
+									</tr>
+									<tr>
+										<td>혼합형</td>
+										<td>70%</td>
+										<td>1333.9</td>
+										<td>5,000</td>
+										<td>5,800,000</td>
+										<td>200,000</td>
+									</tr>
+									<tr>
+										<td>혼합형</td>
+										<td>70%</td>
+										<td>1333.9</td>
+										<td>5,000</td>
+										<td>5,800,000</td>
+										<td>200,000</td>
+									</tr>
+									<tr>
+										<td>혼합형</td>
+										<td>70%</td>
+										<td>1333.9</td>
+										<td>5,000</td>
+										<td>5,800,000</td>
+										<td>200,000</td>
+									</tr>
+									<tr>
+										<td>혼합형</td>
+										<td>70%</td>
+										<td>1333.9</td>
+										<td>5,000</td>
+										<td>5,800,000</td>
+										<td>200,000</td>
+									</tr>
+									<tr>
+										<td>혼합형</td>
+										<td>70%</td>
+										<td>1333.9</td>
+										<td>5,000</td>
+										<td>5,800,000</td>
+										<td>200,000</td>
+									</tr>
+									<tr>
+										<td>혼합형</td>
+										<td>70%</td>
+										<td>1333.9</td>
+										<td>5,000</td>
+										<td>5,800,000</td>
+										<td>200,000</td>
+									</tr>
+									<tr>
+										<td>혼합형</td>
+										<td>70%</td>
+										<td>1333.9</td>
+										<td>5,000</td>
+										<td>5,800,000</td>
+										<td>200,000</td>
+									</tr>
+								</tbody>
+							</table>-->
+						</div>
+					</li>
+					<li>
+						<div class="add">
+							<h4 class="hide-element">연금</h4>
+							<div class="btnWrap">
+								<h5 class="btnL">관련계약사항 (조회기준일 : 2013-11-14)</h5>
+								<a href="#" class="btn smGnR">일시연금조회</a>
+							</div>
+							<table summary="계약자, 계약일, 공시이율, 피보험자등 관련계약사항정보제공" width="100%" class="table3">
+								<caption>관련계약사항</caption>
+								<colgroup>
+									<col width="14%" />
+									<col width="10%" />
+									<col width="10%" />
+									<col width="15%" />
+									<col width="18%" />
+									<col width="*" />
+									<col width="14%" />
+								</colgroup>
+								<tbody>
+									<tr>
+										<th>계약자</th>
+										<td>김승헌</td>
+										<td></td>
+										<th>계약일</th>
+										<td></td>
+										<th>공시이율</th>
+										<td></td>
+									</tr>
+									<tr>
+										<th>피보험자</th>
+										<td></td>
+										<td></td>
+										<th>보험종류</th>
+										<td></td>
+										<th>연금개시연력/개시일자</th>
+										<td></td>
+									</tr>
+									<tr>
+										<th>종피보험자</th>
+										<td></td>
+										<td></td>
+										<th>가입금액</th>
+										<td></td>
+										<th>자유설계노후자금개시연령 개시일자</th>
+										<td></td>
+									</tr>
+									<tr>
+										<th>만기/연금수익자</th>
+										<td></td>
+										<td></td>
+										<th>연금대출옵션선택</th>
+										<td></td>
+										<th>연금지급주기</th>
+										<td></td>
+									</tr>
+									<tr>
+										<th>상해수익자</th>
+										<td></td>
+										<td></td>
+										<th>최종생존사실확인일</th>
+										<td></td>
+										<th>다음연금지금일</th>
+										<td></td>
+									</tr>
+									<tr>
+										<th>사망수익자</th>
+										<td></td>
+										<td></td>
+										<th>연금지급계좌</th>
+										<td></td>
+										<th>예금주</th>
+										<td></td>
+									</tr>
+									<tr>
+										<th>사망수익자</th>
+										<td></td>
+										<td></td>
+										<th>연금형태1(비율)</th>
+										<td></td>
+										<th>연금형태1연금상태</th>
+										<td></td>
+									</tr>
+									<tr>
+										<th>사망수익자</th>
+										<td></td>
+										<td></td>
+										<th>연금형태2(비율)</th>
+										<td></td>
+										<th>연금형태2연금상태</th>
+										<td></td>
+									</tr>
+									<tr>
+										<th>사망수익자</th>
+										<td></td>
+										<td></td>
+										<th>일시납/적립형</th>
+										<td></td>
+										<th></th>
+										<td></td>
+									</tr>
+								</tbody>
+							</table>
+							
+							<table summary="연금적립예정액 조회옵션정보" width="100%" class="table3 mt10">
+								<caption>연금적립예정액</caption>
+								<colgroup>
+									<col width="12%" />
+									<col width="13%" />
+									<col width="12%" />
+									<col width="13%" />
+									<col width="12%" />
+									<col width="13%" />
+									<col width="12%" />
+									<col width="*" />
+								</colgroup>
+								<tbody>
+									<tr>
+										<th>연금기준적립액<br />조회옵션</th>
+										<td>
+											<span class="selectFull">
+												<select title="연금적립예정액선택">
+													<option>최저연금적립액</option>
+													<option></option>
+												</select>
+											</span>
+										</td>
+										<th>연금형태1</th>
+										<td>
+											<span class="selectFull">
+												<select title="연금형태선택
+												">
+													<option>확정형 5년</option>
+													<option></option>
+												</select>
+											</span>
+										</td>
+										<th>연금지급주기</th>
+										<td>
+											<span class="selectFull">
+												<select title="연금지급주기선택">
+													<option>월지급</option>
+													<option></option>
+												</select>
+											</span>
+										</td>
+										<th>개시 후 연금액 <br />적용이율</th>
+										<td>
+											<span class="selectFull">
+												<select title="개시후 연금액 적용이율 선택">
+													<option>공시이율</option>
+													<option></option>
+												</select>
+											</span>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							<div class="btnWrap">
+								<a href="#" class="btn lgBeR">연금조회</a>
+							</div>
+
+							<table summary="연금적립예정액 조회 정보제공" width="100%" class="table3">
+								<caption>연금예정액조회결과</caption>
+								<colgroup>
+									<col width="15%" />
+									<col width="15%" />
+									<col width="12%" />
+									<col width="14%" />
+									<col width="14%" />
+									<col width="14%" />
+									<col width="*" />
+								</colgroup>
+								<tbody>
+									<th rowspan="2">구분</th>
+									<th>연금형태</th>
+									<th></th>
+									<th>지급예정일</th>
+									<th>연금액</th>
+									<th>대출공제 후 연금액</th>
+									<th>적용이율</th>
+								</tr>
+								<tr>
+									<th class="lineY">보증기간부 종신 10년</th>
+									<th>최초발생연금</th>
+									<td>2014-03-26</td>
+									<td>1,000,000</td>
+									<td>1,000,000</td>
+									<td>1,000,000</td>
+								</tr>
+								<tr>
+									<th>연금적립예정액</th>
+									<td>10,000,000</td>
+									<td class="grbg"></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+								</tr>
+								<tr>
+									<th>기대출원리금</th>
+									<td>10,000,000</td>
+									<td class="grbg"></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+								</tr>
+								<tr>
+									<th>공제 후 연금 적립액</th>
+									<td>10,000,000</td>
+									<td class="grbg"></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+								</tr>
+								<tr>
+									<th>예상만기보험금</th>
+									<td class="grbg"></td>
+									<th>차기년도</th>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+								</tr>
+								</tbody>
+							</table>
+							<div class="btnWrap">
+								<a href="#" class="btn lgBeR">연금세부액조회</a>
+							</div>
+
+							
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<!-- //공통 컨텐츠 -->
+		<script type="text/javascript">
+			//<![CDATA[
+			var pobj = $('.add');
+			curex.ui.init(pobj);  // tab 데이터가 삭제되기전에 obj에 담아놓음.	
+			var myTab = ci.tab.init($('.PersonCont')); // 고객정보탭
+			var myTab1 = ci.tab.init($('.tabOutline')); // 
+			var myTab2 = ci.tab.init($('.ctInfoWrap')); // 
+			//]]>
+		</script>
+	
+	
+		<!-- CHECKLIST -->
+		<div id="checkList">
+			<ul class="list">
+				<li><a href="#none" class="on">내그룹 지정</a></li>
+				<li><a href="#none">방문패키지출력</a></li>
+				<li><a href="#none">전화</a></li>
+				<li><a href="#none">SMS</a></li>
+				<li><a href="#none">E-Mail</a></li>
+				<li><a href="#none">LP 소식지</a></li>
+				<li><a href="#none">DM</a></li>
+			</ul>
+		</div>
+		<!-- //CHECKLIST -->
+	<div>
+</div>
+<!-- FOOTER -->
+<div id="footer">
+	<div class="fter">
+		<img src="/img/common/img_footer.jpg" alt="" />
+	</div>
+</div>
+<!--//FOOTER -->
+
+
+</body>
+</html>

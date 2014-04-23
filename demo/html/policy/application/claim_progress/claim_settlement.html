@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<head>
+<title> 보험금지급진행사항 </title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
+<link rel="stylesheet" href="/WEB-APP/webponent/css/common.css" type="text/css" />
+<link rel="stylesheet" href="/css/curex.common.css" type="text/css" />
+<link rel="stylesheet" href="/css/curex.layout.css" type="text/css" />
+<link rel="stylesheet" href="/css/curex.sub.css" type="text/css" />
+<link rel="stylesheet" href="/WEB-APP/webponent/dialog/css/dialog.css" type="text/css" />
+<script type="text/javascript" src="/WEB-APP/webponent/ci/agent.js"></script>
+<script type="text/javascript" src="/WEB-APP/webponent/thirdParty/jquery/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="/WEB-APP/webponent/thirdParty/jquery/jquery-ui-1.10.3.min.js"></script>
+<script type="text/javascript" src="/WEB-APP/webponent/tab/tab.js"></script>
+<script type="text/javascript" src="/WEB-APP/webponent/dialog/dialog.js"></script>
+<script type="text/javascript" src="/js/popup.js"></script>
+<script type="text/javascript" src="/js/curex.ui.js"></script>
+</head>
+<body>
+
+<div id="wrap">
+	<!-- HEADER -->
+	<div id="header">
+		<img src="/img/common/img_header.jpg" alt="" />
+	</div>
+	<!-- //HEADER -->
+		
+	<div id="conteiner">
+		<div class="hgroup">
+			<h2>보험금지급진행사항</h2>
+			<ul class="location">
+				<li><a href="#none">홈&nbsp;</a>&gt;</li>
+				<li><a href="#none">&nbsp;계약&nbsp;</a>&gt;</li>
+				<li><a href="#none">&nbsp;보험금지급진행사항 &nbsp;</a></li>
+			</ul>
+		</div>
+
+		<!-- 공통 컨텐츠 -->
+		<div id="contents" class="contartWrap clear-fix">
+			<table summary="구분, 기간, 조건, 청구사유등 보험" width="100%" class="table1">
+				<caption>보험금지급진행사항조회</caption>
+				<colgroup>
+					<col width="6%" />
+					<col width="11%" />
+					<col width="6%" />
+					<col width="*" />
+					<col width="6%" />
+					<col width="16%" />
+					<col width="6%" />
+					<col width="23%" />
+				</colgroup>
+				<tbody>
+					<tr>
+						<th>구분</th>
+						<td>
+							<select style="width:104px;" style="지점선택">
+								<option>완료</option>
+							</select>
+						</td>
+						<th>기간</th>
+						<td>
+							<input type="text" style="width:95px">
+							<a href="#" class="carendar"><span class="cdr">23</span>
+							~
+							<input type="text" style="width:95px">
+							</a><a href="#" class="carendar"><span class="cdr">23</span></a> 
+						</td>
+						<th>조건</th>
+						<td>
+							<select style="width:153px;" style="팀선택">
+								<option>완료</option>
+							</select>
+						<th>청구사유</th>
+						<td>
+							<select style="width:224px;" style="LP선택">
+								<option>완료</option>
+							</select>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<div class="btnWrap">
+				<a href="#" class="btn lgBeR">검색</a>
+			</div>
+
+			<table summary="검색결과 리스트" class="listTable result" width="100%">
+				<caption>검색결과리스트</caption>
+				<colgroup>
+					<col width="5%" />
+					<col width="*" />
+					<col width="13%" />
+					<col width="11%" />
+					<col width="11%" />
+					<col width="15%" />
+					<col width="15%" />
+					<col width="15%" />
+				</colgroup>
+				<thead>
+				<tr>
+					<th scope="col">번호</th>
+					<th scope="col">피보험자명</th>
+					<th scope="col">증권번호</th>
+					<th scope="col">청구사유</th>
+					<th scope="col">접수일</th>
+					<th scope="col">지급일</th>
+					<th scope="col">접수번호</th>
+					<th scope="col">처리상태</th>
+				</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>5</td>
+						<td>홍길동</td>
+						<td>1234567890</td>
+						<td>암진단</td>
+						<td>2014-02-24</td>
+						<td>2014-02-24</td>
+						<td></td>
+						<td>완료</td>
+					</tr>
+					<tr>
+						<td>4</td>
+						<td>홍길동</td>
+						<td>1234567890</td>
+						<td>암진단</td>
+						<td>2014-02-24</td>
+						<td>2014-02-24</td>
+						<td></td>
+						<td>조사진행</td>
+					</tr>
+					<tr>
+						<td>3</td>
+						<td>홍길동</td>
+						<td>1234567890</td>
+						<td>암진단</td>
+						<td>2014-02-24</td>
+						<td>2014-02-24</td>
+						<td></td>
+						<td>완료</td>
+					</tr>
+					<tr>
+						<td>2</td>
+						<td>홍길동</td>
+						<td>1234567890</td>
+						<td>암진단</td>
+						<td>2014-02-24</td>
+						<td>2014-02-24</td>
+						<td></td>
+						<td>완료</td>
+					</tr>
+					<tr>
+						<td>1</td>
+						<td>홍길동</td>
+						<td>1234567890</td>
+						<td>암진단</td>
+						<td>2014-02-24</td>
+						<td>2014-02-24</td>
+						<td></td>
+						<td>완료</td>
+					</tr>
+				</tbody>
+			</table>
+			<p class="footNote"><span>*</span>신계약 모니터링을 위해 상담사에게 전달하고자 하는 메시지가 있으실 경우 해당 항목을 클릭 후 요청 사항을 작성해주시기 바랍니다.</p>
+
+			<h3>처리상태</h3>
+			<div class="ctInfoWrap ci-tab">
+
+				<ul class="ctTab tab-selector">
+					<li><a href="#">제지급금</a></li>
+					<li><a href="#">조사진행내용</a></li>
+					<li class="active"><a href="#">미결내용</a></li>
+					<li><a href="#">반송내용</a></li>
+				</ul>
+				<ul class="tab-panel">
+					<li>
+						<h4 class="hide-element">제지급금</h4>
+						<table class="listTable" summary="일자별 제급금처리목록" width="100%">
+							<caption>제지급금</caption>
+							<colgroup>
+								<col width="15%" />
+								<col width="*" />
+								<col width="16%" />
+								<col width="20%" />
+								<col width="22%" />
+								<col width="12%" />
+							</colgroup>
+							<thead>
+							<tr>
+								<th scope="col">송금일</th>
+								<th scope="col">접수일</th>
+								<th scope="col">처리일</th>
+								<th scope="col">지급종류</th>
+								<th scope="col">실지급금</th>
+								<th scope="col">상세조회</th>
+							</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>2014-02-24</td>
+									<td>2014-02-24</td>
+									<td>2014-02-24</td>
+									<td></td>
+									<td></td>
+									<td><a href="#" class="btn smGyRb">조회</a></td>
+								</tr>
+								<tr>
+									<td>2014-02-24</td>
+									<td>2014-02-24</td>
+									<td>2014-02-24</td>
+									<td></td>
+									<td></td>
+									<td><a href="#" class="btn smGyRb">조회</a></td>
+								</tr>
+								<tr>
+									<td>2014-02-24</td>
+									<td>2014-02-24</td>
+									<td>2014-02-24</td>
+									<td></td>
+									<td></td>
+									<td><a href="#" class="btn smGyRb">조회</a></td>
+								</tr>
+								<tr>
+									<td>2014-02-24</td>
+									<td>2014-02-24</td>
+									<td>2014-02-24</td>
+									<td></td>
+									<td></td>
+									<td><a href="#" class="btn smGyRb">조회</a></td>
+								</tr>
+								<tr>
+									<td>2014-02-24</td>
+									<td>2014-02-24</td>
+									<td>2014-02-24</td>
+									<td></td>
+									<td></td>
+									<td><a href="#" class="btn smGyRb">조회</a></td>
+								</tr>
+								<tr>
+									<td>2014-02-24</td>
+									<td>2014-02-24</td>
+									<td>2014-02-24</td>
+									<td></td>
+									<td></td>
+									<td><a href="#" class="btn smGyRb">조회</a></td>
+								</tr>
+								<tr>
+									<td>2014-02-24</td>
+									<td>2014-02-24</td>
+									<td>2014-02-24</td>
+									<td></td>
+									<td></td>
+									<td><a href="#" class="btn smGyRb">조회</a></td>
+								</tr>
+								<tr>
+									<td>2014-02-24</td>
+									<td>2014-02-24</td>
+									<td>2014-02-24</td>
+									<td></td>
+									<td></td>
+									<td><a href="#" class="btn smGyRb">조회</a></td>
+								</tr>
+								<tr>
+									<td>2014-02-24</td>
+									<td>2014-02-24</td>
+									<td>2014-02-24</td>
+									<td></td>
+									<td></td>
+									<td><a href="#" class="btn smGyRb">조회</a></td>
+								</tr>
+								<tr>
+									<td>2014-02-24</td>
+									<td>2014-02-24</td>
+									<td>2014-02-24</td>
+									<td></td>
+									<td></td>
+									<td><a href="#" class="btn smGyRb">조회</a></td>
+								</tr>
+							</tbody>
+						</table>
+						<p class="footNote"><span>*</span>신계약 모니터링을 위해 상담사에게 전달하고자 하는 메시지가 있으실 경우 해당 항목을 클릭 후 요청 사항을 작성해주시기 바랍니다.</p>
+					</li>
+					<li>
+						<h4 class="hide-element">조사진행내용</h4>
+						
+						<div class="pendCnt">
+							<h5>손해사정사 현장심사중</h5>
+							<textarea class="pendingArea" rows="10"  title="요청사항입력" width="100%"></textarea>
+							<p class="footNote"><span>*</span>신계약 모니터링을 위해 상담사에게 전달하고자 하는 메시지가 있으실 경우 해당 항목을 클릭 후 요청 사항을 작성해주시기 바랍니다.</p>
+							
+						</div>
+					</li>
+					<li>
+						<h4 class="hide-element">미결내용</h4>
+						<div class="pendCnt">
+							<table summary="미결정보" width="100%" class="table1">
+							<caption>미결</caption>
+							<colgroup>
+								<col width="20%" />
+								<col width="30%" />
+								<col width="20%" />
+								<col width="*" />
+							</colgroup>
+							<tbody>
+								<tr>
+									<th>상태</th>
+									<td>미결</td>
+									<th>미결발송일</th>
+									<td></td>
+								</tr>
+							</tbody>
+						</table>
+						<textarea class="pendingArea" rows="10"  title="요청사항입력" width="100%"></textarea>
+						<p class="footNote"><span>*</span>신계약 모니터링을 위해 상담사에게 전달하고자 하는 메시지가 있으실 경우 해당 항목을 클릭 후 요청 사항을 작성해주시기 바랍니다.</p>
+							
+						</div>
+					</li>
+					<li>
+						<h4 class="hide-element">반송내용</h4>
+						<div class="pendCnt">
+							<table summary="반송정보" width="100%" class="table1 tac">
+								<caption>반송</caption>
+								<colgroup>
+									<col width="20%" />
+									<col width="30%" />
+									<col width="20%" />
+									<col width="*" />
+								</colgroup>
+								<tbody>
+									<tr>
+										<th>상태</th>
+										<td>반송</td>
+										<th>반송일</th>
+										<td></td>
+									</tr>
+								</tbody>
+							</table>
+							<textarea class="pendingArea" rows="10"  title="요청사항입력" width="100%"></textarea>
+							<p class="footNote"><span>*</span>신계약 모니터링을 위해 상담사에게 전달하고자 하는 메시지가 있으실 경우 해당 항목을 클릭 후 요청 사항을 작성해주시기 바랍니다.</p>
+							
+						</div>
+					</li>
+
+				</ul>
+			</div>
+		</div>
+
+
+		<!-- //공통 컨텐츠 -->
+		<script type="text/javascript">
+			//<![CDATA[
+			var myTab = ci.tab.init($('.PersonCont')); // 고객정보탭
+			var myTab1 = ci.tab.init($('.tabOutline')); // 
+			var myTab2 = ci.tab.init($('.ctInfoWrap')); // 
+			//]]>
+		</script>
+
+
+		<!-- CHECKLIST -->
+		<div id="checkList">
+			<ul class="list">
+				<li><a href="#none" class="on">내그룹 지정</a></li>
+				<li><a href="#none">방문패키지출력</a></li>
+				<li><a href="#none">전화</a></li>
+				<li><a href="#none">SMS</a></li>
+				<li><a href="#none">E-Mail</a></li>
+				<li><a href="#none">LP 소식지</a></li>
+				<li><a href="#none">DM</a></li>
+			</ul>
+		</div>
+		<!-- //CHECKLIST -->
+	<div>
+</div>
+<!-- FOOTER -->
+<div id="footer">
+	<div class="fter">
+		<img src="/img/common/img_footer.jpg" alt="" />
+	</div>
+</div>
+<!--//FOOTER -->
+
+
+</body>
+</html>

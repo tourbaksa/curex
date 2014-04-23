@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> CuREx </title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
+<link rel="stylesheet" href="/WEB-APP/webponent/css/common.css" type="text/css" />
+<link rel="stylesheet" href="/css/curex.common.css" type="text/css" />
+<link rel="stylesheet" href="/css/curex.layout.css" type="text/css" />
+<link rel="stylesheet" href="/css/curex.sub.css" type="text/css" />
+<link rel="stylesheet" href="/WEB-APP/webponent/dialog/css/dialog.css" type="text/css" />
+<script type="text/javascript" src="/WEB-APP/webponent/ci/agent.js"></script>
+<script type="text/javascript" src="/WEB-APP/webponent/thirdParty/jquery/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="/WEB-APP/webponent/thirdParty/jquery/jquery-ui-1.10.3.min.js"></script>
+<script type="text/javascript" src="/WEB-APP/webponent/tab/tab.js"></script>
+<script type="text/javascript" src="/WEB-APP/webponent/dialog/dialog.js"></script>
+<script type="text/javascript" src="/js/popup.js"></script>
+<script type="text/javascript" src="/js/curex.ui.js"></script>
+</head>
+<body>
+
+<div id="popWrap" style="width:500px;">
+	<h1 class="hide-element">세대통합</h1>
+	<div class="popContents">
+		
+		<form method="post" action="/">
+			<fieldset>
+				<legend>세대통합</legend>
+
+				<table class="table1">
+					<caption>세대통합</caption>
+					<colgroup>
+						<col width="20%" />
+						<col width="20%" />
+						<col width="20%" />
+						<col width="*" />
+					</colgroup>
+					<tbody>
+						<tr>
+							<th>고객명</th>
+							<td colspan="3">권지용</td>
+						</tr>
+						<tr>
+							<th>통합대상</th>
+							<td>
+								<span class="widthFull"><input type="text" value="홍순자" /></span>
+							</td>
+							<th>주민번호</th>
+							<td>
+								<input type="text" style="width:130px;" />
+								<input type="button" class="btn smWtRb" value="조회">
+							</td>
+						</tr>
+					</tbody>
+				</table>
+
+				<table class="table7 mt10">
+					<caption>통합대상</caption>
+					<colgroup>
+						<col width="8%" />
+						<col width="20%" />
+						<col width="*" />
+						<col width="14%" />
+						<col width="11%" />
+						<col width="20%" />
+					</colgroup>
+					<thead>
+						<tr>
+							<th>선택</th>
+							<th>통합대상</th>
+							<th>주민/법인번호</th>
+							<th>나이</th>
+							<th>성별</th>
+							<th>생년월일</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><input type="radio" id="ra1" name="ra1" /></td>
+							<td>홍순자</td>
+							<td>870505-1234567</td>
+							<td>26세</td>
+							<td>여</td>
+							<td>1987-03-07</td>
+						</tr>
+					</tbody>
+				</table>
+
+				<table class="table1 mt10">
+					<caption>관계</caption>
+					<colgroup>
+						<col width="20%" />
+						<col width="*" />
+					</colgroup>
+					<tbody>
+						<tr>
+							<th>관계</th>
+							<td>
+								<select style="width:100px">
+									<option>예상배우자</option>
+									<option></option>
+								</select>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+
+			</fieldset>
+		</form>
+
+		<div class="btnWrap mt10">
+			<a href="#none" class="btn lgLgR">통합</a>
+			<a href="#none" class="btn lgGyR">닫기</a>
+		</div>
+		
+		
+	</div>
+	
+</div>
+
+
+</body>
+</html>
+
+

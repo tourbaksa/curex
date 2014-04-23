@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> CuREx </title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
+<link rel="stylesheet" href="/WEB-APP/webponent/css/common.css" type="text/css" />
+<link rel="stylesheet" href="/css/curex.common.css" type="text/css" />
+<link rel="stylesheet" href="/css/curex.layout.css" type="text/css" />
+<link rel="stylesheet" href="/css/curex.sub.css" type="text/css" />
+<link rel="stylesheet" href="/WEB-APP/webponent/dialog/css/dialog.css" type="text/css" />
+<script type="text/javascript" src="/WEB-APP/webponent/ci/agent.js"></script>
+<script type="text/javascript" src="/WEB-APP/webponent/thirdParty/jquery/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="/WEB-APP/webponent/thirdParty/jquery/jquery-ui-1.10.3.min.js"></script>
+<script type="text/javascript" src="/WEB-APP/webponent/tab/tab.js"></script>
+<script type="text/javascript" src="/WEB-APP/webponent/dialog/dialog.js"></script>
+<script type="text/javascript" src="/js/popup.js"></script>
+<script type="text/javascript" src="/js/curex.ui.js"></script>
+</head>
+<body>
+
+<div id="popWrap" style="width:875px;">
+	<h1>제어판</h1>
+	<div class="popContents">
+		<div class="controlWrap">
+			<div class="ctrlMenu">
+				 <ul>
+					<li><a href="#none">보고서 설정</a>
+						<ul>
+							<li><a href="#none">Lips</a></li>
+							<li><a href="#none">계약리뷰</a></li>
+							<li><a class="active" href="#none">출력항목기본값</a></li>
+						</ul>
+					</li>
+					<li><a href="#none">Profile 설정</a></li>
+					<li><a href="#none">mCuREX 단말기등록</a></li>
+					<li><a href="#none">DM발송지 설정</a></li>
+				 </ul>
+			</div>
+			<div class="ctrlContent">
+				<div class="popTit mt10 mb20">
+					<h2>
+						보고서 설정 - 출력항목 기본값
+					</h2>
+					<div id="layerPop1" class="layerPopWrap2" style="display:none">
+						<div class="layerPopHdr">
+							<h3>니즈분석 출력항목 기본값 설정</h3>
+						</div>
+						<div class="layerPopCnt">
+							<ul class="footNote mb30">
+								<li><span>*</span>  LiPS+의 왼쪽 메뉴에서의 출력물에 대해 (기계약리뷰,복합설계,증권분석 제외) 기본 출력 보고서를 지정할 수 있습니다.</li>
+								<li><span>*</span>  여기에서 지정된 보고서는 LiPS+ 각 메뉴에서 보고서 출력시 기본적으로 선택되며 각 팝업창에서 이를 기본으로 추가, 삭제할 수 있습니다.</li>
+								<li><span>*</span>  Life Planner는 이 옵션을 선택함으로써 자주 쓰는 보고서를 선택하여 기본 보고서로 활용할 수 있습니다.</li>
+							</ul>
+						</div>
+						<a class="btnClosePopup">
+							<img src="/img/sub/btn_close_popup.gif" alt="팝업창 닫기" />
+						</a>
+					</div>
+				</div>
+				
+				<ul class="btnTab attab">
+					<li class="active"><a href="#contrTab1">니즈분석</a></li>
+					<li><a href="#contrTab2">복합설계</a></li>
+					<li><a href="#contrTab3">계약리뷰</a></li>
+				</ul>
+				<div class="mainTabzone">
+					<div id="contrTab1" class="tabCont">
+						<form method="post" action="/">
+							<fieldset>
+								<legend>니즈분석</legend>
+								<ul class="checkTableWrap">
+									<li>
+										<div class="checkDiv">
+											<table class="table3">
+												<caption></caption>
+												<colgroup>
+													<col width="20%" />
+													<col width="*" />
+												</colgroup>
+												<thead>
+													<tr>
+														<th><input type="checkbox" /></th>
+														<th class="tal pl10">생애Story</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td><input type="checkbox" /></td>
+														<td class="tal">전생애 시뮬레이션</td>
+													</tr>
+													<tr>
+														<td><input type="checkbox" /></td>
+														<td class="tal">사망 시뮬레이션</td>
+													</tr>
+													<tr>
+														<td><input type="checkbox" /></td>
+														<td class="tal">질병 시뮬레이션</td>
+													</tr>
+													<tr>
+														<td><input type="checkbox" /></td>
+														<td class="tal">노후 시뮬레이션</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+										<div class="checkDiv">
+											<table class="table3">
+												<caption></caption>
+												<colgroup>
+													<col width="20%" />
+													<col width="*" />
+												</colgroup>
+												<thead>
+													<tr>
+														<th><input type="checkbox" /></th>
+														<th class="tal pl10">노후보장시뮬레이션</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td><input type="checkbox" /></td>
+														<td class="tal">보유자산</td>
+													</tr>
+													<tr>
+														<td><input type="checkbox" /></td>
+														<td class="tal">공적연금</td>
+													</tr>
+													<tr>
+														<td><input type="checkbox" /></td>
+														<td class="tal">희망 뭘 수령액</td>
+													</tr>
+													<tr>
+														<td><input type="checkbox" /></td>
+														<td class="tal">가입시기</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</li>
+									<li>
+										<div class="checkDiv">
+											<table class="table3">
+												<caption></caption>
+												<colgroup>
+													<col width="20%" />
+													<col width="*" />
+												</colgroup>
+												<thead>
+													<tr>
+														<th><input type="checkbox" /></th>
+														<th class="tal pl10">수입/지출분석</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td><input type="checkbox" /></td>
+														<td class="tal">수입/지출분석</td>
+													</tr>
+													<tr>
+														<td><input type="checkbox" /></td>
+														<td class="tal">지출조정</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+										<div class="checkDiv">
+											<table class="table3">
+												<caption></caption>
+												<colgroup>
+													<col width="20%" />
+													<col width="*" />
+												</colgroup>
+												<thead>
+													<tr>
+														<th><input type="checkbox" /></th>
+														<th class="tal pl10">자산부채분석</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td><input type="checkbox" /></td>
+														<td class="tal">자산부채분석</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+										<div class="checkDiv">
+											<table class="table3">
+												<caption></caption>
+												<colgroup>
+													<col width="20%" />
+													<col width="*" />
+												</colgroup>
+												<thead>
+													<tr>
+														<th><input type="checkbox" /></th>
+														<th class="tal pl10">사망보장분석</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td><input type="checkbox" /></td>
+														<td class="tal">연령별 필요자금</td>
+													</tr>
+													<tr>
+														<td><input type="checkbox" /></td>
+														<td class="tal">연령별 누적 필요자금</td>
+													</tr>
+													<tr>
+														<td><input type="checkbox" /></td>
+														<td class="tal">연령별 누적 준비자금</td>
+													</tr>
+													<tr>
+														<td><input type="checkbox" /></td>
+														<td class="tal">연령별 필요보장자금분석</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</li>
+									<li>
+										<div class="checkDiv">
+											<table class="table3">
+												<caption></caption>
+												<colgroup>
+													<col width="20%" />
+													<col width="*" />
+												</colgroup>
+												<thead>
+													<tr>
+														<th><input type="checkbox" /></th>
+														<th class="tal pl10">노후보장분석</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td><input type="checkbox" /></td>
+														<td class="tal">필요보장자금 분석(요약)</td>
+													</tr>
+													<tr>
+														<td><input type="checkbox" /></td>
+														<td class="tal">연령별 필요자금</td>
+													</tr>
+													<tr>
+														<td><input type="checkbox" /></td>
+														<td class="tal">연령별 준비자금</td>
+													</tr>
+													<tr>
+														<td><input type="checkbox" /></td>
+														<td class="tal">연령별 필요보장자금분석</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+										<div class="checkDiv">
+											<table class="table3">
+												<caption></caption>
+												<colgroup>
+													<col width="20%" />
+													<col width="*" />
+												</colgroup>
+												<thead>
+													<tr>
+														<th><input type="checkbox" /></th>
+														<th class="tal pl10">목적자금분석</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td><input type="checkbox" /></td>
+														<td class="tal">자녀교육자금</td>
+													</tr>
+													<tr>
+														<td><input type="checkbox" /></td>
+														<td class="tal">자녀결혼자금</td>
+													</tr>
+													<tr>
+														<td><input type="checkbox" /></td>
+														<td class="tal">기타목적자금</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</li>
+								</ul>
+							</fieldset>
+						</form>
+						<div class="popH2Tit">
+							<span>*</span> 니즈분석 출력항목 기본값
+							<a href="#none"><img src="/img/common/ico_qus.gif" alt="물음표" /></a>
+						</div>
+						<div id="layerPop1" class="layerPopWrap2">
+							<div class="layerPopHdr">
+								<h3>표지설정</h3>
+							</div>
+							<div class="layerPopCnt">
+								<ul class="footNote mb30">
+									<li><span>*</span>  LiPS+의 왼쪽 메뉴에서의 출력물에 대해 (기계약리뷰,복합설계,증권분석 제외) 기본 출력 보고서를 지정할 수 있습니다.</li>
+									<li><span>*</span>  여기에서 지정된 보고서는 LiPS+ 각 메뉴에서 보고서 출력시 기본적으로 선택되며 각 팝업창에서 이를 기본으로 추가, 삭제할 수 있습니다.</li>
+									<li><span>*</span>  Life Planner는 이 옵션을 선택함으로써 자주 쓰는 보고서를 선택하여 기본 보고서로 활용할 수 있습니다.</li>
+								</ul>
+							</div>
+							<a class="btnClosePopup">
+								<img src="/img/sub/btn_close_popup.gif" alt="팝업창 닫기" />
+							</a>
+						</div>
+						<div class="btnWrap mt10">
+							<a href="#none" class="btn lgLgR">저장</a>
+						</div>
+					</div>
+
+					<div id="contrTab2" class="tabCont">
+						<form method="post" action="/">
+							<fieldset>
+								<legend></legend>
+								<table class="table3">
+									<caption></caption>
+									<colgroup>
+										<col width="6%" />
+										<col width="*" />
+									</colgroup>
+									<thead>
+										<tr>
+											<th><input type="checkbox" /></th>
+											<th class="tal pl10">보장리뷰 및 복합설계</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td><input type="checkbox" /></td>
+											<td class="tal">피보험자별 보유계약리스트</td>
+										</tr>
+										<tr>
+											<td><input type="checkbox" /></td>
+											<td class="tal">사망/질병보장 시뮬레이션</td>
+										</tr>
+										<tr>
+											<td><input type="checkbox" /></td>
+											<td class="tal">연령별 사망 보장내역</td>
+										</tr>
+										<tr>
+											<td><input type="checkbox" /></td>
+											<td class="tal">상세 질병 보장내역1</td>
+										</tr>
+										<tr>
+											<td><input type="checkbox" /></td>
+											<td class="tal">상세 질병 보장내역2</td>
+										</tr>
+										<tr>
+											<td><input type="checkbox" /></td>
+											<td class="tal">상세 질병 보장내역3</td>
+										</tr>
+										<tr>
+											<td><input type="checkbox" /></td>
+											<td class="tal">상세 질병 보장내역4</td>
+										</tr>
+										<tr>
+											<td><input type="checkbox" /></td>
+											<td class="tal">연령별 노후보장내역</td>
+										</tr>
+										<tr>
+											<td><input type="checkbox" /></td>
+											<td class="tal">특약기간별급부예시1</td>
+										</tr>
+										<tr>
+											<td><input type="checkbox" /></td>
+											<td class="tal">특약기간별급부예시2</td>
+										</tr>
+									</tbody>
+								</table>
+							</fieldset>
+						</form>
+						<div class="btnWrap mt10">
+							<a href="#none" class="btn lgLgR">저장</a>
+						</div>
+					</div>
+
+					<div id="contrTab3" class="tabCont">
+						<form method="post" action="/">
+							<fieldset>
+								<legend>계약리뷰</legend>
+								<ul class="checkTableWrap checkTable2Wrap">
+									<li>
+										<div class="checkDiv">
+											<table class="table3">
+												<caption></caption>
+												<colgroup>
+													<col width="20%" />
+													<col width="*" />
+												</colgroup>
+												<thead>
+													<tr>
+														<th><input type="checkbox" /></th>
+														<th class="tal pl10">계약정보</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td><input type="checkbox" /></td>
+														<td class="tal">고객정보확인서</td>
+													</tr>
+													<tr>
+														<td><input type="checkbox" /></td>
+														<td class="tal">보유계약리스트</td>
+													</tr>
+													<tr>
+														<td><input type="checkbox" /></td>
+														<td class="tal">보험증권별 세부사항</td>
+													</tr>
+													<tr>
+														<td><input type="checkbox" /></td>
+														<td class="tal">변액리뷰</td>
+													</tr>
+													<tr>
+														<td><input type="checkbox" /></td>
+														<td class="tal">펀드리뷰</td>
+													</tr>
+													<tr>
+														<td><input type="checkbox" /></td>
+														<td class="tal">기계약보장내역</td>
+													</tr>
+													<tr>
+														<td><input type="checkbox" /></td>
+														<td class="tal">연금전환특약</td>
+													</tr>
+													<tr>
+														<td><input type="checkbox" /></td>
+														<td class="tal">가입당시연금전환특약</td>
+													</tr>
+													<tr>
+														<td><input type="checkbox" /></td>
+														<td class="tal">실버널싱연금전환특약</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</li>
+									<li>
+										<div class="checkDiv">
+											<table class="table3">
+												<caption>계약리뷰</caption>
+												<colgroup>
+													<col width="20%" />
+													<col width="*" />
+												</colgroup>
+												<thead>
+													<tr>
+														<th><input type="checkbox" /></th>
+														<th class="tal pl10">보장리뷰 및 복합설계</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td><input type="checkbox" /></td>
+														<td class="tal">피보험자별 보유계약리스트</td>
+													</tr>
+													<tr>
+														<td><input type="checkbox" /></td>
+														<td class="tal">사망/질병보장 시뮬레이션</td>
+													</tr>
+													<tr>
+														<td><input type="checkbox" /></td>
+														<td class="tal">연령별 사망 보장내역</td>
+													</tr>
+													<tr>
+														<td><input type="checkbox" /></td>
+														<td class="tal">상세질병보장내역1</td>
+													</tr>
+													<tr>
+														<td><input type="checkbox" /></td>
+														<td class="tal">상세질병보장내역2</td>
+													</tr>
+													<tr>
+														<td><input type="checkbox" /></td>
+														<td class="tal">상세질병보장내역3</td>
+													</tr>
+													<tr>
+														<td><input type="checkbox" /></td>
+														<td class="tal">상세질병보장내역4</td>
+													</tr>
+													<tr>
+														<td><input type="checkbox" /></td>
+														<td class="tal">연령별 노후보장내역</td>
+													</tr>
+													<tr>
+														<td><input type="checkbox" /></td>
+														<td class="tal">특약기간별급부예시1</td>
+													</tr>
+													<tr>
+														<td><input type="checkbox" /></td>
+														<td class="tal">특약기간별급부예시2</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</li>
+								</ul>
+								<div class="btnWrap mt10">
+									<a href="#none" class="btn lgLgR">저장</a>
+								</div>
+							</fieldset>
+						</form>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	
+	</div>
+</div>
+
+</body>
+</html>
+
