@@ -1,9 +1,0 @@
-@charset "utf-8";
-
-@font-face {
-	font-family: "nanumgothic";
-	src: url(../font/NanumGothic.eot);
-	src: local("nanumgothic"), url(../font/NanumGothic.ttf) format("truetype"),url(../font/NanumGothic.woff);
-	font-style: normal;
-	font-weight: normal;
-}
