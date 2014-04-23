@@ -463,8 +463,9 @@ curex.ui = {
 				clearTimeout(timer);
 				timer = setTimeout(checkOffset , 300); 
 			});*/
-
-			if ($(".h2List").length){
+			
+			//svn 수정 curex.floatingBar.js로 옮김 20140423
+			/*if ($(".h2List").length){
 				var _this = $(".h2List")
 					, $btn = _this.find("a")
 					, $close = $obj.find(".enter")
@@ -495,7 +496,8 @@ curex.ui = {
 						}
 					});
 				});
-			}
+			}*/
+			//svn 수정 curex.floatingBar.js로 옮김 20140423
 
 		}
 		if($("#checkList").length){checkList("#checkList");}
