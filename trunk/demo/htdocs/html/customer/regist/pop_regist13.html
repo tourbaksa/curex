@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> CuREx </title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
+<link rel="stylesheet" href="/WEB-APP/webponent/css/common.css" type="text/css" />
+<link rel="stylesheet" href="/css/curex.common.css" type="text/css" />
+<link rel="stylesheet" href="/css/curex.layout.css" type="text/css" />
+<link rel="stylesheet" href="/css/curex.sub.css" type="text/css" />
+<link rel="stylesheet" href="/WEB-APP/webponent/dialog/css/dialog.css" type="text/css" />
+<script type="text/javascript" src="/WEB-APP/webponent/ci/agent.js"></script>
+<script type="text/javascript" src="/WEB-APP/webponent/thirdParty/jquery/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="/WEB-APP/webponent/thirdParty/jquery/jquery-ui-1.10.3.min.js"></script>
+<script type="text/javascript" src="/WEB-APP/webponent/tab/tab.js"></script>
+<script type="text/javascript" src="/WEB-APP/webponent/dialog/dialog.js"></script>
+<script type="text/javascript" src="/js/popup.js"></script>
+<script type="text/javascript" src="/js/curex.ui.js"></script>
+</head>
+<body>
+
+<div id="popWrap" style="width:693px;">
+	<h1 class="hide-element">구성원 선택 등록</h1>
+	<div class="popContents">
+
+		<ul class="footNote red">
+			<li><span>*</span> 이름, 주민등록번호, 회사명으로 고객을 검색하여 선택하시거나, 분류고객을 불러와 구성원으로 등록하실 수 있습니다.</li>
+			<li><span>*</span> 이름을 클릭하시면 구성원으로 등록됩니다. [전체등록] 버튼을 클릭하시면 검색결과 전체를 구성원으로 등록하실 수 있습니다.</li>
+		</ul>
+
+		<form method="post" action="/" class="mt8">
+			<fieldset>
+				<legend>구성원 선택 등록</legend>
+				<table class="table9">
+					<caption>구성원 선택 등록</caption>
+					<colgroup>
+						<col width="20%" />
+						<col width="*" />
+					</colgroup>
+					<tbody>
+						<tr>
+							<th><input type="radio" id="rad01" name="rad" /><label for="rad01">이름</label></th>
+							<td>
+								<input type="text" style="width:341px;" />
+							</td>
+						</tr>
+						<tr>
+							<th><input type="radio" id="rad02" name="rad" /><label for="rad02">주민등록번호</label></th>
+							<td>
+								<input type="text" style="width:165px;" />
+								-
+								<input type="text" style="width:165px;" />
+							</td>
+						</tr>
+						<tr>
+							<th><input type="radio" id="rad03" name="rad" /><label for="rad03">회사명</label></th>
+							<td>
+								<input type="text" style="width:341px" />
+							</td>
+						</tr>
+						<tr>
+							<th><input type="radio" id="rad04" name="rad" /><label for="rad04">분류선택</label></th>
+							<td>
+								<select style="width:175px">
+									<option>선택</option>
+									<option></option>
+								</select>
+								<input type="button" class="btn smGyRb" value="불러오기">
+							</td>
+						</tr>
+					</tbody>
+				</table>
+
+				<div class="btnWrap mt10">
+					<a href="#none" class="btn lgLgR">검색</a>
+				</div>
+				
+			</fieldset>
+		</form>
+
+		<div class="tar mt20">
+			검색결과 : 총 3건
+		</div>
+		<table class="listTable mt10">
+			<caption>구성원 선택등록 검색결과</caption>
+			<colgroup>
+				<col width="8%" />
+				<col width="*" />
+				<col width="8%" />
+				<col width="18%" />
+				<col width="8%" />
+				<col width="12%" />
+				<col width="20%" />
+				<col width="8%" />
+			</colgroup>
+			<thead>
+				<tr>
+					<th>이름</th>
+					<th>주민등록번호</th>
+					<th>구분</th>
+					<th>생년월일</th>
+					<th>성별</th>
+					<th>연령(보험)</th>
+					<th>회사명(소속)</th>
+					<th>분류</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td class="codeNum"><a href="#none">권지용</a></td>
+					<td>800401-1234567</td>
+					<td>가망</td>
+					<td>1980-04-01</td>
+					<td>남</td>
+					<td>30세(30세)</td>
+					<td class="tal">푸르덴셜 생명</td>
+					<td>친척</td>
+				</tr>
+				<tr>
+					<td class="codeNum"><a href="#none">권지용</a></td>
+					<td></td>
+					<td>가망</td>
+					<td></td>
+					<td>남</td>
+					<td>30세(30세)</td>
+					<td class="tal">푸르덴셜 생명</td>
+					<td>친척</td>
+				</tr>
+				<tr>
+					<td class="codeNum"><a href="#none">권지용</a></td>
+					<td></td>
+					<td>가망</td>
+					<td></td>
+					<td>남</td>
+					<td>30세(30세)</td>
+					<td class="tal">푸르덴셜 생명</td>
+					<td>친척</td>
+				</tr>
+				<tr>
+					<td class="codeNum"><a href="#none">권지용</a></td>
+					<td></td>
+					<td>가망</td>
+					<td></td>
+					<td>남</td>
+					<td>30세(30세)</td>
+					<td class="tal">푸르덴셜 생명</td>
+					<td>친척</td>
+				</tr>
+				<tr>
+					<td class="codeNum"><a href="#none">권지용</a></td>
+					<td></td>
+					<td>가망</td>
+					<td></td>
+					<td>남</td>
+					<td>30세(30세)</td>
+					<td class="tal">푸르덴셜 생명</td>
+					<td>친척</td>
+				</tr>
+				<tr>
+					<td class="codeNum"><a href="#none">권지용</a></td>
+					<td>800401-1234567</td>
+					<td>가망</td>
+					<td></td>
+					<td>남</td>
+					<td>30세(30세)</td>
+					<td class="tal">푸르덴셜 생명</td>
+					<td>친척</td>
+				</tr>
+				<tr>
+					<td class="codeNum"><a href="#none">권지용</a></td>
+					<td>800401-1234567</td>
+					<td>가망</td>
+					<td>1980-04-01</td>
+					<td>남</td>
+					<td>30세(30세)</td>
+					<td class="tal">푸르덴셜 생명</td>
+					<td>친척</td>
+				</tr>
+				<tr>
+					<td class="codeNum"><a href="#none">권지용</a></td>
+					<td>800401-1234567</td>
+					<td>가망</td>
+					<td>1980-04-01</td>
+					<td>남</td>
+					<td>30세(30세)</td>
+					<td class="tal">푸르덴셜 생명</td>
+					<td>친척</td>
+				</tr>
+				<tr>
+					<td class="codeNum"><a href="#none">권지용</a></td>
+					<td>800401-1234567</td>
+					<td>가망</td>
+					<td>1980-04-01</td>
+					<td>남</td>
+					<td>30세(30세)</td>
+					<td class="tal">푸르덴셜 생명</td>
+					<td>친척</td>
+				</tr>
+				<tr>
+					<td class="codeNum"><a href="#none">권지용</a></td>
+					<td>800401-1234567</td>
+					<td>가망</td>
+					<td>1980-04-01</td>
+					<td>남</td>
+					<td>30세(30세)</td>
+					<td class="tal">푸르덴셜 생명</td>
+					<td>친척</td>
+				</tr>
+			</tbody>
+		</table>
+		
+		<div class="paging">
+		   <a href="#" class="prev"><img src="/img/common/arrow_prev.gif" alt="이전으로"></a>
+		   <strong>1</strong>
+		   <a href="#">2</a>
+		   <a href="#">3</a>
+		   <a href="#">4</a>
+		   <a href="#">5</a>
+		   <a href="#" class="next"><img src="/img/common/arrow_next.gif" alt="다음으로"></a>
+		</div>
+
+		<div class="btnWrap mt10">
+			<a href="#none" class="btn lgLgR">구성원등록</a>
+		</div>
+		
+		
+	</div>
+	
+</div>
+
+
+</body>
+</html>
+
+

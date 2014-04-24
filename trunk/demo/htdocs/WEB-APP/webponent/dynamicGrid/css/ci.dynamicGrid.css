@@ -1,0 +1,31 @@
+@CHARSET "utf-8";
+
+.ui-dialog-buttonset button span {
+	display: block;
+	overflow: visible;
+	position: relative;
+	width: auto;
+	height: auto;
+	font-size: inherit;
+	line-height: inherit;
+}
+.grid-sortable{
+	float : left;
+}
+.grid-sortable li {
+	line-height: 20px;
+	/* background-color: #fafafa;
+	margin: 3px 0px 0px 3px; */
+	padding: 0 8px 0 0;
+	display : inline-block;
+	float:left;
+	cursor: pointer;
+}
+
+.grid-sortable li input[type="checkbox"] {
+	margin-right: 8px;
+}
+
+.grid-sortable li.grid-column-fixed {
+	background-color: #fff;
+}

@@ -1,0 +1,16 @@
+body          {background:#ffffff; margin:3mm 0mm 0mm 0mm;}
+
+.cusName      { font-family:gungsuhche; font-size:21px; color:#000000; font-weight:bold; letter-spacing:5px; padding-right:20px}
+.cusHT        { font-family:gungsuhche; font-size:13px; color:#000000; vertical-align:bottom;}
+.cusAddress   { font-family:gungsuhche; font-size:17px; color:#000000;}
+.cusZipCode   { font-family:gulimche;   font-size:20px; color:#000000; font-weight:bold; text-align:right; padding-right:20px}
+
+.table1 { width:196mm; table-layout:fixed;}
+.tr1    { height:67.73mm; vertical-align:top}
+.td1    { width:93.5mm; padding-left:3mm}
+
+.table2 { width:80mm}
+.tr2_1    { height:11mm}
+.tr2_2    { height:4mm}
+
+.table3{width:100px}

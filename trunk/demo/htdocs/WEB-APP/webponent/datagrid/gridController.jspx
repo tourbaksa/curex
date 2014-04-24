@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+
+<jsp:directive.page import="coreframe.CoreApplication"/>
+<jsp:directive.page import="java.io.FileInputStream"/>
+<jsp:directive.page import="java.io.BufferedInputStream"/>
+<jsp:directive.page import="java.io.InputStream"/>
+<jsp:directive.page import="java.io.BufferedOutputStream"/>
+<jsp:directive.page import="java.io.File"/>
+<jsp:directive.page import="jxl.Workbook"/>
+<jsp:directive.page import="jxl.WorkbookSettings"/>
+<jsp:directive.page import="jxl.write.Label"/>
+<jsp:directive.page import="jxl.write.WritableSheet"/>
+<jsp:directive.page import="jxl.write.WritableWorkbook"/>
+<jsp:directive.page import="org.json.JSONException"/>
+<jsp:directive.page import="org.json.JSONArray"/>
+<jsp:directive.page import="SCSL.SLDsFile"/>
+<jsp:directive.page import="java.util.HashMap"/>
+<jsp:directive.page import="java.util.Map"/>
+<jsp:directive.page import="corelogic.spi.management.BLContextFactory"/>
+<jsp:directive.page import="coreframe.data.schema.*"/>
+
+<jsp:directive.page import="kr.co.prudential.curex.model.base.QueryForm"/>
+<jsp:directive.page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" />
+<jsp:directive.page extends="kr.co.prudential.curex.base.BaseJspxControlller" />
+<jsp:directive.page import="coreframe.http.*,coreframe.data.*" />
+<jsp:declaration><![CDATA[
+
+	//계약리스트의 BLD 명과 BLD 의 실제 파일경로 유출을 막기 위해 NICK_NAME으로 쓰게된다면 구현할 변수
+	private static Map<String, String> POLICY_BLD_MAP = new HashMap<String,String>();
+
+	public void getGridData(ViewMeta view) throws ResourceException {
+		
+		QueryForm queryForm = getQueryForm(view);	
+		
+		String bldName = queryForm.getText("BLD_NAME");
+		
+		//로그인 한 사용자 ID
+		String agentNumber = getAgentNumber();
+		queryForm.put("agentNumber", agentNumber);
+					
+		DataSet list = executeList(bldName, queryForm);	
+		
+		//grid-data 세팅								
+		setGridData(view,list);
+		
+		view.printJSON();
+	}
+	
+	//MAP의 DATA를 다시 설정하는 함수  
+	public void setPolicyBlds() {
+		POLICY_BLD_MAP.clear();
+	}
+	
+	public void getOutputFields(ViewMeta view) throws ResourceException{
+		
+		QueryForm queryForm = getQueryForm(view);
+		String bldName = queryForm.getText("BLD_NAME");
+		String blockName = queryForm.getText("BLOCK_NAME") == null ? "" : queryForm.getText("BLOCK_NAME");
+		
+		/* 탑메뉴 */
+		if(bldName.equals("INFORCED_G")){//보유계약
+			bldName = "policy/list/LIST_POLICYLIST_BY_INFORCED";
+		}else if(bldName.equals("INSURED")){//피보험자별 보유계약
+			bldName = "policy/list/LIST_POLICYLIST_BY_INSURED";
+		}else if(bldName.equals("NEW")){//신계약청약
+			bldName = "policy/list/LIST_POLICY_BY_NEW";
+		}else if(bldName.equals("INGRACEPERIOD")){//실효대상 및 보험료 미납일 계약
+			bldName = "policy/list/LIST_POLICYLIST_BY_INGRACEPERIOD";
+		}else if(bldName.equals("CONVERSION")){//전환가능 계약
+			bldName = "policy/list/LIST_POLICY_BY_CONVERSION";
+		}/*보험료*/
+		else if(bldName.equals("PAIDAMT")){//자동이체출금 - 자동이체 입금
+			bldName = "policy/list/LIST_POLICYLIST_BY_PAIDAMT";
+		}else if(bldName.equals("NOTPAIDAMT")){//자동이체출금 - 자동이체 미입금
+			bldName = "policy/list/LIST_POLICYLIST_BY_NOTPAIDAMT";
+		}else if(bldName.equals("NOTDEPOSIT")){//자동이체출금 - 자동이체 말일자 미출금
+			bldName = "policy/list/LIST_POLICY_BY_LASTDAY_NOTDEPOSIT";
+		}else if(bldName.equals("VIRTUALACCOUNT")){//가상계좌입금
+			bldName = "policy/list/LIST_POLICY_VIRTUAL_ACC";
+		}else if(bldName.equals("PAID")){//계속보험료 입금
+			bldName = "policy/list/LIST_POLICYLIST_BY_PAID2";
+		}else if(bldName.equals("DIRECTPAID")){//직접납부 계약
+			bldName = "policy/list/LIST_POLICYLIST_BY_DIRECTPAID";
+		}else if(bldName.equals("APPLYINGAMT")){//자동이체신청
+			bldName = "policy/list/LIST_POLICYLIST_BY_APPLYINGAMT";
+		}else if(bldName.equals("PREMIUMCHANGING")){//보험료변경 대상 계약
+			bldName = "policy/list/LIST_POLICYLIST_BY_PREMIUMCHANGING";
+		}/* 특약중도부가 */
+		else if(bldName.equals("SNC")){//실버널싱중도부가 대상
+			bldName = "policy/list/LIST_POLICY_COVER_SNC";
+		}else if(bldName.equals("SCR")){//특별인수 특약
+			bldName = "policy/list/LIST_POLICY_BY_SCR";
+		}else if(bldName.equals("CONDITION")){//특별조건부 특약
+			bldName = "policy/list/LIST_POLICY_BY_CONDITION";
+		}/* 실효계약관리 */
+		else if(bldName.equals("LAPSE")){//실효계약
+			bldName = "policy/list/LIST_POLICYLIST_BY_LAPSE";
+		}else if(bldName.equals("REINFORCED")){//부활대상 계약
+			bldName = "policy/list/LIST_POLICYLIST_BY_REINFORCED";
+		}else if(bldName.equals("DORMANCY")){//휴면보험금 현황
+			bldName = "policy/list/LIST_POLICYLIST_BY_DORMANCY";
+		}/* 계약관리 */
+		else if(bldName.equals("LENDING")){//대출현황
+			bldName = "policy/list/LIST_POLICY_LENDING";
+		}else if(bldName.equals("DEDUCT")){//월공제
+			bldName = "policy/list/LIST_POLICY_BY_MONTH_DEDUCTION";
+		}else if(bldName.equals("FUND")){//편드현황
+			bldName = "";
+		}else if(bldName.equals("INS_MOD")){//보장증액
+			bldName = "policy/list/LIST_CFSPOLICYLIST_BY_SUM_INS_MOD_LIST";
+		}else if(bldName.equals("COAPPLY")){//공동청약
+			bldName = "policy/list/LIST_POLICY_CO_APPLY";
+		}else if(bldName.equals("CHANGE")){//계약변경
+			bldName = "policy/list/LIST_POLICY_CHANGE";
+		}else if(bldName.equals("INSURED_CHANGE")){//피보험자 교체가능
+			bldName = "policy/list/LIST_POLICYLIST_BY_INSURED_CHANGE";
+		}else{
+			//bldName이 없는 경우의 로직 정의하기 
+		}
+		
+		//BLD 의 설정 조회하기
+		IOSchema trSchema = BLContextFactory.getInstance().getIOSchema(bldName);
+		Block[] outBlocks = trSchema.getOutputBlocks();
+		String jsonStr = "[";
+		
+		for(int i = 0; i < outBlocks.length; i++){
+			if(blockName.equals("")){
+				jsonStr += getFieldsToJSON(outBlocks[i]);
+				if(outBlocks.length >=0 && i < outBlocks.length-1){
+					jsonStr += ",";
+				}
+			}else{
+				if(outBlocks[i].getName().equals(blockName)){
+					jsonStr += getFieldsToJSON(outBlocks[i]);
+				}else{
+					continue;
+				}
+			}
+		}
+		jsonStr += "]";
+		jsonStr = jsonStr.trim();
+		
+		view.setMessage(jsonStr);
+	}
+	
+	/*
+		DB 로 부터 각 사용자별, 리스트의 필드 정의 조회
+	*/
+	public void getFieldData(ViewMeta view) throws ResourceException{
+		QueryForm queryForm = getQueryForm(view);
+		String user_id = getAgentNumber();
+		queryForm.put("user_id", user_id);
+		
+		DataSet list = executeList("policy/list/CHECK_POL_LIST_FIELDS", queryForm);
+		String clobString = list.get("FIL_ORDER").toString();
+		view.setMessage(clobString);
+	}
+	
+	/*
+		DB 에 각 사용자별, 리스트의 필드 정의 데이터 삽입
+	*/
+	public void insertFieldData(ViewMeta view) throws ResourceException{
+		QueryForm queryForm = getQueryForm(view);
+		String user_id = getAgentNumber();
+		queryForm.put("user_id", user_id);
+		
+		DataSet output = executeBL("policy/list/INSERT_POL_LIST_FIELDS", queryForm);
+	}
+	
+	public String getFieldsToJSON(Block outBlock){
+
+		String jsonStr = "";
+		Field[] outField = outBlock.getFields();
+		String temp = "";
+		for(int i = 0 ; i < outField.length; i++){
+			temp = "{";
+			temp+= "\"name\":\""+outField[i].getName() + "\",";
+			temp+= "\"label\":\""+outField[i].getLabel() + "\",";
+			
+			String width = outField[i].getProperty("width") == null ? "" : outField[i].getProperty("width");
+			
+			if(width.equals("")){
+				temp+= "\"width\":\"\",";
+			}else{
+				temp+= "\"width\":\""+ width + "\",";
+			}
+			
+			String align = outField[i].getProperty("align") == null ? "" : outField[i].getProperty("align");
+			
+			if(align.equals("")){
+				temp+= "\"align\":\"\",";
+			}else{
+				temp+= "\"align\":\""+ align + "\",";
+			}
+			
+			if ("fixed".equals(outField[i].getProperty("fixed"))) {
+				temp+="\"fixed\":\"fixed\",";
+			} else {
+				temp+="\"fixed\":\"\",";
+			}
+			
+			String strHid = outField[i].getProperty("hidden") == null ? "" : outField[i].getProperty("hidden");
+			
+			if(strHid.equals("")){
+				temp+="\"visible\":\"visible\",";
+				temp+= "\"hidden\":\""+ strHid + "\"";
+			}else{
+				temp+="\"visible\":\"\",";
+				temp+= "\"hidden\":\""+ strHid + "\"";
+			}
+			if(i < outField.length-1){
+				temp += "},";
+			}else{
+				temp += "}";
+			}
+			jsonStr += temp;
+		}
+		return jsonStr;
+	}
+	
+	
+	/*
+		그리드 엑셀 다운로드
+	*/
+	public void downLoadExcel (ViewMeta view) throws Exception {
+		
+		
+		String gridData =view.getRequestParameter("data"); 
+		
+		if (gridData == null) {
+			return;
+		}
+				
+		
+		String coreframeConfigHome = CoreApplication.getInstance().getAttributeText(CoreApplication.COREFRAME_CONFIG_HOME);
+		
+		File excelTmpDir = new File (coreframeConfigHome + "/_work/grid_excel");
+		
+		if (!excelTmpDir.exists()) {
+			excelTmpDir.mkdir();
+		}
+		
+		// 메모리기반 -> 파일기반
+		
+		File excelFile = File.createTempFile("DATAGRID-", ".xls", excelTmpDir);
+		
+		WritableWorkbook workbook = Workbook.createWorkbook(excelFile);
+		
+
+		WritableSheet sheet = workbook.createSheet("데이터", 0);
+		
+		JSONArray gridDataJson = new JSONArray(gridData);
+		
+		int rowLength = gridDataJson.length();
+		
+		for (int i = 0; i < rowLength; i ++) {
+			
+			JSONArray row = gridDataJson.getJSONArray(i);
+			
+			int columnLength = row.length();
+			
+			for (int j = 0; j < columnLength; j ++) {
+				
+				String data = row.getString(j);
+								
+				Label label = new Label(j, i, data);
+				
+				sheet.addCell(label);
+			}
+		}
+		
+		workbook.write();
+		workbook.close();
+		
+		HttpServletResponse resp = view.getHttpServletResponse();
+		
+		resp.reset();
+		resp.setContentType("application/octet-stream");
+		resp.addHeader("Content-Disposition", "attachment; filename="+ excelFile.getName());		
+		resp.addHeader("Pragma", "no-cache;");
+		
+		File excelDrmFile = File.createTempFile("DATAGRID-", "-drm.xls", excelTmpDir);
+		
+		// DRM 암호화
+		//C:/workspace/2014_curex/lib/usr/local/KeyMngr/SLKeyMngrDAC3.0/keyMAC_SVR0.sc
+		SLDsFile slFile = new SLDsFile();
+		slFile.CreateEncryptFile("C:/workspace/2014_curex/lib/usr/local/KeyMngr/SLKeyMngrDAC3.0/keyMAC_SVR0.sc",
+				"000002", "Curex", excelFile.getAbsolutePath(), excelDrmFile.getAbsolutePath(), 0);
+		
+		
+		BufferedOutputStream outs = null;
+		InputStream readFile = null;
+		
+		try {
+			
+			outs = new BufferedOutputStream(resp.getOutputStream(), 1024);
+			readFile = new BufferedInputStream(new FileInputStream(excelFile));
+
+			byte[] buffer = new byte[1024];
+			while (true) {
+				int bytesRead = readFile.read(buffer);
+				if (bytesRead == -1) {
+					break;
+				}
+				outs.write(buffer, 0, bytesRead);
+			}
+			
+		} catch (Exception e) {
+			
+			e.printStackTrace();
+			
+		} finally {
+			
+			readFile.close();
+			outs.flush();
+			outs.close();
+			
+			excelFile.delete();
+			excelDrmFile.delete();
+		}
+		
+	}
+	
+	public String getAgentNumber(){
+		return "SL194";
+	}
+	
+	]]></jsp:declaration>
+</jsp:root>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> CuREx </title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
+<link rel="stylesheet" href="/WEB-APP/webponent/css/common.css" type="text/css" />
+<link rel="stylesheet" href="/css/curex.common.css" type="text/css" />
+<link rel="stylesheet" href="/css/curex.layout.css" type="text/css" />
+<link rel="stylesheet" href="/css/curex.sub.css" type="text/css" />
+<link rel="stylesheet" href="/WEB-APP/webponent/dialog/css/dialog.css" type="text/css" />
+<script type="text/javascript" src="/WEB-APP/webponent/ci/agent.js"></script>
+<script type="text/javascript" src="/WEB-APP/webponent/thirdParty/jquery/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="/WEB-APP/webponent/thirdParty/jquery/jquery-ui-1.10.3.min.js"></script>
+<script type="text/javascript" src="/WEB-APP/webponent/tab/tab.js"></script>
+<script type="text/javascript" src="/WEB-APP/webponent/dialog/dialog.js"></script>
+<script type="text/javascript" src="/js/popup.js"></script>
+<script type="text/javascript" src="/js/curex.ui.js"></script>
+</head>
+<body>
+
+<div id="popWrap" style="width:400px;">
+	<h1>파일 업로드</h1>
+	<div class="popContents">
+		
+		<form method="post" action="/">
+			<fieldset>
+				<legend></legend>
+				<p></p>
+				<input type="text" readonly="readonly" style="width:235px;" id="txtAttach0" name="txtAttach0" value="1.jpg"><input type="file" style="display:none;" id="fileAttach0" name="fileAttach0" value=""> <a type="button" class="btn smGynb fileupload" href="#none">찾기</a>
+
+				<ul class="footNote">
+					<li><span>*</span> 등록 가능한 파일종류는 jpg, gif이며, 최대용량은 500KB입니다.</li>
+					<li><span>*</span> 개인사진 업로드 시 해상도를 변경하여 업로드 해주세요.<br />(이미지 사이즈 :<em class="lightBlue"> 150 x 165</em>)</li>
+				</ul>
+
+				<div class="btnWrap mt10">
+					<a href="#none" class="btn lgLgR">저장</a>
+				</div>
+				
+			</fieldset>
+		</form>
+
+	</div>
+
+	<script type="text/javascript">
+	//<![CDATA[
+	//파일업로드
+	var fileupload = (function($){
+		var $Obj = $(".fileupload") // 파일업로드버튼
+			, $fileDel = $(".fileDel") //행삭제 버튼
+			, $fileInsert = $(".fileInsert") //파일첨부 행추가버튼
+			, $tr = $(".SendTable tr:last")
+			, $tbody = $(".SendTable tbody:last")
+			, idx;
+
+
+		console.log($('input[id*="txtAttach"]'))
+		$Obj.each(function(i){
+			$(this).off().on({
+				click:function(){
+					$("#fileAttach"+i).click();
+					$("#fileAttach"+i).change(function(){
+						 var selected_item = $(this).val()
+							$("#txtAttach"+i).val(selected_item);
+							$("#txtAttach"+i).attr('value', $("#fileAttach"+i).val())
+						});
+					return false;
+				}
+			});
+		$fileInsert.each(function(){
+			$(this).off().on({
+				click:function(){
+					var cloned = $(this).closest("tr").addClass("attchFile").clone(true).addClass("cloned");
+					var idx = $(this).closest("table").find("tr.attchFile").length;
+					console.log(idx)
+					if(idx < 3){ // 파일첨부는 3개이상 추가되지않는다.
+						$tbody.append(cloned) //복사한후 클론된 tr의 갯수를 센다.
+						$(this).closest("table").find("tr.cloned .fileInsert").remove(); //추가버튼은 제일상단에만 위치.
+						number()
+					}else{
+						return false;
+					}
+					return false;
+				}
+			});
+		});
+		$fileDel.each(function(){
+			$(this).off().on({
+				click:function(){
+					$(this).closest("tr").remove();
+					number(idx);
+				}
+			});
+		});
+		function number(){  //삭제 되거나, 추가될때마다 input id갱신
+			var $file = $("tr.attchFile input:file")
+				, $txt = $("tr.attchFile input:text");
+				$file.each(function(i){
+					$file.eq(i).attr({
+						name :"fileAttach" + i,
+						id :"fileAttach" + i,
+						value:""
+					})
+				});
+				$txt.each(function(i){
+					$txt.eq(i).attr({
+						name :"txtAttach" + i,
+						id :"txtAttach" +i,
+						value:""
+					})
+				});
+		}
+	});
+
+	})(jQuery);
+	var pobj = $('.add');
+	curex.ui.init(pobj);  // tab 데이터가 삭제되기전에 obj에 담아놓음.
+	var myTab2 = ci.tab.init($('.csstation')); // 
+	//]]>
+</script>
+	
+</div>
+
+
+</body>
+</html>
+

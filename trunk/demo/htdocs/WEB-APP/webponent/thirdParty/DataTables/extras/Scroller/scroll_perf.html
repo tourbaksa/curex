@@ -1,0 +1,175 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<link rel="shortcut icon" type="image/ico" href="http://www.datatables.net/favicon.ico" />
+		
+		<title>DataTables example</title>
+		<style type="text/css">
+			@import "../../media/css/demo_page.css";
+			@import "../../media/css/demo_table.css";
+			@import "media/css/dataTables.scroller.css";
+			table.display thead th {
+				white-space: nowrap;
+			}
+		</style>
+		<script type="text/javascript" language="javascript" src="../../media/js/jquery.js"></script>
+		<script type="text/javascript" language="javascript" src="../../media/js/jquery.dataTables.js"></script>
+		<script type="text/javascript" language="javascript" src="/proto/DataTables/extras/FixedColumns/media/js/FixedColumns.js"></script>
+		<script type="text/javascript" language="javascript" src="media/js/dataTables.scroller.js"></script>
+
+
+
+		
+		<script type="text/javascript" charset="utf-8">
+			$(document).ready(function() {
+				var oTable = $('#example').dataTable( {
+					"oLanguage": {
+						"sSearch": "그리드 내 전체 검색:"
+					},
+					"sScrollY": "300px",
+					"sAjaxSource": "media/data/5000.txt",
+					"sDom": "frtiS",
+					"bDeferRender": true,
+					"sScrollX": "100%"
+				} );
+				
+				new FixedColumns( oTable, {
+                    "iLeftWidth": 150
+                } );
+
+                /* Use the elements to store their own index */
+				$("thead input").each( function (i) {
+					this.visibleIndex = i;
+				} );
+				
+				$("thead input").keyup( function () {
+					/* If there is no visible index then we are in the cloned node */
+					var visIndex = typeof this.visibleIndex == 'undefined' ? 0 : this.visibleIndex;
+					
+					/* Filter on the column (the index) of this element */
+					oTable.fnFilter( this.value, visIndex );
+				} );
+				
+				/*
+				 * Support functions to provide a little bit of 'user friendlyness' to the textboxes
+				 */
+				$("thead input").each( function (i) {
+					this.initVal = this.value;
+				} );
+				
+				$("thead input").focus( function () {
+					if ( this.className == "search_init" )
+					{
+						this.className = "";
+						this.value = "";
+					}
+				} );
+				
+				$("thead input").blur( function (i) {
+					if ( this.value == "" )
+					{
+						this.className = "search_init";
+						this.value = this.initVal;
+					}
+				} );
+				
+			} );
+		</script>
+	</head>
+	<body id="dt_example">
+
+<table cellpadding="0" cellspacing="0" border="0" class="display" id="example">
+	<thead>
+		<tr>
+			<th>ID</th>
+			<th>First name</th>
+			<th>Last name</th>
+			<th>ZIP</th>
+			<th>Country</th>
+			<th>First name</th>
+            <th>Last name</th>
+            <th>ZIP</th>
+            <th>Country</th>
+            <th>First name</th>
+            <th>Last name</th>
+            <th>ZIP</th>
+            <th>Country</th>
+            <th>First name</th>
+            <th>Last name</th>
+            <th>ZIP</th>
+            <th>Country</th>
+            <th>First name</th>
+            <th>Last name</th>
+            <th>ZIP</th>
+            <th>Country</th>
+            <th>First name</th>
+            <th>Last name</th>
+            <th>ZIP</th>
+            <th>Country</th>
+            <th>First name</th>
+            <th>Last name</th>
+            <th>ZIP</th>
+            <th>Country</th>
+            <th>First name</th>
+            <th>Last name</th>
+            <th>ZIP</th>
+            <th>Country</th>
+            <th>First name</th>
+            <th>Last name</th>
+            <th>ZIP</th>
+            <th>Country</th>
+            <th>First name</th>
+            <th>Last name</th>
+            <th>ZIP</th>
+            <th>Country</th>
+            
+		</tr>
+		<tr>
+			<td><input type="text" name="search_ID" value="Search ID" class="search_init" /></td>
+			<td><input type="text" name="search_First_name" value="Search First name" class="search_init" /></td>
+			<td><input type="text" name="search_Last_name" value="Search Last name" class="search_init" /></td>
+			<td><input type="text" name="search_ZIP" value="Search ZIP" class="search_init" /></td>
+			<td><input type="text" name="search_Country" value="Search Country" class="search_init" /></td>
+			<td><input type="text" name="search_First_name" value="Search First name" class="search_init" /></td>
+			<td><input type="text" name="search_Last_name" value="Search Last name" class="search_init" /></td>
+			<td><input type="text" name="search_ZIP" value="Search ZIP" class="search_init" /></td>
+			<td><input type="text" name="search_Country" value="Search Country" class="search_init" /></td>
+			<td><input type="text" name="search_First_name" value="Search First name" class="search_init" /></td>
+			<td><input type="text" name="search_Last_name" value="Search Last name" class="search_init" /></td>
+			<td><input type="text" name="search_ZIP" value="Search ZIP" class="search_init" /></td>
+			<td><input type="text" name="search_Country" value="Search Country" class="search_init" /></td>
+			<td><input type="text" name="search_First_name" value="Search First name" class="search_init" /></td>
+			<td><input type="text" name="search_Last_name" value="Search Last name" class="search_init" /></td>
+			<td><input type="text" name="search_ZIP" value="Search ZIP" class="search_init" /></td>
+			<td><input type="text" name="search_Country" value="Search Country" class="search_init" /></td>
+			<td><input type="text" name="search_First_name" value="Search First name" class="search_init" /></td>
+			<td><input type="text" name="search_Last_name" value="Search Last name" class="search_init" /></td>
+			<td><input type="text" name="search_ZIP" value="Search ZIP" class="search_init" /></td>
+			<td><input type="text" name="search_Country" value="Search Country" class="search_init" /></td>
+			<td><input type="text" name="search_First_name" value="Search First name" class="search_init" /></td>
+			<td><input type="text" name="search_Last_name" value="Search Last name" class="search_init" /></td>
+			<td><input type="text" name="search_ZIP" value="Search ZIP" class="search_init" /></td>
+			<td><input type="text" name="search_Country" value="Search Country" class="search_init" /></td>
+			<td><input type="text" name="search_First_name" value="Search First name" class="search_init" /></td>
+			<td><input type="text" name="search_Last_name" value="Search Last name" class="search_init" /></td>
+			<td><input type="text" name="search_ZIP" value="Search ZIP" class="search_init" /></td>
+			<td><input type="text" name="search_Country" value="Search Country" class="search_init" /></td>
+			<td><input type="text" name="search_First_name" value="Search First name" class="search_init" /></td>
+			<td><input type="text" name="search_Last_name" value="Search Last name" class="search_init" /></td>
+			<td><input type="text" name="search_ZIP" value="Search ZIP" class="search_init" /></td>
+			<td><input type="text" name="search_Country" value="Search Country" class="search_init" /></td>
+			<td><input type="text" name="search_First_name" value="Search First name" class="search_init" /></td>
+			<td><input type="text" name="search_Last_name" value="Search Last name" class="search_init" /></td>
+			<td><input type="text" name="search_ZIP" value="Search ZIP" class="search_init" /></td>
+			<td><input type="text" name="search_Country" value="Search Country" class="search_init" /></td>
+			<td><input type="text" name="search_First_name" value="Search First name" class="search_init" /></td>
+			<td><input type="text" name="search_Last_name" value="Search Last name" class="search_init" /></td>
+			<td><input type="text" name="search_ZIP" value="Search ZIP" class="search_init" /></td>
+			<td><input type="text" name="search_Country" value="Search Country" class="search_init" /></td>
+		</tr>
+	</thead>
+
+</table>
+	</body>
+</html>
