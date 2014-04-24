@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> CuREx </title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
+<link rel="stylesheet" href="/WEB-APP/webponent/css/common.css" type="text/css" />
+<link rel="stylesheet" href="/css/curex.common.css" type="text/css" />
+<link rel="stylesheet" href="/css/curex.layout.css" type="text/css" />
+<link rel="stylesheet" href="/css/curex.sub.css" type="text/css" />
+<link rel="stylesheet" href="/WEB-APP/webponent/dialog/css/dialog.css" type="text/css" />
+<script type="text/javascript" src="/WEB-APP/webponent/ci/agent.js"></script>
+<script type="text/javascript" src="/WEB-APP/webponent/thirdParty/jquery/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="/WEB-APP/webponent/thirdParty/jquery/jquery-ui-1.10.3.min.js"></script>
+<script type="text/javascript" src="/WEB-APP/webponent/tab/tab.js"></script>
+<script type="text/javascript" src="/WEB-APP/webponent/dialog/dialog.js"></script>
+<script type="text/javascript" src="/js/popup.js"></script>
+<script type="text/javascript" src="/js/curex.ui.js"></script>
+</head>
+<body>
+
+<div id="factWrap" style="width:900px;">
+	<h1>SALES MATERIAL</h1>
+	<div class="popContents">
+		<div class="userSelect">
+			
+			<div class="viewWrap">
+				<div class="viewCont">
+					<span class="slideCtrl">
+						<a href="#none" class="prev"><img src="/img/common/btn_view_l.png" alt="이전" /></a>
+						<a href="#none" class="next"><img src="/img/common/btn_view_r.png" alt="다음" /></a>
+					</span>
+					<div class="slideList">
+						<img src="/img/sub/img_bb.jpg" alt="" />
+						<img src="/img/sub/img_bb2.jpg" alt="" />
+						<img src="/img/sub/img_bb3.jpg" alt="" />
+					</div>
+				</div>
+				<div class="Viewthumbnail">
+					<div class="thumbList">
+						<p class="tac itemLeng"><span>1</span>/3</p>
+						<ul class="item">
+							<li><a href="#"><img src="/img/sub/img_bb.jpg" alt="" /></a></li>
+							<li><a href="#"><img src="/img/sub/img_bb2.jpg" alt="" /></a></li>
+							<li><a href="#"><img src="/img/sub/img_bb3.jpg" alt="" /></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="btnWrap mt5">
+				<a href="#none" class="btn lgBeR">보관함닫기</a>
+				<a href="#none" class="btn lgBeR">다운로드</a>
+				<a href="#none" class="btn lgBeR">메일발송</a>
+				<a href="#none" class="btn lgBeR">화면출력</a>
+			</div>
+
+			<div class="salesContact">
+				<div class="popTit">
+					<h2>제목 : 세일즈메테리얼샘플입니다.</h2>
+				</div>
+				<div class="detailBox">
+						
+				</div>
+				<span class="more2">유효기간:2014-04-16~2014-04-16</span>
+				<p class="cment"><span class="pentagon">주제</span> 암, 노후, 자녀교육, 결혼</p>
+			</div>
+
+		</div>
+	</div>
+
+	<a href="#none" class="btnClose"><img src="/img/common/btn_close2.gif" alt="닫기" /></a>
+
+	<script type="text/javascript">
+		//<![CDATA[
+		var pobj = $('.add');
+		curex.ui.init(pobj);  // tab 데이터가 삭제되기전에 obj에 담아놓음.
+		var myTab = ci.tab.init($('.userSelect')); // 고객정보탭
+		var myTab1 = ci.tab.init($('.tabOutline')); // 
+		//]]>
+	</script>
+
+</div>
+
+</body>
+</html>

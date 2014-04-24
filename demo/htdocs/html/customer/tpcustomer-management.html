@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> CuREx </title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
+<link rel="stylesheet" href="/WEB-APP/webponent/css/common.css" type="text/css" />
+<link rel="stylesheet" href="/css/curex.common.css" type="text/css" />
+<link rel="stylesheet" href="/css/curex.layout.css" type="text/css" />
+<link rel="stylesheet" href="/css/curex.sub.css" type="text/css" />
+<link rel="stylesheet" href="/WEB-APP/webponent/dialog/css/dialog.css" type="text/css" />
+<script type="text/javascript" src="/WEB-APP/webponent/ci/agent.js"></script>
+<script type="text/javascript" src="/WEB-APP/webponent/thirdParty/jquery/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="/WEB-APP/webponent/thirdParty/jquery/jquery-ui-1.10.3.min.js"></script>
+<script type="text/javascript" src="/WEB-APP/webponent/tab/tab.js"></script>
+<script type="text/javascript" src="/WEB-APP/webponent/dialog/dialog.js"></script>
+<script type="text/javascript" src="/js/popup.js"></script>
+<script type="text/javascript" src="/js/curex.ui.js"></script>
+</head>
+<body>
+
+<div id="wrap">
+	<!-- HEADER -->
+	<div id="header">
+		<img src="/img/common/img_header.jpg" alt="" />
+	</div>
+	<!-- //HEADER -->
+		
+	<div id="conteiner">
+		<div class="hgroup">
+			<h2>감사고객관리</h2>
+			<ul class="location">
+				<li><a href="#none">홈&nbsp;</a>&gt;</li>
+				<li><a href="#none">&nbsp;고객정보&nbsp;</a>&gt;</li>
+				<li><a href="#none">&nbsp;감사고객관리&nbsp;</a></li>
+			 </ul>	
+		</div>
+		 
+		<!-- 공통 컨텐츠 -->
+		<div id="contents" class="customer clear-fix">
+			
+			<div class="box3">
+				<p>방문현황</p>
+				<ul class="visit">
+					<li>
+						<dl>
+							<dt>전체 미방문</dt>
+							<dd>100명</dd>
+							<dd class="photo"><img src="/img/common/icon_grat1.gif" alt="" /></dd>
+						</dl>
+					</li>
+					<li>
+						<dl>
+							<dt>6개월 이내 미방문</dt>
+							<dd>100명</dd>
+							<dd><span>산출대상 고객중 미방문 고객수</span></dd>
+							<dd class="photo"><img src="/img/common/icon_grat2.gif" alt="" /></dd>
+						</dl>
+					</li>
+					<li>
+						<dl>
+							<dt>방문거절 : <strong>10명</strong></dt>
+							<dd class="colorGray">연락두절 : <strong>3명</strong></dd>
+							<dd class="photo"><img src="/img/common/icon_grat3.gif" alt="" /></dd>
+						</dl>
+					</li>
+					<li>
+						<dl>
+							<dt>6개월 방문율</dt>
+							<dd>100%</dd>
+							<dd><span>(2014-03-20 기준)</span></dd>
+							<dd class="photo"><img src="/img/common/icon_grat4.gif" alt="" /></dd>
+						</dl>
+					</li>
+				</ul>
+			</div>
+			<ul class="footNote">
+				<li><span>*</span> CS LP는 연 2회(1월1일, 7월1일) 선정되며, 자격기준은 6개월 방문율 70%이상입니다.</li>
+				<li><span>*</span> 2014년 7월 1일자 방문율은 2013년 7월 1일부터 12월 31일까지 이전받은 감사고객수 대비 방문고객수로 산출됩니다.</li>
+				<li><span>*</span> 6개월 방문율은 계약자(고객) 기준으로 산출됩니다.</li>
+			</ul>
+			<table class="table1 mt8">
+				<caption>방문현황</caption>
+				<colgroup>
+					<col width="7%" />
+					<col width="10%" />
+					<col width="7%" />
+					<col width="10%" />
+					<col width="7%" />
+					<col width="*" />
+				</colgroup>
+				<tbody>
+					<tr>
+						<th>구분</th>
+						<td>
+							<span class="selectFull">
+								<select>
+									<option>미방문</option>
+									<option></option>
+								</select>
+							</span>
+						</td>
+						<th>검색조건</th>
+						<td>
+							<span class="selectFull">
+								<select>
+									<option>계약자</option>
+									<option></option>
+								</select>
+							</span>
+						</td>
+						<th>상태</th>
+						<td>
+							<select style="width:100px;">
+								<option>계약자</option>
+								<option></option>
+							</select>
+							<span class="">이전일자</span>
+							<input type="text" style="width:100px" value="2014-03-20" />
+							<a href="#none"><img src="/img/common/icon3.gif" alt="달력" /></a>&nbsp;
+							~ 
+							&nbsp;
+							<input type="text" style="width:100px" value="2014-03-20" />
+							<a href="#none"><img src="/img/common/icon3.gif" alt="달력" /></a>
+
+							<input type="checkbox" id="ch1" class="ml20" />
+							<label for="ch1">방문율 산출대상기간</label>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<div class="btnWrap">
+				<a href="#none" class="btn lgBeR">검색</a>
+			</div>
+
+			<div class="juContact">
+				<h4>인수계약 리스트 : 총 00건</h4>
+				<form method="post" action="/">
+					<fieldset>
+						<legend>인수계약리스트</legend>
+						<table class="table3">
+							<caption>인수계약리스트</caption>
+							<colgroup>
+								<col width="4%" />
+								<col width="6%" />
+								<col width="6%" />
+								<col width="9%" />
+								<col width="5%" />
+								<col width="8%" />
+								<col width="*" />
+								<col width="6%" />
+								<col width="9%" />
+								<col width="10%" />
+								<col width="18%" />
+							</colgroup>
+							<thead>
+								<tr>
+									<th>선택</th>
+									<th>계약자</th>
+									<th>피보험자</th>
+									<th>대표증권번호</th>
+									<th>계약건수</th>
+									<th>이전일자</th>
+									<th>이전사유</th>
+									<th>방문여부</th>
+									<th>방문일자</th>
+									<th>전화번호</th>
+									<th>주소</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>
+										<input type="checkbox" />
+									</td>
+									<td>홍길동</td>
+									<td>홍길동</td>
+									<td>1050293092</td>
+									<td class="codeNum"><a href="#none">2</a></td>
+									<td>2014-03-20</td>
+									<td>관리자에 의한 Random 분배</td>
+									<td>미방문</td>
+									<td>-</td>
+									<td>01029591724</td>
+									<td class="tal">서울시 강남구 논현동 7-5</td>
+								</tr>
+								<tr>
+									<td>
+										<input type="checkbox" />
+									</td>
+									<td>홍길동</td>
+									<td>홍길동</td>
+									<td>1050293092</td>
+									<td class="codeNum"><a href="#none">2</a></td>
+									<td>2014-03-20</td>
+									<td>관리자에 의한 Random 분배</td>
+									<td>미방문</td>
+									<td>-</td>
+									<td>01029591724</td>
+									<td class="tal">서울시 강남구 논현동 7-5</td>
+								</tr>
+								<tr>
+									<td>
+										<input type="checkbox" />
+									</td>
+									<td>홍길동</td>
+									<td>홍길동</td>
+									<td>1050293092</td>
+									<td class="codeNum"><a href="#none">2</a></td>
+									<td>2014-03-20</td>
+									<td>관리자에 의한 Random 분배</td>
+									<td>미방문</td>
+									<td>-</td>
+									<td>01029591724</td>
+									<td class="tal">서울시 강남구 논현동 7-5</td>
+								</tr>
+								<tr>
+									<td>
+										<input type="checkbox" />
+									</td>
+									<td>홍길동</td>
+									<td>홍길동</td>
+									<td>1050293092</td>
+									<td class="codeNum"><a href="#none">2</a></td>
+									<td>2014-03-20</td>
+									<td>관리자에 의한 Random 분배</td>
+									<td>미방문</td>
+									<td>-</td>
+									<td>01029591724</td>
+									<td class="tal">서울시 강남구 논현동 7-5</td>
+								</tr>
+								<tr>
+									<td>
+										<input type="checkbox" />
+									</td>
+									<td>홍길동</td>
+									<td>홍길동</td>
+									<td>1050293092</td>
+									<td class="codeNum"><a href="#none">2</a></td>
+									<td>2014-03-20</td>
+									<td>관리자에 의한 Random 분배</td>
+									<td>미방문</td>
+									<td>-</td>
+									<td>01029591724</td>
+									<td class="tal">서울시 강남구 논현동 7-5</td>
+								</tr>
+								<tr>
+									<td>
+										<input type="checkbox" />
+									</td>
+									<td>홍길동</td>
+									<td>홍길동</td>
+									<td>1050293092</td>
+									<td class="codeNum"><a href="#none">2</a></td>
+									<td>2014-03-20</td>
+									<td>관리자에 의한 Random 분배</td>
+									<td>미방문</td>
+									<td>-</td>
+									<td>01029591724</td>
+									<td class="tal">서울시 강남구 논현동 7-5</td>
+								</tr>
+								<tr>
+									<td>
+										<input type="checkbox" />
+									</td>
+									<td>홍길동</td>
+									<td>홍길동</td>
+									<td>1050293092</td>
+									<td class="codeNum"><a href="#none">2</a></td>
+									<td>2014-03-20</td>
+									<td>관리자에 의한 Random 분배</td>
+									<td>미방문</td>
+									<td>-</td>
+									<td>01029591724</td>
+									<td class="tal">서울시 강남구 논현동 7-5</td>
+								</tr>
+								<tr>
+									<td>
+										<input type="checkbox" />
+									</td>
+									<td>홍길동</td>
+									<td>홍길동</td>
+									<td>1050293092</td>
+									<td class="codeNum"><a href="#none">2</a></td>
+									<td>2014-03-20</td>
+									<td>관리자에 의한 Random 분배</td>
+									<td>미방문</td>
+									<td>-</td>
+									<td>01029591724</td>
+									<td class="tal">서울시 강남구 논현동 7-5</td>
+								</tr>
+								<tr>
+									<td>
+										<input type="checkbox" />
+									</td>
+									<td>홍길동</td>
+									<td>홍길동</td>
+									<td>1050293092</td>
+									<td class="codeNum"><a href="#none">2</a></td>
+									<td>2014-03-20</td>
+									<td>관리자에 의한 Random 분배</td>
+									<td>미방문</td>
+									<td>-</td>
+									<td>01029591724</td>
+									<td class="tal">서울시 강남구 논현동 7-5</td>
+								</tr>
+								<tr>
+									<td>
+										<input type="checkbox" />
+									</td>
+									<td>홍길동</td>
+									<td>홍길동</td>
+									<td>1050293092</td>
+									<td class="codeNum"><a href="#none">2</a></td>
+									<td>2014-03-20</td>
+									<td>관리자에 의한 Random 분배</td>
+									<td>미방문</td>
+									<td>-</td>
+									<td>01029591724</td>
+									<td class="tal">서울시 강남구 논현동 7-5</td>
+								</tr>
+							</tbody>
+						</table>
+					</fieldset>
+				</form>
+				<div class="more">
+					<a href="#none" class="btn smGnR">이전 LP 메모 이력</a>
+					<a href="#none" class="btn smGnR">LP변경확인서</a>
+					<a href="#none" class="btn smGnR">방문패키지</a>
+				</div>
+			</div>
+
+			<ul class="footNote">
+				<li>* 실효계약은 LP 변경고객확인서 접수 없이도 부활 청약서 접수를 통한 부활 성립시에 LP변경이 본마감 후 자동 확인됩니다.</li>
+				<li>* Working Day 기준으로 말일까지 LP 변경 고객확인서가 접수된 계약에 한해 직후 도래하는 보수지급일에 커미션이 지급됩니다.</li>
+				<li>* 미방문 계약 중 실효건은 고객방문자료가 인쇄되지 않습니다.</li>
+				<li>* 실효계약은 LP 변경고객확인서 접수 없이도 부활 청약서 접수를 통한 부활 성립시에 LP변경이 본마감 후 자동 확인됩니다.</li>
+				<li>* 연락두절, 방문거절은 6개월 장기 미방문건에서 제외됩니다.</li>
+			</ul>
+			
+			
+		</div>
+		<!-- //공통 컨텐츠 -->
+
+	</div>
+	
+</div>
+
+<!-- FOOTER -->
+<div id="footer">
+	<div class="fter">
+		<img src="/img/common/img_footer.jpg" alt="" />
+	</div>
+</div>
+<!--//FOOTER -->
+
+</body>
+</html>

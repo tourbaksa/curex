@@ -1,0 +1,178 @@
+@charset "utf-8";
+
+/* 계약 공통*/
+div.contartWrap{position:relative;}
+div.contartWrap h3{font-size:16px; color:#363636; font-weight:normal; line-height:16px; margin:20px 0 10px 0;}
+div.contartWrap h5{font-size:14px; color:#707070; font-weight:normal; margin:20px 0 10px 0;}
+div.contartWrap .table1 thead th,
+div.contartWrap .table1 tbody th,
+div.contartWrap .table1 tbody td{line-height:15px; height:26px; }
+div.contartWrap .table1 tbody td.tac{padding:0;}
+
+
+/* 계약에서 쓰이는 heading */
+.subst{font-size:14px; color:#707070; margin:10px 0;}
+
+/* 계약검색 */
+/* 계약검색결과  */
+div.contartShWrap table.result thead th,
+div.contartShWrap table.result tbody td{line-height:15px; height:21px; padding:0 !important;} /* table height 20px */
+
+/* 계약 리스트 */
+div.fieldWrap{position: relative;}
+div.fieldWrap div.btnWrap{margin:0 0 10px 0;}
+div.fieldWrap div.btnWrap h3.btnL{margin:0 !important; line-height:22px;}
+div.searchField{border:1px solid #64ade5; width:680px; padding:7px 9px; margin:0 0 0 -340px; font-size:0; position: absolute; left:50%; top:32px; background-color: #fff; display:none;}
+div.searchField label{margin:0 9px 0 4px; font-size:12px; vertical-align:middle; display:inline-block; line-height:19px;}
+div.searchField div.btnWrap{margin:10px 0 1px 0;}
+
+div.searhResultBox{border:1px solid #dedede; padding:9px 0 9px 16px; margin:0 0 40px 0;}
+div.searhResultBox input[type="radio"]{margin-left:40px;}
+div.searhResultBox input[type="radio"]:first-child{margin-left:0px;}
+
+/* 계약정보 */
+div.contartShWrap div.contartDetail table tbody td,
+div.contartShWrap div.contartDetail table tbody th,
+div.contartShWrap div.contartDetail table thead th,
+div.contartShWrap div.ctInfoWrap table tbody td,
+div.contartShWrap div.ctInfoWrap table tbody th,
+div.contartShWrap div.ctInfoWrap table thead th{line-height:15px; height:26px; padding-top:0; padding-bottom:0;}
+
+/* 보장내용 탭 */
+div.ctInfoWrap{position:relative;}
+div.ctInfoWrap ul.ctTab{margin-bottom:10px;}
+div.ctInfoWrap .table1 th{text-align:left; padding-left:11px;}
+div.ctInfoWrap .table1 td{padding-left:11px;}
+div.ctInfoWrap div.ensureCont{overflow:hidden;}
+div.ctInfoWrap div.ensureCont .tl{float:left; width:862px;}
+div.ctInfoWrap div.ensureCont .tr{float:right; width:141px;}
+div.ctInfoWrap div.ensureCont + .btnWrap{margin:10px 0 0 0;}
+
+/* 자동이체 탭 */
+div#automCnt2{position:relative;}
+div#automCnt2 div.automRadio{position:absolute; left:280px; top:-30px; width:203px; padding:0 10px; border:1px solid #e1e4eb;  border-top:1px solid #c1c6cc; height:25px; line-height:23px;}
+/* 환급금/대출/중도인철 */
+div#loanCnt2{position:relative; }
+div#loanCnt2 div.automRadio{position:absolute; left:161px; top:-30px; width:111px; padding:0 10px; border:1px solid #e1e4eb;  border-top:1px solid #c1c6cc; height:25px; line-height:23px;}
+div#loanCnt2 div.automRadio input{margin-left:15px;}
+div#loanCnt2 div.automRadio input:first-child{margin-left:0px;}
+div#loanCnt2 span.unit{display:inline-block; text-align:right; position:absolute; right:0; top:-30px;}
+div#loanCnt2 span.unit em{line-height:24px; display:inline-block;}
+
+div.unitWrap{position:relative; min-height:24px;}
+div.unitWrap span.unit{display:inline-block; text-align:right; position:absolute; right:0; top:0px;}
+div.unitWrap span.unit em{line-height:24px; display:inline-block;}
+
+/* 계약상세 */
+div.contartDetail{overflow:hidden; margin:0 0 10px 0;}
+div.contartDetail .tl{width:462px; float:left;}
+div.contartDetail .tr{width:542px; float:right;}
+
+/* 변액보험 탭 */
+div.varInsur{width:797px; overflow:hidden;}
+div.varInsur table{width:583px; float:left;}
+div.varInsur a.btn{margin:3px 0 0 3px;}
+
+div.varInsurBox{border:1px solid #dedede; padding:8px 0 8px 20px; margin:10px 0 0 0;}
+div.varInsurBox .footNote li{padding-left:17px; line-height:17px;}
+
+/* 좌 버튼 */
+div.ctBtn{position:absolute; right:0; top:0; margin:0;}
+
+/*==========================
+  유지율
+============================*/
+div.rateZone{border:1px solid #dedede; padding:3px 3px 3px 0; margin:10px 0 10px 0;}
+div.rateZone label{display:inline-block; min-width:61px; text-align:center;}
+
+div.tHead{position:relative; margin:10px 0 10px 0;}
+div.tHead h4{font-size:16px; color:#000; height:16px; font-weight:bold;}
+div.tHead span.unit{position:absolute; right:0; top:0;}
+
+div.contartHeader{margin:20px 0 0 0; overflow:hidden;}
+div.contartHeader div.ctList{border:1px solid #dedede; background-color:#f7f7f7; padding:5px; width:188px; float:left;}
+div.contartHeader div.ctList ul{padding:8px 0px 8px 20px; background-color:#fff; height:195px; overflow-y:scroll; overflow-x:hidden;}
+div.contartHeader div.ctList ul li{background:url(../img/common/blt_garyflower.gif) no-repeat 0 50%; padding-left:11px; height:35px; line-height:35px; border-top:1px solid #dedede; width:124px;}
+div.contartHeader div.ctList ul li a{font-size:14px;}
+div.contartHeader div.ctList ul li strong{color:#ff0000;}
+div.contartHeader div.ctList ul li:first-child{border-top:0;}
+div.contartHeader div.ctSearchZone{padding: 0 20px 20px 20px; float:left; width:804px; border:1px solid #dedede; margin-left:20px;}
+div.contartHeader div.ctsearchStg{width:762px; min-height:38px; padding:7px 13px 9px 9px; background-color:#f4f4f4; border-radius:3px; -moz-border-radius:3px; -webkit-border-radius:3px; -ms-border-radius:3px; border:1px solid #dedede;}
+div.contartHeader div.btnWrap{margin:10px 0 0 0; text-align:center;}
+div.simpleSch{position:relative; line-height:38px;}
+div.searchTerm{background-color:#f4f4f4; border-radius:3px; -moz-border-radius:3px; -webkit-border-radius:3px; -ms-border-radius:3px; border:1px solid #dedede; padding:7px 0 6px 7px;}
+div.simpleSch a.btn{position:absolute; right:0; top:7px;}
+ul.SchList{overflow:hidden;}
+ul.SchList > li{float:left; padding:0 5px; border-left:1px solid #dedede; min-height:180px; width:145px;}
+ul.SchList > li.last{width:156px; padding-right:0;}
+ul.SchList > li:first-child{border-left:0; padding-left:0;}
+ul.SchList > li > strong{display:block; background-color:#a2c1c4; color:#fff; text-align:center;  height:25px; line-height:25px; margin:0 0 10px 0;}
+ul.SchList > li li{line-height:13px; margin-bottom:8px;}
+ul.SchList > li li input{margin-right:5px;}
+ul.SchList > li li label{letter-spacing:-1px;}
+
+
+/* 미결내용 */
+div.pendCnt h5{margin:0;}
+div.pendCnt table{width:371px;}
+div.pendCnt textarea.pendingArea{border:1px solid #dededd; margin:10px 0 0 0; width:1024px;}
+div.pendCnt .table1 th{text-align:center; padding:0;}
+div.pendCnt .table1 td{text-align:center; padding:0;}
+
+/*==========================
+  청약
+============================*/
+span.ResultSum{font-size:14px; color:#363636;}
+span.ResultSum strong{color:#e8404f; font-weight:normal;}
+/* 증권전달대상계약 - 상세검색 */
+div.subscription{margin:20px 0 10px 0;}
+div.subscription table.table1 th,
+div.subscription table.table1 td{height:31px; padding-top:6px;}
+div.subscription table + table{margin-top:10px;}
+
+/* policyTable*/
+table.policy{margin:10px 0 10px 0; clear:both;}
+table.policy th img{vertical-align:middle; margin-left:5px;}
+table.policy .callNum{text-align:center;}
+table.policy .callNum a{color:#00a1b1; text-decoration:underline;}
+
+/* 말풍선 */
+table.policy span.bubble{display:block;}
+table.policy span.bubble{position:relative;display:none; width:154px;}
+table.policy span.bubble .bb{position:absolute;left:-38px;bottom:26px; top:inherit;z-index:100;border:1px solid #64ade5;background:#f9fcff; padding:10px 10px;border-radius:3px;font-size:11px;line-height:15px; font-weight:normal; width:165px;}
+table.policy span.bubble .arr{background:url(../img/sub/icon_bubble_bottom.png) no-repeat;position:absolute;bottom:-7px;top:inherit;left:50%;margin-left:-4px;width:11px;height:6px;}
+
+table.policy span.bubble.b2 .bb{left:38px;}
+table.policy span.bubble.b4 .bb{left:-41px;}
+
+/* 청약진행사항 */
+ul.subsProcess{float:right; overflow:hidden; padding:0 0 8px 0;}
+ul.subsProcess li{font-size:12px; float:left; text-align:right; padding-right:10px; letter-sapcing:-1px;}
+ul.subsProcess li a{color:#00a1b1; text-decoration:underline;}
+
+/* 상세정보 */
+div.detailInfo{border:1px solid #dededd; min-height:228px; position:relative;}
+div.detailInfo span{position:absolute; display:block; text-align:center; top:50%; left:43%;}
+
+
+/*==========================
+  계약리뷰 - 보장리뷰 레이어
+============================*/
+a.btnReview{display:block; width:20px; height:20px; background:url(../img/common/blt_arrowR.png) no-repeat 50% 50%; font-size:0; line-height:0; overflow:hidden; text-indent:-9999;}
+a.btnReview.close{background-image:url(../img/common/blt_arrowB.png);}
+tr.ReviewWrap{display:none;}
+tr.ReviewWrap div.ReviewTableLayer{padding:19px; width:100%; background-color:#dde3ef;}
+tr.ReviewWrap div.ReviewTableLayer table td{background-color:#fff;}
+div.contartShWrap td span.selectFull{margin:2px 2px 1px 4px;}
+
+/*==========================
+ 수익자관련보험계약
+============================*/
+div.beneBox{padding:14px 104px 14px 20px; border:1px solid #dedede; margin:0 0 10px 0;}
+div.beneBox div.bener{height:25px;} 
+div.beneBox div.bener label:first-child{font-size:16px; color:#000; line-height:25px; margin-right:10px; vertical-align:middle;}
+div.beneBox div.bener strong{font-size:16px; color:#00a1b1; display:inline-block; line-height:25px; margin-right:5px; font-weight:normal;vertical-align:middle;}
+div.beneBox ul.insurList{overflow:hidden; margin-top:10px;}
+div.beneBox ul.insurList li{text-align:right; margin-top:6px;}
+div.beneBox ul.insurList li:first-child{margin-top:0;}
+div.beneBox ul.insurList li span{float:left;}

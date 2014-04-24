@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> LP활동통계 </title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
+<link rel="stylesheet" href="/WEB-APP/webponent/css/common.css" type="text/css" />
+<link rel="stylesheet" href="/css/curex.common.css" type="text/css" />
+<link rel="stylesheet" href="/css/curex.layout.css" type="text/css" />
+<link rel="stylesheet" href="/css/curex.sub.css" type="text/css" />
+<link rel="stylesheet" href="/WEB-APP/webponent/dialog/css/dialog.css" type="text/css" />
+<script src="/WEB-APP/webponent/ci/agent.js"></script>
+<script type="text/javascript" src="/WEB-APP/webponent/thirdParty/jquery/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="/WEB-APP/webponent/thirdParty/jquery/jquery-ui-1.10.3.min.js"></script>
+<script type="text/javascript" src="/WEB-APP/webponent/tab/tab.js"></script>
+<script type="text/javascript" src="/WEB-APP/webponent/dialog/dialog.js"></script>
+<script type="text/javascript" src="/js/popup.js"></script>
+<script type="text/javascript" src="/js/curex.ui.js"></script>
+</head>
+<body>
+
+<div id="wrap">
+	<!-- HEADER -->
+	<div id="header">
+		<img src="/img/common/img_header.jpg" alt="" />
+	</div>
+	<!-- //HEADER -->
+		
+	<div id="conteiner">
+		<div class="hgroup">
+			<h2>활동통계</h2>
+			<ul class="location">
+				<li><a href="#none">홈&nbsp;</a>&gt;</li>
+				<li><a href="#none">&nbsp;스마트CRM&nbsp;</a>&gt;</li>
+				<li><a href="#none">&nbsp;활동통계 &nbsp;</a></li>
+			 </ul>	
+		</div>
+		 
+		<!-- 공통 컨텐츠 -->
+		<div id="contents">
+			<div class="statisWrap ci-tab">
+				
+				<ul class="tab01 tab-selector">
+					<li class="active"><a href="#none">LP활동관리</a></li>
+					<li><a href="#none">Activity 통계</a></li>
+				</ul>
+				<ul class="tab-panel">
+					<li>
+						<div class="add">
+							<table summary="기간, 지점, 팀, LP" width="100%" class="table1">
+								<caption>활동통계조회</caption>
+								<colgroup>
+									<col width="9%" />
+									<col width="26%" />
+									<col width="9%" />
+									<col width="16%" />
+									<col width="8%" />
+									<col width="12%" />
+									<col width="8%" />
+									<col width="*" />
+								</colgroup>
+								<tbody>
+									<tr>
+										<th>기간</th>
+										<td>
+											<input type="text" style="width:95px">
+											<a href="#" class="carendar"><span class="cdr">23</span>
+											~
+											<input type="text" style="width:95px">
+											</a><a href="#" class="carendar"><span class="cdr">23</span></a> 
+										</td>
+										<th>지점</th>
+										<td>
+											<select style="width:158px;" style="지점선택">
+												<option>OO지점</option>
+											</select>
+										</td>
+										<th>팀</th>
+										<td>
+											<select style="width:118px;" style="팀선택">
+												<option>OO팀</option>
+											</select>
+										<th>LP</th>
+										<td>
+											<select style="width:118px;" style="LP선택">
+												<option>OO팀</option>
+											</select>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							<div class="btnWrap">
+								<a href="#" class="btn lgBeR">조회</a>
+							</div>
+							
+							<div class="statisGraphWrap">
+								<p class="garphDesc">2014-01-08 ~ 2014-01-09까지, OO지점, OO팀, OOO 에 대한 데이터입니다.</p>
+								<div class="statisGraphCnt">
+									<img src="/img/sub/img_statisGraph.gif" alt="" />
+								</div>
+							</div>
+							<div class="statisTable">
+								<table summary="유효방문, 방문등 계획및 결과에 대한 정보를 제공합니다." width="100%" class="table1">
+									<caption>방문일정</caption>
+									<colgroup>
+										<col width="%" />
+										<col width="%" />
+										<col width="%" />
+										<col width="%" />
+										<col width="%" />
+										<col width="%" />
+										<col width="%" />
+										<col width="%" />
+										<col width="%" />
+										<col width="%" />
+										<col width="%" />
+										<col width="*" />
+									</colgroup>
+									<thead>
+									<tr>
+										<th scope="col">&nbsp;</th>
+										<th scope="col" colspan="8">유효방문</th>
+										<th scope="col" colspan="6">방문</th>
+									</tr>
+									<tr class="tRow">
+										<th scope="col">유형</th>
+										<th scope="col">AP</th>
+										<th scope="col">FF</th>
+										<th scope="col">P</th>
+										<th scope="col">C</th>
+										<th scope="col">N</th>
+										<th scope="col">진단</th>
+										<th scope="col">증권전달</th>
+										<th scope="col">TOTAL</th>
+										<th scope="col">계약리뷰</th>
+										<th scope="col">안부</th>
+										<th scope="col">보전</th>
+										<th scope="col">보험금</th>
+										<th scope="col">기타기념일</th>
+										<th scope="col">TOTAL</th>
+									</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<th>계획</th>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+											<td>7</td>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+											<td>5</td>
+										</tr>
+										<tr>
+											<th>결과</th>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+											<td>7</td>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+											<td>5</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="add">
+							<table summary="기간, 지점, 팀, LP" width="100%" class="table1">
+								<caption>활동통계조회</caption>
+								<colgroup>
+									<col width="9%" />
+									<col width="26%" />
+									<col width="9%" />
+									<col width="16%" />
+									<col width="8%" />
+									<col width="12%" />
+									<col width="8%" />
+									<col width="*" />
+								</colgroup>
+								<tbody>
+									<tr>
+										<th>기간</th>
+										<td>
+											<input type="text" style="width:95px">
+											<a href="#" class="carendar"><span class="cdr">23</span>
+											~
+											<input type="text" style="width:95px">
+											</a><a href="#" class="carendar"><span class="cdr">23</span></a> 
+										</td>
+										<th>지점</th>
+										<td>
+											<select style="width:158px;" style="지점선택">
+												<option>OO지점</option>
+											</select>
+										</td>
+										<th>팀</th>
+										<td>
+											<select style="width:118px;" style="팀선택">
+												<option>OO팀</option>
+											</select>
+										<th>LP</th>
+										<td>
+											<select style="width:118px;" style="LP선택">
+												<option>OO팀</option>
+											</select>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							<div class="btnWrap">
+								<a href="#" class="btn lgBeR">조회</a>
+							</div>
+							
+							<div class="statisGraphWrap">
+								<p class="garphDesc">2014-01-08 ~ 2014-01-09까지, OO지점, OO팀, OOO 에 대한 데이터입니다.</p>
+								<div class="statisGraphCnt">
+									<img src="/img/sub/img_statisGraph.gif" alt="" />
+								</div>
+							</div>
+							<div class="statisTable mt20">
+								<table summary="유효방문, 방문등 계획및 결과에 대한 정보를 제공합니다." width="100%" class="table1">
+									<caption>방문일정</caption>
+									<colgroup>
+										<col width="9%" />
+										<col width="8%" />
+										<col width="8%" />
+										<col width="8%" />
+										<col width="8%" />
+										<col width="8%" />
+										<col width="8%" />
+										<col width="8%" />
+										<col width="8%" />
+										<col width="8%" />
+										<col width="9%" />
+										<col width="*" />
+									</colgroup>
+									<thead>
+									<tr>
+										<th scope="col" rowspan="2">고객명</th>
+										<th scope="col" colspan="10">유효방문</th>
+										<th scope="col" rowspan="2">청약</th>
+									</tr>
+									<tr>
+										<th scope="col" class="lineY">LPS동의</th>
+										<th scope="col">니드분석</th>
+										<th scope="col">LP변경확인서</th>
+										<th scope="col">증권전달확인</th>
+										<th scope="col">재정안정계획</th>
+										<th scope="col">LP보고서</th>
+										<th scope="col">고개방문확인</th>
+										<th scope="col">마케팅활용동의</th>
+										<th scope="col">계약리뷰</th>
+										<th scope="col">보험금지급</th>
+									</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<th>신새롬</th>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+											<td>7</td>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+										</tr>
+										<tr>
+											<th>김승헌</th>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+											<td>7</td>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</li>
+				</ul>
+
+			</div>
+		</div>
+
+		<!-- //공통 컨텐츠 -->
+		<!-- CHECKLIST -->
+		<div id="checkList">
+			<ul class="list">
+				<li><a href="#none">초기화</a></li>
+				<li><a href="#none">미리보기</a></li>
+				<li><a href="#none">임시저장</a></li>
+				<li><a href="#none">발송</a></li>
+			</ul>
+		</div>
+		<!-- //CHECKLIST -->
+
+		<script type="text/javascript">
+			//<![CDATA[
+			var myTab = ci.tab.init($('.PersonCont')); // 고객정보탭
+			var myTab1 = ci.tab.init($('.tabOutline')); // 
+			var myTab2 = ci.tab.init($('.statisWrap')); // 
+			//]]>
+		</script>
+	</div>
+</div>
+<!-- FOOTER -->
+<div id="footer">
+	<div class="fter">
+		<img src="/img/common/img_footer.jpg" alt="" />
+	</div>
+</div>
+<!--//FOOTER -->
+
+</body>
+</html>

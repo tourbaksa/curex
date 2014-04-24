@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> CuREx </title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
+<link rel="stylesheet" href="/WEB-APP/webponent/css/common.css" type="text/css" />
+<link rel="stylesheet" href="/css/curex.common.css" type="text/css" />
+<link rel="stylesheet" href="/css/curex.layout.css" type="text/css" />
+<link rel="stylesheet" href="/css/curex.sub.css" type="text/css" />
+<link rel="stylesheet" href="/WEB-APP/webponent/dialog/css/dialog.css" type="text/css" />
+<script type="text/javascript" src="/WEB-APP/webponent/ci/agent.js"></script>
+<script type="text/javascript" src="/WEB-APP/webponent/thirdParty/jquery/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="/WEB-APP/webponent/thirdParty/jquery/jquery-ui-1.10.3.min.js"></script>
+<script type="text/javascript" src="/WEB-APP/webponent/tab/tab.js"></script>
+<script type="text/javascript" src="/WEB-APP/webponent/dialog/dialog.js"></script>
+<script type="text/javascript" src="/js/popup.js"></script>
+<script type="text/javascript" src="/js/curex.ui.js"></script>
+</head>
+<body>
+
+<div id="popWrap" style="width:875px;">
+	<h1>제어판</h1>
+	<div class="popContents">
+		<div class="controlWrap">
+			<div class="ctrlMenu">
+				 <ul>
+					<li><a href="#none">보고서 설정</a>
+						<ul>
+							<li><a class="active" href="#none">Lips</a></li>
+							<li><a href="#none">계약리뷰</a></li>
+							<li><a href="#none">출력항목기본값</a></li>
+						</ul>
+					</li>
+					<li><a href="#none">Profile 설정</a></li>
+					<li><a href="#none">mCuREX 단말기등록</a></li>
+					<li><a href="#none">DM발송지 설정</a></li>
+				 </ul>
+			</div>
+			<div class="ctrlContent">
+				<div class="popTit mt10 mb20">
+					<h2>
+						보고서 설정 - LIPS
+						<span class="ctrlVm"><a href="#none"><img src="/img/common/ico_qus.gif" alt="물음표" /></a></span>
+					</h2>
+					<div id="layerPop1" class="layerPopWrap2">
+						<div class="layerPopHdr">
+							<h3>표지설정</h3>
+						</div>
+						<div class="layerPopCnt">
+							<ul class="footNote mb30">
+								<li><span>*</span> Lips의 겉표지와 속표지의 기본값을 설정할 수 있습니다.</li>
+								<li><span>*</span> 표지의 옵션에서 자주쓰시는 겉표지를 선택하실 수 있습니다.</li>
+								<li><span>*</span> 기타문구와 속표지 문구를 작성하시면 LiPS에서 보고서 출력시 기본값으로 출력됩니다.</li>
+								<li><span>*</span> LiPS 각 메뉴에서 보고서출력시 겉표지나 속표지의 값을 임시적으로 수정하여 출력할 수 있습니다.<br />이 때에는 수정한 값은 저장이 되지 않으며 다시 출력시 제어판의 값을 다시 기본값으로 불러옵니다. </li>
+							</ul>
+						</div>
+						<a class="btnClosePopup">
+							<img src="/img/sub/btn_close_popup.gif" alt="팝업창 닫기" />
+						</a>
+					</div>
+				</div>
+				
+				<ul class="btnTab attab">
+					<li class="active"><a href="#contrTab1">겉표지</a></li>
+					<li><a href="#contrTab2">속표지</a></li>
+				</ul>
+				<div class="mainTabzone">
+					<div id="contrTab1" class="tabCont">
+						<div class="coverControl">
+							<h3>표지지정</h3>
+							<div class="coverList">
+								<dl>
+									<dt><a href="#none"><img src="/img/common/bg_prud1.gif" alt="" /></a></dt>
+									<dd><a href="#none">표지1</a></dd>
+								</dl>
+								<dl>
+									<dt><a href="#none"><img src="/img/common/bg_prud1.gif" alt="" /></a></dt>
+									<dd><a href="#none">표지1</a></dd>
+								</dl>
+								<dl>
+									<dt><a href="#none"><img src="/img/common/bg_prud1.gif" alt="" /></a></dt>
+									<dd><a href="#none">표지1</a></dd>
+								</dl>
+								<dl>
+									<dt><a href="#none"><img src="/img/common/bg_prud1.gif" alt="" /></a></dt>
+									<dd><a href="#none">표지1</a></dd>
+								</dl>
+							</div>
+							<form class="mt30" method="post" action="/">
+								<fieldset>
+									<legend>표시지정</legend>
+									<table class="table1">
+										<caption>표시지정</caption>
+										<colgroup>
+											<col width="18%" />
+											<col width="*" />
+										</colgroup>
+										<tbody>
+											<tr>
+												<th>소제목 (<span class="lightBlue">35</span>/35자)</th>
+												<td><span class="widthFull"><input type="text" /></span></td>
+											</tr>
+											<tr>
+												<th>고객명 (<span class="lightBlue">00</span>/35자)</th>
+												<td><span class="widthFull"><input type="text" /></span></td>
+											</tr>
+										</tbody>
+									</table>
+								</fieldset>
+							</form>
+							<div class="btnWrap mt10">
+								<a href="#none" class="btn lgLgR">미리보기</a>
+								<a href="#none" class="btn lgLgR">저장</a>
+							</div>
+						</div>
+
+					</div>
+					<div id="contrTab2" class="tabCont">
+						<form class="mt30" method="post" action="/">
+							<fieldset>
+								<legend>속표지</legend>
+								<table class="table8">
+									<caption>속표지</caption>
+									<colgroup>
+										<col width="18%" />
+										<col width="18%" />
+										<col width="64%" />
+									</colgroup>
+									<tbody>
+										<tr>
+											<td rowspan="4">
+												<div class="ctrlPhoto">
+													<img src="/img/common/bg_prud2.gif" alt="" />
+													<p>
+														<a href="#none" class="btn smGyRb">등록</a>
+														<a href="#none" class="btn smWtRb">삭제</a>
+													</p>
+												</div>
+											</td>
+											<th>휴대전화</th>
+											<td>010-1234-4567</td>
+										</tr>
+										<tr>
+											<th>이메일</th>
+											<td>pro@mypl.com</td>
+										</tr>
+										<tr>
+											<th>홈페이지</th>
+											<td><span class="widthFull"><input type="text" /></span></td>
+										</tr>
+										<tr>
+											<th>기타문구<br />(<span class="lightBlue">67</span>/67자)</th>
+											<td>
+												<textarea rows="4" cols="50" style="width:100%"></textarea>
+											</td>
+										</tr>
+										<tr>
+											<th>속표지문구<br />(<span class="lightBlue">500</span>/500자)</th>
+											<td colspan="2">
+												<textarea rows="4" cols="50" style="width:100%"></textarea>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+								<ul class="footNote">
+									<li><span>*</span> 본 입력창은 인사말, 좋은 글귀 등을 삽입하기 위한 것으로 상품설명 및 타사 상품과의 비교 등 본래 용도 외의 글은 기재할 수 없습니다.</li>
+								</ul>
+							</fieldset>
+						</form>
+						<div class="btnWrap mt10">
+							<a href="#none" class="btn lgLgR">미리보기</a>
+							<a href="#none" class="btn lgLgR">저장</a>
+						</div>
+					</div>
+				</div>
+
+				
+				
+			</div>
+		</div>
+	
+	</div>
+</div>
+
+</body>
+</html>
+

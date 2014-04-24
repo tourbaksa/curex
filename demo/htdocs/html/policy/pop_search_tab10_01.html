@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> 연금액세부조회 </title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
+<link rel="stylesheet" href="/WEB-APP/webponent/css/common.css" type="text/css" />
+<link rel="stylesheet" href="/css/curex.common.css" type="text/css" />
+<link rel="stylesheet" href="/css/curex.layout.css" type="text/css" />
+<link rel="stylesheet" href="/css/curex.sub.css" type="text/css" />
+<link rel="stylesheet" href="/WEB-APP/webponent/dialog/css/dialog.css" type="text/css" />
+<script src="/WEB-APP/webponent/ci/agent.js"></script>
+<script type="text/javascript" src="/WEB-APP/webponent/thirdParty/jquery/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="/WEB-APP/webponent/thirdParty/jquery/jquery-ui-1.10.3.min.js"></script>
+<script type="text/javascript" src="/WEB-APP/webponent/tab/tab.js"></script>
+<script type="text/javascript" src="/WEB-APP/webponent/dialog/dialog.js"></script>
+<script type="text/javascript" src="/js/popup.js"></script>
+<script type="text/javascript" src="/js/curex.ui.js"></script>
+</head>
+<body>
+
+<div id="popWrap" style="width:665px;">
+	<h1>연금액세부조회</h1>
+	<div class="popContents">
+		<div class="annuDetail">
+			<table summary="계약자" width="100%" class="table3">
+				<caption>계약자</caption>
+				<colgroup>
+					<col width="30%" />
+					<col width="*" />
+				</colgroup>
+				<tbody>
+					<tr>
+						<th>계약자</th>
+						<td>
+							<span class="widthFull"><input type="text" value="김승헌" /></span>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<a href="#none" class="btn lgLgR">지급주기별조회</a>
+			
+			<span class="unit">조회기준일 : 2014-03-24</span>
+		</div>
+		<table summary="지급예정일, 지급주기, 상속종신형, 적용이율등 연금액 세부조회 리스트정보를 제공합니다." class="table3" width="100%">
+			<caption>연금액세부조회</caption>
+			<colgroup>
+				<col width="16%" />
+				<col width="17%" />
+				<col width="16%" />
+				<col width="17%" />
+				<col width="16%" />
+				<col width="*" />
+			</colgroup>
+			<thead>
+				<tr>
+					<th scope="col" rowspan="2">지급예정일</th>
+					<th scope="col" rowspan="2">지급주기</th>
+					<th scope="col" colspan="3">상속종신형(100%)</th>
+					<th scope="col" rowspan="2">적용이율</th>
+				</tr>
+				<tr>
+					<th scope="col" class="lineY">지급연차</th>
+					<th scope="col">연금지급액</th>
+					<th scope="col">비고</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>2014-03-11</td>
+					<td>월지급</td>
+					<td>1</td>
+					<td>￦500,000</td>
+					<td>지급</td>
+					<td>4.00%</td>
+				</tr>
+				<tr>
+					<td>2014-03-11</td>
+					<td>월지급</td>
+					<td>1</td>
+					<td>￦500,000</td>
+					<td>지급</td>
+					<td>4.00%</td>
+				</tr>
+				<tr>
+					<td>2014-03-11</td>
+					<td>월지급</td>
+					<td>1</td>
+					<td>￦500,000</td>
+					<td>지급</td>
+					<td>4.00%</td>
+				</tr>
+				<tr>
+					<td>2014-03-11</td>
+					<td>월지급</td>
+					<td>1</td>
+					<td>￦500,000</td>
+					<td>지급</td>
+					<td>4.00%</td>
+				</tr>
+				<tr>
+					<td>2014-03-11</td>
+					<td>월지급</td>
+					<td>1</td>
+					<td>￦500,000</td>
+					<td>지급</td>
+					<td>4.00%</td>
+				</tr>
+				<tr>
+					<td>2014-03-11</td>
+					<td>월지급</td>
+					<td>1</td>
+					<td>￦500,000</td>
+					<td>지급</td>
+					<td>4.00%</td>
+				</tr>
+				<tr>
+					<td>2014-03-11</td>
+					<td>월지급</td>
+					<td>1</td>
+					<td>￦500,000</td>
+					<td>지급</td>
+					<td>4.00%</td>
+				</tr>
+				<tr>
+					<td>2014-03-11</td>
+					<td>월지급</td>
+					<td>1</td>
+					<td>￦500,000</td>
+					<td>지급</td>
+					<td>4.00%</td>
+				</tr>
+				<tr>
+					<td>2014-03-11</td>
+					<td>월지급</td>
+					<td>1</td>
+					<td>￦500,000</td>
+					<td>지급</td>
+					<td>4.00%</td>
+				</tr>
+			</tbody>
+		</table>
+		<ul class="footNote">
+			<li><span>*</span> 공시이율은 조회일 기준이율 적용하였으며, 공시이율 변동시 상기의 예시된 금액은 변동됨을 유의하여 안내하시기 바랍니다.</li>
+			<li><span>*</span> 대출공제 후 연금은 연금개시시점에 기대출원리금을 상계한 "공제후연금적립액"으로 연금을 계산한 경우의 연금액입니다.</li>
+		</ul>
+		<div class="btnWrap mt20">
+			<input type="submit" value="확인" class="btn lgLgR">
+		</div>
+	</div>
+</div>
+
+
+</body>
+</html>

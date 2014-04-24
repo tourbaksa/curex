@@ -1,0 +1,6 @@
+@charset "utf-8";
+
+/* title 정렬*/
+.highcharts-axis span {
+    left: 10px!important;
+}

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> CuREx </title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
+<link rel="stylesheet" href="/WEB-APP/webponent/css/common.css" type="text/css" />
+<link rel="stylesheet" href="/css/curex.common.css" type="text/css" />
+<link rel="stylesheet" href="/css/curex.layout.css" type="text/css" />
+<link rel="stylesheet" href="/css/curex.sub.css" type="text/css" />
+<link rel="stylesheet" href="/WEB-APP/webponent/dialog/css/dialog.css" type="text/css" />
+<script type="text/javascript" src="/WEB-APP/webponent/ci/agent.js"></script>
+<script type="text/javascript" src="/WEB-APP/webponent/thirdParty/jquery/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="/WEB-APP/webponent/thirdParty/jquery/jquery-ui-1.10.3.min.js"></script>
+<script type="text/javascript" src="/WEB-APP/webponent/tab/tab.js"></script>
+<script type="text/javascript" src="/WEB-APP/webponent/dialog/dialog.js"></script>
+<script type="text/javascript" src="/js/popup.js"></script>
+<script type="text/javascript" src="/js/curex.ui.js"></script>
+</head>
+<body>
+
+<div id="popWrap" style="width:500px;">
+	<h1>소개자등록</h1>
+	<div class="popContents">
+		
+		<div class="popTit">
+			<p>소개자 정보를 입력합니다. 소개자명과 소개자의 주민등록번호를 입력해 주세요.</p>
+		</div>
+
+		<form method="post" action="/">
+			<fieldset>
+				<legend>소개자등록</legend>
+				<table class="table1">
+					<caption>소개자등록</caption>
+					<colgroup>
+						<col width="30%" />
+						<col width="*" />
+					</colgroup>
+					<tbody>
+						<tr>
+							<th>소개자명</th>
+							<td>
+								<input type="text" style="width:115px" />
+							</td>
+						</tr>
+						<tr>
+							<th>주민등록번호</th>
+							<td>
+								<input type="text" style="width:75px" />
+								-
+								<input type="text" style="width:75px" />
+								<select style="width:72px">
+									<option>남</option>
+									<option>여</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<th>집전화</th>
+							<td>
+								<input type="text" style="width:165px;" />
+							</td>
+						</tr>
+						<tr>
+							<th>회사전화</th>
+							<td>
+								<input type="text" style="width:165px;" />
+							</td>
+						</tr>
+						<tr>
+							<th>핸드폰</th>
+							<td>
+								<input type="text" style="width:165px;" />
+							</td>
+						</tr>
+						<tr>
+							<th>E-Mail</th>
+							<td>
+								<input type="text" style="width:115px" />
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</fieldset>
+		</form>
+		
+		<ul class="footNote">
+			<li><span>*</span>향후 구성하여 활용하시려면 주민등록번호를 입력해야 합니다.</li>
+		</ul>
+		<div class="btnWrap">
+			<a class="btn lgLgR" href="#none">등록</a>
+			<a class="btn lgGyR" href="#none">취소</a>
+		</div>
+
+	</div>
+	
+
+	<script type="text/javascript">
+		//<![CDATA[
+		var myTab = ci.tab.init($('.userSelect')); // 고객정보탭
+		var myTab1 = ci.tab.init($('.tabOutline')); //
+		//]]> 
+	</script>
+
+</div>
+
+
+</body>
+</html>
+
+

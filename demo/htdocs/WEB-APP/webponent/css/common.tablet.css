@@ -1,0 +1,19 @@
+/* device */
+.hide-on-desktop{
+	display: none !important;
+}
+.hide-on-tablet{
+    display: none !important;
+}
+
+input[type="text"],
+input[type="password"] {
+	-webkit-appearance : none;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="button"],
+select{
+	border-radius: 0;
+}

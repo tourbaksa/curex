@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:c="http://java.sun.com/jsp/jstl/core" version="2.0">
+	<jsp:directive.page contentType="text/html; charset=utf-8" pageEncoding="UTF-8" />
+	<jsp:directive.page
+		extends="kr.co.prudential.curex.base.BaseJspxControlller" />    
+    <jsp:directive.page import="java.io.*,java.util.*,java.text.*" />
+    <jsp:directive.page import="coreframe.http.*,coreframe.data.*,coreframe.log.*,coreframe.util.*" />
+    <jsp:directive.page import="coreframe.*,coreframe.data.schema.*,corelogic.spi.management.*" />
+    <jsp:directive.page import="coreframe.security.impl.CoreframeSecurityRequest"/>    
+	<jsp:directive.page import="java.io.*" />
+	<jsp:directive.page import="kr.co.prudential.curex.model.base.*" />
+	
+	
+	<jsp:declaration><![CDATA[
+    public final static String DOMAIN = (String)CoreApplication.getInstance().getAttribute("domain");	                                  	
+	
+	//bld 수행
+    public void executeBLD(ViewMeta view) throws IOException {
+    	QueryForm queryForm = getQueryForm(view);
+    	
+    	//로그인 한 사용자 ID
+    	String agentNumber = getAgentNumber();
+    	queryForm.put("agentNumber", agentNumber);
+
+        DataSet output = new DataSet();
+        String bld = queryForm.getText("bld");                
+
+        output = executeBL(bld, queryForm);        
+        view.setAttribute("_bldBind", output);
+        view.printJSON();        
+    }
+	
+    public String getAgentNumber(){
+		return "SL194";
+	}
+	]]></jsp:declaration>
+</jsp:root>
