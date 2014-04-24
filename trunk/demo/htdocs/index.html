@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<head>
+<title> CuRex </title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
+<link rel="stylesheet" href="WEB-APP/webponent/css/common.css" type="text/css" />
+<link rel="stylesheet" href="css/curex.common.css" type="text/css" />
+<link rel="stylesheet" href="css/curex.layout.css" type="text/css" />
+<link rel="stylesheet" href="css/curex.main.css" type="text/css" />
+<link rel="stylesheet" href="WEB-APP/webponent/dialog/css/dialog.css" type="text/css" />
+<script type="text/javascript" src="WEB-APP/webponent/ci/agent.js"></script>
+<script type="text/javascript" src="WEB-APP/webponent/thirdParty/jquery/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="WEB-APP/webponent/thirdParty/jquery/jquery-ui-1.10.3.min.js"></script>
+<script type="text/javascript" src="WEB-APP/webponent/tab/tab.js"></script>
+<script type="text/javascript" src="WEB-APP/webponent/dialog/dialog.js"></script>
+<script type="text/javascript" src="js/popup.js"></script>
+<script type="text/javascript" src="js/curex.ui.js"></script>
+</head>
+<body class="main">
+
+<div id="wrap">
+	<!-- HEADER -->
+	<div class="smModWrap">
+		<div class="smMod">
+			<h2>SM모드</h2>
+			<form id="" method="post" action="/">
+				<fieldset>
+					<legend>sm모드</legend>
+					<span class="infoSel">
+						<label for="spot">지점</label>
+						<select id="spot" style="width:149px">
+							<option>지점명</option>
+						</select>
+						<label for="team">팀</label>
+						<select id="team" style="width:149px">
+							<option>팀명</option>
+						</select>
+						<label for="Lp">LP</label>
+						<select id="Lp" style="width:149px">
+							<option>김엘피(TH001)</option>
+						</select>
+					<a href="#" class="btn smBeR">검색</a>
+					</span>
+				</fieldset>
+			</form>
+		</div>
+
+	</div>
+	<div id="header-wrap">
+		<div id="header">
+			<h1><a href="index.html"><img src="img/common/logo.gif" alt="CurEX Prudential" /></a></h1>
+			<a href="#none" class="total"><img src="img/sub/gnb_total.gif" alt="전체메뉴" /></a>
+			<!-- 전체메뉴 클릭시 block -->
+			<div class="allmenu" style="display:none;">
+				<!-- 알림창 -->
+				<div class="anceWindow">
+					<h2>푸르덴셜 SFA 알림 메세지 4개가 있습니다.</h2>
+					<ol class="list">
+						<li>1. 김푸르님의 신규 계약 리스트</li>
+						<li>2. 푸르덴셜 SFA공통알림</li>
+						<li>3. 푸르덴셜 SFA관리자 사이트가...</li>
+					</ol>
+				</div>
+		
+				<div class="siteMenu">
+					<ul>
+						<li><a href="#">고객관리</a>
+							<ul>
+								<li><a href="#">고객등록</a>
+									<ul>
+										<li><a href="#">개인</a></li>
+										<li><a href="#">법인</a></li>
+									</ul>
+								</li>
+								<li><a href="#">고객통합뷰</a></li>
+								<li><a href="#">고객정보관리</a></li>
+							</ul>
+						</li>
+						<li><a href="#">LiPS</a>
+							<ul>
+								<li><a href="#">니즈분석</a>
+									<ul>
+										<li><a href="#">니즈분석메인</a></li>
+										<li><a href="#">수입/지출</a></li>
+										<li><a href="#">LC분석</a></li>
+										<li><a href="#">Sales Material</a></li>
+										<li><a href="#">사망보장</a></li>
+										<li><a href="#">노후보장</a></li>
+										<li><a href="#">목적자금</a></li>
+										<li><a href="#">상세입력</a></li>
+										<li><a href="#">증권분석</a></li>
+										<li><a href="#">보고서출력</a></li>
+									</ul>
+								</li>
+								<li><a href="#">계획수립</a>
+									<ul>
+										<li><a href="#">개인설계</a></li>
+										<li><a href="#">법인설계</a></li>
+										<li><a href="#">복합설계</a></li>
+									</ul>
+								</li>
+								<li><a href="#">니즈환기자료</a></li>
+								<li><a href="#">금융계산기</a></li>
+							</ul>
+						</li>
+						<li><a href="#">계약</a>
+							<ul>
+								<li><a href="#">계약검색</a></li>
+								<li><a href="#">계약리스트</a></li>
+								<li><a href="#">계약리뷰</a></li>
+								<li><a href="#">감사고객</a></li>
+								<li><a href="#">청약</a></li>
+							</ul>
+						</li>
+						<li class="last"><a href="#">스마트CRM</a>
+							<ul>
+								<li><a href="#">스마트서비스</a></li>
+								<li><a href="#">일정표</a></li>
+								<li><a href="#">CS스테이션</a></li>
+								<li><a href="#">접촉이력</a></li>
+								<li><a href="#">LP활동관리</a></li>
+							</ul>
+						</li>
+					</ul>
+					
+				</div>
+		
+				<a href="#" class="allMenuClose"><img src="img/common/btn_MenuClose.gif" alt="전체메뉴닫기" /></a>
+			</div>
+			<div class="gnbWrap">
+				<ul id="gnb">
+					<li><a href="#none">고객관리</a></li>
+					<li><a href="#none">LiPS</a></li>
+					<li><a href="#none">계약</a></li>
+					<li><a href="#none">스마트CRM</a></li>
+				</ul>			
+				<span class="globalIcon smmode"><!-- smmode시 smmode 클래스생성 -->
+					<span class="icoTotal">
+						<a href="#none"><img src="img/common/ico_gnb1.gif" alt="" /></a>
+						<a href="#none"><img src="img/common/ico_gnb2.gif" alt="" /></a>
+						<a href="#none"><img src="img/common/ico_gnb3.gif" alt="" /></a>
+					</span>
+					<a href="#none" class="smIcon">SM<br />모드</a><!-- smmode시 해당 링크추가 -->
+					<a href="#none" class="last"><img src="img/common/ico_gnb4.gif" alt="" /></a>
+				</span>
+			</div>
+			<div class="mSearchWrap">
+				<form id="" method="post" action="/">
+					<fieldset>
+						<legend>메인검색존</legend>
+						<div class="msearchCnt">
+							<input type="text" /><span class="msearchBtn"><input type="button" class="btn" value="검색" /></span>
+							<span class="searchBtnset">
+								<button type="button" class="btn smWtRb"><span>&nbsp;</span>신규개인등록</button>
+								<button type="button" class="btn smWtRb"><span>&nbsp;</span>신규단체등록</button>
+							</span>
+						</div>
+					</fieldset>
+				</form>
+			</div>
+		</div>
+	</div>
+	<!-- //HEADER -->
+	<div id="mcontainer">
+		<div class="mcontentL">
+			<div class="mcarlendar">
+				<div class="mcarlenHdr">
+					<h2>March 2014</h2>
+					<span class="carlendarCtrl">
+						<button type="button" class="prev"><em>이전달</em></button>
+						<button type="button" class="next"><em>다음달</em></button>
+						<a href="#" class="btn">일정등록</a>
+					</span>
+				</div>
+				<div class="mcarlenCnt">
+					<table class="week" width="100%">
+						<colgroup>
+							<col width="15%" />
+							<col width="14%" span="5" />
+							<col width="15%" />
+						</colgroup>
+						<tbody>
+							<tr>
+								<td class="sun">Sun</td>
+								<td>Mon</td>
+								<td>Tue</td>
+								<td>Wed</td>
+								<td>Thu</td>
+								<td>Fri</td>
+								<td>Sat</td>
+							</tr>
+						</tbody>
+					</table>
+					<div class="schedule_container">
+						<div class="month_row">
+							<table width="100%">
+								<colgroup>
+									<col width="14%" span="7" />
+								</colgroup>
+								<tbody>
+									<tr>
+										<td class="disable sun"><div><span class="mdate">2</span></div></td>
+										<td class="disable"><div><span class="mdate">3</span> <a href="#" class="schedule_more">더보기</a></div></td>
+										<td class="disable"><div><span class="mdate">4</span></div></td>
+										<td class="disable"><div><span class="mdate">5</span></div></td>
+										<td class="disable"><div><span class="mdate">6</span></div></td>
+										<td class=" today"><div><span class="mdate">7</span> <strong>today</strong></div></td>
+										<td><div><span class="mdate">8</span> <a href="#" class="schedule_more">더보기</a></div></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="month_row">
+							<table width="100%">
+								<colgroup>
+									<col width="14%" span="7" />
+								</colgroup>
+								<tbody>
+									<tr>
+										<td class="sun"><div><span class="mdate">9</span></div></td>
+										<td><div><span class="mdate">10</span> </div></td>
+										<td><div><span class="mdate">11</span></div></td>
+										<td><div><span class="mdate">12</span></div></td>
+										<td><div><span class="mdate">13</span></div></td>
+										<td><div><span class="mdate">14</span></div></td>
+										<td><div><span class="mdate">15</span></div></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="month_scheduleWrap">
+							<h3><span>2014-03-11(화)</span></h3>
+							<div class="month_scheduleCnt">
+								<table width="100%">
+									<colgroup>
+										<col width="70%" />
+										<col width="*" />
+									</colgroup>
+									<tbody>
+										<tr>
+											<td><a href="#" class="wkicon1">[생일] 신새롬</a></td>
+											<td class="tac">종일</td>
+										</tr>
+										<tr class="even"><!-- 짝수일때 even 추가 -->
+											<td><a href="#" class="wkicon2">[결혼기념일] 최진규</a></td>
+											<td class="tac">종일</td>
+										</tr>
+										<tr>
+											<td><a href="#"  class="wkicon3">[가족기념일] 최진규</a></td>
+											<td class="tac">11:30</td>
+										</tr>
+										<tr class="even"><!-- 짝수일때 even 추가 -->
+											<td><a href="#" class="wkicon1">[활동명] 박민경 생일파티</a></td>
+											<td class="tac">12:50</td>
+										</tr>
+										<tr>
+											<td><a href="#" class="wkicon3">[LP개인일정] 전해림 안부전화</a></td>
+											<td class="tac">14:50</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+
+					</div>
+						
+					
+					
+				</div>
+			</div>
+			<div class="mTabWrap">
+				<ul class="mTab attab">
+					<li class="active"><a href="#mtab1"><span>감사고객 방문현황</span></a></li>
+					<li><a href="#"><span>유지율현황</span></a></li>
+					<li><a href="#"><span>일시보험금지금현황</span></a></li>
+				</ul>
+				<div class="mtabCont">
+					<div id="mtab1" style="display:block">
+						<div class="graphCont">
+							<img src="img/main/bg_mgraph.gif" alt="" />
+						</div>
+						<a href="#" class="more">more</a>
+					</div>
+					<div id="mtab2" style="display:none">
+						<div class="graphCont">
+							<img src="img/main/bg_mgraph.gif" alt="" />
+						</div>
+						<a href="#" class="more">more</a>
+					</div>
+					<div id="mtab3" style="display:none">
+						<div class="graphCont">
+							<img src="img/main/bg_mgraph.gif" alt="" />
+						</div>
+						<a href="#" class="more">more</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="mcontentR">
+			<div class="mstats">
+				<ul>
+					<li>
+						<dl>
+							<dt><a href="#none" class="tooltip over">실효대상</a></dt>
+							<dd class="orange">5</dd>
+							<dd class="bubble">
+								<span class="bb">
+									보험금지급에 롤오버했을때<br />이런식으로 툴팁이 나옵니다.
+
+									<span class="arr"></span>
+								</span>
+							</dd>
+						</dl>
+					</li>
+					<li>
+						<dl>
+							<dt><a href="#none" class="tooltip over">부활</a></dt>
+							<dd class="orange">7</dd>
+							<dd class="bubble">
+								<span class="bb">
+									보험금지급에 롤오버했을때<br />이런식으로 툴팁이 나옵니다.
+
+									<span class="arr"></span>
+								</span>
+							</dd>							
+						</dl>
+					</li>
+					<li>
+						<dl>
+							<dt><a href="#none" class="tooltip over">종신전환</a></dt>
+							<dd>53</dd>
+							<dd class="bubble">
+								<span class="bb">
+									보험금지급에 롤오버했을때<br />이런식으로 툴팁이 나옵니다.
+
+									<span class="arr"></span>
+								</span>
+							</dd>							
+						</dl>
+					</li>
+					<li>
+						<dl>
+							<dt><a href="#none" class="tooltip over">보험금지급</a></dt>
+							<dd>23</dd>
+							<dd class="bubble">
+								<span class="bb">
+									보험금지급에 롤오버했을때<br />이런식으로 툴팁이 나옵니다.
+
+									<span class="arr"></span>
+								</span>
+							</dd>							
+						</dl>
+					</li>
+					<li>
+						<dl>
+							<dt><a href="#none" class="tooltip over">만기도래</a></dt>
+							<dd>0</dd>
+							<dd class="bubble">
+								<span class="bb">
+									보험금지급에 롤오버했을때<br />이런식으로 툴팁이 나옵니다.
+
+									<span class="arr"></span>
+								</span>
+							</dd>							
+						</dl>
+					</li>
+					<li>
+						<dl>
+							<dt><a href="#none" class="tooltip over">추가보장가능</a></dt>
+							<dd>4</dd>
+							<dd class="bubble">
+								<span class="bb">
+									보험금지급에 롤오버했을때<br />이런식으로 툴팁이 나옵니다.
+
+									<span class="arr"></span>
+								</span>
+							</dd>							
+						</dl>
+					</li>
+				</ul>
+			</div>
+
+			<div class="MainDataWrap">
+				<ul class="dataTab attab">
+					<li class="active"><a href="#MainData1"><span>최근진행업무</span></a></li>
+					<li><a href="#MainData2"><span>적합성진단 미접수 고객</span></a></li>
+					<li><a href="#MainData3"><span>LPS신청서 미접수고객</span></a></li>
+					<li><a href="#MainData4"><span>증권전달대상고객</span></a></li>
+					<li><a href="#MainData5"><span>청약진행사항</span></a></li>
+					<li><a href="#MainData6"><span>대출금변동예정계약</span></a></li>
+				</ul>
+				<div class="MainDataCont">
+					<div id="MainData1">
+						<h2>증권전달고객</h2>
+						<table summary="증권번호, 계약자, 성립일, 경과기간,상태등의 정보를 제공합니다." width="100%">
+							<caption>증권전달고객</caption>
+							<colgroup>
+								<col width="%" />
+								<col width="%" />
+								<col width="*" />
+							</colgroup>
+							<thead>
+							<tr>
+								<th scope="col">증권번호</th>
+								<th scope="col">계약자</th>
+								<th scope="col">성립일</th>
+								<th scope="col">경과기간</th>
+								<th scope="col">상태</th>
+							</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>1234567890</td>
+									<td>김푸르</td>
+									<td>2014-02-14</td>
+									<td>20일</td>
+									<td>정상</td>
+								</tr>
+								<tr>
+									<td>1234567890</td>
+									<td>김푸르</td>
+									<td>2014-02-14</td>
+									<td>20일</td>
+									<td>정상</td>
+								</tr>
+								<tr>
+									<td>1234567890</td>
+									<td>김푸르</td>
+									<td>2014-02-14</td>
+									<td>20일</td>
+									<td>정상</td>
+								</tr>
+								<tr>
+									<td>1234567890</td>
+									<td>김푸르</td>
+									<td>2014-02-14</td>
+									<td>20일</td>
+									<td>정상</td>
+								</tr>
+								<tr>
+									<td>1234567890</td>
+									<td>김푸르</td>
+									<td>2014-02-14</td>
+									<td>20일</td>
+									<td>정상</td>
+								</tr>
+								<tr>
+									<td>1234567890</td>
+									<td>김푸르</td>
+									<td>2014-02-14</td>
+									<td>20일</td>
+									<td>정상</td>
+								</tr>
+							</tbody>
+						</table>
+						<a href="#" class="more">more</a>
+					</div>
+					<div id="MainData2">
+						
+					</div>
+					<div id="MainData3">
+						
+					</div>
+					<div id="MainData4">
+						
+					</div>
+					<div id="MainData5">
+						
+					</div>
+					<div id="MainData6">
+						
+					</div>
+				</div>
+			</div>
+
+			<div class="LinkWrap">
+				<div class="bnr">
+					<a href="#none"><img src="img/main/img_mainBnr.gif" alt="" /></a>
+				</div>
+				<div class="LinkCont">
+					<span class="boardLink">
+						<a href="#none">변액보험<br />공시실</a>
+						<a href="#none">뉴스클리핑</a>
+					</span>
+					<span class="serviceLink">
+						<a href="#none">Sales Material</a>
+						<a href="#none" class="two">고객유형코드조회</a>
+						<a href="#none" class="three">검진센터</a>
+					</span>
+				</div>
+			</div>
+		</div>
+		<div id="quick">
+			<h2><span>Quick</span></h2>
+			<ul>
+				<li class="q01"><a href="#none">고객<br />통합뷰</a></li>
+				<li class="q02"><a href="#none">개인<br />설계</a></li>
+				<li class="q03"><a href="#none">재무<br />계산기</a></li>
+				<li class="q04"><a href="#none">전산<br />발행</a></li>
+				<li class="q05"><a href="#none">Sales<br />Material</a></li>
+				<li class="q06"><a href="#none">보험금<br />지급</a></li>
+			</ul>
+			<a href="#none" class="quickBtn"><span>close</span></a>
+		</div>			
+	</div>
+
+
+	<script type="text/javascript">
+		//<![CDATA[
+
+		(function(){
+			
+			var mContH = $("#wrap").height()-$("#header").height()-62;
+			var ContH = $(".mcontentL").outerHeight();
+			var minus = mContH - ContH;
+			var cmt = parseInt($("#mcontainer").css("margin-top"));
+			if (minus > cmt){
+				$("#mcontainer").css({
+					"padding-top" :minus/2 ,
+					"padding-bottom" :minus/2
+				});
+
+				$("#quick").css({
+					"top" : minus/2
+				});
+			}
+		})();
+		var myTab = ci.tab.init($('.PersonCont')); // 고객정보탭
+		var myTab1 = ci.tab.init($('.tabOutline')); // 
+		var myTab2 = ci.tab.init($('.lipsWrap')); // 
+		//]]>
+	</script>
+</div>
+<!-- FOOTER -->
+<div id="footer">
+	<div class="fter">
+		<img src="img/common/img_footer.jpg" alt="" />
+	</div>
+</div>
+<!--//FOOTER -->
+
+</body>
+</html>
+
+
