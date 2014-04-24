@@ -176,3 +176,7 @@ div.beneBox ul.insurList{overflow:hidden; margin-top:10px;}
 div.beneBox ul.insurList li{text-align:right; margin-top:6px;}
 div.beneBox ul.insurList li:first-child{margin-top:0;}
 div.beneBox ul.insurList li span{float:left;}
+
+/* 미결보완 */
+.popTit span.normal{font-size:12px;font-weight:normal;color:#707070;}
+.undecidBox{border:1px solid #dedede;overflow:scroll;overflow-x:hidden;padding:10px;line-height:1.5;height:70px;}
