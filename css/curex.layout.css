@@ -27,9 +27,10 @@ div.gnbWrap ul#gnb{overflow:hidden; float:left;}
 div.gnbWrap ul#gnb li {float:left;font-size:14px;border-left:1px solid #00919f;}
 div.gnbWrap ul#gnb li a{text-decoration:none; color:#707070; width:120px; display:block; text-align:center; line-height:50px; height:50px; color:#fff; font-size:16px; font-weight:bold;border-left:1px solid #33b4cl}
 div.gnbWrap ul#gnb li a.on{background:url(/img/common/blt_gnbArrow.gif) #fff no-repeat center bottom; color:#22b8c7; }
+
 div.gnbWrap ul#gnb div.depth2 {position:absolute;left:1px;top:50px; background:#fff;}
-div.gnbWrap ul#gnb li li{ border-left:0;width:121px;text-align:center;background:url(/img/common/bg_line3.gif) no-repeat 0 0; position:relative; letter-spacing:-1px;}
-div.gnbWrap ul#gnb li li:first-child{background:none; width:120px;}
+div.gnbWrap ul#gnb li li{ border-left:0;width:115px;text-align:center;background:url(/img/common/bg_line3.gif) no-repeat 0 0; position:relative; letter-spacing:-1px;}
+div.gnbWrap ul#gnb li li:first-child{background:none; width:116px;}
 div.gnbWrap ul#gnb li li a{color:#707070; font-size:14px; font-weight:normal;height:39px;line-height:39px;}
 div.gnbWrap ul#gnb li li a:hover{color:#22b8c7;}
 div.gnbWrap ul#gnb div.depth2 div {border:1px solid #c3c3c3;border-top:0; overflow:hidden;position:absolute;left:0;top:40px;z-index:200;background:url(/img/common/icon1.gif) #fff no-repeat center top;}
