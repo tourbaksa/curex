@@ -486,16 +486,34 @@
 											</tr>
 											<tr>
 												<th>제목</th>
-												<td><span class="widthFull"><input type="text" title="제목입력" /></span></td>
+												<td><input type="text" title="제목입력" style="width:520px" />
+													<a href="#none" class="btn smWtRb"><span class="setPlus"></span>이름</a>
+													<a href="#none" class="btn smWtRb"><span class="setPlus"></span>호칭</a>
+												</td>
 											</tr>
 											<tr>
 												<th>인사말</th>
 												<td><span class="textareaFull"><textarea rows="10" cols="15" title="내용입력"></textarea>
-												</span></td>
+												</span>
+												<div class="btnWrap mt5 mb2">
+													<a href="#none" class="btn smWtRb"><span class="setPlus"></span>이름</a>
+													<a href="#none" class="btn smWtRb"><span class="setPlus"></span>호칭</a>
+												</div>
+												</td>
 											</tr>
 											<tr>
 												<th>선택된 컨텐츠</th>
 												<td></td>
+											</tr>
+											<tr>
+												<th>Sales Material 첨부</th>
+												<td>
+													<input type="text" title="파일이름" readonly="readonly" class="fileName" style="width:585px;">
+													<span class="attchfileBox">
+														<a href="#none" class="btn smWtRb" type="button">추가</a>
+														<input type="file" onchange="getFilename(this)" class="fileHidden" id="addfile1">
+													</span>
+												</td>
 											</tr>
 										</tbody>
 									</table>

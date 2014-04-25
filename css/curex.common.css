@@ -241,8 +241,8 @@ table.bderTN{border-top:0 !important;}
 .table10 tbody th:first-child{border-left:0;}
 .table10 tbody tr:first-child th{border-top:0;}
 .table10 tbody td{border-left:1px solid #dedede;border-top:1px solid #dedede;padding:4px 5px 4px 3px;line-height:1.5;}
-.table10 tbody td.child1{background:url(/img/common/icon_child1.gif) no-repeat 10px center;padding-left:30px !important;}
-.table10 tbody td.child2{background:url(/img/common/icon_child2.gif) no-repeat 10px center;padding-left:30px !important;}
+.table10 tbody td.child1{background:url(/img/common/icon_child4.png) no-repeat 10px center;padding-left:30px !important;}
+.table10 tbody td.child2{background:url(/img/common/icon_child5.png) no-repeat 10px center;padding-left:30px !important;}
 
 /* table td right */
 .table11 {}

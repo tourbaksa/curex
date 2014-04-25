@@ -249,6 +249,8 @@ div.LpContent ul.ctTab{margin:10px 0 0 0;}
 div.LpContent table{margin:10px 0;}
 div.LpEditor{border:1px solid #dedede; border-top:0; min-height:255px;}
 
+span.setPlus{background:url(/img/common/ico_setplus.png) no-repeat 0 center;margin:0 5px 0 1px;width:7px;display:inline-block;height:15px;line-height:15px;}
+
 /* popTable th가 높은값을 가질때 */
 table .groupTit{
 	background-size:100% 100%;
