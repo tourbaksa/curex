@@ -201,15 +201,15 @@
 	self.oepnLeftLayer = function(viewDiv){
 
 		if(viewDiv.attr("id") =="d4_layer9"){
-			console.log(viewDiv)
-			viewDiv = ci.dialog.open({
-				title : '검색조건저장', // title 지정
+			var viewDiv = ci.dialog.open({
+				title : 'factfinding', // title 지정
 				dom : $('.dia-content1'), // 내용으로 들어갈 마크업 지정
 				focus : $(this), // 다이알로그 닫친뒤 포커스를 주고싶은 요소 지정
 				closeOnEscape: false,
 				modal : true,
 				width:1024
 			});
+			viewDiv.dialog({dialogClass:'ci-dialog layer2'});
 		}else{
 			var temp = viewDiv.dialog({
 					appendTo: ".checkInner",
