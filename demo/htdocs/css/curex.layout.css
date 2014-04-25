@@ -25,18 +25,30 @@ margin-bottom:-62px; padding-bottom:82px;
 div.gnbWrap{position:relative;}
 div.gnbWrap ul#gnb{overflow:hidden; float:left;}
 div.gnbWrap ul#gnb li {float:left;font-size:14px;border-left:1px solid #00919f;}
-div.gnbWrap ul#gnb li a{text-decoration:none; color:#707070; width:120px; display:block; text-align:center; line-height:50px; height:50px; color:#fff; font-size:16px; font-weight:bold;border-left:1px solid #33b4cl}
+div.gnbWrap ul#gnb > li a{text-decoration:none; color:#707070; width:120px; display:block; text-align:center; line-height:50px; height:50px; color:#fff; font-size:16px; font-weight:bold;border-left:1px solid #33b4cl}
+
 div.gnbWrap ul#gnb li a.on{background:url(../img/common/blt_gnbArrow.gif) #fff no-repeat center bottom; color:#22b8c7; }
+div.gnbWrap ul#gnb li li.last-depth a.on{background:none;}
+div.gnbWrap ul#gnb li li a.on{background:url(../img/common/blt_gnbArrow.gif) #fff no-repeat center bottom; color:#22b8c7; }
+div.gnbWrap ul#gnb li li li a.on{background:#fff; color:#22b8c7; }
 div.gnbWrap ul#gnb div.depth2 {position:absolute;left:1px;top:50px; background:#fff;}
-div.gnbWrap ul#gnb li li{ border-left:0;width:121px;text-align:center;background:url(../img/common/bg_line3.gif) no-repeat 0 0; position:relative; letter-spacing:-1px;}
-div.gnbWrap ul#gnb li li:first-child{background:none; width:120px;}
+
+div.gnbWrap ul#gnb li li{border-left:0;width:121px;text-align:center;position:relative; letter-spacing:-1px;padding-left:1px;}
+
+div.gnbWrap ul#gnb li.sixGnb ul.depth2-ul > li{width:115px;}
+div.gnbWrap ul#gnb li.sixGnb ul.depth2-ul > li:first-child{width:116px;}
+
 div.gnbWrap ul#gnb li li a{color:#707070; font-size:14px; font-weight:normal;height:39px;line-height:39px;}
 div.gnbWrap ul#gnb li li a:hover{color:#22b8c7;}
-div.gnbWrap ul#gnb div.depth2 div {border:1px solid #c3c3c3;border-top:0; overflow:hidden;position:absolute;left:0;top:40px;z-index:200;background:url(../img/common/icon1.gif) #fff no-repeat center top;}
+div.gnbWrap ul#gnb div.depth2 div {border:1px solid #c3c3c3;border-top:1px solid #fff; overflow:hidden;position:absolute;left:0;top:39px;z-index:200;background:url(../img/common/icon1.gif) #fff no-repeat center top;}
 div.gnbWrap ul#gnb ul ul{ background:url(../img/common/gnb_bar.gif) #fff no-repeat center bottom; margin-bottom:2px;padding-bottom:9px;overflow:hidden;}
-div.gnbWrap ul#gnb li li li {background:url(../img/common/blet1.gif) no-repeat 0 center; width:90px; margin-left:15px; padding-left:15px;}
-div.gnbWrap ul#gnb li li li a{height:28px; line-height:28px;text-align:left;font-size:13px;}
-div.gnbWrap ul#gnb li li li:first-child{background:url(../img/common/blet1.gif) no-repeat 0 center; width:90px; margin-top:7px;}
+
+div.gnbWrap ul#gnb li li div.depth3-wrap{width:120px;}
+
+div.gnbWrap ul#gnb li li li {background:url(../img/common/blet1.gif) no-repeat 0 center; width:120px; margin-left:10px; padding-left:10px;}
+div.gnbWrap ul#gnb li li li:first-child{background:url(../img/common/blet1.gif) no-repeat 0 center; width:121px; margin-top:7px;}
+div.gnbWrap ul#gnb li li li a{width:auto;height:28px; line-height:28px;text-align:left;font-size:12px;}
+
 
 div.gnbWrap span.globalIcon{float:left;border-left:1px solid #00919F;}
 div.gnbWrap span.globalIcon .icoTotal{width:170px; display:inline-block; float:left;}
@@ -125,7 +137,7 @@ div.personInfoArea{position:absolute; top:90px;overflow:hidden; background:#f7f7
 
 /* 기계약 하나만 보여질때 */
 div.personOne{width:428px;padding-bottom:36px;}
-div.PersonCont{position:absolute;z-index:200;top:-450px;float:left; width:368px; padding:20px 20px 53px 20px; background:#fff; border:1px solid #22b8c7; border-top:0;height:512px;}
+div.PersonCont{position:absolute;z-index:200;top:-545px;float:left; width:368px; padding:20px 20px 53px 20px; background:#fff; border:1px solid #22b8c7; border-top:0;height:512px;}
 div.PersonCont.opened {top: 90px;}
 ul.personList li{border-bottom:1px solid #e8e9e9; line-height:37px; height:37px; position:relative; overflow:hidden;}
 ul.personList li a{display:block;}
@@ -145,7 +157,7 @@ ul.personList li.hover span.name{color:#000000;}
 div.PersonCont.opened + div.personDetail.opened{border-left:1px solid #dedede;}
 
 /* svn 수정 20140423*/
-div.personDetail{position:absolute;z-index:190;top: -525px;left: 170px;background-color:#f7f7f7;padding:47px 20px 20px 
+div.personDetail{position:absolute;z-index:190;top:-545px;left: 170px;background-color:#f7f7f7;padding:47px 20px 20px 
 30px;float:left;width:408px;border:1px solid #22b8c7;border-top:0;height:512px;}
 .ie8 div.personDetail{top:-531px;}
 /* svn 수정 20140423*/

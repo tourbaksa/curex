@@ -71,4 +71,17 @@ $(document).ready(function(){
 		});
 		return false;
 	});
+
+	/* 검색조건저장 */
+	$('.d4_btn6').on('click', function () {
+		var dia1 = ci.dialog.open({
+			id : 'd4_layer1', // id 지정
+			title : '검색조건저장', // title 지정
+			dom : $('.d4_layer1'), // 내용으로 들어갈 마크업 지정
+			focus : $(this), // 다이알로그 닫친뒤 포커스를 주고싶은 요소 지정
+			modal : true,
+			width:400
+		});
+	});
+
 });

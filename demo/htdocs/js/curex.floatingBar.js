@@ -20,7 +20,7 @@
 		$('#wrap').addClass('checkList');
 
 		var divWrap = $('<div id="checkList"></div>');			
-		var listOpen = $('<h2><a href="#listMenu">CHECKLIST</a></h2>');
+		
 		var listDiv = $('<div class="listMenu" id="listMenu" style="display:none"><h3>CHECK LIST <span class="red">*보험료 계산을 다시 하신 후 재확인해주세요</span></h3></div>');
 		var listView = $('<ul class="view"></ul><a href="#none" class="enter">확인</a>');
 		var btnListUl = $('<ul class="list"></ul>');
@@ -30,28 +30,12 @@
 			divWrap.append(leftBtnListUl);
 			divWrap.append(btnListUl);
 		}else{
-			divWrap.append(listOpen);
+			
 			divWrap.append(leftBtnListUl);
 			divWrap.append(btnListUl);
 			listDiv.append(listView);
 			divWrap.append(listDiv);	
 
-			listOpen.on('click',function(e){
-				e.preventDefault();
-				listDiv.removeClass('opened');
-				if(listDiv.css('display') == 'none'){					
-					listDiv.css('bottom',  -(listDiv.height()+40));
-					listDiv.show();
-					listDiv.addClass('opened', 700, 'easeOutQuint', function() {
-					});
-				}else{							
-					listDiv.animate({
-			               bottom : - ($(this).height()+40)
-			        },500,function(){        	   
-			        	   $(this).hide();
-			        });
-				}			
-			});
 		}										
 
 		$('#wrap').append(divWrap);

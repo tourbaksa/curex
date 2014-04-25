@@ -1,29 +1,774 @@
+
 <!DOCTYPE html>
+<html lang="ko">
 <head>
-<title> 계약리스트 </title>
-<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<meta name="robots" content="INDEX" />
+<meta name="Location" content="South Korea" />
+<meta name="Distribution" content="global" />
+<meta name="author" content="PRUDENTIAL CO.,LTD." />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
-<link rel="stylesheet" href="/WEB-APP/webponent/css/common.css" type="text/css" />
-<link rel="stylesheet" href="/css/curex.common.css" type="text/css" />
-<link rel="stylesheet" href="/css/curex.layout.css" type="text/css" />
-<link rel="stylesheet" href="/css/curex.sub.css" type="text/css" />
-<link rel="stylesheet" href="/WEB-APP/webponent/dialog/css/dialog.css" type="text/css" />
-<script type="text/javascript" src="/WEB-APP/webponent/ci/agent.js"></script>
-<script type="text/javascript" src="/WEB-APP/webponent/thirdParty/jquery/jquery-1.10.2.min.js"></script>
-<script type="text/javascript" src="/WEB-APP/webponent/thirdParty/jquery/jquery-ui-1.10.3.min.js"></script>
-<script type="text/javascript" src="/WEB-APP/webponent/tab/tab.js"></script>
-<script type="text/javascript" src="/WEB-APP/webponent/dialog/dialog.js"></script>
-<script type="text/javascript" src="/js/popup.js"></script>
-<script type="text/javascript" src="/js/curex.ui.js"></script>
+<link rel="shortcut icon" type=image/x-icon href="/" />
+<link rel="stylesheet" type="text/css" href="/demo/htdocs/WEB-APP/webponent/thirdParty/jquery/jquery-ui-1.10.3.custom.min.css" />
+<link rel="stylesheet" type="text/css" href="/demo/htdocs/WEB-APP/webponent/css/common.css" />
+<link rel="stylesheet" type="text/css" href="/demo/htdocs/WEB-APP/webponent/calendar/css/calendar.css" />
+<link rel="stylesheet" type="text/css" href="/demo/htdocs/WEB-APP/webponent/dialog/css/dialog.css" />
+<link rel="stylesheet" type="text/css" href="/demo/htdocs/WEB-APP/webponent/datagrid/css/ci.datagrid.css" />
+<link rel="stylesheet" type="text/css" href="/demo/htdocs/WEB-APP/webponent/dynamicGrid/css/ci.dynamicGrid.css" />
+<link rel="stylesheet" type="text/css" href="/demo/htdocs/css/curex.common.css" />
+<link rel="stylesheet" type="text/css" href="/demo/htdocs/css/curex.layout.css" />
+<link rel="stylesheet" type="text/css" href="/demo/htdocs/css/curex.lips.css" />
+<link rel="stylesheet" type="text/css" href="/demo/htdocs/css/curex.policy.css" />
+<link rel="stylesheet" type="text/css" href="/demo/htdocs/css/curex.smart.css" />
+<link rel="stylesheet" type="text/css" href="/demo/htdocs/css/curex.contract.css" />
+<link rel="stylesheet" type="text/css" href="/demo/htdocs/css/curex.popup.css" />
+<link rel="stylesheet" href="/demo/htdocs/css/curex.main.css" type="text/css" />
+<link rel="stylesheet" type="text/css" href="/demo/htdocs/WEB-APP/highchart/css/highcharts.css" />
+
+
+<script type="text/javascript">
+	function getDevice() {
+		return "pc";
+	}
+</script>
+
+
+<script type="text/javascript" src="/demo/htdocs/WEB-APP/webponent/thirdParty/jquery/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="/demo/htdocs/WEB-APP/webponent/thirdParty/jquery/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="/demo/htdocs/WEB-APP/webponent/thirdParty/jquery/jquery-ui-1.10.3.custom.min.js"></script>
+<script type="text/javascript" src="/demo/htdocs/WEB-APP/webponent/thirdParty/jquery/plugins/jquery.blockUI.js"></script>
+<script type="text/javascript" src="/demo/htdocs/WEB-APP/webponent/ci/agent.js"></script>
+<script type="text/javascript" src="/demo/htdocs/WEB-APP/webponent/ci/ui.js"></script>
+<script type="text/javascript" src="/demo/htdocs/WEB-APP/webponent/ci/util.js"></script>
+<script type="text/javascript" src="/demo/htdocs/WEB-APP/webponent/ci/DataSet.js"></script>
+<script type="text/javascript" src="/demo/htdocs/WEB-APP/webponent/calendar/calendar.js"></script>
+<script type="text/javascript" src="/demo/htdocs/WEB-APP/webponent/tab/tab.js"></script>
+<script type="text/javascript" src="/demo/htdocs/WEB-APP/webponent/dialog/dialog.js"></script>
+<script type="text/javascript" src="/demo/htdocs/WEB-APP/webponent/databind/databind.js"></script>
+<script type="text/javascript" src="/demo/htdocs/WEB-APP/webponent/databind/databind.function.js"></script>
+<script type="text/javascript" src="/demo/htdocs/WEB-APP/webponent/databind/ci.databind.js"></script>
+<script type="text/javascript" src="/demo/htdocs/WEB-APP/webponent/thirdParty/DataTables/media/js/jquery.dataTables.js"></script>
+<script type="text/javascript" src="/demo/htdocs/WEB-APP/webponent/thirdParty/DataTables/extras/FixedColumns/media/js/FixedColumns.js"></script>
+<script type="text/javascript" src="/demo/htdocs/WEB-APP/webponent/thirdParty/DataTables/extras/Scroller/media/js/dataTables.scroller.js"></script>
+<script type="text/javascript" src="/demo/htdocs/WEB-APP/webponent/thirdParty/DataTables/extras/TableTools/media/js/ZeroClipboard.js"></script>
+<script type="text/javascript" src="/demo/htdocs/WEB-APP/webponent/thirdParty/DataTables/extras/TableTools/media/js/TableTools.js"></script>
+<script type="text/javascript" src="/demo/htdocs/WEB-APP/webponent/datagrid/ci.datagrid.js"></script>
+<script type="text/javascript" src="/demo/htdocs/WEB-APP/webponent/dynamicGrid/ci.dynamicGrid.js"></script>
+<script type="text/javascript" src="/demo/htdocs/js/curex.util.js"></script>
+<script type="text/javascript" src="/demo/htdocs/js/curex.floatingBar.js"></script>
+<script type="text/javascript" src="/demo/htdocs/js/curex.layout.js"></script>
+<script type="text/javascript" src="/demo/htdocs/js/curex.dialog.js"></script>
+<script type="text/javascript" src="/demo/htdocs/js/curex.ui.js"></script>
+<script type="text/javascript" src="/demo/htdocs/js/curex.globalnavi.js"></script>
+<script type="text/javascript" src="/demo/htdocs/js/popup.js"></script>
+<script type="text/javascript" src="/demo/htdocs/WEB-APP/highchart/js/highcharts.js"></script>
+<script type="text/javascript" src="/demo/htdocs/WEB-APP/highchart/js/exporting.js"></script>
+<script type="text/javascript" src="/demo/htdocs/WEB-APP/highchart/js/highcharts-more.js"></script>
+
+<!--h:s-->
+
+<title></title>
+<!--h:e-->
+<script type="text/javascript">
+	/**
+		전역 AJAX에러 처리
+	 */
+	$(document).ajaxError(function(event, jqxhr, settings, exception) {
+
+		var rt = jqxhr.responseText;
+
+		try {
+
+			var errorInfo = $.parseJSON(rt);
+			var errorMessage = errorInfo.msg;
+			alert('AJAX에러 : ' + errorMessage);
+
+		} catch (e) {
+			alert('AJAX에러 : 서버메시지를 파싱하지 못하였습니다.\n' + '서버원문 : ' + rt);
+		}
+
+	});
+</script>
 </head>
 <body>
 
 <div id="wrap">
-	<!-- HEADER -->
-	<div id="header">
-		<img src="/img/common/img_header.jpg" alt="" />
+	<!-- INCLUDE : CUREX HEADER -->
+	<div class="smModWrap">
+		<div class="smMod">
+			<h2>SM모드</h2>
+			<form id="" method="post" action="/">
+				<fieldset>
+					<legend>sm모드</legend>
+					<span class="infoSel">
+						<label for="spot">지점</label>
+						<select id="spot" style="width:149px">
+							<option>지점명</option>
+						</select>
+						<label for="team">팀</label>
+						<select id="team" style="width:149px">
+							<option>팀명</option>
+						</select>
+						<label for="Lp">LP</label>
+						<select id="Lp" style="width:149px">
+							<option>김엘피(TH001)</option>
+						</select>
+					<a href="#" class="btn smBeR">검색</a>
+					</span>
+				</fieldset>
+			</form>
+		</div>
+
 	</div>
-	<!-- //HEADER -->
+	<div id="header-wrap">
+		<div id="header">
+			<h1>
+				<a href="index.html"><img src="/img/common/logo.gif" alt="CurEX Prudential" /></a>
+			</h1>
+			<a href="#none" class="total" id="siteMap">
+				<img src="/img/sub/gnb_total.gif" alt="전체메뉴" />
+			</a>
+			<!-- 전체메뉴 클릭시 block -->
+			<div class="allmenu" style="display: none;">
+
+				<!-- 알림창 -->
+				<div class="anceWindow" style="display: none;">
+					<div class="anceWrap">
+						<div class="anceDetial">
+							<h2>
+								<img src="/img/common/ico_new.gif" class="vm" alt="new" />
+								LP분들의 편리한 이용을 위해 푸르덴셜 SFA 사이트가 새롭게 개편되었습니다!
+							</h2>
+							<div class="scroll">LP분들의 편리한 이용을 위해 푸르덴셜 SFA 사이트가 새롭게 개편을 하게되었습니다.기존 CUREX 사이트가 가지고 있던 UI/UX상의 불편함을 최대한 해결하였으며 이번 CUREX 사이트 개편으로 LP분들께서 고객관리하실때 더욱더 편리할 것이며..LP분들의 편리한 이용을 위해 푸르덴셜 SFA 사이트가 새롭게 개편을 하게되었습니다.기존 CUREX 사이트가 가지고 있던 UI/UX상의 불편함을 최대한 해결하였으며LP분들의 편리한 이용을 위해 푸르덴셜 SFA 사이트가 새롭게 개편을 하게되었습니다.기존 UREX 사이트가 가지고 있던 UI/UX상의 불편함을 최대한 해결하였으며 이번 CUREX 사이트 개편으로 LP분들께서 고객관리 하실때 더욱더 편리할 것이며..LP분들의 편리한 이용을 위해 푸르덴셜 SFA 사이트가 새롭게 개편을 하게되었습니다. 기존 CUREX 사이트가 가지고 있던 UI/UX상의 불편함을 최대한 해결하였으며 최대한 해결하였으며 이번 CUREX 사이트 개편으로 LP분들께서 고객관리 하실때 고객관리 하실때고객관리 하실때고객관리 하실때고객관리 하실때고객관리 하실때고객관리 하실때고객관리 하실때고객관리 하실때고객관리 하실때고객관리 하실때</div>
+						</div>
+						<div class="anceAlim">
+							<h2>푸르덴셜 알림</h2>
+							<ul>
+								<li class="new">
+									<span class="img"> <a href="#none">푸르덴셜 메인 사이트가 새단장을 할....</a> <span class="date">2014-04-21</span>
+									</span>
+								</li>
+								<li class="new">
+									<span class="img"> <a href="#none">푸르덴셜 메인 사이트가 새단장을 할....</a> <span class="date">2014-04-21</span>
+									</span>
+								</li>
+								<li class="new">
+									<span class="img"> <a href="#none">푸르덴셜 메인 사이트가 새단장을 할....</a> <span class="date">2014-04-21</span>
+									</span>
+								</li>
+								<li>
+									<span class="img"> <a href="#none">푸르덴셜 메인 사이트가 새단장을 할....</a> <span class="date">2014-04-21</span>
+									</span>
+								</li>
+								<li>
+									<span class="img"> <a href="#none">푸르덴셜 메인 사이트가 새단장을 할....</a> <span class="date">2014-04-21</span>
+									</span>
+								</li>
+								<li>
+									<span class="img"> <a href="#none">푸르덴셜 메인 사이트가 새단장을 할....</a> <span class="date">2014-04-21</span>
+									</span>
+								</li>
+								<li>
+									<span class="img"> <a href="#none">푸르덴셜 메인 사이트가 새단장을 할....</a> <span class="date">2014-04-21</span>
+									</span>
+								</li>
+								<li>
+									<span class="img"> <a href="#none">푸르덴셜 메인 사이트가 새단장을 할....</a> <span class="date">2014-04-21</span>
+									</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<p class="dayClose">
+						<input type="checkbox" id="dayClose" name="dayClose" />
+						<label for="dayClose">오늘 하루 그만보기</label>
+					</p>
+				</div>
+
+				<div class="siteMenu" style="display:none;">
+					<ul>
+						<li><a href="#none">고객정보</a>
+							<ul>
+								<li><a href="#none">고객통합뷰</a>
+								</li>
+								<li><a href="#none">고객정보관리</a>
+									<ul>
+										<li><a href="#none">반송관리대상리스트</a></li>
+										<li><a href="#none">삭제리스트</a></li>
+									</ul>
+								</li>
+								<li><a href="#none">감사고객관리</a></li>
+							</ul>
+						</li>
+						<li class="siteMenuLips"><a href="#none">LiPS</a>
+							<ul>
+								<li><a href="#none">니드분석</a>
+									<ul>
+										<li><a href="#none">니드분석메인</a></li>
+										<li><a href="#none">생애Story</a></li>
+										<li><a href="#none">재무계산기</a></li>
+										<li><a href="#none">노후보장시뮬레이션</a></li>
+										<li><a href="#none">수입/지출분석</a></li>
+										<li><a href="#none">자산/부채분석</a></li>
+										<li><a href="#none">사망보장분석</a></li>
+										<li><a href="#none">노후보장분석</a></li>
+										<li><a href="#none">목적자금분석</a></li>
+										<li><a href="#none">증권분석</a></li>
+										<li><a href="#none">보고서출력</a></li>
+									</ul>
+								</li>
+							</ul>
+							<ul>
+								<li><a href="#none">계획수립</a>
+									<ul>
+										<li>
+											<a href="">개인설계</a>
+										</li>
+										<li>
+											<a href="">개인간편설계</a>
+										</li>
+										<li>
+											<a href="">법인설계</a>
+										</li>
+										<li>
+											<a href="">법인간편설계</a>
+										</li>
+										<li>
+											<a href="">복합설계</a>
+										</li>
+										<li>
+											<a href="">중도부가설계</a>
+										</li>
+									</ul>
+								</li>
+								<li><a href="#none">Sales Material</a></li>
+							</ul>
+						</li>
+						<li><a href="#none">계약</a>
+							<ul>
+								<li><a href="#none">계약검색</a></li>
+								<li><a href="#none">계약리스트</a></li>
+								<li><a href="#none">계약리뷰</a></li>
+								<li><a href="#none">청약</a>
+									<ul>
+										<li><a href="#none">증권전달대상계약</a></li>
+										<li><a href="#none">청약진행사항</a></li>
+										<li><a href="#none">Thankyou Call</a></li>
+									</ul>
+								</li>
+								<li><a href="#none">보험금지급진행사항</a>
+									<ul>
+										<li><a href="#none">수익자관련</a></li>
+										<li><a href="#none">보험금지급</a></li>
+									</ul>
+								</li>
+								<li><a href="#none">유지율</a>
+									<ul>
+										<li><a href="#none">Rolling Avg</a></li>
+										<li><a href="#none">LP별 유지율</a></li>
+										<li><a href="#none">월별 유지율</a></li>
+										<li><a href="#none">유지율 우수 LP</a></li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li class="last"><a href="#none">스마트CRM</a>
+							<ul>
+								<li><a href="#none">스마트서비스</a></li>
+								<li><a href="#none">일정표</a></li>
+								<li><a href="#none">CS스테이션</a>
+									<ul>
+										<li><a href="">방문패키지 예약출력</a></li>
+										<li><a href="">기념일서비스 예약현황</a></li>
+										<li><a href="">SMS 센터</a></li>
+										<li><a href="">EMAIL 센터</a></li>
+										<li><a href="">LP소식지</a></li>
+									</ul>
+								</li>
+								<li><a href="#none">활동통계</a></li>
+								<li><a href="#none">접촉이력</a></li>
+								<li><a href="#none">메모</a></li>
+							</ul>
+						</li>
+					</ul>
+					<div class="siteIcon">
+						<ul>
+							<li><a class="sm1" href="#none">신규개인등록</a></li>
+							<li><a class="sm2" href="#none">신규단체등록</a></li>
+							<li><a class="sm3" href="#none">전산발행</a></li>
+							<li><a class="sm4" href="#none">작업기록검색</a></li>
+						</ul>
+					</div>
+				</div>
+
+				<p class="allbg">&nbsp;</p>
+				<a href="#" class="allMenuClose">
+					<img src="/img/common/btn_MenuClose.gif" alt="전체메뉴닫기" />
+				</a>
+			</div>
+			<div class="gnbWrap">
+				<ul class="gnb" id="gnb">
+					<li>
+						<a href="#고객정보" onclick="curex.layout.changePage(this,'CU_01','1');return false;" data-screenId="CU_01" data-depth="1" class="depth1-link"> 고객정보</a>
+						<div class="depth2 depth2-wrap" style="display: none">
+							<ul class="depth2-ul">
+								<li class="last-depth">
+									<a href="main/customer/integration-view/index.cmd" onclick="curex.layout.changePage(this,'CU_0102','2');return false;" data-screenId="CU_0102" data-depth="2" class="depth2-link"> 고객통합뷰</a>
+								</li>
+								<li>
+									<a href="main/customer/management/index.cmd" onclick="curex.layout.changePage(this,'CU_0103','2');return false;" data-screenId="CU_0103" data-depth="2" class="depth2-link"> 고객정보관리</a>
+									<div style="display: none; z-index: 100;" class="depth3-wrap">
+										<ul class="depth3-ul">
+											<li>
+												<a href="main/customer/create/personal.cmd" onclick="curex.layout.changePage(this,'CU_010101','3');return false;" data-screenId="CU_010101" data-depth="3" class="depth3-link"> 반송관리대상리스트</a>
+											</li>
+											<li>
+												<a href="main/customer/create/group.cmd" onclick="curex.layout.changePage(this,'CU_010102','3');return false;" data-screenId="CU_010102" data-depth="3" class="depth3-link"> 삭제리스트</a>
+											</li>
+										</ul>
+									</div>
+								</li>
+								<li class="last-depth">
+									<a href="main/customer/create/index.cmd" onclick="curex.layout.changePage(this,'CU_0101','2');return false;" data-screenId="CU_0101" data-depth="2" class="depth2-link"> 감사고객관리</a>
+								</li>
+							</ul>
+						</div>
+					<li>
+						<a href="#LiPS" onclick="curex.layout.changePage(this,'LI_01','1');return false;" data-screenId="LI_01" data-depth="1" class="depth1-link"> LiPS</a>
+						<div class="depth2 depth2-wrap" style="display: none">
+							<ul class="depth2-ul">
+								<li>
+									<a href="proto/dataBind/main/index.cmd?a=0201" onclick="curex.layout.changePage(this,'LI_0101','2');return false;" data-screenId="LI_0101" data-depth="2" class="depth2-link"> 니즈분석</a>
+									<div style="display: none; z-index: 100;" class="depth3-wrap">
+										<ul class="depth3-ul">
+											<li>
+												<a href="proto/dataBind/main/index.cmd?a=020101" onclick="curex.layout.changePage(this,'LI_010101','3');return false;" data-screenId="LI_010101" data-depth="3" class="depth3-link"> 니즈분석메인</a>
+											<li>
+												<a href="proto/dataBind/main/index.cmd?a=020101" onclick="curex.layout.changePage(this,'LI_010102','3');return false;" data-screenId="LI_010102" data-depth="3" class="depth3-link"> 생애Story</a>
+											<li>
+												<a href="proto/dataBind/main/index.cmd?a=020101" onclick="curex.layout.changePage(this,'LI_010103','3');return false;" data-screenId="LI_010103" data-depth="3" class="depth3-link"> 노후보장시뮬레이션</a>
+											<li>
+												<a href="main/lips/needs_analysis/analysis/index.cmd?tabIndex=0" onclick="curex.layout.changePage(this,'LI_010104','3');return false;" data-screenId="LI_010104" data-depth="3" class="depth3-link"> 재무계산기</a>
+											<li>
+												<a href="main/lips/needs_analysis/analysis/index.cmd?tabIndex=0" onclick="curex.layout.changePage(this,'LI_010105','3');return false;" data-screenId="LI_010105" data-depth="3" class="depth3-link"> 수입지출분석</a>
+											<li>
+												<a href="main/lips/needs_analysis/analysis/index.cmd?tabIndex=1" onclick="curex.layout.changePage(this,'LI_010106','3');return false;" data-screenId="LI_010106" data-depth="3" class="depth3-link"> 자산/부채분석</a>
+											<li>
+												<a href="main/lips/needs_analysis/analysis/index.cmd?tabIndex=2" onclick="curex.layout.changePage(this,'LI_010107','3');return false;" data-screenId="LI_010107" data-depth="3" class="depth3-link"> 사망보장분석</a>
+											<li>
+												<a href="main/lips/needs_analysis/analysis/index.cmd?tabIndex=3" onclick="curex.layout.changePage(this,'LI_010108','3');return false;" data-screenId="LI_010108" data-depth="3" class="depth3-link"> 노후보장분석</a>
+											<li>
+												<a href="main/lips/needs_analysis/analysis/index.cmd?tabIndex=4" onclick="curex.layout.changePage(this,'LI_010109','3');return false;" data-screenId="LI_010109" data-depth="3" class="depth3-link"> 목적자금분석</a>
+											<li>
+												<a href="main/lips/needs_analysis/analysis/index.cmd?tabIndex=5" onclick="curex.layout.changePage(this,'LI_010110','3');return false;" data-screenId="LI_010110" data-depth="3" class="depth3-link"> 증권분석</a>
+											<li>
+												<a href="javascript:curex.popTest()" onclick="curex.layout.changePage(this,'LI_010111','3');return false;" data-screenId="LI_010111" data-depth="3" class="depth3-link"> 보고서</a>
+										</ul>
+									</div>
+								</li>
+								<li>
+									<a href="main/lips/planning/index.cmd" onclick="curex.layout.changePage(this,'LI_0102','2');return false;" data-screenId="LI_0102" data-depth="2" class="depth2-link"> 계획수립</a>
+									<div style="display: none; z-index: 100;" class="depth3-wrap">
+										<ul class="depth3-ul">
+											<li>
+												<a href="main/lips/planning/planning/index.cmd" onclick="curex.layout.changePage(this,'LI_010201','3');return false;" data-screenId="LI_010201" data-depth="3" class="depth3-link"> 개인설계</a>
+											<li>
+												<a href="main/lips/planning/simple_planning/index.cmd?a=020202" onclick="curex.layout.changePage(this,'LI_010202','3');return false;" data-screenId="LI_010202" data-depth="3" class="depth3-link"> 개인가상설계</a>
+											<li>
+												<a href="main/lips/planning/group_planning/covered_person.cmd?a=020203" onclick="curex.layout.changePage(this,'LI_010203','3');return false;" data-screenId="LI_010203" data-depth="3" class="depth3-link"> 단체설계</a>
+											<li>
+												<a href="main/lips/planning/simple_group_planning/index.cmd?a=020204" onclick="curex.layout.changePage(this,'LI_010204','3');return false;" data-screenId="LI_010204" data-depth="3" class="depth3-link"> 단체가상설계</a>
+											<li>
+												<a href="main/lips/planning/multiplan_planning/index.cmd?a=020205" onclick="curex.layout.changePage(this,'LI_010205','3');return false;" data-screenId="LI_010205" data-depth="3" class="depth3-link"> 복합설계</a>
+											<li>
+												<a href="main/lips/planning/add_rider_planning/index.cmd" onclick="curex.layout.changePage(this,'LI_010206','3');return false;" data-screenId="LI_010206" data-depth="3" class="depth3-link"> 중도부가설계</a>
+										</ul>
+									</div>
+								</li>
+								<li class="last-depth">
+									<a href="main/lips/planning/index.cmd" onclick="curex.layout.changePage(this,'LI_0103','2');return false;" data-screenId="LI_0103" data-depth="2" class="depth2-link"> Sales Material</a>
+								</li>
+							</ul>
+						</div>
+					<li class="sixGnb">
+						<a href="#계약" onclick="curex.layout.changePage(this,'CO_01','1');return false;" data-screenId="CO_01" data-depth="1" class="depth1-link"> 계약</a>
+						<div class="depth2 depth2-wrap" style="display: none">
+							<ul class="depth2-ul">
+								<li class="last-depth">
+									<a href="main/policy/search/search.cmd" onclick="curex.layout.changePage(this,'CO_0101','2');return false;" data-screenId="CO_0101" data-depth="2" class="depth2-link"> 계약검색</a>
+								</li>
+								<li class="last-depth">
+									<a href="main/policy/list/list.cmd" onclick="curex.layout.changePage(this,'CO_0102','2');return false;" data-screenId="CO_0102" data-depth="2" class="depth2-link"> 계약리스트</a>
+								</li>
+								<li>
+									<a href="proto/dataBind/main/index.cmd?a=0303" onclick="curex.layout.changePage(this,'CO_0103','2');return false;" data-screenId="CO_0103" data-depth="2" class="depth2-link"> 계약리뷰</a>
+									<div style="display: none; z-index: 100;" class="depth3-wrap">
+										<ul>
+											<li>
+												<a href="main/policy/application/index.cmd?viewPage=searchProcessStatus" onclick="curex.layout.changePage(this,'CO_010301','3');return false;" data-screenId="CO_010301" data-depth="3" class="depth3-link">계약리뷰</a>
+											<li>
+												<a href="main/policy/application/index.cmd?viewPage=searchProcessStatus" onclick="curex.layout.changePage(this,'CO_010302','3');return false;" data-screenId="CO_010302" data-depth="3" class="depth3-link">계약리뷰예약출력</a>
+										</ul>
+									</div>
+								</li>
+								<li>
+									<a href="main/policy/application/index.cmd?viewPage=searchProcessStatus" onclick="curex.layout.changePage(this,'CO_0104','2');return false;" data-screenId="CO_0104" data-depth="2" class="depth2-link"> 청약</a>
+									<div style="display: none; z-index: 100;" class="depth3-wrap">
+										<ul class="depth3-ul">
+											<li>
+												<a href="main/policy/application/index.cmd?viewPage=searchProcessStatus" onclick="curex.layout.changePage(this,'CO_010401','3');return false;" data-screenId="CO_010401" data-depth="3" class="depth3-link"> 증권전달대상계약</a>
+											<li>
+												<a href="main/policy/application/index.cmd?viewPage=thankyouCall" onclick="curex.layout.changePage(this,'CO_010402','3');return false;" data-screenId="CO_010402" data-depth="3" class="depth3-link"> Thankyou Call</a>
+											<li>
+												<a href="main/policy/application/index.cmd?viewPage=policyDeliveryList" onclick="curex.layout.changePage(this,'CO_010403','3');return false;" data-screenId="CO_010403" data-depth="3" class="depth3-link"> 청약진행사항</a>
+										</ul>
+									</div>
+								</li>
+								<li>
+									<a href="proto/dataBind/main/index.cmd?a=0304" onclick="curex.layout.changePage(this,'CO_0106','2');return false;" data-screenId="CO_0106" data-depth="2" class="depth2-link"> 보험금</a>
+									<div style="display: none; z-index: 100;" class="depth3-wrap">
+										<ul class="depth3-ul">
+											<li>
+												<a href="proto/dataBind/main/index.cmd?a=030401" onclick="curex.layout.changePage(this,'CO_010601','3');return false;" data-screenId="CO_010601" data-depth="3" class="depth3-link"> 수익자관련보험계약</a>
+											<li>
+												<a href="proto/dataBind/main/index.cmd?a=030402" onclick="curex.layout.changePage(this,'CO_010602','3');return false;" data-screenId="CO_010602" data-depth="3" class="depth3-link"> 보험금지급</a>
+										</ul>
+									</div>
+								</li>
+								<li>
+									<a href="proto/dataBind/main/index.cmd?a=0305" onclick="curex.layout.changePage(this,'CO_0107','2');return false;" data-screenId="CO_0107" data-depth="2" class="depth2-link"> 유지율</a>
+									<div style="display: none; z-index: 100;" class="depth3-wrap">
+										<ul class="depth3-ul">
+											<li>
+												<a href="proto/dataBind/main/index.cmd?a=030501" onclick="curex.layout.changePage(this,'CO_010701','3');return false;" data-screenId="CO_010701" data-depth="3" class="depth3-link">Rolling Avg</a>
+											<li>
+												<a href="proto/dataBind/main/index.cmd?a=030502" onclick="curex.layout.changePage(this,'CO_010702','3');return false;" data-screenId="CO_010702" data-depth="3" class="depth3-link">LP별 유지율</a>
+											<li>
+												<a href="proto/dataBind/main/index.cmd?a=030503" onclick="curex.layout.changePage(this,'CO_010703','3');return false;" data-screenId="CO_010703" data-depth="3" class="depth3-link">월별 유지율</a>
+											<li>
+												<a href="proto/dataBind/main/index.cmd?a=030504" onclick="curex.layout.changePage(this,'CO_010704','3');return false;" data-screenId="CO_010704" data-depth="3" class="depth3-link">유지율 우수LP</a>
+										</ul>
+									</div>
+								</li>
+							</ul>
+						</div>
+					<li class="sixGnb">
+						<a href="#스마트CRM" onclick="curex.layout.changePage(this,'SM_01','1');return false;" data-screenId="SM_01" data-depth="1" class="depth1-link"> 스마트CRM</a>
+						<div class="depth2 depth2-wrap" style="display: none">
+							<ul class="depth2-ul">
+								<li class="last-depth">
+									<a href="main/smartcrm/smartService/index.cmd" onclick="curex.layout.changePage(this,'SM_0101','2');return false;" data-screenId="SM_0101" data-depth="2" class="depth2-link"> 스마트서비스</a>
+								</li>
+								<li class="last-depth">
+									<a href="main/smartcrm/calendar/monthly.cmd" onclick="curex.layout.changePage(this,'SM_0102','2');return false;" data-screenId="SM_0102" data-depth="2" class="depth2-link"> 일정표</a>
+								</li>
+								<li>
+									<a href="main/smartcrm/smartCsStation/visitPackagePrint.cmd?a=030103" onclick="curex.layout.changePage(this,'SM_0103','2');return false;" data-screenId="SM_0103" data-depth="2" class="depth2-link"> CS스테이션</a>
+									<div style="display: none; z-index: 100; width:128px;left:-3px;" class="depth3-wrap">
+										<ul class="depth3-ul">
+											<li>
+												<a href="main/smartcrm/smartCsStation/visitPackagePrint.cmd" onclick="curex.layout.changePage(this,'SM_010301','3');return false;" data-screenId="SM_010301" data-depth="3" class="depth3-link"> 방문패키지출력현황</a>
+											<li>
+												<a href="main/smartcrm/smartCsStation/visitPackagePrint.cmd" onclick="curex.layout.changePage(this,'SM_010302','3');return false;" data-screenId="SM_010302" data-depth="3" class="depth3-link">기념일서비스예약현황</a>
+											</li>
+											<li>
+												<a href="main/smartcrm/smartCsStation/visitPackagePrint.cmd" onclick="curex.layout.changePage(this,'SM_010303','3');return false;" data-screenId="SM_010303" data-depth="3" class="depth3-link">SMS센터</a>
+											</li>
+											<li>
+												<a href="main/smartcrm/smartCsStation/visitPackagePrint.cmd" onclick="curex.layout.changePage(this,'SM_010304','3');return false;" data-screenId="SM_010304" data-depth="3" class="depth3-link">EMAIL센터</a>
+											</li>
+											<li>
+												<a href="main/smartcrm/smartCsStation/visitPackagePrint.cmd" onclick="curex.layout.changePage(this,'SM_010305','3');return false;" data-screenId="SM_010305" data-depth="3" class="depth3-link">LP소식지</a>
+											</li>
+										</ul>
+									</div>
+								</li>
+								<li class="last-depth">
+									<a href="proto/dataBind/main/index.cmd?a=0404" onclick="curex.layout.changePage(this,'SM_0104','2');return false;" data-screenId="SM_0104" data-depth="2" class="depth2-link"> 활동통계</a>
+								</li>
+								<li class="last-depth">
+									<a href="main/smartcrm/lp_act_management/index.cmd" onclick="curex.layout.changePage(this,'SM_0105','2');return false;" data-screenId="SM_0105" data-depth="2" class="depth2-link"> 접촉이력</a>
+								</li>
+								<li class="last-depth">
+									<a href="main/smartcrm/memo/memo.cmd" onclick="curex.layout.changePage(this,'SM_0106','2');return false;" data-screenId="SM_0106" data-depth="2" class="depth2-link"> 메모</a>
+								</li>
+							</ul>
+						</div>
+				</ul>
+				<span class="globalIcon smmode"><!-- smmode시 smmode 클래스생성 -->
+					<span class="icoTotal">
+						<a href="#none"><img src="/img/common/ico_gnb1.gif" alt="" /></a>
+						<a href="#none"><img src="/img/common/ico_gnb2.gif" alt="" /></a>
+						<a href="#none"><img src="/img/common/ico_gnb3.gif" alt="" /></a>
+					</span>
+					<a href="#none" class="smIcon">SM<br />모드</a><!-- smmode시 해당 링크추가 -->
+					<a href="#none" id="allimView" class="last"><img src="/img/common/ico_gnb4.gif" alt="" /></a>
+				</span>
+
+			</div>
+			<div class="Tsearch">
+				<form id="header-customer-serch-form" method="post" action="">
+					<fieldset>
+						<legend>고객검색</legend>
+						<div class="btnTsearch">
+							<input type="text" value="이름/증권번호" style="width: 129px" title="이름증권번호입력" />
+							<input type="image" src="/img/common/btn_gnb_search.gif" alt="검색" />
+							<button type="button" class="searchMore">
+								<span class="hide-text">검색더보기</span>
+							</button>
+							<button type="button" class="userMore">
+								<span class="hide-text">검색더보기</span>
+							</button>
+						</div>
+						<span class="Name"> <a href="#none" id="personInfo">김푸르</a>
+						</span>
+					</fieldset>
+				</form>
+			</div>
+		</div>
+
+		<div class="PersonCont ci-tab">
+			<ul class="tab04 tab-selector">
+				<li class="active">
+					<a href="#" class="new">최근고객목록</a>
+				</li>
+				<li>
+					<a href="#" class="old">보유고객그룹</a>
+				</li>
+			</ul>
+			<!-- TAB 폐널 : START -->
+			<ul class="tab-panel">
+				<li class="active">
+					<h3 class="hide-element">최근고객목록</h3>
+					<ul class="personList">
+						<li class="hover">
+							<a href="#">
+								<span class="sut">기계약</span><span class="name">김푸르</span> <span class="Rnum">800 / 남 / 34</span>
+							</a>
+							<button type="button" class="btn_delst1">
+								<span>삭제</span>
+							</button>
+						</li>
+						<li>
+							<a href="#">
+								<span class="sut">우&nbsp;&nbsp;수</span><span class="name">김푸르</span> <span class="Rnum">800 / 남 / 34</span>
+							</a>
+							<button type="button" class="btn_delst1">
+								<span>삭제</span>
+							</button>
+						</li>
+						<li>
+							<a href="#">
+								<span class="sut">기계약</span><span class="name">김푸르</span> <span class="Rnum">800 / 남 / 34</span>
+							</a>
+							<button type="button" class="btn_delst1">
+								<span>삭제</span>
+							</button>
+						</li>
+						<li>
+							<a href="#">
+								<span class="sut">기계약</span><span class="name">김푸르</span> <span class="Rnum">800 / 남 / 34</span>
+							</a>
+							<button type="button" class="btn_delst1">
+								<span>삭제</span>
+							</button>
+						</li>
+						<li>
+							<a href="#">
+								<span class="sut">기계약</span><span class="name">김푸르</span> <span class="Rnum">800 / 남 / 34</span>
+							</a>
+							<button type="button" class="btn_delst1">
+								<span>삭제</span>
+							</button>
+						</li>
+						<li>
+							<a href="#">
+								<span class="sut">기계약</span><span class="name">김푸르</span> <span class="Rnum">800 / 남 / 34</span>
+							</a>
+							<button type="button" class="btn_delst1">
+								<span>삭제</span>
+							</button>
+						</li>
+						<li>
+							<a href="#">
+								<span class="sut">기계약</span><span class="name">김푸르</span> <span class="Rnum">800 / 남 / 34</span>
+							</a>
+							<button type="button" class="btn_delst1">
+								<span>삭제</span>
+							</button>
+						</li>
+						<li>
+							<a href="#">
+								<span class="sut">기계약</span><span class="name">김푸르</span> <span class="Rnum">800 / 남 / 34</span>
+							</a>
+							<button type="button" class="btn_delst1">
+								<span>삭제</span>
+							</button>
+						</li>
+						<li>
+							<a href="#">
+								<span class="sut">기계약</span><span class="name">김푸르</span> <span class="Rnum">800 / 남 / 34</span>
+							</a>
+							<button type="button" class="btn_delst1">
+								<span>삭제</span>
+							</button>
+						</li>
+						<li>
+							<a href="#">
+								<span class="sut">기계약</span><span class="name">김푸르</span> <span class="Rnum">800 / 남 / 34</span>
+							</a>
+							<button type="button" class="btn_delst1">
+								<span>삭제</span>
+							</button>
+						</li>
+					</ul>
+					<div class="paging mt20">
+					   <a class="prev" href="#"><img alt="이전으로" src="/img/common/arrow_prev.gif"></a>
+					   <strong>1</strong>
+					   <a href="#">2</a>
+					   <a href="#">3</a>
+					   <a href="#">4</a>
+					   <a href="#">5</a>
+					   <a class="next" href="#"><img alt="다음으로" src="/img/common/arrow_next.gif"></a>
+					</div>
+				</li>
+				<li></li>
+			</ul>
+			<!-- TAB 폐널 : END -->
+		</div>
+
+		<div class="personDetail">
+			<dl class="pernalInfo">
+				<dt>
+					<strong>김푸르</strong> (34세, 남. 1980. 02. 01 양)
+				</dt>
+				<dd class="sutIcon">기계약</dd>
+				<dd class="listDot">
+					<strong>연락처</strong>010-1234-1234
+				</dd>
+			</dl>
+
+			<div class="customer-info-tab tabOutline ci-tab">
+				<ul class="tab05 tab-selector">
+					<li class="first active">
+						<a href="#">
+							<span>고객정보</span>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<span>계약정보</span>
+						</a>
+					</li>
+					<li class="last">
+						<a href="#">
+							<span>접촉이력</span>
+						</a>
+					</li>
+				</ul>
+				<ul class="tab-panel">
+					<li class="active">
+						<!-- 고객정보 -->
+
+
+						<!-- //고객정보 -->
+						<h3 class="hide-element">고객정보</h3>
+						<div class="InfoScroll">
+							<table summary="고객정보를 제공합니다." width="100%" class="InfoTable">
+								<caption>고객정보</caption>
+								<colgroup>
+									<col width="35%">
+									<col width="*">
+								</colgroup>
+								<tbody>
+									<tr>
+										<th scope="row">마케팅활용동의</th>
+										<td>O</td>
+									</tr>
+									<tr>
+										<th scope="row">직업</th>
+										<td>
+											<ul class="listbar">
+												<li>0102S (사무직)</li>
+											</ul>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row">변액적합성진단결과</th>
+										<td>
+											<ul class="listbar">
+												<li>보장형,안정형,성향불일치○,고위험X</li>
+												<li>보장형,안정형,성향불일치○,고위험X</li>
+											</ul>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row">가족관계</th>
+										<td>
+											<ul class="listbar">
+												<li>이현영(배우자, 30세)</li>
+												<li>김소원(자녀, 3세)</li>
+											</ul>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row">소속</th>
+										<td>
+											<ul class="listbar">
+												<li>㈜위모</li>
+											</ul>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row">
+											기념일 <br>최근 2개월 이내)
+										</th>
+										<td>
+											<ul class="listbar">
+												<li>배우자생일(1980.11.20)</li>
+												<li>결혼기념일(2013.12.02)</li>
+											</ul>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</li>
+					<li>
+						<!-- 계약정보 -->
+
+
+						<!-- 계약정보 -->
+					</li>
+					<li></li>
+				</ul>
+			</div>
+			<div class="btnWrap personBtn">
+				<a class="btn lgBeR1" href="#">고객정보</a>
+				<a class="btn lgBeR1" href="#">가입설계</a>
+				<a class="btn lgGyR1" href="#">계약정보</a>
+				<a class="btn lgGyR1" href="#">E-Mail</a>
+				<a class="btn lgGyR1" href="#">SMS</a>
+			</div>
+			<dl class="pNnotice">
+				<dt>알림사항</dt>
+				<dd>
+					<ul>
+						<li class="listcc pnOrg">LPS 신청서 만료 <span>( 2013.12.05 )</span></li>
+						<li class="listcc pnOrg">변액적합성진단 만료일 <span>( 2013.12.05 )</span></li>
+						<li class="listcc">변액적합성진단을 실시하세요 <span>( 2013.12.05 )</span></li>
+					</ul>
+				</dd>
+			</dl>
+			<button type="button" class="userInfoclose">
+				<span>닫기</span>
+			</button>
+		</div>
+	</div>
 		
 	<div id="conteiner">
 		<div class="hgroup">
@@ -137,7 +882,7 @@
 					<tbody>
 						<tr>
 							<td><input type="checkbox" title="현재행선택" /></td>
-							<td class="PyNumber"><a href="#">12345678910</a></td>
+							<td class="PyNumber"><a href="#" class="d4_btn8">12345678910</a></td>
 							<td>김승헌</td>
 							<td>김승현</td>
 							<td>2014-02-03</td>
@@ -150,7 +895,7 @@
 						</tr>
 						<tr>
 							<td><input type="checkbox" title="현재행선택" /></td>
-							<td class="PyNumber"><a href="#">12345678910</a></td>
+							<td class="PyNumber"><a href="#" class="d4_btn8">12345678910</a></td>
 							<td>김승헌</td>
 							<td>김승현</td>
 							<td>2014-02-03</td>
@@ -163,7 +908,7 @@
 						</tr>
 						<tr>
 							<td><input type="checkbox" title="현재행선택" /></td>
-							<td class="PyNumber"><a href="#">12345678910</a></td>
+							<td class="PyNumber"><a href="#" class="d4_btn8">12345678910</a></td>
 							<td>김승헌</td>
 							<td>김승현</td>
 							<td>2014-02-03</td>
@@ -176,7 +921,7 @@
 						</tr>
 						<tr>
 							<td><input type="checkbox" title="현재행선택" /></td>
-							<td class="PyNumber"><a href="#">12345678910</a></td>
+							<td class="PyNumber"><a href="#" class="d4_btn8">12345678910</a></td>
 							<td>김승헌</td>
 							<td>김승현</td>
 							<td>2014-02-03</td>
@@ -189,7 +934,7 @@
 						</tr>
 						<tr>
 							<td><input type="checkbox" title="현재행선택" /></td>
-							<td class="PyNumber"><a href="#">12345678910</a></td>
+							<td class="PyNumber"><a href="#" class="d4_btn8">12345678910</a></td>
 							<td>김승헌</td>
 							<td>김승현</td>
 							<td>2014-02-03</td>
@@ -202,7 +947,7 @@
 						</tr>
 						<tr>
 							<td><input type="checkbox" title="현재행선택" /></td>
-							<td class="PyNumber"><a href="#">12345678910</a></td>
+							<td class="PyNumber"><a href="#" class="d4_btn8">12345678910</a></td>
 							<td>김승헌</td>
 							<td>김승현</td>
 							<td>2014-02-03</td>
@@ -215,7 +960,7 @@
 						</tr>
 						<tr>
 							<td><input type="checkbox" title="현재행선택" /></td>
-							<td class="PyNumber"><a href="#">12345678910</a></td>
+							<td class="PyNumber"><a href="#" class="d4_btn8">12345678910</a></td>
 							<td>김승헌</td>
 							<td>김승현</td>
 							<td>2014-02-03</td>
@@ -228,7 +973,7 @@
 						</tr>
 						<tr>
 							<td><input type="checkbox" title="현재행선택" /></td>
-							<td class="PyNumber"><a href="#">12345678910</a></td>
+							<td class="PyNumber"><a href="#" class="d4_btn8">12345678910</a></td>
 							<td>김승헌</td>
 							<td>김승현</td>
 							<td>2014-02-03</td>
@@ -241,7 +986,7 @@
 						</tr>
 						<tr>
 							<td><input type="checkbox" title="현재행선택" /></td>
-							<td class="PyNumber"><a href="#">12345678910</a></td>
+							<td class="PyNumber"><a href="#" class="d4_btn8">12345678910</a></td>
 							<td>김승헌</td>
 							<td>김승현</td>
 							<td>2014-02-03</td>
@@ -254,7 +999,7 @@
 						</tr>
 						<tr>
 							<td><input type="checkbox" title="현재행선택" /></td>
-							<td class="PyNumber"><a href="#">12345678910</a></td>
+							<td class="PyNumber"><a href="#" class="d4_btn8">12345678910</a></td>
 							<td>김승헌</td>
 							<td>김승현</td>
 							<td>2014-02-03</td>
@@ -267,7 +1012,7 @@
 						</tr>
 						<tr>
 							<td><input type="checkbox" title="현재행선택" /></td>
-							<td class="PyNumber"><a href="#">12345678910</a></td>
+							<td class="PyNumber"><a href="#" class="d4_btn8">12345678910</a></td>
 							<td>김승헌</td>
 							<td>김승현</td>
 							<td>2014-02-03</td>
@@ -280,7 +1025,7 @@
 						</tr>
 						<tr>
 							<td><input type="checkbox" title="현재행선택" /></td>
-							<td class="PyNumber"><a href="#">12345678910</a></td>
+							<td class="PyNumber"><a href="#" class="d4_btn8">12345678910</a></td>
 							<td>김승헌</td>
 							<td>김승현</td>
 							<td>2014-02-03</td>
@@ -293,7 +1038,7 @@
 						</tr>
 						<tr>
 							<td><input type="checkbox" title="현재행선택" /></td>
-							<td class="PyNumber"><a href="#">12345678910</a></td>
+							<td class="PyNumber"><a href="#" class="d4_btn8">12345678910</a></td>
 							<td>김승헌</td>
 							<td>김승현</td>
 							<td>2014-02-03</td>
@@ -306,7 +1051,7 @@
 						</tr>
 						<tr>
 							<td><input type="checkbox" title="현재행선택" /></td>
-							<td class="PyNumber"><a href="#">12345678910</a></td>
+							<td class="PyNumber"><a href="#" class="d4_btn8">12345678910</a></td>
 							<td>김승헌</td>
 							<td>김승현</td>
 							<td>2014-02-03</td>
@@ -2387,6 +3132,60 @@
 			</div>
 		</div>
 
+		<div class="dia-content ci-dialog-content">
+			<div class="popContents">
+				<div class="listSelectWrap">
+					<ul>
+						<li><strong>주요리스트</strong>
+							<ul>
+								<li><a href="#none">보유계약</a></li>
+								<li><a href="#none">피보험자별</a></li>
+								<li><a href="#none">신계약청약</a></li>
+								<li><a href="#none">실효대상 및 보험료 미납입 <br />계약</a></li>
+								<li><a href="#none">전환가능</a></li>
+							</ul>
+						</li>
+						<li><strong>보험료</strong>
+							<ul>
+								<li><a href="#none">자동이체 출금현황</a></li>
+								<li><a href="#none">가상계좌 입금</a></li>
+								<li><a href="#none">계좌보험료 입금</a></li>
+								<li><a href="#none">직접납부계약</a></li>
+								<li><a href="#none">자동이체신청</a></li>
+								<li><a href="#none">보험료 변경 대상 계약</a></li>
+								<li><a href="#none">월공제 리스트</a></li>
+							</ul>
+						</li>
+						<li><strong>특약중도부가</strong>
+							<ul>
+								<li><a href="#none">실버널싱중도부가 대상</a></li>
+								<li><a href="#none">특별인수특약 리스트</a></li>
+								<li><a href="#none">특별조건부 특약리스트</a></li>
+							</ul>
+						</li>
+						<li><strong>실효계약관리</strong>
+							<ul>
+								<li><a href="#none">실효계약</a></li>
+								<li><a href="#none">부활대상계약</a></li>
+								<li><a href="#none">휴면보험금 현황</a></li>
+							</ul>
+						</li>
+						<li><strong>계약관리</strong>
+							<ul>
+								<li><a href="#none">대출현황 리스트</a></li>
+								<li><a href="#none">펀드현황 리스트</a></li>
+								<li><a href="#none">보장증액 리스트</a></li>
+								<li><a href="#none">공통청약 리스트</a></li>
+								<li><a href="#none">계약변경 체크리스트</a></li>
+								<li><a href="#none">공통청약 리스트</a></li>
+								<li><a href="#none">피보험자 겨체가능 리스트</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
 		<!-- //공통 컨텐츠 -->
 		<script type="text/javascript">
 			//<![CDATA[
@@ -2398,30 +3197,121 @@
 			//]]>
 		</script>
 
-	
-		<!-- CHECKLIST -->
-		<div id="checkList">
-			<ul class="list">
-				<li><a href="#none" class="on">내그룹 지정</a></li>
-				<li><a href="#none">방문패키지출력</a></li>
-				<li><a href="#none">전화</a></li>
-				<li><a href="#none">SMS</a></li>
-				<li><a href="#none">E-Mail</a></li>
-				<li><a href="#none">LP 소식지</a></li>
-				<li><a href="#none">DM</a></li>
+		<script type="text/javascript" charset="utf-8">
+			(function() {
+				var floatingOpt ={
+					btnList : [ {
+						button : "내그룹지정",
+						active : true,
+						click : function() {
+							alert("a1");
+						},
+					}, {
+						button : "방문패키지출력",
+						active : true,
+						click : function() {
+							alert("b1");
+						},
+					}, {
+						button : "전화",
+						active : true,
+						click : function() {
+							alert("c1");
+						},
+					}, {
+						button : "SMS",
+						active : true,
+						click : function() {
+							alert("d1");
+						}
+					}, {
+						button : "E-Mail",
+						active : true,
+						click : function() {
+							alert("e1");
+						}
+					}, {
+						button : "LP소식지",
+						active : true,
+						click : function() {
+							alert("f1");
+						}
+					}, {
+						button : "DM",
+						active : true,
+						click : function() {
+							alert("g1");
+						}
+					} ],
+					checkListBtn : true, //체크리스트 버튼 유무
+					quickBtn : true, //퀵 버튼 유무
+					
+				};
+				curex.floatingBar.init(floatingOpt);
+		})();
+		</script>
+
+		<!-- Quick menu -->
+		<div id="quick" style="right: -70px;">
+			<h2>
+				<span>Quick</span>
+			</h2>
+			<ul style="margin-top: -360px;">
+				<li class="q01">
+					<a href="#none">
+						고객<br>통합뷰
+					</a>
+				</li>
+				<li class="q02">
+					<a href="#none">
+						개인<br>설계
+					</a>
+				</li>
+				<li class="q03">
+					<a href="#none">
+						재무<br>계산기
+					</a>
+				</li>
+				<li class="q04">
+					<a href="#none">
+						전산<br>발행
+					</a>
+				</li>
+				<li class="q05">
+					<a href="#none">
+						Sales<br>Material
+					</a>
+				</li>
+				<li class="q06">
+					<a href="#none">
+						보험금<br>지급
+					</a>
+				</li>
 			</ul>
+			<a href="#none" class="quickBtn">
+				<span>close</span>
+			</a>
 		</div>
-		<!-- //CHECKLIST -->
-	<div>
+		<!-- Quick menu -->
+
+	</div>
 </div>
+
 <!-- FOOTER -->
 <div id="footer">
 	<div class="fter">
-		<img src="/img/common/img_footer.jpg" alt="" />
+		<h2><img alt="Prudential COPYLIGHT PRUDENTIAL LIFE INSURANCE COMPANY OF KOREA LTD. ALLRIGHTS RESERVED." src="/img/common/footer_logo.gif"></h2>
+		<span><img alt="HELPDESK : 031-8006-2800" src="/img/common/footer_tel.gif"></span>	
 	</div>
 </div>
 <!--//FOOTER -->
-
+<script>
+	curex.globalnavi.init();
+	curex.layout.setScreenId('PT_010101');
+	curex.layout.initAllMenu();
+	curex.layout.initAllim();
+	curex.layout.initCustomerUI();
+</script>
 
 </body>
 </html>
