@@ -20,22 +20,38 @@
 		$('#wrap').addClass('checkList');
 
 		var divWrap = $('<div id="checkList"></div>');			
-		
+		var listOpen = $('<li><a class="checkListBtn" href="#listMenu">CHECKLIST</a></li>');
 		var listDiv = $('<div class="listMenu" id="listMenu" style="display:none"><h3>CHECK LIST <span class="red">*보험료 계산을 다시 하신 후 재확인해주세요</span></h3></div>');
 		var listView = $('<ul class="view"></ul><a href="#none" class="enter">확인</a>');
 		var btnListUl = $('<ul class="list"></ul>');
-		var leftBtnListUl = $('<ul class="h2List"></ul>');
+		var leftBtnListUl = $('<ul class="h2List"></ul>');	
 	
 		if(option.checkListBtn == false){
-			divWrap.append(leftBtnListUl);
+			divWrap.append(leftBtnListUl);			
 			divWrap.append(btnListUl);
-		}else{
-			
+		}else{						
+			leftBtnListUl.append(listOpen);
 			divWrap.append(leftBtnListUl);
 			divWrap.append(btnListUl);
 			listDiv.append(listView);
 			divWrap.append(listDiv);	
 
+			listOpen.on('click',function(e){
+				e.preventDefault();
+				listDiv.removeClass('opened');
+				if(listDiv.css('display') == 'none'){					
+					listDiv.css('bottom',  -(listDiv.height()+40));
+					listDiv.show();
+					listDiv.addClass('opened', 700, 'easeOutQuint', function() {
+					});
+				}else{							
+					listDiv.animate({
+			               bottom : - ($(this).height()+40)
+			        },500,function(){        	   
+			        	   $(this).hide();
+			        });
+				}			
+			});
 		}										
 
 		$('#wrap').append(divWrap);
@@ -45,8 +61,7 @@
 		//listMenu.hide();
 		//var list_h3 = $('> h3 > span', listMenu);
 		//list_h3.html('');
-		var leftUl = $('> ul.h2List', floating);			
-		leftUl.empty();		
+		
 		if(option.leftBtnList){			
 			for(var i=0; i<option.leftBtnList.length; i++){
 				var li = $('<li><a href="#'+option.leftBtnList[i].btnId+'">'+option.leftBtnList[i].button+'</a></li>');
@@ -88,12 +103,10 @@
 				if(option.leftBtnList[i].click){
 					aTag.data('func',option.leftBtnList[i].click);
 				}
-				leftUl.append(li);
+				leftBtnListUl.append(li);
 			}			
 		}
 
-		var ul = $('> ul.list', floating);			
-		ul.empty();		
 		if(option.btnList){
 			for(var i=0; i<option.btnList.length; i++){				
 				var li = $('<li><a href="#none">'+option.btnList[i].button+'</a></li>');
@@ -134,11 +147,11 @@
 				if(option.btnList[i].click){
 					aTag.data('func',option.btnList[i].click);
 				}
-				ul.append(li);				
+				btnListUl.append(li);				
 			}
 		}
 		if(option.quickBtn !== undefined && option.quickBtn == false){
-			ul.append('<li class="quB"><a href="#none"><img src="/img/common/quick.gif" alt="quick"></a></li>');	
+			btnListUl.append('<li class="quB"><a href="#none"><img src="/img/common/quick.gif" alt="quick"></a></li>');	
 		}
 
 		floating.wrapInner("<div class='checkInner' />")
