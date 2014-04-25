@@ -62,7 +62,7 @@
 					
 					if(option.leftBtnList[i].viewDiv){
 						aTag.bind("click", function(){
-							curex.floatingBar.oepnLeftLayer($(this).data('viewDiv'));							
+							curex.floatingBar.oepnLeftLayer($(this).data('viewDiv'));
 						});
 					}
 					if(option.leftBtnList[i].click){
@@ -184,24 +184,36 @@
 	};
 
 	//leftBtn open layer
+
 	self.oepnLeftLayer = function(viewDiv){
-		var temp = viewDiv.dialog({
-				appendTo: ".checkInner",
-				autoOpen: false,
-				resizable: false,
+
+		if(viewDiv.attr("id") =="d4_layer9"){
+			console.log(viewDiv)
+			viewDiv = ci.dialog.open({
+				title : '검색조건저장', // title 지정
+				dom : $('.dia-content1'), // 내용으로 들어갈 마크업 지정
+				focus : $(this), // 다이알로그 닫친뒤 포커스를 주고싶은 요소 지정
 				closeOnEscape: false,
-				width:1024,
-				modal: true
-		});
-		var $close = temp.find(".enter");
-
-		$close.click(function(){
-			temp.dialog( "close" );
-		});
-
-		temp.parent().find('.ui-dialog-titlebar').hide();
-		viewDiv.dialog({dialogClass:'checkPopMenu'});
-		viewDiv.dialog("open");
+				modal : true,
+				width:1024
+			});
+		}else{
+			var temp = viewDiv.dialog({
+					appendTo: ".checkInner",
+					autoOpen: false,
+					resizable: false,
+					closeOnEscape: false,
+					width:1024,
+					modal: true
+			});
+			var $close = temp.find(".enter");
+			$close.click(function(){
+				temp.dialog( "destroy" );
+			});
+			temp.parent().find('.ui-dialog-titlebar').hide();
+			viewDiv.dialog({dialogClass:'checkPopMenu'});
+			viewDiv.dialog("open");
+		}
 	}
 	
 	//버튼 활성화 제어
