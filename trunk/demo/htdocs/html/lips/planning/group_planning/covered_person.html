@@ -3854,12 +3854,19 @@
 								button : "청약서적용",
 								active : true,
 								click : function() {
-									if ($(".offer").text()){
-										$(".offer").text("")
+									if (!$(".offer").hasClass("display")){
+										$(".offer").addClass("display");
+										$(".offer").css({
+											"font-size" : 0,
+											"line-height" : 0
+										});
 									}else{
-										$(".offer").text("237,600")
+										$(".offer").removeClass("display");
+										$(".offer").css({
+											"font-size" : 12,
+											"line-height" : 1
+										});
 									}
-
 								}
 							}, {
 								button : "전산발행",
