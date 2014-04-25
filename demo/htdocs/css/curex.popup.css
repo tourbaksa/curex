@@ -34,7 +34,8 @@ div.layerPopWrap2 div.layerPopCnt .table1{border:1px solid #dedede;}
 div.layerPopWrap2 a.btnClosePopup{position:absolute; right:9px; top:7px;}
 
 /* 팝업 레이아웃 type3 */
-#factWrap{position:relative;}
+div#d4_layer9{height:768px; overflow-y:scroll; overflow-x:hidden;}
+#factWrap{position:relative; }
 #factWrap .fanWrap:after{content:"";display:block;clear:both;}
 #factWrap h1{background:#22b8c7;height:43px;border-bottom:10px solid #01509f;font-size:36px;font-weight:bold;color:#fff;padding:7px 0 0 20px;letter-spacing:-1px;}
 #factWrap div.mainTabZone:after{content:"";display:block;clear:both;}
