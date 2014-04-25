@@ -220,9 +220,8 @@ div.personBtn .lgGyR1{padding:7px 10px;}
 /* 체크리스트 */
 #checkList{background-color:#22b8c7; width:1024px; height:40px; margin:0 auto; position:absolute;left:50%;bottom:62px;margin-left:-512px;z-index:2222;}
 #checkList.fixed{position:fixed; bottom:0;}
-#checkList h2{float:left;}
-#checkList h2 a{display:block;width:150px;height:40px;line-height:40px;font-size:14px;font-weight:bold;color:#bdf1ff;background:url(/img/common/blet4.gif) #1d5d6f no-repeat 30px center;text-align:right;padding-right:20px;}
-#checkList ul.h2List li a{float:left;padding:0 15px;letter-spacing:-1px;display:block;height:40px;line-height:40px;font-size:14px;font-weight:bold;color:#bdf1ff;background:#1d5d6f;border-left:1px solid #4a7d8c;}
+#checkList ul.h2List li a{float:left;padding:0 15px;display:block;height:40px;line-height:40px;font-size:14px;font-weight:bold;color:#bdf1ff;background:#1d5d6f;border-left:1px solid #4a7d8c;}
+#checkList ul.h2List li a.checkListBtn{display:block;width:150px;height:40px;line-height:40px;font-size:14px;font-weight:bold;color:#bdf1ff;background:url(../img/common/blet4.gif) #1d5d6f no-repeat 30px center;text-align:right;padding-right:20px;}
 #checkList ul.h2List li:first-child a{border-left:0;}
 #checkList ul.list {float:right;}
 #checkList ul.list li {float:left; height:40px; line-height:40px; text-align:center; border-left:1px solid #1fa5b3;}
