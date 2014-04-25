@@ -66,9 +66,7 @@
 		};		
 	}
 	
-	
 		
-	
 	//현재 화면의 screenId 반환
 	function getScreenId(){		
 		return screenId;
@@ -404,6 +402,20 @@
 		$('.allMenuClose').on('click', function(e) {
 			$('.allmenu').hide();
 			$('.siteMenu').hide();
+			e.preventDefault();
+		});
+	};
+
+	self.initAllim = function () {
+		$('#allimView').on('click', function(e) {
+			$('.allmenu').toggle();
+			$('.anceWindow').toggle();
+			e.preventDefault();
+		});
+		//anceWindow 닫기
+		$('.allMenuClose').on('click', function(e) {
+			$('.allmenu').hide();
+			$('.anceWindow').hide();
 			e.preventDefault();
 		});
 	};

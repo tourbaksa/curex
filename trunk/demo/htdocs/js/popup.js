@@ -71,4 +71,55 @@ $(document).ready(function(){
 		});
 		return false;
 	});
+
+	/* 주계약선택 */
+	$('.d4_btn6').on('click', function () {
+		var dia1 = ci.dialog.open({
+			id : 'd4_layer6', // id 지정
+			title : '주계약선택', // title 지정
+			dom : $('.popContents'), // 내용으로 들어갈 마크업 지정
+			focus : $(this), // 다이알로그 닫친뒤 포커스를 주고싶은 요소 지정
+			modal : true,
+			closebutton : false,
+			width:917
+		});
+	});
+	/* 재정안정계획서 */
+	$('.d4_btn7').on('click', function () {
+		var dia1 = ci.dialog.open({
+			id : 'd4_layer7', // id 지정
+			title : '재정안정계획서', // title 지정
+			dom : $('.popContents'), // 내용으로 들어갈 마크업 지정
+			focus : $(this), // 다이알로그 닫친뒤 포커스를 주고싶은 요소 지정
+			modal : true,
+			closebutton : false,
+			width:917
+		});
+	});
+	/* 리스트선택 */
+	$('.d4_btn8').on('click', function () {
+		var dia1 = ci.dialog.open({
+			id : 'd4_layer8', // id 지정
+			title : '리스트선택', // title 지정
+			dom : $('.popContents'), // 내용으로 들어갈 마크업 지정
+			focus : $(this), // 다이알로그 닫친뒤 포커스를 주고싶은 요소 지정
+			modal : true,
+			closebutton : false,
+			width:904
+		});
+	});
+	/* FACT FINDING */
+	$('.d4_btn9').on('click', function () {
+		var dia1 = ci.dialog.open({
+			id : 'd4_layer9', // id 지정
+			title : 'FACT FINDING', // title 지정
+			dom : $('.popContents'), // 내용으로 들어갈 마크업 지정
+			focus : $(this), // 다이알로그 닫친뒤 포커스를 주고싶은 요소 지정
+			modal : true,
+			closebutton : false,
+			width:1017
+		});
+	});
+
+
 });
