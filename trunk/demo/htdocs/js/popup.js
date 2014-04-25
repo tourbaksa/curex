@@ -108,18 +108,6 @@ $(document).ready(function(){
 			width:904
 		});
 	});
-	/* 리스트선택 */
-	$('.d4_btn9').on('click', function () {
-		var dia1 = ci.dialog.open({
-			id : 'd4_layer9', // id 지정
-			title : 'FACT FINDING', // title 지정
-			dom : $('.popContents'), // 내용으로 들어갈 마크업 지정
-			focus : $(this), // 다이알로그 닫친뒤 포커스를 주고싶은 요소 지정
-			modal : true,
-			closebutton : false,
-			width:1017
-		});
-	});
-
+	
 
 });

@@ -147,7 +147,7 @@
 				if(option.btnList[i].click){
 					aTag.data('func',option.btnList[i].click);
 				}
-				btnListUl.append(li);				
+				btnListUl.append(li);
 			}
 		}
 		if(option.quickBtn !== undefined && option.quickBtn == false){
@@ -201,8 +201,9 @@
 	self.oepnLeftLayer = function(viewDiv){
 
 		if(viewDiv.attr("id") =="d4_layer9"){
+
 			var viewDiv = ci.dialog.open({
-				title : 'factfinding', // title 지정
+				title : 'FACT FINDING', // title 지정
 				dom : $('.dia-content1'), // 내용으로 들어갈 마크업 지정
 				focus : $(this), // 다이알로그 닫친뒤 포커스를 주고싶은 요소 지정
 				closeOnEscape: false,
