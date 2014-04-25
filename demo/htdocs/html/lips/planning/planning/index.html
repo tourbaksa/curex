@@ -4540,14 +4540,20 @@
 							button : "보험료계산",
 							active : true,
 							click : function() {
-								var $ele = $(this).find("span")
-									, $visibleObj = $("div.preSearch");
 
-								if(!$visibleObj.length){return false;}
-								if(!$ele.hasClass("up")){ $ele.addClass("up"); $visibleObj.slideDown(200);}
-								else{$ele.removeClass("up"); $visibleObj.slideUp(100);}
+								var layer = function(obj){
+									var $visibleObj = $(obj)
+										, $ele = $(".InfoWbtn").find("span");
 
-								$(".sumInsure").text("0")
+										if(!$ele.hasClass("up")){
+											$ele.addClass("up"); $visibleObj.slideDown(200);
+											$(".sumInsure").text("0")
+										}else{
+										$ele.removeClass("up"); $visibleObj.slideUp(100);
+										$(".sumInsure").text("120,000")
+									}
+								}
+								layer(".preSearch");
 								return false;
 							}
 						}, {
