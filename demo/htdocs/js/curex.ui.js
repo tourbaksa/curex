@@ -512,17 +512,19 @@ curex.ui = {
 			}
 			var opts = $.extend(defaults, options);
 
-			return this.each(function(){
+			return this.each(function(idx){
 				var $obj = $(this)
 				, $active
 				, $content
 				, $links = $obj.find("a");
+
 				if(!$links.parent().hasClass("active")){
 					$active = $($links.filter('[href="'+location.hash+'"]')[0] || $links[0]);
 				}else{
 					$active = $($obj.find("li.active a"));
 				}
-				$content = $($active[0].hash, scope);
+				$content = $($active[0].hash+idx, scope);
+				
 				
 				if(opts.display == "block"){
 					$links.not($active).each(function () {
@@ -535,19 +537,21 @@ curex.ui = {
 				}
 
 				// 이벤트
-				$obj.find("a").off().on({
-					click:function(e){
-						
-					$active.parent().removeClass('active');
-					$content.hide();
+				$obj.find("a").each(function(idx){
+					$(this).off().on({
+						click:function(e){
+						$active.parent().removeClass('active');
+						$content.hide();
 
-					$active = $(this);
-					$content = $(this.hash);
+						$active = $(this);
+						$content = $(this.hash);
 
-					$active.parent().addClass('active');
-					$content.show();
-					e.preventDefault();
+						$active.parent().addClass('active');
+						$content.show();
+						e.preventDefault();
 					}
+				});
+				
 				});
 			});
 		}
