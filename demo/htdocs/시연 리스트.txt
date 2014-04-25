@@ -1,0 +1,87 @@
+공통
+
+>>메뉴를 눌렀을때 서브메뉴 다 나오고, 계획수립-개인/단체, 니즈분석, 스마트CRM, 계약 메뉴 링크 걸려야 함.
+
+>>메가드롭 전체메뉴 내려와야 함.
+
+>>고객검색 & 선택 & 프로파일 창
+
+ 
+
+메인
+
+http://172.30.70.83/index.html
+
+>>메인에서 최근진행업무 선택되어 있어야 함.
+
+ 
+
+계획수립-개인
+
+http://172.30.70.83/html/lips/planning/planning/index.html
+
+>>주계약 상품검색 창
+
+(http://172.30.70.83/html/lips/planning/planning/pop_planning1.html)
+
+>>특약 종류별 세팅
+
+>>’보험료계산’ 버튼 눌렀을때 합계보험료 보임. 잔여한도 조회 내려옴.
+
+>>’전산발행’ 버튼 누르면 아래 창이 떠야 함.
+
+(http://172.30.70.83/html/lips/planning/offerinfo/financial_stability_plan.html)
+
+ 
+
+계획수립-단체
+
+단체가상설계(비딩용)
+
+http://172.30.70.83/html/lips/planning/group_planning/nput_vitual_customer.html
+
+피보험자|가입설계|보장내용|표보기
+
+단체가입설계
+
+http://172.30.70.83/html/lips/planning/group_planning/covered_person.html
+
+피보험자|가입설계|청약정보|보장내용|해지환급금
+
+>>일괄등록 ‘찾기’버튼 누르면 파일 선택
+
+http://172.30.70.83/html/common/pop_fileupload.html
+
+>>청약정보 메뉴의 ‘청약서적용’버튼 일괄 보험료 적용
+
+ 
+
+니즈분석
+
+http://172.30.70.83/html/lips/needs-analysis/main.html
+
+>>하단 메뉴 ‘FF일괄일괄입력수정’ 버튼을 누르면 Fact Finding(수입/지출) 팝업 나와야 함
+
+(http://172.30.70.83/html/lips/needs-analysis/fact_finding_sheet.html)
+
+>>노후보장분석을 누르면 링크이동을 시키면 되나, 노후보장 탭이 선택되어 있어야 함.
+
+(http://172.30.70.83/html/lips/needs-analysis/death-insurance/age_specific_need_fund.html)
+
+ 
+
+스마트CRM > 스마트픽
+
+http://172.30.70.83//html/smartcrm/service.html
+
+>>스마트픽 단순 링크
+
+ 
+
+계약
+
+http://172.30.70.83/html/policy/list.html
+
+>>계약검색에서 계약리스트 선택시 팝업
+
+(http://172.30.70.83/html/policy/pop_list_select.html)
