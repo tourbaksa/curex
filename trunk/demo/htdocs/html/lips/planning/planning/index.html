@@ -4558,9 +4558,21 @@
 							}
 						}, {
 							btnId : 'd4_layer7',
-							viewDiv : $('#d4_layer7'),
+							//viewDiv : $('#d4_layer7'),
 							button : "전산발행",
-							active : true
+							active : true ,
+							click : function(){
+								var dia1 = ci.dialog.open({
+									id : 'd4_layer', // id 지정
+									title : '재정안정계획서', // title 지정
+									dom : $('.layer7'), // 내용으로 들어갈 마크업 지정
+									focus : $(this), // 다이알로그 닫친뒤 포커스를 주고싶은 요소 지정
+									modal : true,
+									closebutton : false,
+									width:910
+								});
+								return false;
+							}
 						} ],
 						checkListBtn : true, //체크리스트 버튼 유무
 						quickBtn : true, //퀵 버튼 유무
@@ -4616,7 +4628,7 @@
 
 		</div>
 		<div class="dia-content ci-dialog-content">
-			<div class="popContents">
+			<div class="popContents layer6">
 				<div class="fitTable ml0" style="width:420px">
 					<h2>종신</h2>
 					<ul class="first">
@@ -4703,7 +4715,7 @@
 		</div>
 
 		<div id="d4_layer7" class="dia-content ci-dialog-content">
-			<div class="popContents">
+			<div class="popContents layer7">
 				<div class="btnWrap">
 					<a href="#none" class="btn smGyRb">미리보기</a>
 					<a href="#none" class="btn smGyRb">이메일발송</a>

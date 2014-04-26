@@ -77,7 +77,7 @@ $(document).ready(function(){
 		var dia1 = ci.dialog.open({
 			id : 'd4_layer6', // id 지정
 			title : '주계약선택', // title 지정
-			dom : $('.popContents'), // 내용으로 들어갈 마크업 지정
+			dom : $('.layer6'), // 내용으로 들어갈 마크업 지정
 			focus : $(this), // 다이알로그 닫친뒤 포커스를 주고싶은 요소 지정
 			modal : true,
 			closebutton : false,
@@ -85,7 +85,7 @@ $(document).ready(function(){
 		});
 	});
 	/* 재정안정계획서 */
-	$('.d4_btn7').on('click', function () {
+	/*$('.d4_btn7').on('click', function () {
 		var dia1 = ci.dialog.open({
 			id : 'd4_layer7', // id 지정
 			title : '재정안정계획서', // title 지정
@@ -95,7 +95,8 @@ $(document).ready(function(){
 			closebutton : false,
 			width:917
 		});
-	});
+		
+	});*/
 	/* 리스트선택 */
 	$('.d4_btn8').on('click', function () {
 		var dia1 = ci.dialog.open({

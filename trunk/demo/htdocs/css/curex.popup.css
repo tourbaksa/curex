@@ -46,22 +46,22 @@ div#d4_layer9{height:768px; overflow-y:scroll; overflow-x:hidden;}
 #factWrap .popContents .txt{color:#6c99c6;}
 #factWrap .popContents .txtN{color:#707070;font-size:12px;font-weight:normal;}
 #factWrap a.btnClose{position:absolute;right:20px;top:10px;}
-#factWrap ul.finance {background:#f8f8f8;height:34px;line-height:34px;border-bottom:1px solid #bebebe;padding-left:20px;}
-#factWrap ul.finance:after{content:"";display:block;clear:both;}
-#factWrap ul.finance li{font-size:14px;float:left;}
-#factWrap ul.finance li a{border-left:1px solid #bebebe;padding:0 7px;}
-#factWrap ul.finance li:first-child a{border-left:0;padding:0 7px 0 0;}
-#factWrap ul.finance li.active a{color:#0080ff;font-weight:bold;}
-#factWrap .importForm{width:710px;margin:0 auto;}
-#factWrap div.bderT{margin-top:20px;border-top:1px solid #dedede;padding-top:10px;}
-#factWrap h3{color:#363636;font-size:14px;font-weight:bold;height:24px;line-height:14px;margin-top:10px;}
-#factWrap div.left{width:241px;float:left;}
-#factWrap div.right{width:720px;float:right;}
-#factWrap div.right div.juContact {border-left:1px solid #dedede;padding-left:20px;}
-#factWrap div.right div.juContact .more1{position:absolute;left:0;top:3px;}
-#factWrap div.juContact .more{position:absolute;right:0;top:3px;}
-#factWrap .fanWrap table td.child1{background:url("/img/common/icon_child1.gif") no-repeat scroll 5px center;padding-left:20px;}
-#factWrap .fanWrap table td.child2{background:url("/img/common/icon_child2.gif") no-repeat scroll 5px center;padding-left:20px;}
+.popContents ul.finance {background:#f8f8f8;height:34px;line-height:34px;border-bottom:1px solid #bebebe;padding-left:20px;}
+.popContents ul.finance:after{content:"";display:block;clear:both;}
+.popContents ul.finance li{font-size:14px;float:left;}
+.popContents ul.finance li a{border-left:1px solid #bebebe;padding:0 7px;}
+.popContents ul.finance li:first-child a{border-left:0;padding:0 7px 0 0;}
+.popContents ul.finance li.active a{color:#0080ff;font-weight:bold;}
+.popContents .importForm{width:710px;margin:0 auto;}
+.popContents div.bderT{margin-top:20px;border-top:1px solid #dedede;padding-top:10px;}
+.popContents h3{color:#363636;font-size:14px;font-weight:bold;height:24px;line-height:14px;margin-top:10px;}
+.popContents div.left{width:241px;float:left;}
+.popContents div.right{width:720px;float:right;}
+.popContents div.right div.juContact {border-left:1px solid #dedede;padding-left:20px;}
+.popContents div.right div.juContact .more1{position:absolute;left:0;top:3px;}
+.popContents div.juContact .more{position:absolute;right:0;top:3px;}
+.popContents .fanWrap table td.child1{background:url("/img/common/icon_child1.gif") no-repeat scroll 5px center;padding-left:20px;}
+.popContents .fanWrap table td.child2{background:url("/img/common/icon_child2.gif") no-repeat scroll 5px center;padding-left:20px;}
 
 /* fact finding */
 .referDgnText{font-size:14px;padding-left:20px;}
