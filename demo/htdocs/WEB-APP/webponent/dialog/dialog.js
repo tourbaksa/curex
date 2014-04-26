@@ -678,5 +678,5 @@
 	
 
 	ci.dialog = self;
-
+	
 })();

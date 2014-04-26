@@ -78,14 +78,12 @@
 	 * 유니크한지 체크 이미 동일한 아이디의 창이 떠있으면 false 새롭게 뜨는 창이면 true반환
 	 */
 	function checkUnique(option) {
-
 		if (option.unique === false) {
 			return true;
 		}
 
 		if (option.id) {
-
-			if ($('#' + option.id).length > 0) {
+			if ($('#' + option.id).length > 0 ) {
 				return false;
 			} else {
 				return true;
@@ -312,13 +310,55 @@
 		if (getDevice() === 'mobile') {
 			hideBackground(dialog, $('#wrap'));
 		}
+
+		var testBtn = $(".testTab").find( "a" );
+		var testLayer = $(".testTabList >li");
+		
+		var stBtn = $(".finance >li > a");
+		var stLayer = $(".tabCont");
+		
+		testBtn.bind("click", layerOn );
+		stBtn.bind("click", stLayerOn );
+
+		function init(){
+			for( var i = 0; i<testBtn.length; i++ ){
+				testBtn.eq(i).data("idx",i);
+			}
+
+			for( var z = 0; z<stBtn.length; z++ ){
+				stBtn.eq(z).data("idx",z);
+			}
+			testLayer.eq(3).hide();
+			stLayer.hide();
+			stLayer.eq(3).show();
+
+		}
+
+		function layerOn(){
+			var idx = $(this).data("idx");
+			testLayer.hide();
+			testBtn.parent().removeClass("active");
+			testLayer.eq(idx).show();
+			testBtn.eq(idx).parent().addClass("active");
+		}
+
+		function stLayerOn(){
+			var idx = $(this).data("idx");
+			stLayer.hide();
+			stBtn.parent().removeClass("active");
+			stLayer.eq(idx).show();
+			stBtn.eq(idx).parent().addClass("active");
+		}
+
+	
+		init();
 	}
 
 	/**
 	 * 마크업이 붙은 이후 처리
 	 */
 	function afterAppend(dialog, place, option) {
-
+		
 		dialog.dialog('open');
 
 		/**
@@ -473,10 +513,8 @@
 	 * 
 	 */
 	self.open = function(userOption) {
-
-		// 이미 같은 id의 다이알로그가 떠 있는 경우
+		// 이미 같은 id의 다이알로그가 떠 있는 경우]
 		if (!checkUnique(userOption)) {
-
 			if (userOption.reopen === true) {
 				self.close(userOption.id);
 			} else {
