@@ -92,6 +92,9 @@
 
 	});
 </script>
+<style type="text/css">
+	.finScroll{height:300px;overflow:scroll;overflow-x:hidden;}
+</style>
 </head>
 <body>
 
@@ -4569,7 +4572,7 @@
 									focus : $(this), // 다이알로그 닫친뒤 포커스를 주고싶은 요소 지정
 									modal : true,
 									closebutton : false,
-									width:910
+									width:924
 								});
 								return false;
 							}
@@ -4714,7 +4717,7 @@
 			</div>
 		</div>
 
-		<div id="d4_layer7" class="dia-content ci-dialog-content">
+		<div id="d4_layer7" class="dia-content ci-dialog-content" style="top:0 !important">
 			<div class="popContents layer7">
 				<div class="btnWrap">
 					<a href="#none" class="btn smGyRb">미리보기</a>
@@ -4722,7 +4725,7 @@
 					<a href="#none" class="btn smGnR">발급</a>
 				</div>
 
-				<form method="post" action="/">
+				<form class="finScroll" method="post" action="/">
 					<fieldset>
 						<legend>재정안정계획서</legend>
 						<div class="chboxWrap">
