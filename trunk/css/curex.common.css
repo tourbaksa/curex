@@ -379,7 +379,7 @@ ul.tab04{width:327px; border-bottom:2px solid #585a5c; height:28px;}
 ul.tab04 li{float:left;}
 ul.tab04 a{
 	display:block;
-	height:27px; line-height:27px; color:#424242; width:109px; padding-left:30px; background:#fff url(/img/common/bg_oldperson.gif) no-repeat 12px 50%;
+	height:27px; line-height:27px; color:#424242; width:109px; padding-left:30px; background:#fff url(/img/common/bg_oldperson.png) no-repeat 12px center;
 	border-top-left-radius:2px;
 	-webkit-border-top-left-radius:2px;
 	-moz-border-top-left-radius:2px;
@@ -391,7 +391,7 @@ ul.tab04 a{
 	border:1px solid #dddfe0;
 	border-bottom:0;
 }
-.tab04 li.active a{background:#585a5c url(/img/common/bg_newperson.gif) no-repeat 12px 50%; color:#fff; border:1px solid #585a5c;}
+.tab04 li.active a{background:#585a5c url(../img/common/bg_newperson.png) no-repeat 12px center; color:#fff; border:1px solid #585a5c;}
 
 /* tab05 */
 .tabOutline{background:url(/img/common/bg_tab_line1.gif) repeat-x left 31px; width:100%;}

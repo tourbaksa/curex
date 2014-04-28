@@ -390,7 +390,7 @@ ul.tab04 a{
 	border:1px solid #dddfe0;
 	border-bottom:0;
 }
-.tab04 li.active a{background:#585a5c url(../img/common/bg_newperson.png) no-repeat 12px 50%; color:#fff; border:1px solid #585a5c;}
+.tab04 li.active a{background:#585a5c url(../img/common/bg_newperson.png) no-repeat 12px center; color:#fff; border:1px solid #585a5c;}
 
 /* tab05 */
 .tabOutline{background:url(../img/common/bg_tab_line1.gif) repeat-x left 31px; width:100%;}
