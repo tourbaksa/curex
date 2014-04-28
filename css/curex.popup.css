@@ -35,32 +35,32 @@ div.layerPopWrap2 a.btnClosePopup{position:absolute; right:9px; top:7px;}
 
 /* 팝업 레이아웃 type3 */
 #factWrap{position:relative;}
-#factWrap .fanWrap:after{content:"";display:block;clear:both;}
-#factWrap h1{background:#22b8c7;height:43px;border-bottom:10px solid #01509f;font-size:36px;font-weight:bold;color:#fff;padding:7px 0 0 20px;letter-spacing:-1px;}
-#factWrap div.mainTabZone:after{content:"";display:block;clear:both;}
-#factWrap div.mainTabZone .popTit h2{font-size:16px;border-bottom:1px solid #dedede;padding-bottom:8px;}
-#factWrap div.mainTabZone .left .popTit h2{width:240px;}
-#factWrap div.mainTabZone .right .popTit h2{width:600px;margin-left:20px;}
-#factWrap .popContents{padding:20px; /*height:640px; overflow-y:scroll; overflow-x:hidden;*/} /* 팝업길이 픽스! 640이상길어지면 스크롤처리 */
-#factWrap .popContents .txt{color:#6c99c6;}
-#factWrap .popContents .txtN{color:#707070;font-size:12px;font-weight:normal;}
-#factWrap a.btnClose{position:absolute;right:20px;top:10px;}
-#factWrap ul.finance {background:#f8f8f8;height:34px;line-height:34px;border-bottom:1px solid #bebebe;padding-left:20px;}
-#factWrap ul.finance:after{content:"";display:block;clear:both;}
-#factWrap ul.finance li{font-size:14px;float:left;}
-#factWrap ul.finance li a{border-left:1px solid #bebebe;padding:0 7px;}
-#factWrap ul.finance li:first-child a{border-left:0;padding:0 7px 0 0;}
-#factWrap ul.finance li.active a{color:#0080ff;font-weight:bold;}
-#factWrap .importForm{width:710px;margin:0 auto;}
-#factWrap div.bderT{margin-top:20px;border-top:1px solid #dedede;padding-top:10px;}
-#factWrap h3{color:#363636;font-size:14px;font-weight:bold;height:24px;line-height:14px;margin-top:10px;}
-#factWrap div.left{width:241px;float:left;}
-#factWrap div.right{width:720px;float:right;}
-#factWrap div.right div.juContact {border-left:1px solid #dedede;padding-left:20px;}
-#factWrap div.right div.juContact .more1{position:absolute;left:0;top:3px;}
-#factWrap div.juContact .more{position:absolute;right:0;top:3px;}
-#factWrap .fanWrap table td.child1{background:url("/img/common/icon_child1.gif") no-repeat scroll 5px center;padding-left:20px;}
-#factWrap .fanWrap table td.child2{background:url("/img/common/icon_child2.gif") no-repeat scroll 5px center;padding-left:20px;}
+.factPopCont .fanWrap:after{content:"";display:block;clear:both;}
+.factPopCont h1{background:#22b8c7;height:43px;border-bottom:10px solid #01509f;font-size:36px;font-weight:bold;color:#fff;padding:7px 0 0 20px;letter-spacing:-1px;}
+.factPopCont div.mainTabZone:after{content:"";display:block;clear:both;}
+.factPopCont div.mainTabZone .popTit h2{font-size:16px;border-bottom:1px solid #dedede;padding-bottom:8px;}
+.factPopCont div.mainTabZone .left .popTit h2{width:240px;}
+.factPopCont div.mainTabZone .right .popTit h2{width:600px;margin-left:20px;}
+.factPopCont {/*height:640px; overflow-y:scroll; overflow-x:hidden;*/} /* 팝업길이 픽스! 640이상길어지면 스크롤처리 */
+.factPopCont  .txt{color:#6c99c6;}
+.factPopCont .txtN{color:#707070;font-size:12px;font-weight:normal;}
+.factPopCont a.btnClose{position:absolute;right:20px;top:10px;}
+.factPopCont ul.finance {background:#f8f8f8;height:34px;line-height:34px;border-bottom:1px solid #bebebe;padding-left:20px;}
+.factPopCont ul.finance:after{content:"";display:block;clear:both;}
+.factPopCont ul.finance li{font-size:14px;float:left;}
+.factPopCont ul.finance li a{border-left:1px solid #bebebe;padding:0 7px;}
+.factPopCont ul.finance li:first-child a{border-left:0;padding:0 7px 0 0;}
+.factPopCont ul.finance li.active a{color:#0080ff;font-weight:bold;}
+.factPopCont .importForm{width:710px;margin:0 auto;}
+.factPopCont div.bderT{margin-top:20px;border-top:1px solid #dedede;padding-top:10px;}
+.factPopCont h3{color:#363636;font-size:14px;font-weight:bold;height:24px;line-height:14px;margin-top:10px;}
+.factPopCont div.left{width:241px;float:left;}
+.factPopCont div.right{width:720px;float:right;}
+.factPopCont div.right div.juContact {border-left:1px solid #dedede;padding-left:20px;}
+.factPopCont div.right div.juContact .more1{position:absolute;left:0;top:3px;}
+.factPopCont div.juContact .more{position:absolute;right:0;top:3px;}
+.factPopCont .fanWrap table td.child1{background:url("/img/common/icon_child1.gif") no-repeat scroll 5px center;padding-left:20px;}
+.factPopCont .fanWrap table td.child2{background:url("/img/common/icon_child2.gif") no-repeat scroll 5px center;padding-left:20px;}
 
 /* fact finding */
 .referDgnText{font-size:14px;padding-left:20px;}
