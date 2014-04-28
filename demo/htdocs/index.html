@@ -1,20 +1,100 @@
+
 <!DOCTYPE html>
+<html lang="ko">
 <head>
-<title> CuRex </title>
-<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<meta name="robots" content="INDEX" />
+<meta name="Location" content="South Korea" />
+<meta name="Distribution" content="global" />
+<meta name="author" content="PRUDENTIAL CO.,LTD." />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
-<link rel="stylesheet" href="WEB-APP/webponent/css/common.css" type="text/css" />
-<link rel="stylesheet" href="css/curex.common.css" type="text/css" />
-<link rel="stylesheet" href="css/curex.layout.css" type="text/css" />
-<link rel="stylesheet" href="css/curex.main.css" type="text/css" />
-<link rel="stylesheet" href="WEB-APP/webponent/dialog/css/dialog.css" type="text/css" />
-<script type="text/javascript" src="WEB-APP/webponent/ci/agent.js"></script>
-<script type="text/javascript" src="WEB-APP/webponent/thirdParty/jquery/jquery-1.10.2.min.js"></script>
-<script type="text/javascript" src="WEB-APP/webponent/thirdParty/jquery/jquery-ui-1.10.3.min.js"></script>
-<script type="text/javascript" src="WEB-APP/webponent/tab/tab.js"></script>
-<script type="text/javascript" src="WEB-APP/webponent/dialog/dialog.js"></script>
-<script type="text/javascript" src="js/popup.js"></script>
-<script type="text/javascript" src="js/curex.ui.js"></script>
+<link rel="shortcut icon" type=image/x-icon href="/" />
+<link rel="stylesheet" type="text/css" href="/demo/htdocs/WEB-APP/webponent/thirdParty/jquery/jquery-ui-1.10.3.custom.min.css" />
+<link rel="stylesheet" type="text/css" href="/demo/htdocs/WEB-APP/webponent/css/common.css" />
+<link rel="stylesheet" type="text/css" href="/demo/htdocs/WEB-APP/webponent/calendar/css/calendar.css" />
+<link rel="stylesheet" type="text/css" href="/demo/htdocs/WEB-APP/webponent/dialog/css/dialog.css" />
+<link rel="stylesheet" type="text/css" href="/demo/htdocs/WEB-APP/webponent/datagrid/css/ci.datagrid.css" />
+<link rel="stylesheet" type="text/css" href="/demo/htdocs/WEB-APP/webponent/dynamicGrid/css/ci.dynamicGrid.css" />
+<link rel="stylesheet" type="text/css" href="/demo/htdocs/css/curex.common.css" />
+<link rel="stylesheet" type="text/css" href="/demo/htdocs/css/curex.layout.css" />
+<link rel="stylesheet" type="text/css" href="/demo/htdocs/css/curex.lips.css" />
+<link rel="stylesheet" type="text/css" href="/demo/htdocs/css/curex.smart.css" />
+<link rel="stylesheet" type="text/css" href="/demo/htdocs/css/curex.contract.css" />
+<link rel="stylesheet" type="text/css" href="/demo/htdocs/css/curex.popup.css" />
+<link rel="stylesheet" href="/demo/htdocs/css/curex.main.css" type="text/css" />
+<link rel="stylesheet" type="text/css" href="/demo/htdocs/WEB-APP/highchart/css/highcharts.css" />
+
+
+<script type="text/javascript">
+	function getDevice() {
+		return "pc";
+	}
+</script>
+
+
+<script type="text/javascript" src="/demo/htdocs/WEB-APP/webponent/thirdParty/jquery/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="/demo/htdocs/WEB-APP/webponent/thirdParty/jquery/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="/demo/htdocs/WEB-APP/webponent/thirdParty/jquery/jquery-ui-1.10.3.custom.min.js"></script>
+<script type="text/javascript" src="/demo/htdocs/WEB-APP/webponent/thirdParty/jquery/plugins/jquery.blockUI.js"></script>
+<script type="text/javascript" src="/demo/htdocs/WEB-APP/webponent/ci/agent.js"></script>
+<script type="text/javascript" src="/demo/htdocs/WEB-APP/webponent/ci/ui.js"></script>
+<script type="text/javascript" src="/demo/htdocs/WEB-APP/webponent/ci/util.js"></script>
+<script type="text/javascript" src="/demo/htdocs/WEB-APP/webponent/ci/DataSet.js"></script>
+<script type="text/javascript" src="/demo/htdocs/WEB-APP/webponent/calendar/calendar.js"></script>
+<script type="text/javascript" src="/demo/htdocs/WEB-APP/webponent/tab/tab.js"></script>
+<script type="text/javascript" src="/demo/htdocs/WEB-APP/webponent/dialog/dialog.js"></script>
+<script type="text/javascript" src="/demo/htdocs/WEB-APP/webponent/databind/databind.js"></script>
+<script type="text/javascript" src="/demo/htdocs/WEB-APP/webponent/databind/databind.function.js"></script>
+<script type="text/javascript" src="/demo/htdocs/WEB-APP/webponent/databind/ci.databind.js"></script>
+<script type="text/javascript" src="/demo/htdocs/WEB-APP/webponent/thirdParty/DataTables/media/js/jquery.dataTables.js"></script>
+<script type="text/javascript" src="/demo/htdocs/WEB-APP/webponent/thirdParty/DataTables/extras/FixedColumns/media/js/FixedColumns.js"></script>
+<script type="text/javascript" src="/demo/htdocs/WEB-APP/webponent/thirdParty/DataTables/extras/Scroller/media/js/dataTables.scroller.js"></script>
+<script type="text/javascript" src="/demo/htdocs/WEB-APP/webponent/thirdParty/DataTables/extras/TableTools/media/js/ZeroClipboard.js"></script>
+<script type="text/javascript" src="/demo/htdocs/WEB-APP/webponent/thirdParty/DataTables/extras/TableTools/media/js/TableTools.js"></script>
+<script type="text/javascript" src="/demo/htdocs/WEB-APP/webponent/datagrid/ci.datagrid.js"></script>
+<script type="text/javascript" src="/demo/htdocs/WEB-APP/webponent/dynamicGrid/ci.dynamicGrid.js"></script>
+<script type="text/javascript" src="/demo/htdocs/js/curex.util.js"></script>
+<script type="text/javascript" src="/demo/htdocs/js/curex.floatingBar.js"></script>
+<script type="text/javascript" src="/demo/htdocs/js/curex.layout.js"></script>
+<script type="text/javascript" src="/demo/htdocs/js/curex.dialog.js"></script>
+<script type="text/javascript" src="/demo/htdocs/js/curex.ui.js"></script>
+<script type="text/javascript" src="/demo/htdocs/js/curex.globalnavi.js"></script>
+<script type="text/javascript" src="/demo/htdocs/js/popup.js"></script>
+<script type="text/javascript" src="/demo/htdocs/WEB-APP/highchart/js/highcharts.js"></script>
+<script type="text/javascript" src="/demo/htdocs/WEB-APP/highchart/js/exporting.js"></script>
+<script type="text/javascript" src="/demo/htdocs/WEB-APP/highchart/js/highcharts-more.js"></script>
+
+<!--h:s-->
+
+<title></title>
+<!--h:e-->
+<script type="text/javascript">
+	/**
+		전역 AJAX에러 처리
+	 */
+	$(document).ajaxError(function(event, jqxhr, settings, exception) {
+
+		var rt = jqxhr.responseText;
+
+		try {
+
+			var errorInfo = $.parseJSON(rt);
+			var errorMessage = errorInfo.msg;
+			alert('AJAX에러 : ' + errorMessage);
+
+		} catch (e) {
+			alert('AJAX에러 : 서버메시지를 파싱하지 못하였습니다.\n' + '서버원문 : ' + rt);
+		}
+
+	});
+</script>
+<style type="text/css">
+	div.gnbWrap ul#gnb div.depth2{width:1024px;left:-329px;padding-left:330px;}
+</style>
 </head>
 <body class="main">
 
@@ -128,21 +208,204 @@
 				<a href="#" class="allMenuClose"><img src="img/common/btn_MenuClose.gif" alt="전체메뉴닫기" /></a>
 			</div>
 			<div class="gnbWrap">
-				<ul id="gnb">
-					<li><a href="#none">고객관리</a></li>
-					<li><a href="#none">LiPS</a></li>
-					<li><a href="#none">계약</a></li>
-					<li><a href="#none">스마트CRM</a></li>
-				</ul>			
+				<ul class="gnb" id="gnb">
+					<li>
+						<a href="#고객정보" onclick="curex.layout.changePage(this,'CU_01','1');return false;" data-screenId="CU_01" data-depth="1" class="depth1-link"> 고객정보</a>
+						<div class="depth2 depth2-wrap" style="display: none">
+							<ul class="depth2-ul">
+								<li class="last-depth">
+									<a href="main/customer/integration-view/index.cmd" onclick="curex.layout.changePage(this,'CU_0102','2');return false;" data-screenId="CU_0102" data-depth="2" class="depth2-link"> 고객통합뷰</a>
+								</li>
+								<li>
+									<a href="main/customer/management/index.cmd" onclick="curex.layout.changePage(this,'CU_0103','2');return false;" data-screenId="CU_0103" data-depth="2" class="depth2-link"> 고객정보관리</a>
+									<div style="display: none; z-index: 100;" class="depth3-wrap">
+										<ul class="depth3-ul">
+											<li>
+												<a href="main/customer/create/personal.cmd" onclick="curex.layout.changePage(this,'CU_010101','3');return false;" data-screenId="CU_010101" data-depth="3" class="depth3-link"> 반송관리대상리스트</a>
+											</li>
+											<li>
+												<a href="main/customer/create/group.cmd" onclick="curex.layout.changePage(this,'CU_010102','3');return false;" data-screenId="CU_010102" data-depth="3" class="depth3-link"> 삭제리스트</a>
+											</li>
+										</ul>
+									</div>
+								</li>
+								<li class="last-depth">
+									<a href="main/customer/create/index.cmd" onclick="curex.layout.changePage(this,'CU_0101','2');return false;" data-screenId="CU_0101" data-depth="2" class="depth2-link"> 감사고객관리</a>
+								</li>
+							</ul>
+						</div>
+					<li>
+						<a href="#LiPS" onclick="curex.layout.changePage(this,'LI_01','1');return false;" data-screenId="LI_01" data-depth="1" class="depth1-link"> LiPS</a>
+						<div class="depth2 depth2-wrap" style="display: none">
+							<ul class="depth2-ul">
+								<li>
+									<a href="proto/dataBind/main/index.cmd?a=0201" onclick="curex.layout.changePage(this,'LI_0101','2');return false;" data-screenId="LI_0101" data-depth="2" class="depth2-link"> 니즈분석</a>
+									<div style="display: none; z-index: 100;" class="depth3-wrap">
+										<ul class="depth3-ul">
+											<li>
+												<a href="proto/dataBind/main/index.cmd?a=020101" onclick="curex.layout.changePage(this,'LI_010101','3');return false;" data-screenId="LI_010101" data-depth="3" class="depth3-link"> 니즈분석메인</a>
+											<li>
+												<a href="proto/dataBind/main/index.cmd?a=020101" onclick="curex.layout.changePage(this,'LI_010102','3');return false;" data-screenId="LI_010102" data-depth="3" class="depth3-link"> 생애Story</a>
+											<li>
+												<a href="proto/dataBind/main/index.cmd?a=020101" onclick="curex.layout.changePage(this,'LI_010103','3');return false;" data-screenId="LI_010103" data-depth="3" class="depth3-link"> 노후보장시뮬레이션</a>
+											<li>
+												<a href="main/lips/needs_analysis/analysis/index.cmd?tabIndex=0" onclick="curex.layout.changePage(this,'LI_010104','3');return false;" data-screenId="LI_010104" data-depth="3" class="depth3-link"> 재무계산기</a>
+											<li>
+												<a href="main/lips/needs_analysis/analysis/index.cmd?tabIndex=0" onclick="curex.layout.changePage(this,'LI_010105','3');return false;" data-screenId="LI_010105" data-depth="3" class="depth3-link"> 수입지출분석</a>
+											<li>
+												<a href="main/lips/needs_analysis/analysis/index.cmd?tabIndex=1" onclick="curex.layout.changePage(this,'LI_010106','3');return false;" data-screenId="LI_010106" data-depth="3" class="depth3-link"> 자산/부채분석</a>
+											<li>
+												<a href="main/lips/needs_analysis/analysis/index.cmd?tabIndex=2" onclick="curex.layout.changePage(this,'LI_010107','3');return false;" data-screenId="LI_010107" data-depth="3" class="depth3-link"> 사망보장분석</a>
+											<li>
+												<a href="main/lips/needs_analysis/analysis/index.cmd?tabIndex=3" onclick="curex.layout.changePage(this,'LI_010108','3');return false;" data-screenId="LI_010108" data-depth="3" class="depth3-link"> 노후보장분석</a>
+											<li>
+												<a href="main/lips/needs_analysis/analysis/index.cmd?tabIndex=4" onclick="curex.layout.changePage(this,'LI_010109','3');return false;" data-screenId="LI_010109" data-depth="3" class="depth3-link"> 목적자금분석</a>
+											<li>
+												<a href="main/lips/needs_analysis/analysis/index.cmd?tabIndex=5" onclick="curex.layout.changePage(this,'LI_010110','3');return false;" data-screenId="LI_010110" data-depth="3" class="depth3-link"> 증권분석</a>
+											<li>
+												<a href="javascript:curex.popTest()" onclick="curex.layout.changePage(this,'LI_010111','3');return false;" data-screenId="LI_010111" data-depth="3" class="depth3-link"> 보고서</a>
+										</ul>
+									</div>
+								</li>
+								<li>
+									<a href="main/lips/planning/index.cmd" onclick="curex.layout.changePage(this,'LI_0102','2');return false;" data-screenId="LI_0102" data-depth="2" class="depth2-link"> 계획수립</a>
+									<div style="display: none; z-index: 100;" class="depth3-wrap">
+										<ul class="depth3-ul">
+											<li>
+												<a href="main/lips/planning/planning/index.cmd" onclick="curex.layout.changePage(this,'LI_010201','3');return false;" data-screenId="LI_010201" data-depth="3" class="depth3-link"> 개인설계</a>
+											<li>
+												<a href="main/lips/planning/simple_planning/index.cmd?a=020202" onclick="curex.layout.changePage(this,'LI_010202','3');return false;" data-screenId="LI_010202" data-depth="3" class="depth3-link"> 개인가상설계</a>
+											<li>
+												<a href="main/lips/planning/group_planning/covered_person.cmd?a=020203" onclick="curex.layout.changePage(this,'LI_010203','3');return false;" data-screenId="LI_010203" data-depth="3" class="depth3-link"> 단체설계</a>
+											<li>
+												<a href="main/lips/planning/simple_group_planning/index.cmd?a=020204" onclick="curex.layout.changePage(this,'LI_010204','3');return false;" data-screenId="LI_010204" data-depth="3" class="depth3-link"> 단체가상설계</a>
+											<li>
+												<a href="main/lips/planning/multiplan_planning/index.cmd?a=020205" onclick="curex.layout.changePage(this,'LI_010205','3');return false;" data-screenId="LI_010205" data-depth="3" class="depth3-link"> 복합설계</a>
+											<li>
+												<a href="main/lips/planning/add_rider_planning/index.cmd" onclick="curex.layout.changePage(this,'LI_010206','3');return false;" data-screenId="LI_010206" data-depth="3" class="depth3-link"> 중도부가설계</a>
+										</ul>
+									</div>
+								</li>
+								<li class="last-depth">
+									<a href="main/lips/planning/index.cmd" onclick="curex.layout.changePage(this,'LI_0103','2');return false;" data-screenId="LI_0103" data-depth="2" class="depth2-link"> Sales Material</a>
+								</li>
+							</ul>
+						</div>
+					<li class="sixGnb">
+						<a href="#계약" onclick="curex.layout.changePage(this,'CO_01','1');return false;" data-screenId="CO_01" data-depth="1" class="depth1-link"> 계약</a>
+						<div class="depth2 depth2-wrap" style="display: none">
+							<ul class="depth2-ul">
+								<li class="last-depth">
+									<a href="main/policy/search/search.cmd" onclick="curex.layout.changePage(this,'CO_0101','2');return false;" data-screenId="CO_0101" data-depth="2" class="depth2-link"> 계약검색</a>
+								</li>
+								<li class="last-depth">
+									<a href="main/policy/list/list.cmd" onclick="curex.layout.changePage(this,'CO_0102','2');return false;" data-screenId="CO_0102" data-depth="2" class="depth2-link"> 계약리스트</a>
+								</li>
+								<li>
+									<a href="proto/dataBind/main/index.cmd?a=0303" onclick="curex.layout.changePage(this,'CO_0103','2');return false;" data-screenId="CO_0103" data-depth="2" class="depth2-link"> 계약리뷰</a>
+									<div style="display: none; z-index: 100;" class="depth3-wrap">
+										<ul>
+											<li>
+												<a href="main/policy/application/index.cmd?viewPage=searchProcessStatus" onclick="curex.layout.changePage(this,'CO_010301','3');return false;" data-screenId="CO_010301" data-depth="3" class="depth3-link">계약리뷰</a>
+											<li>
+												<a href="main/policy/application/index.cmd?viewPage=searchProcessStatus" onclick="curex.layout.changePage(this,'CO_010302','3');return false;" data-screenId="CO_010302" data-depth="3" class="depth3-link">계약리뷰예약출력</a>
+										</ul>
+									</div>
+								</li>
+								<li>
+									<a href="main/policy/application/index.cmd?viewPage=searchProcessStatus" onclick="curex.layout.changePage(this,'CO_0104','2');return false;" data-screenId="CO_0104" data-depth="2" class="depth2-link"> 청약</a>
+									<div style="display: none; z-index: 100;" class="depth3-wrap">
+										<ul class="depth3-ul">
+											<li>
+												<a href="main/policy/application/index.cmd?viewPage=searchProcessStatus" onclick="curex.layout.changePage(this,'CO_010401','3');return false;" data-screenId="CO_010401" data-depth="3" class="depth3-link"> 증권전달대상계약</a>
+											<li>
+												<a href="main/policy/application/index.cmd?viewPage=thankyouCall" onclick="curex.layout.changePage(this,'CO_010402','3');return false;" data-screenId="CO_010402" data-depth="3" class="depth3-link"> Thankyou Call</a>
+											<li>
+												<a href="main/policy/application/index.cmd?viewPage=policyDeliveryList" onclick="curex.layout.changePage(this,'CO_010403','3');return false;" data-screenId="CO_010403" data-depth="3" class="depth3-link"> 청약진행사항</a>
+										</ul>
+									</div>
+								</li>
+								<li>
+									<a href="proto/dataBind/main/index.cmd?a=0304" onclick="curex.layout.changePage(this,'CO_0106','2');return false;" data-screenId="CO_0106" data-depth="2" class="depth2-link"> 보험금</a>
+									<div style="display: none; z-index: 100;" class="depth3-wrap">
+										<ul class="depth3-ul">
+											<li>
+												<a href="proto/dataBind/main/index.cmd?a=030401" onclick="curex.layout.changePage(this,'CO_010601','3');return false;" data-screenId="CO_010601" data-depth="3" class="depth3-link"> 수익자관련보험계약</a>
+											<li>
+												<a href="proto/dataBind/main/index.cmd?a=030402" onclick="curex.layout.changePage(this,'CO_010602','3');return false;" data-screenId="CO_010602" data-depth="3" class="depth3-link"> 보험금지급</a>
+										</ul>
+									</div>
+								</li>
+								<li>
+									<a href="proto/dataBind/main/index.cmd?a=0305" onclick="curex.layout.changePage(this,'CO_0107','2');return false;" data-screenId="CO_0107" data-depth="2" class="depth2-link"> 유지율</a>
+									<div style="display: none; z-index: 100;" class="depth3-wrap">
+										<ul class="depth3-ul">
+											<li>
+												<a href="proto/dataBind/main/index.cmd?a=030501" onclick="curex.layout.changePage(this,'CO_010701','3');return false;" data-screenId="CO_010701" data-depth="3" class="depth3-link">Rolling Avg</a>
+											<li>
+												<a href="proto/dataBind/main/index.cmd?a=030502" onclick="curex.layout.changePage(this,'CO_010702','3');return false;" data-screenId="CO_010702" data-depth="3" class="depth3-link">LP별 유지율</a>
+											<li>
+												<a href="proto/dataBind/main/index.cmd?a=030503" onclick="curex.layout.changePage(this,'CO_010703','3');return false;" data-screenId="CO_010703" data-depth="3" class="depth3-link">월별 유지율</a>
+											<li>
+												<a href="proto/dataBind/main/index.cmd?a=030504" onclick="curex.layout.changePage(this,'CO_010704','3');return false;" data-screenId="CO_010704" data-depth="3" class="depth3-link">유지율 우수LP</a>
+										</ul>
+									</div>
+								</li>
+							</ul>
+						</div>
+					<li class="sixGnb">
+						<a href="#스마트CRM" onclick="curex.layout.changePage(this,'SM_01','1');return false;" data-screenId="SM_01" data-depth="1" class="depth1-link"> 스마트CRM</a>
+						<div class="depth2 depth2-wrap" style="display: none">
+							<ul class="depth2-ul">
+								<li class="last-depth">
+									<a href="main/smartcrm/smartService/index.cmd" onclick="curex.layout.changePage(this,'SM_0101','2');return false;" data-screenId="SM_0101" data-depth="2" class="depth2-link"> 스마트서비스</a>
+								</li>
+								<li class="last-depth">
+									<a href="main/smartcrm/calendar/monthly.cmd" onclick="curex.layout.changePage(this,'SM_0102','2');return false;" data-screenId="SM_0102" data-depth="2" class="depth2-link"> 일정표</a>
+								</li>
+								<li>
+									<a href="main/smartcrm/smartCsStation/visitPackagePrint.cmd?a=030103" onclick="curex.layout.changePage(this,'SM_0103','2');return false;" data-screenId="SM_0103" data-depth="2" class="depth2-link"> CS스테이션</a>
+									<div style="display: none; z-index: 100; width:128px;left:-3px;" class="depth3-wrap">
+										<ul class="depth3-ul">
+											<li>
+												<a href="main/smartcrm/smartCsStation/visitPackagePrint.cmd" onclick="curex.layout.changePage(this,'SM_010301','3');return false;" data-screenId="SM_010301" data-depth="3" class="depth3-link"> 방문패키지출력현황</a>
+											<li>
+												<a href="main/smartcrm/smartCsStation/visitPackagePrint.cmd" onclick="curex.layout.changePage(this,'SM_010302','3');return false;" data-screenId="SM_010302" data-depth="3" class="depth3-link">기념일서비스예약현황</a>
+											</li>
+											<li>
+												<a href="main/smartcrm/smartCsStation/visitPackagePrint.cmd" onclick="curex.layout.changePage(this,'SM_010303','3');return false;" data-screenId="SM_010303" data-depth="3" class="depth3-link">SMS센터</a>
+											</li>
+											<li>
+												<a href="main/smartcrm/smartCsStation/visitPackagePrint.cmd" onclick="curex.layout.changePage(this,'SM_010304','3');return false;" data-screenId="SM_010304" data-depth="3" class="depth3-link">EMAIL센터</a>
+											</li>
+											<li>
+												<a href="main/smartcrm/smartCsStation/visitPackagePrint.cmd" onclick="curex.layout.changePage(this,'SM_010305','3');return false;" data-screenId="SM_010305" data-depth="3" class="depth3-link">LP소식지</a>
+											</li>
+										</ul>
+									</div>
+								</li>
+								<li class="last-depth">
+									<a href="proto/dataBind/main/index.cmd?a=0404" onclick="curex.layout.changePage(this,'SM_0104','2');return false;" data-screenId="SM_0104" data-depth="2" class="depth2-link"> 활동통계</a>
+								</li>
+								<li class="last-depth">
+									<a href="main/smartcrm/lp_act_management/index.cmd" onclick="curex.layout.changePage(this,'SM_0105','2');return false;" data-screenId="SM_0105" data-depth="2" class="depth2-link"> 접촉이력</a>
+								</li>
+								<li class="last-depth">
+									<a href="main/smartcrm/memo/memo.cmd" onclick="curex.layout.changePage(this,'SM_0106','2');return false;" data-screenId="SM_0106" data-depth="2" class="depth2-link"> 메모</a>
+								</li>
+							</ul>
+						</div>
+				</ul>
 				<span class="globalIcon smmode"><!-- smmode시 smmode 클래스생성 -->
 					<span class="icoTotal">
-						<a href="#none"><img src="img/common/ico_gnb1.gif" alt="" /></a>
-						<a href="#none"><img src="img/common/ico_gnb2.gif" alt="" /></a>
-						<a href="#none"><img src="img/common/ico_gnb3.gif" alt="" /></a>
+						<a href="#none"><img src="/img/common/ico_gnb1.gif" alt="" /></a>
+						<a href="#none"><img src="/img/common/ico_gnb2.gif" alt="" /></a>
+						<a href="#none"><img src="/img/common/ico_gnb3.gif" alt="" /></a>
 					</span>
 					<a href="#none" class="smIcon">SM<br />모드</a><!-- smmode시 해당 링크추가 -->
-					<a href="#none" class="last"><img src="img/common/ico_gnb4.gif" alt="" /></a>
+					<a href="#none" id="allimView" class="last"><img src="/img/common/ico_gnb4.gif" alt="" /></a>
 				</span>
+
 			</div>
 			<div class="mSearchWrap">
 				<form id="" method="post" action="/">
@@ -538,7 +801,13 @@
 	</div>
 </div>
 <!--//FOOTER -->
-
+<script>
+		curex.globalnavi.init();
+		curex.layout.setScreenId('PT_010101');
+		curex.layout.initAllMenu();
+		curex.layout.initAllim();
+		curex.layout.initCustomerUI();
+	</script>
 </body>
 </html>
 
