@@ -19,12 +19,12 @@ div.msearchCnt span.msearchBtn{display:inline-block; width:61px; height:33px;
 	border-radius:0 2px 2px 0;
 	-webkit-border-radius:0 2px 2px 0;
 	-moz-border-radius:0 2px 2px 0;
-	-ms-border-top-right-radius:2px;
+	-ms-border-radius:0 2px 2px 0;
 	border:1px solid #43a6c6;
 	}
-div.msearchCnt span.msearchBtn input{
-	vertical-align:middle;
-	width:59px; height:31px;
+div.msearchCnt span.msearchBtn .btnSer{
+	vertical-align:middle;display:inline-block;
+	width:59px; height:31px;line-height:27px;font-size:12px;text-align:center;color:#fff;
 	border-top:1px solid #76c8e2;
 	border-bottom:1px solid #4aa6c4;
 	background-color:#5cbcda;
@@ -33,7 +33,6 @@ div.msearchCnt span.msearchBtn input{
 	background-image: -moz-linear-gradient(top, #5cbcda, #4eaecc);
 	background-image: -ms-linear-gradient(top, #5cbcda, #4eaecc);
 	background-image: linear-gradient(top, #5cbcda, #4eaecc);
-	background:rgba(0,0,0);
 	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#5cbcda', endColorstr='#4eaecc');
 }
 span.searchBtnset{font-size:0;}
