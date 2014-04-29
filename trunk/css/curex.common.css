@@ -71,6 +71,8 @@ table .widthFull{display:block;}
 table .widthFull input{width:100%; color:#707070;}
 table .selectFull {display:block;}
 table .selectFull select{width:100%;}
+table .selectFull1 {display:inline-block;}
+table .selectFull1 select{width:100%;}
 table .textareaFull {display:block;}
 table .textareaFull textarea{width:100%;}
 table tr.focusDrag{border:2px solid #64ade5;}
