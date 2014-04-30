@@ -78,7 +78,7 @@ curex.ui = {
 				});
 			});*/
 
-			/* 툴팁 */
+			/* 툴팁1 */
 			$tooltip.each(function(idx){
 				if ($(this).hasClass("over")){
 					$(this).off().on({
@@ -116,6 +116,7 @@ curex.ui = {
 					});
 				}
 			});
+
 
 			$fieldOpen.each(function(){
 				$(this).off().on({
@@ -226,22 +227,54 @@ curex.ui = {
 		var scope = this.op
 		/* 설계페이지 좌측 탭 */
 		function notice(){
-		var $tabObj = $("div.tab02", scope)
-			 , $tabBtn = $tabObj.find("h3 a")
-			 , $tabCnt = $tabObj.find("div[id*='tabDiv']")
+			var $tabObj = $("div.tab02", scope)
+				 , $tabBtn = $tabObj.find("h3 a")
+				 , $tabCnt = $tabObj.find("div[id*='tabDiv']")
 
-			$tabBtn.each(function(){
-				$(this).off().on({
-					click:function(){
-						var idx = $tabBtn.index($(this));
-						$tabCnt.css({"display": "none"});
-						$tabCnt.eq(idx).css({"display": "block"}); 
-						$tabBtn.removeClass("on");
-						$(this).addClass("on");
-						return false;
-					}
+				$tabBtn.each(function(){
+					$(this).off().on({
+						click:function(){
+							var idx = $tabBtn.index($(this));
+							$tabCnt.css({"display": "none"});
+							$tabCnt.eq(idx).css({"display": "block"}); 
+							$tabBtn.removeClass("on");
+							$(this).addClass("on");
+							return false;
+						}
+					});
 				});
-			});
+
+				var tooltip2 = function(tooltip){
+					var obj = $(tooltip)
+						, over = obj.find(".over")
+						, cloneObj = null;
+
+
+					over.each(function(){
+						$(this).off().on({
+							mouseover:function(){
+								var cloneObj = $(this).parent().find(".bubble2").clone().appendTo(obj)
+									cloneObj.css({"display" : "block"})
+							},
+							mouseleave:function(){
+								obj.find("ul").next(".bubble2").remove();
+								//$(".bubble2").css("display","block");
+							}
+							
+						
+						});
+					
+					});
+					
+
+
+
+				
+				}
+
+				tooltip2("#tabDiv01", $tabObj);
+
+			
 		}
 		notice();
 		/* 가입설계 탭스타일 적용 */
