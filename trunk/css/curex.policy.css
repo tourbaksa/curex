@@ -25,6 +25,8 @@ div.fieldWrap div.btnWrap h3.btnL{margin:0 !important; line-height:22px;}
 div.searchField{border:1px solid #64ade5; width:680px; padding:7px 9px; margin:0 0 0 -340px; font-size:0; position: absolute; left:50%; top:32px; background-color: #fff; display:none;}
 div.searchField label{margin:0 9px 0 4px; font-size:12px; vertical-align:middle; display:inline-block; line-height:19px;}
 div.searchField div.btnWrap{margin:10px 0 1px 0;}
+div.searchField span.drag{display:inline-block;border:1px solid #fff;}
+div.searchField span.drag:hover, div.searchField span.drag:focus{border:1px solid #64ADE5;}
 
 div.searhResultBox{border:1px solid #dedede; padding:9px 0 9px 16px; margin:0 0 40px 0;}
 div.searhResultBox input[type="radio"]{margin-left:40px;}

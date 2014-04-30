@@ -82,17 +82,22 @@ ul.graphTable table td,  div.graphTable table td{text-align:right;background:#ef
 .sbxGreen{width:8px;height:8px;border-radius:8px;-webkit-border-radius:8px;-moz-border-radius:8px;-ms-border-radius:8px;background-color:#0ec000;display:inline-block;line-height:20px;vertical-align:middle;}
 
 /* 말풍선 */
-span.bubble, span.bubble2{position:relative;display:none;}
+span.bubble, span.bubble2, span.bubble3{position:relative;display:none;}
 .selectFull:hover .bubble, .selectFull:focus .bubble, .speechB:hover span.bubble2, .speechB:focus span.bubble2{display:block;}
 /* 셀렉전용 */
 span.bubble .bb{position:absolute;left:0;top:6px;z-index:100;border:1px solid #64ade5;background:#f9fcff; padding:16px 10px 8px;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;font-size:11px;line-height:11px;}
 span.bubble .arr{background:url(/img/common/icon_bubble.png) no-repeat;position:absolute;top:-7px;left:50%;margin-left:-4px;width:9px;height:6px;}
+
+/* 서브공통 */
+span.bubble3 .bb{position:absolute;left:0;top:6px;z-index:100;border:1px solid #64ade5;background:#0084ff;color:#fff; padding:8px 10px 8px;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;font-size:11px;line-height:11px;}
+span.bubble3 .arr{background:url(/img/common/ico_arrowT_alert.png) no-repeat;position:absolute;top:-5px;left:50%;margin-left:-4px;width:9px;height:5px;}
+
 /* 화살표우측-닫기버튼 */
-span.bubble1 .bb{position:absolute;right:0;top:30px;border:1px solid #64ade5;background:#f9fcff; padding:16px 10px 8px;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;font-size:11px;}
+span.bubble1 .bb{position:absolute;right:0;top:30px;border:1px solid #64ade5;background:#0084ff; padding:16px 10px 8px;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;font-size:11px;}
 span.bubble1 .bb a{position:absolute;right:3px;top:3px;}
 span.bubble1 .arr{background:url(/img/common/icon_bubble.png) no-repeat;position:absolute;top:-7px;right:14px;width:9px;height:6px;}
 /* 화살표좌측 */
-span.bubble2 .bb{position:absolute;left:0;top:-10px;z-index:100;border:1px solid #64ade5;background:#f9fcff; padding:8px 10px;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;font-size:11px;line-height:11px;}
+span.bubble2 .bb{position:absolute;left:0;top:-10px;z-index:100000;border:1px solid #64ade5;background:#f9fcff; padding:6px 10px;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;font-size:11px;line-height:14px;width:200px;word-wrap:break-word;}
 span.bubble2 .arr{background:url(/img/common/icon_bubble.png) no-repeat;position:absolute;top:-7px;left:29px;margin-left:-4px;width:9px;height:6px;}
 
 table td.disebled{background:#e3e3e3;}
