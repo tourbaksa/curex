@@ -50,14 +50,14 @@ h3.bt3{background:url(/img/common/blet_cir.gif) no-repeat 0 center;padding-left:
 .box3 .visit {padding:22px 0 23px 30px;}
 .box3 .visit:after{content:"";display:block;clear:both;}
 .box3 .visit li{float:left;width:248px;}
-.box3 .visit li dl {margin-left:65px;position:relative;font-size:14px;line-height:1.5;}
+.box3 .visit li dl {margin-left:87px;position:relative;font-size:14px;line-height:1.5;}
 .box3 .visit li dl dt{color:#707070;}
 .box3 .visit li dl dt strong{color:#363636;}
 .box3 .visit li dl dd{color:#363636; font-weight:bold;}
 .box3 .visit li dl dd.colorGray{color:#707070; font-weight:normal;}
 .box3 .visit li dl dd.colorGray strong{color:#363636;}
 .box3 .visit li dl dd span{font-size:12px; color:#707070; font-weight:normal;}
-.box3 .visit li dl dd.photo{position:absolute;left:-65px;top:0;}
+.box3 .visit li dl dd.photo{position:absolute;left:-87px;top:0;}
 
 /* 구성원등록 */
 .searchMorePlus{background:url(/img/common/btn_plus.gif) no-repeat 0 0;height:24px;line-height:24px;margin-left:8px;width:24px;}
